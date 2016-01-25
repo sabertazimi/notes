@@ -4,6 +4,7 @@ Personal Learing Note
 ## Directory
 - Algorithms
 - Android
+- Assembly
 - C
 - Java
 - Linux
