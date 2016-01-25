@@ -16,6 +16,7 @@ Personal Learing Note
 ## TODO List
 - Java Basic Note : .docx -\> .md
 - Linux Basic Note : .docx -\> .md
+- OS Basic Note : TODO List in `OS/` Directory
 - HTML5 Basic Note : continue reading paper books(to update .md)
 - JavaScript Basic Note : continue reading paper books(to update .md)
 
