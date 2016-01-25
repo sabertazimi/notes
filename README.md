@@ -13,6 +13,12 @@ Personal Learing Note
 - SoftwareTesting
 - Web
 
+## TODO List
+- Java Basic Note : .docx -\> .md
+- Linux Basic Note : .docx -\> .md
+- HTML5 Basic Note : continue reading paper books(to update .md)
+- JavaScript Basic Note : continue reading paper books(to update .md)
+
 ## License
 
  Apache License
