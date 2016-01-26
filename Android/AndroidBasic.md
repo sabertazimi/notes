@@ -536,21 +536,22 @@ create table Book (
 ```
 ### Basic Operator
 
-1. 创建一个新的数据库并返回一个 SQLiteDatabase 对象
+- 创建一个新的数据库并返回一个 SQLiteDatabase 对象  
 ```java
 Context.createDatabase(String name,int version ,int mode,CursorFactory factory);
 ```
-2. 删除数据库
+- 删除数据库  
 ```java
 this.deleteDatabase("myDatabase.db");
 ```
-3. 打开数据库
+- 打开数据库  
 ```java
 SQLiteDatabase my_DataBase = 
 this.openOrCreateDatabase("myDateBase.db",MODE_PRIVATE , null);
 my_DataBase.close();
 ```
-4. 非查询SQL指令 
+- 非查询SQL指令   
+
 ```java
 //创建一个名为"test"并带两个参数的表
 my_DataBase.execSQL("CREATE TABLE test (_id INTEGER PRIMARY KEY,
@@ -587,8 +588,9 @@ db.delete("Book", "pages > ?", new String[] { "500"  });
 //删除表
 my_DataBase.execSQL("DROP TABLE test");
 ```
-5. 查询SQL指令-游标Cursors  
-`query()`   
+- 查询SQL指令-游标Cursors
+    - `query()`
+
 |方法参数|对应 SQL 部分|描述|
 |:------:|:----------:|:------------:|
 |table|from tableName|指定查询的表名|
