@@ -26,6 +26,11 @@
 - ViewHolder
 - Parcelable Implemention
 
+# API Conventions
+## Manager.Service
+- PreferenceManager.getDefaultSharedPreferences
+- LocalBroadcastManager.getInstance
+
 # Activity
 
 ## BaseActivity
@@ -417,9 +422,92 @@ localBroadcastManager.unregisterReceiver(CustomReceiver);
 
 ---
 
+# Data Store
+
+## Files Store
+`/data/data/<packagename>/files/`
+
+### Write
+```java
+String data = "Data to save";
+FileOutputStream out = null;
+BufferedWriter writer = null;
+try {
+    out = openFileOutput("data", Context.MODE_PRIVATE);
+    writer = new BufferedWriter(new OutputStreamWriter(out));
+    writer.write(data);
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    try {
+        if (writer != null) {
+            writer.close();
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+### Read
+```java
+FileInputStream in = null;
+BufferedReader reader = null;
+StringBuilder content = new StringBuilder();
+try {
+    in = openFileInput("data");
+    reader = new BufferedReader(new InputStreamReader(in));
+    String line = "";
+    while ((line = reader.readLine()) != null) {
+        content.append(line);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    if (reader != null) {
+        try {
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+return content.toString();
+```
+
+## SharedPreferences
+`/data/data/<packagename>/shared_prefs/`
+
+### Write
+```java
+//get Editor
+SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
+//store date
+editor.putString("name", "Tom");
+editor.putInt("age", 28);
+editor.putBoolean("married", false);
+//commit
+editor.commit();
+```
+```java
+editor.clear();
+```
+clear pref file content
+
+### Read
+```java
+SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
+//second argument - default value if target key don't exists
+String name = pref.getString("name", "");
+int age = pref.getInt("age", 0);
+boolean married = pref.getBoolean("married", false);
+```
+
+---
 
 # NetWork                     
-Networked Apps
+Networked Apps  
 1. Network latency(网络延迟)——UI thread seperated from data loading thread
 2. Battery drain(电池耗尽)
 3. Intermittent service(中断服务)
