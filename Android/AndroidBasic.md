@@ -125,6 +125,97 @@ View view = LayoutInflater.from(context).inflate(R.layout.title, this/null);
 ## Component
 View(ViewGroup): e.g button、textbox(文本框)、checkbox(复选框)
 
+### Custom Component
+1. custom Xml
+  - titie.xml
+```html
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg" >
+<Button
+    android:id="@+id/title_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dip"
+    android:background="@drawable/back_bg"
+    android:text="Back"
+    android:textColor="#fff" />
+<TextView
+    android:id="@+id/title_text"
+    android:layout_width="0dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:text="Title Text"
+    android:textColor="#fff"
+    android:textSize="24sp" />
+<Button
+    android:id="@+id/title_edit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dip"
+    android:background="@drawable/edit_bg"
+    android:text="Edit"
+    android:textColor="#fff" />
+</LinearLayout>
+```
+2. custom class
+```java
+public class TitleLayout extends LinearLayout {
+    public TitleLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        LayoutInflater.from(context).inflate(R.layout.title, this);
+
+        //Register button click Listener
+        titleBack.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((Activity) getContext()).finish();
+            }
+        });
+        titleEdit.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "You clicked Edit button", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //other awesome things
+        //like material design ripple effect
+        //animations and music
+    }
+
+}
+```
+### AlertDialog
+```java
+//builder pattern
+AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+
+dialogBuilder.setTitle("Warning");
+dialogBuilder.setMessage("You are forced to be offline. Please try to login again.");
+dialogBuilder.setCancelable(false);
+dialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        ActivityCollector.finishAll(); // 销毁所有活动
+        Intent intent = new Intent(context, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent); // 重新启动LoginActivity
+    }
+});
+
+AlertDialog alertDialog = dialogBuilder.create();
+
+// 需要设置AlertDialog的类型,保证在广播接收器中可以正常弹出
+alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+
+alertDialog.show();
+```
 ### ListView
 
 ```java
@@ -266,6 +357,66 @@ transaction.commit();
 当碎片和活动解除关联的时候调用。
 
 ---
+
+# Broadcast
+- Normal Broadcasts : async
+- Ordered Broadcasts : sync
+
+## Register Receiver
+
+### In Activity
+```java
+//Custom BroadcastReceiver,Override onReceive methods
+//intentFilter : action
+//前为响应后的行为，后为响应何种广播
+registerReceiver(networkChangeReceiver, intentFilter);
+
+//in onDestroy
+unregisterReceiver();
+```
+### In AndroidManifest,xml
+```html
+<!-- custom receiver class -->
+<receiver android:name=".MyBroadcastReceiver">
+<!-- receiver priority -->
+<intent-filter android:priority="100">
+<!-- custom broadcast -->
+<action android:name="com.example.broadcasttest. MY_BROADCAST"/>
+</intent-filter>
+</receiver>
+```
+
+## Custom Broadcast
+
+### Normal Broadcast
+```java
+intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+sendBroadcast(intent);
+```
+
+### Ordered Broadcast
+```java
+intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+sendOrderedBroadcast(intent, null);
+```
+
+## Local Broadcast
+```java
+// 获取实例
+localBroadcastManager = LocalBroadcastManager.getInstance(this);
+```
+### Local Brodcast
+```java
+localBroadcastManager.sendBroadcast(intent); // 发送本地广播
+```
+### Local Receiver
+```java
+localBroadcastManager.registerReceiver(CustomReceiver, intentFilter);
+localBroadcastManager.unregisterReceiver(CustomReceiver);
+```
+
+---
+
 
 # NetWork                     
 Networked Apps
