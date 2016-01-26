@@ -18,7 +18,7 @@ sudo apt-get update
 sudo apt-get install ubuntu-make
 umake web visual-studio-code
 umake web visual-studio-code --remove
-sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/ /usr/local/bin/code
+sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/local/bin/code
 ```
 3. Sublime
 
