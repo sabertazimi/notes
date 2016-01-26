@@ -17,6 +17,7 @@ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt-get update
 sudo apt-get install ubuntu-make
 umake web visual-studio-code
+umake web visual-studio-code --remove
 ```
 3. Sublime
 
