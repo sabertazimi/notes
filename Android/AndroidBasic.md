@@ -504,19 +504,37 @@ int age = pref.getInt("age", 0);
 boolean married = pref.getBoolean("married", false);
 ```
 
----
+## DataBase
+/data/data/<package name>/databases/
+### SQLiteOpenHelper
+```java
+@Override
+onCreate()
+@Override
+public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    switch (oldVersion) {
+        case 1:
+            db.execSQL(CREATE_CATEGORY);
+        case 2:
+            db.execSQL("alter table Book add column category_id integer");
+        default:
+    }
+}
+```
+Custom实现创建、升级数据库的逻辑  
+构建出SQLiteOpenHelper 的实例后,再调用`getReadableDatabase()`或`getWritableDatabase()`方法创建数据库
 
-# NetWork                     
-Networked Apps  
-1. Network latency(网络延迟)——UI thread seperated from data loading thread
-2. Battery drain(电池耗尽)
-3. Intermittent service(中断服务)
-
----
-
-# DataBase
-
-## Basic Operator
+#### establish table 
+```sql
+create table Book (
+    id integer primary key autoincrement,
+    author text,
+    price real,
+    pages integer,
+    name text
+    )
+```
+### Basic Operator
 
 1. 创建一个新的数据库并返回一个 SQLiteDatabase 对象
 ```java
@@ -532,21 +550,72 @@ SQLiteDatabase my_DataBase =
 this.openOrCreateDatabase("myDateBase.db",MODE_PRIVATE , null);
 my_DataBase.close();
 ```
-4. 非查询SQL指令
+4. 非查询SQL指令 
 ```java
 //创建一个名为"test"并带两个参数的表
 my_DataBase.execSQL("CREATE TABLE test (_id INTEGER PRIMARY KEY,
 someNumber INTERGER);");
 //在数据库中插入一个元组
 my_DataBase.execSQL("INSERT INTO test (_id,someNumber) values(1,8);");
+
+SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+//INSERT
+ContentValues values = new ContentValues();
+// 开始组装第一条数据
+values.put("name", "The Da Vinci Code");
+values.put("author", "Dan Brown");
+values.put("pages", 454);
+values.put("price", 16.96);
+db.insert("Book", null, values); // 插入第一条数据
+values.clear();
+// 开始组装第二条数据
+values.put("name", "The Lost Symbol");
+values.put("author", "Dan Brown");
+values.put("pages", 510);
+values.put("price", 19.95);
+db.insert("Book", null, values); // 插入第二条数据
+
+//update 
+ontentValues values = new ContentValues();
+values.put("price", 10.99);
+db.update("Book", values, "name = ?", new String[] { "The DaVinci Code"  });
+
+//delete
+db.delete("Book", "pages > ?", new String[] { "500"  });
+
 //删除表
 my_DataBase.execSQL("DROP TABLE test");
 ```
-5. 查询SQL指令-游标Cursors
+5. 查询SQL指令-游标Cursors  
+`query()`   
+|方法参数|对应 SQL 部分|描述|
+|:------:|:----------:|:------------:|
+|table|from tableName|指定查询的表名|
+|columns|select column1, column2|指定查询的列名|
+|selection|where column = value|指定 where 的约束条件|
+|selectionArgs|-|为 where 中的占位符提供具体的值|
+|groupBy|group by column|指定需要 group by 的列|
+|having|having column = value|对 group by 后的结果进一步约束|
+|orderBy|order by column1, column2|指定查询结果的排序方式|
+
+```java
+SQLiteDatabase db = dbHelper.getWritableDatabase();
+// 查询Book表中所有的数据
+Cursor cursor = db.query("Book", null, null, null, null, null, null);
+// 遍历Cursor对象,取出数据
+//cursor.moveToFirst()
+//cursor.moveToNext()
+String name = cursor.getString(cursor.getColumnIndex("name"));
+String author = cursor.getString(cursor.getColumnIndex("author"));
+int pages = cursor.getInt(cursor.getColumnIndex("pages"));
+double price = cursor.getDouble(cursor.getColumnIndex("price"));
+```
+
 ```java
 //为了创建一个Cursor(游标),必须执行一个查询,要么通过SQL使用rawQuery()方法
 //或是更精心设计的方法,像query()方法
-Cursor cur=my_DataBase.rawQuery("SELECT * FORM test", null);
+Cursor cur = my_DataBase.rawQuery("SELECT * FORM test", null);
 
 if(cur!=null) {//游标不为空
     //返回给定名称的列的基于0开始的index,如果该属性列不存在则返回-1
@@ -568,5 +637,21 @@ if(cur!=null) {//游标不为空
 }
 ```
 
+### Transaction
+- SQLiteDatabase 的`beginTransaction()`方法
+- 调用`setTransactionSuccessful()`表示事务已经执行成功
+- finally代码块中调用`endTransaction()`来结束事务
+
 ---
 
+
+
+---
+
+# NetWork                     
+Networked Apps  
+1. Network latency(网络延迟)——UI thread seperated from data loading thread
+2. Battery drain(电池耗尽)
+3. Intermittent service(中断服务)
+
+---
