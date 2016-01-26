@@ -109,6 +109,8 @@ e.g web browsers
 ### Basic
 - `android:layout_weight`
 自适配布局
+- `android:SingleLine` 单行显示模式
+- `android:ellipsize="end"` 文字过多时缩略方式
 ### TableLayout
 - `<TableLayout android:stretchColumns="1">` 拉伸第2列
 - `android:layout_span="2"` 占2列
@@ -140,6 +142,7 @@ listView.setAdapter(adapter);
   - 重写getView方法 
     - 重用convertView提升性能
     - ViewHolder提升性能
+
 ```java
 
 //内部类，其中字段与自定义class的字段一致
@@ -179,7 +182,6 @@ public View getView(int position, View convertView, ViewGroup parent) {
     fruitName.setText(fruit.getName());
     return view;
 }
-
 ```
 
 #### Custom ListView Listener
@@ -192,10 +194,14 @@ listView.setOnItemClickListener(new OnItemClickListener() {
         Toast.makeText(MainActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
     }
 });
+
+adapter.notifyDataSetChanged();           // 当有新消息时,刷新ListView中的显示
+msgListView.setSelection(msgList.size()); // 将ListView定位到最后一行
 ```
 
 ## Drawable
 1. 修改特定组件的背景颜色
+
 ```java
 Resources myColor=getBaseContext().getResources();
 //getBaseContext()获得基础Context
@@ -206,6 +212,58 @@ R.color.lightgreen是颜色值的ID引用
 text.setBackgroundDrawable(color_M);
 //设置背景
 ```
+---
+
+# Fragment
+android.app.Fragment
+## Basic
+### Xml in Activity.xml
+```html
+<fragment
+    android:id="@+id/right_fragment"
+    <!-- custom fragment class -->
+    android:name="com.example.fragmenttest.RightFragment"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1" />
+```
+### Create View in Fragment
+```java
+@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.left_fragment, container, false);
+    return view;
+}
+```
+### Add Fragment in Activity
+```java
+AnotherRightFragment fragment = new AnotherRightFragment();
+FragmentTransaction transaction = getFragmentManager.beginTransaction();
+
+//容器的 id 和待添加的碎片实例
+transaction.replace(R.id.right_layout, fragment);
+//模拟返回栈
+transaction.addToBackStack(null);
+transaction.commit();
+```
+## Transfer Information
+### In Activity
+`getFragmentManager().findFragmentById(R.id.right_fragment);`
+### In Fragment
+`MainActivity activity = (MainActivity) getActivity();`
+
+## Runtime Loop
+### Basic Override Funciton
+- `onAttach()`
+当碎片和活动建立关联的时候调用。
+- `onCreateView()`
+为碎片创建视图(加载布局)时调用。
+- `onActivityCreated()`
+确保与碎片相关联的活动一定已经创建完毕的时候调用。
+- `onDestroyView()`
+当与碎片关联的视图被移除的时候调用。
+- `onDetach()`
+当碎片和活动解除关联的时候调用。
 
 ---
 
@@ -270,7 +328,6 @@ if(cur!=null) {//游标不为空
     }
 }
 ```
-
 
 ---
 
