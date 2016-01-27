@@ -1,5 +1,10 @@
-# CS-Note
-Personal Learing Note
+# Awesome-Notes
+
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/sabertazimi/Awesome-Note)
+![Progress](http://progressed.io/bar/20?title=learning) 
+[![Apache](https://img.shields.io/badge/lisence-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
+
+Personal Learning Notes - Awesome Notes for Me
 
 ## Directory
 - Algorithms
