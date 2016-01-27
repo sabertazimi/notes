@@ -1,10 +1,13 @@
 # Awesome-Notes
 
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/sabertazimi/Awesome-Note)
-![Progress](http://progressed.io/bar/20?title=learning) 
+[![stable](https://img.shields.io/badge/Stability-Stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
+
 [![Apache](https://img.shields.io/badge/lisence-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
 
-Personal Learning Notes - Awesome Notes for Me
+![Progress](http://progressed.io/bar/20?title=learning) 
+
+
+Personal Learning Notes - **Awesome Notes** for Me
 
 ## Directory
 - Algorithms
