@@ -1,8 +1,8 @@
 # Awesome-Notes
 
-[![stable](https://img.shields.io/badge/Stability-Stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
+[![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
 
-[![Apache](https://img.shields.io/badge/lisence-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
+[![Apache](https://img.shields.io/badge/license-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
 
 ![Progress](http://progressed.io/bar/20?title=learning) 
 
