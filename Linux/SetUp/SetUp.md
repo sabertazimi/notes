@@ -1,4 +1,4 @@
-# LinuxSetup
+# Linux SetUp
 
 > 建立一个软件repo，加快装机速度，是程序员的必备修养 -- 尼采
 
@@ -9,7 +9,7 @@
 1. Android Studio
 2. WebStorm
 
-## Editor
+## Editor-OpenSource
 1. Vim(Github)
 2. Visual Studio Code  
 ```Shell
@@ -20,7 +20,8 @@ umake web visual-studio-code
 umake web visual-studio-code --remove
 sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/local/bin/code
 ```
-3. Sublime
+3. Atom
+  - firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ## Platform
 1. VMPlayer
@@ -55,6 +56,7 @@ ifconfig ppp0
 
 ## Firefox Plugins
 - AdblockPlus
+- Alexa
 - AutoProxy
 - BetterSearch
 - CLEO
