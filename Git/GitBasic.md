@@ -1,4 +1,5 @@
 ## Commit Message
+
 ### format
 ```html
 firstline - <type>(<scope>): <subject>
@@ -36,8 +37,17 @@ no more than 50 characters
 
 #### Messaga footer
 - referencing issues e.g. close #666, #888
-- breaking changes 碎片式更改(特别是**用户端**)   
+- breaking changes 碎片式更改(特别是**用户端**)
 e.g.`port-runner` command line option has changed to `runner-port`, so that it is
-consistent with the configuration file syntax.  
+consistent with the configuration file syntax.
 To migrate your project, change all the commands, where you use `--port-runner`
 to `--runner-port`.
+
+## Pull Request Work Flow
+
+1. Fork it.
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Ensure tests are passing.
+4. Commit changes (`git commit -am 'Add some feature'`).
+5. Push to the branch (`git push origin my-new-feature`).
+6. Create new Pull Request.
