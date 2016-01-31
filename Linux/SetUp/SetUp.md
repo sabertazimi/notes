@@ -195,6 +195,7 @@ sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/loc
 2. Gnome Tweak Tool
     - numix
     - macbuntu
+3. ZealDocs
 
 ## Shell Tools
 1. ssh
