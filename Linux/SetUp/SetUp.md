@@ -1,18 +1,50 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Linux SetUp](#linux-setup)
+	- [IDE](#ide)
+	- [Editor-OpenSource](#editor-opensource)
+		- [Vim(Github)](#vimgithub) - [Visual Studio Code](#visual-studio-code)
+		- [Atom](#atom)
+			- [package](#package)
+	- [Software Tools](#software-tools)
+		- [ZealDocs](#zealdocs)
+	- [Shell Tools](#shell-tools)
+	- [Firefox Plugins](#firefox-plugins)
+	- [GFW](#gfw)
+		- [OpenVPN && vpngate/vpnbook](#openvpn-vpngatevpnbook)
+- [wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz](#wget-httpwwwoberhumercomopensourcelzodownloadlzo-206targz)
+- [tar –zxvf lzo-2.06.tar.gz –C /usr/src/](#tar-zxvf-lzo-206targz-c-usrsrc)
+- [cd /usr/src/lzo-2.06](#cd-usrsrclzo-206)
+- [./configure --prefix=/usr/local](#configure-prefixusrlocal)
+- [make](#make)
+- [make install](#make-install)
+- [unzip openvpn-2.3.10.zip](#unzip-openvpn-2310zip)
+- [cd openvpn-2.3.2](#cd-openvpn-232)
+- [./.configure --prefix=/opt/openvpn-2.3.10](#configure-prefixoptopenvpn-2310)
+- [make](#make)
+- [make install](#make-install)
+
+<!-- /TOC -->
+
 # Linux SetUp
 
 > 建立一个软件repo，加快装机速度，是程序员的必备修养 -- 尼采
+
+/home /usr /opt /lib /var /etc
 
 ------
 
 ## IDE
 
-1. Android Studio
-2. WebStorm
+1.  Android Studio
+2.  WebStorm
 
 ## Editor-OpenSource
-1. Vim(Github)
 
-2. Visual Studio Code
+### Vim(Github)
+
+### Visual Studio Code
+
 ```Shell
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt-get update
@@ -21,8 +53,10 @@ umake web visual-studio-code
 umake web visual-studio-code --remove
 sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/local/bin/code
 ```
-3. Atom
-- firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
+
+### Atom
+
+firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ```javascript
   "activate-power-mode":
@@ -30,9 +64,9 @@ sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/loc
       enabled: false
 ```
 
-- package
+#### package
 
-```
+```c
 [36mBuilt-in Atom packages[39m (89)
 ├── about@1.3.0
 ├── archive-view@0.61.0
@@ -180,55 +214,82 @@ sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/loc
 └── vim-surround@0.8.1
 ```
 
-## Platform
-1. VMPlayer
-2. Nodejs
-3. Java
-
-## Framework
-1. Meteor
-2. React
-3. React Native
-
 ## Software Tools
-1. Crossover(TM2013)
-2. Gnome Tweak Tool
-    - numix
-    - macbuntu
-3. ZealDocs
+
+### ZealDocs
+
+### bleachbit
+
+### VMware player
 
 ## Shell Tools
-1. ssh
-2. screen
-3. git
-4. pppoeconf/speedtest-cli
+
+-   ssh
+-   screen
+-   git
+-   pppoeconf/speedtest-cli
+
 ```shell
 sudo pppoeconf
 sudo pon dsl-provider
 sudo poof
 ifconfig ppp0
 ```
-5. zsh
-    - theme : rkj-repos candy ys
-    - plugins : git node ruby meteor bundler osx rake sublime
+
+-   zsh
+    -   theme : rkj-repos candy ys
+    -   plugins : git node ruby meteor bundler osx rake sublime
 
 ## Firefox Plugins
-- AdblockPlus
-- Alexa
-- AutoProxy
-- BetterSearch
-- CLEO
-- DownThemeAll
-- ExtendedStatusBar
-- FEBE
-- Firebug
-- Flagfox
-- Greasemonkey
-- Markdown Here
-- Markdown Viewer
-- Octotree
-- SeleniumIDE
-- Stylish
-- TabMixPlus
-- VimFx
-- xThunder
+
+-   AdblockPlus
+-   Alexa
+-   AutoProxy
+-   BetterSearch
+-   CLEO
+-   Disconnect Search
+-   DownThemeAll
+-   ExtendedStatusBar
+-   FEBE
+-   Firebug
+-   Flagfox
+-   Greasemonkey
+-   Markdown Here
+-   Markdown Viewer
+-   Octotree
+-   SeleniumIDE
+-   Stylish
+-   TabMixPlus
+-   VimFx
+-   Web Search Pro
+-   xThunder
+
+## GFW
+
+### OpenVPN && vpngate/vpnbook
+
+```shell
+sudo apt-get install openssl
+sudo apt-get install pam-devel
+```
+
+```shell
+#wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz
+#tar –zxvf lzo-2.06.tar.gz –C /usr/src/
+#cd /usr/src/lzo-2.06
+# ./configure --prefix=/usr/local
+#make
+#make install
+```
+
+```shell
+#unzip openvpn-2.3.10.zip
+#cd openvpn-2.3.2
+#./.configure --prefix=/opt/openvpn-2.3.10
+#make
+#make install
+
+```shell
+sudo apt-get install easy-rsa
+sudo apt-get install openvpn
+```
