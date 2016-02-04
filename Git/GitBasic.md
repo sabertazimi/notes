@@ -1,3 +1,40 @@
+
+# Git Basic Note
+
+## GitHub
+
+### Create Repo without Browser
+
+-   利用GitHub Repository API以及curl工具创建仓库
+
+```bash
+curl -u 'username' -d '{"name":"RepoName", "description":"description string", "homepage":"URL", "auto_init":ture, "gitignore_template":"Meteor", "license_template":"mit"}' https://api.github.com/user/repos
+```
+
+-   上传本地代码至远程仓库
+
+```bash
+git init
+
+echo "# RepoName" >> README.md
+git add README.md
+git commit
+
+git remote add origin git@github.com:username/RepoName.git
+git push -u origin master
+```
+
+或
+
+```bash
+git clone git@github.com:username/RepoName
+
+echo "# RepoName" >> README.md
+git add README.md
+git commit
+git push -u
+```
+
 ## Commit Message
 
 ### format
@@ -59,7 +96,7 @@ to `--runner-port`.
 
 下面介绍模型中的约定，并定义gg-*这样的抽象动作来完成约定中的行为
 
-约定： 
+约定：
 
 ### master类型 && develop类型
 
@@ -124,7 +161,7 @@ issues类型和feature类型的实现方式一模一样，仅仅有名字上面�
   2. 只能从对应的master分支fork到此分支
   3. 禁止在这个分支上提交
 
-> 这个分支是一个为了使工作流程更为清晰的缓存分支，分支上只有从master稳定分支上挑选出来的自己在工作中将要（尝试）使用的稳定版本。在basedOn类型分支上使用gg-select 版本号  从对应的master分支上选出一个稳定版本或使用gg-select-the-latest从对应的master分支上选择最新的版本，fork到这个分支，并加上inUse-versionNum的标签    
+> 这个分支是一个为了使工作流程更为清晰的缓存分支，分支上只有从master稳定分支上挑选出来的自己在工作中将要（尝试）使用的稳定版本。在basedOn类型分支上使用gg-select 版本号  从对应的master分支上选出一个稳定版本或使用gg-select-the-latest从对应的master分支上选择最新的版本，fork到这个分支，并加上inUse-versionNum的标签
 从master到此分支的行为是fork，即有可能此分支的log为 (init)v1.0===>v0.9=====>v0.8======>v1.3,这个分支上的commit来源于master，但是其分支提交历史与master分支无关
 
 ### work类型分支满足：
