@@ -35,6 +35,12 @@ git commit
 git push -u
 ```
 
+### Shorten GitHub URL
+
+```bash
+curl -i http://git.io -F "url=https://github.com/technoweenie" -F "code=t"
+```
+
 ## Commit Message
 
 ### format
