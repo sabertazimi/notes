@@ -224,6 +224,7 @@ firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ## Shell Tools
 
+-   f-irc/irssi (irc client)
 -   ssh
 -   screen
 -   git
@@ -246,6 +247,7 @@ ifconfig ppp0
 -   Alexa
 -   AutoProxy
 -   BetterSearch
+-   ChatZilla
 -   CLEO
 -   Disconnect Search
 -   DownThemeAll

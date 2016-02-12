@@ -1,5 +1,198 @@
-
 # Git Basic Note
+
+## Basic
+
+### Config
+
+-   /etc/gitconfig
+-   ~/.gitconfig 或 ~/.config/git/config
+-   repo/.git/config
+
+#### Initialize
+
+```shell
+$ git config --global user.name "sabertazimi"
+$ git config --global user.email sabertazimi@gmail.com
+$ git config --global core.editor vim
+$ git config --list
+```
+
+```shell
+$ git help
+$ git --help
+$ man git-
+$ git help config
+```
+
+### File State
+
+Untracked Unmodified(**Stable State**) Modified Staged
+
+### .gitignore
+
+文件 .gitignore 的格式规范如下：
+
+-   所有空行或者以 ＃ 开头的行都会被 Git 忽略
+-   可以使用标准的 glob 模式(简化正则表达式)匹配
+-   匹配模式可以以（ / ）开头防止递归
+-   匹配模式可以以（ / ）结尾指定目录
+-   要跟踪指定模式以外的文件或目录，可以在模式前加上惊叹号（ ! ）取反
+-   [GitHub gitignore Style](https://github.com/github/gitignore)
+
+```shell
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+```
+
+### diff
+
+```shell
+# 查看未暂存(un-staged)差异
+$ git diff
+# 查看已暂存(staged)差异
+$ git diff --staged
+```
+### commit
+
+```shell
+# -a: 跳过暂存阶段(git add)
+# -v: 显示详细diff信息
+$ git commit -a -v 
+
+# 重新提交
+$ git commit --amend -a -v
+```
+#### 提交信息格式
+
+```html
+firstline - <type>(<scope>): <subject>
+  (emptyline)
+<body>
+  (emptyline)
+<footer>
+```
+
+##### Message Subject(First Line)
+
+no more than 50 characters
+
+###### Type Values
+
+- (production code change)
+    - feat (new feature for the user)
+    - fix (bug fix for the user)
+    - docs (changes to the documentation)
+    - refactor (refactoring production code, e.g. renaming a variable)
+- (no production code change)
+    - style (formatting, missing semi colons)
+    - test (adding missing tests, refactoring tests)
+    - chore (updating grunt tasks etc)
+
+###### Scope Values
+
+- init
+- runner
+- watcher
+- config
+- web-server
+- proxy
+- empty
+
+##### Message Body
+
+- uses the imperative, present tense: “change” not “changed” nor “changes”
+- includes **motivation** for the change and contrasts with previous behavior
+
+##### Message Footer
+
+- referencing issues e.g. close #666, #888
+- breaking changes 碎片式更改(特别是**用户端**)
+e.g.`port-runner` command line option has changed to `runner-port`, so that it is
+consistent with the configuration file syntax.
+To migrate your project, change all the commands, where you use `--port-runner`
+to `--runner-port`.
+
+### remove
+
+```shell
+# 完全删除文件
+$ git rm filename
+# --cached: 保留磁盘文件(仅从git库移除文件)
+$ git rm --cached filename
+```
+
+### move
+
+```shell
+$ git mv old_path new_path
+```
+
+### log
+
+```shell
+# -p: 打印diff差异信息
+# -n: n为十进制数字,显示最近n次信息
+# --stat: 打印简略统计信息
+# --graph: 显示分支合并历史
+# --pretty=: 设置日志格式
+# --author=: 指定作者
+# --committer=: 指定提交者
+# --after=/--since=: 限制日志时间
+# --before=/--until=: 限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"
+# --help
+
+$ git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks path_name
+```
+
+#### pretty-format
+
+|选项|说明|
+|:-----:|:-------------------------:|
+|%H|提交对象(commit)的完整哈希字串|
+|%h|提交对象的简短哈希字串|
+|%T|树对象(tree)的完整哈希字串|
+|%t|树对象的简短哈希字串|
+|%P|父对象(parent)的完整哈希字串|
+|%p|父对象的简短哈希字串|
+|%an|作者(author)的名字|
+|%ae|作者的电子邮件地址|
+|%ad|作者修订日期(可以用\|-date=\|选项定制格式)|
+|%ar|作者修订日期，按多久以前的方式显示|
+|%cn|提交者(committer)的名字|
+|%ce|提交者的电子邮件地址|
+|%cd|提交日期|
+|%cr|提交日期,按多久以前的方式显示|
+|%s|提交说明|
+
+#### 常用选项
+
+|选项|说明|
+|:-----:|:-------------------------:|
+|-p|打印diff差异信息|
+|-n|n为十进制数字,显示最近n次信息|
+|--stat|打印简略统计信息|
+|--graph|显示分支合并历史|
+|--pretty=|设置日志格式|
+|--author=|指定作者|
+|--committer=|指定提交者|
+|--after=/--since=|限制日志时间|
+|--before=/--until=|限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"|
+|--help|
 
 ## GitHub
 
@@ -7,7 +200,7 @@
 
 -   利用GitHub Repository API以及curl工具创建仓库
 
-```bash
+```shell
 curl -u 'username' -d '{"name":"RepoName", "description":"description string", "homepage":"URL", "auto_init":ture, "gitignore_template":"Meteor", "license_template":"mit"}' https://api.github.com/user/repos
 ```
 
@@ -40,51 +233,6 @@ git push -u
 ```bash
 curl -i http://git.io -F "url=https://github.com/technoweenie" -F "code=t"
 ```
-
-## Commit Message
-
-### format
-```html
-firstline - <type>(<scope>): <subject>
-  (emptyline)
-<body>
-  (emptyline)
-<footer>
-```
-#### Type values
-- (production code change)
-    - feat (new feature for the user)
-    - fix (bug fix for the user)
-    - docs (changes to the documentation)
-    - refactor (refactoring production code, e.g. renaming a variable)
-- (no production code change)
-    - style (formatting, missing semi colons)
-    - test (adding missing tests, refactoring tests)
-    - chore (updating grunt tasks etc)
-
-#### Scope values
-- init
-- runner
-- watcher
-- config
-- web-server
-- proxy
-- empty
-
-#### Subject(firstline)
-no more than 50 characters
-
-#### Message body
-- uses the imperative, present tense: “change” not “changed” nor “changes”
-- includes **motivation** for the change and contrasts with previous behavior
-
-#### Messaga footer
-- referencing issues e.g. close #666, #888
-- breaking changes 碎片式更改(特别是**用户端**)
-e.g.`port-runner` command line option has changed to `runner-port`, so that it is
-consistent with the configuration file syntax.
-To migrate your project, change all the commands, where you use `--port-runner`
-to `--runner-port`.
 
 ## Branch
 
