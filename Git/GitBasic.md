@@ -6,19 +6,8 @@
 			- [Initialize](#initialize)
 		- [File State](#file-state)
 		- [.gitignore](#gitignore)
-- [no .a files](#no-a-files)
-- [but do track lib.a, even though you're ignoring .a files above](#but-do-track-liba-even-though-youre-ignoring-a-files-above)
-- [only ignore the TODO file in the current directory, not subdir/TODO](#only-ignore-the-todo-file-in-the-current-directory-not-subdirtodo)
-- [ignore all files in the build/ directory](#ignore-all-files-in-the-build-directory)
-- [ignore doc/notes.txt, but not doc/server/arch.txt](#ignore-docnotestxt-but-not-docserverarchtxt)
-- [ignore all .pdf files in the doc/ directory](#ignore-all-pdf-files-in-the-doc-directory)
 		- [diff](#diff)
-- [查看未暂存(un-staged)差异](#查看未暂存un-staged差异)
-- [查看已暂存(staged)差异](#查看已暂存staged差异)
 		- [commit](#commit)
-- [-a: 跳过暂存阶段(git add)](#-a-跳过暂存阶段git-add)
-- [-v: 显示详细diff信息](#-v-显示详细diff信息)
-- [重新提交](#重新提交)
 			- [提交信息格式](#提交信息格式)
 				- [Message Subject(First Line)](#message-subjectfirst-line)
 					- [Type Values](#type-values)
@@ -26,21 +15,8 @@
 				- [Message Body](#message-body)
 				- [Message Footer](#message-footer)
 		- [remove](#remove)
-- [完全删除文件](#完全删除文件)
-- [--cached: 保留磁盘文件(仅从git库移除文件)](#-cached-保留磁盘文件仅从git库移除文件)
 		- [move](#move)
-		- [log](#log)
-- [-p: 打印diff差异信息](#-p-打印diff差异信息)
-- [-n: n为十进制数字,显示最近n次信息](#-n-n为十进制数字显示最近n次信息)
-- [--stat: 打印简略统计信息](#-stat-打印简略统计信息)
-- [--graph: 显示分支合并历史](#-graph-显示分支合并历史)
-- [--pretty=: 设置日志格式](#-pretty-设置日志格式)
-- [--author=: 指定作者](#-author-指定作者)
-- [--committer=: 指定提交者](#-committer-指定提交者)
-- [--after=/--since=: 限制日志时间](#-after-since-限制日志时间)
-- [--before=/--until=: 限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"](#-before-until-限制日志时间-2008-01-15-2-years-1-day-3-minutes-ago)
-- [--help](#-help)
-			- [pretty-format](#pretty-format)
+		- [log](#log) [pretty-format](#pretty-format)
 			- [常用选项](#常用选项)
 	- [GitHub](#github)
 		- [Create Repo without Browser](#create-repo-without-browser)
@@ -101,7 +77,7 @@ Untracked Unmodified(**Stable State**) Modified Staged
 -   要跟踪指定模式以外的文件或目录，可以在模式前加上惊叹号（ ! ）取反
 -   [GitHub gitignore Style](https://github.com/github/gitignore)
 
-```shell
+```bash
 # no .a files
 *.a
 
@@ -123,21 +99,36 @@ doc/**/*.pdf
 
 ### diff
 
+查看未暂存(un-staged)差异
+
 ```shell
-# 查看未暂存(un-staged)差异
 $ git diff
-# 查看已暂存(staged)差异
+```
+
+查看已暂存(staged)差异
+
+```shell
 $ git diff --staged
+```
+
+*显示空白字符错误(space/tab/return)*
+
+```shell
+git diff --check
 ```
 
 ### commit
 
-```shell
-# -a: 跳过暂存阶段(git add)
-# -v: 显示详细diff信息
-$ git commit -a -v
+-   -a: 跳过暂存阶段(git add)
+-   -v: 显示详细diff信息
 
-# 重新提交
+```shell
+$ git commit -a -v
+```
+
+重新提交
+
+```shell
 $ git commit --amend -a -v
 ```
 
@@ -193,10 +184,15 @@ to `--runner-port`.
 
 ### remove
 
+完全删除文件
+
 ```shell
-# 完全删除文件
 $ git rm filename
-# --cached: 保留磁盘文件(仅从git库移除文件)
+```
+
+--cached: 保留磁盘文件(仅从git库移除文件)
+
+```shell
 $ git rm --cached filename
 ```
 
@@ -208,18 +204,20 @@ $ git mv old_path new_path
 
 ### log
 
-```shell
-# -p: 打印diff差异信息
-# -n: n为十进制数字,显示最近n次信息
-# --stat: 打印简略统计信息
-# --graph: 显示分支合并历史
-# --pretty=: 设置日志格式
-# --author=: 指定作者
-# --committer=: 指定提交者
-# --after=/--since=: 限制日志时间
-# --before=/--until=: 限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"
-# --help
+-   -p: 打印diff差异信息
+-   -n: n为十进制数字,显示最近n次信息
+-   --stat: 打印简略统计信息
+-   --graph: 显示分支合并历史
+-   --pretty=: 设置日志格式
+-   --author=: 指定作者
+-   --committer=: 指定提交者
+-   --after=/--since=: 限制日志时间
+-   --before=/--until=: 限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"
+-   --decorate: 查看各个分支当前所指的对象(commit object)
+-   --help
 
+
+```shell
 $ git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks path_name
 ```
 
@@ -258,7 +256,280 @@ $ git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks
 |--before=/--until=|限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"|
 |--help|
 
+### remote
+
+添加与删除远程仓库源
+
+```shell
+$ git remote add <shortname> <remote-url>
+$ git remote rm <shortname>
+```
+
+拉取和推送变更
+
+```shell
+$ git pull [remote-name]
+$ git push [remote-name] [local-branch-name]:[remote-branch-name]
+```
+
+显示仓库信息
+
+```shell
+$ git remote show [remote-name]
+```
+
+重命名仓库缩写名
+
+```shell
+$ git remote rename <old> <new>
+```
+
+从本地操作,删除远程仓库的分支
+
+```shell
+$ git push origin --delete [remote-branch-name]
+```
+
+### tag
+
+列出标记及其信息
+
+```shell
+$ git tag
+$ git tag -l "v1.8-"
+$ git show <tagname(v1.4)>
+```
+
+创建标签:
+
+-   不加-m会调用core.editor)
+-   省略commit序列,标签添加至最新提交
+
+创建附注(annotated)标签
+
+```shell
+$ git tag -a <tagname(v1.4)> [commit序列]
+```
+
+创建轻量(lightweight)标签
+
+```shell
+$ git tag <tagname(v1.4)> [commit序列]
+```
+
+共享标签至远程库
+
+```shell
+$ git push [remote-name] <tagname>
+$ git push [remote-name] --tags
+```
+
+### alias
+
+-   !: 执行外部命令
+
+```shell
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+$ git config --global alias.unstage 'reset HEAD --'
+$ git config --global alias.last 'log -1 HEAD'
+
+$ git config --global alias.visual '!gitk'
+```
+
+### merge
+
+合并的结果是生成一个新的快照(并提交)(新的提交对象)
+
+### rebase
+
+切换到工作分支,编码开发新特性
+
+```shell
+$ git checkout feature-branch
+```
+
+新特性开发完毕,变基操作以简洁提交历史
+
+```shell
+$ git rebase master
+
+git rebase [basebranch] [topicbranch]
+```
+
+切换到主分支,合并特性分支
+
+```shell
+$ git checkout master
+$ git merge feature-branch
+```
+
+## Branch
+
+### Basic Workflow Commands
+
+#### Basic
+
+创建新分支
+
+```shell
+$ git branch <new-branch-name>
+```
+
+删除分支
+
+```shell
+$ git branch -d <branch-name>
+```
+
+切换分支
+
+```shell
+$ git checkout <branch-name>
+```
+
+切换到新分支
+
+```shell
+$ git checkout -b <new-branch-name>
+```
+
+打印分支信息
+
+```shell
+$ git branch -v(详细信息) -vv(详细远程信息) --merged(显示合并至当前分支的分支) --no-merged(显示未合并至当前分支的分支)
+```
+
+#### remote
+
+本地分支跟踪远程分支(在此本地分支上运行git pull自动抓取),2种方式:
+
+-   设置当前所在本地分支跟踪某一远程分支
+
+```shell
+$ git branch -u [remotename]/[branch] 
+```
+
+-   创建并切换至新的本地分支(跟踪某一远程分支)
+    -   --track: 本地分支由git自动命名
+    -   -b: 本地分支由创建者命名
+
+```shell
+git checkout --track [new-local-branch]
+
+git checkout -b [new-local-branch] [remotename]/[branch]
+```
+
+### Advanced Branch Workflow
+
+1. master类型分支，名为?|master或master，其中?为开发代号
+2. develop类型分支，名为?|develop或develop，其中?为开发代号
+3. feature类型分支，名为feature/*或?|feature/*，其中*为特征描述
+4. release类型分支，名为release-*或?|release-*，其中*为要发布的版本号
+5. hotfix类型分支，名为hotfix-*或?|hotfix-*，其中*为要发布的版本号
+6. issues类型分支，名为issues/*或?|issues/*，其中*为问题描述
+7. trials类型分支，名为？%trials.*，？为此分支的父分支，*为描述的名称（或直接为？%trials）
+8. basedOn类型分支，名为basedOn或?|basedOn，?为其来源的master分支的开发代号
+9. work类型分支，名为work.***/basedOn-?-*，***代表此描述此work的名称，?为其所基于的分支的开发代号，最后一个*代表其在？|basedOn上所基于的分支的版本号或状态名
+
+下面介绍模型中的约定，并定义gg-*这样的抽象动作来完成约定中的行为
+
+约定:
+
+#### master类型 && develop类型
+
+*多长期分支模式*: master分支与develop分支都是长期分支,区别在于分支的**稳定性等级** - master > develop
+
+e.g master/develop/next
+
+##### 每一次的提交都必须有意义
+
+git在每次提交的时候要求输入对此提交的概括，这个概括不能为空。
+
+正确的提交概括：更新了程序doc
+错误的提交概括：updates
+
+##### 开发型任务中的master类型与develop类型分支必须成对出现，master分支的推进只能来源与release分支和hotfix分支的合并，禁止在master分支上直接提交。
+
+> master分支上只有我们推送上去的稳定版本的程序，develop分支上的程序一直处于开发状态，不稳定。
+在开发型任务中使用gg-init进行版本控制的初始化，建立配套的master～develop分支对。
+在使用型任务中使用gg-work-init进行版本控制的初始化，拉取需要使用的稳定版本程序的master分支，并初始化对应的basedOn分支（见9）。
+
+#### feature类型分支满足：
+
+  1. 只能从develop类型分支上创建
+  2. 最终必须合并到develop类型分支
+  3. 最终分支被删除
+
+> 每当有新特性需要加入的时候，我们应该从develop类型分支上新建一个feature类型分支，完成新特性的开发和测试后将特性合并到develop类型分支上。
+在develop类型分支上使用gg-feature-open featureName建立并转向一个名为feature/featureName的新分支
+在一个feature类型分支上使用gg-feature-close把这个分支的工作合并到develop类型分支上，删除此分支，完成一个特性的开发
+
+#### release类型分支满足：
+
+  1. 只能从develop类型分支上创建
+  2. 最终必须同时合并到master类型分支(发布新的版本)和develop类型分支(基于新版本的进一步开发)
+  3. 最终分支被删除
+
+> 每当工作进入到一个较为稳定阶段的时候，我们可以使用gg-release-open versionNum建立并转向一个名为release-versionNum的临时分支，在这个分支上允许进行小的改动（比如修改一下readme文件中的版本号），然后使用gg-release-close将此版本合并（发布）到master类型分支上，同时合并到develop类型分支上，然后删除此分支。
+
+#### hotfix类型分支满足:
+
+  1.  只能从master类型分支上创建
+  2.  最终必须同时合并到master类型分支(发布新的热补丁版本)和develop类型分支(基于新版本的进一步开发)
+  3.  最终分支被删除
+
+> 当新版本发布后发现必须马上解决的严重bug时，我们应该使用gg-hotfix-open versionNum建立并转向一个名为hotfix-versionNum的临时分支，在这个分支上完成bug的修复，然后使用gg-hotfix-close将此版本合并（发布）到master类型分支上，同时合并到develop类型分支上，然后删除此分支。
+
+#### issues类型分支满足：
+
+  1. 只能从develop类型分支上创建
+  2. 最终必须合并到develop类型分支
+  3. 最终分支被删除
+
+> 注解：每当有（比较复杂的）问题需要解决的时候，我们应该从develop类型分支上新建一个issues类型分支，完成问题的调试后合并到develop类型分支上。
+在develop类型分支上使用gg-issues-open featureName建立并转向一个名为issues/issuesName的新分支
+在一个issues类型分支上使用gg-issues-close把这个分支的工作合并到develop类型分支上，然后删除此分支，解决了一个复杂的问题
+issues类型和feature类型的实现方式一模一样，仅仅有名字上面的差别。
+
+#### trials类型分支满足：
+
+  1. 可以从除了release类型分支以外的任何类型分支上创建
+  2. 在这个分支上请发挥想象力大胆实验
+    - 接受实验结果，把实验过程并入父分支，称为good-close
+    - 实验结果不理想，放弃实验结果，从实验开始前重新来过，称为bad-close
+  3. 最终分支被删除
+
+> 在满足条件的分支A上工作，时不时会冒出一些大胆的想法，这个时候使用gg-trials-open trialsName创建并转向一个名为A/trials.trialsName的实验分支，在这个分支上进行疯狂的实验，然后
+
+
+#### basedOn类型分支满足:
+
+  1. 从name|master建立并初始化为name|basedOn
+  2. 只能从对应的master分支fork到此分支
+  3. 禁止在这个分支上提交
+
+> 这个分支是一个为了使工作流程更为清晰的缓存分支，分支上只有从master稳定分支上挑选出来的自己在工作中将要（尝试）使用的稳定版本。在basedOn类型分支上使用gg-select 版本号  从对应的master分支上选出一个稳定版本或使用gg-select-the-latest从对应的master分支上选择最新的版本，fork到这个分支，并加上inUse-versionNum的标签
+从master到此分支的行为是fork，即有可能此分支的log为 (init)v1.0===>v0.9=====>v0.8======>v1.3,这个分支上的commit来源于master，但是其分支提交历史与master分支无关
+
+#### work类型分支满足：
+
+  1. 只能从basedOn类型分支上创建
+  2. 可以借助basedOn分支升级
+
 ## GitHub
+
+### Pull Request Work Flow
+
+1. Fork it.
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Ensure tests are passing.
+4. Commit changes (`git commit -am 'Add some feature'`).
+5. Push to the branch (`git push origin my-new-feature`).
+6. Create new Pull Request.
 
 ### Create Repo without Browser
 
@@ -298,99 +569,152 @@ git push -u
 curl -i http://git.io -F "url=https://github.com/technoweenie" -F "code=t"
 ```
 
-## Branch
+## Commands List
 
-[经验来源](http://www.zhihu.com/question/20866683/answer/29272967)
+### Basic Commands
 
-1. master类型分支，名为?|master或master，其中?为开发代号
-2. develop类型分支，名为?|develop或develop，其中?为开发代号
-3. feature类型分支，名为feature/*或?|feature/*，其中*为特征描述
-4. release类型分支，名为release-*或?|release-*，其中*为要发布的版本号
-5. hotfix类型分支，名为hotfix-*或?|hotfix-*，其中*为要发布的版本号
-6. issues类型分支，名为issues/*或?|issues/*，其中*为问题描述
-7. trials类型分支，名为？%trials.*，？为此分支的父分支，*为描述的名称（或直接为？%trials）
-8. basedOn类型分支，名为basedOn或?|basedOn，?为其来源的master分支的开发代号
-9. work类型分支，名为work.***/basedOn-?-*，***代表此描述此work的名称，?为其所基于的分支的开发代号，最后一个*代表其在？|basedOn上所基于的分支的版本号或状态名
+#### git config
 
-下面介绍模型中的约定，并定义gg-*这样的抽象动作来完成约定中的行为
+#### git help
 
-约定：
+#### git init
 
-### master类型 && develop类型
+#### git clone
 
-#### 每一次的提交都必须有意义
+#### git add
 
-git在每次提交的时候要求输入对此提交的概括，这个概括不能为空。
+#### git status
 
-正确的提交概括：更新了程序doc
-错误的提交概括：我刚才干了些啥？
+#### git diff
 
-#### 开发型任务中的master类型与develop类型分支必须成对出现，master分支的推进只能来源与release分支和hotfix分支的合并，禁止在master分支上直接提交。
+#### git difftool
 
-> master分支上只有我们推送上去的稳定版本的程序，develop分支上的程序一直处于开发状态，不稳定。
-在开发型任务中使用gg-init进行版本控制的初始化，建立配套的master～develop分支对。
-在使用型任务中使用gg-work-init进行版本控制的初始化，拉取需要使用的稳定版本程序的master分支，并初始化对应的basedOn分支（见9）。
+外置diff工具
 
-### feature类型分支满足：
-  1. 只能从develop类型分支上创建
-  2. 最终必须合并到develop类型分支
-  3. 最终分支被删除
+#### git commit
 
-> 每当有新特性需要加入的时候，我们应该从develop类型分支上新建一个feature类型分支，完成新特性的开发和测试后将特性合并到develop类型分支上。
-在develop类型分支上使用gg-feature-open featureName建立并转向一个名为feature/featureName的新分支
-在一个feature类型分支上使用gg-feature-close把这个分支的工作合并到develop类型分支上，删除此分支，完成一个特性的开发
+#### git reset
 
-### release类型分支满足：
-  1. 只能从develop类型分支上创建
-  2. 最终必须同时合并到master类型分支(发布新的版本)和develop类型分支(基于新版本的进一步开发)
-  3. 最终分支被删除
+#### git rm
 
-> 每当工作进入到一个较为稳定阶段的时候，我们可以使用gg-release-open versionNum建立并转向一个名为release-versionNum的临时分支，在这个分支上允许进行小的改动（比如修改一下readme文件中的版本号），然后使用gg-release-close将此版本合并（发布）到master类型分支上，同时合并到develop类型分支上，然后删除此分支。
+#### git mv
 
-### hotfix类型分支满足:
-  1.  只能从master类型分支上创建
-  2.  最终必须同时合并到master类型分支(发布新的热补丁版本)和develop类型分支(基于新版本的进一步开发)
-  3.  最终分支被删除
+#### git clean
 
-> 当新版本发布后发现必须马上解决的严重bug时，我们应该使用gg-hotfix-open versionNum建立并转向一个名为hotfix-versionNum的临时分支，在这个分支上完成bug的修复，然后使用gg-hotfix-close将此版本合并（发布）到master类型分支上，同时合并到develop类型分支上，然后删除此分支。
+从工作区中移除不想要的文件。可以是编译的临时文件或者合并冲突的文件。
 
-### issues类型分支满足：
-  1. 只能从develop类型分支上创建
-  2. 最终必须合并到develop类型分支
-  3. 最终分支被删除
+#### git branch
 
-> 注解：每当有（比较复杂的）问题需要解决的时候，我们应该从develop类型分支上新建一个issues类型分支，完成问题的调试后合并到develop类型分支上。
-在develop类型分支上使用gg-issues-open featureName建立并转向一个名为issues/issuesName的新分支
-在一个issues类型分支上使用gg-issues-close把这个分支的工作合并到develop类型分支上，然后删除此分支，解决了一个复杂的问题
-issues类型和feature类型的实现方式一模一样，仅仅有名字上面的差别。
+#### git checkout
 
-### trials类型分支满足：
-  1. 可以从除了release类型分支以外的任何类型分支上创建
-  2. 在这个分支上请发挥想象力大胆实验
-    - 接受实验结果，把实验过程并入父分支，称为good-close
-    - 实验结果不理想，放弃实验结果，从实验开始前重新来过，称为bad-close
-  3. 最终分支被删除
+#### git merge
 
-> 在满足条件的分支A上工作，时不时会冒出一些大胆的想法，这个时候使用gg-trials-open trialsName创建并转向一个名为A/trials.trialsName的实验分支，在这个分支上进行疯狂的实验，然后
+#### git mergetool
 
+外置merge工具
 
-### basedOn类型分支满足:
-  1. 从name|master建立并初始化为name|basedOn
-  2. 只能从对应的master分支fork到此分支
-  3. 禁止在这个分支上提交
+#### git log
 
-> 这个分支是一个为了使工作流程更为清晰的缓存分支，分支上只有从master稳定分支上挑选出来的自己在工作中将要（尝试）使用的稳定版本。在basedOn类型分支上使用gg-select 版本号  从对应的master分支上选出一个稳定版本或使用gg-select-the-latest从对应的master分支上选择最新的版本，fork到这个分支，并加上inUse-versionNum的标签
-从master到此分支的行为是fork，即有可能此分支的log为 (init)v1.0===>v0.9=====>v0.8======>v1.3,这个分支上的commit来源于master，但是其分支提交历史与master分支无关
+#### git stash
 
-### work类型分支满足：
-  1. 只能从basedOn类型分支上创建
-  2. 可以借助basedOn分支升级
+临时地保存一些还没有提交的工作，以便在分支上不需要提交未完成工作就可以清理工作目录。
 
-## Pull Request Work Flow
+#### git tag
 
-1. Fork it.
-2. Create your feature branch (`git checkout -b my-new-feature`).
-3. Ensure tests are passing.
-4. Commit changes (`git commit -am 'Add some feature'`).
-5. Push to the branch (`git push origin my-new-feature`).
-6. Create new Pull Request.
+#### git fetch
+
+#### git pull
+
+#### git push
+
+#### git remote
+
+#### git archive
+
+创建项目一个指定快照的归档文件
+
+#### git submodule
+
+管理一个仓库的其他外部仓库。 它可以被用在库或者其他类型的共
+享资源上.submodule 命令有几个子命令, 如（ add 、 update 、 sync 等等）用来管理这些
+资源.
+
+### 检查与比较
+
+#### git show
+
+#### git shortlog
+
+创建一个漂亮的 changelog 文件
+
+#### git describe
+
+接受任何可以解析成一个提交的东西，然后生成一个人类可读的字符串且不可变。 这是一种获得一个提交的描述的方式，它跟一个提交的 SHA-1 值一样是无歧义，但是更具可读性。
+
+### 调试
+
+#### git bisect
+通过自动进行一个二分查找来找到哪一个特定的提交是导致 bug 或者问题的第一个提交。
+
+#### git blame
+
+#### git grep
+
+查找任何字符串或者正则表达式
+
+### 补丁
+
+#### git cherry-pick
+
+获得在单个提交中引入的变更，然后尝试将作为一个新的提交引入到你当前分支上
+
+#### git rebase
+
+#### git revert
+
+### 邮件
+
+#### git apply
+应用一个通过 git diff 或者甚至使用 GNU diff 命令创建的补丁
+
+#### git am
+应用来自邮箱的补丁
+
+#### git format-patch
+
+mbox 的格式来生成一系列的补丁以便你可以发送到一个邮件列表中
+
+#### git imap-send
+
+将一个由 git format-patch 生成的邮箱上传至 IMAP 草稿文件夹
+
+#### git send-email
+
+通过邮件发送那些使用 git format-patch 生成的补丁
+
+#### git request-pull
+
+### 外部系统
+
+#### git svn
+
+#### git fast-import
+对于其他版本控制系统或者从其他任何的格式导入，你可以使用 git fast-import 快速地将其他格式映射到 Git 可以轻松记录的格式
+
+### 管理
+
+#### git gc
+
+在你的仓库中执行 ``garbage collection'' ，删除数据库中不需要的文件和将其他文件打包成一种更有效的格式
+
+#### git fsck
+
+检查内部数据库的问题或者不一致性
+
+#### git reflog
+
+分析你所有分支的头指针的日志来查找出你在重写历史上可能丢失的提交
+
+#### git filter-branch
+
+根据某些规则来重写大量的提交记录，例如从任何地方删除文件，或者通过过滤一个仓库中的一个单独的子目录以提取出一个项目
