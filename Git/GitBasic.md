@@ -1,3 +1,65 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Git Basic Note](#git-basic-note)
+	- [Basic](#basic)
+		- [Config](#config)
+			- [Initialize](#initialize)
+		- [File State](#file-state)
+		- [.gitignore](#gitignore)
+- [no .a files](#no-a-files)
+- [but do track lib.a, even though you're ignoring .a files above](#but-do-track-liba-even-though-youre-ignoring-a-files-above)
+- [only ignore the TODO file in the current directory, not subdir/TODO](#only-ignore-the-todo-file-in-the-current-directory-not-subdirtodo)
+- [ignore all files in the build/ directory](#ignore-all-files-in-the-build-directory)
+- [ignore doc/notes.txt, but not doc/server/arch.txt](#ignore-docnotestxt-but-not-docserverarchtxt)
+- [ignore all .pdf files in the doc/ directory](#ignore-all-pdf-files-in-the-doc-directory)
+		- [diff](#diff)
+- [查看未暂存(un-staged)差异](#查看未暂存un-staged差异)
+- [查看已暂存(staged)差异](#查看已暂存staged差异)
+		- [commit](#commit)
+- [-a: 跳过暂存阶段(git add)](#-a-跳过暂存阶段git-add)
+- [-v: 显示详细diff信息](#-v-显示详细diff信息)
+- [重新提交](#重新提交)
+			- [提交信息格式](#提交信息格式)
+				- [Message Subject(First Line)](#message-subjectfirst-line)
+					- [Type Values](#type-values)
+					- [Scope Values](#scope-values)
+				- [Message Body](#message-body)
+				- [Message Footer](#message-footer)
+		- [remove](#remove)
+- [完全删除文件](#完全删除文件)
+- [--cached: 保留磁盘文件(仅从git库移除文件)](#-cached-保留磁盘文件仅从git库移除文件)
+		- [move](#move)
+		- [log](#log)
+- [-p: 打印diff差异信息](#-p-打印diff差异信息)
+- [-n: n为十进制数字,显示最近n次信息](#-n-n为十进制数字显示最近n次信息)
+- [--stat: 打印简略统计信息](#-stat-打印简略统计信息)
+- [--graph: 显示分支合并历史](#-graph-显示分支合并历史)
+- [--pretty=: 设置日志格式](#-pretty-设置日志格式)
+- [--author=: 指定作者](#-author-指定作者)
+- [--committer=: 指定提交者](#-committer-指定提交者)
+- [--after=/--since=: 限制日志时间](#-after-since-限制日志时间)
+- [--before=/--until=: 限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"](#-before-until-限制日志时间-2008-01-15-2-years-1-day-3-minutes-ago)
+- [--help](#-help)
+			- [pretty-format](#pretty-format)
+			- [常用选项](#常用选项)
+	- [GitHub](#github)
+		- [Create Repo without Browser](#create-repo-without-browser)
+		- [Shorten GitHub URL](#shorten-github-url)
+	- [Branch](#branch)
+		- [master类型 && develop类型](#master类型-develop类型)
+			- [每一次的提交都必须有意义](#每一次的提交都必须有意义)
+			- [开发型任务中的master类型与develop类型分支必须成对出现，master分支的推进只能来源与release分支和hotfix分支的合并，禁止在master分支上直接提交。](#开发型任务中的master类型与develop类型分支必须成对出现master分支的推进只能来源与release分支和hotfix分支的合并禁止在master分支上直接提交)
+		- [feature类型分支满足：](#feature类型分支满足)
+		- [release类型分支满足：](#release类型分支满足)
+		- [hotfix类型分支满足:](#hotfix类型分支满足)
+		- [issues类型分支满足：](#issues类型分支满足)
+		- [trials类型分支满足：](#trials类型分支满足)
+		- [basedOn类型分支满足:](#basedon类型分支满足)
+		- [work类型分支满足：](#work类型分支满足)
+	- [Pull Request Work Flow](#pull-request-work-flow)
+
+<!-- /TOC -->
+
 # Git Basic Note
 
 ## Basic
@@ -67,16 +129,18 @@ $ git diff
 # 查看已暂存(staged)差异
 $ git diff --staged
 ```
+
 ### commit
 
 ```shell
 # -a: 跳过暂存阶段(git add)
 # -v: 显示详细diff信息
-$ git commit -a -v 
+$ git commit -a -v
 
 # 重新提交
 $ git commit --amend -a -v
 ```
+
 #### 提交信息格式
 
 ```html
