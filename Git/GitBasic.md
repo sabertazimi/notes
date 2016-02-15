@@ -522,6 +522,86 @@ issues类型和feature类型的实现方式一模一样，仅仅有名字上面�
 
 ## GitHub
 
+### LICENSE
+
+```markdown
+**
+**    May you do good and not evil.
+**    May you find forgiveness for yourself and forgive others.
+**    May you share freely, never taking more than you give.
+**
+**
+```
+
+```markdown
+DBAD : DON'T BE A DICK PUBLIC LICENSE:
+
+Do whatever you like with the original work, just don't be a dick.
+
+Being a dick includes - but is not limited to - the following instances:
+
+1a. Outright copyright infringement - Don't just copy this and change the name.
+1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+
+If you become rich through modifications, related worksrvices, or supporting the original work, share the love. Only a dick would make loads off this work and not buy the original works creator(s) a pint.Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
+```
+
+```markdown
+Homework Public License(HPL)
+
+Copyright (c) 2016 Yilong Liu
+
+This is for your reference only,not for your cheating -  Just don't be a dick.
+
+Being a dick includes - but is not limited to - the following instances:
+
+1a. Outright copyright infringement - Don't just copy this and change the name.
+1b. Reserve a copy of this project and tell your teacher that it is your own homework - Plagiarism is shame.
+
+If you become rich through modifications, related worksrvices, or supporting the original work, share the love. Only a dick would make loads off this work and not buy the original works creator(s) a pint.Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
+```
+
+```markdown
+The Star And Thank Author License (SATA)
+
+Copyright (c) 2016 sabertazimi(sabertazimi@gmail.com)
+
+Project Url: https://github.com/sabertazimi/Awesome-Notes
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software. 
+
+And wait, the most important, you shall star/+1/like the project(s) in project url 
+section above first, and then thank the author(s) in Copyright section. 
+
+Here are some suggested ways:
+
+ - Email the authors a thank-you letter, and make friends with him/her/them.
+ - Report bugs or issues.
+ - Tell friends what a wonderful project this is.
+ - And, sure, you can just express thanks in your mind without telling the world.
+
+Contributors of this project by forking have the option to add his/her name and 
+forked project url at copyright and project url sections, but shall not delete 
+or modify anything else in these two sections.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
 ### Pull Request Work Flow
 
 1. Fork it.
