@@ -524,6 +524,14 @@ issues类型和feature类型的实现方式一模一样，仅仅有名字上面�
 
 ### LICENSE
 
+#### Popular LICENSE
+
+![Free Software License](img/6_free_software_licenses.png)
+
+
+
+#### Unique LICENSE
+
 ```markdown
 **
 **    May you do good and not evil.
