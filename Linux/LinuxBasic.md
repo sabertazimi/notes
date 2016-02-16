@@ -6,16 +6,36 @@
 -   自定义脚本-新建目录(加入环境变量)
 -   自定义别名 ~/.bashrc
 
-## 远程主机
+## ssh命令
+
+###  编辑~/.ssh/config文件
+
+-   Host 别名
+    -   HostName 主机名(ip)           `ssh user@ip`
+    -   Port 可忽略
+    -   User 登录用户名               `ssh user@ip`
+    -   PreferredAuthentications publickey
+    -   IdentityFile 密钥文件完整路径 `ssh -i file`
+
+```shell
+Host github.com
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa
+Host cs.github.com
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/cs
+```
+
+```shell
+$ git clone git@github.com:user/repo
+$ git clone git@cs.github.com:user/repo
+```
+
+### 密钥文件
 
 - 登录远程主机：ssh -i hustlyl root@119.29.140.60
-
--   编辑~/.ssh/config文件：
-    -   Host 别名
-    - HostName 主机名(ip)
-    - Port 可忽略
-    - User 登录用户名
-    - IdentityFile 密钥文件完整路径
 
 -   文件传输：sftp -i hustlyl root@119.29.140.60
 
