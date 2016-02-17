@@ -1401,26 +1401,26 @@ ghci> sortBy (compare `on` length) xs
 
 #### Data.Char
 
-**isControl** 判断一个字符是否是控制字符。
-**isSpace** 判断一个字符是否是空格字符，包括空格，tab，换行符等.
-**isLower** 判断一个字符是否为小写.
-**isUper** 判断一个字符是否为大写。
-**isAlpha** 判断一个字符是否为字母.
-**isAlphaNum** 判断一个字符是否为字母或数字.
-**isPrint** 判断一个字符是否是可打印的.
-**isDigit** 判断一个字符是否为数字.
-**isOctDigit** 判断一个字符是否为八进制数字.
-**isHexDigit** 判断一个字符是否为十六进制数字.
-**isLetter** 判断一个字符是否为字母.
-**isMark** 判断是否为 unicode 注音字符，你如果是法国人就会经常用到的.
-**isNumber** 判断一个字符是否为数字.
-**isPunctuation** 判断一个字符是否为标点符号.
-**isSymbol**判断一个字符是否为货币符号.
-**isSeperater** 判断一个字符是否为 unicode 空格或分隔符.
-**isAscii** 判断一个字符是否在 unicode 字母表的前 128 位。
-**isLatin1** 判断一个字符是否在 unicode 字母表的前 256 位.
-**isAsciiUpper** 判断一个字符是否为大写的 ascii 字符.
-**isAsciiLower** 判断一个字符是否为小写的 ascii 字符.
+-   **isControl** 判断一个字符是否是控制字符。
+-   **isSpace** 判断一个字符是否是空格字符，包括空格，tab，换行符等.
+-   **isLower** 判断一个字符是否为小写.
+-   **isUper** 判断一个字符是否为大写。
+-   **isAlpha** 判断一个字符是否为字母.
+-   **isAlphaNum** 判断一个字符是否为字母或数字.
+-   **isPrint** 判断一个字符是否是可打印的.
+-   **isDigit** 判断一个字符是否为数字.
+-   **isOctDigit** 判断一个字符是否为八进制数字.
+-   **isHexDigit** 判断一个字符是否为十六进制数字.
+-   **isLetter** 判断一个字符是否为字母.
+-   **isMark** 判断是否为 unicode 注音字符，你如果是法国人就会经常用到的.
+-   **isNumber** 判断一个字符是否为数字.
+-   **isPunctuation** 判断一个字符是否为标点符号.
+-   **isSymbol**判断一个字符是否为货币符号.
+-   **isSeperater** 判断一个字符是否为 unicode 空格或分隔符.
+-   **isAscii** 判断一个字符是否在 unicode 字母表的前 128 位。
+-   **isLatin1** 判断一个字符是否在 unicode 字母表的前 256 位.
+-   **isAsciiUpper** 判断一个字符是否为大写的 ascii 字符.
+-   **isAsciiLower** 判断一个字符是否为小写的 ascii 字符.
 
 ```haskell
 ghci> all isAlphaNum "bobby283"  
@@ -1457,10 +1457,10 @@ ghci> map generalCategory " \t\nA9?|"
 [Space,Control,Control,UppercaseLetter,DecimalNumber,OtherPunctuation,MathSymbol]
 ```
 
-**toUpper** 将一个字符转为大写字母，若该字符不是小写字母，就按原值返回.
-**toLower** 将一个字符转为小写字母，若该字符不是大写字母，就按原值返回.
-**toTitle** 将一个字符转为 title-case，对大多数字元而言，title-case 就是大写.
-**digitToInt** 将一个字符转为 Int 值，而这一字符必须得在 ``'1'..'9','a'..'f'``或``'A'..'F'`` 的范围之内.
+-   **toUpper** 将一个字符转为大写字母，若该字符不是小写字母，就按原值返回.
+-   **toLower** 将一个字符转为小写字母，若该字符不是大写字母，就按原值返回.
+-   **toTitle** 将一个字符转为 title-case，对大多数字元而言，title-case 就是大写.
+-   **digitToInt** 将一个字符转为 Int 值，而这一字符必须得在 ``'1'..'9','a'..'f'``或``'A'..'F'`` 的范围之内.
 
 ```haskell
 ghci> map digitToInt "34538"  
