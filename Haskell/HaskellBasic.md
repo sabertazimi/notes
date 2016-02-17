@@ -2,8 +2,21 @@
 
 函数式编程语言的一般思路：先取一个初始的集合并将其变形，执行过滤条件，最终取得正确的结果。
 
+## Unique Mark
 
+### _
 
+泛匹配符: 表示不关心此部分具体内容
+
+### <-
+
+属于符号,用于ListRange中.
+
+### =>
+
+类型约束分隔符
+
+### ->
 
 ## Expression
 
@@ -227,6 +240,19 @@ ghci> zip [1..] ["apple", "orange", "cherry", "mango"]
 [(1,"apple"),(2,"orange"),(3,"cherry"),(4,"mango")]
 ```
 
+##### 三元组
+
+```haskell
+first :: (a, b, c) -> a  
+first (x, _, _) = x  
+
+second :: (a, b, c) -> b  
+second (_, y, _) = y  
+ 
+third :: (a, b, c) -> c  
+third (_, _, z) = z  
+```
+
 ### 泛型
 
 运用Type变量(只可为*单字符*),实现泛型参数与多态函数
@@ -340,9 +366,137 @@ addThree :: Int -> Int -> Int -> Int
 addThree x y z = x + y + z
 ```
 
-## Function
+## 基本语法
 
-### 无参函数
+### 名字/函数定义
+
+#### 模式匹配(Pattern Matching)
+
+当函数拥有多个函数体(模式)时,会从上至下进行匹配各模式,一旦匹配则只应用这一函数体.
+
+##### Best Practice
+
+-   代替if-else/switch语句
+-   递归算法(将递归基础作为首模式,递归函数体作为尾模式)
+-   List Range中亦可使用模式匹配
+
+```haskell
+addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)  
+addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
+```
+
+##### 常用模式
+
+###### as模式
+
+all@(pattern) - all为指向pattern整体的引用
+
+```haskell
+all@(x:y:xs) -- 其中all与(x:y:xs)等价
+```
+
+```haskell
+capital :: String -> String  
+capital "" = "Empty string, whoops!"  
+capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x] 
+```
+
+###### List
+
+-   x:xs
+-   x:y:z:xs
+
+```haskell
+head' :: [a] -> a  
+head' [] = error "Can't call head on an empty list, dummy!"  
+head' (x:_) = x 
+```
+
+```haskell
+length' :: (Num b) => [a] -> b  
+length' [] = 0  
+length' (_:xs) = 1 + length' xs
+```
+
+```haskell
+sum' :: (Num a) => [a] -> a  
+sum' [] = 0  
+sum' (x:xs) = x + sum' xs
+```
+
+###### Tuple
+
+-   (x, y)
+-   (x, y, z)
+
+#### guard模式 与 where绑定
+
+子模式匹配: 运用布尔表达式实现判断,应用对应函数体
+
+-   关键符号: | 与 where
+-   |     分隔函数体
+-   where
+    -   可见性: 定义只对本模式可见的(私有)名字与(私有)函数
+    -   where定义在最外层,使得各模式共享(私有)名字与(私有)函数
+    -   名字定义时可使用模式匹配  `where (head:_) = firstname`
+
+```haskell
+bmiTell :: (RealFloat a) => a -> a -> String  
+bmiTell weight height  
+    | bmi <= skinny = "You're underweight, you emo, you!"  
+    | bmi <= normal = "You're supposedly normal. Pffft, I bet you're ugly!"  
+    | bmi <= fat    = "You're fat! Lose some weight, fatty!"
+    | otherwise     = "You're a whale, congratulations!"  
+    where bmi = weight / height ^ 2
+          skinny = 18.5
+          normal = 25.0
+          fat = 30.0
+```
+
+#### let绑定
+
+类似where,绑定对象为表达式/函数
+
+```haskell
+let bindings
+in  expressions
+```
+
+```haskell
+let sideArea = 2 * pi * r * h  
+    topArea = pi * r ^2  
+in  sideArea + 2 * topArea  
+```
+
+-   可见性:in作用域,只对本guard可见
+-   可使用模式匹配
+-   可用于List Range中
+
+#### case表达式
+
+-   模式匹配是case表达式的特殊情况(语法糖:简化写法)
+-   在函数中,模式匹配只能用于参数定义中,而case表达式可用于其他地方(let/where绑定 普通表达式 guard语句)
+
+```haskell
+case expression of pattern -> result  
+                   pattern -> result  
+                   pattern -> result  
+                   ...  
+```
+
+```haskell
+describeList :: [a] -> String  
+describeList xs = "The list is " ++ case xs of [] -> "empty."  
+                                               [x] -> "a singleton list."   
+                                               xs -> "a longer list."  
+
+```
+
+## 函数
+
+### 常用函数
+
+#### 无参函数
 
 “定义”(或者“名字”)
 
@@ -350,7 +504,7 @@ addThree x y z = x + y + z
 tazimi = "It's a-me, tazimi!"
 ```
 
-### 前缀函数
+#### 前缀函数
 
 ```haskell
 > succ 8
@@ -364,9 +518,9 @@ tazimi = "It's a-me, tazimi!"
 9
 ```
 
-### 中缀函数
+#### 中缀函数
 
-#### +
+##### +
 
 从类型定义可以看出,+左右两边参数必须为同类型
 
@@ -375,7 +529,7 @@ ghci> :t (+)
 (+) :: (Num a) => a -> a -> a
 ```
 
-#### ++
+##### ++
 
 List连接符,遍历前一List
 
@@ -386,7 +540,7 @@ ghci> "hello" ++ " " ++ "world"
 "hello world"
 ```
 
-#### :
+##### :
 
 连接单个元素
 
@@ -397,7 +551,7 @@ ghci> 5:[1,2,3,4,5]
 [5,1,2,3,4,5]
 ```
 
-#### !!
+##### !!
 
 引用符
 
@@ -406,13 +560,13 @@ ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
 33.2
 ```
 
-### 数学函数
+#### 数学函数
 
 -   x `mod` y
 -   `even arg`
 -   `odd arg`
 
-### 数字函数
+#### 数字函数
 
 -   fromInteger函数  (Num a) => Integer -> a
 -   fromIntegral函数 (Integral a, Num b) => a -> b
