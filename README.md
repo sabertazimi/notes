@@ -4,7 +4,7 @@
 
 [![Apache](https://img.shields.io/badge/license-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
 
-![Progress](http://progressed.io/bar/20?title=learning) 
+![Progress](http://progressed.io/bar/36?title=learning) 
 
 
 Personal Learning Notes - **Awesome Notes** for Me
@@ -14,19 +14,26 @@ Personal Learning Notes - **Awesome Notes** for Me
 - Android
 - Assembly
 - C
+- Git
+- Haskell
 - Java
 - Linux
+  - SetUp
+  - Vim
 - OS
 - Python
 - SoftwareTesting
 - Web
+  - HTML
+  - CSS
+  - JavaScript
+  - Frameworks
 
 ## TODO List
-- Java Basic Note : .docx -\> .md
-- Linux Basic Note : .docx -\> .md
-- OS Basic Note : TODO List in `OS/` Directory
-- HTML5 Basic Note : continue reading paper books(to update .md)
-- JavaScript Basic Note : continue reading paper books(to update .md)
+
+- Issue Milestones - Version 1.0
+- Daily Issue
+- OS Basic Notes: TODO List in `OS/` Directory
 
 ## License
 
@@ -40,4 +47,3 @@ Copyright (c) 2016 sabertazimi
 
 ## Contact
 - e-mail : sabertazimi@gmail.com
-- QQ&&WeChat : 2426543832
