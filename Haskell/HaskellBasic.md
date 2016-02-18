@@ -280,82 +280,7 @@ ghci> :t (*)
 (*) :: (Num a) => a -> a -> a 
 ```
 
-### Typeclass
 
-类似于Java中的Interface
-
-```haskell
-ghci> :t (==)  
-(==) :: (Eq a) => a -> a -> Bool
-
-ghci> :t fromIntegral
-fromIntegral :: (Integral a, Num b) => a -> b
-```
-
-#### =>
-
-=>左部: 类约束(Class Constraint)
-=>右部: 函数类型(参数/返回值类型),其中参数类型同属Class
-
-#### Basic Typeclass
-
-##### Eq
-
--   功能: 成员类型可判断相等性
--   成员: 大部分基本类型(不包含函数类型)
--   实现: == 与 /= 函数
-
-##### Ord
-
-Ord成员必为Eq成员
-
--   功能: 成员类型可判断大小
--   成员: 大部分基本类型(不包含函数类型)
--   实现: < > <= >= 函数
--   实例: compare函数 (Ord a) => a -> a -> Ordering
-
-##### Show
-
--   功能: 成员类型可用字符串表示
--   成员: 大部分基本类型(不包含函数类型)
--   实例: show函数 (Show a) => a -> String
-
-##### Read
-
--   功能: 可以将字串转为Read某成员类型
--   成员: 大部分基本类型(不包含函数类型)
--   实例: read函数 (Read a) => String -> a
-
-##### Enum
-
--   功能: 连续性(可枚举), 其成员类型可用于Range中
--   成员: () Bool Char Ordering Int Integer Float Double
-
-##### Bounded
-
--   功能: 成员类型具有上下限
--   实例: minBound/maxBound函数 (Bounded a) => a 无参多态常量/定义
-
-##### Num
-
--   功能: 成员类型具有数字特征
--   成员: 实数 整数 - Int Integer Float Double
--   实例: 所有数字都是多态常量/定义(可视为函数)
-
-```haskell
-ghci> :t 20  
-20 :: (Num t) => t
-```
-
-##### Integral
-
--   功能: 成员类型具有数字特征
--   成员: 整型 - Int Integer
-
-##### Floating
-
--   功能: 成员类型具有数字特征
--   成员: 浮点型 - Float Double
 
 ### 函数类型
 
@@ -496,7 +421,380 @@ describeList :: [a] -> String
 describeList xs = "The list is " ++ case xs of [] -> "empty."  
                                                [x] -> "a singleton list."   
                                                xs -> "a longer list."  
+```
 
+## Typeclass
+
+```haskell
+ghci> :t (==)  
+(==) :: (Eq a) => a -> a -> Bool
+
+ghci> :t fromIntegral
+fromIntegral :: (Integral a, Num b) => a -> b
+```
+
+### =>
+
+=>左部: 类约束(Class Constraint)
+=>右部: 函数类型(参数/返回值类型),其中参数类型同属Class
+
+### Basic Typeclass
+
+> ghci> :info typeClassName
+
+#### Eq
+
+-   功能: 成员类型可判断相等性
+-   成员: 大部分基本类型(不包含函数类型)
+-   方法: == 与 /= 函数
+
+```haskell
+class Eq a where
+    (==) :: a -> a -> Bool
+    (/=) :: a -> a -> Bool
+    x == y = not (x /= y)
+    x /= y = not (x == y)
+```
+
+#### Ord
+
+Ord成员必为Eq成员: class (Eq a) => Ord a where
+
+-   功能: 成员类型可排序
+-   成员: 大部分基本类型(不包含函数类型)
+-   方法: 
+    -   < > <= >= 函数
+    -   compare函数 (Ord a) => a -> a -> Ordering
+
+#### Show
+
+-   功能: 成员类型可用字符串表示
+-   成员: 大部分基本类型(不包含函数类型)
+-   方法: show函数 (Show a) => a -> String
+
+#### Read
+
+-   功能: 可以将字串转为Read某成员类型
+-   成员: 大部分基本类型(不包含函数类型)
+-   方法: read函数 (Read a) => String -> a
+
+#### Enum
+
+-   功能: 连续性(可枚举), 其成员类型可用于*Range*中
+-   成员: () Bool Char Ordering Int Integer Float Double
+
+```haskell
+[Thursday .. Sunday]
+```
+
+```haskell
+ghci> succ Monday
+Tuesday
+ghci> pred Saturday
+Friday
+```
+
+#### Bounded
+
+-   功能: 成员类型具有上下限
+-   方法: minBound/maxBound函数 (Bounded a) => a *无参多态常量/定义*
+
+```haskell
+ghci> minBound :: Day
+Monday
+ghci> maxBound :: Day
+Sunday
+```
+
+#### Num
+
+-   功能: 成员类型具有数字特征
+-   成员: 实数 整数 - Int Integer Float Double
+-   方法: + - * abs 函数
+-   实例: 所有数字都是多态常量/定义(可视为函数)
+
+```haskell
+ghci> :t 20  
+20 :: (Num t) => t
+```
+
+#### Integral
+
+-   功能: 成员类型具有数字特征
+-   成员: 整型 - Int Integer
+
+#### Floating
+
+-   功能: 成员类型具有数字特征
+-   成员: 浮点型 - Float Double
+
+#### Foldable
+
+#### Functor
+
+-   成员: Maybe a, [], Either a, IO
+
+```haskell
+ghci> :info Functor
+class Functor (f :: * -> *) where
+    fmap :: (a -> b) -> f a -> f b
+    ($) :: a -> f b -> f a
+```
+
+```haskell
+instance Functor [] where
+    fmap = map
+
+instance Functor Maybe where
+    fmap f (Just x) = Just (f x)
+    fmap f Nothing = Nothing
+
+instance Functor (Either a) where
+    fmap f (Right x) = Right (f x)
+    fmap f (Left x) = Left x
+```
+
+### 自定义Typeclass
+
+-   创建新类: *可以只有声明没有实现*
+
+```haskell
+class ClassName where
+    defining code
+```
+
+-   创建已有类的实例: *必须实现所有已声明函数*
+    -   作用等同于deriving(自由度更大)
+    -   可以重写函数,去除默认函数处理,达到特定目的
+
+```haskell
+-   先创建新类型
+data TrafficLight = Red | Yellow | Green
+
+instance Eq TrafficLight where
+    Red == Red = True
+    Green == Green = True
+    Yellow == Yellow = True
+    _ == _ = False
+
+instance Show TrafficLight where
+    show Red = "Red light"
+    show Yellow = "Yellow light"
+    show Green = "Green light"
+```
+
+-   创建新类和实现实例时,使用class constraint
+    - 可达到*类似于*继承的效果
+    - 可达到限制类型的效果
+
+```haskell
+class (Eq a) => Num a where
+    ...
+
+instance (Eq m) => Eq (Maybe m) where
+    Just x == Just y = x == y
+    Nothing == Nothing = True
+    _ == _ = False
+```
+
+### `data` type
+
+```haskell
+data SelfDefinedTypeName = ValueConstructorName ValueType .. | .. deriving (Typeclass, ..)
+```
+
+-   data范例
+
+```haskell
+data Point = Point Float Float deriving (Show)
+data Shape = Circle Point Float | Rectangle Point Point deriving (Show)
+```
+
+-   导出data
+
+```haskell
+module Shapes
+( Point(..)
+, Shape(..)
+) where
+```
+
+-   后构造器 > 前构造器
+
+> e.g True > False
+
+```haskell
+data Bool = False | True deriving (Ord)
+```
+
+#### 函数特性
+
+data type也是函数,若省略参数亦会造成Curry化.
+
+> e.g map fx list
+
+```haskell
+ghci> map (Circle 10 20) [4,5,6,6]
+[Circle 10.0 20.0 4.0,Circle 10.0 20.0 5.0,Circle 10.0 20.0 6.0,Circle 10.0 20.0 6.0]
+```
+
+-   Value Constructor:使用`ValueConstructorName ValueType ..`可构造出一个该类型的定义/名字
+
+```haskell
+ghci > Circle 10 20 30
+Circle 10 20 30
+```
+
+#### 记录语法(Record Syntax)
+
+-   定义
+
+```haskell
+data Person = Person { firstName :: String
+                     , lastName :: String
+                     , age :: Int
+                     , height :: Float
+                     , phoneNumber :: String
+                     , flavor :: String
+                     } deriving (Show)
+```
+
+-   使用
+
+```haskell
+ghci> Car {company="Ford", model="Mustang", year=1967}
+Car {company = "Ford", model = "Mustang", year = 1967}
+```
+
+#### 类型参数(Type Parameters)
+
+提高代码的复用性
+
+```haskell
+data Car a b c = Car { company :: a
+                       , model :: b
+                       , year :: c
+                        } deriving (Show)
+```
+
+```haskell
+tellCar :: (Show a) => Car String String a -> String
+tellCar (Car {company = c, model = m, year = y}) = "This " ++ c ++ " " ++ m ++ " was made in " ++ show y
+```
+
+##### Maybe value constructor
+
+```haskell
+data Maybe a = Nothing | Just a
+```
+
+-   Just可实现转化:
+
+```haskell
+Just :: a -> Maybe a
+```
+
+#### Deriving(派生)
+
+```haskell
+data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
+           deriving (Eq, Ord, Show, Read, Bounded, Enum)
+```
+
+```haskell
+ghci> Wednesday
+Wednesday
+ghci> show Wednesday
+"Wednesday"
+ghci> read "Saturday" :: Day
+Saturday
+
+ghci> Saturday == Sunday
+False
+ghci> Saturday == Saturday
+True
+ghci> Saturday > Friday
+True
+ghci> Monday `compare` Wednesday
+LT
+
+ghci> minBound :: Day
+Monday
+ghci> maxBound :: Day
+Sunday
+
+ghci> succ Monday
+Tuesday
+ghci> pred Saturday
+Friday
+ghci> [Thursday .. Sunday]
+[Thursday,Friday,Saturday,Sunday]
+
+ghci> [minBound .. maxBound] :: [Day]
+[Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday]
+```
+
+#### type定义
+
+为data声明别名 - `typedef`
+
+```haskell
+type String = [Char]
+type PhoneNumber = String
+type Name = String
+type PhoneBook = [(Name,PhoneNumber)]
+```
+
+-   type类型参数: 匹配data类型参数
+
+```haskell
+type AssocList k v = [(k,v)]
+
+type IntMap v = Map.Map Int v
+type IntMap = Map.Map Int
+```
+类型别名,只可以在 Haskell 的类型部分中使用:
+
+-   定义新类型
+-   类型声明
+-   类型注释(::)
+-   禁止: 定义名字/定义 *AssocList [(1,2),(4,5),(7,9)]*
+
+#### 高级数据结构
+
+-   链表
+
+```haskell
+data List a = Empty | Cons a (List a) deriving (Show, Read, Eq, Ord)
+data List a = Empty | Cons { listHead :: a, listTail :: List a} deriving (Show, Read, Eq, Ord)
+```
+
+-   二叉树
+
+```haskell
+data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
+```
+
+```haskell
+singleton :: a -> Tree a
+singleton x = Node x EmptyTree EmptyTree
+
+treeInsert :: (Ord a) => a -> Tree a -> Tree a
+treeInsert x EmptyTree = singleton x
+treeInsert x (Node a left right)
+      | x == a = Node x left right
+      | x < a  = Node a (treeInsert x left) right
+      | x > a  = Node a left (treeInsert x right)
+
+treeElem :: (Ord a) => a -> Tree a -> Bool
+treeElem x EmptyTree = False
+treeElem x (Node a left right)
+    | x == a = True
+    | x < a  = treeElem x left
+    | x > a  = treeElem x right
+
+ghci> let nums = [8,6,4,1,7,3,5]
+ghci> let numsTree = foldr treeInsert EmptyTree nums
 ```
 
 ## 函数
@@ -1737,4 +2035,140 @@ ghci> setNub "HEY WHATS CRACKALACKIN"
 " ACEHIKLNRSTWY"  
 ghci> nub "HEY WHATS CRACKALACKIN"  
 "HEY WATSCRKLIN"
+```
+
+## 输入与输出
+
+### IO action
+
+`name <- IO action`: 将action绑定至名字上,IO String -> String
+
+```haskell
+name <- getLine
+name <- return String
+
+name <- putStrLn String
+```
+
+在一个`do block`中,最后一个`action`不能绑定任何名字,它会被绑定成为`do block`的结果值.
+
+```haskell
+main = do
+    foo <- putStrLn "Hello, what's your name?"
+    name <- getLine
+    putStrLn ("Hey " ++ name ++ ", you rock!")
+```
+
+#### return
+
+-   return功能:将 pure value 包成 I/O actions,不会终止函数/程序
+-   return作用:
+    -   if condition then I/O action else I/O action
+    -   改变`do block形成的I/O action`的结果值:  otherIOaction -> return pureValue
+
+> e.g return "haha" - String -> IO String
+
+```haskell
+main = do
+    line <- getLine
+    if null line
+        then return ()
+        else do
+            putStrLn $ reverseWords line
+            main
+
+reverseWords :: String -> String
+reverseWords = unwords . map reverse . words
+```
+
+### 常用输入输出函数
+
+#### 输出
+
+##### putChar/putStr/putStrLn
+
+```haskell
+putStr :: String -> IO ()
+putStr [] = return ()
+putStr (x:xs) = do
+    putChar x
+    putStr xs
+```
+
+##### print
+
+print = putStrLn . show
+
+#### 输入
+
+##### getChar :: IO Char
+
+```haskell
+main = do
+    c <- getChar
+    if c /= ' '
+        then do
+            putChar c
+            main
+        else return ()
+```
+
+#### Action
+
+##### when
+
+Control.Monad.when :: (Applicative f) => Bool -> f () -> f ()
+
+`when bool表达式 I/O-Action` - 真时返回Action,假时`return ()`
+
+```haskell
+import Control.Monad
+
+main = do
+    c <- getChar
+    when (c /= ' ') $ do
+        putChar c
+        main
+```
+
+##### sequence
+
+sequence :: [IO a] -> IO [a]
+
+```haskell
+main = do
+    rs <- sequence [getLine, getLine, getLine]
+    print rs
+```
+
+##### mapM mapM_ Control.Monad.forM
+
+= sequence . map
+
+```haskell
+ghci> mapM print [1,2,3]
+1
+2
+3
+[(),(),()]
+ghci> mapM_ print [1,2,3]
+1
+2
+3
+```
+
+##### Control.Monad.forever
+
+接受一个 I/O action 并回传一个永远作同一件事的 I/O action
+
+以下代码实现了循环结构:
+
+```haskell
+import Control.Monad
+import Data.Char
+
+main = forever $ do
+    putStr "Give me some input: "
+    l <- getLine
+    putStrLn $ map toUpper l
 ```
