@@ -2,6 +2,14 @@
 
 函数式编程语言的一般思路：先取一个初始的集合并将其变形，执行过滤条件，最终取得正确的结果。
 
+## Platform
+
+```shell
+apt-get install haskell-Platform
+apt-get install ghc-mod
+atom plugins : language-haskell autocomplete-haskell ide-haskell haskell-ghc-mod
+```
+
 ## Unique Mark
 
 ### _
@@ -472,11 +480,15 @@ Ord成员必为Eq成员: class (Eq a) => Ord a where
 -   成员: 大部分基本类型(不包含函数类型)
 -   方法: show函数 (Show a) => a -> String
 
+*Tips*: 结合Read, 可用于字符串与数值之间的转化
+
 #### Read
 
 -   功能: 可以将字串转为Read某成员类型
 -   成员: 大部分基本类型(不包含函数类型)
 -   方法: read函数 (Read a) => String -> a
+
+*Tips*: 结合Show, 可用于字符串与数值之间的转化
 
 #### Enum
 
