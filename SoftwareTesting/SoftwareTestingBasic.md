@@ -1,7 +1,13 @@
+# Notes
+
 ##  测试模型
+
 ### PIE模型
+
 (Execution)Fault,(Infection)Error,(Propagation)Failure
+
 ### 启发式测试策略模型(Heuristic Test Strategy Model)——软件功能测试(难以实现完全自动化)
+
 - 关注价值(Value)：用户得到价值
 - 风险驱动(Risk)：降低价值/用户体验的风险项
 - 产品元素(Product Elements)
@@ -13,7 +19,9 @@
 - 操作(Operation):产品被使用的方式(如键盘、鼠标、触摸等命令操作)
 - 时间(Time):影响产品的时间因素
 - 组合元素:测试产品功能间协作
+
 ### 用户体验测试(对软件功能测试的有益补充)
+
 - 功能性体验
 - 易用性体验
 - 性能体验
@@ -58,6 +66,9 @@ Unit/Module/Integration/System Testing
 
 即在执行过目标代码的测试用例中失败测试用例占比
 
+### 模糊测试
+
+Fuzzing - 是一种通过向目标系统提供非预期的输入并监视异常结果来发现软件漏洞的方法
 
 ## 移动设备:(机型,屏幕,环境)碎片化 ，耗电量
 
