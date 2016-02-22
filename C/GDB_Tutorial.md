@@ -1,3 +1,7 @@
+# GDB Tutorial
+
+## Basic Command
+
 - r(run)
 - l(list)
 - b(break)
@@ -17,6 +21,7 @@ e.g display/i $pc
 	f 按浮点数格式显示变量
 
 - disas 显示汇编代码
+
 
 - x /num-size-format $pc/rsp/rbp 
 
@@ -38,10 +43,17 @@ n、f、u是可选的参数
 - p 	print
 - q   	quit
 - up    last stack
-- bt	function stack
+- bt(backtrace)	function stack 显示堆栈回溯信息
 - info  breakpoints/register
 
+## set 
 
+-   set disassembly
+-   set variable
+
+## shell
+
+shell command
 
 
 
