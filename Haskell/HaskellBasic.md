@@ -10,7 +10,27 @@ apt-get install ghc-mod
 atom plugins : language-haskell autocomplete-haskell ide-haskell haskell-ghc-mod
 ```
 
+### ghci
+
+-   :l - load file
+-   :r - reload file
+-   :cd
+-   :edit - $EDITOR
+-   :m - module
+-   :q - quit
+-   :?
+-   :t - type function
+-   :info - data/Typeclass
+
+### ghc
+
+`runghc *.hs/*.lhs`
+
 ## Unique Mark
+
+### :+
+
+复数符 - 2 :+ 3 -> 2+3i
 
 ### _
 
@@ -79,6 +99,14 @@ True/False
 #### Ordering
 
 LT,GT,EQ
+
+#### Word
+
+Data.Word - unsigned int
+
+#### Rational
+
+有理数类型,用于高精度数学运算
 
 ### List
 
@@ -539,9 +567,11 @@ ghci> :t 20
 
 #### Foldable
 
-#### Functor
+#### *Functor*
 
 -   成员: Maybe a, [], Either a, IO
+    -   成员kind必须为** \* -> \* **
+	-   f functor对象
 
 ```haskell
 ghci> :info Functor
@@ -561,6 +591,11 @@ instance Functor Maybe where
 instance Functor (Either a) where
     fmap f (Right x) = Right (f x)
     fmap f (Left x) = Left x
+
+instance Functor IO where
+    fmap f action = do
+        result <- action
+        return (f result)
 ```
 
 ### 自定义Typeclass
@@ -1073,6 +1108,23 @@ ghci> scanl (flip (:)) [] [3,2,1]
 [[],[3],[2,3],[1,2,3]]
 ```
 
+-   逆波兰表达式
+
+```haskell
+import Data.List
+
+solveRPN :: String -> Float
+solveRPN = head . foldl foldingFunction [] . words
+where   foldingFunction (x:y:ys) "*" = (x * y):ys
+        foldingFunction (x:y:ys) "+" = (x + y):ys
+        foldingFunction (x:y:ys) "-" = (y - x):ys
+        foldingFunction (x:y:ys) "/" = (y / x):ys
+        foldingFunction (x:y:ys) "^" = (y ** x):ys
+        foldingFunction (x:xs) "ln" = log x:xs
+        foldingFunction xs "sum" = [sum xs]
+        foldingFunction xs numberString = read numberString:xs
+```
+
 #### lambda表达式
 
 `\args -> function`
@@ -1200,6 +1252,12 @@ ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
 -   x `mod` y
 -   `even arg`
 -   `odd arg`
+
+##### System.Random
+
+-   `random :: (RandomGen g, Random a) => g -> (a, g)`
+-    getStdGen
+-    newStdGen
 
 #### 数字函数
 
@@ -2092,6 +2150,82 @@ reverseWords :: String -> String
 reverseWords = unwords . map reverse . words
 ```
 
+### Command Line
+
+> System.Environment
+
+-   getArgs: `getArgs :: IO [String]`
+-   getProgName: `getProgName :: IO String`
+
+```haskell
+import System.Environment
+import Data.List
+
+main = do
+    args <- getArgs
+    progName <- getProgName
+    mapM putStrLn args
+    putStrLn progName
+```
+
+```haskell
+import System.Environment
+import System.Directory
+import System.IO
+import Data.List
+
+dispatch :: [(String, [String] -> IO ())]
+dispatch =  [ ("add", add)
+            , ("view", view)
+            , ("remove", remove)
+            ]
+
+main = do
+    (command:args) <- getArgs
+    let (Just action) = lookup command dispatch
+    action args
+
+add :: [String] -> IO ()
+add [fileName, todoItem] = appendFile fileName (todoItem ++ "\n")
+
+view :: [String] -> IO ()
+view [fileName] = do
+    contents <- readFile fileName
+    let todoTasks = lines contents
+        numberedTasks = zipWith (\n line -> show n ++ " - " ++ line) [0..] todoTasks
+    putStr $ unlines numberedTasks
+
+remove :: [String] -> IO ()
+remove [fileName, numberString] = do
+    handle <- openFile fileName ReadMode
+    (tempName, tempHandle) <- openTempFile "." "temp"
+    contents <- hGetContents handle
+    let number = read numberString
+        todoTasks = lines contents
+        newTodoItems = delete (todoTasks !! number) todoTasks
+    hPutStr tempHandle $ unlines newTodoItems
+    hClose handle
+    hClose tempHandle
+    removeFile fileName
+    renameFile tempName fileName
+```
+
+### BtyeString
+
+-   `Data.ByteString`
+-   `Data.ByteString.Lazy`
+
+lazy bytestrings 像装了一堆大小为 64K 的 strict bytestrings 的 list
+
+```haskell
+import qualified Data.ByteString.Lazy as B
+import qualified Data.ByteString as S
+```
+
+-   pack/unpack
+-   fromChunks/toChunks
+-   cons/empty/head/tail/init/null/length/map/reverse/foldl/foldr/concat/takeWhile/filter
+
 ### 常用输入输出函数
 
 #### 输出
@@ -2261,6 +2395,8 @@ main = do
         putStr contents)
 ```
 
+##### hFlush
+
 #### Other
 
 ##### lines
@@ -2295,3 +2431,39 @@ respondPalindromes = unlines . map (\xs ->
 ```
 
 ##### System.Directory - removeFile/renameFile
+
+## 异常
+
+System.IO.Error
+
+### catch
+
+catch :: IO a -> (IOError -> IO a) -> IO a
+
+```haskell
+import System.Environment
+import System.IO
+import System.IO.Error
+
+main = toTry `catch` handler
+
+toTry :: IO ()
+toTry = do (fileName:_) <- getArgs
+            contents <- readFile fileName
+            putStrLn $ "The file has " ++ show (length (lines contents)) ++ " lines!"
+
+handler :: IOError -> IO ()
+handler e
+    | isDoesNotExistError e = putStrLn "The file doesn't exist!"
+    | isFullError e = freeSomeSpace
+    | isIllegalOperation e = notifyCops
+    | otherwise = ioError e
+```
+
+## 注释
+
+### 符号
+
+-   --      单行注释
+-   {- -}   块注释
+-   {-# #-} (文件头部)编译器参数
