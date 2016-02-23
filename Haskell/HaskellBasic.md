@@ -19,6 +19,7 @@ atom plugins : language-haskell autocomplete-haskell ide-haskell haskell-ghc-mod
 -   :m - module
 -   :q - quit
 -   :?
+-   :k - kind
 -   :t - type function
 -   :info - data/Typeclass
 
@@ -571,7 +572,10 @@ ghci> :t 20
 
 -   成员: Maybe a, [], Either a, IO
     -   成员kind必须为** \* -> \* **
-	-   f functor对象
+	-   f *类型构造符(type constructor)*
+-   必须遵守准则:
+    -   fmap id = id
+	-   fmap (f . g) F = fmap f (fmap g F)
 
 ```haskell
 ghci> :info Functor
@@ -597,6 +601,9 @@ instance Functor IO where
         result <- action
         return (f result)
 ```
+
+### Control.Applicative
+
 
 ### 自定义Typeclass
 
