@@ -571,8 +571,8 @@ ghci> :t 20
 #### *Functor*
 
 -   成员: Maybe a, [], Either a, IO
-    -   成员kind必须为** \* -> \* **
-	-   f *类型构造符(type constructor)*
+    -   成员kind必须为 `* -> *`
+	-   f *一元类型构造符(type constructor)*
 -   必须遵守准则:
     -   fmap id = id
 	-   fmap (f . g) F = fmap f (fmap g F)
@@ -602,8 +602,185 @@ instance Functor IO where
         return (f result)
 ```
 
-### Control.Applicative
+#### Control.Applicative
 
+-   成员: f :: `* -> *` *一元类型构造符(type constructor)*
+-   <*>: 参数为 2 个 functor 实例,其中一个包含一个函数
+
+```haskell
+(<$>) :: (Functor f) => (a -> b) -> f a -> f b
+f <$> x = fmap f x
+```
+
+-   作用: 可以用单一一个函数操作多个 functors
+
+```haskell
+class (Functor f) => Applicative f where
+    pure :: a -> f a
+    (<*>) :: f (a -> b) -> f a -> f b
+```
+
+-   实例化
+
+```haskell
+instance Applicative Maybe where
+    pure = Just
+    Nothing <*> _ = Nothing
+    (Just f) <*> something = fmap f something
+```
+
+```haskell
+instance Applicative [] where
+    pure x = [x]
+    fs <*> xs = [f x | f <- fs, x <- xs]
+```
+
+```haskell
+instance Applicative IO where
+    pure = return
+    a <*> b = do
+        f <- a
+        x <- b
+        return (f x)
+```
+
+```haskell
+instance Applicative ZipList where
+        pure x = ZipList (repeat x)
+        ZipList fs <*> ZipList xs = ZipList (zipWith (\f x -> f x) fs xs)
+```
+
+-   多个 functors
+
+```haskell
+ghci> pure (+) <*> Just 3 <*> Just 5
+Just 8
+ghci> pure (+) <*> Just 3 <*> Nothing
+Nothing
+ghci> pure (+) <*> Nothing <*> Just 5
+Nothing
+```
+
+```haskell
+ghci> (*) <$> [2,5,10] <*> [8,10,11]
+[16,20,22,40,50,55,80,100,110]
+```
+
+```haskell
+myAction :: IO String
+myAction = (++) <$> getLine <*> getLine
+```
+
+```haskell
+ghci> getZipList $ max <$> ZipList [1,2,3,4,5,3] <*> ZipList [5,3,1,2]
+[5,3,3,4]
+```
+
+-   高度封装函数: *liftA2* 对两个 applicatives 运用二元函数
+
+```haskell
+liftA2 :: (Applicative f) => (a -> b -> c) -> f a -> f b -> f c
+liftA2 f a b = f <$> a <*> b
+
+ghci> liftA2 (:) (Just 3) (Just [4])
+Just [3,4]
+ghci> (:) <$> Just 3 <*> Just [4]
+Just [3,4]
+```
+
+#### Data.Monoid
+
+-   成员: 必须为具体类型(*不可是类型构造符(type constructor))
+-   准则(Monoid Law):
+    -   *结合律* a·(b·c) = (a·b)·c
+    -   无需满足 a `mappend` b == b `mappend` a
+
+```haskell
+class Monoid m where
+    mempty :: m             -- identity
+    mappend :: m -> m -> m
+    mconcat :: [m] -> m
+    mconcat = foldr mappend mempty
+```
+
+-   实例
+
+```haskell
+instance Monoid [a] where
+    mempty = []
+    mappend = (++)
+```
+
+```haskell
+newtype Product a =  Product { getProduct :: a }
+    deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Num a => Monoid (Product a) where
+    mempty = Product 1
+    Product x `mappend` Product y = Product (x * y)
+
+ghci> getProduct $ Product 3 `mappend` Product 4 `mappend` Product 2
+24
+```
+
+```haskell
+newtype Any = Any { getAny :: Bool }
+    deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Monoid Any where
+    mempty = Any False
+    Any x `mappend` Any y = Any (x || y)
+
+ghci> getAny . mconcat . map Any $ [False, False, False, True]
+True
+```
+
+```haskell
+newtype All = All { getAll :: Bool }
+    deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Monoid All where
+    mempty = All True
+    All x `mappend` All y = All (x && y)
+
+ghci> getAll . mconcat . map All $ [True, True, False]
+False
+```
+
+```haskell
+instance Monoid Ordering where
+    mempty = EQ
+    LT `mappend` _ = LT
+    EQ `mappend` y = y
+    GT `mappend` _ = GT
+
+-- Tips:
+-- mappend 在左边不等于 EQ 的情况下都会回传左边的值。相反地则回传右边的值
+-- 可代替多个 if/else 语句
+import Data.Monoid
+
+lengthCompare :: String -> String -> Ordering
+lengthCompare x y = (length x `compare` length y) `mappend`
+                    (vowels x `compare` vowels y) `mappend`
+                    (x `compare` y)
+    where vowels = length . filter (`elem` "aeiou")
+```
+
+```haskell
+instance Monoid a => Monoid (Maybe a) where
+    mempty = Nothing
+    Nothing `mappend` m = m
+    m `mappend` Nothing = m
+    Just m1 `mappend` Just m2 = Just (m1 `mappend` m2)
+
+instance Monoid (First a) where
+    mempty = First Nothing
+    First (Just x) `mappend` _ = First (Just x)
+    First Nothing `mappend` x = x
+
+ghci> getFirst $ First (Just 'a') `mappend` First Nothing
+Just 'a'
+```
 
 ### 自定义Typeclass
 

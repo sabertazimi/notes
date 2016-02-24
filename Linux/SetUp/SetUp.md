@@ -216,6 +216,8 @@ firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ## Software Tools
 
+### linuxbrew(On GitHub)
+
 ### ZealDocs
 
 ### bleachbit
