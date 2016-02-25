@@ -45,6 +45,7 @@
 -   /etc/gitconfig
 -   ~/.gitconfig 或 ~/.config/git/config
 -   repo/.git/config
+-   git config --global color.ui true
 
 #### Initialize
 
@@ -410,7 +411,7 @@ $ git branch -v(详细信息) -vv(详细远程信息) --merged(显示合并至�
 -   设置当前所在本地分支跟踪某一远程分支
 
 ```shell
-$ git branch -u [remotename]/[branch] 
+$ git branch -u [remotename]/[branch]
 ```
 
 -   创建并切换至新的本地分支(跟踪某一远程分支)
@@ -585,10 +586,10 @@ copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software. 
+all copies or substantial portions of the Software.
 
-And wait, the most important, you shall star/+1/like the project(s) in project url 
-section above first, and then thank the author(s) in Copyright section. 
+And wait, the most important, you shall star/+1/like the project(s) in project url
+section above first, and then thank the author(s) in Copyright section.
 
 Here are some suggested ways:
 
@@ -597,8 +598,8 @@ Here are some suggested ways:
  - Tell friends what a wonderful project this is.
  - And, sure, you can just express thanks in your mind without telling the world.
 
-Contributors of this project by forking have the option to add his/her name and 
-forked project url at copyright and project url sections, but shall not delete 
+Contributors of this project by forking have the option to add his/her name and
+forked project url at copyright and project url sections, but shall not delete
 or modify anything else in these two sections.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
