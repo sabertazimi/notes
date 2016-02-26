@@ -566,7 +566,11 @@ ghci> :t 20
 -   功能: 成员类型具有数字特征
 -   成员: 浮点型 - Float Double
 
-#### Foldable
+|typeclass|method feature|
+|:----------:|:--------------------:|
+|Functor|f a + (a -> b) -> f b|
+|Applicative|f a + f (a -> b) -> f b|
+|Monad|m a + (a -> m b) -> m b|
 
 #### *Functor*
 
@@ -620,7 +624,7 @@ class (Functor f) => Applicative f where
     (<*>) :: f (a -> b) -> f a -> f b
 ```
 
--   实例化
+##### Maybe
 
 ```haskell
 instance Applicative Maybe where
@@ -629,11 +633,15 @@ instance Applicative Maybe where
     (Just f) <*> something = fmap f something
 ```
 
+##### `[]`
+
 ```haskell
 instance Applicative [] where
     pure x = [x]
     fs <*> xs = [f x | f <- fs, x <- xs]
 ```
+
+##### IO
 
 ```haskell
 instance Applicative IO where
@@ -644,13 +652,15 @@ instance Applicative IO where
         return (f x)
 ```
 
+##### ZipList
+
 ```haskell
 instance Applicative ZipList where
         pure x = ZipList (repeat x)
         ZipList fs <*> ZipList xs = ZipList (zipWith (\f x -> f x) fs xs)
 ```
 
--   多个 functors
+##### 多个 functors
 
 ```haskell
 ghci> pure (+) <*> Just 3 <*> Just 5
@@ -676,7 +686,9 @@ ghci> getZipList $ max <$> ZipList [1,2,3,4,5,3] <*> ZipList [5,3,1,2]
 [5,3,3,4]
 ```
 
--   高度封装函数: *liftA2* 对两个 applicatives 运用二元函数
+##### 高度封装函数: *liftA2*
+
+对两个 applicatives 运用二元函数
 
 ```haskell
 liftA2 :: (Applicative f) => (a -> b -> c) -> f a -> f b -> f c
@@ -686,6 +698,97 @@ ghci> liftA2 (:) (Just 3) (Just [4])
 Just [3,4]
 ghci> (:) <$> Just 3 <*> Just [4]
 Just [3,4]
+```
+
+#### Control.Monad
+
+-   成员: 类型构造符(type constructor)
+
+```haskell
+class Monad m where
+    return :: a -> m a
+
+{- bind -}(>>=) :: m a -> (a -> m b) -> m b
+
+    (>>) :: m a -> m b -> m b
+    x >> y = x >>= \_ -> y
+
+    fail :: String -> m a
+    fail msg = error msg
+```
+
+-   特性: 允许返回值之间具有弹性交互
+
+```haskell
+{- 当出现异常后,之后所有的值都变为Nothing -}
+ghci> return (0,0) >>= landRight 2 >>= landLeft 2 >>= landRight 2
+Just (2,4)
+ghci> return (0,0) >>= landLeft 1 >>= landRight 4 >>= landLeft (-1) >>= landRight (-2)
+Nothing
+```
+
+##### Maybe Monad
+
+具有失败可能性的context封装,灵活处理异常(返回值为Nothing)
+
+###### 实现
+
+```haskell
+applyMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b
+applyMaybe Nothing f  = Nothing
+applyMaybe (Just x) f = f x
+```
+
+```haskell
+instance Monad Maybe where
+    return x = Just x
+    Nothing >>= f = Nothing
+    Just x >>= f  = f x
+    fail _ = Nothing
+```
+
+###### do 表示法
+
+-   在 do expression 中，每一行都是一个 monadic value
+-   检查返回值，使用 <-
+
+```haskell
+foo :: Maybe String
+foo = do
+    x <- Just 3
+    y <- Just "!"
+    Just (show x ++ y)
+
+foo :: Maybe String
+foo = Just 3   >>= (\x ->
+      Just "!" >>= (\y ->
+      Just (show x ++ y)))
+
+routine :: Maybe Pole
+routine = do
+    start <- return (0,0)
+    first <- landLeft 2 start
+    Nothing
+    second <- landRight 2 first
+    landLeft 1 second
+```
+
+##### List Monad
+
+#### Foldable
+
+```haskell
+import qualified Data.Foldable as F
+
+foldMap :: (Monoid m, Foldable t) => (a -> m) -> t a -> m
+```
+
+```haskell
+instance F.Foldable Tree where
+    foldMap f Empty = mempty
+    foldMap f (Node x l r) = F.foldMap f l `mappend`
+                                f x           `mappend`
+                                F.foldMap f r
 ```
 
 #### Data.Monoid

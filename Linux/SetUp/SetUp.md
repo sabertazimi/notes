@@ -258,6 +258,7 @@ ifconfig ppp0
 -   Firebug
 -   Flagfox
 -   Greasemonkey
+    -   网易云音乐高音质支持
 -   Markdown Here
 -   Markdown Viewer
 -   Octotree
