@@ -529,8 +529,6 @@ issues类型和feature类型的实现方式一模一样，仅仅有名字上面�
 
 ![Free Software License](img/6_free_software_licenses.png)
 
-
-
 #### Unique LICENSE
 
 ```markdown
@@ -611,7 +609,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
-### Pull Request Work Flow
+### Teamwork
+
+如果在组织的托管空间创建版本库，一定要要为版本库指派一个拥有Push权限的团队，以免以“Fork + Pull”模式工作时，Pull Request没有人响应。
+
+#### Pull Request Work Flow
 
 1. Fork it.
 2. Create your feature branch (`git checkout -b my-new-feature`).
@@ -650,6 +652,14 @@ echo "# RepoName" >> README.md
 git add README.md
 git commit
 git push -u
+```
+
+### Wiki
+
+#### Wiki Git Access
+
+```shell
+$ git clone git@github.com:user/repo.wiki.git
 ```
 
 ### Shorten GitHub URL
@@ -807,3 +817,7 @@ mbox 的格式来生成一系列的补丁以便你可以发送到一个邮件列
 #### git filter-branch
 
 根据某些规则来重写大量的提交记录，例如从任何地方删除文件，或者通过过滤一个仓库中的一个单独的子目录以提取出一个项目
+
+#### git-note
+
+为特定commit添加note,一个commit只能有一个note
