@@ -727,6 +727,34 @@ ghci> return (0,0) >>= landLeft 1 >>= landRight 4 >>= landLeft (-1) >>= landRigh
 Nothing
 ```
 
+-   Monad Laws:
+	-   return 满足 Left identity: `retrun x >>= f 等于 f x`
+	-   return 满足 right identity: `m >>= return 等于 m`
+	-   Associativity: 结合律 `(m >>= f) >>= g 等于 m >>= (\x -> f x >>= g) `
+
+```haskell
+ghci> return 3 >>= (\x -> Just (x+100000))
+Just 100003
+ghci> (\x -> Just (x+100000)) 3
+Just 100003
+
+ghci> Just "move on up" >>= (\x -> return x)
+Just "move on up"
+ghci> [1,2,3,4] >>= (\x -> return x)
+[1,2,3,4]
+ghci> putStrLn "Wah!" >>= (\x -> return x)
+Wah!
+
+{-Tips: 利用结合律合并两个 Monadic Function-}
+(<=<) :: (Monad m) => (b -> m c) -> (a -> m b) -> (a -> m c)
+f <=< g = (\x -> g x >>= f)
+ghci> let f x = [x,-x]
+ghci> let g x = [x*3,x*2]
+ghci> let h = f <=< g
+ghci> h 3
+[9,-9,6,-6]
+```
+
 ##### Maybe Monad
 
 具有失败可能性的context封装,灵活处理异常(返回值为Nothing)
@@ -774,6 +802,94 @@ routine = do
 ```
 
 ##### List Monad
+
+-   non-detetminism(不确定性)
+
+```haskell
+ghci> (*) <$> [1,2,3] <*> [10,100,1000]
+[10,100,1000,20,200,2000,30,300,3000]
+```
+
+-   实现
+
+```haskell
+instance Monad [] where
+    return x = [x]
+    xs >>= f = concat (map f xs)
+    fail _ = []
+```
+
+-   返回值交互: 下例中 n 与 return (n, ch) 进行交互
+    -   list comprehension 与 do 表示法 均是 >>= 的语法糖
+	-   list comprehension: <- 与 条件表达式
+	-   do 表示法: <- 与 guard函数
+
+```haskell
+ghci> [1,2] >>= \n -> ['a','b'] >>= \ch -> return (n,ch)
+[(1,'a'),(1,'b'),(2,'a'),(2,'b')]
+
+{- do 表示法 -}
+listOfTuples :: [(Int,Char)]
+listOfTuples = do
+    n <- [1,2]
+    ch <- ['a','b']
+    return (n,ch)
+
+sevensOnly :: [Int]
+sevensOnly = do
+    x <- [1..50]
+    guard ('7' `elem` show x)
+    return x
+
+{- list comprehension -}
+ghci> [ (n,ch) | n <- [1,2], ch <- ['a','b'] ]
+[(1,'a'),(1,'b'),(2,'a'),(2,'b')]
+```
+
+##### MonadPlus
+
+使Monad具有Monoid的性质(二元封闭运算)
+
+```haskell
+instance MonadPlus [] where
+    mzero = []
+    mplus = (++)
+```
+
+##### Monad Algorithms
+
+###### 马走日
+
+-   计算出可移动位置
+
+```haskell
+moveKnight :: KnightPos -> [KnightPos]
+moveKnight (c,r) = do
+    (c',r') <- [(c+2,r-1),(c+2,r+1),(c-2,r-1),(c-2,r+1)
+                ,(c+1,r-2),(c+1,r+2),(c-1,r-2),(c-1,r+2)
+                ]
+    guard (c' `elem` [1..8] && r' `elem` [1..8])
+    return (c',r')
+```
+
+-   利用 >>= 向后传递多个可交互的位置
+
+```haskell
+in3 start = return start >>= moveKnight >>= moveKnight >>= moveKnight
+
+in3 :: KnightPos -> [KnightPos]
+in3 start = do
+    first <- moveKnight start
+    second <- moveKnight first
+    moveKnight second
+```
+
+-   最后完成完整函数: 产生所有三步的可能位置，检查其中一个位置是否在里面
+
+```haskell
+canReachIn3 :: KnightPos -> KnightPos -> Bool
+canReachIn3 start end = end `elem` in3 start
+```
 
 #### Foldable
 
@@ -1094,14 +1210,26 @@ type IntMap = Map.Map Int
 
 #### 高级数据结构
 
--   链表
+##### 栈
+
+```haskell
+type Stack = [Int]
+
+pop :: Stack -> (Int,Stack)
+pop (x:xs) = (x,xs)
+
+push :: Int -> Stack -> ((),Stack)
+push a xs = ((),a:xs)
+```
+
+##### 链表
 
 ```haskell
 data List a = Empty | Cons a (List a) deriving (Show, Read, Eq, Ord)
 data List a = Empty | Cons { listHead :: a, listTail :: List a} deriving (Show, Read, Eq, Ord)
 ```
 
--   二叉树
+##### 二叉树
 
 ```haskell
 data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
@@ -2746,6 +2874,125 @@ handler e
     | isIllegalOperation e = notifyCops
     | otherwise = ioError e
 ```
+
+## Advanced Monad
+
+### Writer Monad
+
+Writer 可以让我们在计算的同时搜集所有 log 纪录，并汇集成一个 log 并附加在结果上
+
+```haskell
+applyLog :: (a,String) -> (a -> (b,String)) -> (b,String)
+applyLog (x,log) f = let (y,newLog) = f x in (y,log ++ newLog)
+```
+
+```haskell
+ghci> (30, "A freaking platoon.") `applyLog` isBigGang
+(True,"A freaking platoon.Compared gang size to 9")
+ghci> ("Bathcat","Got outlaw name.") `applyLog` (\x -> (length x, "Applied length"))
+(7,"Got outlaw name.Applied length")
+```
+
+#### Control.Monad.Writer
+
+```haskell
+instance (Monoid w) => Monad (Writer w) where
+    return x = Writer (x, mempty)
+    (Writer (x,v)) >>= f = let (Writer (y, v')) = f x in Writer (y, v `mappend` v')
+```
+
+```haskell
+import Control.Monad.Writer
+
+logNumber :: Int -> Writer [String] Int
+logNumber x = Writer (x, ["Got number: " ++ show x])
+
+multWithLog :: Writer [String] Int
+multWithLog = do
+    a <- logNumber 3
+    b <- logNumber 5
+    return (a*b)
+```
+
+### Reader Monad
+
+```haskell
+instance Monad ((->) r) where
+    return x = \_ -> x
+    h >>= f = \w -> f (h w) w
+```
+
+### State Monad
+
+#### Control.Monad.State
+
+```haskell
+newtype State s a = State { runState :: s -> (a,s) }
+
+instance Monad (State s) where
+    return x = State $ \s -> (x,s)
+    (State h) >>= f = State $ \s -> let (a, newState) = h s
+                                        (State g) = f a
+                                    in  g newState
+```
+
+#### Control.Monad.State (MonadState)
+
+```haskell
+get = State $ \s -> (s,s)
+put newState = State $ \s -> ((),newState)
+```
+
+#### 实例
+
+```haskell
+import Control.Monad.State
+
+pop :: State Stack Int
+pop = State $ \(x:xs) -> (x,xs)
+
+push :: Int -> State Stack ()
+push a = State $ \xs -> ((),a:xs)
+
+stackManip :: State Stack Int
+stackManip = do
+  push 3
+  a <- pop
+  pop
+```
+
+### Error Monad
+
+```haskell
+instance (Error e) => Monad (Either e) where
+    return x = Right x
+    Right x >>= f = f x
+    Left err >>= f = Left err
+    fail msg = Left (strMsg msg)
+```
+
+```haskell
+ghci> :t strMsg
+strMsg :: (Error a) => String -> a
+ghci> strMsg "boom!" :: String
+"boom!"
+```
+
+### Useful Monad Functions
+
+[HustCSer Repo](https://github.com/HustCSer/learnyouahaskell-zh/blob/online-reading/zh-cn/ch13/for-a-few-monads-more.md)
+
+#### liftM
+
+#### join
+
+#### filterM
+
+#### foldM
+
+#### `<=<`(组合函数)
+
+### Self-Defined Monad
 
 ## 注释
 
