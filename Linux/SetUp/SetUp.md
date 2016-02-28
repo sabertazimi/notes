@@ -298,3 +298,10 @@ sudo apt-get install pam-devel
 sudo apt-get install easy-rsa
 sudo apt-get install openvpn
 ```
+
+## Windows
+
+### Imitate Linux
+
+-   Wox
+-   Cygwin
