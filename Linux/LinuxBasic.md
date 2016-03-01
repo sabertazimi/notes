@@ -40,28 +40,34 @@ $ git clone git@cs.github.com:user/repo
 -   文件传输：sftp -i hustlyl root@119.29.140.60
 
 -   登录数据库：mysql -h 10.66.135.125 -P 3306 -uroot -p
-	
+
+### 远程传输文件
+
+```shell
+rsync -ax -e 'ssh -c blowfish' /root/start_dir root@x.x.x.x:/root/dest_dir
+```
+
 ## 命令优先级:(用于区别同名命令)
 
 包含路径命令  ./vmtools.pl
 \>别名命令
 \>bash内部命令
-\>$PATH包含目录内的命令  /bin /sbin 
+\>$PATH包含目录内的命令  /bin /sbin
 
 ## Linux文件架构
 
 通过源码包安装的软件，可以通过 ./configure --prefix=/opt/
 
 /usr/src是内核源码存放的目录
-	
+
 ## 命令操作
 
 ### 基本处理命令
 
-#### ls 
+#### ls
 
--   -lh(long human)  
--   -ld(long directory) 
+-   -lh(long human)
+-   -ld(long directory)
 -   -i inode(ID号) --color==auto
 
 权限(user/group/other) 引用计数 user group 文件大小 文件修改时间 文件名
@@ -75,11 +81,11 @@ $ git clone git@cs.github.com:user/repo
 
 print working directory
 
-#### rm 
+#### rm
 -   –r	delete directory
 -   –f 	delete forcely
 -   -i	显示确认信息
-	
+
 #### cp
 
 -   -r 	copy directory
@@ -131,7 +137,7 @@ ln	-s(创建软链接)	[原文件]		[目标文件]
 
 #### `man [可选参数] 命令名称`
 
--   -f显示操作等级 
+-   -f显示操作等级
 -   -k包含匹配
 -   -1/2/.../9显示命令不同操作等级的帮助
 
@@ -156,13 +162,13 @@ ln	-s(创建软链接)	[原文件]		[目标文件]
 
 只显示可选参数帮助
 
-#### help shell内部命令 	
+#### help shell内部命令
 
 显示shell内部命令帮助，如cd命令(shell内部命令)
 
 #### info
 
-显示大型帮助文档 - enter进入  u返回  p上一节  n下一节  q退出 
+显示大型帮助文档 - enter进入  u返回  p上一节  n下一节  q退出
 
 ### 压缩命令
 
@@ -189,7 +195,7 @@ ln	-s(创建软链接)	[原文件]		[目标文件]
 
 #### .tar.gz/.tar.bz2
 
-tar [可选参数] 压缩文件(可指定压缩路径)  [-c 解压缩路径]源文件/源目录 
+tar [可选参数] 压缩文件(可指定压缩路径)  [-c 解压缩路径]源文件/源目录
 
 -   -z 将.tar压缩为.tar.gz	-j 将.tar压缩为.tar.bz2
 -   -c 打包	-x 解打包
@@ -205,7 +211,7 @@ mount [-t 文件系统] [-o 特殊选项] 设备文件名 挂载点(挂载目录
 
 -    无参数	显示当前挂载设备
 -    -a  依据/etc/fstab文件配置,自动挂载
- 
+
 umount 设备文件名/挂载点
 
 fdisk –l
@@ -218,29 +224,29 @@ fdisk –l
 
 ### 用户管理命令
 
-#### 组操作 
+#### 组操作
 
 ##### 创建组
 
 groupadd test
 
-##### 修改组 
+##### 修改组
 
 groupmod -n test2 test -g
 
-##### 删除组 
+##### 删除组
 
-groupdel test2 
+groupdel test2
 
-##### 查看组 
+##### 查看组
 
 -   groups someuser
--   cat /etc/group 
--   cat /etc/passwd |awk -F [:] ‘{print $4}’ |sort|uniq | getent group |awk -F [:] ‘{print $1}’ 
+-   cat /etc/group
+-   cat /etc/passwd |awk -F [:] ‘{print $4}’ |sort|uniq | getent group |awk -F [:] ‘{print $1}’
 
-#### 用户操作 
+#### 用户操作
 
-##### 增加用户 
+##### 增加用户
 
 useradd [options] LOGIN
 
@@ -271,9 +277,9 @@ Options:
 
 设置密码: `passwd test`
 
-##### 修改用户 
+##### 修改用户
 
-usermod -d /home/test -G test2 test 
+usermod -d /home/test -G test2 test
 
 -   -l 新用户名 旧用户名		修改用户名
 -   -g 新用户组 目标用户		改变用户所属组
@@ -282,7 +288,7 @@ gpasswd -a test test2  将用户test加入到test2组(附设组)
 
 gpasswd -d test test2  将用户test从test2组中移出
 
-##### 删除用户 
+##### 删除用户
 
 userdel test -r同时删除用户登录目录(/home/xxx)
 
@@ -296,7 +302,7 @@ finger apacheuser 查看单个用户信息
 
 ##### 限制用户
 
--   passwd -l 用户名		锁定用户		
+-   passwd -l 用户名		锁定用户
 -   passwd -u 用户名		解锁用户
 -   passwd -d 用户名		清除用户密码
 
@@ -338,13 +344,13 @@ finger apacheuser 查看单个用户信息
 
 #### 分区命令
 
-##### fdisk  
+##### fdisk
 
 分区表类型MBR
 
 n p e l 新 主 逻辑 扩展 分区 w激活
 
-##### parted 
+##### parted
 
 分区表类型MBR/GPT
 
@@ -376,13 +382,13 @@ rpm校验(查看Cracker信息):
 
 #### yum
 
-源配置文件:/etc/yum.repos.d 	
+源配置文件:/etc/yum.repos.d
 
 ```shell
-cd /etc/yum.repos.d 
+cd /etc/yum.repos.d
 mv CentOS-Base.repo CentOS-Base.repo.bk
-wget http://mirrors.163.com/.help/CentOS7-Base-163.repo 
-yum makecache 
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+yum makecache
 ```
 
 -   yum list
@@ -520,12 +526,12 @@ atrm 作业号/名
 
 ### 历史记录命令
 
-#### history 
+#### history
 
 -   -c 清除历史命令
 -   -w (~/.bash_history) 保存历史命令
 
-/etc/profile中修改HISTSIZE !n/!!/!字符串  重复执行第n条/上一条/指定开头的历史命令 
+/etc/profile中修改HISTSIZE !n/!!/!字符串  重复执行第n条/上一条/指定开头的历史命令
 
 ### 并行命令
 
@@ -656,7 +662,7 @@ while [ 条件判断式 ]
 until [ 条件判断式 ]
     do
         程序
-    done	
+    done
 ```
 
 ### 函数
