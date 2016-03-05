@@ -265,6 +265,7 @@ ifconfig ppp0
 -   SeleniumIDE
 -   Stylish
 -   TabMixPlus
+-   User Agent Switcher
 -   VimFx
 -   Web Search Pro
 -   xThunder
