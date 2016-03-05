@@ -45,4 +45,5 @@ Personal Learning Notes - **Awesome Notes** for Me
 Copyright (c) 2016 sabertazimi
 
 ## Contact
-- e-mail : sabertazimi@gmail.com
+- e-mail: sabertazimi@gmail.com
+- QQ && WeChat: 2426543832
