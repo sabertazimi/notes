@@ -33,7 +33,6 @@ Personal Learning Notes - **Awesome Notes** for Me
 
 - Issue Milestones - Version 1.0
 - Daily Issue
-- OS Basic Notes: TODO List in `OS/` Directory
 
 ## License
 
