@@ -1,4 +1,5 @@
 ### UsefulTools
+
 - 用于创建代码文档资料的 NDoc
 - 用于生成解决方案的 NAnt
 - 用于生成代码的 CodeSmith
@@ -8,3 +9,17 @@
 - 用于生成正则表达式的 Regulator
 - 用于分析程序集的 .NET Reflector
 - 用于单元测试的NUnit
+
+#### GCC
+
+- -E: cpp(c preprocessor) 预处理 => .i
+- -S: cll                 编译   => .s
+- -c: as(assemble)        汇编   => .o
+- -time                    Time the execution of each subprocess
+- -std=<standard>          Assume that the input sources are for <standard>
+- -B <directory>           Add <directory> to the compiler's search paths
+- -v                       Display the programs invoked by the compiler
+- -o <file>                Place the output into <file>
+- -shared                  Create a shared library
+- - Wall
+- - v --help
