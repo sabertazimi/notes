@@ -1,5 +1,14 @@
 # System Basic Notes
 
+## 机器码与进制转换
+
+### 浮点数
+
+规格化浮点数: 1.xxx * 2^(exp - 127) - e.g `5 = 5.0 = 1.25 * 2^(129 - 127)`
+
+-   xxx: 尾数
+-   exp: 阶码
+
 ## Hardware and Software Interface
 
 ### Procedure and Stack
