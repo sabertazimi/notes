@@ -1,8 +1,23 @@
 # C Basic Notes
 
+## 类型转换
+
+### 机器码转换
+
+-   有符号类型转换: 进行符号扩展
+-   无符号类型转换: 进行零扩展
+
 ## Awesome Pointer(Tips and Best Practice)
 
 ### Error Prone Pointers(易错点)
+
+```c
+int i = 37;
+float f = *(float *)&i;
+
+float f = 7.0;
+short s = *(short *)&f;
+```
 
 -   悬挂指针
 -   未初始化
@@ -21,6 +36,12 @@
 Valgrind - [GitHub Repo](https://github.com/svn2github/valgrind)
 
 ## Useful Functions
+
+### Strings
+
+#### strdup
+
+string duplicate - `char *strdup(string)` 封装allocator细节
 
 ### Exceptions
 
