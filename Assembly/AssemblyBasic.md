@@ -1,3 +1,7 @@
+# Assembly Basic Notes
+
+Load-ALU-Store模式 - 读入寄存器，算术逻辑单元运算，回写至内存
+
 ## GCC/GDB/Kit
 
 ### GCC
