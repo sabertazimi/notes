@@ -1,3 +1,37 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [C Basic Notes](#c-basic-notes)
+	- [编程习惯](#编程习惯)
+		- [检查](#检查)
+			- [边界检查](#边界检查)
+			- [指针检查](#指针检查)
+	- [类型转换](#类型转换)
+		- [机器码转换](#机器码转换)
+	- [Awesome Pointer(Tips and Best Practice)](#awesome-pointertips-and-best-practice)
+		- [Error Prone Pointers(易错点)](#error-prone-pointers易错点)
+		- [Debugging Malloc](#debugging-malloc)
+			- [处理void指针](#处理void指针)
+		- [利用void指针实现泛型(generic)](#利用void指针实现泛型generic)
+			- [通用型 swap 函数](#通用型-swap-函数)
+			- [通用型 lsearch 函数](#通用型-lsearch-函数)
+				- [实现](#实现)
+				- [int 实例](#int-实例)
+				- [string 实例](#string-实例)
+			- [泛型数据结构](#泛型数据结构)
+				- [通用型栈](#通用型栈)
+			- [Tools](#tools)
+	- [Useful Functions](#useful-functions)
+		- [Alloctor](#alloctor)
+			- [free](#free)
+		- [Strings](#strings)
+			- [strdup](#strdup)
+		- [Exceptions](#exceptions)
+		- [Process and Threads](#process-and-threads)
+			- [fork/execve](#forkexecve)
+			- [Other](#other)
+
+<!-- /TOC -->
+
 # C Basic Notes
 
 ## 编程习惯
@@ -195,6 +229,20 @@ void StackPop(stack *s, void *elemAddr) {
 Valgrind - [GitHub Repo](https://github.com/svn2github/valgrind)
 
 ## Useful Functions
+
+### Alloctor
+
+启发式(Heuristic)编程:
+
+- 建立已分配void指针表,free函数执行时,只回收表中存在的指针;不存在则报错
+-   对heap进行分区 - 小/中/大块内存请求,分别从不同区域(8/16/32最小单位区)分配
+
+-   记录当前堆块的信息，如长度，空闲状态
+-   记录周围环境信息，如保留上/下一堆块的指针或记录上/下堆块空闲状态
+
+#### free
+
+**free函数会回退4/8字节，取出heap块的长度/信息,根据此信息进行heap块的释放.**
 
 ### Strings
 
