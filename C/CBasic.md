@@ -48,7 +48,7 @@
 
 ##### 缺少函数原型
 
-链接成功 - 链接器自动装载库函数，不影响程序执行 **只警告，不报错** 
+链接成功 - 链接器自动装载库函数，不影响程序执行 **只警告，不报错**
 
 ##### 覆盖标准库函数原型
 
@@ -294,12 +294,12 @@ string duplicate - `char *strdup(string)` 封装allocator细节
 
 perror(string) - 用来将上一个函数发生错误的原因输出到标准设备(stderr)
 
-### Process and Threads
+### Process
 
 #### fork/execve
 
-- fork(): 创建当前进程的拷贝
-- execve(): 用另一程序的代码代替当前进程的代码
+-   fork(): 创建当前进程的拷贝
+-   execve(): 用另一程序的代码代替当前进程的代码
     - `int execve(char *filename, char *argv[], char *envp[])`
 
 ```c
@@ -319,11 +319,101 @@ void fork_exec(char *path, char *argv[]) {
 
 #### Other
 
-- getpid()
-- wait(int *child_status)/waitpid(pid)
-- exit()
+-   getpid()
+-   wait(int *child_status)/waitpid(pid)
+-   exit()
 
-### 联合体
+### Threads
+
+#### pthread.h
+
+```c
+typedef unsigned long int pthread_t;
+
+/**
+ * create thread
+ * @param  {指向线程标识符的指针}   pthread_t *__thread
+ * @param  {设置线程属性}         __const pthread_attr_t *__attr
+ * @param  {线程运行函数的起始地址} void *(*__start_routine) (void *)
+ * @param  {运行函数的参数}        void *__arg
+ */
+extern int pthread_create __P ((pthread_t *__thread, __const pthread_attr_t *__attr, void *(*__start_routine) (void *)， void *__arg));
+　　
+/**
+ * 等待线程
+ * @param  {被等待的线程标识符}                              pthread_t __th
+ * @param  {一个用户定义的指针，它可以用来存储被等待线程的返回值} void **__thread_return
+ */
+extern int pthread_join __P ((pthread_t __th, void **__thread_return));
+
+/**
+ * 退出线程
+ * @param  {函数的返回代码} (void *__retval)) __attribute__ ((__noreturn__)
+ */
+extern void pthread_exit __P ((void *__retval)) __attribute__ ((__noreturn__));
+
+// 一个线程不能被多个线程等待，否则第一个接收到信号的线程成功返回，其余调用pthread_join的线程则返回错误代码ESRCH
+
+// 以下为互斥锁相关函数
+
+pthread_mutex_init
+pthread_mutexattr_init
+
+/**
+ * 设置属性pshared
+ * PTHREAD_PROCESS_PRIVATE
+ * PTHREAD_PROCESS_SHARED
+ */
+pthread_mutexattr_setpshared
+
+/**
+ * 设置互斥锁类型
+ * PTHREAD_MUTEX_NORMAL
+ * PTHREAD_MUTEX_ERRORCHECK
+ * PTHREAD_MUTEX_RECURSIVE
+ * PTHREAD_MUTEX_DEFAULT
+ */
+pthread_mutexattr_settype
+
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_delay_np
+```
+
+```c
+InitThreadPackage
+ThreadNew
+ThreadSleep
+RunAllThreads
+SemaphoreNew(int > 0);
+SemaphoreWait(lock)
+SemaphoreSignal(lock)
+```
+
+```c
+void SellTickets(int agent, int *ticketsNum, Semaphore lock) {
+	while (true) {
+		// 当 lock == 0 时,当前进程阻塞, 等待 lock > 0
+		// 当 lock > 0 时, 当前进程继续进行, 并且 lock--
+		SemaphoreWait(lock);
+
+		if (*ticketsNum == 0) break;  // 票已售磬
+
+		(*ticketsNum)--;  // 售出一张票
+		printf("Sell One Ticket.\n");
+
+		// lock++ 使得 lock > 0
+		// 若有其他进程调用了SemaphoreWait, 且因之前 lock == 0 而被阻塞, 则此时其他进程可继续进行
+		SemaphoreSignal(lock);
+	}
+
+    // break to here
+	// 作用同循环内的 Signal 函数
+	SemaphoreSignal(lock);
+}
+```
+
+## 联合体
 
 -   机器码 e.g 理解 IEEE 754 标准
 -   区分大/小端模式
