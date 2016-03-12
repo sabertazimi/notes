@@ -231,12 +231,17 @@ firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 -   screen
 -   git
 -   pppoeconf/speedtest-cli
+-   gh
 
 ```shell
 sudo pppoeconf
 sudo pon dsl-provider
 sudo poof
 ifconfig ppp0
+```
+
+```shell
+[sudo] npm install -g gh
 ```
 
 -   zsh
