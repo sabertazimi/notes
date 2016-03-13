@@ -120,22 +120,22 @@ ln	-s(创建软链接)	[原文件]		[目标文件]
 
 -   -name
 -   -iname 不区分大小写
--   -user user_name 按照所有者搜索
+-   -user `user_name` 按照所有者搜索
 -   -nouser 搜索没有所有者的文件
 -   -atime(文件访问时间)/-ctime(改变文件属性)/-mtime(改变文件内容)  -10(十天内)/10(十天当天)/+10(十天前)
 -   -size(文件大小) -25k(小于25k)/25M(25M)/+25G(大于25G)
--   -inum inode_number
+-   -inum `inode_number`
 -   -a / -o 逻辑与/逻辑或(左右两端搜索条件)
--   -exec/-ok system_command_list {} \;对搜索结果执行操作
+-   -exec/-ok `system_command_list {} \;对搜索结果执行操作
 
-#### `grep [可选参数] “字符串” 文件名`
+#### `grep` `[可选参数] “字符串” 文件名`
 
 -   -I 不区分大小写
 -   -v 排除指定字符串
 
 ### 帮助命令
 
-#### `man [可选参数] 命令名称`
+#### `man` `[可选参数] 命令名称`
 
 -   -f显示操作等级
 -   -k包含匹配
@@ -341,6 +341,13 @@ finger apacheuser 查看单个用户信息
 ### 磁盘管理命令
 
 主分区(primary)与延伸分区(extended) 延伸分区可以继续划分成逻辑分区(logical)
+
+#### 修复命令
+
+```shell
+sudo debugfs /dev/sda9
+> debugfs: lsdel
+```
 
 #### 分区命令
 
