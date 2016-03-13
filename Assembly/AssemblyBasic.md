@@ -20,6 +20,46 @@ Load-ALU-Store模式 - 读入寄存器，算术逻辑单元运算，回写至内
 - `info register`
 - `x /numsizeformat $pc/rsp/rbp`
 
+### MASM/LINK/TD
+
+#### MASM
+
+```shell
+masm /Zi/Zd src dist
+```
+
+#### LINK
+
+```shell
+link /DEBUG src
+```
+
+### NMAKE
+
+```makefile
+NAME = c1
+
+EXE = $(NAME).exe
+OBJS = $(NAME).obj
+SRCS = $(NAME).asm
+
+LINK_FLAG = /subsystem:windows
+ML_FLAG = /c/coff
+MASM_FLAG = /Zi/Zd
+
+$(EXE): $(OBJS)
+    link $(LINK_FLAG) $(OBJS)
+
+$(OBJS): $(SRCS)
+    masm $(MASM_FLAG) $(SRCS)
+
+clean:
+    del *.obj && del *.tr
+
+test:
+    td $(EXE)
+```
+
 ### Objdump
 
 `AT&T`反汇编工具
