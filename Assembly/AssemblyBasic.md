@@ -26,6 +26,8 @@ Load-ALU-Store模式 - 读入寄存器，算术逻辑单元运算，回写至内
 
 ```shell
 masm /Zi/Zd src dist
+masm /I(path)           // 引用 标准库/宏
+masm /I..\include
 ```
 
 #### LINK
@@ -34,24 +36,58 @@ masm /Zi/Zd src dist
 link /DEBUG src
 ```
 
+#### TD
+
+-   `tab`  切换分区
+-   `alt`  功能键
+-   `ctrl` 子功能键
+
+##### Basic
+
+-   `F2`: break
+-   `F7`: step into
+-   `F8`: step over
+
+##### Alt
+
+-   `Alt+F5`   : 临时跳转至 dos 界面
+-   `Alt+Enter`: 全屏
+-   `Alt+X`    : 退出
+
+##### 代码区
+
+-   `<C-A>` Assemble: 临时修改汇编指令
+-   `<C-C>` Caller  : 从子程序处跳回至 Caller 处
+-   `<C-F>` Follow  : 查看 CALL/JMP/INT 跳转至的子程序处
+-   `<C-O>` Origin  : 跳转至 cs:ip 指向指令处
+
+##### 数据区
+
+-   `<C-C>` Change: 临时修改数据
+-   `<C-D>` Display: 选择显示格式 e.g Byte/Word/Long/Comp/Float/Real/Double/Extended
+-   `<C-G>` Goto: 跳转至指定地址区
+
 ### NMAKE
 
-```makefile
-NAME = c1
+-   `$<`: 源文件名
+-   `$?`: 所有源文件名
+-   `$@`: 全路径的目标文件
+-   `$*`: 除去扩展名的全路径的目标文件
 
 EXE = $(NAME).exe
 OBJS = $(NAME).obj
 SRCS = $(NAME).asm
+SIMPLE_MODE = ;
 
 LINK_FLAG = /subsystem:windows
-ML_FLAG = /c/coff
+ML_FLAG = /c/coff/Zi
 MASM_FLAG = /Zi/Zd
 
 $(EXE): $(OBJS)
-    link $(LINK_FLAG) $(OBJS)
+    link $(LINK_FLAG) $(OBJS) $(SIMPLE_MODE)
 
 $(OBJS): $(SRCS)
-    masm $(MASM_FLAG) $(SRCS)
+    masm $(MASM_FLAG) $(SRCS) $(SIMPLE_MODE)
 
 clean:
     del *.obj && del *.tr
