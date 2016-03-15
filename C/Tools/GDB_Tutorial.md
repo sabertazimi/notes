@@ -55,5 +55,12 @@ n、f、u是可选的参数
 
 shell command
 
+## Assemble
 
+### Core Dump
+
+```shell
+ulimit -c unlimited
+gdb -c core_file_path target_exe_path
+```
 
