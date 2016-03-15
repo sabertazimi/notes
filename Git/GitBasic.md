@@ -633,7 +633,7 @@ THE SOFTWARE.
 -   利用GitHub Repository API以及curl工具创建仓库
 
 ```shell
-curl -u 'username' -d '{"name":"RepoName", "description":"description string", "homepage":"URL", "auto_init":ture, "gitignore_template":"Meteor", "license_template":"mit"}' https://api.github.com/user/repos
+curl -u 'username' -d '{"name":"RepoName", "description":"description string", "homepage":"URL", "auto_init":true, "gitignore_template":"Meteor", "license_template":"mit"}' https://api.github.com/user/repos
 ```
 
 -   上传本地代码至远程仓库
