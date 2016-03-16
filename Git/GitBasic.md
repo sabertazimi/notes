@@ -291,6 +291,12 @@ $ git remote rename <old> <new>
 $ git push origin --delete [remote-branch-name]
 ```
 
+保存推送密码
+
+```shell
+$ git config --global credential.helper store
+```
+
 ### tag
 
 列出标记及其信息
