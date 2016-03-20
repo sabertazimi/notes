@@ -12,10 +12,10 @@ Load-ALU-Store模式 - 读入寄存器，算术逻辑单元运算，回写至内
 
 ### GDB
 
-- `si`              单指令执行
+- `si`          单指令执行
 - `x/i $pc`     执行si命令时打印汇编代码
-- `disas`        显示汇编代码
-- `bt`             查看函数堆栈
+- `disas`       显示汇编代码
+- `bt`          查看函数堆栈
 - `step1`       下一条汇编指令
 - `info register`
 - `x /numsizeformat $pc/rsp/rbp`
@@ -74,6 +74,7 @@ link /DEBUG src
 -   `$@`: 全路径的目标文件
 -   `$*`: 除去扩展名的全路径的目标文件
 
+```makefile
 EXE = $(NAME).exe
 OBJS = $(NAME).obj
 SRCS = $(NAME).asm
@@ -90,7 +91,8 @@ $(OBJS): $(SRCS)
     masm $(MASM_FLAG) $(SRCS) $(SIMPLE_MODE)
 
 clean:
-    del *.obj && del *.tr
+    del *.obj
+    del *.tr
 
 test:
     td $(EXE)
