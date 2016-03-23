@@ -3,7 +3,7 @@
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
 [![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
 [![Apache](https://img.shields.io/badge/license-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
-![Progress](http://progressed.io/bar/22?title=learning)
+![Progress](http://progressed.io/bar/24?title=learning)
 
 
 Personal Learning Notes - **Awesome Notes** for Me
