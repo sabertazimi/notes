@@ -271,3 +271,8 @@ url.parse(request.url, true);
 ### Format
 
 -   strftime
+
+### Other
+
+-   prompt
+-   trigonometry
