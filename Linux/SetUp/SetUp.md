@@ -71,7 +71,11 @@ sudo apt-get install wps-office
 ```shell
 sudo add-apt-repository ppa:webupd8team/sublime-text-3    
 sudo apt-get update    
-sudo apt-get install sublime-text  
+sudo apt-get install sublime-text
+
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
 ```
 
 ```shell
