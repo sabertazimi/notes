@@ -292,6 +292,13 @@ firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ### ZealDocs
 
+```shell
+$ sudo add-apt-repository ppa:zeal-developers/ppa
+$ sudo apt-get update
+$ sudo apt-get install zeal
+$ sudo apt-get remove appmenu-qt5
+```
+
 ### bleachbit
 
 ### VMware player
