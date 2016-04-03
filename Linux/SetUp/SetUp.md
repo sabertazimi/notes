@@ -55,14 +55,50 @@ sudo vim /etc/default/rcS
 sudo apt-get install vim  
 ```
 
+-   add kylin source
+
 ```shell
 vim /etc/apt/sources.list.d/ubuntukylin.list
-deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main 
+deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main
+sudo apt-get update 
 ```
 
 ```shell
-sudo apt-get update  
-sudo apt-get install sogoupinyin  
+sudo apt-get install sogoupinyin
+sudo apt-get install wps-office 
+```
+
+```shell
+sudo add-apt-repository ppa:webupd8team/sublime-text-3    
+sudo apt-get update    
+sudo apt-get install sublime-text  
+```
+
+```shell
+sudo add-apt-repository ppa:nilarimogard/webupd8    
+sudo apt-get update    
+sudo apt-get install syspeek
+```
+
+```shell
+sudo vim /etc/dhcp/dhclient.conf
+
+prepend domain-name-servers 127.0.0.1;下一行
+
+prepend domain-name-servers 114.114.114.114;  
+prepend domain-name-servers 223.5.5.5;
+```
+
+```shell
+sudo apt-get install vpnc
+sudo apt-get install network-manager-vpnc
+
+sudo vpnc
+sudo vpnc-disconnect 
+```
+
+```shell
+sudo apt-get install git axel exfat-fuse lnav unrar 
 ```
 
 
