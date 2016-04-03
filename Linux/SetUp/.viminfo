@@ -1,0 +1,240 @@
+# 这个 viminfo 文件是由 Vim 7.4 所产生。
+# 如果想要自行修改请特别小心！
+
+# 文件被写的时候 ‘encoding’ 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 命令行 历史记录 (从新到旧)：
+:wq
+:q
+:Q
+:q!
+::q!
+:wq
+:wq
+
+# 查找字符串 历史记录 (从新到旧)：
+
+# 表达式 历史记录 (从新到旧)：
+=acp#onPopupPost()
+
+# 输入行 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+
+# 寄存器:
+"1	LINE	0
+	
+"2	LINE	0
+	\n \l
+"3	BLOCK	10
+	#!/bin/bash
+	???
+"4	LINE	0
+	
+	java -jar /MineCraftV1.7.10/HMCL-2.3.5.4.jar &
+"5	CHAR	0
+	
+	
+""-	CHAR	0
+	LTS 
+
+# 文件标记:
+'Z  2  6  /etc/issue
+'0  2  6  /etc/issue
+'1  1  9  /etc/issue
+'2  3  2  /etc/issue
+'3  1  0  /etc/iss
+'4  3  0  /etc/issue
+'5  19  57  /etc/bash.bashrc
+'6  1  0  /etc/bashrc
+'7  1  19  /etc/profile
+'8  25  19  /etc/profile
+'9  188  8  ~/.bash_history
+
+# 跳转列表 (从新到旧):
+-'  2  6  /etc/issue
+-'  1  9  /etc/issue
+-'  3  2  /etc/issue
+-'  1  0  /etc/iss
+-'  19  57  /etc/bash.bashrc
+-'  1  0  /etc/bash.bashrc
+-'  1  0  /etc/bashrc
+-'  1  19  /etc/profile
+-'  25  19  /etc/profile
+-'  30  1  /etc/profile
+-'  188  8  ~/.bash_history
+-'  1  0  ~/.bash_history
+-'  108  0  ~/.bash_history
+-'  1  0  ~/.bash_logout
+-'  1  0  /etc/profile.d/bash_completion.sh
+-'  21  4  /bin/myfox
+-'  1  0  /bin/myfox
+-'  3  46  /bin/minecraft
+-'  2  0  /bin/minecraft
+-'  1  0  /bin/minecraft
+-'  4  45  /bin/minecraft
+-'  37  15  /etc/profile
+-'  40  4  /etc/profile
+-'  1  0  /etc/fstab
+-'  16  9  /etc/fstab
+-'  4  0  ~/NERD_tree_1
+-'  15  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  4  0  ~/NERD_tree_1
+-'  15  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  4  0  ~/NERD_tree_1
+-'  15  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  4  0  ~/NERD_tree_1
+-'  15  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  4  0  ~/NERD_tree_1
+-'  15  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+-'  1  0  ~/ma6174
+-'  1  0  ~/ma6174
+-'  1  0  ~/q
+
+# 文件内的标记历史记录 (从新到旧):
+
+> /etc/issue
+	"	2	6
+	^	2	7
+	.	2	26
+	+	1	27
+	+	3	8
+	+	1	2
+	+	3	0
+	+	1	12
+	+	2	26
+
+> /etc/iss
+	"	1	0
+
+> /etc/bash.bashrc
+	"	19	57
+	^	19	57
+	.	19	55
+	+	19	55
+
+> /etc/bashrc
+	"	1	0
+
+> /etc/profile
+	"	1	19
+	^	25	20
+	.	25	20
+	+	38	0
+	+	39	9
+	+	40	4
+	+	31	0
+	+	34	58
+	+	37	15
+	+	25	20
+
+> ~/.bash_history
+	"	188	8
+
+> ~/.bash_logout
+	"	1	0
+
+> /etc/profile.d/bash_completion.sh
+	"	1	0
+
+> /bin/myfox
+	"	21	4
+	^	21	5
+	.	20	4
+	+	20	83
+	+	21	24
+	+	20	4
+
+> /bin/minecraft
+	"	3	46
+	^	3	47
+	.	3	46
+	+	1	10
+	+	4	0
+	+	1	11
+	+	4	54
+	+	4	0
+	+	4	0
+	+	1	11
+	+	4	0
+	+	3	46
+
+> /etc/fstab
+	"	1	0
+	^	16	10
+	.	16	10
+	+	16	10
+
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/ma6174
+	"	1	0
