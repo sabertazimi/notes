@@ -53,6 +53,8 @@
 $ git config --global user.name "sabertazimi"
 $ git config --global user.email sabertazimi@gmail.com
 $ git config --global core.editor vim
+$ git config --global push.default simple
+$ git config --global credential.helper store
 $ git config --list
 ```
 
