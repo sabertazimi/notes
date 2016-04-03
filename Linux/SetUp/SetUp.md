@@ -34,6 +34,38 @@
 
 ------
 
+## Lang
+
+```shell
+export LANG=en_US
+xdg-user-dirs-gtk-update
+export LANG=zh_CN
+```
+## Purge
+
+```shell
+sudo apt-get remove libreoffice-common
+sudo apt-get remove unity-webapps-common
+```
+
+## Set Up
+
+```shell
+sudo vim /etc/default/rcS
+sudo apt-get install vim  
+```
+
+```shell
+vim /etc/apt/sources.list.d/ubuntukylin.list
+deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main 
+```
+
+```shell
+sudo apt-get update  
+sudo apt-get install sogoupinyin  
+```
+
+
 ## IDE
 
 1.  Android Studio
