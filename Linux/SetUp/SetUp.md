@@ -139,6 +139,12 @@ wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 sudo apt-get install sublime-text-installer
 ```
 
+```shell
+git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+cd sublime-text-imfix
+./sublime-imfix
+```
+
 ```markdown
 —– BEGIN LICENSE —–
 Nicolas Hennion
