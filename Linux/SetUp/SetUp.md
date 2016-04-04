@@ -252,12 +252,18 @@ sudo apt-get install nodejs nodejs-dbg
 sudo apt-get install npm
 ```
 
+#### Npm
+
 ```shell
 sudo npm install -g n
-n stable
+sudo n stable
 ```
 
 -   global awesome packages
+
+```shell
+sudo npm install -g bower jslint
+```
 
 ## Firefox Plugins
 

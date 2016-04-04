@@ -38,6 +38,18 @@
 
 # Nodejs Basic Notes
 
+-   Main                        ./index.js, ./server.js, or ./yourentryfile.js in the root
+-   Supporting files in         ./lib/
+-   Static HTTP files in        ./public/
+-   Views or templates in       ./views/
+-   Command-line executables in ./bin/
+-   Tests in                    ./test/ (or ./spec/ if you’re a Jasmine cool-aid drinker)
+-   npm scripts in              ./scripts/
+-   Config in                   ./config/
+-   Documentation in            ./doc/
+-   Examples in                 ./examples/
+-   Performance analysis in     ./benchmarks/
+-   Native C/C++ source in      ./source/
 ## Npm Set Up
 
 ### Basic Steps
@@ -257,6 +269,19 @@ url.parse(request.url, true);
 对回调进行计数是处理 Node 中异步的基础 - 自定义 Semaphore 变量: 每完成一个异步处理, Semaphore++
 
 ## Awesome Package
+
+-   Mout Like  Underscore/Lo-Dash, stuff that should probably be included in JavaScript
+-   Express    Web-application framework
+-   Q          Promises
+-   Qconf      Application config
+-   Credential Safe password hashing
+-   Hogan      Mustache for Express
+-   Superagent Communicate with APIs
+-   Socket.io  Realtime communications (WebSocket)
+-   Async      Asynchronous functional utilities
+-   Bunyan     Logging
+-   Tape       Testing
+-   Cuid       Better than GUID/UUID for web applications
 
 ### Http
 
