@@ -301,3 +301,14 @@ url.parse(request.url, true);
 
 -   prompt
 -   trigonometry
+
+## Spider
+
+-   async.js
+-   cheerio: dom
+-   iconv-lite: 转码库
+
+-   http请求获取页面
+-   正则表达式匹配信息
+-   数据持久化数据库
+-   数据可视化
