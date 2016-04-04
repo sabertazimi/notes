@@ -26,6 +26,10 @@ Host cs.github.com
   HostName github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/cs
+Host cloud
+    HostName xx.org
+    User  root
+    IdentityFile ~/.ssh/dsl_private_key
 ```
 
 ```shell
