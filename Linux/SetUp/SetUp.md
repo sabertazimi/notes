@@ -205,7 +205,7 @@ sudo apt-get install gnome gnome-shell gnome-panel gnome-menus gnome-session gno
 ```
 
 ```shell
-sudo apt-get install numix-icon-theme-circle
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
 ```
 
 ### ZealDocs
@@ -242,6 +242,22 @@ sudo vim /etc/passwd
 ```shell
 vim ~/.zshrc
 ```
+
+## Platform
+
+### Nodejs
+
+```shell
+sudo apt-get install nodejs nodejs-dbg
+sudo apt-get install npm
+```
+
+```shell
+sudo npm install -g n
+n stable
+```
+
+-   global awesome packages
 
 ## Firefox Plugins
 
