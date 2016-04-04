@@ -50,22 +50,16 @@ sudo apt-get remove unity-webapps-common
 
 ## Set Up
 
-```shell
-sudo vim /etc/default/rcS
-sudo apt-get install vim  
-```
-
--   add kylin source
+-   http://pinyin.sogou.com/linux/
+-   http://community.wps.cn/download/
 
 ```shell
-vim /etc/apt/sources.list.d/ubuntukylin.list
-deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main
-sudo apt-get update 
-```
-
-```shell
-sudo apt-get install sogoupinyin
+sudo apt-get install fcitx-sogoupinyin
 sudo apt-get install wps-office 
+```
+
+```shell
+sudo apt-get install vim  
 ```
 
 ```shell
@@ -108,8 +102,8 @@ sudo apt-get install git axel exfat-fuse lnav unrar
 
 ## IDE
 
-1.  Android Studio
-2.  WebStorm
+###  Android Studio
+###  WebStorm
 
 ## Editor-OpenSource
 
@@ -288,6 +282,18 @@ firewall : $ touch ~/.atom/.apmrc && echo 'strict-ssl = false' > ~/.atom/.apmrc
 
 ## Software Tools
 
+### gnome
+
+```shell
+sudo apt-get install gnome gnome-shell gnome-panel gnome-menus gnome-session gnome-tweak-tool gdm
+```
+
+```shell
+sudo apt-add-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-icon-theme-circle
+```
+
 ### linuxbrew(On GitHub)
 
 ### ZealDocs
@@ -305,12 +311,15 @@ $ sudo apt-get remove appmenu-qt5
 
 ## Shell Tools
 
--   f-irc/irssi (irc client)
--   ssh
--   screen
--   git
--   pppoeconf/speedtest-cli
--   gh
+### f-irc/irssi (irc client)
+
+### ssh
+
+###  screen
+
+###  git
+
+###  pppoeconf/speedtest-cli
 
 ```shell
 sudo pppoeconf
@@ -319,13 +328,20 @@ sudo poof
 ifconfig ppp0
 ```
 
+### zsh
+
 ```shell
-[sudo] npm install -g gh
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo vim /etc/passwd
 ```
 
--   zsh
-    -   theme : rkj-repos candy ys
-    -   plugins : git node ruby meteor bundler osx rake sublime
+-   theme : rkj-repos candy ys
+-   plugins : git node ruby meteor bundler osx rake sublime
+
+```shell
+vim ~/.zshrc
+```
 
 ## Firefox Plugins
 
@@ -390,3 +406,12 @@ sudo apt-get install openvpn
 
 -   Wox
 -   Cygwin
+
+### Software
+
+-   360 safe
+-   sougoupinyin
+-   qq
+-   qq browser
+-   baiduyun
+-   office 2007
