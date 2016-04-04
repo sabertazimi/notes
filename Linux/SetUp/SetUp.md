@@ -228,15 +228,11 @@ vim ~/.zshrc
 ## Firefox Plugins
 
 ```shell
-sudo chmod g-wx,o-wx .python-eggs/
-sudo chmod +x ./packages.egg
-nohup python ~/hustlyl/software/GoagentFreeFirefoxfan/Goagent/proxy.py & >/dev/null 2>&1
-nohup firefox & >/dev/null 2>&1
+nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
 ```
 
 -   AdblockPlus
 -   Alexa
--   AutoProxy
 -   BetterSearch
 -   ChatZilla
 -   CLEO
@@ -251,6 +247,7 @@ nohup firefox & >/dev/null 2>&1
 -   Markdown Here
 -   Markdown Viewer
 -   Octotree
+-   Pan
 -   SeleniumIDE
 -   Stylish
 -   TabMixPlus
