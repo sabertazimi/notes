@@ -357,8 +357,10 @@ sudo apt-get install openvpn
 ### Software
 
 -   360 safe
+-   qq browser
 -   sougoupinyin
 -   qq
--   qq browser
 -   baiduyun
+-   thunder
+-   netease music
 -   office 2007
