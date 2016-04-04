@@ -91,17 +91,17 @@ sudo apt-get install fcitx-sogoupinyin
 sudo apt-get install wps-office
 ```
 
--   fonts
+###  fonts
 
 /usr/share/fonts/chinese/TrueType/
 
 ```shell
-# mkfontscale
-# mkfontdir
-# fc-cache
+mkfontscale
+mkfontdir
+fc-cache
 ```
 
--   tools
+### tools
 
 ```shell
 sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek
@@ -326,20 +326,21 @@ sudo apt-get install pam-devel
 ```
 
 ```shell
-#wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz
-#tar –zxvf lzo-2.06.tar.gz –C /usr/src/
-#cd /usr/src/lzo-2.06
-# ./configure --prefix=/usr/local
-#make
-#make install
+sudo wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz
+tar –zxvf lzo-2.06.tar.gz –C /usr/src/
+cd /usr/src/lzo-2.06
+sudo  ./configure --prefix=/usr/local
+sudo make
+sudo make install
 ```
 
 ```shell
-#unzip openvpn-2.3.10.zip
-#cd openvpn-2.3.2
-#./.configure --prefix=/opt/openvpn-2.3.10
-#make
-#make install
+sudo unzip openvpn-2.3.10.zip
+cd openvpn-2.3.2
+sudo ./.configure --prefix=/opt/openvpn-2.3.10
+sudo make
+sudo make install
+```
 
 ```shell
 sudo apt-get install easy-rsa
