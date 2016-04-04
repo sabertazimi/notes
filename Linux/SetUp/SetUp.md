@@ -1,17 +1,36 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Linux SetUp](#linux-setup)
+	- [Lang](#lang)
+	- [Purge](#purge)
+	- [Set Up](#set-up)
+		- [Config](#config)
+		- [PPA](#ppa)
+		- [Office](#office)
 	- [IDE](#ide)
-	- [Editor-OpenSource](#editor-opensource)
-		- [Vim(Github)](#vimgithub) - [Visual Studio Code](#visual-studio-code)
+		- [Android Studio](#android-studio)
+		- [WebStorm](#webstorm)
+	- [Text Editor](#text-editor)
+		- [Vim(Github)](#vimgithub)
+		- [Sublime Text](#sublime-text)
 		- [Atom](#atom)
-			- [package](#package)
-	- [Software Tools](#software-tools)
+		- [Visual Studio Code](#visual-studio-code)
+	- [Tools](#tools)
+	- [Software](#software)
+		- [gnome](#gnome)
 		- [ZealDocs](#zealdocs)
 	- [Shell Tools](#shell-tools)
+		- [f-irc/irssi (irc client)](#f-ircirssi-irc-client)
+		- [pppoeconf/speedtest-cli](#pppoeconfspeedtest-cli)
+		- [zsh](#zsh)
 	- [Firefox Plugins](#firefox-plugins)
 	- [GFW](#gfw)
+		- [XX-Net](#xx-net)
 		- [OpenVPN && vpngate/vpnbook](#openvpn-vpngatevpnbook)
+	- [Windows](#windows)
+		- [Imitate Linux](#imitate-linux)
+		- [Software](#software)
+
 <!-- /TOC -->
 
 # Linux SetUp
@@ -19,7 +38,6 @@
 > 建立一个软件repo，加快装机速度，是程序员的必备修养 -- 尼采
 
 /home /usr /opt /lib /var /etc
-
 
 ------
 
@@ -47,20 +65,20 @@ sudo vim /etc/dhcp/dhclient.conf
 
 prepend domain-name-servers 127.0.0.1;下一行
 
-prepend domain-name-servers 114.114.114.114;  
+prepend domain-name-servers 114.114.114.114;
 prepend domain-name-servers 223.5.5.5;
 ```
 
 ### PPA
 
 ```shell
-sudo add-apt-repository ppa:nilarimogard/webupd8 
+sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:zeal-developers/ppa
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update    
+sudo apt-get update
 ```
 
 ### Office
@@ -70,10 +88,12 @@ sudo apt-get update
 
 ```shell
 sudo apt-get install fcitx-sogoupinyin
-sudo apt-get install wps-office 
+sudo apt-get install wps-office
 ```
 
 -   fonts
+
+/usr/share/fonts/chinese/TrueType/
 
 ```shell
 # mkfontscale
@@ -84,7 +104,7 @@ sudo apt-get install wps-office
 -   tools
 
 ```shell
-sudo apt-get install git unrar screen SSH axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek
+sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek
 ```
 
 ## IDE
@@ -98,7 +118,7 @@ sudo apt-get install git unrar screen SSH axel lnav exfat-fuse  vpnc network-man
 ### Vim(Github)
 
 ```shell
-sudo apt-get install vim  
+sudo apt-get install vim
 ```
 
 -   basic version
@@ -175,8 +195,6 @@ umake web visual-studio-code
 umake web visual-studio-code --remove
 sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/local/bin/code
 ```
-
-## Tools
 
 ## Software
 
@@ -261,7 +279,7 @@ nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
 ### XX-Net
 
 ```shell
-sudo apt-get install python-vte  python-OpenSSL  python-gtk2 libffi-dev python-appindicator libnss3-tools  
+sudo apt-get install python-vte  python-OpenSSL  python-gtk2 libffi-dev python-appindicator libnss3-tools
 ```
 
 -   download
