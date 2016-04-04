@@ -137,6 +137,17 @@ ln	-s(创建软链接)	[原文件]		[目标文件]
 -   -I 不区分大小写
 -   -v 排除指定字符串
 
+### screen
+
+```shell
+screen -S screenName
+screen -ls
+screen -r
+```
+
+-   Ctrl+d  // detach window
+-   Ctrl+k  // kill window
+
 ### 帮助命令
 
 #### `man` `[可选参数] 命令名称`
