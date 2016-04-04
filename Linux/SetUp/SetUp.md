@@ -262,7 +262,15 @@ sudo n stable
 -   global awesome packages
 
 ```shell
-sudo npm install -g bower jslint
+sudo npm install -g bower gulp jslint jshint
+```
+
+#### Bower
+
+```shell
+bower init
+bower install bootstrap -S
+bower install font-awesome -S
 ```
 
 ## Firefox Plugins
