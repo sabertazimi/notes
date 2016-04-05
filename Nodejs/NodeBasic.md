@@ -297,6 +297,23 @@ url.parse(request.url, true);
 
 -   strftime
 
+### Parser
+
+-   node-xml
+-   `npm install --save normalizr`
+
+### Package
+
+-   [npm-shrinkwrap](https://github.com/uber/npm-shrinkwrap)
+
+### Log
+
+-   [npm install log4js](https://github.com/nomiddlename/log4js-node)
+
+### Template
+
+-   [Ant-Init](https://github.com/ant-design/antd-init)
+
 ### Other
 
 -   prompt
