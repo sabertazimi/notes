@@ -365,6 +365,7 @@ sudo apt-get install openvpn
 -   360 safe
 -   qq browser
 -   sougoupinyin
+-   haozip
 -   qq
 -   baiduyun
 -   thunder
