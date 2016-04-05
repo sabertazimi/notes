@@ -268,7 +268,7 @@ sudo n stable
 -   global awesome packages
 
 ```shell
-sudo npm install -g bower gulp jslint jshint
+sudo npm install -g bower gulp npm-check jslint jshint
 ```
 
 #### Bower
