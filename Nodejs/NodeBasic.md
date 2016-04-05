@@ -299,12 +299,21 @@ url.parse(request.url, true);
 
 ### Parser
 
+#### XML
+
 -   node-xml
+
+#### JSON
+
 -   `npm install --save normalizr`
 
 ### Package
 
 -   [npm-shrinkwrap](https://github.com/uber/npm-shrinkwrap)
+
+### Minimalize
+
+-   [`npm install --save purify-css`](https://github.com/purifycss/purifycss)
 
 ### Log
 
@@ -312,7 +321,9 @@ url.parse(request.url, true);
 
 ### Template
 
+-   [npm install standard](https://github.com/feross/standard)
 -   [Ant-Init](https://github.com/ant-design/antd-init)
+-   [npm install tooling -g](https://github.com/egoist/tooling)
 
 ### Other
 

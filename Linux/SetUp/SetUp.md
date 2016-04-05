@@ -268,7 +268,7 @@ sudo n stable
 -   global awesome packages
 
 ```shell
-sudo npm install -g bower gulp npm-check jslint jshint
+sudo npm install -g bower gulp tooling npm-check jslint jshint
 ```
 
 #### Bower
@@ -324,7 +324,14 @@ https://github.com/XX-net/XX-Net/wiki/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
 
 -   firefox config: pan add-on
 
+### Lantern
+
+https://github.com/getlantern/lantern
+
 ### OpenVPN && vpngate/vpnbook
+
+-   https://github.com/OpenVPN/openvpn
+-   https://github.com/waylau/vpngate-mirrors
 
 ```shell
 sudo apt-get install openssl
@@ -371,3 +378,4 @@ sudo apt-get install openvpn
 -   thunder
 -   netease music
 -   office 2007
+-   nodejs: cash
