@@ -319,10 +319,34 @@ url.parse(request.url, true);
 
 -   [npm install log4js](https://github.com/nomiddlename/log4js-node)
 
+### Linter
+
+-   [npm install standard -g](https://github.com/feross/standard)
+
+```json
+"standard": {
+  "ignore": [
+    "**/out/",
+    "/lib/select2/",
+    "/lib/ckeditor/",
+    "tmp.js"
+  ]
+}
+
+"scripts": {
+    "test": "standard --verbose && node my-tests.js"
+}
+```
+
 ### Template
 
--   [npm install standard](https://github.com/feross/standard)
--   [Ant-Init](https://github.com/ant-design/antd-init)
+-   [npm install antd-init -g](https://github.com/ant-design/antd-init)
+
+```shell
+antd-init
+npm run dev
+npm run build
+```
 -   [npm install tooling -g](https://github.com/egoist/tooling)
 
 ### Other
