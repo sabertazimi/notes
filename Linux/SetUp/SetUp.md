@@ -104,7 +104,7 @@ fc-cache
 ### tools
 
 ```shell
-sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek
+sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek pip
 ```
 
 ## IDE
