@@ -228,6 +228,10 @@ $ sudo apt-get install zeal
 $ sudo apt-get remove appmenu-qt5
 ```
 
+### [N1(E-Mail)](https://invite.nylas.com/download/)
+
+Awesome Open Source E-Mail Desktop App
+
 ## Shell Tools
 
 ### f-irc/irssi (irc client)
@@ -319,6 +323,10 @@ nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
 
 ## GFW
 
+### Hosts
+
+https://github.com/racaljk/hosts
+
 ### XX-Net
 
 ```shell
@@ -333,7 +341,21 @@ https://github.com/XX-net/XX-Net/wiki/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
 
 ### Lantern
 
-https://github.com/getlantern/lantern
+-   https://github.com/getlantern/lantern
+
+### Shadowsocks
+
+-   https://github.com/shadowsocks/shadowsocks
+-   https://github.com/breakwa11/shadowsocks-rss
+-   https://github.com/yangyangwithgnu/autoshadower
+
+### sshuttle
+
+-   https://github.com/apenwarr/sshuttle
+
+### Proxychains(Global Proxy)
+
+-   https://github.com/rofl0r/proxychains-ng
 
 ### OpenVPN && vpngate/vpnbook
 
