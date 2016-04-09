@@ -111,7 +111,7 @@ fc-cache
 ### tools
 
 ```shell
-sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek python-pip
+sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek python-pip manpages-zh
 ```
 
 ## IDE
@@ -233,6 +233,8 @@ $ sudo apt-get remove appmenu-qt5
 Awesome Open Source E-Mail Desktop App
 
 ## Shell Tools
+
+```
 
 ### f-irc/irssi (irc client)
 

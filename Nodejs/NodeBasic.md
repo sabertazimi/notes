@@ -300,7 +300,19 @@ url.parse(request.url, true);
 
 ### Server
 
--   https://github.com/ParsePlatform/parse-server
+-   [Parse Server](https://github.com/ParsePlatform/parse-server)
+
+```shell
+$ npm install -g parse-server mongodb-runner
+$ mongodb-runner start
+$ parse-server --appId APPLICATION_ID --masterKey MASTER_KEY
+```
+-   [JSON Server](https://github.com/typicode/json-server)
+
+```shell
+$ npm install -g json-server
+```
+
 
 ### Parser
 
@@ -345,7 +357,12 @@ url.parse(request.url, true);
 
 ### Boilerplate
 
--   [React Redux Universal Hot Example](https://github.com/erikras/react-redux-universal-hot-example)
+-   [Basic - HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+-   [Font-End - React Redux Universal Hot Example](https://github.com/erikras/react-redux-universal-hot-example)
+-   [Back-End - Nodejs Hackathon Starter](https://github.com/sahat/hackathon-starter)
+-   [Plugins - jQuery Boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate)
+-   [Desktop - Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
+-   [Mobile - React Native Boilerplate](https://github.com/bartonhammond/snowflake)
 
 ### Template
 
