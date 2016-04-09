@@ -49,6 +49,13 @@ xdg-user-dirs-gtk-update
 export LANG=zh_CN
 ```
 
+```shell
+sudo locale-gen zh_CN.GB18030
+sudo vim /var/lib/locales/supported.d/local
+zh_CN GB2312
+sudo dpkg-reconfigure locales
+```
+
 ## Purge
 
 ```shell
