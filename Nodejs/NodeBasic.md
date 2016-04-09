@@ -295,6 +295,7 @@ url.parse(request.url, true);
 
 ### Format
 
+-   [Moment.js Awesome Library](https://github.com/moment/moment)
 -   strftime
 
 ### Parser
