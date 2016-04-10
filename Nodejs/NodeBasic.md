@@ -99,6 +99,10 @@ source ~/.zshrc
 
 ## Basic Node Modules
 
+> exports和module.exports的区别
+
+exports 是 module.exports 的引用, 改变 exports 值无法改变 module.exports 值
+
 ### Process Object
 
 ```js
