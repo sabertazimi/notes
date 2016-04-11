@@ -339,6 +339,12 @@ $ npm install -g json-server
 ### Log
 
 -   [npm install log4js](https://github.com/nomiddlename/log4js-node)
+-   `npm install morgan -S`
+
+```js
+var logger = require('morgan');
+app.use(logger('combined, {stream: accessLogStream}));
+```
 
 ### Linter
 
