@@ -1,0 +1,28 @@
+{
+  "name": "drogonlab",
+  "version": "1.0.0",
+  "description": "A personal local lab.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/Awesome-Notes.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "JavaScript",
+    "Design",
+    "Patterns",
+    "Learning",
+    "Hust",
+    "China"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/Awesome-Notes/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/Awesome-Notes#readme"
+}

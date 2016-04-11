@@ -1,0 +1,28 @@
+{
+  "name": "drogonlab",
+  "description": "A personal local lab.",
+  "main": "index.js",
+  "authors": [
+    "sabertazimi"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Nodejs",
+    "JavaScript",
+    "Design",
+    "Patterns",
+    "Learning",
+    "Hust",
+    "China"
+  ],
+  "moduleType": [],
+  "homepage": "http://tazimi.tk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
