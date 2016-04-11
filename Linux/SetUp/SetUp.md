@@ -281,7 +281,7 @@ sudo n stable
 -   global awesome packages
 
 ```shell
-sudo npm install -g bower gulp gh-pages tooling antd-init npm-check standard jslint jshint
+sudo npm install -g bower gulp gh-pages tooling antd-init npm-check standard jslint jshint express
 ```
 
 #### Bower
