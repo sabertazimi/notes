@@ -1,0 +1,29 @@
+{
+  "name": "blogserver",
+  "version": "1.0.0",
+  "description": "A simple blog server demo for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/Awesome-Notes.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Back-End",
+    "Hust",
+    "sabertazimi",
+    "Learning"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/Awesome-Notes/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/Awesome-Notes#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

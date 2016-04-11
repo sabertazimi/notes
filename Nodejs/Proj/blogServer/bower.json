@@ -1,0 +1,25 @@
+{
+  "name": "blogserver",
+  "description": "A simple blog server demo for learning",
+  "main": "index.js",
+  "authors": [
+    "sabertazimi"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Nodejs",
+    "Back-End",
+    "Hust",
+    "sabertazimi",
+    "Learning"
+  ],
+  "homepage": "https://github.com/sabertazimi/Awesome-Notes",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
