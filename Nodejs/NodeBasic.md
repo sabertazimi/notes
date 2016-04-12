@@ -317,6 +317,9 @@ $ parse-server --appId APPLICATION_ID --masterKey MASTER_KEY
 $ npm install -g json-server
 ```
 
+### DataBase
+
+-   https://github.com/axemclion/IndexedDBShim
 
 ### Parser
 

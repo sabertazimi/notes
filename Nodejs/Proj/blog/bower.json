@@ -1,7 +1,7 @@
 {
-  "name": "blogserver",
+  "name": "blog",
   "description": "A simple blog server demo for learning",
-  "main": "index.js",
+  "main": "",
   "authors": [
     "sabertazimi"
   ],
