@@ -372,6 +372,7 @@ app.use(logger('combined, {stream: accessLogStream}));
 
 -   [Basic - HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 -   [Font-End - React Redux Universal Hot Example](https://github.com/erikras/react-redux-universal-hot-example)
+-   [Font-End - React Starter Kit](https://github.com/kriasoft/react-starter-kit)
 -   [Back-End - Nodejs Hackathon Starter](https://github.com/sahat/hackathon-starter)
 -   [Plugins - jQuery Boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate)
 -   [Desktop - Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
