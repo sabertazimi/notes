@@ -3,7 +3,8 @@ var express = require('express'),
     favicon = require('serve-favicon'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    hbs = require('hbs');
 
 var routes = require('./routes/index'),
     users = require('./routes/users'),
@@ -12,8 +13,9 @@ var routes = require('./routes/index'),
 var app = express();
 
 // view engine setup
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
