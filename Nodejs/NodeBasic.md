@@ -329,7 +329,15 @@ $ npm install -g json-server
 
 #### JSON
 
--   `npm install --save normalizr`
+-   npm install --save normalizr`
+
+### MD5
+
+-   [npm install blueimp-md5](https://github.com/blueimp/JavaScript-MD5)
+
+### Base64
+
+-   [npm install base64](https://github.com/dankogai/js-base64)
 
 ### Package
 
