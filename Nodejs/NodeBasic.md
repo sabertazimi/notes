@@ -376,6 +376,10 @@ app.use(logger('combined, {stream: accessLogStream}));
 }
 ```
 
+### Template Engine
+
+-   `npm install -S hbs` - express plugin for handlebars
+
 ### Boilerplate
 
 -   [Basic - HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
@@ -386,7 +390,7 @@ app.use(logger('combined, {stream: accessLogStream}));
 -   [Desktop - Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 -   [Mobile - React Native Boilerplate](https://github.com/bartonhammond/snowflake)
 
-### Template
+#### Other
 
 -   [npm install antd-init -g](https://github.com/ant-design/antd-init)
 
