@@ -1,0 +1,18 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.jumbotron {
+    color: white;
+    background: url('../images/sky.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.jumbotron a {
+    color: white;
+}

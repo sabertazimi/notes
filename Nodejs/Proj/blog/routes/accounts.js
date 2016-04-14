@@ -10,7 +10,7 @@ router.get('/signin', function (req, res) {
 });
 
 router.get('/signup', function (req, res) {
-    return res.send('This is sign up interface.');
+    res.render('signup.hbs', { title: 'Sign Up'});
 });
 
 module.exports = router;
