@@ -88,6 +88,10 @@ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt-get update
 ```
 
+### Terminal
+
+
+
 ### Office
 
 -   http://pinyin.sogou.com/linux/
@@ -116,13 +120,29 @@ sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-man
 
 ### GDB Hacker UI
 
-#### pip3
+#### GDB-DashBoard
+
+```shell
+wget -P ~ git.io/.gdbinit
+(gdb) source ~/.gdbinit
+```
+
+```shell
+git clone https://github.com/cyrus-and/gdb-dashboard.git
+cp -fr ./gdb-dashboard/.gdbinit ./
+rm -fr ./gdb-dashboard
+(gdb) source ~/.gdbinit
+```
+
+#### Voltron
+
+##### pip3
 
 ```shell
 $ sudo easy_install3 pip
 ```
 
-#### install
+##### install
 
 ```shell
 $ git clone https://github.com/snare/voltron
@@ -131,7 +151,7 @@ $ cd voltron
 $ sudo python3 setup.py install
 ```
 
-#### config
+##### config
 
 -   .gdbinit
 
@@ -148,7 +168,6 @@ set disassembly-flavor att
 ```shell
 $ voltron view register stack disasm backtrace 
 ```
-
 
 ## IDE
 
