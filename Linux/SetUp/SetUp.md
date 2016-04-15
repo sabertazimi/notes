@@ -114,6 +114,19 @@ fc-cache
 sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek python-pip manpages-zh
 ```
 
+### GDB UI
+
+```shell
+$ sudo easy_install3 pip
+```
+
+```shell
+$ git clone https://github.com/snare/voltron
+$ sudo apt-get install libreadline6-dev python3-dev python3-setuptools python3-yaml
+$ cd voltron
+$ sudo python3 setup.py install
+```
+
 ## IDE
 
 ###  Android Studio
