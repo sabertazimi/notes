@@ -63,4 +63,23 @@ shell command
 ulimit -c unlimited
 gdb -c core_file_path target_exe_path
 ```
+## Disasm
 
+```shell
+(gdb) disass
+(gdb) x/i
+(gdb) x/5i $pc
+(gdb) ni/si
+```
+
+```shell
+(gdb) info register
+```
+
+## Stack Frame
+
+```shell
+(gdb) bt
+(gdb) frame n
+(gdb) info locals
+```
