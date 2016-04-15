@@ -65,6 +65,8 @@ gdb -c core_file_path target_exe_path
 ```
 ## Disasm
 
+-   CS Segment
+
 ```shell
 (gdb) disass
 (gdb) x/i
@@ -72,9 +74,17 @@ gdb -c core_file_path target_exe_path
 (gdb) ni/si
 ```
 
+-   Registers
+
 ```shell
-(gdb) info register
+(gdb) i r
+(gdb) i r a
+(gdb) i r ds
 ```
+
+-   DS Segment
+
+-   SS Segment 
 
 ## Stack Frame
 
