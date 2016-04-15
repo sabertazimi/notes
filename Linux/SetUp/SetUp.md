@@ -92,6 +92,9 @@ sudo apt-get update
 
 ```shell
 $ sudo apt-get install terminator
+
+Ctrl + Shift + E/O
+Alt + Arrow
 ```
 
 ### Office
