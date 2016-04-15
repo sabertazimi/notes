@@ -90,7 +90,9 @@ sudo apt-get update
 
 ### Terminal
 
-
+```shell
+$ sudo apt-get install terminator
+```
 
 ### Office
 
