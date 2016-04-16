@@ -88,15 +88,6 @@ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt-get update
 ```
 
-### Terminal
-
-```shell
-$ sudo apt-get install terminator
-
-Ctrl + Shift + E/O
-Alt + Arrow
-```
-
 ### Office
 
 -   http://pinyin.sogou.com/linux/
@@ -294,17 +285,26 @@ Awesome Open Source E-Mail Desktop App
 
 ## Shell Tools
 
-```
-
 ### f-irc/irssi (irc client)
 
-###  pppoeconf/speedtest-cli
+### pppoeconf/speedtest-cli
 
 ```shell
 sudo pppoeconf
 sudo pon dsl-provider
 sudo poof
 ifconfig ppp0
+```
+
+### Terminal
+
+-   Font - DejaVu Sans Mono Book 12
+-   Ctrl + Shift + E/O
+-   Alt + Arrow
+
+```shell
+$ sudo apt-get install terminator
+$ sudo update-alternatives --config x-terminal-emulator
 ```
 
 ### zsh

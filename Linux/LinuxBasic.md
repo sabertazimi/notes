@@ -812,3 +812,11 @@ until [ 条件判断式 ]
 -   kill/killall —— SIGINT
 -   trap SIG*/EXIT —— 捕捉信号(后 + 忽略信号/默认处理信号/自定义处理信号)
 -   trap – SIG*/EXIT  —— 移除信号
+
+## Other
+
+### Terminal
+
+```shell
+$ sudo update-alternatives --config x-terminal-emulator
+```
