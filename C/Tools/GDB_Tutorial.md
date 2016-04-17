@@ -23,10 +23,10 @@ e.g display/i $pc
 - disas 显示汇编代码
 
 
-- x /num-size-format $pc/rsp/rbp 
+- x /num-size-format $pc/rsp/rbp
 
 e.g size:w(2字节) format:x/d/s(十六进制/十进制/字符串)
-            2wx 
+            2wx
 
 - examine - 查看内存
 n、f、u是可选的参数
@@ -46,7 +46,7 @@ n、f、u是可选的参数
 - bt(backtrace)	function stack 显示堆栈回溯信息
 - info  breakpoints/register
 
-## set 
+## set
 
 -   set disassembly
 -   set variable
@@ -84,7 +84,7 @@ gdb -c core_file_path target_exe_path
 
 -   DS Segment
 
--   SS Segment 
+-   SS Segment
 
 ## Stack Frame
 
