@@ -36,6 +36,7 @@ qq
 
 -   [alebcay/awesome-shell](https://github.com/alebcay/awesome-shell)
 -   [sorrycc/awesome-javascript](https://github.com/sorrycc/awesome-javascript)
+-   [stoeffel/awesome-fp-js](https://github.com/stoeffel/awesome-fp-js)
 -   [sindresorhus/awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs)
 -   [enaqx/awesome-react](https://github.com/enaqx/awesome-react)
 -   [sindresorhus/awesome-electron](https://github.com/sindresorhus/awesome-electron)
