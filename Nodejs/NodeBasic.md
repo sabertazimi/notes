@@ -351,7 +351,12 @@ $ npm install -g json-server
 ### Log
 
 -   [npm install log4js](https://github.com/nomiddlename/log4js-node)
--   `npm install morgan -S`
+-   `npm install -S morgan`
+-   [npm install -S stacktrace-js](https://github.com/stacktracejs/stacktrace.js)
+
+### Search
+
+-   [Full Text Search Engine](https://github.com/olivernn/lunr.js)
 
 ```js
 var logger = require('morgan');
