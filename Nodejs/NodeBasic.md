@@ -413,6 +413,12 @@ npm run build
 -   [npm install --save fontmin](https://github.com/ecomfe/fontmin)
 -   [npm install fonts.css --save](https://github.com/zenozeng/fonts.css)
 
+### Images
+
+-   https://github.com/svg/svgo
+-   https://github.com/kevva/to-ico
+-   [A fast DVI to SVG converter](https://github.com/mgieseki/dvisvgm)
+
 
 ### Other
 
