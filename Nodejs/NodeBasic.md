@@ -269,6 +269,14 @@ serverInstance.listen(portNumber);   // 开始监听特定端口
 url.parse(request.url, true);
 ```
 
+## Security Module
+
+### crypto
+
+-   hash/hmac/cipher/decipher algorithms
+-   validate
+-   signature
+
 ## Async
 
 对回调进行计数是处理 Node 中异步的基础 - 自定义 Semaphore 变量: 每完成一个异步处理, Semaphore++
@@ -318,10 +326,23 @@ $ parse-server --appId APPLICATION_ID --masterKey MASTER_KEY
 $ npm install -g json-server
 ```
 
-### DataBase
+### Storage
+
+#### Cookie/Session
+
+-   npm install -S cookie-parser
+-   npm install -S express-session
+
+#### DataBase
 
 -   npm install mongoose --save
 -   https://github.com/axemclion/IndexedDBShim
+
+#### Security
+
+##### Encrypt(加密)
+
+-   npm install --save passport-local-mongoose passport-local passport
 
 ### Parser
 
