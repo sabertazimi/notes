@@ -320,6 +320,7 @@ $ npm install -g json-server
 
 ### DataBase
 
+-   npm install mongoose --save
 -   https://github.com/axemclion/IndexedDBShim
 
 ### Parser
