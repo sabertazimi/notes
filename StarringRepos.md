@@ -128,6 +128,12 @@ qq
 #### Demo
 
 -   [nolanlawson/pokedex.org](https://github.com/nolanlawson/pokedex.org)
+-   [jaywcjlove/FED](https://github.com/jaywcjlove/FED)
+
+#### JS
+
+-   [davidedc/Algebrite](https://github.com/davidedc/Algebrite)
+-   [creationix/js-git](https://github.com/creationix/js-git)
 
 ### Back-End
 
