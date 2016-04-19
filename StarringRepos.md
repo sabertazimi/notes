@@ -203,6 +203,7 @@ qq
 
 #### Web Testing
 
+-   [jasmine/jasmine](https://github.com/jasmine/jasmine)
 -   [mochajs/mocha](https://github.com/mochajs/mocha)
 -   [jquery/qunit](https://github.com/jquery/qunit)
 -   [yahoo/fake-server](https://github.com/yahoo/fake-server)
