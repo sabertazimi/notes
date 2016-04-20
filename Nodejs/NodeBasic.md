@@ -370,6 +370,10 @@ $ npm install -g json-server
 
 -   [`npm install --save purify-css`](https://github.com/purifycss/purifycss)
 
+### Test
+
+-   [npm install testem -g](https://github.com/testem/testem)
+
 ### Log
 
 -   [npm install log4js](https://github.com/nomiddlename/log4js-node)
