@@ -335,8 +335,9 @@ $ npm install -g json-server
 
 #### DataBase
 
--   npm install mongoose --save
--   https://github.com/axemclion/IndexedDBShim
+-   npm install mongoose -S
+-   [npm install mongojs -S](https://github.com/mafintosh/mongojs)
+-   [npm install indexeddbshim](https://github.com/axemclion/IndexedDBShim)
 
 #### Security
 
