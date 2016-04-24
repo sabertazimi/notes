@@ -24,6 +24,28 @@ function (err, req, res, next) {
 app.use(middlewareFunction);
 ```
 
+### Useful Middleware
+
+-   basicAuth
+-   bodyParser
+-   compiler
+-   cookieParser
+-   csrf: 跨域请求(依赖 session bodyparser)
+-   directory
+-   errorHandle
+-   favicon
+-   limit: 限制请求个数,防止 Dos 攻击
+-   logger
+-   methodOverride
+-   profiler: 置于所有中间件之前,记录响应时间和内存使用
+-   query
+-   responseTime
+-   router
+-   session
+-   static
+-   staticCache
+-   vhost
+
 ## Http
 
 ### Res

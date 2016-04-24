@@ -13,7 +13,9 @@
 		- [Buffer Object](#buffer-object)
 		- [Path API](#path-api)
 	- [Self-Defined Modules](#self-defined-modules)
+		- [Basic Modular Pattern](#basic-modular-pattern)
 		- [Export Modules](#export-modules)
+		- [CallBack Function](#callback-function)
 	- [Http Module](#http-module)
 		- [Resquest Object](#resquest-object)
 			- [属性](#属性)
@@ -23,16 +25,44 @@
 			- [方法](#方法)
 		- [Http Get](#http-get)
 		- [Http Server](#http-server)
+		- [Sample](#sample)
 	- [Net Module](#net-module)
 		- [Socket Object](#socket-object)
 		- [Basic Methods](#basic-methods)
 	- [URL Module](#url-module)
 		- [Basic Method](#basic-method)
+	- [Security Module](#security-module)
+		- [crypto](#crypto)
 	- [Async](#async)
+	- [Cluster](#cluster)
 	- [Awesome Package](#awesome-package)
 		- [Http](#http)
 		- [Stream](#stream)
 		- [Format](#format)
+		- [Server](#server)
+		- [Storage](#storage)
+			- [Cookie/Session](#cookiesession)
+			- [DataBase](#database)
+			- [Security](#security)
+				- [Encrypt(加密)](#encrypt加密)
+		- [Parser](#parser)
+			- [XML](#xml)
+			- [JSON](#json)
+		- [MD5](#md5)
+		- [Base64](#base64)
+		- [Package](#package)
+		- [Minimalize](#minimalize)
+		- [Test](#test)
+		- [Log](#log)
+		- [Search](#search)
+		- [Linter](#linter)
+		- [Template Engine](#template-engine)
+		- [Boilerplate](#boilerplate)
+			- [Other Boilerplate](#other-boilerplate)
+		- [Fonts](#fonts)
+		- [Images](#images)
+		- [Other Packages](#other-packages)
+	- [Spider](#spider)
 
 <!-- /TOC -->
 
@@ -169,6 +199,8 @@ path.delimiter
 
 ## Self-Defined Modules
 
+### Basic Modular Pattern
+
 编写具有回调函数参数的模块
 
 -   定义模块
@@ -203,6 +235,27 @@ foo(a, b, function (err, param) {
 
 ```js
 module.exports = function (args) { /* ... */ }
+```
+
+### CallBack Function
+
+-    向定义最内层回调,可避免回套嵌套
+
+```js
+server.on('request', function(req, res) {
+    var render = function(wsData) {
+        page = pageRender(req, session, userData, wsData);
+    };
+    var getWsInfo = function(userData) {
+        ws.get(req, render);
+    };
+    var getDbInfo = function(session) {
+        db.get(session.user, getWsInfo);
+    };
+    var getMemCached = function(req, res) {
+        memcached.getSession(req, getDbInfo);
+    };
+}
 ```
 
 ## Http Module
@@ -282,6 +335,54 @@ var server = http.createServer(function (request, response) {
 server.listen(8000);
 ```
 
+### Sample
+
+```js
+var net = require('net')
+var chatServer = net.createServer(),
+
+// 用于检测僵尸客户端,用于及时清楚僵尸客户端
+clientList = []
+
+chatServer.on('connection', function(client) {
+    client.name = client.remoteAddress + ':' + client.remotePort
+    client.write('Hi ' + client.name + '!\n');
+    clientList.push(client)
+
+    client.on('data', function(data) {
+        broadcast(data, client)
+    })
+    client.on('end', function() {
+        clientList.splice(clientList.indexOf(client), 1)
+    })
+    client.on('error', function(e) {
+        console.log(e)
+    })
+})
+
+function broadcast(message, client) {
+    var cleanup = []
+    for(var i=0;i<clientList.length;i+=1) {
+        // 向其他人(排除自身)发送消息
+        if(client !== clientList[i]) {
+            if(clientList[i].writable) {
+                clientList[i].write(client.name + " says " + message)
+            } else {
+                cleanup.push(clientList[i])
+                clientList[i].destroy()
+            }
+        }
+    }
+
+    // 清楚僵尸客户端
+    for(i=0;i<cleanup.length;i+=1) {
+        clientList.splice(clientList.indexOf(cleanup[i]), 1)
+    }
+}
+
+chatServer.listen(9000);
+```
+
 ## Net Module
 
 ### Socket Object
@@ -290,6 +391,36 @@ server.listen(8000);
 socket.write(data);
 socket.end(data);
 socket.end();
+```
+
+### Socker.IO
+
+```js
+var http = require('http'),
+    io = require('socket.io'),
+    fs = require('fs'),
+    sockFile = fs.readFileSync('socket.html');
+
+server = http.createServer();
+server.on('request', function(req, res){
+    res.writeHead(200, {'content-type': 'text/html'});
+    res.end(sockFile);
+});
+server.listen(8080);
+
+var socket = io.listen(server);
+
+// 命名空间
+socket.of('/upandrunning')
+.on('connection', function(client){
+    console.log('Client connected to Up and Running namespace.');
+    client.send("Welcome to 'Up and Running'");
+});
+socket.of('/weather')
+.on('connection', function(client){
+    console.log('Client connected to Weather namespace.');
+    client.send("Welcome to 'Weather Updates'");
+});
 ```
 
 ### Basic Methods
@@ -304,21 +435,151 @@ serverInstance.listen(portNumber);   // 开始监听特定端口
 
 ### Basic Method
 
+#### parse
+
+解析处URL各个组成部分:
+
+-   href
+-   protocol
+-   host
+-   auth
+-   hostname
+-   port
+-   pathname
+-   search
+-   query
+-   hash
+
 ```js
+// true 表示调用 queryString 模块查询字符串
 url.parse(request.url, true);
 ```
 
+### dns
+
+-   dns.resolve
+-   dns.reverse
+-   dns.lookup
+
+```js
+var dns = require('dns');
+
+dns.lookup('google.com', 4, function(e, a) {
+    console.log(a);
+});
+
+dns.resolve('tazimi.tk', 'A', function(e,r) {
+    if (e) {
+        console.log(e);
+    }
+    console.log(JSON.stringify(r, null, 2));
+} );
+```
+
+### 
+
 ## Security Module
 
-### crypto
+### Crypto
 
--   hash/hmac/cipher/decipher algorithms
+-   hash algorithm
+-   hmac algorithm
+-   cipher/decipher algorithms
 -   validate
 -   signature
+
+#### Hash API
+
+```js
+var crypto = require('crypto'),
+    md5 = crypto.createHash('md5');
+
+md5.update('foo');
+md5.digest('hex');  // 'acbd18db4cc2f85cedef654fccc4a4d8'
+```
+
+#### Hmac API
+
+```shell
+$ openssl genrsa -out key.pem 1024
+```
+
+```js
+var crypto = require('crypto'),
+    fs = require('fs'),
+    pem  = fs.readFileSync('key.pem'),
+    key = pem.toString('ascii'),
+    hmac = crypto.createHmac('sha1', key);
+
+hmac.update('bar');
+hmac.digest('hex');  // '7fdfeniw012lsda9129dfd9123'
+```
+
+#### 公钥加密
 
 ## Async
 
 对回调进行计数是处理 Node 中异步的基础 - 自定义 Semaphore 变量: 每完成一个异步处理, Semaphore++
+
+## Cluster
+
+```js
+var cluster = require('cluster'),
+    http = require('http'),
+    numCPUs = require('os').cpus().length;
+var rssWarn = (50 * 1024 * 1024),
+    heapWarn = (50 * 1024 * 1024);
+var workers = {};
+
+if(cluster.isMaster) {
+    for(var i=0; i<numCPUs; i++) {
+        createWorker()
+    }
+    setInterval(function() {
+        var time = new Date().getTime()
+        for(pid in workers) {
+            if(workers.hasOwnProperty(pid) &&
+                workers[pid].lastCb + 5000 < time) {
+                console.log('Long running worker ' + pid + ' killed')
+                workers[pid].worker.kill()
+                delete workers[pid]
+                createWorker()
+            }
+        }
+    }, 1000)
+} else {
+    //Server
+    http.Server(function(req,res) {
+        //mess up 1 in 200 reqs
+        if (Math.floor(Math.random() * 200) === 4) {
+            console.log('Stopped ' + process.pid + ' from ever finishing')
+            while(true) { continue }
+        }
+        res.writeHead(200);
+        res.end('hello world from ' + process.pid + '\n')
+    }).listen(8000)
+    //Report stats once a second
+    setInterval(function report(){
+        process.send({cmd: "reportMem", memory: process.memoryUsage(), process: process.pid})
+    }, 1000)
+}
+
+function createWorker() {
+    var worker = cluster.fork()
+    console.log('Created worker: ' + worker.pid)
+
+    //allow boot time
+    workers[worker.pid] = {worker:worker, lastCb: new Date().getTime()-1000}
+    worker.on('message', function(m) {
+        if(m.cmd === "reportMem") {
+            workers[m.process].lastCb = new Date().getTime()
+            if(m.memory.rss > rssWarn) {
+                console.log('Worker ' + m.process + ' using too much memory.')
+            }
+        }
+    })
+}
+```
 
 ## Awesome Package
 
@@ -421,14 +682,14 @@ $ npm install -g json-server
 -   `npm install -S morgan`
 -   [npm install -S stacktrace-js](https://github.com/stacktracejs/stacktrace.js)
 
+```js
+var logger = require('morgan');
+app.use(logger('combined, {stream: accessLogStream}'));
+```
+
 ### Search
 
 -   [Full Text Search Engine](https://github.com/olivernn/lunr.js)
-
-```js
-var logger = require('morgan');
-app.use(logger('combined, {stream: accessLogStream}));
-```
 
 ### Linter
 
@@ -464,16 +725,16 @@ app.use(logger('combined, {stream: accessLogStream}));
 -   [Desktop - Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 -   [Mobile - React Native Boilerplate](https://github.com/bartonhammond/snowflake)
 
-#### Other
+#### Other Boilerplate
 
 -   [npm install antd-init -g](https://github.com/ant-design/antd-init)
+-   [npm install tooling -g](https://github.com/egoist/tooling)
 
 ```shell
 antd-init
 npm run dev
 npm run build
 ```
--   [npm install tooling -g](https://github.com/egoist/tooling)
 
 ### Fonts
 
@@ -482,12 +743,11 @@ npm run build
 
 ### Images
 
--   https://github.com/svg/svgo
--   https://github.com/kevva/to-ico
+-   [SVG](https://github.com/svg/svgo)
+-   [ICO](https://github.com/kevva/to-ico)
 -   [A fast DVI to SVG converter](https://github.com/mgieseki/dvisvgm)
 
-
-### Other
+### Other Packages
 
 -   prompt
 -   trigonometry
@@ -497,7 +757,6 @@ npm run build
 -   async.js
 -   cheerio: dom
 -   iconv-lite: 转码库
-
 -   http请求获取页面
 -   正则表达式匹配信息
 -   数据持久化数据库
