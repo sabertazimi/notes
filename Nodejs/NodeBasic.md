@@ -123,6 +123,12 @@ process.stderr：指向标准错误。
 
 ### fs API
 
+-   fs.createReadStream
+-   fs.readdir
+-   fs.readFile
+-   fs.readFileSync
+-   fs.exsits
+
 ```js
 var fs = require('fs');
 var buf = fs.readFileSync('/path/to/file', [charSet]);
@@ -142,6 +148,9 @@ var str = buf.toString();
 
 ### Path API
 
+-   path.resolve: 自动按系统处理路径
+-   path.extname: 返回文件类型
+
 ```js
 var path = require('path');
 
@@ -159,6 +168,36 @@ path.delimiter
 ```
 
 ## Self-Defined Modules
+
+编写具有回调函数参数的模块
+
+-   定义模块
+
+```js
+function foo(x, y, callback) {
+    try {
+        if (param not valid ) {
+            throw new Error（）;
+        } else {
+            callback(null, param);
+        }
+    } catch (error) {
+        callback(error, param);
+    }
+}
+```
+
+-   使用模块
+
+```js
+foo(a, b, function (err, param) {
+    if(err) {
+
+    } else {
+
+    }
+})；
+```
 
 ### Export Modules
 
