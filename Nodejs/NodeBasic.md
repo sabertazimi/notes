@@ -7,7 +7,13 @@
 		- [Publish Steps](#publish-steps)
 		- [Tab Completion](#tab-completion)
 	- [Basic Node Modules](#basic-node-modules)
-		- [Process Object](#process-object)
+		- [Process Module](#process-module)
+			- [Process Properties](#process-properties)
+			- [Process Events](#process-events)
+			- [Process Methods](#process-methods)
+				- [Get Info](#get-info)
+				- [Message Loop/Counter](#message-loopcounter)
+				- [Child Process](#child-process)
 	- [File Module](#file-module)
 		- [fs API](#fs-api)
 		- [Buffer Object](#buffer-object)
@@ -28,13 +34,21 @@
 		- [Sample](#sample)
 	- [Net Module](#net-module)
 		- [Socket Object](#socket-object)
+		- [Socker.IO](#sockerio)
 		- [Basic Methods](#basic-methods)
 	- [URL Module](#url-module)
 		- [Basic Method](#basic-method)
+			- [parse](#parse)
+		- [dns](#dns)
 	- [Security Module](#security-module)
-		- [crypto](#crypto)
-	- [Async](#async)
-	- [Cluster](#cluster)
+		- [Crypto](#crypto)
+			- [Hash API](#hash-api)
+			- [Hmac API](#hmac-api)
+			- [公钥加密](#公钥加密)
+	- [Async Modules](#async-modules)
+		- [Cluster Module](#cluster-module)
+	- [Test Modules](#test-modules)
+		- [assert](#assert)
 	- [Awesome Package](#awesome-package)
 		- [Http](#http)
 		- [Stream](#stream)
@@ -134,7 +148,9 @@ source ~/.zshrc
 
 exports 是 module.exports 的引用, 改变 exports 值无法改变 module.exports 值
 
-### Process Object
+### Process Module
+
+#### Process Properties
 
 ```js
 process.pid：当前进程的进程号。
@@ -147,6 +163,55 @@ process.execPath：运行当前进程的可执行文件的绝对路径。
 process.stdout：指向标准输出。
 process.stdin：指向标准输入。
 process.stderr：指向标准错误。
+```
+
+```js
+process.stdin.resume();
+process.stdin.pipe(process.stdout);
+```
+
+#### Process Events
+
+-   uncaughtException
+-   SIGINT
+-   exit
+
+#### Process Methods
+
+##### Get Info
+
+-   process.on()
+-   process.uptime(): 进程运行时长
+-   process.getgid/setgid/getuid/setuid();
+-   process.cwd()
+-   process.memoryUsage()
+
+##### Message Loop/Counter
+
+-   process.nextTick()
+
+##### Child Process
+
+-   cp.spawn(): 创建子进程, 拥有独立的 stdin/stdout/stderr 文件描述符
+-   cp.exec(): 创建子进程, 并会在进程结束时调用传入的回调函数
+
+```js
+var cp = require('child_process');
+
+cp.exec('ls -l', {
+    encoding: 'uft-8',
+    timeout: 0,
+	maxBuffer: 200 * 1024,
+	killSignal: 'SIGTERM',
+	setsid: false,
+	cwd: null,
+	env: null
+}, function (err, stdout, stderr) {
+	if (!err) {
+		console.log(stdout);
+		console.log(stderr);
+	}
+});
 ```
 
 ## File Module
@@ -476,8 +541,6 @@ dns.resolve('tazimi.tk', 'A', function(e,r) {
 } );
 ```
 
-### 
-
 ## Security Module
 
 ### Crypto
@@ -485,8 +548,7 @@ dns.resolve('tazimi.tk', 'A', function(e,r) {
 -   hash algorithm
 -   hmac algorithm
 -   cipher/decipher algorithms
--   validate
--   signature
+-   signature/validate
 
 #### Hash API
 
@@ -517,11 +579,11 @@ hmac.digest('hex');  // '7fdfeniw012lsda9129dfd9123'
 
 #### 公钥加密
 
-## Async
+## Async Modules
 
 对回调进行计数是处理 Node 中异步的基础 - 自定义 Semaphore 变量: 每完成一个异步处理, Semaphore++
 
-## Cluster
+### Cluster Module
 
 ```js
 var cluster = require('cluster'),
@@ -579,6 +641,29 @@ function createWorker() {
         }
     })
 }
+```
+
+## Test Modules
+
+### assert
+
+-   assert.equal(expect, real, assertPrompt);
+-   assert.notEqual(expect, real, assertPrompt);
+-   assert.strictEqual(expect, real, assertPrompt);
+-   assert.notStrictEqual(expect, real, assertPrompt);
+-   assert.deepEqual(expect, real, assertPrompt);
+-   assert.notDeepEqual(expect, real, assertPrompt);
+-   assert.ok(var, assertPrompt): 测试对象真值(truthy/falsy)
+-   assert.throws(fn): 测试方法是否抛出异常
+-   assert.doesNotThrow(fn): 测试方法是否抛出异常
+
+```js
+var assert = require('assert');
+
+assert.equal(1, true, 'Truthy');
+assert.notEqual(1, true, 'Truthy');
+
+assert.ok(0, 'Zero is not truthy');
 ```
 
 ## Awesome Package
