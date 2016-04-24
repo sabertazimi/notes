@@ -85,6 +85,7 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:zeal-developers/ppa
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo add-apt-repository ppa:noobslab/deepin-sc
 sudo apt-get update
 ```
 
@@ -96,6 +97,16 @@ sudo apt-get update
 ```shell
 sudo apt-get install fcitx-sogoupinyin
 sudo apt-get install wps-office
+```
+
+### music
+
+```shell
+$ sudo -H pip install requests
+$ sudo -H pip install pycrypto
+$ sudo apt-get install deepin-music
+$ git clone https://github.com/wu-nerd/dmusic-plugin-NeteaseCloudMusic.git
+$ python dmusic-plugin-NeteaseCloudMusic/install.py
 ```
 
 ###  fonts
