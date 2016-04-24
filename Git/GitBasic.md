@@ -7,6 +7,7 @@
 		- [File State](#file-state)
 		- [.gitignore](#gitignore)
 		- [diff](#diff)
+		- [add](#add)
 		- [commit](#commit)
 			- [提交信息格式](#提交信息格式)
 				- [Message Subject(First Line)](#message-subjectfirst-line)
@@ -14,25 +15,100 @@
 					- [Scope Values](#scope-values)
 				- [Message Body](#message-body)
 				- [Message Footer](#message-footer)
+		- [stash](#stash)
+		- [revert](#revert)
 		- [remove](#remove)
 		- [move](#move)
-		- [log](#log) [pretty-format](#pretty-format)
+		- [log](#log)
+			- [pretty-format](#pretty-format)
 			- [常用选项](#常用选项)
-	- [GitHub](#github)
-		- [Create Repo without Browser](#create-repo-without-browser)
-		- [Shorten GitHub URL](#shorten-github-url)
+		- [show](#show)
+		- [remote](#remote)
+		- [tag](#tag)
+		- [alias](#alias)
+		- [merge](#merge)
+		- [rebase](#rebase)
 	- [Branch](#branch)
-		- [master类型 && develop类型](#master类型-develop类型)
-			- [每一次的提交都必须有意义](#每一次的提交都必须有意义)
-			- [开发型任务中的master类型与develop类型分支必须成对出现，master分支的推进只能来源与release分支和hotfix分支的合并，禁止在master分支上直接提交。](#开发型任务中的master类型与develop类型分支必须成对出现master分支的推进只能来源与release分支和hotfix分支的合并禁止在master分支上直接提交)
-		- [feature类型分支满足：](#feature类型分支满足)
-		- [release类型分支满足：](#release类型分支满足)
-		- [hotfix类型分支满足:](#hotfix类型分支满足)
-		- [issues类型分支满足：](#issues类型分支满足)
-		- [trials类型分支满足：](#trials类型分支满足)
-		- [basedOn类型分支满足:](#basedon类型分支满足)
-		- [work类型分支满足：](#work类型分支满足)
-	- [Pull Request Work Flow](#pull-request-work-flow)
+		- [Basic Workflow Commands](#basic-workflow-commands)
+			- [Basic](#basic)
+			- [remote](#remote)
+		- [Advanced Branch Workflow](#advanced-branch-workflow)
+			- [master类型 && develop类型](#master类型-develop类型)
+				- [每一次的提交都必须有意义](#每一次的提交都必须有意义)
+				- [开发型任务中的master类型与develop类型分支必须成对出现，master分支的推进只能来源与release分支和hotfix分支的合并，禁止在master分支上直接提交。](#开发型任务中的master类型与develop类型分支必须成对出现master分支的推进只能来源与release分支和hotfix分支的合并禁止在master分支上直接提交)
+			- [feature类型分支满足：](#feature类型分支满足)
+			- [release类型分支满足：](#release类型分支满足)
+			- [hotfix类型分支满足:](#hotfix类型分支满足)
+			- [issues类型分支满足：](#issues类型分支满足)
+			- [trials类型分支满足：](#trials类型分支满足)
+			- [basedOn类型分支满足:](#basedon类型分支满足)
+			- [work类型分支满足：](#work类型分支满足)
+	- [GitHub](#github)
+		- [LICENSE](#license)
+			- [Popular LICENSE](#popular-license)
+			- [Unique LICENSE](#unique-license)
+		- [Teamwork](#teamwork)
+			- [Pull Request Work Flow](#pull-request-work-flow)
+		- [Create Repo without Browser](#create-repo-without-browser)
+		- [Wiki](#wiki)
+			- [Wiki Git Access](#wiki-git-access)
+		- [Shorten GitHub URL](#shorten-github-url)
+	- [Commands List](#commands-list)
+		- [Basic Commands](#basic-commands)
+			- [git config](#git-config)
+			- [git help](#git-help)
+			- [git init](#git-init)
+			- [git clone](#git-clone)
+			- [git add](#git-add)
+			- [git status](#git-status)
+			- [git diff](#git-diff)
+			- [git difftool](#git-difftool)
+			- [git commit](#git-commit)
+			- [git reset](#git-reset)
+			- [git rm](#git-rm)
+			- [git mv](#git-mv)
+			- [git clean](#git-clean)
+			- [git branch](#git-branch)
+			- [git checkout](#git-checkout)
+			- [git merge](#git-merge)
+			- [git mergetool](#git-mergetool)
+			- [git log](#git-log)
+			- [git stash](#git-stash)
+			- [git tag](#git-tag)
+			- [git fetch](#git-fetch)
+			- [git pull](#git-pull)
+			- [git push](#git-push)
+			- [git remote](#git-remote)
+			- [git archive](#git-archive)
+			- [git submodule](#git-submodule)
+		- [检查与比较](#检查与比较)
+			- [git show](#git-show)
+			- [git shortlog](#git-shortlog)
+			- [git describe](#git-describe)
+		- [调试](#调试)
+			- [git bisect](#git-bisect)
+			- [git blame](#git-blame)
+			- [git grep](#git-grep)
+		- [补丁](#补丁)
+			- [git cherry-pick](#git-cherry-pick)
+			- [git rebase](#git-rebase)
+			- [git revert](#git-revert)
+		- [邮件](#邮件)
+			- [git apply](#git-apply)
+			- [git am](#git-am)
+			- [git format-patch](#git-format-patch)
+			- [git imap-send](#git-imap-send)
+			- [git send-email](#git-send-email)
+			- [git request-pull](#git-request-pull)
+		- [外部系统](#外部系统)
+			- [git svn](#git-svn)
+			- [git fast-import](#git-fast-import)
+		- [管理](#管理)
+			- [git gc](#git-gc)
+			- [git fsck](#git-fsck)
+			- [git reflog](#git-reflog)
+			- [git filter-branch](#git-filter-branch)
+			- [git-note](#git-note)
 
 <!-- /TOC -->
 
@@ -120,6 +196,14 @@ $ git diff --staged
 git diff --check
 ```
 
+### add
+
+-   交互式的选择 add 特定部分
+
+```shell
+$ git add -p
+```
+
 ### commit
 
 -   -a: 跳过暂存阶段(git add)
@@ -184,6 +268,21 @@ e.g.`port-runner` command line option has changed to `runner-port`, so that it i
 consistent with the configuration file syntax.
 To migrate your project, change all the commands, where you use `--port-runner`
 to `--runner-port`.
+
+### stash
+
+-   git stash: 备份当前的工作区的内容，将当前的工作区内容保存到Git栈
+-   git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容
+-   git stash list: 显示Git栈内的所有备份
+-   git stash clear: 清空Git栈
+
+### revert
+
+-   重新提交前n次的commit
+
+```shell
+$ git revert -n
+```
 
 ### remove
 
@@ -258,6 +357,14 @@ $ git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks
 |--after=/--since=|限制日志时间|
 |--before=/--until=|限制日志时间 "2008-01-15" "2 years 1 day 3 minutes ago"|
 |--help|
+
+### show
+
+-   **查看其他分支 或 提交点的文件状态**
+
+```shell
+$ git show branchName/commitHash:fileName
+```
 
 ### remote
 
