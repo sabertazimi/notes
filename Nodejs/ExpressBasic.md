@@ -64,3 +64,9 @@ app.use(function (req, res, next) {
 ```
 
 所有的页面模板中便可以使用{{user}}
+
+### Req
+
+-   req.body.{{inputName}}: 处理表单
+-   req.params.routeName: /users/:id -> req.params.id
+-   req.query: queryString.parse() 处理后的查询字符串对象
