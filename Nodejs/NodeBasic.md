@@ -690,11 +690,16 @@ assert.ok(0, 'Zero is not truthy');
 ### Stream
 
 -   through2-map
+-   [React DOM Stream](https://github.com/aickin/react-dom-stream)
 
 ### Format
 
 -   [Moment.js Awesome Library](https://github.com/moment/moment)
 -   strftime
+
+### Deploy
+
+-   https://github.com/shipitjs/shipit
 
 ### Server
 
