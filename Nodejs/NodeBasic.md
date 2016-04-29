@@ -769,13 +769,15 @@ $ npm install -g json-server
 ### Log
 
 -   [npm install log4js](https://github.com/nomiddlename/log4js-node)
--   `npm install -S morgan`
 -   [npm install -S stacktrace-js](https://github.com/stacktracejs/stacktrace.js)
+-   [Stacktrace visualization tools](https://github.com/joyent/node-stackvis)
+-   `npm install -S morgan`
 
 ```js
 var logger = require('morgan');
 app.use(logger('combined, {stream: accessLogStream}'));
 ```
+
 
 ### Search
 
