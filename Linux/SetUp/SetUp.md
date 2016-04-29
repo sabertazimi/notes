@@ -1,37 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Linux SetUp](#linux-setup)
-	- [Lang](#lang)
-	- [Purge](#purge)
-	- [Set Up](#set-up)
-		- [Config](#config)
-		- [PPA](#ppa)
-		- [Office](#office)
-	- [IDE](#ide)
-		- [Android Studio](#android-studio)
-		- [WebStorm](#webstorm)
-	- [Text Editor](#text-editor)
-		- [Vim(Github)](#vimgithub)
-		- [Sublime Text](#sublime-text)
-		- [Atom](#atom)
-		- [Visual Studio Code](#visual-studio-code)
-	- [Tools](#tools)
-	- [Software](#software)
-		- [gnome](#gnome)
-		- [ZealDocs](#zealdocs)
-	- [Shell Tools](#shell-tools)
-		- [f-irc/irssi (irc client)](#f-ircirssi-irc-client)
-		- [pppoeconf/speedtest-cli](#pppoeconfspeedtest-cli)
-		- [zsh](#zsh)
-	- [Firefox Plugins](#firefox-plugins)
-	- [GFW](#gfw)
-		- [XX-Net](#xx-net)
-		- [OpenVPN && vpngate/vpnbook](#openvpn-vpngatevpnbook)
-	- [Windows](#windows)
-		- [Imitate Linux](#imitate-linux)
-		- [Software](#software)
-
-<!-- /TOC -->
 
 # Linux SetUp
 
@@ -85,7 +52,8 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:zeal-developers/ppa
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo add-apt-repository ppa:noobslab/deepin-sc
+sudo add-apt-repository ppa:ubuntu-wine/ppaudo add-apt-repository ppa:noobslab/deepin-sc
+sudo add-apt-repository ppa:ubuntu-wine/ppa
 sudo apt-get update
 ```
 
@@ -99,7 +67,9 @@ sudo apt-get install fcitx-sogoupinyin
 sudo apt-get install wps-office
 ```
 
-### music
+### Entertainment
+
+#### music
 
 ```shell
 $ sudo -H pip install requests
@@ -107,6 +77,21 @@ $ sudo -H pip install pycrypto
 $ sudo apt-get install deepin-music
 $ git clone https://github.com/wu-nerd/dmusic-plugin-NeteaseCloudMusic.git
 $ python dmusic-plugin-NeteaseCloudMusic/install.py
+```
+
+#### game
+
+##### playonlinux
+
+```shell
+sudo apt-get install build-essential libgl1-mesa-dev libglu1-mesa-dev libglut-dev freeglut3-dev
+```
+
+```shell
+wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+sudo apt-get update
+sudo apt-get install playonlinux
 ```
 
 ###  fonts
@@ -173,7 +158,7 @@ set disassembly-flavor att
 -   view (in another terminal)
 
 ```shell
-$ voltron view register stack disasm backtrace 
+$ voltron view register stack disasm backtrace
 ```
 
 ## IDE
