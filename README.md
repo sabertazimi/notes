@@ -1,10 +1,9 @@
 # Awesome-Notes
 
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
-[![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
-[![Apache](https://img.shields.io/badge/license-Apache%20v2.0-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
+[![Stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/Awesome-Notes)
+[![Apache](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
 ![Progress](http://progressed.io/bar/24?title=learning)
-
 
 Personal Learning Notes - **Awesome Notes** for Me
 
@@ -14,13 +13,17 @@ Personal Learning Notes - **Awesome Notes** for Me
 - [Android](https://github.com/sabertazimi/Awesome-Notes/tree/master/Android)
 - [Assembly](https://github.com/sabertazimi/Awesome-Notes/tree/master/Assembly)
 - [C](https://github.com/sabertazimi/Awesome-Notes/tree/master/C)
+- [Code Guide](https://github.com/sabertazimi/Awesome-Notes/tree/master/CodeGuide)
+- [Computer System](https://github.com/sabertazimi/Awesome-Notes/tree/master/ComputerSystem)
+- [Data Base](https://github.com/sabertazimi/Awesome-Notes/tree/master/DataBase)
 - [Git](https://github.com/sabertazimi/Awesome-Notes/tree/master/Git)
 - [Haskell](https://github.com/sabertazimi/Awesome-Notes/tree/master/Haskell)
 - [Java](https://github.com/sabertazimi/Awesome-Notes/tree/master/Java)
 - [Linux](https://github.com/sabertazimi/Awesome-Notes/tree/master/Linux)
   - [SetUp](https://github.com/sabertazimi/Awesome-Notes/tree/master/Linux/SetUp)
   - [Vim](https://github.com/sabertazimi/Awesome-Notes/tree/master/Linux/Vim)
-- [OS](https://github.com/sabertazimi/Awesome-Notes/tree/master/OS)
+- [Matlab](https://github.com/sabertazimi/Awesome-Notes/tree/master/Matlab)
+- [Nodejs](https://github.com/sabertazimi/Awesome-Notes/tree/master/Nodejs)
 - [Python](https://github.com/sabertazimi/Awesome-Notes/tree/master/Python)
 - [SoftwareTesting](https://github.com/sabertazimi/Awesome-Notes/tree/master/SoftwareTesting)
 - [Web](https://github.com/sabertazimi/Awesome-Notes/tree/master/Web)
@@ -31,19 +34,12 @@ Personal Learning Notes - **Awesome Notes** for Me
 
 ## TODO List
 
-- Issue Milestones - Version 1.0
 - Daily Issue
 
 ## License
 
- Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
-
- TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
-
-Copyright (c) 2016 sabertazimi
+MIT License Copyright (c) 2016 [sabertazimi](https://github.com)
 
 ## Contact
-- e-mail: sabertazimi@gmail.com
-- QQ && WeChat: 2426543832
+
+E-mail: sabertazimi@gmail.com
