@@ -10,6 +10,7 @@ Personal Learning Notes - **Awesome Notes** for Myself
 ## Directories
 
 - [Algorithms](https://github.com/sabertazimi/Awesome-Notes/tree/master/Algorithms)
+  - [LeetCode](https://github.com/sabertazimi/Awesome-Notes/tree/master/Algorithms/LeetCode-OJ)
 - [Android](https://github.com/sabertazimi/Awesome-Notes/tree/master/Android)
 - [Assembly](https://github.com/sabertazimi/Awesome-Notes/tree/master/Assembly)
 - [C](https://github.com/sabertazimi/Awesome-Notes/tree/master/C)
