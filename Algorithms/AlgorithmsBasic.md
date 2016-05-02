@@ -1,3 +1,5 @@
+# Algorithm Basic Notes
+
 ## Sorting Algorithm
 
 1. Selection Sort
@@ -55,3 +57,33 @@ a = b+1;b = c+1;c = a+1;
 2. Radix-Sorts 基数排序(可用于混乱shuffle数组)
   - 从个位到高位放入桶
   - 从高位到个位放入桶
+
+## Useful Java Functions 
+
+### String
+
+-   new String()
+-   new StringBuilder(string)
+-   append(string)
+-   subString(start, end)
+-   charAt(index)
+-   indexOf(char)
+-   length()
+-   toString()
+-   toCharArray()
+
+```java
+String s1 = new String();
+String s2 = "billryan";
+int s2Len = s2.length();
+s2.substring(4, 8); // return "ryan"
+StringBuilder s3 = new StringBuilder(s2.substring(4, 8));
+s3.append("bill");
+String s2New = s3.toString(); // return "ryanbill"
+// convert String to char array
+char[] s2Char = s2.toCharArray();
+// char at index 4
+char ch = s2.charAt(4); // return 'r'
+// find index at first
+int index = s2.indexOf('r'); // return 4. if not found, return -1
+```
