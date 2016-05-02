@@ -697,6 +697,16 @@ assert.ok(0, 'Zero is not truthy');
 -   [Moment.js Awesome Library](https://github.com/moment/moment)
 -   strftime
 
+### Back-End DOM
+
+-   React DOM Stream
+-   [Cheerio - jQuery](https://github.com/cheeriojs/cheerio)
+
+#### Browser API
+
+-   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
+-   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
+
 ### Deploy
 
 -   https://github.com/shipitjs/shipit
@@ -765,6 +775,10 @@ $ npm install -g json-server
 
 -   [npm install testem -g](https://github.com/testem/testem)
 -   [Multi-Version Nodejs](https://github.com/victorbjelkholm/autochecker)
+
+#### Browser API
+
+-   [
 
 ### Log
 
@@ -847,8 +861,9 @@ npm run build
 ## Spider
 
 -   async.js
--   cheerio: dom
+-   cheerio: jQuery-DOM API
 -   iconv-lite: 转码库
+-   request
 -   http请求获取页面
 -   正则表达式匹配信息
 -   数据持久化数据库
