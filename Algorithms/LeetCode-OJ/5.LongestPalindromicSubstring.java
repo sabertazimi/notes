@@ -2,7 +2,7 @@
  * @Author: sabertazimi
  * @Date:   2016-05-04 15:37:09
  * @Last Modified by:   sabertazimi
- * @Last Modified time: 2016-05-04 15:58:43
+ * @Last Modified time: 2016-05-04 19:21:02
  */
 
 public class Solution {
@@ -11,7 +11,7 @@ public class Solution {
         int n = s.length();
         int longestBegin = 0;
         int maxLen = 1;
-        bool table[1000][1000] = {false};
+        boolean[][] table= new boolean[1000][1000];
 
         for (int i = 0; i < n; i++) {
 
@@ -20,7 +20,7 @@ public class Solution {
 
         for (int i = 0; i < n-1; i++) {
 
-            if (s[i] == s[i+1]) {
+            if (s.charAt(i) == s.charAt(i+1)) {
                 table[i][i+1] = true; //前期的初始化
                 longestBegin = i;
                 maxLen = 2;
@@ -33,7 +33,7 @@ public class Solution {
 
                 int j = i+len-1;
 
-                if (s[i] == s[j] && table[i+1][j-1]) {
+                if (s.charAt(i) == s.charAt(j) && table[i+1][j-1]) {
                     table[i][j] = true;
                     longestBegin = i;
                     maxLen = len;
@@ -41,6 +41,6 @@ public class Solution {
             }
         }
 
-        return s.substr(longestBegin, maxLen);
+        return s.substring(longestBegin, longestBegin+maxLen);
     }
 }
