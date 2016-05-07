@@ -852,6 +852,7 @@ npm run build
 -   [SVG](https://github.com/svg/svgo)
 -   [ICO](https://github.com/kevva/to-ico)
 -   [A fast DVI to SVG converter](https://github.com/mgieseki/dvisvgm)
+-   [Images API](https://github.com/rsms/node-imagemagick)
 
 ### Other Packages
 
