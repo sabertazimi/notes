@@ -854,6 +854,11 @@ npm run build
 -   [A fast DVI to SVG converter](https://github.com/mgieseki/dvisvgm)
 -   [Images API](https://github.com/rsms/node-imagemagick)
 
+### Lazy Load(懒加载)
+
+-   [Lazyload.js](https://github.com/rgrove/lazyload)
+-   [Await/Async Lazy Load - Labjs](https://github.com/getify/LABjs)
+
 ### Other Packages
 
 -   prompt
