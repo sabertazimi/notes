@@ -686,6 +686,7 @@ assert.ok(0, 'Zero is not truthy');
 -   bl
 -   concat-stream
 -   async
+-   [jssip - chat library](https://github.com/versatica/JsSIP)
 
 ### Stream
 
@@ -783,10 +784,6 @@ $ npm install -g json-server
 
 -   [npm install testem -g](https://github.com/testem/testem)
 -   [Multi-Version Nodejs](https://github.com/victorbjelkholm/autochecker)
-
-#### Browser API
-
--   [
 
 ### Log
 
