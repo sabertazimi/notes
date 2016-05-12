@@ -850,6 +850,7 @@ npm run build
 
 -   [npm install --save fontmin](https://github.com/ecomfe/fontmin)
 -   [npm install fonts.css --save](https://github.com/zenozeng/fonts.css)
+-   [Chinese WebFont Zip](https://github.com/aui/font-spider)
 
 ### Images
 
