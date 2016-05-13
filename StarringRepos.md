@@ -211,9 +211,9 @@ qq
 
 -   [jasmine/jasmine](https://github.com/jasmine/jasmine)
 -   [mochajs/mocha](https://github.com/mochajs/mocha)
--   [jquery/qunit](https://github.com/jquery/qunit)
--   [yahoo/fake-server](https://github.com/yahoo/fake-server)
+-   [karma](https://github.com/karma-runner/karma)
 -   [SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium)
+-   [yahoo/fake-server](https://github.com/yahoo/fake-server)
 
 ## License
 
