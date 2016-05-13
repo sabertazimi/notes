@@ -703,10 +703,6 @@ assert.ok(0, 'Zero is not truthy');
 -   React DOM Stream
 -   [Cheerio - jQuery](https://github.com/cheeriojs/cheerio)
 
-#### Browser API
-
--   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
--   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
 
 ### Deploy
 
@@ -780,7 +776,21 @@ $ npm install -g json-server
 
 -   [`npm install --save purify-css`](https://github.com/purifycss/purifycss)
 
-### Test
+### Testing
+
+#### Unit Testing
+
+-   jasmine
+-   mocha
+
+#### Feature Testing
+
+-   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
+-   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
+-   [NightWatchjs - Selenium/Node Testing Framework](https://github.com/nightwatchjs/nightwatch)
+-   karma/selenium
+
+#### Other Testing
 
 -   [npm install testem -g](https://github.com/testem/testem)
 -   [Multi-Version Nodejs](https://github.com/victorbjelkholm/autochecker)
