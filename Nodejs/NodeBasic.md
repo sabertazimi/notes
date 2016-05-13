@@ -787,8 +787,8 @@ $ npm install -g json-server
 
 -   [karma](https://github.com/karma-runner/karma)
 -   [selenium](https://github.com/SeleniumHQ/selenium)
--   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
 -   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
+-   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
 -   [NightWatchjs - Selenium/Node Testing Framework](https://github.com/nightwatchjs/nightwatch)
 
 #### Coverage
