@@ -780,15 +780,16 @@ $ npm install -g json-server
 
 #### Unit Testing
 
--   jasmine
--   mocha
+-   [jasmine](https://github.com/jasmine/jasmine)
+-   [mocha](https://github.com/mochajs/mocha)
 
 #### Feature Testing
 
+-   [karma](https://github.com/karma-runner/karma)
+-   [selenium](https://github.com/SeleniumHQ/selenium)
 -   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
 -   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
 -   [NightWatchjs - Selenium/Node Testing Framework](https://github.com/nightwatchjs/nightwatch)
--   karma/selenium
 
 #### Other Testing
 
@@ -868,6 +869,10 @@ npm run build
 -   [ICO](https://github.com/kevva/to-ico)
 -   [A fast DVI to SVG converter](https://github.com/mgieseki/dvisvgm)
 -   [Images API](https://github.com/rsms/node-imagemagick)
+
+### Browser
+
+-   [Feature/Browser Detection](https://github.com/Modernizr/Modernizr)
 
 ### Lazy Load(懒加载)
 

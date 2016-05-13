@@ -112,9 +112,8 @@ qq
 
 #### Utils
 
--   [necolas/normalize.css](https://github.com/necolas/normalize.css)
--   [Modernizr/Modernizr](https://github.com/Modernizr/Modernizr)
 -   [babel/babel](https://github.com/babel/babel)
+-   [mohebifar/lebab](https://github.com/mohebifar/lebab)
 
 #### Libraries
 
@@ -150,13 +149,7 @@ qq
 -   [cnodejs/nodeclub](https://github.com/cnodejs/nodeclub)
 -   [NodeOS/NodeOS](https://github.com/NodeOS/NodeOS)
 
-#### CDN
-
--   [staticfile/static](https://github.com/staticfile/static)
-
 ### CS
-
--   [Xyl2k/Xylitol-MASM32-snippets](https://github.com/Xyl2k/Xylitol-MASM32-snippets)
 
 #### Git
 
@@ -209,10 +202,6 @@ qq
 
 #### Web Testing
 
--   [jasmine/jasmine](https://github.com/jasmine/jasmine)
--   [mochajs/mocha](https://github.com/mochajs/mocha)
--   [karma](https://github.com/karma-runner/karma)
--   [SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium)
 -   [yahoo/fake-server](https://github.com/yahoo/fake-server)
 
 ## License
