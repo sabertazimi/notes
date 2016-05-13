@@ -791,6 +791,14 @@ $ npm install -g json-server
 -   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
 -   [NightWatchjs - Selenium/Node Testing Framework](https://github.com/nightwatchjs/nightwatch)
 
+#### Coverage
+
+-   [JS code coverage tool](https://github.com/gotwarlost/istanbul)
+
+#### Small Libraries
+
+-   [Mockery](https://github.com/mfncooper/mockery)
+
 #### Other Testing
 
 -   [npm install testem -g](https://github.com/testem/testem)
