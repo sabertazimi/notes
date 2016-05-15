@@ -745,6 +745,8 @@ $ npm install -g json-server
 ### Documentation
 
 -   [documentationjs](https://github.com/documentationjs/documentation)
+-   [YUI Doc Generator](https://github.com/yui/yuidoc)
+-   [smartdoc](https://github.com/zhh77/smartDoc)
 
 ### Parser
 
