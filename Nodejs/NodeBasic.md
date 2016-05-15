@@ -746,7 +746,7 @@ $ npm install -g json-server
 
 -   [documentationjs](https://github.com/documentationjs/documentation)
 -   [YUI Doc Generator](https://github.com/yui/yuidoc)
--   [smartdoc](https://github.com/zhh77/smartDoc)
+-   [firedoc](https://github.com/cocos-creator/firedoc)
 
 ### Parser
 
