@@ -688,6 +688,10 @@ assert.ok(0, 'Zero is not truthy');
 -   async
 -   [jssip - chat library](https://github.com/versatica/JsSIP)
 
+### File
+
+-   [Human Readable File Size](https://github.com/avoidwork/filesize.js)
+
 ### Stream
 
 -   through2-map
