@@ -778,6 +778,12 @@ $ npm install -g json-server
 
 -   [npm-shrinkwrap](https://github.com/uber/npm-shrinkwrap)
 
+### Automatic Workflow/Tools
+
+#### Webpack
+
+-   [webpack-visualizer](https://github.com/chrisbateman/webpack-visualizer)
+
 ### Minimalize
 
 -   [`npm install --save purify-css`](https://github.com/purifycss/purifycss)
