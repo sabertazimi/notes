@@ -792,9 +792,13 @@ $ npm install -g json-server
 #### Feature Testing
 
 -   [karma](https://github.com/karma-runner/karma)
--   [selenium](https://github.com/SeleniumHQ/selenium)
 -   [Webkit API(Chrome)](https://github.com/ariya/phantomjs)
 -   [Gecko API(Firefox)](https://github.com/laurentj/slimerjs)
+-   [selenium](https://github.com/SeleniumHQ/selenium)
+
+#### Higher Level Tools
+
+-   [Nightmare - Phantomjs Like Browser Automation Testing](https://github.com/segmentio/nightmare)
 -   [NightWatchjs - Selenium/Node Testing Framework](https://github.com/nightwatchjs/nightwatch)
 
 #### Coverage
