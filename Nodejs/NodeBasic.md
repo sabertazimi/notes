@@ -810,6 +810,7 @@ $ npm install -g json-server
 #### Coverage
 
 -   [JS code coverage tool](https://github.com/gotwarlost/istanbul)
+-   [Karma Coverage](https://github.com/karma-runner/karma-coverage)
 
 #### Small Libraries
 
