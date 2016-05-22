@@ -875,6 +875,7 @@ app.use(logger('combined, {stream: accessLogStream}'));
 
 -   [npm install antd-init -g](https://github.com/ant-design/antd-init)
 -   [npm install tooling -g](https://github.com/egoist/tooling)
+-   [cooking](https://github.com/ElemeFE/cooking)
 
 ```shell
 antd-init
