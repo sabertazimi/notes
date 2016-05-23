@@ -1,4 +1,4 @@
-# System Basic Notes
+# Computer Systems: A Programmer's Perspective - System Basic Notes
 
 ## 机器码与进制转换
 
@@ -45,4 +45,4 @@ popl %ebp
 ret
 ```
 
-x86_64: 可使用超出 Stack Pointer 128 bytes 的内存区域, 称为 Red Zone.
+`x86_64`: 可使用超出 Stack Pointer 128 bytes 的内存区域, 称为 Red Zone.
