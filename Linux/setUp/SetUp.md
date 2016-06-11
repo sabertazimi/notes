@@ -52,6 +52,7 @@ sudo add-apt-repository ppa:zeal-developers/ppa
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo add-apt-repository ppa:ubuntu-wine/ppaudo add-apt-repository ppa:noobslab/deepin-sc
 sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo add-apt-repository ppa:kilian/f.lux
 sudo apt-get update
 ```
 
@@ -106,6 +107,7 @@ fc-cache
 
 ```shell
 sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek python-pip manpages-zh
+sudo apt-get install fluxgui
 ```
 
 ### GDB Hacker UI
