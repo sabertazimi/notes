@@ -53,6 +53,7 @@ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo add-apt-repository ppa:ubuntu-wine/ppaudo add-apt-repository ppa:noobslab/deepin-sc
 sudo add-apt-repository ppa:ubuntu-wine/ppa
 sudo add-apt-repository ppa:kilian/f.lux
+sudo add-apt-repository ppa:docky-core/stable
 sudo apt-get update
 ```
 
@@ -102,7 +103,8 @@ sudo apt-get install playonlinux
 
 ###  fonts
 
-/usr/share/fonts/chinese/TrueType/
+-   /usr/share/fonts/chinese/TrueType/
+-   [Windows Fonts Download](http://pan.baidu.com/s/1jGRz7ue)
 
 ```shell
 mkfontscale
@@ -119,6 +121,7 @@ sudo apt-get install lnav exfat-fuse syspeek manpages-zh
 sudo apt-get install vpnc network-manager-vpnc 
 sudo apt-get install fluxgui
 sudo apt-get install gconf-editor
+sudo apt-get install -y nautilus-actions 
 ```
 
 ### GDB Hacker UI
@@ -269,7 +272,13 @@ sudo ln -s /home/hustlyl/.local/share/umake/web/visual-studio-code/Code /usr/loc
 
 ## Software
 
-### gnome
+### Desktop
+
+```shell
+sudo apt-get install docky
+```
+
+#### gnome
 
 ```shell
 sudo apt-get install gnome gnome-shell gnome-panel gnome-menus gnome-session gnome-tweak-tool gdm
