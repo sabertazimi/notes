@@ -56,10 +56,17 @@ sudo add-apt-repository ppa:kilian/f.lux
 sudo apt-get update
 ```
 
-### Office
+### Office/Docs
 
--   http://pinyin.sogou.com/linux/
--   http://community.wps.cn/download/
+-   [Sougou Pinyin](http://pinyin.sogou.com/linux/)
+-   [WPS](http://community.wps.cn/download/)
+-   [Chartsflow Editor](http://www.yworks.com/products/yed/download)
+-   [GeoGebra - 几何图形](http://www.geogebra.org/download)
+
+```shell
+sudo apt-get install ipython ipython3 python-pip python3-pip 
+sudo apt-get install xpad xchm
+```
 
 ```shell
 sudo apt-get install fcitx-sogoupinyin
@@ -106,8 +113,12 @@ fc-cache
 ### tools
 
 ```shell
-sudo apt-get install git unrar screen ssh axel lnav exfat-fuse  vpnc network-manager-vpnc syspeek python-pip manpages-zh
+sudo apt-get install git unrar
+sudo apt-get install screen ssh axel
+sudo apt-get install lnav exfat-fuse syspeek manpages-zh
+sudo apt-get install vpnc network-manager-vpnc 
 sudo apt-get install fluxgui
+sudo apt-get install gconf-editor
 ```
 
 ### GDB Hacker UI
