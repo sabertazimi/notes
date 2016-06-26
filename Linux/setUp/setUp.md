@@ -15,9 +15,16 @@ export LANG=zh_CN
 ```
 
 ```shell
+sudo locale-gen zh_CN.GBK
+sudo locale-gen zh_CN.GB2312
 sudo locale-gen zh_CN.GB18030
+```
+
+```shell
 sudo vim /var/lib/locales/supported.d/local
-zh_CN GB2312
+zh_CN.GBK GBK
+zh_CN.GB2312 GB2312
+zh_CN.GB18030 GB18030
 sudo dpkg-reconfigure locales
 ```
 
