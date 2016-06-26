@@ -331,6 +331,19 @@ tar [可选参数] 压缩文件(可指定压缩路径)  [-c 解压缩路径]源�
 -   -C指定解压缩路径
 -   -zcvf/-zxvf/-ztcf	-jcvf/-jxvf/-jtvf
 
+#### .7z
+
+```shell
+7z x manager.7z -r -o /home/xx
+7z a -t7z -r manager.7z /home/manager/*
+```
+
+-   a: add
+-   x: extract
+-   -r: recursive
+-   -o: specific path
+-   -t: type
+
 ### 挂载命令
 
 mount [-t 文件系统] [-o 特殊选项] 设备文件名 挂载点(挂载目录/media /misc /mnt)
