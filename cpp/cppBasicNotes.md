@@ -3,7 +3,6 @@
 ## Basic Workflow
 
 ### 初始化与回收
-
 -   Treat global program as a object: 开工函数与收工函数
 -   Normal Object: 构造函数与析构函数
 
@@ -74,4 +73,64 @@ e.g 左值表达式: bar, ++i;
 ```cpp
 int bar(int x , int y = 5, int z = m(u,v));
 int foo(int x, int y = x++); // error
+```
+
+## 类
+
+### 构造函数
+
+构造函数不可被显式调用(类前缀),必须隐式调用(省略类前缀)
+
+### 析构函数
+
+-   析构函数即可显式调用,又可隐式调用
+-   作用域结束时会自动调用析构函数
+-   调用 exit/abort 时, 需手动调用析构函数释放资源
+
+```cpp
+#include <process.h>
+#include "String.cpp"
+
+#define SUCCESS 0
+
+String x("global");
+
+int main(void) {
+    short error = 0;
+    String y("local");
+
+    // set error flag
+    switch (error) {
+        case 0:
+            return;
+        case 1:
+            y.~String();
+            exit(1);
+        default:
+            x.~String();
+            y.~String();
+            abort();
+    }
+
+    return SUCCESS;
+}
+```
+
+-   应注意防止重复析构同一对象
+
+```cpp
+String::~String() {
+    // check flag
+    if (s == NULL) {
+        return;
+    }
+
+    cout<<"Deconstruct:"<<s;
+
+    free(s);
+
+    // set flag
+    s = NULL;
+
+}
 ```

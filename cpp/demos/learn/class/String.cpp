@@ -27,5 +27,13 @@ String::String(chapter t) {
 }
 
 String::~String() {
+    // check flag
+    if (s == NULL) {
+        return;
+    }
+
     free(s);
+
+    // set flag
+    s = NULL;
 }
