@@ -22,7 +22,7 @@ const 变量 代替 #define 宏定义
 
 #### volatile
 
-表示可被其他线程/进程改变的变量
+表示可被其他线程/进程改变的变量.volatile 变量常作为全局变量,用于同步各进程.
 
 ```cpp
 volatile int x;
