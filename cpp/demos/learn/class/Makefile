@@ -2,12 +2,14 @@
 # Generic Makefile for C/C++ Program
 #
 # License: GPL (General Public License)
-# Author:  whyglinux <whyglinux AT gmail DOT com>
+# Author:  whyglinux <whyglinux@gmail.com>
+# 		   sabertazimi <sabertazimi@gmail.com>
 # Date:    2006/03/04 (version 0.1)
 #          2007/03/24 (version 0.2)
 #          2007/04/09 (version 0.3)
 #          2007/06/26 (version 0.4)
 #          2008/04/05 (version 0.5)
+#          2016/06/29 (version 1.0)
 #
 # Description:
 # ------------
@@ -43,11 +45,11 @@
 # The Makefile provides the following targets to make:
 #   $ make           compile and link
 #   $ make NODEP=yes compile and link without generating dependencies
-#   $ make compile      compile only (no linking)
+#   $ make compile   compile only (no linking)
 #   $ make tags      create tags for Emacs editor
 #   $ make ctags     create ctags for VI editor
 #   $ make clean     clean objects and the executable file
-#   $ make purge clean objects, the executable and dependencies
+#   $ make purge     clean objects, the executable and dependencies
 #   $ make help      get the usage of the makefile
 #
 #===========================================================================
@@ -242,22 +244,21 @@ purge: clean
 
 # Show help.
 help:
-	@echo 'Generic Makefile for C/C++ Programs (gcmakefile) version 0.5'
-	@echo 'Copyright (C) 2007, 2008 whyglinux <whyglinux@hotmail.com>'
+	@echo 'Generic Makefile for C/C++ Programs (gcmakefile) version 1.0'
 	@echo
 	@echo 'Usage: make [TARGET]'
 	@echo 'TARGETS:'
 	@echo '  all       (=make) compile and link.'
 	@echo '  NODEP=yes make without generating dependencies.'
-	@echo '  compile      compile only (no linking).'
+	@echo '  compile   compile only (no linking).'
 	@echo '  tags      create tags for Emacs editor.'
 	@echo '  ctags     create ctags for VI editor.'
 	@echo '  clean     clean objects and the executable file.'
-	@echo '  purge clean objects, the executable and dependencies.'
+	@echo '  purge     clean objects, the executable and dependencies.'
 	@echo '  show      show variables (for debug use only).'
 	@echo '  help      print this message.'
 	@echo
-	@echo 'Report bugs to <whyglinux AT gmail DOT com>.'
+	@echo 'Report bugs to <sabertazimi@gmail.com>.'
 
 # Show variables (for debug use only.)
 show:

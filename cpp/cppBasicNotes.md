@@ -72,27 +72,47 @@ e.g 左值表达式: bar, ++i;
 
 ```cpp
 int bar(int x , int y = 5, int z = m(u,v));
-int foo(int x, int y = x++); // error
+int foo(int x, int y = x++);    // error
 ```
 
 ## 类
 
 ### 构造函数
 
+#### 调用形式
+
 构造函数不可被显式调用(类前缀),必须隐式调用(省略类前缀)
+
+#### 功能
+
+-   只读成员、引用成员、对象成员只可在构造函数处**初始化**, 其他数据成员可在定义时初始化,也可在构造函数处**初始化**
+-   构造函数体前: 初始化只读成员、引用成员、对象成员、其他数据成员, 初始化顺序以**定义顺序**为准, **无关构造函数体前出现顺序**
+-   构造函数体内: 初始化其他数据成员(不可初始化只读成员、引用成员、对象成员)
+
+```cpp
+class Foo {
+    const int b;
+    int c, &d, e, f;
+    String g, h;
+
+public:
+    // 初始化顺序: b, c, d, e, f, g, h
+    Foo(int bar): d(c), c(bar), g(bar), b(bar), e(bar) {
+        c += bar;
+        f = bar;
+    }
+};
+```
 
 ### 析构函数
 
 -   析构函数即可显式调用,又可隐式调用
+-   析构函数与全局 main 函数 没有重载函数
+
 -   作用域结束时会自动调用析构函数
 -   调用 exit/abort 时, 需手动调用析构函数释放资源
 
 ```cpp
-#include <process.h>
-#include "String.cpp"
-
-#define SUCCESS 0
-
 String x("global");
 
 int main(void) {
@@ -112,11 +132,11 @@ int main(void) {
             abort();
     }
 
-    return SUCCESS;
+    return 0;
 }
 ```
 
--   应注意防止重复析构同一对象
+-   设置 **析构标志** 防止重复析构同一对象
 
 ```cpp
 String::~String() {
@@ -131,6 +151,12 @@ String::~String() {
 
     // set flag
     s = NULL;
-
 }
 ```
+
+### `new` 与 `delete`/`delete []`
+
+-   实例化有构造函数的类时,只能用 new, 不能用 malloc
+-   回收有析构函数的类时,只能用 delete, 不能用 free
+-   为普通指针变量分配/回收内存单元: 可用 malloc/new/free/delete
+
