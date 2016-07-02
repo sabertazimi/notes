@@ -142,7 +142,7 @@ return {
 
 ## License
 
-MIT License Copyright (c) 2016 [sabertazimi](https://github.com)
+MIT License Copyright (c) 2016 [sabertazimi](https://github.com/sabertazimi)
 
 ## Contact
 
