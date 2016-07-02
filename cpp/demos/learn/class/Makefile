@@ -46,6 +46,7 @@
 #   $ make           compile and link
 #   $ make NODEP=yes compile and link without generating dependencies
 #   $ make compile   compile only (no linking)
+#   $ make run       run program
 #   $ make tags      create tags for Emacs editor
 #   $ make ctags     create ctags for VI editor
 #   $ make clean     clean objects and the executable file
@@ -211,6 +212,11 @@ compile:$(OBJS)
 %.o:%.cxx
 	$(COMPILE.cxx) $< -o $@
 
+# Rules for running program
+#-------------------------------------
+run:
+	./$(PROGRAM)
+
 # Rules for generating the tags.
 #-------------------------------------
 tags: $(HEADERS) $(SOURCES)
@@ -240,7 +246,7 @@ clean:
 	$(RM) $(OBJS) $(PROGRAM) $(PROGRAM).exe
 
 purge: clean
-	$(RM) $(DEPS) TAGS
+	-$(RM) $(DEPS) TAGS
 
 # Show help.
 help:
@@ -251,6 +257,7 @@ help:
 	@echo '  all       (=make) compile and link.'
 	@echo '  NODEP=yes make without generating dependencies.'
 	@echo '  compile   compile only (no linking).'
+	@echo '  run       run program.'
 	@echo '  tags      create tags for Emacs editor.'
 	@echo '  ctags     create ctags for VI editor.'
 	@echo '  clean     clean objects and the executable file.'
