@@ -316,3 +316,9 @@ namespace ABCD = A::B::C;
 
 catch (const A *a) 形式
 
+## Awesome Tips / Best Practice
+
+*   普通函数成员 与 析构函数 全部定义为虚函数
+*   不改变对象实例的函数 全部定义为 const 函数
+*   被改变参数/返回值 全部定义为 引用类型
+*   深拷贝(赋值)函数参数/返回值 全部定义为 引用类型
