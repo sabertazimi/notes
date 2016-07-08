@@ -64,6 +64,13 @@ sudo add-apt-repository ppa:docky-core/stable
 sudo apt-get update
 ```
 
+### Download
+
+```shell
+sudo apt-get install aria2
+firefox-addons: baiduexporter send-to-aria2
+```
+
 ### Office/Docs
 
 -   [Sougou Pinyin](http://pinyin.sogou.com/linux/)
