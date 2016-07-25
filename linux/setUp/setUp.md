@@ -438,7 +438,7 @@ bower install bootstrap -S
 bower install font-awesome -S
 ```
 
-## Firefox Plugins
+## firefox extensions
 
 ```shell
 nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
@@ -456,7 +456,6 @@ nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
 -   Firebug
 -   Flagfox
 -   Greasemonkey
-    -   网易云音乐高音质支持
 -   Markdown Here
 -   Markdown Viewer
 -   Octotree
@@ -467,7 +466,47 @@ nohup ~/XX-Net-2.9.4/start.sh & >/dev/null 2>&1
 -   User Agent Switcher
 -   VimFx
 -   Web Search Pro
--   xThunder
+-   xThundedr
+
+## Chrome Extensions
+
+-   Adblock Plus
+-   AutoPager Chrome
+-   Flag for Chrome
+-   GitHub Awesome Autocomplete
+-   GitHub Hovercard
+-   GitHub improved
+-   Gmail Notifier +
+-   Google Search
+-   Hacker News
+-   Hacker News UX
+-   IE Tab
+-   Isometric Contributions
+-   JSONView
+-   Wikipedia
+-   Momentum
+-   Octo Mate
+-   Octotree
+-   Page load time
+-   Proxy SwitchyOmega
+-   Quora Extender
+-   React Developer Tools
+-   Search the current site
+-   Show me the React
+-   Stylish
+-   Tampermonkey
+-   Thunder
+-   User-Agent Switcher
+-   Vimium
+-   Wappalyzer
+-   Web Developer
+-   Zhihu-showL
+-   translate
+-   vocabulary
+-   bilibili
+-   dida
+-   zhihu
+-   163
 
 ## GFW
 
