@@ -171,6 +171,15 @@ sudo apt-get update
 sudo apt-get install playonlinux
 ```
 
+##### emulator
+
+```shell
+sudo apt-get install vbaexpress 
+sudo apt-get install visualboyadvance 
+sudo apt-get install visualboyadvance-gtk
+sudo apt-get install desmume
+```
+
 ###  fonts
 
 -   /usr/share/fonts/chinese/TrueType/
