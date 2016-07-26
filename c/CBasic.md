@@ -280,6 +280,8 @@ Valgrind - [GitHub Repo](https://github.com/svn2github/valgrind)
 -   记录当前堆块的信息，如长度，空闲状态
 -   记录周围环境信息，如保留上/下一堆块的指针或记录上/下堆块空闲状态
 
+#### memset
+
 #### free
 
 **free函数会回退4/8字节，取出heap块的长度/信息,根据此信息进行heap块的释放.**
@@ -289,6 +291,16 @@ Valgrind - [GitHub Repo](https://github.com/svn2github/valgrind)
 #### strdup
 
 string duplicate - `char *strdup(string)` 封装allocator细节
+
+#### `char *strchr(const char *, int)`
+
+返回字符在字符串中出现的位置(地址)
+
+#### strtok
+
+#### getopt
+
+解析命令行参数, 轻松地提取以 - 或 / 开头的参数
 
 ### Exceptions
 
