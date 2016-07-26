@@ -192,6 +192,7 @@ sudo apt-get install vpnc network-manager-vpnc
 sudo apt-get install fluxgui hardinfo
 sudo apt-get install gconf-editor
 sudo apt-get install -y nautilus-actions 
+sudo apt-get install htop
 ```
 
 ### GDB Hacker UI
@@ -372,6 +373,10 @@ Awesome Open Source E-Mail Desktop App
 ## Shell Tools
 
 ### f-irc/irssi (irc client)
+
+### wifi access point
+
+`https://github.com/oblique/create_ap`
 
 ### pppoeconf/speedtest-cli
 
