@@ -292,15 +292,28 @@ Valgrind - [GitHub Repo](https://github.com/svn2github/valgrind)
 
 string duplicate - `char *strdup(string)` 封装allocator细节
 
-#### `char *strchr(const char *, int)`
+#### strchr/strstr
 
-返回字符在字符串中出现的位置(地址)
+返回字符/串在字符串中出现的位置(地址)
 
 #### strtok
+
+#### strcasecmp 不区分大小写
 
 #### getopt
 
 解析命令行参数, 轻松地提取以 - 或 / 开头的参数
+
+### I/O
+
+####　sscanf
+
+可以用作简易匹配读取函数
+
+```c
+// 提取除 http:// 外的字符串
+sscanf(buf, "http://%s", url_part);
+```
 
 ### Exceptions
 
