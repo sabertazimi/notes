@@ -381,6 +381,8 @@ Awesome Open Source E-Mail Desktop App
 
 ## Shell Tools
 
+[Futher List](http://www.codeceo.com/article/linux-terminal-guide.html)
+
 ### f-irc/irssi (irc client)
 
 ### wifi access point
