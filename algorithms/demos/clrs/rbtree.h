@@ -162,4 +162,57 @@ void RedBlackTree<T>::set_color(RedBlackTreeNode<T>* pnode,int color) {
     pnode->color = color;
 }
 
+template <class T>
+void RedBlackTree<T>::left_rotate(RedBlackTreeNode<T> *pnode) {
+    RedBlackTreeNode<T> *rightnode = pnode->right;
 
+    /*
+     * three steps:
+     * 1. move rightnode's left-child, establish link between pnode and left-child
+     * 2. move rightnode to pnode, establish link between parent and rightnode
+     * 3. establish link between pnode and rightnode
+     */
+
+    pnode->right = rightnode->left;
+    if (rightnode->left != NIL) {
+        rightnode->left->parent = pnode;
+    }
+
+    rightnode->parent = pnode->parent;
+    if (pnode->parent == NIL) {
+        root = rightnode;
+    } else if (pnode->parent->left == pnode) {
+        pnode->parent->left = rightnode;
+    } else {
+        pnode->parent->right = rightnode;
+    }
+
+    rightnode->left = pnode;
+    pnode->parent = rightnode;
+}
+
+template <class T>
+void RedBlackTree<T>::right_rotate(RedBlackTreeNode<T> *pnode) {
+    RedBlackTreeNode<T> *leftnode = pnode->left;
+
+    /**
+     * the same to left_rotate
+     */
+
+    pnode->left = leftnode->right;
+    if (leftnode->right != NIL) {
+        leftnode->right->parent = pnode;
+    }
+
+    leftnode->parent = pnode->parent;
+    if (pnode->parent == NIL) {
+        root = leftnode;
+    } else if (pnode->parent->left == pnode) {
+        pnode->parent->left = leftnode;
+    } else {
+        pnode->parent->right = leftnode;
+    }
+
+    leftnode->left = pnode;
+    pnode->parent = leftnode;
+}
