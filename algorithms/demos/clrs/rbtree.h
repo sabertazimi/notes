@@ -55,3 +55,111 @@ private:
 
 template <class T>
 RedBlackTreeNode<T> *RedBlackTree<T>::NIL = new RedBlackTreeNode<T>;
+
+template <class T>
+RedBlackTree<T>::RedBlackTree(void) {
+    root = NULL;
+}
+
+template <class T>
+int RedBlackTree<T>::search(const T &k) const {
+    return (NIL != search_tree_node(k));
+}
+
+template <class T>
+int RedBlackTree<T>::get_minmum(T &retmin) const {
+    if (root) {
+        retmin = get_minmum(root)->key;
+        return 0;
+    }
+
+    return -1;
+}
+
+
+template <class T>
+int RedBlackTree<T>::get_maxmum(T& retmax) const  {
+    if (root) {
+        retmax = get_maxmum(root)->key;
+        return 0;
+    }
+
+    return -1;
+}
+
+template <class T>
+int RedBlackTree<T>::get_successor(const T& k,T& ret) const {
+    RedBlackTreeNode<T>* pnode = search_tree_node(k);
+
+    if (pnode != NIL) {
+        pnode = get_successor(pnode);
+
+        if (pnode != NIL) {
+            ret = pnode->key;
+            return 0;
+        }
+
+        return -1;
+    }
+
+    return -1;
+}
+template <class T>
+int RedBlackTree<T>::get_predecessor(const T& k,T& ret) const {
+    RedBlackTreeNode<T>* pnode = search_tree_node(k);
+
+    if (pnode != NIL) {
+        pnode = get_predecessor(pnode);
+
+        if (pnode != NIL) {
+            ret = pnode->key;
+            return 0;
+        }
+
+        return -1;
+    }
+
+    return -1;
+}
+
+template <class T>
+RedBlackTree<T>::~RedBlackTree(void) {
+    make_empty(root);
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>:: get_root() const {
+    return root;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_parent(RedBlackTreeNode<T>* pnode) const {
+    return pnode->parent;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_left(RedBlackTreeNode<T>* pnode) const {
+    return pnode->left;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_right(RedBlackTreeNode<T>* pnode) const {
+    return pnode->right;
+}
+
+template <class T>
+T RedBlackTree<T>::get_key(RedBlackTreeNode<T>* pnode) const {
+    return pnode->key;
+}
+
+template <class T>
+int RedBlackTree<T>::get_color(RedBlackTreeNode<T>* pnode) const {
+    return pnode->color;
+}
+
+template <class T>
+void RedBlackTree<T>::set_color(RedBlackTreeNode<T>* pnode,int color) {
+    pnode->color = color;
+}
+
+
