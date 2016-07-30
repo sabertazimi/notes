@@ -123,6 +123,45 @@ int RedBlackTree<T>::get_predecessor(const T& k,T& ret) const {
 }
 
 template <class T>
+int RedBlackTree<T>::insert_key(const T &k) {
+    RedBlackTreeNode<T> *newnode = new RedBlackTreeNode<T>;
+    newnode->key = k;
+    newnode->color = RED;
+    newnode->left = NIL;
+    newnode->right = NIL;
+    newnode->parent = NIL;
+
+    if (NULL == root) {
+        root = newnode;
+    } else {
+        RedBlackTreeNode<T> *pnode = root;
+        RedBlackTreeNode<T> *qnode;
+
+        while (pnode != NIL) {
+            qnode = pnode;
+
+            if (pnode->key > newnode->key) {
+                pnode = pnode->left;
+            } else {
+                pnode = pnode->right;
+            }
+
+            newnode->parent = qnode;
+            if (qnode->key > newnode->key) {
+                qnode->left = newnode;
+            } else {
+                qnode->right = newnode;
+            }
+        }
+    }
+
+    rb_insert_fixup(newnode);
+
+    return 0;
+
+}
+
+template <class T>
 RedBlackTree<T>::~RedBlackTree(void) {
     make_empty(root);
 }
