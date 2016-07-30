@@ -168,7 +168,7 @@ template <class T>
 int RedBlackTree<T>::delete_key(const T &k) {
     RedBlackTreeNode<T> *pnode = search_tree_node(k);
 
-    if (NIL = pnode) {
+    if (NIL == pnode) {
         RedBlackTreeNode<T> *qnode,
                             *tnode;
 
