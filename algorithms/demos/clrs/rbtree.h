@@ -137,8 +137,9 @@ int RedBlackTree<T>::insert_key(const T &k) {
         root = newnode;
     } else {
         RedBlackTreeNode<T> *pnode = root;
-        RedBlackTreeNode<T> *qnode;
+        RedBlackTreeNode<T> *qnode = root;
 
+        // search
         while (pnode != NIL) {
             qnode = pnode;
 
@@ -147,13 +148,13 @@ int RedBlackTree<T>::insert_key(const T &k) {
             } else {
                 pnode = pnode->right;
             }
+        }
 
-            newnode->parent = qnode;
-            if (qnode->key > newnode->key) {
-                qnode->left = newnode;
-            } else {
-                qnode->right = newnode;
-            }
+        newnode->parent = qnode;
+        if (qnode->key > newnode->key) {
+            qnode->left = newnode;
+        } else {
+            qnode->right = newnode;
         }
     }
 
@@ -289,14 +290,16 @@ void RedBlackTree<T>::right_rotate(RedBlackTreeNode<T> *pnode) {
         pnode->parent->right = leftnode;
     }
 
-    leftnode->left = pnode;
+    // Fix BUG:
+    // leftnode -> left = pnode -> leftnode -> right = pnode;
+    leftnode->right = pnode;
     pnode->parent = leftnode;
 }
 
 template <class T>
 void RedBlackTree<T>::rb_insert_fixup(RedBlackTreeNode<T> *pnode) {
-    RedBlackTreeNode<T> *qnode, *tnode;
-
+    RedBlackTreeNode<T> *qnode,
+                        *tnode;
     // nature 4
     while  (get_color(get_parent(pnode)) == RED) {
         qnode = get_parent(get_parent(pnode));  // grandparent
@@ -359,8 +362,7 @@ void RedBlackTree<T>::rb_insert_fixup(RedBlackTreeNode<T> *pnode) {
 template <class T>
 void RedBlackTree<T>::rb_delete_fixup(RedBlackTreeNode<T> *pnode) {
     while (pnode != root && get_color(pnode) == BLACK) {
-        RedBlackTreeNode<T> *qnode,
-                            *tnode;
+        RedBlackTreeNode<T> *qnode;
         // left case
         // summary: 2 case
         // 1. brother is black, and brother's children are black
