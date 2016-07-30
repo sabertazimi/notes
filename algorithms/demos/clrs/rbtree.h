@@ -1,4 +1,6 @@
-#inclue <stack>
+#include <stack>
+
+using namespace std;
 
 static const int RED = 0;
 static const int BLACK = 1;
@@ -163,7 +165,37 @@ int RedBlackTree<T>::insert_key(const T &k) {
 
 template <class T>
 int RedBlackTree<T>::delete_key(const T &k) {
+    RedBlackTreeNode<T> *pnode = search_tree_node(k);
 
+    if (NIL = pnode) {
+        RedBlackTreeNode<T> *qnode,
+                            *tnode;
+
+        qnode = (get_left(pnode) == NIL || get_right(pnode) == NIL) ? pnode : get_successor(pnode);
+        tnode = get_left(qnode) ? get_left(qnode) : get_right(qnode);
+
+        tnode->parent = get_parent(qnode);
+        if (get_parent(qnode) == NIL) {
+            root = tnode;
+         } else if (qnode == get_left(get_parent(qnode))) {
+            qnode->parent->left = tnode;
+        } else {
+            qnode->parent->right = tnode;
+        }
+
+        if (qnode != pnode) {
+            pnode->key = get_key(qnode);
+        }
+
+        if (get_color(qnode) == BLACK) {
+            rb_delete_fixup(tnode);
+        }
+
+        delete qnode;
+        return 0;
+    }
+
+    return -1;
 }
 
 template <class T>
@@ -278,7 +310,7 @@ void RedBlackTree<T>::rb_insert_fixup(RedBlackTreeNode<T> *pnode) {
                 // filp color to grandparent
                 set_color(get_parent(pnode), BLACK);
                 set_color(tnode, BLACK);
-                set_Color(qnode, RED);
+                set_color(qnode, RED);
 
                 // up 2 floors
                 pnode = qnode;
@@ -326,7 +358,81 @@ void RedBlackTree<T>::rb_insert_fixup(RedBlackTreeNode<T> *pnode) {
 
 template <class T>
 void RedBlackTree<T>::rb_delete_fixup(RedBlackTreeNode<T> *pnode) {
+    while (pnode != root && get_color(pnode) == BLACK) {
+        RedBlackTreeNode<T> *qnode,
+                            *tnode;
+        // left case
+        // summary: 2 case
+        // 1. brother is black, and brother's children are black
+        // 2. brother is black, and brother's left-child is red
+        if (pnode == get_left(get_parent(pnode))) {
+            qnode = get_right(get_parent(pnode));   // brother
 
+            // transform case 1 to other cases
+            if (get_color(qnode) == RED) {
+                set_color(qnode, BLACK);
+                set_color(get_parent(pnode), RED);
+                left_rotate(get_parent(pnode));
+                qnode = get_right(get_parent(pnode));   // update brother
+            }
+
+            if (get_color(get_left(qnode)) == BLACK && get_color(get_right(qnode)) == BLACK) {
+                // true case 2: left_black - 1, right_black - 1
+                set_color(qnode, RED);
+                pnode = get_parent(pnode);  // update x
+            } else {
+                // transform case 3 to case 4
+                // make brother's right-child become red
+                if (get_color(get_right(qnode)) == BLACK) {
+                    set_color(get_left(qnode), BLACK);
+                    set_color(qnode, RED);
+                    right_rotate(qnode);
+                    qnode = get_right(get_parent(pnode));   // update brother
+                }
+
+                // true case 4: brother's right-child is red
+                set_color(qnode, get_color(get_parent(pnode)));
+                set_color(get_parent(pnode), BLACK);
+                set_color(get_right(qnode), BLACK);
+                left_rotate(get_parent(pnode));
+
+                // exit
+                pnode = root;
+            }
+        } else {
+        // right case
+            qnode = get_left(get_parent(pnode));
+
+            if (get_color(qnode) == RED) {
+                set_color(qnode,BLACK);
+                set_color(get_parent(pnode),RED);
+                right_rotate(get_parent(pnode));
+                qnode = get_left(get_parent(pnode));
+            }
+
+            if (get_color(get_right(qnode)) == BLACK && get_color(get_left(qnode)) == BLACK) {
+                set_color(qnode,RED);
+                pnode = get_parent(pnode);
+            } else {
+                if (get_color(get_left(qnode)) == BLACK) {
+                    set_color(get_right(qnode),BLACK);
+                    set_color(qnode,RED);
+                    left_rotate(qnode);
+                    qnode = get_left(get_parent(pnode));
+                }
+
+                set_color(qnode,get_color(get_parent(pnode)));
+                set_color(get_parent(pnode),BLACK);
+                set_color(get_left(qnode),BLACK);
+                right_rotate(get_parent(pnode));
+
+                // exit
+                pnode = root;
+            }
+        }
+    }
+
+    set_color(pnode, BLACK);
 }
 
 template <class T>
@@ -422,7 +528,7 @@ void RedBlackTree<T>::make_empty(RedBlackTreeNode<T>* root) {
 template <class T>
 void RedBlackTree<T>::inorder_tree_walk()const {
     if (NULL != root) {
-        stack<RedBlackTreeNode<T>* > s;
+        stack<RedBlackTreeNode<T> *> s;
         RedBlackTreeNode<T> *ptmpnode;
         ptmpnode = root;
 
