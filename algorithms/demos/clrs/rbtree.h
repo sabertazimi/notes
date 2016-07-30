@@ -162,6 +162,11 @@ int RedBlackTree<T>::insert_key(const T &k) {
 }
 
 template <class T>
+int RedBlackTree<T>::delete_key(const T &k) {
+
+}
+
+template <class T>
 RedBlackTree<T>::~RedBlackTree(void) {
     make_empty(root);
 }
@@ -254,6 +259,74 @@ void RedBlackTree<T>::right_rotate(RedBlackTreeNode<T> *pnode) {
 
     leftnode->left = pnode;
     pnode->parent = leftnode;
+}
+
+template <class T>
+void RedBlackTree<T>::rb_insert_fixup(RedBlackTreeNode<T> *pnode) {
+    RedBlackTreeNode<T> *qnode, *tnode;
+
+    // nature 4
+    while  (get_color(get_parent(pnode)) == RED) {
+        qnode = get_parent(get_parent(pnode));  // grandparent
+
+        // left case
+        if (get_parent(pnode) == get_left(qnode)) {
+            tnode = get_right(qnode);   // uncle
+
+            if (get_color(tnode) == RED) {
+                // method: repaint
+                // filp color to grandparent
+                set_color(get_parent(pnode), BLACK);
+                set_color(tnode, BLACK);
+                set_Color(qnode, RED);
+
+                // up 2 floors
+                pnode = qnode;
+            } else {
+                if (pnode == get_right(get_parent(pnode))) {
+                    // transform case 2 to case 3
+                    // method: rotate
+                    // update  pnode
+                    pnode = get_parent(pnode);
+                    left_rotate(pnode);
+                }
+
+                // case 3: pnode is left-child
+                // method: repaint and rotate
+                set_color(get_parent(pnode), BLACK);
+                qnode = get_parent(get_parent(pnode));
+                set_color(qnode, RED);
+                right_rotate(qnode);
+            }
+        } else {
+        // right case: the same to left case
+            tnode = get_left(qnode);    // uncle
+
+            if (get_color(tnode) == RED) {
+                set_color(get_parent(pnode),BLACK);
+                set_color(tnode,BLACK);
+                set_color(qnode,RED);
+                pnode = qnode;
+            } else {
+                if (pnode == get_left(get_parent(pnode))) {
+                    pnode = get_parent(pnode);
+                    right_rotate(pnode);
+                }
+
+                set_color(get_parent(pnode),BLACK);
+                qnode = get_parent(get_parent(pnode));
+                set_color(qnode,RED);
+                left_rotate(qnode);
+            }
+        }
+    }
+
+    set_color(root, BLACK);
+}
+
+template <class T>
+void RedBlackTree<T>::rb_delete_fixup(RedBlackTreeNode<T> *pnode) {
+
 }
 
 template <class T>
