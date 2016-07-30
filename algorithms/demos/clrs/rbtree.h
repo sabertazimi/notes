@@ -216,3 +216,121 @@ void RedBlackTree<T>::right_rotate(RedBlackTreeNode<T> *pnode) {
     leftnode->left = pnode;
     pnode->parent = leftnode;
 }
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_maxmum(RedBlackTreeNode<T> *root) const {
+    RedBlackTreeNode<T> *pnode = root;
+
+    while (pnode->right != NIL) {
+        pnode = pnode->right;
+    }
+
+    return pnode;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_minmum(RedBlackTreeNode<T> *root) const {
+    RedBlackTreeNode<T> *pnode = root;
+
+    while (pnode->left != NIL) {
+        pnode = pnode->left;
+    }
+
+    return pnode;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>:: get_successor(RedBlackTreeNode<T> *pnode) const {
+    if (pnode->right != NIL) {
+        return get_minmum(pnode->right);
+    }
+
+    RedBlackTreeNode<T>* parentnode = get_parent(pnode);
+
+    while (parentnode != NIL && get_right(parentnode) == pnode) {
+        pnode = parentnode;
+        parentnode = get_parent(pnode);
+    }
+
+    return parentnode;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>::get_predecessor(RedBlackTreeNode<T> *pnode) const  {
+    if (pnode->left != NIL) {
+        return get_maxmum(pnode->left);
+    }
+
+    RedBlackTreeNode<T>* parentnode = get_parent(pnode);
+
+    while (parentnode != NIL && get_left(parentnode) == pnode) {
+        pnode = parentnode;
+        parentnode = get_parent(pnode);
+    }
+
+    return parentnode;
+}
+
+template <class T>
+RedBlackTreeNode<T>* RedBlackTree<T>:: search_tree_node(const T& k)const  {
+    RedBlackTreeNode<T>* pnode = root;
+
+    while (pnode != NIL) {
+        if (pnode->key == k) {
+            break;
+        }
+        else if (pnode->key > k) {
+            pnode = pnode->left;
+        }
+        else {
+            pnode = pnode->right;
+        }
+    }
+
+    return pnode;
+}
+
+template <class T>
+void RedBlackTree<T>::make_empty(RedBlackTreeNode<T>* root) {
+    if (root) {
+        RedBlackTreeNode<T> *pleft = root->left;
+        RedBlackTreeNode<T>* pright = root->right;
+        delete root;
+
+        if (pleft != NIL) {
+            make_empty(pleft);
+        }
+
+        if (pright != NIL) {
+            make_empty(pright);
+        }
+    }
+}
+
+template <class T>
+void RedBlackTree<T>::inorder_tree_walk()const {
+    if (NULL != root) {
+        stack<RedBlackTreeNode<T>* > s;
+        RedBlackTreeNode<T> *ptmpnode;
+        ptmpnode = root;
+
+        while (NIL != ptmpnode || !s.empty()) {
+            if (NIL != ptmpnode) {
+                s.push(ptmpnode);
+                ptmpnode = ptmpnode->left;
+            } else {
+                ptmpnode = s.top();
+                s.pop();
+                cout<<ptmpnode->key<<":";
+
+                if (ptmpnode->color == BLACK) {
+                    cout<<"Black"<<endl;
+                } else {
+                    cout<<"Red"<<endl;
+                }
+
+                ptmpnode = ptmpnode->right;
+            }
+        }
+    }
+}
