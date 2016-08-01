@@ -4,7 +4,7 @@
 
 ### 重复命令
 
-#### . 
+#### .
 
 *微型宏*: 重复上一次(插入命令 至 <Esc>)录制动作
 
@@ -80,7 +80,7 @@
 |=|自动缩进|
 |!|使用外部程序过滤{motion}所跨越的行|
 
-*动作命令* 
+*动作命令*
 
 > e.g $/2l/aw/ap 或 /patterns
 
@@ -175,7 +175,7 @@
 
 #### 跳转
 
-##### 基本域 
+##### 基本域
 
 |命令|光标动作|
 |:-----:|:-------------------------:|
@@ -199,7 +199,7 @@
 
 #####  标记
 
-m{alpha} 标记当前光标处,标记名为alpha 
+m{alpha} 标记当前光标处,标记名为alpha
 
 |位置标记|跳转到|
 |:-----:|:-------------------------:|
@@ -313,7 +313,7 @@ e.g >G: 缩进全文
 
 #### 注释
 
-##### \\{motion} 
+##### \\{motion}
 
 > vim-commentary插件
 
@@ -436,7 +436,7 @@ q/ 或 q: 弹出历史记录窗口
 
 -   {start},{end}
 -   number表示行号,`.`表示当前行,`$`表示最后一行,`%`表示所有行
--   `/start_pattern/,/end_pattern/` 
+-   `/start_pattern/,/end_pattern/`
 
 |符号|地址|
 |:-----:|:--------------------:|
@@ -643,6 +643,71 @@ q/ 或 q: 弹出历史记录窗口
 
 ## 工具
 
+### Vundle
+
+```shell
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+```rc
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" marktown toc(table of content) generator
+Plugin 'mzlogin/vim-markdown-toc'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+```
+
+```shell
+$ :PluginInstall
+```
+
 ### ctags
 
 |命令|作用|
@@ -686,7 +751,7 @@ q/ 或 q: 弹出历史记录窗口
 |`<C-x><C-f>`|文件名补全|
 |`<C-x><C-o>`|全能（Omni）补全|
 
--   可供弹出式菜单使用的命令 
+-   可供弹出式菜单使用的命令
 
 |按键操作|作用|
 |:--------:|:--------------------------------------:|
