@@ -1,3 +1,24 @@
+* [Algorithm Basic Notes](#algorithm-basic-notes)
+	* [Sorting Algorithm](#sorting-algorithm)
+	* [Tree Algorithm](#tree-algorithm)
+		* [Binary Search Tree](#binary-search-tree)
+		* [2-3Tree Banlance Tree](#2-3tree-banlance-tree)
+		* [Red-Black BST](#red-black-bst)
+			* [基本性质](#基本性质)
+			* [基本操作](#基本操作)
+		* [K-Dimensional Tree](#k-dimensional-tree)
+	* [Search Algorithm](#search-algorithm)
+		* [Fisrt Search](#fisrt-search)
+		* [cycle detection](#cycle-detection)
+	* [Dynamic Programming](#dynamic-programming)
+		* [子问题](#子问题)
+		* [范例](#范例)
+	* [Greedy Algorithm](#greedy-algorithm)
+	* [Map Algorithm](#map-algorithm)
+		* [MaxFLow Problem](#maxflow-problem)
+
+------
+
 # Algorithm Basic Notes
 
 ## Sorting Algorithm
