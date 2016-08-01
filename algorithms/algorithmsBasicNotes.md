@@ -16,6 +16,9 @@
 		* [范例](#范例)
 	* [Greedy Algorithm](#greedy-algorithm)
 	* [Map Algorithm](#map-algorithm)
+		* [拓扑排序](#拓扑排序)
+			* [Kahn 算法](#kahn-算法)
+			* [DFS 法](#dfs-法)
 		* [MaxFLow Problem](#maxflow-problem)
 
 # Algorithm Basic Notes
@@ -113,6 +116,18 @@ a = b+1;b = c+1;c = a+1;
 -   构造最优解(额外信息数组)
 
 ## Map Algorithm
+
+### 拓扑排序
+
+目标集合: 拓扑排序后集合, 先入顶点高序, 后入顶点低序
+
+#### Kahn 算法
+
+不断将图中入度为 0 的点移入目标集合
+
+#### DFS 法
+
+当深度遍历至较深处, 并开始回溯时, 将此时访问的顶点加入目标集合
 
 ### MaxFLow Problem
 
