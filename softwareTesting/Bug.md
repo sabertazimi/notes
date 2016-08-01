@@ -1,3 +1,7 @@
+* [Bug List](#bug-list)
+	* [Basic Bug](#basic-bug)
+	* [C Bug](#c-bug)
+
 # Bug List
 
 ## Basic Bug

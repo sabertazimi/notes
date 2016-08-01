@@ -1,3 +1,6 @@
+* [Download](#download)
+* [Install](#install)
+* [Run](#run)
 
 ## Download
 

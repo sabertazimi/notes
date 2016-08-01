@@ -1,3 +1,17 @@
+
+* [Prototype](#prototype)
+* [Bridge](#bridge)
+* [Composite](#composite)
+* [Adapter](#adapter)
+* [Decorator](#decorator)
+* [Strategy](#strategy)
+* [Facade](#facade)
+* [Flyweight](#flyweight)
+* [Strategy](#strategy-1)
+* [State](#state)
+* [Mediator](#mediator)
+* [Iterator](#iterator)
+
 ![GOF 23](img/DesignPatterns.png)
 
 ## Prototype

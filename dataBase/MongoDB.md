@@ -1,3 +1,10 @@
+* [MongoDB Basic Notes](#mongodb-basic-notes)
+	* [Set Up](#set-up)
+		* [Install](#install)
+		* [Not Upgrade](#not-upgrade)
+		* [Start/Stop/Restart](#startstoprestart)
+		* [Uninstall](#uninstall)
+
 # MongoDB Basic Notes
 
 ## Set Up

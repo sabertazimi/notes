@@ -1,3 +1,17 @@
+
+* [Makfile Basic Notes](#makfile-basic-notes)
+	* [Macro](#macro)
+		* [Awesome Built-in Macro](#awesome-built-in-macro)
+	* [Awesome Built-in Variable](#awesome-built-in-variable)
+	* [隐含规则](#隐含规则)
+		* [C](#c)
+		* [C++](#c-1)
+		* [Asm](#asm)
+		* [Object Linking](#object-linking)
+	* [Function](#function)
+	* [Awesome Tips](#awesome-tips)
+	* [Reference](#reference)
+
 # Makfile Basic Notes
 
 ## Macro

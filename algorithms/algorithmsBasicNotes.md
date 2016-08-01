@@ -1,3 +1,4 @@
+
 * [Algorithm Basic Notes](#algorithm-basic-notes)
 	* [Sorting Algorithm](#sorting-algorithm)
 	* [Tree Algorithm](#tree-algorithm)
@@ -16,8 +17,6 @@
 	* [Greedy Algorithm](#greedy-algorithm)
 	* [Map Algorithm](#map-algorithm)
 		* [MaxFLow Problem](#maxflow-problem)
-
-------
 
 # Algorithm Basic Notes
 

@@ -1,3 +1,18 @@
+ [Python Basic Notes](#python-basic-notes)
+	* [控制语句](#控制语句)
+	* [表达式](#表达式)
+		* [lambda表示匿名函数（匿名函数体只能是表达式）](#lambda表示匿名函数匿名函数体只能是表达式)
+	* [面试题](#面试题)
+		* [Basic](#basic)
+			* [Python是如何进行内存管理的？](#python是如何进行内存管理的)
+			* [什么是lambda函数？它有什么好处？](#什么是lambda函数它有什么好处)
+			* [Python里面如何实现tuple和list的转换？](#python里面如何实现tuple和list的转换)
+			* [请写出一段Python代码实现删除一个list里面的重复元素。](#请写出一段python代码实现删除一个list里面的重复元素)
+			* [Python里面如何拷贝一个对象？（赋值，浅拷贝，深拷贝的区别）](#python里面如何拷贝一个对象赋值浅拷贝深拷贝的区别)
+			* [介绍一下except的用法和作用？](#介绍一下except的用法和作用)
+			* [Python里面match()和search()的区别？](#python里面match和search的区别)
+			* [用Python匹配HTML tag的时候，<.*>和<.*？>有什么区别？](#用python匹配html-tag的时候和有什么区别)
+
 # Python Basic Notes
 
 ## 控制语句

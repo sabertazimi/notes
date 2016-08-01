@@ -1,3 +1,17 @@
+* [Awesome Notes](#awesome-notes)
+	* [Directories](#directories)
+	* [Sample](#sample)
+		* [C](#c)
+		* [Git](#git)
+			* [Commit Message](#commit-message)
+			* [Pretty Logger](#pretty-logger)
+		* [JavaScript](#javascript)
+			* [Type Check](#type-check)
+			* [Module Best Practice](#module-best-practice)
+	* [TODO List](#todo-list)
+	* [License](#license)
+	* [Contact](#contact)
+
 # Awesome Notes
 
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)

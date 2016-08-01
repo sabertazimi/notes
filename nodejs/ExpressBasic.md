@@ -1,3 +1,15 @@
+
+* [Express Basic Notes](#express-basic-notes)
+	* [Middleware Function](#middleware-function)
+		* [ Principle: `next()/next(err)` OR res.end()/res.send()](#-principle-nextnexterr-or-resendressend)
+		* [Template](#template)
+		* [Use](#use)
+		* [Useful Middleware](#useful-middleware)
+	* [Http](#http)
+		* [Res](#res)
+			* [res.local](#reslocal)
+		* [Req](#req)
+
 # Express Basic Notes
 
 ## Middleware Function

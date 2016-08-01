@@ -1,3 +1,8 @@
+
+* [Computer](#computer)
+* [Keyboard](#keyboard)
+* [Mouse](#mouse)
+
 ## Computer
 
 -   MacBook Pro
