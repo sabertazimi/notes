@@ -160,6 +160,6 @@ MIT License Copyright (c) 2016 [sabertazimi](https://github.com/sabertazimi)
 
 ## Contact
 
--   [![Email](https://img.shields.io/badge/contact-mailto-brightgreen.svg?style=flat-square)](sabertazimi@gmail.com)
+-   Mail To: [@sabertazimi](sabertazimi@gmail.com)
 -   [![GitHub](https://img.shields.io/badge/contact-github-000000.svg?style=flat-square)](https://github.com/sabertazimi)
 -   [![Twitter](https://img.shields.io/badge/contact-twitter-blue.svg?style=flat-square)](https://twitter.com/sabertazimi)
