@@ -12,7 +12,7 @@
 
 ![Performance](img/SortingPerformance.png)
 
-## Search Algorithm
+## Tree Algorithm
 
 ### Binary Search Tree
 Hibbard Deletion
@@ -49,6 +49,8 @@ Hibbard Deletion
 
 e.g 左子树：左下方   右子树：右上方
 
+## Search Algorithm
+
 ### Fisrt Search
 - DFS(深度优先)：栈实现
 - BFS(广度优先)：队列实现
@@ -61,46 +63,42 @@ e.g 左子树：左下方   右子树：右上方
 **处理方法：可将环路元素(如强联通分支)视作单一元素，忽视其内部结构**
 ```java
 a = b+1;b = c+1;c = a+1;
-//a extends b;b extends c;c extends a; 
+//a extends b;b extends c;c extends a;
 ```
 
+## Dynamic Programming
+
+-   最优解结构特征: 一个选择 + 子问题的最优解 - 所有(可**重复求解**)子问题的最优解可**独立求解**(不互相影响)
+-   递归定义最优解: 列出递归表达式
+-   自底向上求解最优解
+-   构造最优解(额外信息数组)
+
+### 子问题
+
+-   子问题可映射为有向图, 并对其进行拓扑排序: 共有 O(n) 个子问题, 每个子问题最多 O(n) 种选择, 则算法时间复杂度为 O(n^2).其对应子问题图有 n 个顶点, 每个顶点最多有 n-1 条边.
+-   递归生成可以重复求解的子问题,而不是不断生成新的子问题
+
+### 范例
+
+-   切割钢条问题: max{p[i], r[n-i]}
+-   矩阵相乘链问题
+-   最大公共子序列问题: r[i, j] = max{r[i, j-1], r[i-1, j]}
+-   无权最短路径: path[i, j] = min{path[i, r], [r, j]}
+
+## Greedy Algorithm
+
+-   最优解结构特征: 一个选择 + 子问题的最优解 - 所有(可**重复求解**)子问题的最优解可**独立求解**(不互相影响)
+-   递归定义最优解: 列出递归表达式
+-   自底向上求解最优解: 每次不进行多次选择, 只进行一次 **贪心选择**
+-   构造最优解(额外信息数组)
 
 ## Map Algorithm
 
 ### MaxFLow Problem
+
 ![Ford Fulkerson Algorithm](img/FordFulkersonAlgorithm.png)
 
-1. MaxFlow-Mincut Theorem 最大流最小割定理
-2. Radix-Sorts 基数排序(可用于混乱shuffle数组)
-  - 从个位到高位放入桶
-  - 从高位到个位放入桶
-
-## Useful Java Functions 
-
-### String
-
--   new String()
--   new StringBuilder(string)
--   append(string)
--   subString(start, end)
--   charAt(index)
--   indexOf(char)
--   length()
--   toString()
--   toCharArray()
-
-```java
-String s1 = new String();
-String s2 = "billryan";
-int s2Len = s2.length();
-s2.substring(4, 8); // return "ryan"
-StringBuilder s3 = new StringBuilder(s2.substring(4, 8));
-s3.append("bill");
-String s2New = s3.toString(); // return "ryanbill"
-// convert String to char array
-char[] s2Char = s2.toCharArray();
-// char at index 4
-char ch = s2.charAt(4); // return 'r'
-// find index at first
-int index = s2.indexOf('r'); // return 4. if not found, return -1
-```
+-   MaxFlow-Mincut Theorem 最大流最小割定理
+-   Radix-Sorts 基数排序(可用于混乱shuffle数组)
+    -   从个位到高位放入桶
+    -   从高位到个位放入桶
