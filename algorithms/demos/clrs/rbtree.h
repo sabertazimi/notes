@@ -1,3 +1,6 @@
+#ifndef CLRS_RBTREE_H
+#define CLRS_RBTREE_H
+
 #include <stack>
 
 using namespace std;
@@ -554,3 +557,5 @@ void RedBlackTree<T>::inorder_tree_walk()const {
         }
     }
 }
+
+#endif
