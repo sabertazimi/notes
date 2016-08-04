@@ -1,5 +1,5 @@
+
 * [Awesome Notes](#awesome-notes)
-	* [Directories](#directories)
 	* [Sample](#sample)
 		* [C](#c)
 		* [Git](#git)
@@ -7,7 +7,7 @@
 			* [Pretty Logger](#pretty-logger)
 		* [JavaScript](#javascript)
 			* [Type Check](#type-check)
-			* [Module Best Practice](#module-best-practice)
+			* [ES5 Module Best Practice](#es5-module-best-practice)
 	* [TODO List](#todo-list)
 	* [License](#license)
 	* [Contact](#contact)
@@ -20,32 +20,6 @@
 ![Progress](http://progressed.io/bar/24?title=learning)
 
 Personal Learning Notes - **Awesome Notes** for Myself
-
-## Directories
-
-- [Algorithms](https://github.com/sabertazimi/Awesome-Notes/tree/master/algorithms)
-  - [LeetCode](https://github.com/sabertazimi/Awesome-Notes/tree/master/algorithms/LeetCode-OJ)
-- [Android](https://github.com/sabertazimi/Awesome-Notes/tree/master/android)
-- [Assembly](https://github.com/sabertazimi/Awesome-Notes/tree/master/assembly)
-- [C](https://github.com/sabertazimi/Awesome-Notes/tree/master/c)
-- [Code Guide](https://github.com/sabertazimi/Awesome-Notes/tree/master/codeGuide)
-- [Computer Science](https://github.com/sabertazimi/Awesome-Notes/tree/master/computerScience)
-- [DataBase](https://github.com/sabertazimi/Awesome-Notes/tree/master/dataBase)
-- [Git](https://github.com/sabertazimi/Awesome-Notes/tree/master/git)
-- [Haskell](https://github.com/sabertazimi/Awesome-Notes/tree/master/haskell)
-- [Java](https://github.com/sabertazimi/Awesome-Notes/tree/master/java)
-- [Linux](https://github.com/sabertazimi/Awesome-Notes/tree/master/linux)
-  - [Set Up](https://github.com/sabertazimi/Awesome-Notes/tree/master/linux/setUp)
-  - [Vim](https://github.com/sabertazimi/Awesome-Notes/tree/master/linux/vim)
-- [Matlab](https://github.com/sabertazimi/Awesome-Notes/tree/master/matlab)
-- [Nodejs](https://github.com/sabertazimi/Awesome-Notes/tree/master/nodejs)
-- [Python](https://github.com/sabertazimi/Awesome-Notes/tree/master/python)
-- [SoftwareTesting](https://github.com/sabertazimi/Awesome-Notes/tree/master/softwareTesting)
-- [Web](https://github.com/sabertazimi/Awesome-Notes/tree/master/web)
-  - [HTML](https://github.com/sabertazimi/Awesome-Notes/tree/master/Web/HTML)
-  - [CSS](https://github.com/sabertazimi/Awesome-Notes/tree/master/Web/CSS)
-  - [JavaScript](https://github.com/sabertazimi/Awesome-Notes/tree/master/Web/JavaScript)
-  - [Frameworks](https://github.com/sabertazimi/Awesome-Notes/tree/master/Web/Frameworks)
 
 ## Sample
 
@@ -107,7 +81,9 @@ function typeOf(o) {
 }
 ```
 
-#### Module Best Practice
+#### ES5 Module Best Practice
+
+It's time to embrace ES Next/Harmony.
 
 ```js
 // 命名空间模式
@@ -152,7 +128,10 @@ return {
 
 ## TODO List
 
-- [ ] Daily Issue
+- [ ] Daily Issues
+- [ ] Computer Science / Algorithms
+- [ ] Computer Science / Compilers
+- [ ] Computer Science / Operating Systems
 
 ## License
 
