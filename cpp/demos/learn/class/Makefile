@@ -10,6 +10,9 @@
 #          2007/06/26 (version 0.4)
 #          2008/04/05 (version 0.5)
 #          2016/06/29 (version 1.0)
+#          2016/08/04 (version 1.1)
+#
+# version1.1: add c++11 compile flag
 #
 # Description:
 # ------------
@@ -65,7 +68,7 @@ MY_CFLAGS =
 MY_LIBS   =
 
 # The pre-processor options used by the cpp (man cpp for more).
-CPPFLAGS  = -Wall
+CPPFLAGS  = -Wall -std=c++11
 
 # The options used in linking as well as in any direct use of ld.
 LDFLAGS   =
