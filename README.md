@@ -30,6 +30,195 @@
 
 Personal Learning Notes - **Awesome Notes** for Myself
 
+```sh
+├── computerScience
+│   ├── algorithms
+│   │   ├── algorithmsBasicNotes.md
+│   │   ├── demos
+│   │   │   ├── basic
+│   │   │   │   └── matrix_snake_filled.cc
+│   │   │   ├── clrs
+│   │   │   │   ├── btree.h
+│   │   │   │   ├── disjoint_sets.h
+│   │   │   │   ├── fibonacci_heap.h
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── rbtree.h
+│   │   │   │   └── Sort.h
+│   │   │   ├── leetCode
+│   │   │   │   ├── 001-TwoSum.c
+│   │   │   │   ├── 002-AddTwoNumbers.java
+│   │   │   │   ├── 003-LongestSubstringWithoutRepeatingCharacters.java
+│   │   │   │   ├── 004-MedianofTwoSortedArrays.java
+│   │   │   │   ├── 005-LongestPalindromicSubstring.java
+│   │   │   │   ├── 015-3Sum.java
+│   │   │   │   ├── 016-3SumClosest.java
+│   │   │   │   ├── 018-4Sum.java
+│   │   │   │   ├── 292-NimGame.c
+│   │   │   │   └── main.cpp
+│   │   │   └── mooc
+│   │   │       └── train.cc
+│   │   └── images
+│   │       ├── FordFulkersonAlgorithm.png
+│   │       ├── SearchPerformance.jpg
+│   │       └── SortingPerformance.png
+│   ├── compilers
+│   │   └── compilersBasicNotes.md
+│   ├── dataBase
+│   │   └── mongoDBBasicNotes.md
+│   ├── operatingSystems
+│   │   ├── CSAPP.md
+│   │   ├── demos
+│   │   │   └── elf.c
+│   │   ├── img
+│   │   │   └── stack_frame.png
+│   │   └── operatingSystemsBasicNotes.md
+│   ├── searchEngine
+│   │   └── searchEngineBasicNotes.md
+│   ├── socialNetworkComputingBasicNotes.md
+│   └── softwareTesting
+│       └── softwareTestingBasicNotes.md
+├── device.md
+├── feeder.opml
+├── language
+│   ├── assembly
+│   │   ├── AssemblyBasic.md
+│   │   └── IntelCodeTable.pdf
+│   ├── c
+│   │   ├── cBaiscNotes.md
+│   │   ├── demos
+│   │   │   ├── machine_code.c
+│   │   │   └── Makefile
+│   │   ├── img
+│   │   │   └── ctype.h.jpg
+│   │   ├── namingConventions.md
+│   │   ├── standardLibrary.md
+│   │   └── tools
+│   │       ├── awesomeTools.md
+│   │       └── gdbTutorial.md
+│   ├── cpp
+│   │   ├── cppBasicNotes.md
+│   │   └── demos
+│   │       └── learn
+│   │           └── class
+│   │               ├── main.cc
+│   │               ├── Makefile
+│   │               ├── String.cc
+│   │               └── String.h
+│   ├── english
+│   │   └── vocabulary.md
+│   ├── haskell
+│   │   ├── codeWarsOJ
+│   │   │   ├── RotateForMax.hs
+│   │   │   └── VampireNumbers.hs
+│   │   ├── haskellBasicNotes.md
+│   │   └── img
+│   │       └── foldl.png
+│   ├── java
+│   │   ├── designPatternsNotes.md
+│   │   ├── img
+│   │   │   └── DesignPatterns.png
+│   │   ├── javaBasicNotes.md
+│   │   └── javaNamingConventions.md
+│   └── python
+│       ├── pythonBasicNotes.md
+│       └── sklearn_test.py
+├── LICENSE
+├── programming
+│   ├── android
+│   │   └── androidBasicNotes.md
+│   ├── codeGuide
+│   │   ├── bugGuideBasicNotes.md
+│   │   └── codeReviewBasicNotes.md
+│   ├── functionalProgramming
+│   │   └── functionalProgrammingBasicNotes.md
+│   ├── git
+│   │   ├── gitBasicNotes.md
+│   │   └── img
+│   │       └── 6_free_software_licenses.png
+│   ├── linux
+│   │   ├── irc.md
+│   │   ├── linuxBasicNotes.md
+│   │   ├── makefile
+│   │   │   └── makefileBasicNotes.md
+│   │   ├── setUp
+│   │   │   ├── setUp.md
+│   │   │   ├── template.ini
+│   │   │   ├── ubuntu_16.04.ini
+│   │   │   └── ubuntu_setup.sh
+│   │   ├── shellscript
+│   │   │   ├── echo_permission_denied.sh
+│   │   │   ├── line_counter.sh
+│   │   │   ├── manipulate_batch_files.sh
+│   │   │   └── read_passward_for_sudo_without_echo.sh
+│   │   └── vim
+│   │       ├── vimBasicNotes.md
+│   │       └── vimrc
+│   └── web
+│       ├── css
+│       │   ├── bootstrapBasicNotes.md
+│       │   ├── cssBasicNotes.md
+│       │   ├── demos
+│       │   │   ├── codeCademyProj
+│       │   │   │   ├── BroadWay
+│       │   │   │   │   ├── bg.jpg
+│       │   │   │   │   ├── index.html
+│       │   │   │   │   └── style.css
+│       │   │   │   ├── InnovationCloud
+│       │   │   │   │   ├── bg.jpg
+│       │   │   │   │   ├── index.html
+│       │   │   │   │   ├── jumbotron_bg.jpg
+│       │   │   │   │   └── style.css
+│       │   │   │   └── Move
+│       │   │   │       ├── index.html
+│       │   │   │       └── style.css
+│       │   │   ├── grid.css
+│       │   │   ├── normalize.css
+│       │   │   └── reset.css
+│       │   └── images
+│       │       └── css3-selector-lest.png
+│       ├── frameworks
+│       │   ├── jQueryBasicNotes.md
+│       │   └── meteorBasicNotes.md
+│       ├── html
+│       │   ├── demos
+│       │   │   └── canvas-cheat-sheet.html
+│       │   └── htmlBasicNotes.md
+│       ├── javascript
+│       │   ├── demos
+│       │   │   ├── awesomeAnimation.js
+│       │   │   ├── awesomeRibbon.js
+│       │   │   ├── awesomeUI.js
+│       │   │   ├── awesomeUtils.js
+│       │   │   └── designPatterns
+│       │   │       ├── addEvent.js
+│       │   │       ├── promise.js
+│       │   │       ├── prototype.js
+│       │   │       ├── test.js
+│       │   │       └── utils.js
+│       │   ├── images
+│       │   │   └── prototype.png
+│       │   ├── javascriptAdvancedNotes.md
+│       │   ├── javascriptBasicNotes.md
+│       │   └── javascriptPatternsNotes.md
+│       ├── nodejs
+│       │   ├── demos
+│       │   │   ├── dns.js
+│       │   │   └── ls.js
+│       │   ├── expressBasicNotes.md
+│       │   └── nodejsBasicNotes.md
+│       ├── reactjs
+│       │   ├── reactjsBasicNotes.md
+│       │   ├── reactRouterBasicNotes.md
+│       │   ├── reduxBasicNotes.md
+│       │   └── webpackBasicNotes.md
+│       └── security
+│           └── securityBasicNotes.md
+├── README.md
+└── starRepos.md
+
+62 directories, 122 files
+```
+
 ## Sample
 
 ### C
@@ -151,4 +340,3 @@ MIT License Copyright (c) 2016 [sabertazimi](https://github.com/sabertazimi)
 -   [![Email](https://img.shields.io/badge/mailto-sabertazimi-brightgreen.svg?style=flat-square)](mailto:sabertazimi@gmail.com)
 -   [![GitHub](https://img.shields.io/badge/contact-github-000000.svg?style=flat-square)](https://github.com/sabertazimi)
 -   [![Twitter](https://img.shields.io/badge/contact-twitter-blue.svg?style=flat-square)](https://twitter.com/sabertazimi)
-
