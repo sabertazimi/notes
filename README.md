@@ -131,25 +131,26 @@ Personal Learning Notes - **Awesome Notes** for Myself
 │   │   └── codeReviewBasicNotes.md
 │   ├── functionalProgramming
 │   │   └── functionalProgrammingBasicNotes.md
-│   ├── git
-│   │   ├── gitBasicNotes.md
-│   │   └── img
-│   │       └── 6_free_software_licenses.png
 │   ├── linux
 │   │   ├── irc.md
 │   │   ├── linuxBasicNotes.md
-│   │   ├── makefile
-│   │   │   └── makefileBasicNotes.md
 │   │   ├── setUp
 │   │   │   ├── setUp.md
 │   │   │   ├── template.ini
 │   │   │   ├── ubuntu_16.04.ini
 │   │   │   └── ubuntu_setup.sh
-│   │   ├── shellscript
-│   │   │   ├── echo_permission_denied.sh
-│   │   │   ├── line_counter.sh
-│   │   │   ├── manipulate_batch_files.sh
-│   │   │   └── read_passward_for_sudo_without_echo.sh
+│   │   └── shellscript
+│   │       ├── echo_permission_denied.sh
+│   │       ├── line_counter.sh
+│   │       ├── manipulate_batch_files.sh
+│   │       └── read_passward_for_sudo_without_echo.sh
+│   ├── tools
+│   │   ├── git
+│   │   │   ├── gitBasicNotes.md
+│   │   │   └── img
+│   │   │       └── 6_free_software_licenses.png
+│   │   ├── makefile
+│   │   │   └── makefileBasicNotes.md
 │   │   └── vim
 │   │       ├── vimBasicNotes.md
 │   │       └── vimrc
@@ -216,7 +217,7 @@ Personal Learning Notes - **Awesome Notes** for Myself
 ├── README.md
 └── starRepos.md
 
-62 directories, 122 files
+63 directories, 122 files
 ```
 
 ## Sample
