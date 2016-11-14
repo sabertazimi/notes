@@ -1,6 +1,9 @@
+# editor/ide files
 .vscode/
 .idea/
 CMakeLists.txt
+
+# git files
 large.files
 
 # Prerequisites
