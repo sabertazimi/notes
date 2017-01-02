@@ -16,6 +16,7 @@
 -   HHKB
 -   Filco  FKBN87M/EB2(87圣手2代)
 -   Cherry G80 3000
+-   Poker
 
 ## Mouse
 
