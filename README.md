@@ -1,17 +1,3 @@
-
-* [Awesome Notes](#awesome-notes)
-	* [Sample](#sample)
-		* [C](#c)
-		* [Git](#git)
-			* [Commit Message](#commit-message)
-			* [Pretty Logger](#pretty-logger)
-		* [JavaScript](#javascript)
-			* [Type Check](#type-check)
-			* [ES5 Module Best Practice](#es5-module-best-practice)
-	* [TODO List](#todo-list)
-	* [License](#license)
-	* [Contact](#contact)
-
 # Awesome Notes
 
 ```sh
