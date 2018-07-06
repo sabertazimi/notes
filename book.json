@@ -1,0 +1,43 @@
+{
+    "links": {
+        "sidebar": {
+            "Awesome Notes": "https:github.com/sabertazimi/awesome-notes"
+        }
+    },
+    "plugins": [
+        "-lunr",
+        "-search",
+        "search-plus",
+        "anchors",
+        "theme-comscore",
+        "tbfed-pagefooter",
+        "prism",
+        "-highlight",
+        "-sharing",
+        "alerts",
+        "github-buttons"
+    ],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+            "copyright": "&copy <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"https://github.com/sabertazimi/awesome-notes\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">sabertazimi</a> · 遵循 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">知识共享 署名-非商业性使用 4.0 国际 许可协议</a>",
+            "modify_label": "最近更新：",
+            "modify_format": "YYYY-MM-DD HH:mm"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "sabertazimi",
+                    "repo": "awesome-notes",
+                    "type": "star",
+                    "size": "small",
+                    "count": true
+                }
+            ]
+        }
+    }
+}
