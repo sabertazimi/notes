@@ -20,7 +20,7 @@ install:
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
-  - book sm -i ./node_modules
+  - book sm
   - gitbook build . ./build
 
 # 分支白名单

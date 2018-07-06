@@ -1,21 +1,23 @@
 {
     "links": {
         "sidebar": {
-            "Awesome Notes": "https:github.com/sabertazimi/awesome-notes"
+            "Awesome Notes": "https://github.com/sabertazimi/awesome-notes"
         }
     },
     "plugins": [
         "-lunr",
         "-search",
         "search-plus",
+        "splitter",
         "anchors",
         "theme-comscore",
         "tbfed-pagefooter",
         "prism",
         "-highlight",
-        "-sharing",
         "alerts",
-        "github-buttons"
+        "github-buttons",
+        "edit-link",
+        "disqus"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
@@ -29,15 +31,31 @@
             ]
         },
         "github-buttons": {
-            "buttons": [
-                {
-                    "user": "sabertazimi",
-                    "repo": "awesome-notes",
-                    "type": "star",
-                    "size": "small",
-                    "count": true
-                }
-            ]
+            "buttons": [{
+                "user": "sabertazimi",
+                "repo": "awesome-notes",
+                "type": "star",
+                "size": "small",
+                "count": true
+            }]
+        },
+        "edit-link": {
+            "base": "https://github.com/sabertazimi/awesome-notes/edit/master",
+            "label": "Edit This Page"
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": true,
+            "weibo": true
+        },
+        "disqus": {
+            "shortName": "gitbook-8"
         }
-    }
+    },
+    "ignores": [
+        ".*",
+        "_book",
+        "gitbook",
+        "node_modules"
+    ]
 }
