@@ -10,11 +10,14 @@
         "search-plus",
         "splitter",
         "anchors",
+        "anchor-navigation-ex",
+        "copy-code-button",
+        "expandable-chapters",
+        "theme-darkblue",
         "theme-comscore",
         "tbfed-pagefooter",
         "prism",
         "-highlight",
-        "alerts",
         "github-buttons",
         "edit-link",
         "disqus"
@@ -50,6 +53,9 @@
         },
         "disqus": {
             "shortName": "gitbook-8"
+        },
+        "anchor-navigation-ex": {
+            "multipleH1": false
         }
     },
     "ignores": [
