@@ -8,7 +8,6 @@
         "-lunr",
         "-search",
         "search-plus",
-	"summary",
         "anchors",
         "theme-comscore",
         "tbfed-pagefooter",

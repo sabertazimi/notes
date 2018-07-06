@@ -13,13 +13,14 @@ before_install:
 
 # 依赖安装
 install:
-  - npm install gitbook-cli -g
+  - npm install -g gitbook-cli gitbook-summary
   # 安装 gitbook 插件
   - gitbook install
 
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
+  - book sm -i ./node_modules
   - gitbook build . ./build
 
 # 分支白名单
