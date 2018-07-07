@@ -62,6 +62,7 @@
     },
     "ignores": [
         ".*",
+	"build",
         "_book",
         "gitbook",
         "node_modules"
