@@ -38,3 +38,6 @@ large.files
 *.exe
 *.out
 *.app
+
+build/
+node_modules/
