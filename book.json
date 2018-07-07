@@ -22,7 +22,8 @@
         "-highlight",
         "github-buttons",
         "edit-link",
-        "disqus"
+        "disqus",
+        "introsum"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
@@ -62,7 +63,7 @@
     },
     "ignores": [
         ".*",
-	"build",
+        "build",
         "_book",
         "gitbook",
         "node_modules"
