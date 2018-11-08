@@ -1,11 +1,11 @@
 # Awesome Notes
 
 ```bash
-                                                               _
-                         __ ___      _____  ___  ___  _ __ ___   ___   _ __   ___ | |_ ___  ___
-                        / _` \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ | '_ \ / _ \| __/ _ \/ __|
-                       | (_| |\ V  V /  __/\__ \ (_) | | | | | |  __/ | | | | (_) | ||  __/\__ \
-                        \__,_| \_/\_/ \___||___/\___/|_| |_| |_|\___| |_| |_|\___/ \__\___||___/
+                                   _
+  _      _____  ___  ___  _ __ ___   ___   _ __   ___ | |_ ___  ___
+   \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ | '_ \ / _ \| __/ _ \/ __|
+  \ V  V /  __/\__ \ (_) | | | | | |  __/ | | | | (_) | ||  __/\__ \
+   \_/\_/ \___||___/\___/|_| |_| |_|\___| |_| |_|\___/ \__\___||___/
 ```
 
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
@@ -23,7 +23,13 @@ Personal Learning Notes - **Awesome Notes** for Myself
 Implement Generic Variable with Pointer
 
 ```c
-void *lsearch(void *key, void *base, int n, int elemSize, int (*cmpfn)(void *, void *)) {
+void *lsearch(
+  void *key,
+  void *base,
+  int n,
+  int elemSize,
+  int (*cmpfn)(void *, void *)
+) {
     for (int i = 0;i < n;i++) {
         void * elemAddr = (char *)base + i * elemSize;
         if (cmpfn(key, elemAddr) == 0) {

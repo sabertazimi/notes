@@ -61,8 +61,10 @@
 - Curl GitHub API
 
 ```bash
-curl 'https://api.github.com/users/sabertazimi/starred?direction=asc&page=1&per_page=10000' | grep -E 'full_name|svn_url' | wc -l
-curl 'https://api.github.com/users/sabertazimi/starred?direction=asc&page=1&per_page=10000' | grep -E 'full_name|svn_url' >> StarringRepos.md
+curl 'https://api.github.com/users/sabertazimi/starred?direction=asc&page=1&per_page=10000'
+\ | grep -E 'full_name|svn_url' | wc -l
+curl 'https://api.github.com/users/sabertazimi/starred?direction=asc&page=1&per_page=10000'
+\ | grep -E 'full_name|svn_url' >> StarringRepos.md
 ```
 
 - Tidy Up Data
