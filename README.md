@@ -1,12 +1,11 @@
 # Awesome Notes
 
 ```bash
-                                                               _            
-                         __ ___      _____  ___  ___  _ __ ___   ___   _ __   ___ | |_ ___  ___ 
+                                                               _
+                         __ ___      _____  ___  ___  _ __ ___   ___   _ __   ___ | |_ ___  ___
                         / _` \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ | '_ \ / _ \| __/ _ \/ __|
                        | (_| |\ V  V /  __/\__ \ (_) | | | | | |  __/ | | | | (_) | ||  __/\__ \
                         \__,_| \_/\_/ \___||___/\___/|_| |_| |_|\___| |_| |_|\___/ \__\___||___/
-                                                                            
 ```
 
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
@@ -51,7 +50,7 @@ firstline - <type>(<scope>): <subject>
 #### Pretty Logger
 
 ```bash
-$ git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks path_name
+git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks path_name
 ```
 
 ### JavaScript
@@ -132,7 +131,6 @@ MIT License Copyright (c) 2017 [sabertazimi](https://github.com/sabertazimi)
 
 ## Contact
 
--   [![Email](https://img.shields.io/badge/mailto-sabertazimi-brightgreen.svg?style=flat-square)](mailto:sabertazimi@gmail.com)
--   [![GitHub](https://img.shields.io/badge/contact-github-000000.svg?style=flat-square)](https://github.com/sabertazimi)
--   [![Twitter](https://img.shields.io/badge/contact-twitter-blue.svg?style=flat-square)](https://twitter.com/sabertazimi)
-
+- [![Email](https://img.shields.io/badge/mailto-sabertazimi-brightgreen.svg?style=flat-square)](mailto:sabertazimi@gmail.com)
+- [![GitHub](https://img.shields.io/badge/contact-github-000000.svg?style=flat-square)](https://github.com/sabertazimi)
+- [![Twitter](https://img.shields.io/badge/contact-twitter-blue.svg?style=flat-square)](https://twitter.com/sabertazimi)
