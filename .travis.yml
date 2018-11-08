@@ -21,7 +21,7 @@ install:
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
-  # - markdownlint .
+  - markdownlint . -i node_modules
   - book sm
   - cat SUMMARY.md
   - gitbook build . ./build
