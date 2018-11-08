@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "8"
+  - "stable"
 
 # 缓存依赖
 cache:
@@ -14,12 +14,14 @@ before_install:
 # 依赖安装
 install:
   - npm install -g gitbook-cli gitbook-summary
+  - npm install -g markdownlint-cli
   # 安装 gitbook 插件
   - gitbook install
 
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
+  # - markdownlint .
   - book sm
   - cat SUMMARY.md
   - gitbook build . ./build
