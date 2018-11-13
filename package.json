@@ -1,0 +1,28 @@
+{
+  "name": "awesome-notes",
+  "version": "1.0.0",
+  "description": "Personal Learning Notes (TIL)",
+  "main": "README.md",
+  "scripts": {
+    "lint": "markdownlint . -i node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
+  },
+  "keywords": [
+    "CS",
+    "notes",
+    "gitbook",
+    "TIL"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/awesome-notes/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
+  "devDependencies": {
+    "markdownlint-cli": "^0.13.0"
+  }
+}

@@ -133,7 +133,7 @@ return {
 
 ## License
 
-MIT License Copyright (c) 2017 [sabertazimi](https://github.com/sabertazimi)
+MIT License Copyright (c) [sabertazimi](https://github.com/sabertazimi)
 
 ## Contact
 
