@@ -13,8 +13,7 @@ before_install:
 
 # 依赖安装
 install:
-  - npm install -g gitbook-cli gitbook-summary
-  - npm install -g markdownlint-cli
+  - npm install -g gitbook-cli gitbook-summary markdownlint-cli
   # 安装 gitbook 插件
   - gitbook install
 
