@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - 11
 
 # 缓存依赖
 cache:
@@ -13,9 +13,10 @@ before_install:
 
 # 依赖安装
 install:
-  - npm install -g gitbook-cli gitbook-summary markdownlint-cli
+  - npm install
   # 安装 gitbook 插件
-  # - gitbook install
+  # - npm install graceful-fs@latest --save
+  - gitbook install
 
 # 构建脚本
 script:

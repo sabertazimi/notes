@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
   },
-  "homepage": "https://github.com/sabertazimi/awesome-notes#readme"
+  "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gitbook-summary": "^1.2.2",
+    "markdownlint-cli": "^0.23.2"
+  }
 }
