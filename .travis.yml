@@ -15,7 +15,7 @@ before_install:
 install:
   - npm install -g gitbook-cli gitbook-summary markdownlint-cli
   # 安装 gitbook 插件
-  - gitbook install
+  # - gitbook install
 
 # 构建脚本
 script:
