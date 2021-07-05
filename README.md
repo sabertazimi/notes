@@ -13,6 +13,11 @@
 [![MIT](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/Awesome-Notes/master/LICENSE)
 [![Continuous Integration](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml/badge.svg)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
 
+[GitHub Version](https://sabertazimi.github.io/awesome-notes)
+built on `GitBook` IO v1, and
+[GitBook Version](https://notes.tazimi.dev)
+built on `GitBook` IO v2.
+
 Personal Learning Notes - **Awesome Notes** for Myself
 
 ## Sample
