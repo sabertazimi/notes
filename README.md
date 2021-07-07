@@ -12,7 +12,7 @@
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/awesome-notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/awesome-notes/master/LICENSE)
 
 [![Code Lines](https://img.shields.io/tokei/lines/github/sabertazimi/awesome-notes?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/awesome-notes)
-[![Continuous Integration](https://img.shields.io/github/checks-status/sabertazimi/awesome-notes/master?label=Continuous%20Integration&style=for-the-badge&logo=GitHub)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
+[![Continuous Integration](https://img.shields.io/github/workflow/status/sabertazimi/awesome-notes/Continuous%20Integration/master?style=for-the-badge&logo=github)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
 
 Personal Learning Notes - **Awesome Notes** for Myself
 
