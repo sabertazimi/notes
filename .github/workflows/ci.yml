@@ -55,7 +55,6 @@ jobs:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
     #     issue_assignees: sabertazimi
     #     issue_labels: vulnerability,test
-    #     dedupe_issues: true
   
   deploy:
     runs-on: ubuntu-latest

@@ -33,11 +33,11 @@ void *lsearch(
   void *base,
   int n,
   int elemSize,
-  int (*cmpfn)(void *, void *)
+  int (*cmpFn)(void *, void *)
 ) {
     for (int i = 0;i < n;i++) {
         void * elemAddr = (char *)base + i * elemSize;
-        if (cmpfn(key, elemAddr) == 0) {
+        if (cmpFn(key, elemAddr) == 0) {
             return elemAddr;
         }
     }
@@ -51,10 +51,10 @@ void *lsearch(
 #### Commit Message
 
 ```html
-firstline - <type>(<scope>): <subject>
-  (emptyline)
+firstLine - <type>(<scope>): <subject>
+  (emptyLine)
 <body>
-  (emptyline)
+  (emptyLine)
 <footer>
 ```
 
@@ -93,15 +93,15 @@ It's time to embrace ES Next/Harmony.
 
 ```js
 // 命名空间模式
-MYAPP.namespace('MYAPP.utilities.array');
+APP.namespace('APP.utilities.array');
 
 //形参: 导入全局变量
-MYAPP.utilities.array = (function (app, global) {
+APP.utilities.array = (function (app, global) {
 // start of var declare
 
 // 依赖模式
-var uobj = MYAPP.utilities.object,
-    ulang = MYAPP.utilities.lang,
+var utilObj = APP.utilities.object,
+    utilLang = APP.utilities.lang,
 // 私有属性
     arrStr = "[object Array]",
     toStr = Object.prototype.toString;
@@ -129,7 +129,7 @@ return {
     indexOf: inArray
 };
 
-}(MYAPP, this));
+}(APP, this));
 ```
 
 ## License
