@@ -50,7 +50,7 @@ void *lsearch(
 
 #### Commit Message
 
-```html
+```md
 firstLine - <type>(<scope>): <subject>
   (emptyLine)
 <body>
