@@ -5,3 +5,4 @@
 .npmignore
 .prettierrc
 LICENSE
+*.md
