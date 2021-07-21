@@ -1,3 +1,4 @@
+*.ini
 *.json
 *.yml
 *.config.js
