@@ -40,4 +40,6 @@ large.files
 *.app
 
 build/
+public/
 node_modules/
+

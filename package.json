@@ -5,7 +5,7 @@
   "main": "README.md",
   "scripts": {
     "lint": "markdownlint . -i node_modules",
-    "build": " book sm && cat SUMMARY.md && gitbook build . ./build"
+    "build": "gitbook install && book sm && cat SUMMARY.md && gitbook build . ./build"
   },
   "repository": {
     "type": "git",
