@@ -26,6 +26,6 @@
   "dependencies": {
     "gitbook-cli": "^2.3.2",
     "gitbook-summary": "^1.2.2",
-    "markdownlint-cli": "^0.23.2"
+    "markdownlint-cli": "^0.27.1"
   }
 }
