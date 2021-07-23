@@ -4,8 +4,13 @@
   "description": "Personal Learning Notes (TIL)",
   "main": "README.md",
   "scripts": {
-    "lint": "markdownlint . -i node_modules",
-    "build": "gitbook install && book sm && cat SUMMARY.md && gitbook build . ./build"
+    "dev": "npm run prepare && vitepress dev notes",
+    "build": "npm run prepare && vitepress build notes",
+    "serve": "npm run prepare && vitepress serve notes",
+    "lint": "markdownlint -i node_modules notes",
+    "prepare": "cp -fr README.md notes/index.md",
+    "summary": "book sm -i node_modules -r notes -o SUMMARY.md",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -13,8 +18,10 @@
   },
   "keywords": [
     "CS",
-    "notes",
-    "gitbook",
+    "Notes",
+    "GitBook",
+    "VitePress",
+    "Web",
     "TIL"
   ],
   "author": "sabertazimi",
@@ -23,9 +30,9 @@
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
-  "dependencies": {
-    "gitbook-cli": "^2.3.2",
+  "devDependencies": {
     "gitbook-summary": "^1.2.2",
-    "markdownlint-cli": "^0.28.1"
+    "markdownlint-cli": "^0.28.1",
+    "vitepress": "^0.15.6"
   }
 }
