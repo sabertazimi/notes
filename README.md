@@ -17,120 +17,100 @@
 Personal Learning Notes - **Awesome Notes** for Myself
 
 > [GitHub Version](https://sabertazimi.github.io/awesome-notes)
-built on `GitBook.IO` v1.
+> built on `GitBook.IO` v1.
 > [GitBook Version](https://notes.tazimi.dev)
-built on `GitBook.IO` v2.
+> built on `GitBook.IO` v2.
 
-## Sample
+## Notes List
 
-### C
-
-Implement Generic Variable with Pointer
-
-```c
-void *lsearch(
-  void *key,
-  void *base,
-  int n,
-  int elemSize,
-  int (*cmpFn)(void *, void *)
-) {
-    for (int i = 0;i < n;i++) {
-        void * elemAddr = (char *)base + i * elemSize;
-        if (cmpFn(key, elemAddr) == 0) {
-            return elemAddr;
-        }
-    }
-
-    return NULL;
-}
-```
-
-### Git
-
-#### Commit Message
-
-```md
-firstLine - <type>(<scope>): <subject>
-  (emptyLine)
-<body>
-  (emptyLine)
-<footer>
-```
-
-#### Pretty Logger
-
-```bash
-git log -p --stat --graph --pretty=format:"%h - %an, %ar : %s" --since=2.weeks path_name
-```
-
-### JavaScript
-
-#### Type Check
-
-```js
-function typeOf(o) {
-    var _toString = Object.prototype.toString,
-        _type = {
-            'undefined': 'undefined',
-            'number': 'number',
-            'boolean': 'boolean',
-            'string': 'string',
-            '[object Function]': 'function',
-            '[object Array]': 'array',
-            '[object Date]': 'date',
-            '[object RegExp]': 'regexp',
-            '[object Error]': 'error'
-        };
-
-        return _type[typeof o] || _type[_toString.call(o)] || (o ? 'object' : 'null');
-}
-```
-
-#### ES5 Module Best Practice
-
-It's time to embrace ES Next/Harmony.
-
-```js
-// 命名空间模式
-APP.namespace('APP.utilities.array');
-
-//形参: 导入全局变量
-APP.utilities.array = (function (app, global) {
-// start of var declare
-
-// 依赖模式
-var utilObj = APP.utilities.object,
-    utilLang = APP.utilities.lang,
-// 私有属性
-    arrStr = "[object Array]",
-    toStr = Object.prototype.toString;
-// 私有方法
-    inArray = function (haystack, needle) {
-        for (var i = 0, max = haystack.length; i < max; i += 1) {
-            if (haystack[i] === needle) {
-                return i;
-            }
-        }
-        return −1;
-    },
-    isArray = function (a) {
-        return toStr.call(a) === arrayString;
-    };
-
-// end of var declare
-
-// 初始化模式
-初始化代码,只执行一次
-
-// 揭示公共接口
-return {
-    isArray: isArray,
-    indexOf: inArray
-};
-
-}(APP, this));
-```
+- Computer Science
+  - Algorithms
+    - [Algorithms Basic Notes](notes/computerScience/algorithms/algorithmsBasicNotes.md)
+    - [OJ Basic Notes](notes/computerScience/algorithms/ojBasicNotes.md)
+  - Architecture
+    - [Arch Basic Notes](notes/computerScience/architecture/archBasicNotes.md)
+    - [Graph Processing Basic Notes](notes/computerScience/architecture/graphProcessingBasicNotes.md)
+  - Compilers
+    - [Compilers Basic Notes](notes/computerScience/compilers/compilersBasicNotes.md)
+  - Database
+    - [Database Basic Notes](notes/computerScience/dataBase/databaseBasicNotes.md)
+  - Latex
+    - [Latex Basic Notes](notes/computerScience/latex/latexBasicNotes.md)
+  - Network
+    - [Network Basic Notes](notes/computerScience/network/networkBasicNotes.md)
+  - Operating Systems
+    - [CSAPP](notes/computerScience/operatingSystems/CSAPP.md)
+    - [Operating Systems Basic Notes](notes/computerScience/operatingSystems/operatingSystemsBasicNotes.md)
+  - Virtualization
+    - [Virt Basic Notes](notes/computerScience/virtualization/virtBasicNotes.md)
+- Language
+  - Assembly
+    - [Assembly Basic Notes](notes/language/assembly/assemblyBasicNotes.md)
+  - C
+    - [C Basic Notes](notes/language/c/cBasicNotes.md)
+  - Cpp
+    - [Cpp Basic Notes](notes/language/cpp/cppBasicNotes.md)
+  - Go
+    - [Go Basic Notes](notes/language/go/goBasicNotes.md)
+  - Haskell
+    - [Haskell Basic Notes](notes/language/haskell/haskellBasicNotes.md)
+  - Java
+    - [Java Basic Notes](notes/language/java/javaBasicNotes.md)
+  - Python
+    - [Python Basic Notes](notes/language/python/pythonBasicNotes.md)
+  - Verilog
+    - [Verilog Basic Notes](notes/language/verilog/verilogBasicNotes.md)
+- Programming
+  - Android
+    - [Android Basic Notes](notes/programming/android/androidBasicNotes.md)
+  - DevOps
+    - [Clean Code Basic Notes](notes/programming/devops/cleanCodeBasicNotes.md)
+    - [Design Patterns Basic Notes](notes/programming/devops/designPatternsBasicNotes.md)
+    - [Software Testing Basic Notes](notes/programming/devops/softwareTestingBasicNotes.md)
+  - Functional Programming
+    - [Functional Programming Basic Notes](notes/programming/functionalProgramming/functionalProgrammingBasicNotes.md)
+  - Game
+    - [Game Design Basic Notes](notes/programming/game/gameDesignBasicNotes.md)
+  - Linux
+    - [Linux Basic Notes](notes/programming/linux/linuxBasicNotes.md)
+  - Tools
+    - Build Tools
+      - [CMake Basic Notes](notes/programming/tools/buildTools/CMakeBasicNotes.md)
+    - Git
+      - [Git Basic Notes](notes/programming/tools/git/gitBasicNotes.md)
+    - Vim
+      - [Vim Basic Notes](notes/programming/tools/vim/vimBasicNotes.md)
+  - Web
+    - Angular
+      - [Angular Basic Notes](notes/programming/web/angular/angularBasicNotes.md)
+    - CSS
+      - [Bootstrap Basic Notes](notes/programming/web/css/bootstrapBasicNotes.md)
+      - [CSS Advanced Notes](notes/programming/web/css/cssAdvancedNotes.md)
+      - [CSS Basic Notes](notes/programming/web/css/cssBasicNotes.md)
+      - [Sass Basic Notes](notes/programming/web/css/sassBasicNotes.md)
+    - Frameworks
+      - [Electron Basic Notes](notes/programming/web/frameworks/electronBasicNotes.md)
+      - [jQuery Basic Notes](notes/programming/web/frameworks/jQueryBasicNotes.md)
+      - [Library Basic Notes](notes/programming/web/frameworks/libraryBasicNotes.md)
+    - HTML
+      - [HTML Basic Notes](notes/programming/web/html/htmlBasicNotes.md)
+    - Javascript
+      - [Javascript Advanced Notes](notes/programming/web/javascript/javascriptAdvancedNotes.md)
+      - [Javascript Basic Notes](notes/programming/web/javascript/javascriptBasicNotes.md)
+      - [Typescript Basic Notes](notes/programming/web/javascript/typescriptBasicNotes.md)
+    - Node
+      - [Express Basic Notes](notes/programming/web/node/expressBasicNotes.md)
+      - [Graphql Basic Notes](notes/programming/web/node/graphqlBasicNotes.md)
+      - [Message Queue Basic Notes](notes/programming/web/node/messageQueueBasicNotes.md)
+      - [Node Basic Notes](notes/programming/web/node/nodeBasicNotes.md)
+    - React
+      - [React Basic Notes](notes/programming/web/react/reactBasicNotes.md)
+      - [React Router Basic Notes](notes/programming/web/react/reactRouterBasicNotes.md)
+      - [Redux Basic Notes](notes/programming/web/react/reduxBasicNotes.md)
+    - Security
+      - [Security Basic Notes](notes/programming/web/security/securityBasicNotes.md)
+    - Vue
+      - [Vue Basic Notes](notes/programming/web/vue/vueBasicNotes.md)
 
 ## License
 
