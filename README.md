@@ -14,103 +14,103 @@
 [![Code Lines](https://img.shields.io/tokei/lines/github/sabertazimi/awesome-notes?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/awesome-notes)
 [![Continuous Integration](https://img.shields.io/github/workflow/status/sabertazimi/awesome-notes/Continuous%20Integration/main?style=for-the-badge&logo=github)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
 
-Personal Learning Notes - **Awesome Notes** for Myself
+Personal Learning Notes - **Awesome Notes** for Myself.
 
 > [GitHub Version](https://sabertazimi.github.io/awesome-notes)
-> built on `GitBook.IO` v1.
+> built on `VitePress`.
 > [GitBook Version](https://notes.tazimi.dev)
-> built on `GitBook.IO` v2.
+> built on `GitBook.IO`.
 
-## Notes List
+## Notes ToC
 
 - Computer Science
   - Algorithms
-    - [Algorithms Basic Notes](notes/computerScience/algorithms/algorithmsBasicNotes.md)
-    - [OJ Basic Notes](notes/computerScience/algorithms/ojBasicNotes.md)
+    - [Algorithms Basic Notes](computerScience/algorithms/algorithmsBasicNotes.md)
+    - [OJ Basic Notes](computerScience/algorithms/ojBasicNotes.md)
   - Architecture
-    - [Arch Basic Notes](notes/computerScience/architecture/archBasicNotes.md)
-    - [Graph Processing Basic Notes](notes/computerScience/architecture/graphProcessingBasicNotes.md)
+    - [Arch Basic Notes](computerScience/architecture/archBasicNotes.md)
+    - [Graph Processing Basic Notes](computerScience/architecture/graphProcessingBasicNotes.md)
   - Compilers
-    - [Compilers Basic Notes](notes/computerScience/compilers/compilersBasicNotes.md)
+    - [Compilers Basic Notes](computerScience/compilers/compilersBasicNotes.md)
   - Database
-    - [Database Basic Notes](notes/computerScience/dataBase/databaseBasicNotes.md)
+    - [Database Basic Notes](computerScience/database/databaseBasicNotes.md)
   - Latex
-    - [Latex Basic Notes](notes/computerScience/latex/latexBasicNotes.md)
+    - [Latex Basic Notes](computerScience/latex/latexBasicNotes.md)
   - Network
-    - [Network Basic Notes](notes/computerScience/network/networkBasicNotes.md)
+    - [Network Basic Notes](computerScience/network/networkBasicNotes.md)
   - Operating Systems
-    - [CSAPP](notes/computerScience/operatingSystems/CSAPP.md)
-    - [Operating Systems Basic Notes](notes/computerScience/operatingSystems/operatingSystemsBasicNotes.md)
+    - [CSAPP](computerScience/operatingSystems/CSAPP.md)
+    - [Operating Systems Basic Notes](computerScience/operatingSystems/operatingSystemsBasicNotes.md)
   - Virtualization
-    - [Virt Basic Notes](notes/computerScience/virtualization/virtBasicNotes.md)
+    - [Virt Basic Notes](computerScience/virtualization/virtBasicNotes.md)
 - Language
   - Assembly
-    - [Assembly Basic Notes](notes/language/assembly/assemblyBasicNotes.md)
+    - [Assembly Basic Notes](language/assembly/assemblyBasicNotes.md)
   - C
-    - [C Basic Notes](notes/language/c/cBasicNotes.md)
+    - [C Basic Notes](language/c/cBasicNotes.md)
   - Cpp
-    - [Cpp Basic Notes](notes/language/cpp/cppBasicNotes.md)
+    - [Cpp Basic Notes](language/cpp/cppBasicNotes.md)
   - Go
-    - [Go Basic Notes](notes/language/go/goBasicNotes.md)
+    - [Go Basic Notes](language/go/goBasicNotes.md)
   - Haskell
-    - [Haskell Basic Notes](notes/language/haskell/haskellBasicNotes.md)
+    - [Haskell Basic Notes](language/haskell/haskellBasicNotes.md)
   - Java
-    - [Java Basic Notes](notes/language/java/javaBasicNotes.md)
+    - [Java Basic Notes](language/java/javaBasicNotes.md)
   - Python
-    - [Python Basic Notes](notes/language/python/pythonBasicNotes.md)
+    - [Python Basic Notes](language/python/pythonBasicNotes.md)
   - Verilog
-    - [Verilog Basic Notes](notes/language/verilog/verilogBasicNotes.md)
+    - [Verilog Basic Notes](language/verilog/verilogBasicNotes.md)
 - Programming
   - Android
-    - [Android Basic Notes](notes/programming/android/androidBasicNotes.md)
+    - [Android Basic Notes](programming/android/androidBasicNotes.md)
   - DevOps
-    - [Clean Code Basic Notes](notes/programming/devops/cleanCodeBasicNotes.md)
-    - [Design Patterns Basic Notes](notes/programming/devops/designPatternsBasicNotes.md)
-    - [Software Testing Basic Notes](notes/programming/devops/softwareTestingBasicNotes.md)
+    - [Clean Code Basic Notes](programming/devops/cleanCodeBasicNotes.md)
+    - [Design Patterns Basic Notes](programming/devops/designPatternsBasicNotes.md)
+    - [Software Testing Basic Notes](programming/devops/softwareTestingBasicNotes.md)
   - Functional Programming
-    - [Functional Programming Basic Notes](notes/programming/functionalProgramming/functionalProgrammingBasicNotes.md)
+    - [Functional Programming Basic Notes](programming/functionalProgramming/functionalProgrammingBasicNotes.md)
   - Game
-    - [Game Design Basic Notes](notes/programming/game/gameDesignBasicNotes.md)
+    - [Game Design Basic Notes](programming/game/gameDesignBasicNotes.md)
   - Linux
-    - [Linux Basic Notes](notes/programming/linux/linuxBasicNotes.md)
+    - [Linux Basic Notes](programming/linux/linuxBasicNotes.md)
   - Tools
     - Build Tools
-      - [CMake Basic Notes](notes/programming/tools/buildTools/CMakeBasicNotes.md)
+      - [CMake Basic Notes](programming/tools/buildTools/CMakeBasicNotes.md)
     - Git
-      - [Git Basic Notes](notes/programming/tools/git/gitBasicNotes.md)
+      - [Git Basic Notes](programming/tools/git/gitBasicNotes.md)
     - Vim
-      - [Vim Basic Notes](notes/programming/tools/vim/vimBasicNotes.md)
+      - [Vim Basic Notes](programming/tools/vim/vimBasicNotes.md)
   - Web
     - Angular
-      - [Angular Basic Notes](notes/programming/web/angular/angularBasicNotes.md)
+      - [Angular Basic Notes](programming/web/angular/angularBasicNotes.md)
     - CSS
-      - [Bootstrap Basic Notes](notes/programming/web/css/bootstrapBasicNotes.md)
-      - [CSS Advanced Notes](notes/programming/web/css/cssAdvancedNotes.md)
-      - [CSS Basic Notes](notes/programming/web/css/cssBasicNotes.md)
-      - [Sass Basic Notes](notes/programming/web/css/sassBasicNotes.md)
+      - [Bootstrap Basic Notes](programming/web/css/bootstrapBasicNotes.md)
+      - [CSS Advanced Notes](programming/web/css/cssAdvancedNotes.md)
+      - [CSS Basic Notes](programming/web/css/cssBasicNotes.md)
+      - [Sass Basic Notes](programming/web/css/sassBasicNotes.md)
     - Frameworks
-      - [Electron Basic Notes](notes/programming/web/frameworks/electronBasicNotes.md)
-      - [jQuery Basic Notes](notes/programming/web/frameworks/jQueryBasicNotes.md)
-      - [Library Basic Notes](notes/programming/web/frameworks/libraryBasicNotes.md)
+      - [Electron Basic Notes](programming/web/frameworks/electronBasicNotes.md)
+      - [jQuery Basic Notes](programming/web/frameworks/jQueryBasicNotes.md)
+      - [Library Basic Notes](programming/web/frameworks/libraryBasicNotes.md)
     - HTML
-      - [HTML Basic Notes](notes/programming/web/html/htmlBasicNotes.md)
+      - [HTML Basic Notes](programming/web/html/htmlBasicNotes.md)
     - Javascript
-      - [Javascript Advanced Notes](notes/programming/web/javascript/javascriptAdvancedNotes.md)
-      - [Javascript Basic Notes](notes/programming/web/javascript/javascriptBasicNotes.md)
-      - [Typescript Basic Notes](notes/programming/web/javascript/typescriptBasicNotes.md)
+      - [Javascript Advanced Notes](programming/web/javascript/javascriptAdvancedNotes.md)
+      - [Javascript Basic Notes](programming/web/javascript/javascriptBasicNotes.md)
+      - [Typescript Basic Notes](programming/web/javascript/typescriptBasicNotes.md)
     - Node
-      - [Express Basic Notes](notes/programming/web/node/expressBasicNotes.md)
-      - [Graphql Basic Notes](notes/programming/web/node/graphqlBasicNotes.md)
-      - [Message Queue Basic Notes](notes/programming/web/node/messageQueueBasicNotes.md)
-      - [Node Basic Notes](notes/programming/web/node/nodeBasicNotes.md)
+      - [Express Basic Notes](programming/web/node/expressBasicNotes.md)
+      - [Graphql Basic Notes](programming/web/node/graphqlBasicNotes.md)
+      - [Message Queue Basic Notes](programming/web/node/messageQueueBasicNotes.md)
+      - [Node Basic Notes](programming/web/node/nodeBasicNotes.md)
     - React
-      - [React Basic Notes](notes/programming/web/react/reactBasicNotes.md)
-      - [React Router Basic Notes](notes/programming/web/react/reactRouterBasicNotes.md)
-      - [Redux Basic Notes](notes/programming/web/react/reduxBasicNotes.md)
+      - [React Basic Notes](programming/web/react/reactBasicNotes.md)
+      - [React Router Basic Notes](programming/web/react/reactRouterBasicNotes.md)
+      - [Redux Basic Notes](programming/web/react/reduxBasicNotes.md)
     - Security
-      - [Security Basic Notes](notes/programming/web/security/securityBasicNotes.md)
+      - [Security Basic Notes](programming/web/security/securityBasicNotes.md)
     - Vue
-      - [Vue Basic Notes](notes/programming/web/vue/vueBasicNotes.md)
+      - [Vue Basic Notes](programming/web/vue/vueBasicNotes.md)
 
 ## License
 
