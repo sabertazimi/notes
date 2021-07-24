@@ -47,7 +47,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: dist
-        path: build
+        path: notes/.vitepress/dist
     # - name: NPM audit
     #   uses: oke-py/npm-audit-action@v1
     #   with:
