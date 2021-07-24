@@ -9,7 +9,6 @@
     "serve": "npm run prepare && vitepress serve notes",
     "lint": "markdownlint -i node_modules notes",
     "prepare": "cp -fr README.md notes/index.md",
-    "summary": "book sm -i node_modules -r notes -o SUMMARY.md",
     "start": "npm run dev"
   },
   "repository": {
@@ -31,7 +30,6 @@
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "devDependencies": {
-    "gitbook-summary": "^1.2.2",
     "markdownlint-cli": "^0.28.1",
     "vitepress": "^0.15.6"
   }
