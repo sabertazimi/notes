@@ -58,7 +58,6 @@ typings/
 .cache/
 build/
 dist/
-public/
 
 # Mac files
 .DS_Store
