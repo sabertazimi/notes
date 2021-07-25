@@ -4,11 +4,10 @@
   "description": "Personal Learning Notes (TIL)",
   "main": "README.md",
   "scripts": {
-    "dev": "npm run prepare && vitepress dev notes",
-    "build": "npm run prepare && vitepress build notes",
-    "serve": "npm run prepare && vitepress serve notes",
+    "build": "vitepress build notes",
+    "dev": "vitepress dev notes",
     "lint": "markdownlint -i node_modules notes",
-    "prepare": "cp -fr README.md notes/index.md",
+    "serve": "vitepress serve notes",
     "start": "npm run dev"
   },
   "repository": {
