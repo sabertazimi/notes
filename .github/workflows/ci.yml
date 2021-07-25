@@ -26,7 +26,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         submodules: true
-        fetch-depth: 1
+        fetch-depth: 0 # Fetch all history for VitePress Last-Updated-Time
     - name: Setup Node environment
       uses: actions/setup-node@v2
       with:
@@ -36,7 +36,7 @@ jobs:
         cache: 'npm'
     - name: Installation
       run: |
-          npm install
+          npm ci
     - name: Building work
       run: |
           npm run lint --if-present
@@ -47,13 +47,6 @@ jobs:
       with:
         name: dist
         path: notes/.vitepress/dist
-    # - name: NPM audit
-    #   uses: oke-py/npm-audit-action@v1
-    #   with:
-    #     audit_level: moderate
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     issue_assignees: sabertazimi
-    #     issue_labels: vulnerability,test
   
   deploy:
     runs-on: ubuntu-latest
@@ -78,6 +71,3 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: ${{ github.event.head_commit.message }}
-    # - run: npm publish
-    #   env:
-    #     NODE_AUTH_TOKEN: ${{secrets.npm_token}}
