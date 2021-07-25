@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "devDependencies": {
-    "markdownlint-cli": "^0.28.1",
-    "vitepress": "^0.15.6"
+    "@sabertazimi/vitepress": "^0.15.7",
+    "markdownlint-cli": "^0.28.1"
   }
 }
