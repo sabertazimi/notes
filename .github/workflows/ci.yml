@@ -36,8 +36,7 @@ jobs:
         cache: 'npm'
     - name: Installation
       run: |
-          npm ci
-          npx gitbook install
+          npm install
     - name: Building work
       run: |
           npm run lint --if-present
