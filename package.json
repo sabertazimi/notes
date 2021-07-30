@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vitepress build notes",
     "dev": "vitepress dev notes",
+    "format": "prettier --write notes/**/*.{md,mdx}",
     "lint": "markdownlint -i node_modules notes",
     "serve": "vitepress serve notes",
     "start": "npm run dev"
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "devDependencies": {
     "@sabertazimi/vitepress": "^0.15.7",
-    "markdownlint-cli": "^0.28.1"
+    "markdownlint-cli": "^0.28.1",
+    "prettier": "^2.3.2"
   }
 }
