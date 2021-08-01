@@ -8,6 +8,7 @@
     "dev": "vitepress dev notes",
     "format": "prettier --write notes/**/*.{md,mdx}",
     "lint": "markdownlint -i node_modules notes",
+    "prelease": "standard-version --dry-run",
     "release": "standard-version",
     "serve": "vitepress serve notes",
     "start": "npm run dev"
