@@ -8,6 +8,7 @@
     "dev": "vitepress dev notes",
     "format": "prettier --write notes/**/*.{md,mdx}",
     "lint": "markdownlint -i node_modules notes",
+    "release": "standard-version",
     "serve": "vitepress serve notes",
     "start": "npm run dev"
   },
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@sabertazimi/vitepress": "^0.15.7",
     "markdownlint-cli": "^0.28.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "standard-version": "^9.3.1"
   }
 }
