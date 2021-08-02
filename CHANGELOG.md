@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/sabertazimi/awesome-notes/compare/v2.0.0...v2.0.1) (2021-08-02)
+
+
+### Building Work
+
+* **CHANGELOG:** add more fields to CHANGELOG ([0d0903a](https://github.com/sabertazimi/awesome-notes/commit/0d0903a2756b5cf5a6cf8fb58a4b1fef4880ea05))
+* **scripts:** add dry-run release support ([c25fa6e](https://github.com/sabertazimi/awesome-notes/commit/c25fa6e42ff486ca07f002088cbb04d0217b66aa))
+
 ## 2.0.0 (2021-08-01)
 
 
