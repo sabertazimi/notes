@@ -2,6 +2,7 @@
   "types": [
     { "type": "add", "section": "Features" },
     { "type": "feat", "section": "Features" },
+    { "type": "update", "section": "Today I Learned" },
     { "type": "fix", "section": "Bug Fixes" },
     { "type": "build", "section": "Building Work" },
     { "type": "chore", "hidden": true },
