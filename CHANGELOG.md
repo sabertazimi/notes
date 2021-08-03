@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/sabertazimi/awesome-notes/compare/v2.0.2...v2.0.3) (2021-08-03)
+
+
+### Bug Fixes
+
+* **markdownlint:** remove redundant words ([9c13e21](https://github.com/sabertazimi/awesome-notes/commit/9c13e21c8a3046dcd47351d7260e3bc8c2d2cfc0)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+
+
+### Building Work
+
+* **CHANGELOG:** add `update` field for TIL ([bf7cdf6](https://github.com/sabertazimi/awesome-notes/commit/bf7cdf64928d0c21bf4f298fabc27f339962dac5))
+
+
+### Today I Learned
+
+* **git-GitHub:** review GitHub pages setup ([b2d180a](https://github.com/sabertazimi/awesome-notes/commit/b2d180a24602b0796cc0b5cf9aa01fb18e9c2383))
+* **web-Node:** `exports` and `typeVerions` fields ([4bd5de3](https://github.com/sabertazimi/awesome-notes/commit/4bd5de3e8ae9f71a542f1039c8639d84b603d114)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-Node:** exports path alias ([bf359ab](https://github.com/sabertazimi/awesome-notes/commit/bf359ab41232ebbaa5a4b1bf31bac1ebb1d28731)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-NPM:** npm workspaces basic usage ([5fc2884](https://github.com/sabertazimi/awesome-notes/commit/5fc28846d3c4dd90bdf307f3f418902d5187c116)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-TypeScript:** index signature of Enum ([0346523](https://github.com/sabertazimi/awesome-notes/commit/0346523da381dab298a0b302bee6c7495c88c090))
+* **web-TypeScript:** module resolution ([a9353e0](https://github.com/sabertazimi/awesome-notes/commit/a9353e009b56c189b9b0b3e739a90720a43771fb))
+* **web-TypeScript:** paths mapping in tsconfig.json ([274de00](https://github.com/sabertazimi/awesome-notes/commit/274de00d00ead8a624b51a54d8d0a3aa396c046c))
+* **web-TypeScript:** workspaces and references for monorepo ([65a715a](https://github.com/sabertazimi/awesome-notes/commit/65a715ac25ab332646d92ae707077417cd424ce6)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+
 ### [2.0.2](https://github.com/sabertazimi/awesome-notes/compare/v2.0.1...v2.0.2) (2021-08-02)
 
 
