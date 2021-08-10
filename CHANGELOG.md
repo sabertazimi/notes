@@ -2,6 +2,88 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/sabertazimi/awesome-notes/compare/v2.0.3...v2.1.0) (2021-08-10)
+
+
+### Features
+
+* **GitHub Linguist:** enable markdown lanuage detection ([e1ff4aa](https://github.com/sabertazimi/awesome-notes/commit/e1ff4aa0e725e1ea759a721a7511bca898a5c6fb))
+
+
+### Testing
+
+* **web-testing:** e2e testing focus ([0089521](https://github.com/sabertazimi/awesome-notes/commit/00895218c0fb229ad34349cc2ed8426d28500225))
+
+
+### Today I Learned
+
+* **design patterns:** review design patterns ([a33bf44](https://github.com/sabertazimi/awesome-notes/commit/a33bf44fcce90df25ff2e7bc35b2576870ca2a7b))
+* **git-GitHub:** GitHub linguist config ([1535147](https://github.com/sabertazimi/awesome-notes/commit/1535147d0292b710851024ce62ee2c9ea3164fa6))
+* **git-log:** git log advanced filters ([5bf75d1](https://github.com/sabertazimi/awesome-notes/commit/5bf75d1911f01daf5630929abaae3ea13cc6114e))
+* **jest-paths:** resolve paths from tsconfig.json ([1f41e63](https://github.com/sabertazimi/awesome-notes/commit/1f41e63b46cd5e02d7499f3d9396855dc6a8742e)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **library-devops:** application performance monitoring system ([346a617](https://github.com/sabertazimi/awesome-notes/commit/346a6174c4fd462a42dcabfbb8c37883e92c2369))
+* **library-web:** 3d tilt library ([7528f89](https://github.com/sabertazimi/awesome-notes/commit/7528f89004245a559845b34a2ac3a5dfe9fe241f))
+* **library-web:** auto mapper TS library ([6e08d33](https://github.com/sabertazimi/awesome-notes/commit/6e08d33942f434e2b81aea83a1fbdbe2e0e14230))
+* **library-web:** chokidar file watching library ([3c8ef44](https://github.com/sabertazimi/awesome-notes/commit/3c8ef44e6778351c732cb8f695f24e51ec03357c))
+* **library-web:** currencies i18n TypeScript library ([fdee495](https://github.com/sabertazimi/awesome-notes/commit/fdee495738cb7648fd66bdcb363d0cb8994312e7)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **library-web:** design resources ([2bd6e40](https://github.com/sabertazimi/awesome-notes/commit/2bd6e40df3b057ec5e714dc882594af153b67728))
+* **library-web:** i18n library ([19250b6](https://github.com/sabertazimi/awesome-notes/commit/19250b67bc34db9715ad04212fca122aff5e69b6))
+* **library-web:** JamStack rendering policy ([c992cc9](https://github.com/sabertazimi/awesome-notes/commit/c992cc94964b59bdecf84b7df6fe7bc177956f1e))
+* **library-web:** postcss preset env plugin ([1e3b30a](https://github.com/sabertazimi/awesome-notes/commit/1e3b30a84ae0090997ff49329bef0e4c27800f91))
+* **library-web:** React toast library ([9e92024](https://github.com/sabertazimi/awesome-notes/commit/9e920242cc72643351aa59f3eac936bbfa9ef72f))
+* **library-web:** three CSS-in-TypeScript library ([d2f86f0](https://github.com/sabertazimi/awesome-notes/commit/d2f86f0f834543c278bb6eeb531fcbf53de5bb60)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **library-web:** type-safe (TypeScript) APIs server ([de131f1](https://github.com/sabertazimi/awesome-notes/commit/de131f170ab1547c96a00cb4e398fa6a205715fc)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **library-web:** TypeScript audio library ([2765feb](https://github.com/sabertazimi/awesome-notes/commit/2765feb1e98f68d929b7e4182cf21020841c3c7b))
+* **library-web:** universal tool for packges comparison ([a8857ab](https://github.com/sabertazimi/awesome-notes/commit/a8857abc843c00330d4e3b17ab05574498b653f2)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **library-web:** V8 compile cache ([67f0a83](https://github.com/sabertazimi/awesome-notes/commit/67f0a837aad1243d13c1a6dd06429bac705b4805))
+* **library:** devops platform ([a931127](https://github.com/sabertazimi/awesome-notes/commit/a931127968d784ee927abeebfe8efe6c26961332))
+* **library:** image and audio library ([f3704e5](https://github.com/sabertazimi/awesome-notes/commit/f3704e578646e353ef31e645428f389b619d9bb8))
+* **library:** micro front-ends ([6ffa8f5](https://github.com/sabertazimi/awesome-notes/commit/6ffa8f59474bf13fe296aa02624b0f5b142276fe))
+* **library:** souregraph ([e2ec8bb](https://github.com/sabertazimi/awesome-notes/commit/e2ec8bbf1bbe8866ee0f3d512c0895b6a6dcabc1))
+* **web-a11y:** a11y 101 tips ([4f15cbe](https://github.com/sabertazimi/awesome-notes/commit/4f15cbeaa8e86c437376cf25a3b40533ebf57887)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** a11y checklist ([ec6f894](https://github.com/sabertazimi/awesome-notes/commit/ec6f8948e5a59c13726f9ea2814422b57501fd30)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** a11y devtools ([f1786f0](https://github.com/sabertazimi/awesome-notes/commit/f1786f0ddff4a6caa2c874c3d7648f731fbb5ccb)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** devtools element inspection ([80230b9](https://github.com/sabertazimi/awesome-notes/commit/80230b927eb248f64158f301bedb2304381feaf1)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** WAI-ARIA roles ([3bbbb84](https://github.com/sabertazimi/awesome-notes/commit/3bbbb84909868750cd662340af95ee0a409fe719)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** WAI-ARIA roles ([40220d1](https://github.com/sabertazimi/awesome-notes/commit/40220d117c8bcc41030662ad9fa1887ad58ffd61)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-a11y:** web concent a11y guidelines ([5eedbce](https://github.com/sabertazimi/awesome-notes/commit/5eedbced1399538e1c777e88c8618e54260501d8)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-css:** BootStrap 5 cheatsheet ([b573512](https://github.com/sabertazimi/awesome-notes/commit/b573512b1b3c1b652e1980c39b7e6dec189eb3e5)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-css:** button label vertical alignment ([b515d03](https://github.com/sabertazimi/awesome-notes/commit/b515d03f497b58b05f19e43a8f7f6c78c39393d1))
+* **web-CSS:** CSS shapes and icons ([3fa4a58](https://github.com/sabertazimi/awesome-notes/commit/3fa4a58d2495c47f601afa80aff06b9e3d1ebbe1))
+* **web-css:** custom form widgets ([949b76f](https://github.com/sabertazimi/awesome-notes/commit/949b76f1748acd6033d118b3dbfbd4b966324d4a))
+* **web-css:** custom table cells ([06c83b8](https://github.com/sabertazimi/awesome-notes/commit/06c83b8fb975d149216c8614de2f7cb7f5b8918d))
+* **web-css:** diff between *-content and *-items in flex/grid ([57badf7](https://github.com/sabertazimi/awesome-notes/commit/57badf770d22799f6f30e8db68e38c81c13b23cb))
+* **web-css:** geometry tips ([9d9add0](https://github.com/sabertazimi/awesome-notes/commit/9d9add003d3d8c6e9ec4685a5ea565238ff4b621))
+* **web-css:** homepage UX tips ([2269f57](https://github.com/sabertazimi/awesome-notes/commit/2269f57807f720269b5d20d7068166bf9803eca9))
+* **web-css:** hover gradient button ([81c699c](https://github.com/sabertazimi/awesome-notes/commit/81c699c51e9ed8bafd58dd74a7e7aadce71bc2d1))
+* **web-css:** move css perf to basic notes ([99efa72](https://github.com/sabertazimi/awesome-notes/commit/99efa721a976c39c2b0a4efb47a32ee493e1145e))
+* **web-css:** multiple-column layout ([704d471](https://github.com/sabertazimi/awesome-notes/commit/704d471978d6bef028cfd12c1e909f04468e3e24))
+* **web-css:** shape-outside style ([1739b55](https://github.com/sabertazimi/awesome-notes/commit/1739b55d85d9696146e2ccdf831fdc894153e2ef))
+* **web-css:** size and position for gradient button ([4d937a8](https://github.com/sabertazimi/awesome-notes/commit/4d937a880183a0a1ae3239e3ab293b398c14aaad))
+* **web-JavaScript:** cypress reference ([8060214](https://github.com/sabertazimi/awesome-notes/commit/8060214421e7cecdd4b61da2a5549ca91e2e7c4a))
+* **web-JavaScript:** JamStack methodology ([0b7ad9d](https://github.com/sabertazimi/awesome-notes/commit/0b7ad9d2d7d858176cb71a6de4c04311b88dcd46))
+* **web-JavaScript:** memory snapshot panel ([47d5925](https://github.com/sabertazimi/awesome-notes/commit/47d592541a1f68736d4e06486f40e374c2f85c74))
+* **web-JavaScript:** monkey patch debug tips ([7505bd2](https://github.com/sabertazimi/awesome-notes/commit/7505bd20b2f68852e60513339df59964ec9349c8))
+* **web-JavaScript:** more ESNext features ([a6a88c2](https://github.com/sabertazimi/awesome-notes/commit/a6a88c2fc5f27709488b48d744f92e3249b59d8f))
+* **web-React:** React children array API ([91bc504](https://github.com/sabertazimi/awesome-notes/commit/91bc50496a7251d49ca68567fe4b47b33d585a37)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-React:** react hooks testing ([1cbfdb6](https://github.com/sabertazimi/awesome-notes/commit/1cbfdb6b2aa64158ed405623cdf9d1d69b0023ab))
+* **web-Redux:** redux performance pitfalls ([cda0db7](https://github.com/sabertazimi/awesome-notes/commit/cda0db7a1786f872022a2a76b582bf106c594336))
+* **web-testing:** jest `expect` DOM extension ([1cc94f9](https://github.com/sabertazimi/awesome-notes/commit/1cc94f9a3bb69a9a26e15133be87dc5a64826871))
+* **web-testing:** Jest API and mocks ([eea850d](https://github.com/sabertazimi/awesome-notes/commit/eea850dada264beb8cea3fd5f731d04108cb67ba))
+* **web-testing:** Jest DOM expect API ([2c4811b](https://github.com/sabertazimi/awesome-notes/commit/2c4811bbfea4eca91495eeef6324187d9fb1791f)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-testing:** jest mock ([a714277](https://github.com/sabertazimi/awesome-notes/commit/a71427769ea98930d4962a726f9983f08be7b10a))
+* **web-testing:** jest setup configuration ([badc164](https://github.com/sabertazimi/awesome-notes/commit/badc164b84d01ecc3765431a2fbbafdc3b7edb48))
+* **web-testing:** more jest configuration ([f5484c0](https://github.com/sabertazimi/awesome-notes/commit/f5484c040a0b87955e075af0db00a821bf3481a2)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-TypeScript:** function overload ([4a93478](https://github.com/sabertazimi/awesome-notes/commit/4a934782eb2c4576bf3f486fcfff54e4453ebbc0))
+* **web-TypeScript:** generic types constraints ([e79e935](https://github.com/sabertazimi/awesome-notes/commit/e79e935d8e6785de1734edf7db5102b34b390c33))
+* **web-TypeScript:** implicit index signature error ([51a54a0](https://github.com/sabertazimi/awesome-notes/commit/51a54a06c8fc72e60dba4f0efe49d519bde36bec)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-TypeScript:** input types ([94316c7](https://github.com/sabertazimi/awesome-notes/commit/94316c7024663fad265e0d547dceea3f3b702b9f)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-TypeScript:** pros of decorators ([374f5c1](https://github.com/sabertazimi/awesome-notes/commit/374f5c118dbee7537d8222955f4bc72eb8315610))
+* **web-TypeScript:** static files modules ([7572010](https://github.com/sabertazimi/awesome-notes/commit/757201060f5c7acaa8ccd5e439fffea4967d5823)), closes [#105](https://github.com/sabertazimi/awesome-notes/issues/105)
+* **web-TypeScript:** type guard ([2a24820](https://github.com/sabertazimi/awesome-notes/commit/2a24820d87962e33c260b54013b019b6a27327ac))
+* **web-webpack:** get paths from tsconfig.json ([6c5c75d](https://github.com/sabertazimi/awesome-notes/commit/6c5c75d2510f1fd2c7a7efb6314a301abbe4912d))
+* **web-webpack:** webpack 5 assets module ([88dcabf](https://github.com/sabertazimi/awesome-notes/commit/88dcabf07cab55140fb2f92d25bb7f5295453de1))
+
 ### [2.0.3](https://github.com/sabertazimi/awesome-notes/compare/v2.0.2...v2.0.3) (2021-08-03)
 
 
