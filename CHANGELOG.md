@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/sabertazimi/awesome-notes/compare/v2.1.0...v2.1.1) (2021-08-12)
+
+
+### :hammer: Updates
+
+* **library-web:** Code House cheat sheets ([fe968da](https://github.com/sabertazimi/awesome-notes/commit/fe968dad86dddd0fc77d1e2b8aaa6c8d3d8c4f1a))
+* **library-web:** css background util ([70702ac](https://github.com/sabertazimi/awesome-notes/commit/70702acc4dfae09041cb99a0acd8979f46109d74))
+* **library-web:** private npm registry ([449795d](https://github.com/sabertazimi/awesome-notes/commit/449795d655b4b1c801bf1162812db5d5c4c38824))
+* **web-JavaScript:** form validity APi ([59a33c2](https://github.com/sabertazimi/awesome-notes/commit/59a33c27d3b7d584f65ea15a2ff89292cd383349))
+* **web-React:** CRA template default types definition ([8082ab7](https://github.com/sabertazimi/awesome-notes/commit/8082ab7e30d7508d4a9054b00be50abfac459235))
+* **web-React:** custom react scripts ([88f1ca7](https://github.com/sabertazimi/awesome-notes/commit/88f1ca7c305bc08b8d8925b1a40ecb7982c262b1))
+* **web-React:** deployment services for SPA ([4a5eef8](https://github.com/sabertazimi/awesome-notes/commit/4a5eef86ad4b386364a9643a2958d42c4ae539ea))
+* **web-React:** deps in CRA template ([d06663b](https://github.com/sabertazimi/awesome-notes/commit/d06663b98cbb6e82f1eca894ce58ea7b859e58d0))
+* **web-testing:** Jest async testing ([119872e](https://github.com/sabertazimi/awesome-notes/commit/119872e55585fb6e6800fcc753e4674bc67a173d))
+* **web-testing:** user event testing library ([28d86a7](https://github.com/sabertazimi/awesome-notes/commit/28d86a7d5e66d1741343c94581d67245952369f3))
+
 ## [2.1.0](https://github.com/sabertazimi/awesome-notes/compare/v2.0.3...v2.1.0) (2021-08-10)
 
 
