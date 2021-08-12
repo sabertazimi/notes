@@ -2,7 +2,7 @@
   "types": [
     { "type": "feat", "section": ":sparkles: Features" },
     { "type": "fix", "section": ":bug: Bug Fixes" },
-    { "type": "update", "section": ":hammer: Updates" },
+    { "type": "update", "section": ":sparkles: Today I Learned" },
     { "type": "build", "section": ":rocket: Building Work" },
     { "type": "chore", "hidden": true },
     { "type": "docs", "hidden": true },

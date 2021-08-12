@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### [2.1.1](https://github.com/sabertazimi/awesome-notes/compare/v2.1.0...v2.1.1) (2021-08-12)
 
 
-### :hammer: Updates
+### :sparkles: Today I Learned
 
 * **library-web:** Code House cheat sheets ([fe968da](https://github.com/sabertazimi/awesome-notes/commit/fe968dad86dddd0fc77d1e2b8aaa6c8d3d8c4f1a))
 * **library-web:** css background util ([70702ac](https://github.com/sabertazimi/awesome-notes/commit/70702acc4dfae09041cb99a0acd8979f46109d74))
