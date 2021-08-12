@@ -1,8 +1,9 @@
 {
   "types": [
+    { "type": "add", "section": ":sparkles: Features" },
     { "type": "feat", "section": ":sparkles: Features" },
-    { "type": "fix", "section": ":bug: Bug Fixes" },
     { "type": "update", "section": ":sparkles: Today I Learned" },
+    { "type": "fix", "section": ":bug: Bug Fixes" },
     { "type": "build", "section": ":rocket: Building Work" },
     { "type": "chore", "hidden": true },
     { "type": "docs", "hidden": true },
