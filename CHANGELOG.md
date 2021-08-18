@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/sabertazimi/awesome-notes/compare/v2.1.1...v2.1.2) (2021-08-18)
+
+
+### :bug: Bug Fixes
+
+* **deps-ddp:** remove duplicated packages ([88aa3a8](https://github.com/sabertazimi/awesome-notes/commit/88aa3a8c0f29c5cc0f5d2a096829ad553e227241))
+* **lint:** remove empty line ([54a3637](https://github.com/sabertazimi/awesome-notes/commit/54a3637dda5bbc987bb4375da331975d08bd8dae))
+
+
+### :sparkles: Today I Learned
+
+* **git:** git clean command ([b3b3d8b](https://github.com/sabertazimi/awesome-notes/commit/b3b3d8b68f0a5620723daa16bd61cf6fc0b57867))
+* **git:** git commit emoji ([3b50c3b](https://github.com/sabertazimi/awesome-notes/commit/3b50c3b1b9f7f862f30973e15d4d9e455845fa3c))
+* **library-devops:** monorepo devops tools ([2037f2d](https://github.com/sabertazimi/awesome-notes/commit/2037f2d365939ea0d03f0f823198bd3df59a122b))
+* **library-web:** file watch library ([88778b7](https://github.com/sabertazimi/awesome-notes/commit/88778b78bd3cd8b8086ff1674cc19ffa68270309))
+* **library-web:** hyper formula excel calculation libary ([42902f8](https://github.com/sabertazimi/awesome-notes/commit/42902f874a1a42387f714a66a9ffda4dc7b99530))
+* **library-web:** JS zip library ([683729e](https://github.com/sabertazimi/awesome-notes/commit/683729e90d66221debbe6595aa5269da506b91f7))
+* **library-web:** open source icons ([e654189](https://github.com/sabertazimi/awesome-notes/commit/e65418981618b0f615a44cf7c7a2cee3e0d89699))
+* **library-web:** pace.js site progress bar ([97be7d0](https://github.com/sabertazimi/awesome-notes/commit/97be7d03d031e3b50f4460d43d328be181597655))
+* **library-web:** popper.js v2 ([860027f](https://github.com/sabertazimi/awesome-notes/commit/860027f36d945b85d2ff00a5e8a89e150f408883))
+* **library-web:** React benchmark component ([74740f1](https://github.com/sabertazimi/awesome-notes/commit/74740f167dee82b54cc02e93774ee3d09faf0fd8))
+* **library-web:** TypeScript AST utils ([28c7075](https://github.com/sabertazimi/awesome-notes/commit/28c707549839b21de3ea97a135a46b72c35f7bee))
+* **library-web:** unused TS exports detection ([c7c5a29](https://github.com/sabertazimi/awesome-notes/commit/c7c5a2939bbbb838650faebecaf709853c14f96e))
+* **web-css:** PostCSS and StyleLint plugins ([9d7c368](https://github.com/sabertazimi/awesome-notes/commit/9d7c368f2df69e741f249bc9fd16c53508194c99))
+* **web-JavaScript:** definition of tree shaking ([48e7425](https://github.com/sabertazimi/awesome-notes/commit/48e74256144866efd002b2ada2d27d910b6e17af))
+* **web-JavaScript:** ES6 iterable types ([d87e7d5](https://github.com/sabertazimi/awesome-notes/commit/d87e7d5ee3e1da42bdcae089004d1ad50e9c8ad1))
+* **web-JavaScript:** ESLint plugins ([dc1b2af](https://github.com/sabertazimi/awesome-notes/commit/dc1b2af9c11ff45e61fe3f8ea97afa075c9a9bd2))
+* **web-JavaScript:** macro and micro tasks ([b8f3934](https://github.com/sabertazimi/awesome-notes/commit/b8f39348eb54f91de95e7147a7ca080e499151b1))
+* **web-JavaScript:** review RegExp ([1e594ee](https://github.com/sabertazimi/awesome-notes/commit/1e594eef6a7bfbb7558f68c27a7a5b6df47e0a68))
+* **web-JavaScript:** review tree shaking case ([edcc9b7](https://github.com/sabertazimi/awesome-notes/commit/edcc9b76471c217396d45ae18561305007753bd5))
+* **web-NPM:** add useful NPM mirrors URL ([e2dd782](https://github.com/sabertazimi/awesome-notes/commit/e2dd7820d5f0bef29c80c5c5d9aa68a9d0bebbe4))
+* **web-npm:** invalid pacakge ([98c4c92](https://github.com/sabertazimi/awesome-notes/commit/98c4c929e068313d8eb2a901c6e2a5942216e1c2))
+* **web-performance:** monitor reporting performance ([4404f89](https://github.com/sabertazimi/awesome-notes/commit/4404f8958e0471ba925741e13d0ecc773bfbe4cf))
+* **web-performance:** performance user case ([e0b5429](https://github.com/sabertazimi/awesome-notes/commit/e0b5429872976bfe3c231fcf19a8882de921ffd8))
+* **web-React:** CRA and react-scripts initialization ([22405ee](https://github.com/sabertazimi/awesome-notes/commit/22405ee784afd77801cec89de1c4e9710c63c7e3))
+* **web-React:** CRA css usage ([cc97854](https://github.com/sabertazimi/awesome-notes/commit/cc9785459e4d74dae0e08d3c34b222378868d3bd))
+* **web-React:** new jsx transform ([ee100eb](https://github.com/sabertazimi/awesome-notes/commit/ee100ebd74615e4f89af61016a297b09fce52cc9))
+* **web-React:** public folder (PUBLIC_URL) hatch ([9bf4796](https://github.com/sabertazimi/awesome-notes/commit/9bf47967a1d5a8a5492f7bcc5294c57aac91fbbf))
+* **web-React:** react-scripts start locally ([4370582](https://github.com/sabertazimi/awesome-notes/commit/43705825e43da85c3a0aeae47eb25dd289c9782d))
+* **web-React:** router basename ([7fee77a](https://github.com/sabertazimi/awesome-notes/commit/7fee77a59ea68c03ac7ae63aaa82d098c73cbc65))
+* **web-React:** routes for CRA deployment ([1f05d4d](https://github.com/sabertazimi/awesome-notes/commit/1f05d4dfaf88e43344e71a84d200045983b5c1cf))
+* **web-security:** user privacy leaks ([1428be4](https://github.com/sabertazimi/awesome-notes/commit/1428be4021b143c5068eefeb6294e45e2f9ab4b5))
+
+
+### :rocket: Building Work
+
+* **CI-azure:** add more pipeline triggers ([68ab749](https://github.com/sabertazimi/awesome-notes/commit/68ab74916ddff7ae22932a78a2b686f063fc52ac))
+* **CI:** initialize git config ([f082d33](https://github.com/sabertazimi/awesome-notes/commit/f082d33039b9b732ea9e2c0ae6e2e71813f0e44f))
+* **CI:** set up CI with Azure Pipelines ([6f89bd2](https://github.com/sabertazimi/awesome-notes/commit/6f89bd277511919d4daf807d7836542bf377adb8))
+* **markdown-toc:** change toc level to 3 ([29e3850](https://github.com/sabertazimi/awesome-notes/commit/29e385075473a0fc9d992a489bb3b095bd62659d))
+
 ### [2.1.1](https://github.com/sabertazimi/awesome-notes/compare/v2.1.0...v2.1.1) (2021-08-12)
 
 
