@@ -21,6 +21,7 @@ module.exports = {
         alt: 'Awesome Notes',
         src: 'img/logo.svg',
       },
+      hideOnScroll: true,
       items: [
         {
           to: 'README',
