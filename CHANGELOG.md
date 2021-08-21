@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/sabertazimi/awesome-notes/compare/v2.1.2...v3.0.0) (2021-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **web:** switch from `vitepress` to `docusaurus`.
+
+### :rocket: Building Work
+
+* **deps-dev:** bump @sabertazimi/vitepress from 0.16.0 to 0.17.0 ([ca18287](https://github.com/sabertazimi/awesome-notes/commit/ca182871c7ac2015b499ff9226c29cd9d5dcf86d))
+* **deps-dev:** bump vitepress to latest version ([b8dc0a0](https://github.com/sabertazimi/awesome-notes/commit/b8dc0a0baaeee2c28a248de76b99b073d7ab46b6))
+
+
+### :sparkles: Features
+
+* **web:** switch to `docusaurus` notes generator ([e21b7ba](https://github.com/sabertazimi/awesome-notes/commit/e21b7ba56d7f16753cd4fbf020e14af8a0bf3eb8))
+
+
+### :sparkles: Today I Learned
+
+* **library-web:** alert, notification, prompt and toast ([59dbb8a](https://github.com/sabertazimi/awesome-notes/commit/59dbb8acf0ff50b5cd19fc735fbf334e61085482))
+* **library-web:** Prism React renderer ([dcf8ed9](https://github.com/sabertazimi/awesome-notes/commit/dcf8ed99a08d40aca47c142585d68e43bbc93f9b))
+* **library-web:** React live editor ([6d102ae](https://github.com/sabertazimi/awesome-notes/commit/6d102ae2a8cd98e8062482852eac00f31b2a4e21))
+* **library:** svg and perf site ([a69ee2e](https://github.com/sabertazimi/awesome-notes/commit/a69ee2e07f65a9726a66b0ba4480486721f9a124))
+* **web-cache:** file hash name and cache control ([5531c5d](https://github.com/sabertazimi/awesome-notes/commit/5531c5d4d47c13dee3a50b3a0cd593c5fd0e33cf))
+* **web-performance:** HTML parser performance ([4bed462](https://github.com/sabertazimi/awesome-notes/commit/4bed462cf8e29088c574694771588fc474c30579))
+* **web-performance:** perf data reporting methods ([0dab02d](https://github.com/sabertazimi/awesome-notes/commit/0dab02d090ed4dfb4341f32217e0c5e082c46977))
+* **web-performance:** review code splitting ([70dea1f](https://github.com/sabertazimi/awesome-notes/commit/70dea1faf7b71b1d88236ca105dab985844a76d6))
+* **web-React:** CRA environment variables ([84f1399](https://github.com/sabertazimi/awesome-notes/commit/84f1399876a891798632e1e13b8b10e7333de245))
+* **web-React:** CRA environment variables list ([d0e64df](https://github.com/sabertazimi/awesome-notes/commit/d0e64dffdb95281ad809a24f286bdd97ac3ab017))
+* **web-React:** CRA PWA template ([f99047b](https://github.com/sabertazimi/awesome-notes/commit/f99047bbba1550d36a95f608c1032dc93fac9bdf))
+* **web-React:** CRA relative paths deployment ([52614fa](https://github.com/sabertazimi/awesome-notes/commit/52614fad6ce26382a95817ddf22c9453ad286b0e))
+* **web-security:** content security policy for prevent XSS ([68c1dd6](https://github.com/sabertazimi/awesome-notes/commit/68c1dd65843d4e8d9774751959b6b40f63694553))
+
+
+### :bug: Bug Fixes
+
+* **CI-build:** rectify building result directory ([5f0637d](https://github.com/sabertazimi/awesome-notes/commit/5f0637de6321b19ad2cf6fe8deb38a60ed500b3c))
+* **code-dark theme:** change dark code theme to `vscode` ([a13ace1](https://github.com/sabertazimi/awesome-notes/commit/a13ace156c651fd403f340e1d160262f4984050e))
+* **docusaurus-navbar:** rectify active class for navbar links ([99aa3f0](https://github.com/sabertazimi/awesome-notes/commit/99aa3f0619aad3da3cfd2eea0090fb19b330b961))
+* **java:** add correct code block ([5383373](https://github.com/sabertazimi/awesome-notes/commit/5383373cce79ec97b7a5e7e5cfb8e63461fcb32a))
+* **NPM-ignore:** remove unnecessary ignore file ([6ae273f](https://github.com/sabertazimi/awesome-notes/commit/6ae273f26c75cd096121aab7dfb9120862324972))
+* **README:** rectify generator ([5a89365](https://github.com/sabertazimi/awesome-notes/commit/5a893650ec589ff8159ab8cfc1f2c6233603f703))
+* **syntax highlight:** add complete prism highlight ([024bc83](https://github.com/sabertazimi/awesome-notes/commit/024bc8333521febbde4d2dd3c0715bce75cd1dd6))
+* **website:** add more navbar links ([88d223c](https://github.com/sabertazimi/awesome-notes/commit/88d223c29d7d662b780fc77a8edf70064178957c))
+* **website:** hidden navbar when scrolling ([70d1321](https://github.com/sabertazimi/awesome-notes/commit/70d1321915911210dddaac33eef57c6c9380563a))
+
 ### [2.1.2](https://github.com/sabertazimi/awesome-notes/compare/v2.1.1...v2.1.2) (2021-08-18)
 
 
