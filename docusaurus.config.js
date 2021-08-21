@@ -13,7 +13,8 @@ module.exports = {
   organizationName: 'sabertazimi',
   projectName: 'awesome-notes',
   themeConfig: {
-    defaultMode: 'dark',
+    respectPrefersColorScheme: true,
+    hideableSidebar: true,
     navbar: {
       title: 'Awesome Notes',
       logo: {
@@ -22,30 +23,34 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'README',
-          position: 'left',
+          to: 'README',
           label: 'Notes',
+          position: 'left',
+          activeBasePath: 'README',
         },
         {
           to: 'computerScience/algorithms/algorithmsBasicNotes',
           label: 'Computer Science',
           position: 'left',
+          activeBasePath: 'computerScience',
         },
         {
           to: 'programming/android/androidBasicNotes',
           label: 'Programming',
           position: 'left',
+          activeBasePath: 'programming',
         },
         {
           to: 'language/assembly/assemblyBasicNotes',
           label: 'Language',
           position: 'left',
+          activeBasePath: 'language',
         },
         {
           to: 'web/angular/angularBasicNotes',
           label: 'Web',
           position: 'left',
+          activeBasePath: 'web',
         },
         {
           href: 'https://notes.tazimi.dev',
