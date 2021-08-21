@@ -53,6 +53,44 @@ module.exports = {
           activeBasePath: 'web',
         },
         {
+          type: 'dropdown',
+          label: 'Links',
+          position: 'right',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/sabertazimi',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/sabertazimi',
+            },
+            {
+              label: 'Email',
+              href: 'mailto:sabertazimi@gmail.com',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Repos',
+          position: 'right',
+          items: [
+            {
+              label: 'Awesome Web',
+              href: 'https://github.com/sabertazimi/awesome-web',
+            },
+            {
+              label: 'Bod CLI',
+              href: 'https://github.com/sabertazimi/bod',
+            },
+            {
+              label: 'Gatsby Blog',
+              href: 'https://github.com/sabertazimi/blog',
+            },
+          ],
+        },
+        {
           href: 'https://notes.tazimi.dev',
           label: 'GitBook',
           position: 'right',
@@ -125,20 +163,20 @@ module.exports = {
               href: 'https://github.com/sabertazimi/awesome-web',
             },
             {
-              label: 'Blog',
-              href: 'https://github.com/sabertazimi/blog',
-            },
-            {
-              label: 'Bod',
+              label: 'Bod CLI',
               href: 'https://github.com/sabertazimi/bod',
-            },
-            {
-              label: 'Boilerplate',
-              href: 'https://github.com/sabertazimi/boilerplate',
             },
             {
               label: 'Dragon ZSH Theme',
               href: 'https://github.com/sabertazimi/dragon-zsh-theme',
+            },
+            {
+              label: 'Gatsby Blog',
+              href: 'https://github.com/sabertazimi/blog',
+            },
+            {
+              label: 'Minimal Boilerplate',
+              href: 'https://github.com/sabertazimi/boilerplate',
             },
           ],
         },
