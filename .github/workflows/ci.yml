@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: notes/.vitepress/dist
+          path: build
 
   deploy:
     runs-on: ubuntu-latest
