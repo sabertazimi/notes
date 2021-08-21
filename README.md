@@ -1,3 +1,8 @@
+---
+sidebar_label: 'Awesome Notes'
+sidebar_position: 1
+---
+
 # Awesome Notes
 
 ```js

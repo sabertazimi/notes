@@ -4,13 +4,14 @@
   "description": "Personal Learning Notes (TIL)",
   "main": "README.md",
   "scripts": {
-    "build": "vitepress build notes",
-    "dev": "vitepress dev notes",
+    "build": "docusaurus build",
+    "clear": "docusaurus clear",
+    "dev": "docusaurus start",
     "format": "prettier --write notes/**/*.{md,mdx}",
     "lint": "markdownlint -i node_modules notes",
     "prelease": "standard-version --dry-run -s",
     "release": "standard-version -s",
-    "serve": "vitepress serve notes",
+    "serve": "docusaurus serve",
     "start": "npm run dev"
   },
   "repository": {
@@ -31,10 +32,39 @@
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-beta.4",
+    "@docusaurus/preset-classic": "2.0.0-beta.4",
+    "@mdx-js/react": "^1.6.21",
+    "@svgr/webpack": "^5.5.0",
+    "clsx": "^1.1.1",
+    "file-loader": "^6.2.0",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "url-loader": "^4.1.1"
+  },
   "devDependencies": {
-    "@sabertazimi/vitepress": "^0.17.0",
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.4",
+    "@tsconfig/docusaurus": "^1.0.4",
+    "@types/react": "^17.0.19",
+    "@types/react-helmet": "^6.1.2",
+    "@types/react-router-dom": "^5.1.8",
     "markdownlint-cli": "^0.28.1",
     "prettier": "^2.3.2",
-    "standard-version": "^9.3.1"
+    "standard-version": "^9.3.1",
+    "typescript": "^4.3.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
