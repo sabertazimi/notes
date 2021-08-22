@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/sabertazimi/awesome-notes/compare/v3.0.0...v3.1.0) (2021-08-22)
+
+
+### :bug: Bug Fixes
+
+* **website:** remove redundant pages ([37dd740](https://github.com/sabertazimi/awesome-notes/commit/37dd7400f12c2d26f74bb2557c8a968cc88f97c7))
+
+
+### :sparkles: Today I Learned
+
+* **library-web:** file saver library ([ce55911](https://github.com/sabertazimi/awesome-notes/commit/ce55911f533c6eaacabbf4973e166a332643ff56))
+* **library-web:** text and document search library ([7d26554](https://github.com/sabertazimi/awesome-notes/commit/7d26554c02897e1c5748e22928f43de410cb72be))
+* **web-module:** CommonJS vs ES6 module ([fb957b1](https://github.com/sabertazimi/awesome-notes/commit/fb957b112363fdb90dc7a0f6f64d022f5ff03554))
+* **web-module:** module require and evaluation ([1a0ff96](https://github.com/sabertazimi/awesome-notes/commit/1a0ff96f3683655b16e6cb23ac9d0845c25dfde1))
+* **web-performance:** review memory leak in JS ([e29831e](https://github.com/sabertazimi/awesome-notes/commit/e29831e0dea538018e09c0c0240df19fc7600c6b))
+* **web-React:** truth about React virtual DOM ([b261418](https://github.com/sabertazimi/awesome-notes/commit/b2614186fcc2f8ca4fd7a8f3ddc924c36025dc9a))
+* **web-React:** virtual DOM library ([c19d93a](https://github.com/sabertazimi/awesome-notes/commit/c19d93aa0feff655bffb47dd380a7380e77d7cef))
+* **web:** eslint and webpack plugin for circular imports ([213473b](https://github.com/sabertazimi/awesome-notes/commit/213473b2dbbaf1796e9eee25956f0ec0f6f115bf))
+
+
+### :sparkles: Features
+
+* **website-search:** add document search (lunr.js) support ([aa196cb](https://github.com/sabertazimi/awesome-notes/commit/aa196cbeaf3374ed1372f465c66a378c0104d83c))
+
 ## [3.0.0](https://github.com/sabertazimi/awesome-notes/compare/v2.1.2...v3.0.0) (2021-08-21)
 
 
