@@ -12,6 +12,38 @@ module.exports = {
   favicon: 'img/logo.svg',
   organizationName: 'sabertazimi',
   projectName: 'awesome-notes',
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          path: 'notes',
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/sabertazimi/awesome-notes/edit/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsDir: "notes",
+        docsRouteBasePath: "/",
+        language: ["en", "zh"],
+        hashed: true,
+      },
+    ],
+  ],
   themeConfig: {
     respectPrefersColorScheme: true,
     hideableSidebar: true,
@@ -214,22 +246,4 @@ module.exports = {
       ],
     },
   },
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        docs: {
-          path: 'notes',
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/sabertazimi/awesome-notes/edit/main/',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
 };
