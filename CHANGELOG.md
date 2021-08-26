@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/sabertazimi/awesome-notes/compare/v3.1.0...v3.2.0) (2021-08-26)
+
+
+### :sparkles: Today I Learned
+
+* **library-web:** JieBa chinese text segmentation ([b4b54f0](https://github.com/sabertazimi/awesome-notes/commit/b4b54f0d87bbdcbaaebcc17af30296e445417801))
+* **oj:** some OJ tips ([3454d7d](https://github.com/sabertazimi/awesome-notes/commit/3454d7d247029e8ecc9e6332b69bef1382a4a2a9))
+
+
+### :sparkles: Features
+
+* **oj:** remove C++ OJ notes, ship to TS ([a59a408](https://github.com/sabertazimi/awesome-notes/commit/a59a40820dd3bd8442a54b620710de16d112227c))
+
 ## [3.1.0](https://github.com/sabertazimi/awesome-notes/compare/v3.0.0...v3.1.0) (2021-08-22)
 
 
