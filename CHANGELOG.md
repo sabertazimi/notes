@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/sabertazimi/awesome-notes/compare/v3.2.0...v3.3.0) (2021-08-31)
+
+
+### :rocket: Building Work
+
+* **deps-dev:** bump @docusaurus/module-type-aliases ([0231dc4](https://github.com/sabertazimi/awesome-notes/commit/0231dc49b64bdcec5873c99c68d32aabc219ee64))
+* **deps-dev:** bump typescript from 4.3.5 to 4.4.2 ([8fe81fe](https://github.com/sabertazimi/awesome-notes/commit/8fe81fe1a69e4f9fe352b4f7acc7484845a1e3c2))
+* **deps:** bump @docusaurus/core from 2.0.0-beta.4 to 2.0.0-beta.5 ([30a32c0](https://github.com/sabertazimi/awesome-notes/commit/30a32c0ef574ef17e69aa918b4ed645f1485411e))
+* **deps:** bump @docusaurus/preset-classic ([f3defd0](https://github.com/sabertazimi/awesome-notes/commit/f3defd02ebd42abf9fe6dea3ca4c50f51ac7dd0f))
+
+
+### :sparkles: Today I Learned
+
+* **algorithm-OJ:** two pointers for palindrome ([61ac40f](https://github.com/sabertazimi/awesome-notes/commit/61ac40f884e7ae92b0b2748caed1cb9fcaecdc53))
+* **algorithms-OJ:** palindrome problem ([117f994](https://github.com/sabertazimi/awesome-notes/commit/117f994c994377a4bcfc0533b6d799710c399f9d))
+* **algorithms:** set for duplicates problem ([c364fb5](https://github.com/sabertazimi/awesome-notes/commit/c364fb5776d0671524a954a460dc66a23ccce967))
+* **cs-OJ:** KMP string search algorithm ([1503067](https://github.com/sabertazimi/awesome-notes/commit/1503067dc7364fa6408c15dab955cfebea8559c0))
+* **cs-OJ:** middle limits process in binary search ([9c7ef1a](https://github.com/sabertazimi/awesome-notes/commit/9c7ef1ab833a147ccc0486256cc82b9cf6eba2a1))
+* **cs-OJ:** refactor OJ basic notes ([62a8dbd](https://github.com/sabertazimi/awesome-notes/commit/62a8dbd797eed292a43a5cdf918c119be0fd6397))
+* **cs-OJ:** repeated string problem ([72becfb](https://github.com/sabertazimi/awesome-notes/commit/72becfb7d0a9ed4be6a5448fdd629042259a276c))
+* **cs-OJ:** review segment tree ([3cc7e8c](https://github.com/sabertazimi/awesome-notes/commit/3cc7e8cc6ef74315c18c917349998a2ba7c06881))
+* **cs-OJ:** two pointers in array for slide window ([30cc8cc](https://github.com/sabertazimi/awesome-notes/commit/30cc8cc4798d3f99658350554eb06ea089ccdbfc))
+* **cs-OJ:** xor operator usage ([8334639](https://github.com/sabertazimi/awesome-notes/commit/83346398183335409e27ac91eee4f630e89bbb04))
+* **design patterns:** review basic design patterns ([834fea3](https://github.com/sabertazimi/awesome-notes/commit/834fea359b2a43a3c5075d02102c7ea0551e45c5))
+* **library-devops:** feature toggle service (A/B test) ([2206b78](https://github.com/sabertazimi/awesome-notes/commit/2206b786890351c152a1c090fc5667de080cc728))
+* **library-web:** carousel and presentation slides ([052c396](https://github.com/sabertazimi/awesome-notes/commit/052c396ec87bd8c899c01ad5361c9763e4739da4))
+* **library-web:** community excel library ([eb4a3f9](https://github.com/sabertazimi/awesome-notes/commit/eb4a3f9c2971108c8bff2eae9b955398a4cdb430))
+* **library-web:** front-end checklist ([e02a21e](https://github.com/sabertazimi/awesome-notes/commit/e02a21e6d0bb07bab58a743028420436ac71acd8))
+* **library-web:** FS mock library ([4a7190b](https://github.com/sabertazimi/awesome-notes/commit/4a7190b0394ad85fe45ccb15f766bdcbdfb2ea36))
+* **library-web:** graceful Node file system API alternative ([ad81ef1](https://github.com/sabertazimi/awesome-notes/commit/ad81ef1ff3b8599a145fdabfeec7d320dac5f9e1))
+* **library-web:** Jotai state management ([3a56b95](https://github.com/sabertazimi/awesome-notes/commit/3a56b9521114cb9d282a89b9dc68d210e56aac95))
+* **library-web:** JSON GraphQL mock server ([c420d0b](https://github.com/sabertazimi/awesome-notes/commit/c420d0b7c7434601e2296b67fa8c9faddce9f831))
+* **library-web:** markdown editor ([dfdd225](https://github.com/sabertazimi/awesome-notes/commit/dfdd22563a732d5082693801f201d8f14e31c641))
+* **library-web:** Next.js documentation static site generator ([3c61d0d](https://github.com/sabertazimi/awesome-notes/commit/3c61d0df045a0855586932e012b3a6b0155d8751))
+* **library-web:** Node file system utils ([01952ad](https://github.com/sabertazimi/awesome-notes/commit/01952ad1291650da6f65cd05da4fccc4bbe53ac7))
+* **library-web:** Node standard API alternatives ([0dc576d](https://github.com/sabertazimi/awesome-notes/commit/0dc576db617d79297437446d4f55a02acc7703d5))
+* **library-web:** React hooks for remote data fetching ([88a1fb5](https://github.com/sabertazimi/awesome-notes/commit/88a1fb567ac45bf795f0eaa6f357659ee3fda196))
+* **library-web:** React i18n library ([c041ba0](https://github.com/sabertazimi/awesome-notes/commit/c041ba0cfa73650e8f5a75a16505f8b15c32a3c2))
+* **library-web:** React inspector tools ([d49d289](https://github.com/sabertazimi/awesome-notes/commit/d49d28935077aed82018aab99cc03c824c252847))
+* **library-web:** React Query library ([98a77c0](https://github.com/sabertazimi/awesome-notes/commit/98a77c0344499f1e390b2fe43a6ff1e7556249fa))
+* **library-web:** React toast notifications ([4c00442](https://github.com/sabertazimi/awesome-notes/commit/4c00442a7c44f742b01be1a42f56a67fa0f4744f))
+* **library-web:** React UI library ([e7db005](https://github.com/sabertazimi/awesome-notes/commit/e7db0056d67e915023842c4b908a42da2cebef9b))
+* **library-web:** redux framework ([bb7792e](https://github.com/sabertazimi/awesome-notes/commit/bb7792e20cff1a2c69c4e584e7cd089cd12ca2ce))
+* **library-web:** regular expression online tool ([e0e98d4](https://github.com/sabertazimi/awesome-notes/commit/e0e98d423503352911e8b09f925e6a372bca2ab3))
+* **library-web:** state hook ([f4cd4c6](https://github.com/sabertazimi/awesome-notes/commit/f4cd4c67b42a64c7739c92508000b3f370dc965d))
+* **library-web:** TinyMCE rich text editing library ([78d979f](https://github.com/sabertazimi/awesome-notes/commit/78d979f654252f03a29d127b7db44f3d369ccd7f))
+* **library:** file utils library ([8cf76fe](https://github.com/sabertazimi/awesome-notes/commit/8cf76fe16ae1e7f7cd82cada27a2062db40d9d40))
+* **web-JavaScript:** devtool panel detection ([5ae6f15](https://github.com/sabertazimi/awesome-notes/commit/5ae6f15ce39a66cabce2f141e91eff0b05119d9f))
+* **web-JavaScript:** tree shaking tips ([ee87fc3](https://github.com/sabertazimi/awesome-notes/commit/ee87fc39c1d09245630ed068141157afc14d3c47))
+* **web-JavaScript:** webpack internals ([8a1b2f1](https://github.com/sabertazimi/awesome-notes/commit/8a1b2f1f21501ee15ecf5b69d520d33546d5850c))
+* **web-modules:** CommonJS require execution ([fd99ed4](https://github.com/sabertazimi/awesome-notes/commit/fd99ed4a00b02857decc4b392ac8c90c3f07662a))
+* **web-performance:** window.performance.timing API ([b40e5e0](https://github.com/sabertazimi/awesome-notes/commit/b40e5e005ca19ca12f8792bdfee3f18216224861))
+* **web-React:** context usecase ([c1566ba](https://github.com/sabertazimi/awesome-notes/commit/c1566ba0e8e2626acf2adf743952835d60c1f5db))
+* **web-React:** review React performance tips ([5c96ead](https://github.com/sabertazimi/awesome-notes/commit/5c96eadbabe1141f9f1385fe99bbd87443299c81))
+* **web-TypeScript:** indexed access types ([cbe5d90](https://github.com/sabertazimi/awesome-notes/commit/cbe5d908572493de3a0f3cfbde1c556afde13f98))
+* **web-TypeScript:** symbol and template literal index signature ([6fedf88](https://github.com/sabertazimi/awesome-notes/commit/6fedf88eb968ef900aff83525eed3bda63c260d3))
+* **web-webpack:** webpack CLI UI and profiler plugin ([6e9f75c](https://github.com/sabertazimi/awesome-notes/commit/6e9f75cf69ebcc92c8be1cbdbfe25d78e992d81d))
+
 ## [3.2.0](https://github.com/sabertazimi/awesome-notes/compare/v3.1.0...v3.2.0) (2021-08-26)
 
 
