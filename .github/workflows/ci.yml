@@ -54,8 +54,8 @@ jobs:
           path: build
 
   deploy:
-    runs-on: ubuntu-latest
     name: Deployment
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Download production artifacts
