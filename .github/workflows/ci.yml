@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CI
 
 on:
   push:
@@ -9,44 +9,31 @@ on:
       - main
 
 jobs:
-  build:
-    name: Node ${{ matrix.node-version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-        node-version:
-          - 16
-        architecture:
-          - x64
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
           submodules: true
-          fetch-depth: 0 # Fetch all history for VitePress Last-Updated-Time
-      - name: Initialize git config
-        run: |
-          git config --global core.autocrlf false
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+          fetch-depth: 0
       - name: Setup Node environment
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          architecture: ${{ matrix.architecture }}
+          node-version: 16
+          architecture: x64
           registry-url: https://registry.npmjs.org/
           cache: 'npm'
       - name: Installation
         run: |
           npm ci
+      - name: Linting
+        run: |
+          npm run lint
       - name: Building work
         run: |
-          npm run lint --if-present
-          npm run test --if-present
-          npm run build --if-present
+          npm run build
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
