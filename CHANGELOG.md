@@ -2,6 +2,72 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/sabertazimi/awesome-notes/compare/v3.3.0...v3.4.0) (2021-09-05)
+
+
+### :rocket: Building Work
+
+* **CI-azure:** remove azure pipelines ([3b0d76d](https://github.com/sabertazimi/awesome-notes/commit/3b0d76decb42605394a0a4678dc5040b4700dd3e))
+* **CI:** format code ([d5c5126](https://github.com/sabertazimi/awesome-notes/commit/d5c51267666f39896ca83464ca5728d549b9f531))
+* **CI:** remove redundant artifacts stage ([66b90c2](https://github.com/sabertazimi/awesome-notes/commit/66b90c2e12f531e0f6af525e54e520175695f872))
+* **CI:** remove redundant stage ([c86e106](https://github.com/sabertazimi/awesome-notes/commit/c86e1066f0953fbcac3de67117419dd36c072ee4))
+
+
+### :sparkles: Today I Learned
+
+* **design pattern:** front end domain driven design guide ([fd1bd33](https://github.com/sabertazimi/awesome-notes/commit/fd1bd332b6d995cc8d20fbcff3372688891b3b69))
+* **design pattern:** inject deps into context API ([b5be056](https://github.com/sabertazimi/awesome-notes/commit/b5be056dc003103bb990c5ffc29e91b12302a658))
+* **git:** git `rev-list` command ([89ce892](https://github.com/sabertazimi/awesome-notes/commit/89ce8926129bce5e2eb7b4c2eee40d3012440acf))
+* **library-web:** cypress axe integration library ([f389caa](https://github.com/sabertazimi/awesome-notes/commit/f389caadfdb2b8f13540595d5888a667655f279a))
+* **library-web:** data mock library ([6f6b603](https://github.com/sabertazimi/awesome-notes/commit/6f6b6039b823f413dbff36c4a79eccee7c5db430))
+* **library-web:** domain parser ([725ee38](https://github.com/sabertazimi/awesome-notes/commit/725ee38f1f04b8c4482b8dcef91283c20a8cee5f))
+* **library-web:** Formik library ([ced6715](https://github.com/sabertazimi/awesome-notes/commit/ced6715a550dad1d18aba1582c90d95548701aa2))
+* **library-web:** formula library ([cfc7a33](https://github.com/sabertazimi/awesome-notes/commit/cfc7a3368e454a6481dc9b0b337efa5a0cb693f4))
+* **library-web:** http data mock library ([c2e1b72](https://github.com/sabertazimi/awesome-notes/commit/c2e1b72160dc3638353d88be52905cfe1d1c27e2))
+* **library-web:** Node server solution ([1570e4c](https://github.com/sabertazimi/awesome-notes/commit/1570e4cb3bb010adc64d676006f29d3d652406d2))
+* **library-web:** parallax library ([a171440](https://github.com/sabertazimi/awesome-notes/commit/a17144018486dd9ec22a9ac7eb19330d8259aab1))
+* **library-web:** React Redux toolkit library ([030d3f1](https://github.com/sabertazimi/awesome-notes/commit/030d3f191d7ed36ace8653d41991e43b609c5783))
+* **library-web:** redux reselect library ([8115e45](https://github.com/sabertazimi/awesome-notes/commit/8115e459cd83cee22fc95847694fc11b5f9576af))
+* **library-web:** tailwind classes merge utility ([ec3fa92](https://github.com/sabertazimi/awesome-notes/commit/ec3fa9296a681e6907fd6e563e73983039ea75cb))
+* **library-web:** TypeScript utility types ([aef2bdc](https://github.com/sabertazimi/awesome-notes/commit/aef2bdcb22bda7419237ec478a8a666ed40ff5cd))
+* **library-web:** universal headless automation tool ([7248d1b](https://github.com/sabertazimi/awesome-notes/commit/7248d1becefc0b3674fb47000035f4ee728a69d2))
+* **library-web:** universal solution for miniapp ([508e7b6](https://github.com/sabertazimi/awesome-notes/commit/508e7b6751cea5bf2a30d03ad5f72603d7bf9af0))
+* **library-web:** Vue composition utilities ([8acac51](https://github.com/sabertazimi/awesome-notes/commit/8acac511c4ecce043bd7fb19151e584609dac9a0))
+* **web-a11y:** a11y usage rule ([8d53bbb](https://github.com/sabertazimi/awesome-notes/commit/8d53bbb5a3025e0330e8bdb7501930c19b9143da))
+* **web-a11y:** WAI-ARIA example ([711e2fd](https://github.com/sabertazimi/awesome-notes/commit/711e2fd574e3b19b38803d098f9814f6195e52d2))
+* **web-css:** review sticky footer ([1eaa963](https://github.com/sabertazimi/awesome-notes/commit/1eaa963046bc074a652daf022295d49e838435a6))
+* **web-css:** timeline and steps css style ([448069c](https://github.com/sabertazimi/awesome-notes/commit/448069cf4ed18f04a81f4a606317a172c8a3fe1c))
+* **web-JavaScript:** clear memory leak ([40e940f](https://github.com/sabertazimi/awesome-notes/commit/40e940f588deb3ee56fce0ad8b793ad497629993))
+* **web-JavaScript:** ES2022 class static block ([36d06f4](https://github.com/sabertazimi/awesome-notes/commit/36d06f4fded91a84b646974a5669cf4f45323880))
+* **web-JavaScript:** memorize async function with `Promise` ([57fc6d3](https://github.com/sabertazimi/awesome-notes/commit/57fc6d395027a60b447506bb28627ac862dcdf4e))
+* **web-JavaScript:** V8 garbage collection mechanism ([53579f0](https://github.com/sabertazimi/awesome-notes/commit/53579f0269f8e9ed7fb9b21f4cc2c159b609e84f))
+* **web-JavaScript:** webpack devtool source map config ([7198c23](https://github.com/sabertazimi/awesome-notes/commit/7198c234d6368b876045712bfd35d35d97c61759))
+* **web-network:** QUIC protocol ([32d793f](https://github.com/sabertazimi/awesome-notes/commit/32d793fe58ca4202fed17f8d4b3312e36c8bb86e))
+* **web-network:** review HTTPS ([af266cc](https://github.com/sabertazimi/awesome-notes/commit/af266cc1393ff2a64b97b353cc818219ed485d23))
+* **web-React:** code splitting in create-react-app ([92306ef](https://github.com/sabertazimi/awesome-notes/commit/92306ef49c1d038a15f00f6e4288b6b038ea4b16))
+* **web-React:** compound components ([1466645](https://github.com/sabertazimi/awesome-notes/commit/1466645450f10db1ceaef21c4581eb100939ca98))
+* **web-React:** context API to avoid prop drilling ([5f829f6](https://github.com/sabertazimi/awesome-notes/commit/5f829f654184abc91f2a33fe14eb6d6526090e22))
+* **web-React:** context API use case for AuthProvider ([48cb6e2](https://github.com/sabertazimi/awesome-notes/commit/48cb6e2cfb57820d5560ac8fcf75106044ae67cd))
+* **web-React:** disable source map generation in CRA ([e6adf25](https://github.com/sabertazimi/awesome-notes/commit/e6adf25250fc1289cfaedc78e5ed796eb08dea7f))
+* **web-React:** server state management ([254a265](https://github.com/sabertazimi/awesome-notes/commit/254a265b3d2c86b16afe8fcac03e593e6e158c39))
+* **web-security:** review XSS, CSRF and DDoS ([bbb6569](https://github.com/sabertazimi/awesome-notes/commit/bbb6569710c1f02fec3fd1016087e1304ee96f47))
+* **web-webpack:** advanced webpack chunks splitting configuration ([643b6b2](https://github.com/sabertazimi/awesome-notes/commit/643b6b2820e364e7a05cb34dee088ec02068b541))
+* **web-webpack:** CSS tree shaking plugin ([4b6bda5](https://github.com/sabertazimi/awesome-notes/commit/4b6bda5404280d62edbf1e9ff0d75f8e025a2475))
+* **web-webpack:** detailed webpack chunks splitting configuration ([dcfbcac](https://github.com/sabertazimi/awesome-notes/commit/dcfbcac778306d6becb2da96f7baa806f635b6f8))
+* **web-webpack:** improve webpack build performance ([cc9cfa1](https://github.com/sabertazimi/awesome-notes/commit/cc9cfa1c54cf64823e3d20072cc1b5363f7b0d4f))
+* **web-webpack:** resolve tsconfig plugin ([4e245e1](https://github.com/sabertazimi/awesome-notes/commit/4e245e13e6856eff284617cb9af4413ac2cac2e3))
+* **web-webpack:** split chunks vendor search path ([c3bceac](https://github.com/sabertazimi/awesome-notes/commit/c3bceac74f7ea0aaceb1b2e1d1f72d59628c5cfb))
+* **web-webpack:** split runtime chunk ([430403f](https://github.com/sabertazimi/awesome-notes/commit/430403fd9955b68f6e16d2ae0a6b9a1c54c35191))
+* **web-webpack:** webpack 5 cache feature ([8a44704](https://github.com/sabertazimi/awesome-notes/commit/8a44704739467479228806156c0f12e07ab67811))
+* **web-webpack:** webpack caching for modern browser ([dc156c5](https://github.com/sabertazimi/awesome-notes/commit/dc156c587ad22812c7b1bc99e51355884f57bfb1))
+* **web-webpack:** webpack minimize configuration ([8ade6db](https://github.com/sabertazimi/awesome-notes/commit/8ade6dba6588af7087c86f703e3007d5aaf614f0))
+* **web-webpack:** webpack optimization guide ([d0f8e23](https://github.com/sabertazimi/awesome-notes/commit/d0f8e233f20c716e87b3f711844758bdf1d81923))
+
+
+### :sparkles: Features
+
+* **tags:** add tags metadata ([962a99e](https://github.com/sabertazimi/awesome-notes/commit/962a99e6e911f6c80f7a3f13d9519bf3c8986772))
+
 ## [3.3.0](https://github.com/sabertazimi/awesome-notes/compare/v3.2.0...v3.3.0) (2021-08-31)
 
 
