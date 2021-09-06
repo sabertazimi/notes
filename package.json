@@ -39,7 +39,7 @@
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.6",
-    "@docusaurus/preset-classic": "2.0.0-beta.5",
+    "@docusaurus/preset-classic": "2.0.0-beta.6",
     "@easyops-cn/docusaurus-search-local": "^0.19.1",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
