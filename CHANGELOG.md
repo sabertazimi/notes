@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/sabertazimi/awesome-notes/compare/v3.4.0...v3.4.1) (2021-09-09)
+
+
+### :rocket: Building Work
+
+* **bot:** add configuration for todo bot ([f9f361b](https://github.com/sabertazimi/awesome-notes/commit/f9f361b2bbd873bdfd43873fab9737ded4ec489f))
+* **bot:** change keyword for todo bot ([b397889](https://github.com/sabertazimi/awesome-notes/commit/b397889577f31b8037b76a5a3ec9ac0121e1dad8))
+* **CI-CodeQL:** change crontab time ([636570e](https://github.com/sabertazimi/awesome-notes/commit/636570ee0ea22292941021b3a3e1833c4896ebf7))
+* **CI-CodeQL:** setup CodeQL analysis ([faed98f](https://github.com/sabertazimi/awesome-notes/commit/faed98f2fdca3f4b1515b128112358e89b88edc4))
+* **dependabot:** change versioning strategy ([6e89768](https://github.com/sabertazimi/awesome-notes/commit/6e89768bc7bc32ef589db1919da20f2d138d1cd7))
+* **deps-dev:** bump @docusaurus/module-type-aliases ([#126](https://github.com/sabertazimi/awesome-notes/issues/126)) ([e12ab29](https://github.com/sabertazimi/awesome-notes/commit/e12ab29b88a0120441da7d6143a93c69fe3ca54f))
+* **deps-dev:** bump @types/react from 17.0.19 to 17.0.20 ([#125](https://github.com/sabertazimi/awesome-notes/issues/125)) ([375c511](https://github.com/sabertazimi/awesome-notes/commit/375c5115446c9e605f255f06d39d15fc10a8cd16))
+* **deps-dev:** bump prettier from 2.3.2 to 2.4.0 ([#129](https://github.com/sabertazimi/awesome-notes/issues/129)) ([7338a2a](https://github.com/sabertazimi/awesome-notes/commit/7338a2a3f1de2781031a20294716235aa21fc11b))
+* **deps:** bump @docusaurus/core from 2.0.0-beta.5 to 2.0.0-beta.6 ([#123](https://github.com/sabertazimi/awesome-notes/issues/123)) ([a69f13f](https://github.com/sabertazimi/awesome-notes/commit/a69f13f16259eeb2719c9e1c345acad6219cbb4d))
+* **deps:** bump @docusaurus/preset-classic ([#124](https://github.com/sabertazimi/awesome-notes/issues/124)) ([7404338](https://github.com/sabertazimi/awesome-notes/commit/7404338ff8c6d9c9b0ed1e5ca18b1dc690f9b7eb))
+
+
+### :zap: Performance
+
+* **images:** optimize images via ImgBot ([#130](https://github.com/sabertazimi/awesome-notes/issues/130)) ([91e081b](https://github.com/sabertazimi/awesome-notes/commit/91e081b71594180de3df2d6daa6317029da18043))
+
+
+### :sparkles: Today I Learned
+
+* **library-web:** cutting edge state management library ([f1a8693](https://github.com/sabertazimi/awesome-notes/commit/f1a869304a2deee3878f7e2b03ebf6edf9526507))
+* **library-web:** tracing based JavaScript assertions ([85d359e](https://github.com/sabertazimi/awesome-notes/commit/85d359eeac1bd5a619fea32745628a097a95d9c5))
+* **library-web:** utils ([9566a41](https://github.com/sabertazimi/awesome-notes/commit/9566a41d14cd8e53d747967013eca146dc2a5582))
+* **linux:** linux fonts installation and configuration ([839a46e](https://github.com/sabertazimi/awesome-notes/commit/839a46ed59f1b0eb5032c65592ba0b601f06f5cc))
+* **linux:** list available fonts ([2592945](https://github.com/sabertazimi/awesome-notes/commit/25929452145315cfeb5a1b60cea9e631c1c5fd94))
+* **web-authentication:** review token authentication ([b16600b](https://github.com/sabertazimi/awesome-notes/commit/b16600b2ab2bc0b783c1d2e4ff94bb7d7a6bf2eb))
+* **web-CSS:** mobile viewport utils ([bd8deee](https://github.com/sabertazimi/awesome-notes/commit/bd8deeeafc5473b64f0f00b08bc9a93f326a3705))
+* **web-CSS:** prefers media query ([b13e951](https://github.com/sabertazimi/awesome-notes/commit/b13e95154fc165e6cb062e51ca550d1e54c92d09))
+* **web-fingerprint:** information to generate fingerprint ([593c806](https://github.com/sabertazimi/awesome-notes/commit/593c806a1d869c7495f7664d864a44290d80b06f))
+* **web-HTML:** a11y for figure and figcaption ([139d80d](https://github.com/sabertazimi/awesome-notes/commit/139d80d157f0893ccdc5b55efc502ac11d1a99ee))
+* **web-JavaScript:** CSR, SSR, SSG and ISR ([4db1ad5](https://github.com/sabertazimi/awesome-notes/commit/4db1ad5800cbc354bef065fb4f9ca6ded33bcab2))
+* **web-JavaScript:** review DOM API ([e6b35ec](https://github.com/sabertazimi/awesome-notes/commit/e6b35ec1999a0af9a976701c7f64f023534d4d98))
+* **web-Node:** corepack tool (package manager manager) ([e040b88](https://github.com/sabertazimi/awesome-notes/commit/e040b889a27af77b07c10e41e20fd872633bbb2d))
+* **web-Node:** Node version manager usage ([a11f028](https://github.com/sabertazimi/awesome-notes/commit/a11f02844d9c7dacb94b6c89bf316e10c4cbb638))
+* **web-Node:** simple web crawler ([9095e2d](https://github.com/sabertazimi/awesome-notes/commit/9095e2d62cac91dd12f7af5792bcf924425b9a59))
+* **web-React:** event listener hook ([e1f3c5c](https://github.com/sabertazimi/awesome-notes/commit/e1f3c5c3f537451f0452f63ac0cfd6dfe5a0a471))
+* **web-React:** review complex hooks form ([5fe9819](https://github.com/sabertazimi/awesome-notes/commit/5fe981947a28ae0f1555e86bb9f00c0f598c2993))
+* **web-React:** server state management ([41c2405](https://github.com/sabertazimi/awesome-notes/commit/41c24053f4094eb6e30a2c7e980dad8e7cc3edb2))
+* **web-Redux:** action creator in Redux toolkit ([a265827](https://github.com/sabertazimi/awesome-notes/commit/a2658275a3ca9bb2701b13778b4161895e58e7d8))
+* **web-Redux:** basic RTK query usage ([e087a12](https://github.com/sabertazimi/awesome-notes/commit/e087a127d7072e7771f682361aa387d7c54ac274))
+* **web-Redux:** case and match reducer execution order ([9227a61](https://github.com/sabertazimi/awesome-notes/commit/9227a61e62d7cb2483f70ab8a147786dde0e3e6a))
+* **web-Redux:** curry function for implementing Redux middleware ([488d661](https://github.com/sabertazimi/awesome-notes/commit/488d66127bfc6a5c96092763789d648e6c13d8ff))
+* **web-Redux:** data selectors ([3b4ef0a](https://github.com/sabertazimi/awesome-notes/commit/3b4ef0a10a73307c3fa87ab64096b91108a58b21))
+* **web-Redux:** ImmerJS in `createReducer` and `createSlice` ([ffa12f2](https://github.com/sabertazimi/awesome-notes/commit/ffa12f25bd31230f9e0b9507390b7a89821b1953))
+* **web-Redux:** ImmerJS pitfalls ([1f989af](https://github.com/sabertazimi/awesome-notes/commit/1f989af6fdf100433dfffd9e4e274c5a81d042af))
+* **web-Redux:** memorized selector functions with Reselect ([ffa2946](https://github.com/sabertazimi/awesome-notes/commit/ffa2946de104045e4ecf8f3f221979fa45c8b8b1))
+* **web-Redux:** mutate-style reducer in redux toolkit ([687618e](https://github.com/sabertazimi/awesome-notes/commit/687618e90b0b492a8badb12ea36f4b1ec07466da))
+* **web-Redux:** necessity for Redux ([dcc701c](https://github.com/sabertazimi/awesome-notes/commit/dcc701caee261cc2a5f554e007c72477a17323b3))
+* **web-Redux:** normalize state via `createEntityAdapter` API ([3e928bc](https://github.com/sabertazimi/awesome-notes/commit/3e928bce63251aa74682b1a490ab697b1a487a18))
+* **web-Redux:** only string action types ([d91c92b](https://github.com/sabertazimi/awesome-notes/commit/d91c92bea56d1339a0bc8f386ce02579ab0cd599))
+* **web-Redux:** Redux performance best practice ([a5aa745](https://github.com/sabertazimi/awesome-notes/commit/a5aa74515942262ed1d30d10228e935eb9fb8042))
+* **web-Redux:** Redux slice ([c72eae8](https://github.com/sabertazimi/awesome-notes/commit/c72eae812c4c635caf7d1d04c19aca9a1a76f7b7))
+* **web-Redux:** review Thunk ([45468fa](https://github.com/sabertazimi/awesome-notes/commit/45468fa82bbbd7a5e57bb390250cf397089ce4f6))
+* **web-semver:** pre-release semantic version ([11d439c](https://github.com/sabertazimi/awesome-notes/commit/11d439c3418d73459dd5daf7f28d719fae5c87ba))
+* **web-webpack:** set `maxSize` for chunks splitting ([586bb61](https://github.com/sabertazimi/awesome-notes/commit/586bb61219c360664496b87c357ada4e6e9c6a44))
+
 ## [3.4.0](https://github.com/sabertazimi/awesome-notes/compare/v3.3.0...v3.4.0) (2021-09-05)
 
 
