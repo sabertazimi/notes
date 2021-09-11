@@ -12,7 +12,7 @@
     "prelease": "standard-version --dry-run -s",
     "release": "standard-version -s",
     "serve": "docusaurus serve",
-    "start": "npm run dev"
+    "start": "yarn dev"
   },
   "repository": {
     "type": "git",

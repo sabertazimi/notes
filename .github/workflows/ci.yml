@@ -24,16 +24,16 @@ jobs:
           node-version: 16
           architecture: x64
           registry-url: https://registry.npmjs.org/
-          cache: 'npm'
+          cache: 'yarn'
       - name: Installation
         run: |
-          npm ci
+          yarn
       - name: Linting
         run: |
-          npm run lint
+          yarn lint
       - name: Building work
         run: |
-          npm run build
+          yarn build
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
