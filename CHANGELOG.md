@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/sabertazimi/awesome-notes/compare/v3.4.1...v3.5.0) (2021-09-11)
+
+
+### :sparkles: Features
+
+* **yarn:** switch from npm to yarn 2 ([c46fc82](https://github.com/sabertazimi/awesome-notes/commit/c46fc8273b99c27137fe1b3df5e4dfcf79d7ed31))
+
+
+### :sparkles: Today I Learned
+
+* **library-devops:** GitHub actions ([9d373c7](https://github.com/sabertazimi/awesome-notes/commit/9d373c7995989dc47b14c165e9aaaeac1f05fbfc))
+* **library-devops:** monorepo specific version and changelog tool ([cdb4865](https://github.com/sabertazimi/awesome-notes/commit/cdb486558852460b106100835a4e6cd233a7a2a0))
+* **library-JavaScript:** JavaScript parsers ([32119ad](https://github.com/sabertazimi/awesome-notes/commit/32119ade913defa43816d280ea1654b3fb2eeac4))
+* **library-JavaScript:** RE2 regular expression engine ([02c4517](https://github.com/sabertazimi/awesome-notes/commit/02c4517fef9fb9465fa2e75d5370bce7d6d8f61c))
+* **library-JavaScript:** regular expression string utils ([48c684a](https://github.com/sabertazimi/awesome-notes/commit/48c684adb2025ceb589ec473340096e6a19081fb))
+* **library-React:** React hooks gallery ([d16e6c0](https://github.com/sabertazimi/awesome-notes/commit/d16e6c09d1f0a353b912c42b44e9bda977cbed61))
+* **library-React:** React loading placeholder components ([3997137](https://github.com/sabertazimi/awesome-notes/commit/3997137fccb7fa949548036e882b210b4f9aff12))
+* **library-web:** AST explorer ([1cabb36](https://github.com/sabertazimi/awesome-notes/commit/1cabb36e49d90964d97b97c2f15e12dd0a3fb418))
+* **library-web:** carousel component ([f45daa8](https://github.com/sabertazimi/awesome-notes/commit/f45daa84995969da68ffdb54e2c677adbe863332))
+* **library-web:** local GitHub action runner ([7466f69](https://github.com/sabertazimi/awesome-notes/commit/7466f69d6fb0ddfc1831ad5b0b095962bc690f7e))
+* **library-web:** monorepo project tools ([9217a3d](https://github.com/sabertazimi/awesome-notes/commit/9217a3d4a7d56e68fb4607ebae6d629986828c33))
+* **library-web:** React form components ([5873930](https://github.com/sabertazimi/awesome-notes/commit/5873930146976cddc53ce4a6f774a501b52e7d97))
+* **library-web:** React JSON schema form component ([d60a7e5](https://github.com/sabertazimi/awesome-notes/commit/d60a7e587a77a05b8975cff73274d566fa1f8c3a))
+* **library-web:** React library ([aca1e81](https://github.com/sabertazimi/awesome-notes/commit/aca1e8129c37ecaa8b11dd9a58f5a64a326eb41c))
+* **vim:** NeoVim configuration ([15b7cef](https://github.com/sabertazimi/awesome-notes/commit/15b7cef97313542ba4c16fc3037ab4a67298e687))
+* **web-babel:** correct babel preset modules configuration ([b44c70b](https://github.com/sabertazimi/awesome-notes/commit/b44c70b1f626d180006ab595e5119a045ac71e66))
+* **web-CSS:** fusion effect with CSS filter ([7fa0c17](https://github.com/sabertazimi/awesome-notes/commit/7fa0c1709f568d4e9a7de2adab25495ce5918fc9))
+* **web-i18n:** i18n solution ([0250e2c](https://github.com/sabertazimi/awesome-notes/commit/0250e2cd7036ae5de957bdf21550701be4ea080c))
+* **web-JavaScript:** review strict equal operator ([20472fb](https://github.com/sabertazimi/awesome-notes/commit/20472fb3b04d94e891c7611246ec76d9f1f054b4))
+* **web-JavaScript:** VSCode intellisense for configuration files ([2c606ea](https://github.com/sabertazimi/awesome-notes/commit/2c606ea283f780be9a29effbde00d63528e18d95))
+* **web-Node:** yarn 2 (berry) migration guide ([c46bb77](https://github.com/sabertazimi/awesome-notes/commit/c46bb77cc1c7ffea64797c38a91857853ef8367f))
+* **web-NPM:** NPM dependencies resolution ([7ebd57a](https://github.com/sabertazimi/awesome-notes/commit/7ebd57aa1b7287613c9cf6a442401330d4ddda9a))
+* **web-React:** React performance mental model ([578e8bc](https://github.com/sabertazimi/awesome-notes/commit/578e8bcf12769a6f97fcca7f1435f151bdae96b4))
+* **web-React:** review `React.memo` usage ([b65844f](https://github.com/sabertazimi/awesome-notes/commit/b65844f0b9371039cc03a537b0492ce9894c1e22))
+* **web-security:** review CSRF protection ([25a42f6](https://github.com/sabertazimi/awesome-notes/commit/25a42f6dc736d6aba4b59dedea07d72b62158316))
+* **web-security:** review web authentication ([b98fa77](https://github.com/sabertazimi/awesome-notes/commit/b98fa771f4c7e2deda0fcb966bdbf7e7be431faa))
+* **web-webpack:** capture build erros via `done` hook ([bd5dc54](https://github.com/sabertazimi/awesome-notes/commit/bd5dc54443dc4a81bcc5051270e30f1795d94eef))
+* **web-webpack:** library bundle configuration ([acacc14](https://github.com/sabertazimi/awesome-notes/commit/acacc1414170ef939ea23ce3de09c967469658ab))
+* **web-webpack:** typed custom plugin via JSDoc annotation ([d847462](https://github.com/sabertazimi/awesome-notes/commit/d847462ea58034c3c2565629afa6271b4d4d4e85))
+
+
+### :rocket: Building Work
+
+* **CI:** change to yarn berry ([af85e48](https://github.com/sabertazimi/awesome-notes/commit/af85e487430e3772b552a3db2385bac01f464852))
+* **deps-bot:** add renovate.json ([#131](https://github.com/sabertazimi/awesome-notes/issues/131)) ([1d242b4](https://github.com/sabertazimi/awesome-notes/commit/1d242b4c88f4ef19b4e2d58e577b5e6cc9facb85))
+* **deps-bot:** change semantic commit type ([3d1c771](https://github.com/sabertazimi/awesome-notes/commit/3d1c77151726f7fddf1f4905a7945443dd6a0ac6))
+* **deps-bot:** disable renovate dashboard ([3029f19](https://github.com/sabertazimi/awesome-notes/commit/3029f19c91913ecd7f4a722495980f17885976e9))
+* **deps-bot:** schedule deps bot to weekend ([c8974e7](https://github.com/sabertazimi/awesome-notes/commit/c8974e79ab191e5c97f96c42c383fdd3013edd90))
+* **deps-bot:** setup renovate bot configuration ([f5f4684](https://github.com/sabertazimi/awesome-notes/commit/f5f46840fe0a4ec72b8044ea82980226e844e53d))
+
 ### [3.4.1](https://github.com/sabertazimi/awesome-notes/compare/v3.4.0...v3.4.1) (2021-09-09)
 
 
