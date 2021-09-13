@@ -38,8 +38,8 @@
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.6",
-    "@docusaurus/preset-classic": "2.0.0-beta.6",
+    "@docusaurus/core": "^2.0.0-beta.6",
+    "@docusaurus/preset-classic": "^2.0.0-beta.6",
     "@easyops-cn/docusaurus-search-local": "^0.19.1",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
@@ -52,16 +52,16 @@
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.6",
-    "@tsconfig/docusaurus": "1.0.4",
-    "@types/react": "17.0.20",
-    "@types/react-helmet": "6.1.2",
-    "@types/react-router-dom": "5.1.8",
-    "markdownlint-cli": "0.28.1",
-    "prettier": "2.4.0",
-    "standard-version": "9.3.1",
-    "typescript": "4.4.3",
-    "webpack": "5.52.1"
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.6",
+    "@tsconfig/docusaurus": "^1.0.4",
+    "@types/react": "^17.0.20",
+    "@types/react-helmet": "^6.1.2",
+    "@types/react-router-dom": "^5.1.8",
+    "markdownlint-cli": "^0.28.1",
+    "prettier": "^2.4.0",
+    "standard-version": "^9.3.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.1"
   },
   "browserslist": {
     "production": [
