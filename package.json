@@ -10,7 +10,7 @@
     "format": "prettier --write notes/**/*.{md,mdx}",
     "lint": "yarn lint:notes && yarn lint:style",
     "lint:notes": "markdownlint -i node_modules notes",
-    "lint:style": "eslint --fix --ext .ts,.tsx ./src && stylelint --fix ./src/**/*.css",
+    "lint:style": "eslint --fix --ext .ts,.tsx ./src && stylelint --fix ./src/**/*.css ./notes/**/*.md",
     "lint:type-check": "tsc --noEmit",
     "prelease": "standard-version --dry-run -s",
     "release": "standard-version -s",
