@@ -8,8 +8,8 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Simply write notes with Markdown/MDX.
-        Even embed JSX components into Markdown thanks to MDX.
+        Simply write notes with Markdown/MDX. Even embed JSX components into
+        Markdown thanks to MDX.
       </>
     ),
   },
@@ -18,8 +18,8 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Extend or customize notes layout by reusing React.
-        Notes can be extended while reusing the same header and footer.
+        Extend or customize notes layout by reusing React. Notes can be extended
+        while reusing the same header and footer.
       </>
     ),
   },
@@ -28,8 +28,8 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        All notes come from everyday I learned.
-        Deploy to both Github Pages and GitBook IO.
+        All notes come from everyday I learned. Deploy to both Github Pages and
+        GitBook IO.
       </>
     ),
   },

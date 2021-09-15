@@ -1,4 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -18,10 +19,10 @@
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
   display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
