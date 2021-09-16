@@ -19,7 +19,7 @@ module.exports = {
         docs: {
           path: 'notes',
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.config.js'),
           editUrl: 'https://github.com/sabertazimi/awesome-notes/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
