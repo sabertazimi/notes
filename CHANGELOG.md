@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.2](https://github.com/sabertazimi/awesome-notes/compare/v3.5.1...v3.5.2) (2021-09-23)
+
+
+### :sparkles: Today I Learned
+
+* **git-commit:** git commitizen tools ([dd0fe66](https://github.com/sabertazimi/awesome-notes/commit/dd0fe66677d6d0741fb2764ff81129c1c24c9a77))
+* **library-web:** avatar image library ([18c412d](https://github.com/sabertazimi/awesome-notes/commit/18c412d060a59ac7bdca06aa09db8efe64beae58))
+* **library-web:** command P interface widget ([a8c771d](https://github.com/sabertazimi/awesome-notes/commit/a8c771de74bd524493b699ab98a764281a268c5f))
+* **library-web:** NPM publish action ([d8cb7a0](https://github.com/sabertazimi/awesome-notes/commit/d8cb7a05b6e7a149ee4c69ed7fa4f88a36ac35d3))
+* **library-web:** pino logger middleware ([1507384](https://github.com/sabertazimi/awesome-notes/commit/15073849d00bd3ffd7066b00e0982a8a75f0a80e))
+* **library-web:** React SVG icons library ([5e11757](https://github.com/sabertazimi/awesome-notes/commit/5e117573019b15bb4a235b7075baa112133db1ea))
+* **library-web:** web driver framework ([04f30bf](https://github.com/sabertazimi/awesome-notes/commit/04f30bf61cc6459ef597ee39b2fc0363e7e9b7f5))
+* **linux-zsh:** zsh basic setup configuration ([d8440b1](https://github.com/sabertazimi/awesome-notes/commit/d8440b12268d36c9bbc6c4f77ecc0777cd47af59))
+* **web-JavaScript:** cypress E2E testing example ([8d229a7](https://github.com/sabertazimi/awesome-notes/commit/8d229a7777ffe09567ad47b852944dd65385fb80))
+* **web-JavaScript:** review web animation API ([6c2a748](https://github.com/sabertazimi/awesome-notes/commit/6c2a7482649007d9742f34fc84c00a224c512325))
+* **web-JavaScript:** user event for testing-library ([a323574](https://github.com/sabertazimi/awesome-notes/commit/a323574114e1af12157d72c75d4e0fe5d414932d))
+* **web-JavaScript:** web animation API abstraction ([399cd10](https://github.com/sabertazimi/awesome-notes/commit/399cd1093d084ad54142d868a9549fecd3940c06))
+* **web-React:** complex custom `useStore` hook ([b12e7f0](https://github.com/sabertazimi/awesome-notes/commit/b12e7f08bbe36263a25c7b3f49ca5c813b3678a3))
+* **web-Vue:** review Vue design pattern ([4b12c26](https://github.com/sabertazimi/awesome-notes/commit/4b12c269ce3ac5a3935bd68e4be85001e61e3ca0))
+
 ### [3.5.1](https://github.com/sabertazimi/awesome-notes/compare/v3.5.0...v3.5.1) (2021-09-21)
 
 
