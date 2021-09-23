@@ -1,11 +1,14 @@
 import clsx from 'clsx';
 import React from 'react';
+import MountainSVG from '../../static/img/undraw_docusaurus_mountain.svg';
+import TreeSVG from '../../static/img/undraw_docusaurus_tree.svg';
+import ReactSVG from '../../static/img/undraw_docusaurus_react.svg';
 import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
     title: 'Powered by Markdown',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: MountainSVG,
     description: (
       <>
         Simply write notes with Markdown/MDX. Even embed JSX components into
@@ -15,7 +18,7 @@ const FeatureList = [
   },
   {
     title: 'Built Using React',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    Svg: TreeSVG,
     description: (
       <>
         Extend or customize notes layout by reusing React. Notes can be extended
@@ -25,7 +28,7 @@ const FeatureList = [
   },
   {
     title: 'Today I Learned',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    Svg: ReactSVG,
     description: (
       <>
         All notes come from everyday I learned. Deploy to both Github Pages and
