@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.4](https://github.com/sabertazimi/awesome-notes/compare/v3.5.3...v3.5.4) (2021-10-08)
+
+
+### :sparkles: Today I Learned
+
+* **web-HTML:** embed media best practice ([30bd462](https://github.com/sabertazimi/awesome-notes/commit/30bd462ce8b85b2c0f020ad077dd84bdfece3b21))
+* **web-JavaScript:** pros and cons of ES6 `Proxy` ([07f2e69](https://github.com/sabertazimi/awesome-notes/commit/07f2e693a01ca2475b8a4e5654337797603922b6))
+* **web-JavaScript:** service worker guide ([7c793f9](https://github.com/sabertazimi/awesome-notes/commit/7c793f9289d89505e227bda8f59b9a86cd3a8179))
+* **web-library:** headless CMS system ([7c7e612](https://github.com/sabertazimi/awesome-notes/commit/7c7e61256f1194bbc4adc33578a20820a339b28b))
+* **web-library:** pdf.js ([53c42a0](https://github.com/sabertazimi/awesome-notes/commit/53c42a0580d771c561a848188363c14fe47410c9))
+* **web-library:** React boilerplate ([8c7e549](https://github.com/sabertazimi/awesome-notes/commit/8c7e54975fa2c6aa6acf146be5e6f845831e5d8f))
+* **web-library:** UnifiedJS ([118240b](https://github.com/sabertazimi/awesome-notes/commit/118240b49581f56afbda8590cc919786149e20ab))
+* **web-React:** review HOC and render props ([4f56588](https://github.com/sabertazimi/awesome-notes/commit/4f5658843f17753d807485d4ffa1fc52c2868d7d))
+* **web-React:** template-free reuse pattern ([4c47195](https://github.com/sabertazimi/awesome-notes/commit/4c47195105b2b62945c3ffa6090e51963b217c18))
+* **web-Vue:** `computed` internal (via `createEffect`) ([91e10a3](https://github.com/sabertazimi/awesome-notes/commit/91e10a3b8fa21ef9f726d6e3857db5dd2313d9bd))
+* **web-Vue:** `createEffect` composition internal ([ffde9c8](https://github.com/sabertazimi/awesome-notes/commit/ffde9c83b64d94cc024d03ff7d8b845f85fc49b7))
+* **web-Vue:** `ref` internal (small reactive) ([c3359f2](https://github.com/sabertazimi/awesome-notes/commit/c3359f28e6d3857688bc220ca38873f7bf95a8cf))
+* **web-Vue:** basic targetMap/depsMap for reactivity ([397f830](https://github.com/sabertazimi/awesome-notes/commit/397f83056fc16b876f42c378b8bc16ba2adc936c))
+* **web-Vue:** caveat for Vue 2 reactivity ([fd46478](https://github.com/sabertazimi/awesome-notes/commit/fd46478e443a212183ebc8a905e3f6e5ea048d77))
+* **web-Vue:** composition API basis ([b0c39aa](https://github.com/sabertazimi/awesome-notes/commit/b0c39aaf0ede43dc82c826d40a7d6bf7e2417ae7))
+* **web-Vue:** hoist static template blocks ([489354f](https://github.com/sabertazimi/awesome-notes/commit/489354f460ff80fdfbf3c3769ac8f99eed525c5e))
+* **web-Vue:** lifecycle hooks for composition API ([5600ae5](https://github.com/sabertazimi/awesome-notes/commit/5600ae5a62b2203e91c8ed035e787d9143fb571e))
+* **web-Vue:** performant `ref` ([745a46d](https://github.com/sabertazimi/awesome-notes/commit/745a46dac3003a7ec94f4f98074f78b727bf0788))
+* **web-Vue:** rename `deps` to `effects` ([4faf230](https://github.com/sabertazimi/awesome-notes/commit/4faf230f014af2f01ee88045adf47b4eae79adab))
+* **web-Vue:** scoped slot ([10d19f5](https://github.com/sabertazimi/awesome-notes/commit/10d19f5b93924a341e779ab158527c346c4b792b))
+* **web-Vue:** scoped slots data direction ([2237ad8](https://github.com/sabertazimi/awesome-notes/commit/2237ad8fa008f04d1553545fdfb6face26c34ebc))
+* **web-Vue:** SFC with script setup ([f2d6424](https://github.com/sabertazimi/awesome-notes/commit/f2d6424b774cfd3ec49c0876b447991869cb8222))
+* **web-Vue:** simple reactive value implementation ([9b565d9](https://github.com/sabertazimi/awesome-notes/commit/9b565d9b55899fedec61b507cf743b7308422768))
+* **web-Vue:** Vue `reactivity` package structure ([4b50cb2](https://github.com/sabertazimi/awesome-notes/commit/4b50cb266b780bfb31ca45835f0391cc7b5f5256))
+
 ### [3.5.3](https://github.com/sabertazimi/awesome-notes/compare/v3.5.2...v3.5.3) (2021-10-03)
 
 
