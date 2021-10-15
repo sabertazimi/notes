@@ -8,7 +8,7 @@
     "clear": "docusaurus clear",
     "dev": "docusaurus start",
     "format": "prettier --write notes/**/*.{md,mdx}",
-    "lint": "yarn lint:notes && yarn lint:style",
+    "lint": "yarn lint:notes && yarn lint:style && yarn lint:type-check",
     "lint:notes": "markdownlint -i node_modules ./notes && stylelint ./notes/**/*.md",
     "lint:style": "eslint --ext .ts,.tsx ./src && stylelint ./src/**/*.css",
     "lint:type-check": "tsc --noEmit",
