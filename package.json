@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.5.2",
-    "@dg-scripts/stylelint-config": "^5.5.0",
+    "@dg-scripts/stylelint-config": "^5.5.2",
     "@docusaurus/module-type-aliases": "2.0.0-beta.6",
     "@tsconfig/docusaurus": "^1.0.4",
     "@types/react": "^17.0.27",
