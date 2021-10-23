@@ -42,7 +42,7 @@ function Feature({ Svg, title, description }): JSX.Element {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <Svg className={styles.feature} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
