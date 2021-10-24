@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.5](https://github.com/sabertazimi/awesome-notes/compare/v3.5.4...v3.5.5) (2021-10-24)
+
+
+### :rocket: Building Work
+
+* **deps:** bundle bod deps into single PR ([f8aeb3c](https://github.com/sabertazimi/awesome-notes/commit/f8aeb3c73c9babea558454b6318ccf01f1cd990a))
+
+
+### :sparkles: Today I Learned
+
+* **devops-library:** Google release bot ([01d9646](https://github.com/sabertazimi/awesome-notes/commit/01d9646c0aa989776801ace366ec880d14979b60))
+* **web-CSS:** GitHub link component ([55230ad](https://github.com/sabertazimi/awesome-notes/commit/55230ad54b389ceec93720e620ee9492bd5341a9))
+* **web-CSS:** modern CSS features (2021) ([b719cc0](https://github.com/sabertazimi/awesome-notes/commit/b719cc0fef393fbb6e4550fd1b1f271c8e18bfbb))
+* **web-JavaScript:** `performance.getEntriesByType` API ([574e947](https://github.com/sabertazimi/awesome-notes/commit/574e94731101fbf88b4e798719de9bd6fcad75b0))
+* **web-JavaScript:** CORS - cross origin resource sharing ([df57ff9](https://github.com/sabertazimi/awesome-notes/commit/df57ff9d982b309670e9614c5a2bad7b3f3c13c5))
+* **web-JavaScript:** performance observer ([0ff9aa6](https://github.com/sabertazimi/awesome-notes/commit/0ff9aa6d533ee11f81ef80c1ee286a091c816dd9))
+* **web-JavaScript:** review DOM manipulation performance ([1150e17](https://github.com/sabertazimi/awesome-notes/commit/1150e17e3aeb5ea4d1e7f615a50c7d3d2595d0f4))
+* **web-JavaScript:** review web worker ([28bfbb8](https://github.com/sabertazimi/awesome-notes/commit/28bfbb86015e64bf54bafe8e100b192af7ffbf97))
+* **web-JavaScript:** web worker performance ([df904dd](https://github.com/sabertazimi/awesome-notes/commit/df904dd6085b0d476be1c0f954aa46fc5e4f2e5d))
+* **web-JavaScript:** webpack compression plugin ([f123cab](https://github.com/sabertazimi/awesome-notes/commit/f123cab3dd39333dee780eb2ace6ce197b61aec7))
+* **web-JavaScript:** webpack JavaScript obfuscator plugin ([acd1892](https://github.com/sabertazimi/awesome-notes/commit/acd1892eddf72842b216fe54f5c91b56f51eb616))
+* **web-library:** 3D parallax effect ([43e795f](https://github.com/sabertazimi/awesome-notes/commit/43e795f5bc1808452dd83cf193457bb845283a25))
+* **web-library:** animation and canvas engine ([71ec3f5](https://github.com/sabertazimi/awesome-notes/commit/71ec3f5a50aa0878a952eb91ae0d5ae20c7e5ccd))
+* **web-library:** CSS-in-JS and cookie library ([9eba125](https://github.com/sabertazimi/awesome-notes/commit/9eba1251987356b8f492c5655282fb722d64a0db))
+* **web-library:** FFmpeg CLI tool ([adea7ba](https://github.com/sabertazimi/awesome-notes/commit/adea7ba8256ff4a5072d30f9111b4a6591fa379b))
+* **web-library:** full stack serverless framework ([f1458a1](https://github.com/sabertazimi/awesome-notes/commit/f1458a1cb55661b9447f9783967e74a349db598b))
+* **web-library:** function memoization library ([2abf986](https://github.com/sabertazimi/awesome-notes/commit/2abf986bf03da512b1e382cef15134b5736a589c))
+* **web-library:** image zoomable previewer like Medium ([a4e0abe](https://github.com/sabertazimi/awesome-notes/commit/a4e0abe1b1562fb91352bae5dfa268ba9385d670))
+* **web-library:** remove outdated library ([0ff0471](https://github.com/sabertazimi/awesome-notes/commit/0ff0471c6da1749d807a479b8286174f1e9b2a11))
+* **web-library:** shell.js ([a592636](https://github.com/sabertazimi/awesome-notes/commit/a592636fa75c38f9c492e1f2ef074dcaeeb9b09b))
+* **web-library:** terminal library ([ec5d281](https://github.com/sabertazimi/awesome-notes/commit/ec5d281eef1e28edb631a61a70ea6cc5734be1ff))
+* **web-library:** Vue comment system ([7c6b116](https://github.com/sabertazimi/awesome-notes/commit/7c6b116176e93eaed4e0cbbaeadcc4e4ac501223))
+* **web-TypeScript:** `Awaited` utility type in TypeScript 4.5 ([7f5ef52](https://github.com/sabertazimi/awesome-notes/commit/7f5ef52cd700dcf1b18bd6c35df26d2fe1261b84))
+* **web-TypeScript:** covariance and contravariance ([a2088fe](https://github.com/sabertazimi/awesome-notes/commit/a2088feab79ed763468c49c9619e733ce1fae4f5))
+* **web-Vue:** reactivity API ([220ecd3](https://github.com/sabertazimi/awesome-notes/commit/220ecd3529eeb5be64a171ed166a6b0db9ba2d30))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update docusaurus monorepo to v2.0.0-beta.8 ([5f658ba](https://github.com/sabertazimi/awesome-notes/commit/5f658ba362e08a42aa67bf6e12d58d4e5ed48a60))
+* **lint:** add type check ([#135](https://github.com/sabertazimi/awesome-notes/issues/135)) ([4d28e7a](https://github.com/sabertazimi/awesome-notes/commit/4d28e7a21d44443b52a517b712f7198271a722cc))
+
 ### [3.5.4](https://github.com/sabertazimi/awesome-notes/compare/v3.5.3...v3.5.4) (2021-10-08)
 
 
