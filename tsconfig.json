@@ -1,5 +1,8 @@
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "include": ["src"],
-  "exclude": ["node_modules", "build", ".yarn"]
+  "exclude": ["node_modules", "build", ".yarn"],
+  "compilerOptions": {
+    "skipLibCheck": true
+  }
 }
