@@ -54,7 +54,7 @@
     "@docusaurus/module-type-aliases": "2.0.0-beta.9",
     "@tsconfig/docusaurus": "^1.0.4",
     "eslint": "^8.2.0",
-    "markdownlint-cli": "^0.29.0",
+    "markdownlint-cli": "^0.30.0",
     "nodejieba": "^2.5.2",
     "prettier": "^2.4.1",
     "standard-version": "^9.3.2",
