@@ -53,7 +53,7 @@
     "@dg-scripts/stylelint-config": "^5.5.10",
     "@docusaurus/module-type-aliases": "2.0.0-beta.9",
     "@tsconfig/docusaurus": "^1.0.4",
-    "eslint": "^8.3.0",
+    "eslint": "^8.4.0",
     "markdownlint-cli": "^0.30.0",
     "nodejieba": "^2.5.2",
     "prettier": "^2.5.0",
