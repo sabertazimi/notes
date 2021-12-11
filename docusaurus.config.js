@@ -56,10 +56,10 @@ module.exports = {
       hideOnScroll: true,
       items: [
         {
-          to: 'README',
+          to: 'intro',
           label: 'Notes',
           position: 'left',
-          activeBasePath: 'README',
+          activeBasePath: 'intro',
         },
         {
           to: 'computerScience/algorithms/algorithmsBasicNotes',
@@ -142,7 +142,7 @@ module.exports = {
           title: 'Notes',
           items: [
             {
-              to: '/README',
+              to: '/intro',
               label: 'Getting Started',
             },
             {
