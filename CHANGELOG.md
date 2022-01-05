@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.6](https://github.com/sabertazimi/awesome-notes/compare/v3.5.5...v3.5.6) (2022-01-05)
+
+
+### :rocket: Building Work
+
+* **deps-bot:** disable lockfile maintenance ([6d27673](https://github.com/sabertazimi/awesome-notes/commit/6d27673ffd6c76530678082467e755ebb6ce9813))
+* **yarn:** bump yarn from v3.0.2 to v3.1.0 ([d657bee](https://github.com/sabertazimi/awesome-notes/commit/d657bee94375af3cca1fcd0efdb0285920be7517))
+
+
+### :sparkles: Today I Learned
+
+* **git-GitHub:** dependabot configuration ([a58a114](https://github.com/sabertazimi/awesome-notes/commit/a58a114dea1b44c273ebcc7de001613e2aa2e7f0))
+* **git:** allow edits from maintainers when PRs ([34e567d](https://github.com/sabertazimi/awesome-notes/commit/34e567d5e49ad50d6392c062a57716506ba85985))
+* **git:** git reflog ([0262d15](https://github.com/sabertazimi/awesome-notes/commit/0262d15681166d51e101adb732328cedf0141a56))
+* **web-CSS:** custom bootstrap with dart-sass ([ac58f26](https://github.com/sabertazimi/awesome-notes/commit/ac58f2630d62bbdde0ebfa2dc573e712ac42684d))
+* **web-CSS:** pseudo elements for custom form components ([8cd87c9](https://github.com/sabertazimi/awesome-notes/commit/8cd87c93744389f8785ff319569595e64c0be7f3))
+* **web-JavaScript:** canvas real world case ([b77b9a0](https://github.com/sabertazimi/awesome-notes/commit/b77b9a0687d03324de7182872b29dd47bf203b2a))
+* **web-JavaScript:** media session API ([c9d7e5d](https://github.com/sabertazimi/awesome-notes/commit/c9d7e5da051e10ce5acc30ec2a4da75e4c8d38b4))
+* **web-library:** Bull distributed jobs library ([335330c](https://github.com/sabertazimi/awesome-notes/commit/335330c5df02ea807759ecb90fb3bc68d5c66794))
+* **web-library:** cursor library ([6ff3954](https://github.com/sabertazimi/awesome-notes/commit/6ff395422f9b826b0b0cff3b2710148cf60e97fc))
+* **web-library:** data tables and grids library ([3b34a6f](https://github.com/sabertazimi/awesome-notes/commit/3b34a6f6b8d04c07766a64bd5611ffe1de7c6eaf))
+* **web-library:** date and locale library ([97f7ddf](https://github.com/sabertazimi/awesome-notes/commit/97f7ddf6ee159d6bfd6035f00c1f640560f8ff81))
+* **web-library:** Graph theory network visualization library ([9629195](https://github.com/sabertazimi/awesome-notes/commit/962919500b811f239ad2fb96b8ac312ccfec35d2))
+* **web-library:** logging library ([a5f447e](https://github.com/sabertazimi/awesome-notes/commit/a5f447e908b035d2f1cfe94c8ad92afa0fa62d45))
+* **web-library:** markdown editor ([3470aaa](https://github.com/sabertazimi/awesome-notes/commit/3470aaa5f5bc7d42a21a7f75a6d1e6ef48afc128))
+* **web-library:** material UI data table ([444c2cd](https://github.com/sabertazimi/awesome-notes/commit/444c2cde843e0750a73d7c4773e1a5273aa21a44))
+* **web-library:** Modern from ByteDance ([6e2271b](https://github.com/sabertazimi/awesome-notes/commit/6e2271bff762b7c55f5286e56b609dd625304933))
+* **web-library:** multi window layout manager ([fbb3ea6](https://github.com/sabertazimi/awesome-notes/commit/fbb3ea6ed265d6a44bf49d1f9b5686a9167c4fc0))
+* **web-NPM:** remove `node-sass` proxy, ship to `dart-sass` (dart2js) ([824851c](https://github.com/sabertazimi/awesome-notes/commit/824851c5c473c78daec896e2c223c786b9c3575b))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.20.0 ([#193](https://github.com/sabertazimi/awesome-notes/issues/193)) ([9a9d885](https://github.com/sabertazimi/awesome-notes/commit/9a9d885fc27aa7ac3076be38c4b8ae187154a6ac))
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.21.0 ([#202](https://github.com/sabertazimi/awesome-notes/issues/202)) ([c5618e3](https://github.com/sabertazimi/awesome-notes/commit/c5618e386745070222ac451bff4d0f9099b5707f))
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.21.1 ([#205](https://github.com/sabertazimi/awesome-notes/issues/205)) ([3008da8](https://github.com/sabertazimi/awesome-notes/commit/3008da86662a06d895c7718eb573d3e2356dcd9e))
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.21.4 ([#208](https://github.com/sabertazimi/awesome-notes/issues/208)) ([36708cd](https://github.com/sabertazimi/awesome-notes/commit/36708cda0bf8e2c82b5f76ace6cbd193f27ecd39))
+* **deps:** update docusaurus monorepo to v2.0.0-beta.13 ([#206](https://github.com/sabertazimi/awesome-notes/issues/206)) ([a367fb9](https://github.com/sabertazimi/awesome-notes/commit/a367fb955535ddd08c7dacbd0f50448277c633fe))
+* **deps:** update docusaurus monorepo to v2.0.0-beta.14 ([#211](https://github.com/sabertazimi/awesome-notes/issues/211)) ([e6df034](https://github.com/sabertazimi/awesome-notes/commit/e6df034d09275a2acba1fa584fa7c36a7c295252))
+* **deps:** update docusaurus monorepo to v2.0.0-beta.9 ([#190](https://github.com/sabertazimi/awesome-notes/issues/190)) ([cff93da](https://github.com/sabertazimi/awesome-notes/commit/cff93da3aabfaf2ccda94c9c0eb88b16c35ac138))
+
 ### [3.5.5](https://github.com/sabertazimi/awesome-notes/compare/v3.5.4...v3.5.5) (2021-10-24)
 
 
