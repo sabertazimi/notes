@@ -58,7 +58,7 @@
     "nodejieba": "^2.6.0",
     "prettier": "^2.5.1",
     "standard-version": "^9.3.2",
-    "stylelint": "^14.3.0",
+    "stylelint": "^14.5.0",
     "typescript": "^4.5.5"
   },
   "browserslist": {
