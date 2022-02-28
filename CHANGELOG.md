@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.7](https://github.com/sabertazimi/awesome-notes/compare/v3.5.6...v3.5.7) (2022-02-28)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update docusaurus monorepo to v2.0.0-beta.15 ([#219](https://github.com/sabertazimi/awesome-notes/issues/219)) ([415137f](https://github.com/sabertazimi/awesome-notes/commit/415137f13069d48d27fb34e6673cf15d2eaa2008))
+* **deps:** update docusaurus monorepo to v2.0.0-beta.16 ([#233](https://github.com/sabertazimi/awesome-notes/issues/233)) ([a44c844](https://github.com/sabertazimi/awesome-notes/commit/a44c84488c941d1bfbd811be388c2f4255939de4))
+
+
+### :sparkles: Today I Learned
+
+* **cs-math:** Riichi tips ([#242](https://github.com/sabertazimi/awesome-notes/issues/242)) ([9ad1cc7](https://github.com/sabertazimi/awesome-notes/commit/9ad1cc7d94fe7b8dfe7f4d262f1af19541cb14ba))
+* **web-library:** fake.js ([#240](https://github.com/sabertazimi/awesome-notes/issues/240)) ([8028a9a](https://github.com/sabertazimi/awesome-notes/commit/8028a9a7276708980893545726ce78a2d16aa315))
+* **web-library:** ui kits ([80d5d38](https://github.com/sabertazimi/awesome-notes/commit/80d5d388ec3bac484d3395e1e7e2b9c4ff043c80))
+
 ### [3.5.6](https://github.com/sabertazimi/awesome-notes/compare/v3.5.5...v3.5.6) (2022-01-05)
 
 
