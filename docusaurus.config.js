@@ -219,6 +219,7 @@ module.exports = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
       additionalLanguages: [
         'cmake',
         'csharp',
@@ -236,6 +237,7 @@ module.exports = {
         'php',
         'regex',
         'ruby',
+        'rust',
         'scala',
         'scheme',
         'swift',
