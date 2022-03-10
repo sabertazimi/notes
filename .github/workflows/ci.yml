@@ -33,7 +33,7 @@ jobs:
           yarn lint
 
   build:
-    name: Building on Node ${{ matrix.node-version }} ${{ matrix.os }} ${{ matrix.architecture }}
+    name: Building
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
