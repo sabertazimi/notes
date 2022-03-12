@@ -58,7 +58,6 @@
     "@tsconfig/docusaurus": "^1.0.4",
     "eslint": "^8.11.0",
     "markdownlint-cli": "^0.31.1",
-    "nodejieba": "^2.6.0",
     "prettier": "^2.5.1",
     "standard-version": "^9.3.2",
     "stylelint": "^14.5.3",
