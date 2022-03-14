@@ -2,6 +2,25 @@
   "name": "awesome-notes",
   "version": "3.5.7",
   "description": "Personal Learning Notes (TIL)",
+  "keywords": [
+    "CS",
+    "Notes",
+    "Docusaurus",
+    "GitBook",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Web",
+    "TIL"
+  ],
+  "license": "MIT",
+  "author": "sabertazimi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
+  },
   "main": "README.md",
   "scripts": {
     "build": "docusaurus build",
@@ -20,25 +39,6 @@
     "serve": "docusaurus serve",
     "start": "yarn dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
-  },
-  "keywords": [
-    "CS",
-    "Notes",
-    "Docusaurus",
-    "GitBook",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Web",
-    "TIL"
-  ],
-  "author": "sabertazimi",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
   },
