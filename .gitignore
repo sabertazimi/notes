@@ -80,7 +80,8 @@ yarn-error.log
 .yarn-integrity
 
 # IDE files
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 # Docusaurus generated files
 .docusaurus
