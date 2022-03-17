@@ -48,7 +48,7 @@ notes
 │   │   ├── CSAPP.md
 │   │   └── operatingSystemsBasicNotes.md
 │   └── virtualization
-│       └── virtBasicNotes.md
+│       └── virtualBasicNotes.md
 ├── language
 │   ├── assembly
 │   │   ├── assemblyBasicNotes.md
