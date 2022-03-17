@@ -34,7 +34,7 @@
     "lint:style": "eslint --ext .ts,.tsx ./src && stylelint ./src/**/*.css",
     "lint:style:fix": "eslint --ext .ts,.tsx ./src --fix && stylelint ./src/**/*.css --fix",
     "lint:type-check": "tsc --noEmit",
-    "prelease": "standard-version --dry-run -s",
+    "changesets": "standard-version --dry-run -s",
     "release": "standard-version -s",
     "serve": "docusaurus serve",
     "start": "yarn dev"
