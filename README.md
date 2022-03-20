@@ -27,97 +27,138 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 ## Notes
 
-```bash
-notes
-├── computerScience
-│   ├── algorithms
-│   │   ├── algorithmsBasicNotes.md
-│   │   └── ojBasicNotes.md
-│   ├── architecture
-│   │   ├── archBasicNotes.md
-│   │   └── graphProcessingBasicNotes.md
-│   ├── compilers
-│   │   └── compilersBasicNotes.md
-│   ├── database
-│   │   └── databaseBasicNotes.md
-│   ├── latex
-│   │   └── latexBasicNotes.md
-│   ├── network
-│   │   └── networkBasicNotes.md
-│   ├── operatingSystems
-│   │   ├── CSAPP.md
-│   │   └── operatingSystemsBasicNotes.md
-│   └── virtualization
-│       └── virtualBasicNotes.md
-├── language
-│   ├── assembly
-│   │   ├── assemblyBasicNotes.md
-│   ├── c
-│   │   ├── cBasicNotes.md
-│   ├── cpp
-│   │   └── cppBasicNotes.md
-│   ├── go
-│   │   └── goBasicNotes.md
-│   ├── haskell
-│   │   └── haskellBasicNotes.md
-│   ├── java
-│   │   └── javaBasicNotes.md
-│   ├── python
-│   │   └── pythonBasicNotes.md
-│   └── verilog
-│       └── verilogBasicNotes.md
-├── programming
-│   ├── android
-│   │   └── androidBasicNotes.md
-│   ├── devops
-│   │   ├── cleanCodeBasicNotes.md
-│   │   ├── designPatternsBasicNotes.md
-│   │   └── softwareTestingBasicNotes.md
-│   ├── functionalProgramming
-│   │   └── functionalProgrammingBasicNotes.md
-│   ├── game
-│   │   └── gameDesignBasicNotes.md
-│   ├── linux
-│   │   └── linuxBasicNotes.md
-│   └── tools
-│       ├── buildTools
-│       │   └── CMakeBasicNotes.md
-│       ├── git
-│       │   └── gitBasicNotes.md
-│       └── vim
-│           └── vimBasicNotes.md
-└── web
-    ├── angular
-    │   └── angularBasicNotes.md
-    ├── css
-    │   ├── bootstrapBasicNotes.md
-    │   ├── cssAdvancedNotes.md
-    │   ├── cssBasicNotes.md
-    │   └── sassBasicNotes.md
-    ├── frameworks
-    │   ├── electronBasicNotes.md
-    │   ├── jQueryBasicNotes.md
-    │   └── libraryBasicNotes.md
-    ├── html
-    │   └── htmlBasicNotes.md
-    ├── javascript
-    │   ├── javascriptAdvancedNotes.md
-    │   ├── javascriptBasicNotes.md
-    │   └── typescriptBasicNotes.md
-    ├── node
-    │   ├── expressBasicNotes.md
-    │   ├── graphqlBasicNotes.md
-    │   ├── messageQueueBasicNotes.md
-    │   └── nodeBasicNotes.md
-    ├── react
-    │   ├── reactBasicNotes.md
-    │   ├── reactRouterBasicNotes.md
-    │   └── reduxBasicNotes.md
-    ├── security
-    │   └── securityBasicNotes.md
-    └── vue
-        └── vueBasicNotes.md
-```
+### ComputerScience
+
+#### Algorithms
+
+- [Algorithm Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/algorithms/algorithmsBasicNotes)
+- [OJ Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/algorithms/ojBasicNotes)
+
+#### Architecture
+
+- [Architecture Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/architecture/archBasicNotes)
+- [Graph Processing Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/architecture/graphProcessingBasicNotes)
+
+#### Compilers
+
+- [Compiler Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/compilers/compilersBasicNotes)
+
+#### Database
+
+- [Database Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/database/databaseBasicNotes)
+
+#### LaTeX
+
+- [LaTeX Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/latex/latexBasicNotes)
+
+#### Math
+
+- [Math Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/math/mathBasicNotes)
+
+#### Network
+
+- [Computer Networking Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/network/networkBasicNotes)
+
+#### Operating Systems
+
+- [Computer Systems: A Programmer's Perspective Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/operatingSystems/CSAPP)
+- [Operating System Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/operatingSystems/operatingSystemsBasicNotes)
+
+#### Virtualization
+
+- [Virtualization Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/virtualization/virtualBasicNotes)
+
+### Programming
+
+#### Android
+
+- [Android Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/android/androidBasicNotes)
+
+#### DevOps
+
+- [Clean Code Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/cleanCodeBasicNotes)
+- [Design Patterns Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/designPatternsBasicNotes)
+- [Software Testing Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/softwareTestingBasicNotes)
+
+#### Functional Programming
+
+- [Functional Programming Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/functionalProgramming/functionalProgrammingBasicNotes)
+
+#### Game
+
+- [Game Design Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/game/gameDesignBasicNotes)
+
+#### Linux
+
+- [Linux Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/linux/linuxBasicNotes)
+
+#### Tools
+
+- [CMake Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/tools/buildTools/CMakeBasicNotes)
+- [Git Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/tools/git/gitBasicNotes)
+- [Vim Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/tools/vim/vimBasicNotes)
+
+### Language
+
+- [Assembly Basic Notes](https://sabertazimi.github.io/awesome-notes/language/assembly/assemblyBasicNotes)
+- [C Basic Notes](https://sabertazimi.github.io/awesome-notes/language/c/cBasicNotes)
+- [C++ Basic Notes](https://sabertazimi.github.io/awesome-notes/language/cpp/cppBasicNotes)
+- [Go Basic Notes](https://sabertazimi.github.io/awesome-notes/language/go/goBasicNotes)
+- [Haskell Basic Notes](https://sabertazimi.github.io/awesome-notes/language/haskell/haskellBasicNotes)
+- [Java Basic Notes](https://sabertazimi.github.io/awesome-notes/language/java/javaBasicNotes)
+- [Python Basic Notes](https://sabertazimi.github.io/awesome-notes/language/python/pythonBasicNotes)
+- [Rust Basic Notes](https://sabertazimi.github.io/awesome-notes/language/rust/rustBasicNotes)
+- [Verilog Basic Notes](https://sabertazimi.github.io/awesome-notes/language/verilog/verilogBasicNotes)
+
+### Web
+
+#### Angular
+
+- [Angular Basic Notes](https://sabertazimi.github.io/awesome-notes/web/angular/angularBasicNotes)
+
+#### CSS
+
+- [Bootstrap Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/bootstrapBasicNotes)
+- [CSS Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssBasicNotes)
+- [CSS Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssAdvancedNotes)
+- [Sass Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/sassBasicNotes)
+
+#### Frameworks
+
+- [Electron Basic Notes](https://sabertazimi.github.io/awesome-notes/web/frameworks/electronBasicNotes)
+- [jQuery Basic Notes](https://sabertazimi.github.io/awesome-notes/web/frameworks/jQueryBasicNotes)
+- [Library List](https://sabertazimi.github.io/awesome-notes/web/frameworks/libraryBasicNotes)
+
+#### HTML
+
+- [HTML Basic Notes](https://sabertazimi.github.io/awesome-notes/web/html/htmlBasicNotes)
+
+#### JavaScript
+
+- [JavaScript Basic Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptBasicNotes)
+- [JavaScript Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptAdvancedNotes)
+- [TypeScript Basic Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/typescriptBasicNotes)
+
+#### Node
+
+- [Express Basic Notes](https://sabertazimi.github.io/awesome-notes/web/node/expressBasicNotes)
+- [GraphQL Basic Notes](https://sabertazimi.github.io/awesome-notes/web/node/graphqlBasicNotes)
+- [Message Queue Basic Notes](https://sabertazimi.github.io/awesome-notes/web/node/messageQueueBasicNotes)
+- [Node Basic Notes](https://sabertazimi.github.io/awesome-notes/web/node/nodeBasicNotes)
+
+#### React
+
+- [React Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactBasicNotes)
+- [React Router Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactRouterBasicNotes)
+- [Redux Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reduxBasicNotes)
+
+#### Security
+
+- [Security Basic Notes](https://sabertazimi.github.io/awesome-notes/web/security/securityBasicNotes)
+
+#### Vue
+
+- [Vue Basic Notes](https://sabertazimi.github.io/awesome-notes/web/vue/vueBasicNotes)
 
 ## License
 
