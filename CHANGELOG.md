@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.1](https://github.com/sabertazimi/awesome-notes/compare/v3.7.0...v3.7.1) (2022-04-03)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update react monorepo to v18 ([#277](https://github.com/sabertazimi/awesome-notes/issues/277)) ([4034b55](https://github.com/sabertazimi/awesome-notes/commit/4034b5547cb4806a2ebbe1fa9963a7bfd057f333))
+
+
+### :sparkles: Today I Learned
+
+* **css-clip:** text background clip ([e4f1c1c](https://github.com/sabertazimi/awesome-notes/commit/e4f1c1c81600819ad165bd3f81fdb6e5d864fa8a))
+* **css-filter:** `backdrop-filter` for blur background effect ([c0ef87a](https://github.com/sabertazimi/awesome-notes/commit/c0ef87acb7e7961cdf898d49544d5d4d2f7c7189))
+* **css-media query:** pointer and hover media query ([99521fe](https://github.com/sabertazimi/awesome-notes/commit/99521fe3bed4a7b7eb00e5da46bcfdf5131f1f72))
+* **css:** `backdrop-filter` for frosted glass effect ([03ab1e2](https://github.com/sabertazimi/awesome-notes/commit/03ab1e2aa8186393f6013e2279d133a46654d78b))
+* **design patterns:** review SOLID principles ([ab9eb20](https://github.com/sabertazimi/awesome-notes/commit/ab9eb20ebc37b032f259dc2cac7d154a38a8e1db))
+* **js-es6:** class private member polyfill ([0257266](https://github.com/sabertazimi/awesome-notes/commit/0257266f49a84977f0755899dd00e00437ea9e06))
+* **js-modules:** review JavaScript legacy modules pattern ([78de1b7](https://github.com/sabertazimi/awesome-notes/commit/78de1b7da5cf6e8f192c4a1b901ef132b6c74f05))
+* **js-modules:** UMD module pattern ([1476a7f](https://github.com/sabertazimi/awesome-notes/commit/1476a7fc317792c801328f8d6d9921ba3919a4b2))
+* **js-sort:** locale string sorting. ([ceacad9](https://github.com/sabertazimi/awesome-notes/commit/ceacad99f414e37c0e2ba4bc731c276f57aa65d4))
+* **js:** event loop ([#275](https://github.com/sabertazimi/awesome-notes/issues/275)) ([1c597f4](https://github.com/sabertazimi/awesome-notes/commit/1c597f4632cc70dce993aa8e3e6e3a132cd7fb77))
+* **js:** layout and paint ([#276](https://github.com/sabertazimi/awesome-notes/issues/276)) ([a649b64](https://github.com/sabertazimi/awesome-notes/commit/a649b641456828984f27b4c721faeb4b7d67a361))
+* **js:** React codemod tool ([3b41066](https://github.com/sabertazimi/awesome-notes/commit/3b41066c25ebea493749773ef3e43b7176457c44))
+* **node-fs:** modern promise-based fs API ([a6c7e04](https://github.com/sabertazimi/awesome-notes/commit/a6c7e040635b0cbdd2faab960fcbfb394ac49aa7))
+* **react-core:** interrupted rendering ([be300e8](https://github.com/sabertazimi/awesome-notes/commit/be300e8f575782e73793933fe2b1b495661c1bb8))
+* **react-core:** reconciler rendering recovery by scheduler ([2ff1744](https://github.com/sabertazimi/awesome-notes/commit/2ff1744286df767257b9cede889f1ee0c694b246))
+* **react-fiber:** `fiber.dependencies` for Context API ([95068cb](https://github.com/sabertazimi/awesome-notes/commit/95068cb276a33c73f4c73c1f7133b39d5f7a6fd5))
+* **react-fiber:** Fiber type ([6042d8d](https://github.com/sabertazimi/awesome-notes/commit/6042d8d5efe42ca112ed6d9bcba08682a9d55172))
+* **react-hooks:** `Hooks` memoizedState for `FunctionFiber` memoizedState. ([1a0f3e1](https://github.com/sabertazimi/awesome-notes/commit/1a0f3e12836a22f3d4b9cf7895beaa2bd5a179d1))
+* **react-hooks:** `react-hook-form` core logic ([ed3aebc](https://github.com/sabertazimi/awesome-notes/commit/ed3aebc9611991dd5272fb05ba8313dc25e84af4))
+* **react-performance:** avoid children components re-rendering ([2007164](https://github.com/sabertazimi/awesome-notes/commit/2007164e92518ed912eaee777e23f90f7999be97))
+* **react-performance:** children components re-rendering problem ([f485fe0](https://github.com/sabertazimi/awesome-notes/commit/f485fe06b0b1bcdc3fc484bdbd1285eed45d2fdd))
+* **react-reconciler:** `mountChildFibers` ([#272](https://github.com/sabertazimi/awesome-notes/issues/272)) ([3918595](https://github.com/sabertazimi/awesome-notes/commit/39185958625696b7846b5ce68204772456a3c90f))
+* **react-reconciler:** class and function component memoizedState calculation ([f3aa59b](https://github.com/sabertazimi/awesome-notes/commit/f3aa59b0e9c01b2432c3166aebd5056a7bceb389))
+* **react-reconciler:** memoized state to ReactElement ([#274](https://github.com/sabertazimi/awesome-notes/issues/274)) ([c95b15b](https://github.com/sabertazimi/awesome-notes/commit/c95b15b56bcce8dd0fa74351bbd81f6f1e037481))
+* **react-reconciler:** recursive version of `performUnitOfWork` ([f4c3108](https://github.com/sabertazimi/awesome-notes/commit/f4c310825c50086fb73cd9308552dc9abbb0259b))
+* **react-reconciler:** reuse fiber when bailout ([#273](https://github.com/sabertazimi/awesome-notes/issues/273)) ([5b7a7f5](https://github.com/sabertazimi/awesome-notes/commit/5b7a7f5bf77ba6db9522205c17a30d218995ae80))
+* **react-reonciler:** `bailoutOnAlreadyFinishedWork` entrance judgement ([551518d](https://github.com/sabertazimi/awesome-notes/commit/551518d398c34fd01616bd1d0e90e7c5ae150ea6))
+* **react-testing:** React testing tutorials ([2430933](https://github.com/sabertazimi/awesome-notes/commit/24309333965941269380c698aa80e3a584c6c823))
+* **react:** `React.StrictMode` highlight potential problems ([7278d01](https://github.com/sabertazimi/awesome-notes/commit/7278d01b4a06d5d9b71c6066d061b2c58fd225f4))
+* **react:** review components lifecycles ([9b8bfbf](https://github.com/sabertazimi/awesome-notes/commit/9b8bfbf0de82d13f0a41d943ea4c4b3678384355))
+* **ts-JSON:** resolve JSON module for TypeScript ([729a662](https://github.com/sabertazimi/awesome-notes/commit/729a6628c683befb456ececbfe15146afdaa72c0))
+* **web-library:** Airbnb visualization components ([bd7c77d](https://github.com/sabertazimi/awesome-notes/commit/bd7c77d46440fe18ff01f6fdc8266157e9bce185))
+* **web-library:** Apache ECharts library ([bba3884](https://github.com/sabertazimi/awesome-notes/commit/bba3884c7cdacbe518175781f55e560e41935a15))
+* **web-library:** audio.ts ([777031f](https://github.com/sabertazimi/awesome-notes/commit/777031f980fa440a5eb252d61c434af985afaeea))
+* **web-library:** CSS borders/corners/dividers/shapes generators ([405554e](https://github.com/sabertazimi/awesome-notes/commit/405554e4763e907838d2b09855aea83eb774bed6))
+* **web-library:** draggable grid layout ([a724934](https://github.com/sabertazimi/awesome-notes/commit/a72493443aeadef9d18c4581cb621997aa1c701c))
+* **web-library:** file utils ([506013b](https://github.com/sabertazimi/awesome-notes/commit/506013b85b26ae122d5252b8c229d763438f58e3))
+* **web-library:** HappyDOM library ([74dd0a4](https://github.com/sabertazimi/awesome-notes/commit/74dd0a4863e54410715809c2ade85585ebb43611))
+* **web-library:** instance search library ([a69278a](https://github.com/sabertazimi/awesome-notes/commit/a69278aff24f37620c5211c9df8894b34e7e5a86))
+* **web-library:** list virtualized library ([abfa20c](https://github.com/sabertazimi/awesome-notes/commit/abfa20c7a9b91adddf0a624bf1ab888a739e4655))
+* **web-library:** macOS and Windows style components ([529ce11](https://github.com/sabertazimi/awesome-notes/commit/529ce119bd211fbf65545fc735509c5e546b2245))
+* **web-library:** micro-interaction animation ([ed474bd](https://github.com/sabertazimi/awesome-notes/commit/ed474bdaf22eb3fbacd00b5e7faed205b4cde232))
+* **web-library:** photo view library ([1119f08](https://github.com/sabertazimi/awesome-notes/commit/1119f08c2d6cc96fff2a3691f14f378e424f092b))
+* **web-library:** rating component ([37de11f](https://github.com/sabertazimi/awesome-notes/commit/37de11fcd0fda29234f1e759fad2243f6ab10afc))
+* **web-library:** React image cropping tool ([fbba8b9](https://github.com/sabertazimi/awesome-notes/commit/fbba8b95522f635b4f8d216dc3af6758aa4e5a9c))
+* **web-library:** React roulette component ([fea8bfb](https://github.com/sabertazimi/awesome-notes/commit/fea8bfb86e1229d67ab41d4fcb82b872f15e723c))
+* **web-library:** React scroll parallax library ([bf29fba](https://github.com/sabertazimi/awesome-notes/commit/bf29fba73706b1c757740b0bb6b17dda74d709c4))
+* **web-library:** React stepper guide component ([07414c1](https://github.com/sabertazimi/awesome-notes/commit/07414c10987119e7aaa5635d160c685e2af09117))
+* **web-library:** React table hooks ([df9ef8d](https://github.com/sabertazimi/awesome-notes/commit/df9ef8d47e317a09172dfc78766060915efbdac0))
+* **web-library:** ReduxObservable library ([3e65d59](https://github.com/sabertazimi/awesome-notes/commit/3e65d59329613ebcddae1e3eb01f68132a3153fa))
+* **web-library:** simple vanilla router ([cc048d3](https://github.com/sabertazimi/awesome-notes/commit/cc048d3164e9f7ba8b5fc8078111d2737d6fc311))
+* **web-library:** styled semantic HTML tag library ([5a53238](https://github.com/sabertazimi/awesome-notes/commit/5a53238e7bf8ee180d9a68e1f03a5604ca8fffd8))
+* **web-library:** UI frameworks ([c6564fa](https://github.com/sabertazimi/awesome-notes/commit/c6564fa521c198c7ab1a85a2f31429066db6b70f))
+
 ## [3.7.0](https://github.com/sabertazimi/awesome-notes/compare/v3.6.1...v3.7.0) (2022-03-30)
 
 
