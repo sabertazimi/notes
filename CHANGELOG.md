@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/sabertazimi/awesome-notes/compare/v3.7.1...v3.8.0) (2022-04-05)
+
+
+### :sparkles: Features
+
+* **vue:** start Vue source code learning ([3764737](https://github.com/sabertazimi/awesome-notes/commit/37647372a17a6689887f967d699bbd9528bde0ae))
+
+
+### :sparkles: Today I Learned
+
+* **design patterns:** merge contents ([f5c8e54](https://github.com/sabertazimi/awesome-notes/commit/f5c8e541448e9048d05aa97fd3368975ce431db5))
+* **devops-library:** changesets ([8d60421](https://github.com/sabertazimi/awesome-notes/commit/8d60421337c2d58aaaa53e3c3f1296d5ae2af5d8))
+* **js-eventloop:** simple model for browser eventloop ([d8c631d](https://github.com/sabertazimi/awesome-notes/commit/d8c631d737c649eee222d8372f6ec4afd30237da))
+* **js-proxy:** ES6 proxy ([206f26c](https://github.com/sabertazimi/awesome-notes/commit/206f26c58da7abe5c3a7d86a597fe6aea493f7f2))
+* **js-pwa:** service worker caching strategy ([61a056f](https://github.com/sabertazimi/awesome-notes/commit/61a056f91b7a6ee1166881f6e3bdb09695ffc954))
+* **rust:** add books list ([dc22f2e](https://github.com/sabertazimi/awesome-notes/commit/dc22f2e85f457a6ba1194f196ebbc5c8666acc97))
+* **vue-compiler:** basic compilation workflow ([bbb5f64](https://github.com/sabertazimi/awesome-notes/commit/bbb5f646078af46154fd89ad5e600c091ce6d9a0))
+* **vue-extend:** Vue `extend` global API ([143464c](https://github.com/sabertazimi/awesome-notes/commit/143464c491e5afba1709214d7095227efed8d21b))
+* **vue-lifecycle:** lifecycle hooks execution details ([d130f62](https://github.com/sabertazimi/awesome-notes/commit/d130f6202ed7b041da82be1624d840e0ae507091))
+* **vue-lifecycle:** Vue lifecycle diagram ([dfbe34b](https://github.com/sabertazimi/awesome-notes/commit/dfbe34b64267f99cc4c56611b33eedb1f221042e))
+* **vue-lifecycle:** Vue mounting workflow ([007d416](https://github.com/sabertazimi/awesome-notes/commit/007d416def2a2a52a8e4cfb671542795b97832f0))
+* **vue-mount:** remove dev statistics ([85ce21f](https://github.com/sabertazimi/awesome-notes/commit/85ce21f9c6c188f74b8026a7fa45d6e1d0683049))
+* **vue-options:** Vue options API internals ([8d52fe0](https://github.com/sabertazimi/awesome-notes/commit/8d52fe0de5a118b4c5cf148031a1a5ea008d8b68))
+* **vue-prototype:** vue prototype setup path ([e90187d](https://github.com/sabertazimi/awesome-notes/commit/e90187d08410f7b2387dea65dc0e6e9a7245e423))
+* **vue-reactive:** collect deps to `Observer` ([f992035](https://github.com/sabertazimi/awesome-notes/commit/f992035804acbb5ca44397058c1fac86b44b671d))
+* **vue-reactive:** computed props and computed watcher ([4d20ad2](https://github.com/sabertazimi/awesome-notes/commit/4d20ad297df3be17a56f84823583e454233b10bc))
+* **vue-reactive:** Vue `Observer` class ([3671de9](https://github.com/sabertazimi/awesome-notes/commit/3671de9c92220af2d4f9b70d837c45e5b230df1d))
+* **vue-reactive:** Vue watcher options API ([2c762f7](https://github.com/sabertazimi/awesome-notes/commit/2c762f7b5ccfde5558574e2ea9756cc532320e06))
+* **vue-render:** Vue render functions initialization ([c726610](https://github.com/sabertazimi/awesome-notes/commit/c7266107ce1e22e23d2bd393741e57fcdb5640d8))
+* **vue-router:** Vue router reactivity ([68dc514](https://github.com/sabertazimi/awesome-notes/commit/68dc514603c4e542e3181131fcb426247e5e19ac))
+* **vue-template:** mark static template node ([4edca49](https://github.com/sabertazimi/awesome-notes/commit/4edca492d80a8c4b486cef68533ef7a3d987f3f3))
+* **vue-transition:** transition component ([700ff09](https://github.com/sabertazimi/awesome-notes/commit/700ff093f13d2a1f4d11fd8951d4d4353d4409c1))
+* **vue-transition:** transition group component ([58a6eb6](https://github.com/sabertazimi/awesome-notes/commit/58a6eb6ac6756340158bdbcd0199bad022606065))
+* **vue-transition:** vue transition Internals ([153dd40](https://github.com/sabertazimi/awesome-notes/commit/153dd407ec667d975d9aa4979bd9b69b6f3742de))
+* **vue-vdom:** component vnode creation ([3cea299](https://github.com/sabertazimi/awesome-notes/commit/3cea299f858f2216067d9408f849df9f4e774d96))
+* **vue-vdom:** create children recursively via `init` hook ([70594a2](https://github.com/sabertazimi/awesome-notes/commit/70594a2cd28a312dfccfaca453f710d4715e764a))
+* **vue-vdom:** main logic of `createElement` function ([80b9922](https://github.com/sabertazimi/awesome-notes/commit/80b992213e0a098268bae00a2b4f87572a5a8ea3))
+* **vue-vdom:** Vue `VNode` constructor ([fd62729](https://github.com/sabertazimi/awesome-notes/commit/fd62729424fe0da730a0beae93593431a4e71f41))
+* **vue-vuex:** legacy Vuex rely on computed watchers ([7d0bfda](https://github.com/sabertazimi/awesome-notes/commit/7d0bfdaf955b7ec76649a3f0864a8b125dc568f0))
+* **vue:** `<keep-alive>` built-in component ([73626fc](https://github.com/sabertazimi/awesome-notes/commit/73626fc4cbb95c03ac1152f05a7701fa795f3367))
+* **vue:** `render` and `createElement` function ([ce04095](https://github.com/sabertazimi/awesome-notes/commit/ce040952b305c03fe3a6f2830455754ce64d9024))
+* **vue:** `v-model` for child component ([458ce81](https://github.com/sabertazimi/awesome-notes/commit/458ce814ca638cddd91631d51ad814384913e94d))
+* **vue:** add static global API for `Vue` ([e7b6d75](https://github.com/sabertazimi/awesome-notes/commit/e7b6d753999e7f1f7748937c667d0c472698e17d))
+* **vue:** full Vue mount method ([36e760e](https://github.com/sabertazimi/awesome-notes/commit/36e760e9a59cfea6178d0dedf71d71e8005ca701))
+* **vue:** slots vnodes rendering internals ([9648c2d](https://github.com/sabertazimi/awesome-notes/commit/9648c2dd0331837e25837ae2ea76deb9f0a751a4))
+* **vue:** transfer `vm.XXX` to `vm._props.XXX`/`vm._data.XXX` ([58a6421](https://github.com/sabertazimi/awesome-notes/commit/58a64217f3cfad1a8fb4217aee6ef6f61243311b))
+* **vue:** Vue 2 legacy reactive system ([7a76571](https://github.com/sabertazimi/awesome-notes/commit/7a76571633506b93684ff24087e8287649e5a763))
+* **vue:** Vue 2 reactive system ([995500c](https://github.com/sabertazimi/awesome-notes/commit/995500c7535b86f2267093116c953e5e8b09d8dc))
+* **vue:** Vue async components ([dca55a2](https://github.com/sabertazimi/awesome-notes/commit/dca55a28cc2d3307aa85264d9e93472566440b53))
+* **vue:** Vue global `mixin` and `use` API ([89e6318](https://github.com/sabertazimi/awesome-notes/commit/89e6318e932c2849920ddbef6fb81cdbf27fe92d))
+* **vue:** Vue global `nextTick` API ([8ce9e68](https://github.com/sabertazimi/awesome-notes/commit/8ce9e68093ee5f1cbb2e11ab67e60d55a3cb183b))
+* **vue:** Vue patch function ([725eb36](https://github.com/sabertazimi/awesome-notes/commit/725eb36368aca85e4e3e7091e9f4b181ec54ca23))
+* **web-library:** ant design pro ([f89fb71](https://github.com/sabertazimi/awesome-notes/commit/f89fb71e0aee968e65a95cc87e22a242ede32d84))
+* **web-library:** change default libraries ([ffc0b87](https://github.com/sabertazimi/awesome-notes/commit/ffc0b872b0f6b3582a651beb5bbebecab2075a53))
+* **web-library:** kubernetes based serverless platform ([719e131](https://github.com/sabertazimi/awesome-notes/commit/719e13191a651dc5f987db98c386b8708581f130))
+* **web-library:** React component documentation tool ([4c3ae7a](https://github.com/sabertazimi/awesome-notes/commit/4c3ae7adabd04eebab45df1994332b6c48e217f9))
+* **web-library:** vite web extension starter template ([3900cbc](https://github.com/sabertazimi/awesome-notes/commit/3900cbc6f6877ab24d0404c4c00f286d5cf3959b))
+
 ### [3.7.1](https://github.com/sabertazimi/awesome-notes/compare/v3.7.0...v3.7.1) (2022-04-03)
 
 
