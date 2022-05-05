@@ -1,3 +1,4 @@
+const ci = require('ci-info');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -6,7 +7,7 @@ module.exports = {
   title: 'Awesome Notes',
   tagline: 'Today I Learned',
   url: 'https://sabertazimi.github.io',
-  baseUrl: '/',
+  baseUrl: ci.GITHUB_ACTIONS ? '/awesome-notes/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
