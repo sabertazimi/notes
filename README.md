@@ -20,10 +20,7 @@ sidebar_position: 1
 
 Personal Learning Notes - **Awesome Notes** for Myself.
 
-> [GitHub Version](https://sabertazimi.github.io/awesome-notes)
-> built on `Docusaurus`.
-> [GitBook Version](https://notes.tazimi.dev)
-> built on `GitBook.IO`.
+[GitHub](https://sabertazimi.github.io/awesome-notes) | [Vercel](https://notes.tazimi.dev)
 
 ## Notes
 
