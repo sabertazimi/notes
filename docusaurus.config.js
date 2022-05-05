@@ -6,7 +6,7 @@ module.exports = {
   title: 'Awesome Notes',
   tagline: 'Today I Learned',
   url: 'https://sabertazimi.github.io',
-  baseUrl: '/awesome-notes/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
