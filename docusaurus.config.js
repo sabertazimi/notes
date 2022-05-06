@@ -47,7 +47,11 @@ module.exports = {
   ],
   themeConfig: {
     respectPrefersColorScheme: true,
-    hideableSidebar: true,
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: 'Awesome Notes',
       logo: {
