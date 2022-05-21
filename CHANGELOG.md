@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/sabertazimi/awesome-notes/compare/v3.8.2...v3.9.0) (2022-05-21)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.25.0 ([#306](https://github.com/sabertazimi/awesome-notes/issues/306)) ([6c13f7f](https://github.com/sabertazimi/awesome-notes/commit/6c13f7fdfdb1afc9a51c38440b42bab3a6e0e109))
+
+
+### :sparkles: Features
+
+* **devops-docker:** docker basic notes ([#307](https://github.com/sabertazimi/awesome-notes/issues/307)) ([82f4e4e](https://github.com/sabertazimi/awesome-notes/commit/82f4e4ef72a9b9652da2575eeb83865ba98a6265))
+
+
+### :sparkles: Today I Learned
+
+* **css-box:** box viewport height ([b025f9b](https://github.com/sabertazimi/awesome-notes/commit/b025f9b8045f24ab29af7d89f1bf2337ea0fc6dd))
+* **css-box:** min and max box width ([7a57735](https://github.com/sabertazimi/awesome-notes/commit/7a5773538c4290e82c119740dab98c7a5c444678))
+* **css-normalize:** modern CSS normalize ([08406ff](https://github.com/sabertazimi/awesome-notes/commit/08406ff0979bec6ac5223eccb5acfb7333218806))
+* **css-object:** object fit element ([843b5d7](https://github.com/sabertazimi/awesome-notes/commit/843b5d7864bed75b093e00b6bab600cf637fdf12))
+* **css-prefix:** CSS vendor prefix order ([e928bcc](https://github.com/sabertazimi/awesome-notes/commit/e928bcc11e88ecb5c8e225b0e463d68a15d2bbaa))
+* **css-variables:** CSS variables usage ([0de291d](https://github.com/sabertazimi/awesome-notes/commit/0de291d97976fc2ab1414426beac599759f7261c))
+* **css-variables:** dark mode CSS variables ([a45d393](https://github.com/sabertazimi/awesome-notes/commit/a45d3934d7e933f1efb938c24e088131bee3857e))
+* **js-array:** powerful `reduce` method ([60debe9](https://github.com/sabertazimi/awesome-notes/commit/60debe90889ba8527d61b3a3ba02fb9c390f5a37))
+* **js-debugging:** chrome devtool `rendering` panel ([601cacc](https://github.com/sabertazimi/awesome-notes/commit/601cacc3b69bed965128b763757557d1fe650735))
+* **js-debugging:** chrome devtool rendering panel ([f08d430](https://github.com/sabertazimi/awesome-notes/commit/f08d430cfcc93c418604cc523c16c1123caefb4b))
+* **js-events:** implement mobile device gesture events ([54c9b3d](https://github.com/sabertazimi/awesome-notes/commit/54c9b3dac982eb97c504be271854624377d47dd5))
+* **js-events:** standard `wheel` UI event ([88f9026](https://github.com/sabertazimi/awesome-notes/commit/88f902604b24343fafa2847890f0f07d64fe075d))
+* **js-JamStack:** build your own `Next.js` ([b39080c](https://github.com/sabertazimi/awesome-notes/commit/b39080ca26683872feb5174d08b6ba5b0843197f))
+* **js-low code:** low-code development ([8516ffb](https://github.com/sabertazimi/awesome-notes/commit/8516ffbc842e94bc610c14ee3d82fab162c46d28))
+* **js-performance:** `WebPageTest` tool ([3df77a7](https://github.com/sabertazimi/awesome-notes/commit/3df77a71b8142520fa57242329d3b037901f48b2))
+* **js-webpack:** TSX properties parser webpack plugin ([be19baf](https://github.com/sabertazimi/awesome-notes/commit/be19baf1c8ce04a6e7f7f28c5357c8fde00c15a1))
+* **js:** global execution context ([d39b8bb](https://github.com/sabertazimi/awesome-notes/commit/d39b8bbdb5970e76c9aa04e6488110acf12230da))
+* **react-store:** atom store pattern ([811478f](https://github.com/sabertazimi/awesome-notes/commit/811478f949f916e5bafb009426f17e18f8c246a3))
+* **ts-interface:** extend 3rd-party module interface ([14b09f1](https://github.com/sabertazimi/awesome-notes/commit/14b09f1bf2c5f27303131519d18d5e7e8261c21d))
+* **vim-neovim:** `NvChad` configuration ([2246b2a](https://github.com/sabertazimi/awesome-notes/commit/2246b2af75100dd3407f2bbf4e9ff468dc2a4c5c))
+* **vim:** `Nvchad` lspconfig ([d92e773](https://github.com/sabertazimi/awesome-notes/commit/d92e77386e1f1a4a32b8b155b239953f472f0405))
+* **web-library:** collaborative rich text editor ([ff51321](https://github.com/sabertazimi/awesome-notes/commit/ff51321a7197ba90cabd2d92b9e936c69833e1fb))
+* **web-library:** components library ([463ce0b](https://github.com/sabertazimi/awesome-notes/commit/463ce0b2f24cc106055830f454b55b38f45e2d81))
+* **web-library:** HTTP security headers library ([2c44385](https://github.com/sabertazimi/awesome-notes/commit/2c4438521dc9f55e70cb6b7754409fe3625be488))
+* **web-library:** LaTeX math web component ([6c17725](https://github.com/sabertazimi/awesome-notes/commit/6c17725a955925e1f93edc55b4be602cee4f6b57))
+* **web-library:** math components ([a630d64](https://github.com/sabertazimi/awesome-notes/commit/a630d64b6f827725414a008e03ff75c530e568c6))
+* **web-library:** scroll effect library ([aee7a34](https://github.com/sabertazimi/awesome-notes/commit/aee7a34a51b313e84c65568574c74f08c6ca8317))
+* **web-library:** short links expander library ([0c00c7f](https://github.com/sabertazimi/awesome-notes/commit/0c00c7f8bc73559945975c04e6be326a5503c717))
+* **web-library:** TSX React components properties parser ([0926313](https://github.com/sabertazimi/awesome-notes/commit/09263139daca64fcab653d2cb19b9c8ae14e60f6))
+* **web-security:** security HTTP headers ([a675259](https://github.com/sabertazimi/awesome-notes/commit/a675259633f3b855199e5f4e9c40657b4bdf2040))
+
 ### [3.8.2](https://github.com/sabertazimi/awesome-notes/compare/v3.8.1...v3.8.2) (2022-05-18)
 
 
