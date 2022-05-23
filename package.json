@@ -24,6 +24,7 @@
   "main": "README.md",
   "scripts": {
     "build": "docusaurus build",
+    "clone": "git clone https://$VERCEL_GIT_PROVIDER.com/$VERCEL_GIT_REPO_OWNER/$VERCEL_GIT_REPO_SLUG && rm -fr .git && cp -fr $VERCEL_GIT_REPO_SLUG/.git . && rm -fr $VERCEL_GIT_REPO_SLUG",
     "clear": "docusaurus clear",
     "dev": "docusaurus start",
     "format": "prettier --write notes/**/*.{md,mdx}",
