@@ -47,24 +47,24 @@
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "packageManager": "yarn@3.2.1",
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.20",
-    "@docusaurus/preset-classic": "2.0.0-beta.20",
-    "@easyops-cn/docusaurus-search-local": "^0.25.0",
+    "@docusaurus/core": "2.0.0-beta.21",
+    "@docusaurus/preset-classic": "2.0.0-beta.21",
+    "@easyops-cn/docusaurus-search-local": "^0.26.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.10.0",
     "@dg-scripts/stylelint-config": "^5.10.0",
-    "@docusaurus/module-type-aliases": "2.0.0-beta.20",
+    "@docusaurus/module-type-aliases": "2.0.0-beta.21",
     "@tsconfig/docusaurus": "^1.0.5",
     "ci-info": "^3.3.1",
     "eslint": "^8.16.0",
     "markdownlint-cli": "^0.31.1",
     "prettier": "^2.6.2",
     "standard-version": "^9.5.0",
-    "stylelint": "^14.8.3",
-    "typescript": "^4.6.4"
+    "stylelint": "^14.8.5",
+    "typescript": "^4.7.2"
   },
   "browserslist": {
     "production": [
