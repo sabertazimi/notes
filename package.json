@@ -50,8 +50,11 @@
     "@docusaurus/core": "2.0.0-beta.21",
     "@docusaurus/preset-classic": "2.0.0-beta.21",
     "@easyops-cn/docusaurus-search-local": "^0.27.0",
+    "katex": "^0.15.6",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^3.0.1"
   },
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.10.0",
