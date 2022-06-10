@@ -147,6 +147,8 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 #### React
 
 - [React Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactBasicNotes)
+- [React Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactAdvancedNotes)
+- [React Hooks Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactHooksNotes)
 - [React Router Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reactRouterBasicNotes)
 - [Redux Basic Notes](https://sabertazimi.github.io/awesome-notes/web/react/reduxBasicNotes)
 
