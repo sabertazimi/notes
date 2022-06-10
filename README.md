@@ -157,6 +157,7 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 #### Vue
 
 - [Vue Basic Notes](https://sabertazimi.github.io/awesome-notes/web/vue/vueBasicNotes)
+- [Vue Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/vue/vueAdvancedNotes)
 
 ## License
 
