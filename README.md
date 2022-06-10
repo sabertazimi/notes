@@ -116,9 +116,13 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 #### CSS
 
-- [Bootstrap Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/bootstrapBasicNotes)
 - [CSS Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssBasicNotes)
 - [CSS Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssAdvancedNotes)
+- [CSS Layout Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssLayoutNotes)
+- [CSS Animation Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssAnimationNotes)
+- [CSS Components Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssComponentsNotes)
+- [CSS Design Notes](https://sabertazimi.github.io/awesome-notes/web/css/cssDesignNotes)
+- [Bootstrap Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/bootstrapBasicNotes)
 - [Sass Basic Notes](https://sabertazimi.github.io/awesome-notes/web/css/sassBasicNotes)
 
 #### Frameworks
