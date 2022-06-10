@@ -139,6 +139,10 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 - [JavaScript Basic Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptBasicNotes)
 - [JavaScript Advanced Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptAdvancedNotes)
+- [JavaScript API Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptAPINotes)
+- [JavaScript Performance Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptPerformanceNotes)
+- [JavaScript Testing Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptTestingNotes)
+- [JavaScript DevOps Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptDevOpsNotes)
 - [TypeScript Basic Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/typescriptBasicNotes)
 
 #### Node
