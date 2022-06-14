@@ -1,6 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.11.0",
+  "packageManager": "yarn@3.2.1",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
     "CS",
@@ -45,7 +46,6 @@
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
-  "packageManager": "yarn@3.2.1",
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
     "@docusaurus/preset-classic": "2.0.0-beta.21",
