@@ -52,10 +52,6 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 - [Math Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/math/mathBasicNotes)
 
-#### Network
-
-- [Computer Networking Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/network/networkBasicNotes)
-
 #### Operating Systems
 
 - [Computer Systems: A Programmer's Perspective Basic Notes](https://sabertazimi.github.io/awesome-notes/computerScience/operatingSystems/CSAPP)
@@ -144,6 +140,10 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 - [JavaScript Testing Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptTestingNotes)
 - [JavaScript DevOps Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/javascriptDevOpsNotes)
 - [TypeScript Basic Notes](https://sabertazimi.github.io/awesome-notes/web/javascript/typescriptBasicNotes)
+
+#### Network
+
+- [Network Basic Notes](https://sabertazimi.github.io/awesome-notes/web/network/networkBasicNotes)
 
 #### Node
 
