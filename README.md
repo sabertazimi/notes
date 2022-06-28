@@ -71,7 +71,6 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 - [Clean Code Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/cleanCodeBasicNotes)
 - [Clean Architecture Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/cleanArchitectureBasicNotes)
-- [Software Testing Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/softwareTestingBasicNotes)
 - [Docker Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/dockerBasicNotes)
 
 #### Functional Programming
