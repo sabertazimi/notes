@@ -70,7 +70,7 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 #### DevOps
 
 - [Clean Code Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/cleanCodeBasicNotes)
-- [Design Patterns Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/designPatternsBasicNotes)
+- [Clean Architecture Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/cleanArchitectureBasicNotes)
 - [Software Testing Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/softwareTestingBasicNotes)
 - [Docker Basic Notes](https://sabertazimi.github.io/awesome-notes/programming/devops/dockerBasicNotes)
 
