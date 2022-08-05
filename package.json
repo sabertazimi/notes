@@ -1,6 +1,6 @@
 {
   "name": "awesome-notes",
-  "version": "3.14.0",
+  "version": "3.15.0",
   "packageManager": "yarn@3.2.2",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
