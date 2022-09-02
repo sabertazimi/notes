@@ -47,10 +47,10 @@
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "dependencies": {
-    "@docusaurus/core": "2.0.1",
-    "@docusaurus/preset-classic": "2.0.1",
+    "@docusaurus/core": "2.1.0",
+    "@docusaurus/preset-classic": "2.1.0",
     "@easyops-cn/docusaurus-search-local": "^0.31.0",
-    "katex": "^0.16.1",
+    "katex": "^0.16.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-katex": "^6.0.2",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.11.0",
     "@dg-scripts/stylelint-config": "^5.11.0",
-    "@docusaurus/module-type-aliases": "2.0.1",
+    "@docusaurus/module-type-aliases": "2.1.0",
     "@tsconfig/docusaurus": "^1.0.6",
     "ci-info": "^3.3.2",
     "eslint": "^8.23.0",
