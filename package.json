@@ -50,7 +50,7 @@
     "@docusaurus/core": "2.1.0",
     "@docusaurus/preset-classic": "2.1.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.4",
-    "katex": "^0.16.2",
+    "katex": "^0.16.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-katex": "^6.0.2",
