@@ -61,12 +61,12 @@
     "@dg-scripts/stylelint-config": "^5.11.0",
     "@docusaurus/module-type-aliases": "2.2.0",
     "@tsconfig/docusaurus": "^1.0.6",
-    "ci-info": "^3.5.0",
+    "ci-info": "^3.6.0",
     "eslint": "^8.27.0",
     "markdownlint-cli": "^0.32.2",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",
-    "stylelint": "^14.14.1",
+    "stylelint": "^14.15.0",
     "typescript": "^4.8.4"
   },
   "browserslist": {
