@@ -49,7 +49,7 @@
   "dependencies": {
     "@docusaurus/core": "2.2.0",
     "@docusaurus/preset-classic": "2.2.0",
-    "@easyops-cn/docusaurus-search-local": "^0.33.5",
+    "@easyops-cn/docusaurus-search-local": "^0.33.6",
     "katex": "^0.16.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
