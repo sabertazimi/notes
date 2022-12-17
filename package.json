@@ -62,7 +62,7 @@
     "@docusaurus/module-type-aliases": "2.2.0",
     "@tsconfig/docusaurus": "^1.0.6",
     "ci-info": "^3.7.0",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "markdownlint-cli": "^0.32.2",
     "prettier": "^2.8.1",
     "standard-version": "^9.5.0",
