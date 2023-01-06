@@ -61,7 +61,7 @@
     "@dg-scripts/stylelint-config": "^5.11.0",
     "@docusaurus/module-type-aliases": "2.2.0",
     "@tsconfig/docusaurus": "^1.0.6",
-    "ci-info": "^3.7.0",
+    "ci-info": "^3.7.1",
     "eslint": "^8.31.0",
     "markdownlint-cli": "^0.32.2",
     "prettier": "^2.8.1",
