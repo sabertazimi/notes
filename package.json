@@ -63,8 +63,8 @@
     "@tsconfig/docusaurus": "^1.0.6",
     "ci-info": "^3.7.1",
     "eslint": "^8.31.0",
-    "markdownlint-cli": "^0.32.2",
-    "prettier": "^2.8.1",
+    "markdownlint-cli": "^0.33.0",
+    "prettier": "^2.8.2",
     "standard-version": "^9.5.0",
     "stylelint": "^14.16.1",
     "typescript": "^4.9.4"
