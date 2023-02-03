@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.16.0",
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.4.1",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
     "CS",
@@ -47,8 +47,8 @@
   },
   "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "dependencies": {
-    "@docusaurus/core": "2.3.0",
-    "@docusaurus/preset-classic": "2.3.0",
+    "@docusaurus/core": "2.3.1",
+    "@docusaurus/preset-classic": "2.3.1",
     "@easyops-cn/docusaurus-search-local": "^0.33.6",
     "katex": "^0.16.4",
     "react": "^18.2.0",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.11.0",
     "@dg-scripts/stylelint-config": "^5.11.0",
-    "@docusaurus/module-type-aliases": "2.3.0",
+    "@docusaurus/module-type-aliases": "2.3.1",
     "@tsconfig/docusaurus": "^1.0.6",
     "ci-info": "^3.7.1",
     "eslint": "^8.33.0",
@@ -67,7 +67,7 @@
     "prettier": "^2.8.3",
     "standard-version": "^9.5.0",
     "stylelint": "^14.16.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "browserslist": {
     "production": [
