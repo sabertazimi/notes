@@ -13,9 +13,7 @@
       "matchUpdateTypes": ["major"],
       "automerge": true,
       "automergeType": "pr",
-      "automergeStrategy": "squash",
-      "groupName": "dependencies (major)",
-      "groupSlug": "deps"
+      "automergeStrategy": "squash"
     },
     {
       "matchUpdateTypes": [
