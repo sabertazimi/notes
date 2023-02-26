@@ -133,7 +133,7 @@ async function createConfig() {
                 href: 'https://github.com/sabertazimi/bod',
               },
               {
-                label: 'Gatsby Blog',
+                label: 'Next.js Blog',
                 href: 'https://github.com/sabertazimi/blog',
               },
             ],
@@ -219,7 +219,7 @@ async function createConfig() {
                 href: 'https://github.com/sabertazimi/dragon-zsh-theme',
               },
               {
-                label: 'Gatsby Blog',
+                label: 'Next.js Blog',
                 href: 'https://github.com/sabertazimi/blog',
               },
               {
