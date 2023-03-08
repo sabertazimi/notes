@@ -37,8 +37,8 @@
     "lint:fix": "yarn lint:notes:fix && yarn lint:style:fix && yarn format",
     "lint:notes:fix": "eslint ./notes --fix && stylelint ./notes/**/*.md --fix && markdownlint ./notes --fix",
     "lint:style:fix": "eslint --ext .ts,.tsx ./src --fix && stylelint ./src/**/*.css --fix",
-    "changeset": "standard-version --dry-run -s",
-    "release": "standard-version -s",
+    "changeset": "commit-and-tag-version --dry-run -s",
+    "release": "commit-and-tag-version -s",
     "serve": "docusaurus serve",
     "start": "yarn dev"
   },
@@ -62,10 +62,10 @@
     "@docusaurus/module-type-aliases": "2.3.1",
     "@tsconfig/docusaurus": "^1.0.6",
     "ci-info": "^3.8.0",
+    "commit-and-tag-version": "^11.1.0",
     "eslint": "^8.35.0",
     "markdownlint-cli": "^0.33.0",
     "prettier": "^2.8.4",
-    "standard-version": "^9.5.0",
     "stylelint": "^15.2.0",
     "typescript": "^4.9.5"
   },
