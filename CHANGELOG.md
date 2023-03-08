@@ -1,6 +1,39 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## 3.16.1 (2023-03-08)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @easyops-cn/docusaurus-search-local to ^0.35.0 ([#409](https://github.com/sabertazimi/awesome-notes/issues/409)) ([cf38602](https://github.com/sabertazimi/awesome-notes/commit/cf38602b5a30bea6dfd46c7d6cfb7732f1fdb586))
+
+
+### :sparkles: Today I Learned
+
+* **css-scrollbar:** scrollbar custom app ([ea3a52b](https://github.com/sabertazimi/awesome-notes/commit/ea3a52b605514c96b003418cc68581eed79af43f))
+* **git-gpg:** git gpg configuration ([b400029](https://github.com/sabertazimi/awesome-notes/commit/b4000299908b516d98a77b0324d15dddfdd7ea16))
+* **git:** git configuration files ([1f8302c](https://github.com/sabertazimi/awesome-notes/commit/1f8302c2552fbbd9132afc57b06805aef8559978))
+* **js-promise:** global rejection handling ([0c6b4c2](https://github.com/sabertazimi/awesome-notes/commit/0c6b4c24e080ec57b71712b5a2b901765d56fcca))
+* **js-promise:** returning values from `finally()` ([d3320df](https://github.com/sabertazimi/awesome-notes/commit/d3320dfb98f2a65e98fbd542a1d3b6aa3ce3062e))
+* **library:** chat bot ([71f0b02](https://github.com/sabertazimi/awesome-notes/commit/71f0b02b009dbb4fa9abca79b1f2b30d604ed950))
+* **linux-git:** git alias configuration ([4e214b2](https://github.com/sabertazimi/awesome-notes/commit/4e214b28f2585f199b806fc287ab229fe4349944))
+* **linux-wsl:** gzip bug for windows 11 ([2826967](https://github.com/sabertazimi/awesome-notes/commit/2826967a13581ea0455e458525ac4d6d43b10d0c))
+* **linux-zsh:** zsh nvm plugin ([1cba498](https://github.com/sabertazimi/awesome-notes/commit/1cba49852f3dc92cfb11db500955a757bb39674a))
+* **linux:** wsl and git configuration ([fe0fe15](https://github.com/sabertazimi/awesome-notes/commit/fe0fe1510f6b2baa50cddb5a85001521bcb8b057))
+* **web-css:** container style query ([cee9da0](https://github.com/sabertazimi/awesome-notes/commit/cee9da0c5fd64706686eef6dc2b9a62010b8e122))
+* **web-jamstack:** islands architecture implementation ([c0fa8b2](https://github.com/sabertazimi/awesome-notes/commit/c0fa8b2cbf8daef5e484d4cf162ea21df5043e43))
+* **web-library:** CRUD TypeScript framework ([160c8f7](https://github.com/sabertazimi/awesome-notes/commit/160c8f71dd3101c1ea3afef81eb62158e44d57ce))
+* **web-library:** Node.js toolbox ([b4c956d](https://github.com/sabertazimi/awesome-notes/commit/b4c956dbaa803a62b0df7f04d5c1cf5ea9713286))
+* **web-library:** React simple code editor ([d1615a4](https://github.com/sabertazimi/awesome-notes/commit/d1615a418be1b22ae9551bb5045ba756b7d86ecc))
+* **web-library:** toast component ([4a72378](https://github.com/sabertazimi/awesome-notes/commit/4a72378aaca73cfec0959c5f7eaf754938b4016b))
+* **web-library:** ts reset ([758ed43](https://github.com/sabertazimi/awesome-notes/commit/758ed4380bf00f34a71ce9dc8e17aa8cad7f8996))
+
+
+### :rocket: Building Work
+
+* change release tool ([456fcf1](https://github.com/sabertazimi/awesome-notes/commit/456fcf110a3187c389f2a3984dffc03133764465))
 
 ## [3.16.0](https://github.com/sabertazimi/awesome-notes/compare/v3.15.0...v3.16.0) (2022-09-18)
 
