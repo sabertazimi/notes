@@ -62,12 +62,12 @@
     "@docusaurus/module-type-aliases": "2.4.0",
     "@tsconfig/docusaurus": "^1.0.7",
     "ci-info": "^3.8.0",
-    "commit-and-tag-version": "^11.2.0",
-    "eslint": "^8.37.0",
+    "commit-and-tag-version": "^11.2.1",
+    "eslint": "^8.38.0",
     "markdownlint-cli": "^0.33.0",
     "prettier": "^2.8.7",
     "stylelint": "^15.4.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "browserslist": {
     "production": [
