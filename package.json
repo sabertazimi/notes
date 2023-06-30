@@ -60,7 +60,7 @@
     "@dg-scripts/eslint-config": "^5.13.5",
     "@dg-scripts/stylelint-config": "^5.13.5",
     "@docusaurus/module-type-aliases": "2.4.1",
-    "@tsconfig/docusaurus": "^1.0.7",
+    "@tsconfig/docusaurus": "^2.0.0",
     "ci-info": "^3.8.0",
     "commit-and-tag-version": "^11.2.2",
     "eslint": "^8.43.0",
