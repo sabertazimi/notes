@@ -57,15 +57,15 @@
     "remark-math": "^3.0.1"
   },
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.13.5",
-    "@dg-scripts/stylelint-config": "^5.13.5",
+    "@dg-scripts/eslint-config": "^5.14.0",
+    "@dg-scripts/stylelint-config": "^5.14.0",
     "@docusaurus/module-type-aliases": "2.4.1",
     "@tsconfig/docusaurus": "^2.0.0",
     "ci-info": "^3.8.0",
     "commit-and-tag-version": "^11.2.2",
     "eslint": "^8.44.0",
     "markdownlint-cli": "^0.35.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "stylelint": "^15.10.1",
     "typescript": "^5.1.6"
   },
