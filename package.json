@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.16.1",
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@3.6.2",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
     "CS",
@@ -65,8 +65,8 @@
     "commit-and-tag-version": "^11.2.2",
     "eslint": "^8.47.0",
     "markdownlint-cli": "^0.35.0",
-    "prettier": "^3.0.1",
-    "stylelint": "^15.10.2",
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.3",
     "typescript": "^5.1.6"
   },
   "browserslist": {
