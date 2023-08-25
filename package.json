@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.16.1",
-  "packageManager": "yarn@3.6.2",
+  "packageManager": "yarn@3.6.3",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
     "CS",
@@ -62,12 +62,12 @@
     "@docusaurus/module-type-aliases": "2.4.1",
     "@tsconfig/docusaurus": "^2.0.0",
     "ci-info": "^3.8.0",
-    "commit-and-tag-version": "^11.2.2",
+    "commit-and-tag-version": "^11.2.3",
     "eslint": "^8.47.0",
     "markdownlint-cli": "^0.35.0",
     "prettier": "^3.0.2",
     "stylelint": "^15.10.3",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "browserslist": {
     "production": [
