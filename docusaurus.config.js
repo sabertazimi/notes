@@ -1,14 +1,12 @@
 const ci = require('ci-info');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
-// const katex = require('rehype-katex');
 
 /**
  * @returns {import('@docusaurus/types').DocusaurusConfig}
  */
 async function createConfig() {
-  // const math = (await import('remark-math')).default;
+  const math = (await import('remark-math')).default;
   const katex = (await import('rehype-katex')).default;
 
   return {
