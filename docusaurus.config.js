@@ -123,16 +123,16 @@ async function createConfig() {
             position: 'right',
             items: [
               {
+                label: 'Next.js Blog',
+                href: 'https://github.com/sabertazimi/blog',
+              },
+              {
                 label: 'Awesome Web',
                 href: 'https://github.com/sabertazimi/awesome-web',
               },
               {
                 label: 'Bod CLI',
                 href: 'https://github.com/sabertazimi/bod',
-              },
-              {
-                label: 'Next.js Blog',
-                href: 'https://github.com/sabertazimi/blog',
               },
             ],
           },
@@ -205,6 +205,10 @@ async function createConfig() {
             title: 'Find More',
             items: [
               {
+                label: 'Next.js Blog',
+                href: 'https://github.com/sabertazimi/blog',
+              },
+              {
                 label: 'Awesome Web',
                 href: 'https://github.com/sabertazimi/awesome-web',
               },
@@ -215,10 +219,6 @@ async function createConfig() {
               {
                 label: 'Dragon ZSH Theme',
                 href: 'https://github.com/sabertazimi/dragon-zsh-theme',
-              },
-              {
-                label: 'Next.js Blog',
-                href: 'https://github.com/sabertazimi/blog',
               },
               {
                 label: 'Minimal Boilerplate',
