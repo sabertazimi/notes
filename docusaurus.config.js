@@ -137,11 +137,6 @@ async function createConfig() {
             ],
           },
           {
-            href: 'https://notes.tazimi.dev',
-            label: 'GitBook',
-            position: 'right',
-          },
-          {
             href: 'https://github.com/sabertazimi/awesome-notes',
             label: 'GitHub',
             position: 'right',
