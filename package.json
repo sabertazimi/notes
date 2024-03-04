@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.16.1",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "pnpm@8.15.4",
   "description": "Personal Learning Notes (TIL)",
   "keywords": [
     "CS",
@@ -29,18 +29,18 @@
     "clear": "docusaurus clear",
     "dev": "docusaurus start",
     "format": "prettier --write notes/**/*.{md,mdx}",
-    "lint": "yarn lint:notes && yarn lint:style && yarn lint:type-check && yarn lint:format",
+    "lint": "pnpm lint:notes && pnpm lint:style && pnpm lint:type-check && pnpm lint:format",
     "lint:notes": "eslint ./notes && stylelint ./notes/**/*.md && markdownlint ./notes",
     "lint:style": "eslint --ext .ts,.tsx ./src && stylelint ./src/**/*.css",
     "lint:type-check": "tsc --noEmit",
     "lint:format": "prettier --check notes/**/*.{md,mdx}",
-    "lint:fix": "yarn lint:notes:fix && yarn lint:style:fix && yarn format",
+    "lint:fix": "pnpm lint:notes:fix && pnpm lint:style:fix && pnpm format",
     "lint:notes:fix": "eslint ./notes --fix && stylelint ./notes/**/*.md --fix && markdownlint ./notes --fix",
     "lint:style:fix": "eslint --ext .ts,.tsx ./src --fix && stylelint ./src/**/*.css --fix",
     "changeset": "commit-and-tag-version --dry-run -s",
     "release": "commit-and-tag-version -s",
     "serve": "docusaurus serve",
-    "start": "yarn dev"
+    "start": "pnpm dev"
   },
   "bugs": {
     "url": "https://github.com/sabertazimi/awesome-notes/issues"
@@ -50,6 +50,7 @@
     "@docusaurus/core": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
+    "clsx": "^2.1.0",
     "katex": "^0.16.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -60,8 +61,11 @@
     "@dg-scripts/eslint-config": "^5.14.2",
     "@dg-scripts/stylelint-config": "^5.14.2",
     "@docusaurus/module-type-aliases": "3.1.1",
+    "@docusaurus/theme-classic": "^3.1.1",
     "@docusaurus/tsconfig": "3.1.1",
     "@docusaurus/types": "3.1.1",
+    "@mdx-js/react": "^3.0.1",
+    "@types/node": "^20.11.24",
     "ci-info": "^4.0.0",
     "commit-and-tag-version": "^12.2.0",
     "eslint": "^8.57.0",
