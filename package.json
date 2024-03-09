@@ -65,14 +65,14 @@
     "@docusaurus/tsconfig": "3.1.1",
     "@docusaurus/types": "3.1.1",
     "@mdx-js/react": "^3.0.1",
-    "@types/node": "^20.11.24",
+    "@types/node": "^20.11.25",
     "ci-info": "^4.0.0",
     "commit-and-tag-version": "^12.2.0",
     "eslint": "^8.57.0",
     "markdownlint-cli": "^0.39.0",
     "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "browserslist": {
     "production": [
