@@ -3,6 +3,16 @@
   "version": "3.16.1",
   "packageManager": "pnpm@8.15.4",
   "description": "Personal Learning Notes (TIL)",
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabertazimi/awesome-notes/issues"
+  },
   "keywords": [
     "CS",
     "Notes",
@@ -16,36 +26,24 @@
     "Web",
     "TIL"
   ],
-  "license": "MIT",
-  "author": "sabertazimi",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
-  },
   "main": "README.md",
   "scripts": {
     "build": "docusaurus build",
     "clone": "git clone https://$VERCEL_GIT_PROVIDER.com/$VERCEL_GIT_REPO_OWNER/$VERCEL_GIT_REPO_SLUG && rm -fr .git && cp -fr $VERCEL_GIT_REPO_SLUG/.git . && rm -fr $VERCEL_GIT_REPO_SLUG",
     "clear": "docusaurus clear",
     "dev": "docusaurus start",
-    "format": "prettier --write notes/**/*.{md,mdx}",
-    "lint": "pnpm lint:notes && pnpm lint:style && pnpm lint:type-check && pnpm lint:format",
+    "lint": "pnpm lint:notes && pnpm lint:style && pnpm lint:type-check",
     "lint:notes": "eslint ./notes && stylelint ./notes/**/*.md && markdownlint ./notes",
-    "lint:style": "eslint --ext .ts,.tsx ./src && stylelint ./src/**/*.css",
+    "lint:style": "eslint ./src && stylelint ./src/**/*.css",
     "lint:type-check": "tsc --noEmit",
-    "lint:format": "prettier --check notes/**/*.{md,mdx}",
-    "lint:fix": "pnpm lint:notes:fix && pnpm lint:style:fix && pnpm format",
+    "lint:fix": "pnpm lint:notes:fix && pnpm lint:style:fix",
     "lint:notes:fix": "eslint ./notes --fix && stylelint ./notes/**/*.md --fix && markdownlint ./notes --fix",
-    "lint:style:fix": "eslint --ext .ts,.tsx ./src --fix && stylelint ./src/**/*.css --fix",
+    "lint:style:fix": "eslint ./src --fix && stylelint ./src/**/*.css --fix",
     "changeset": "commit-and-tag-version --dry-run -s",
     "release": "commit-and-tag-version -s",
     "serve": "docusaurus serve",
     "start": "pnpm dev"
   },
-  "bugs": {
-    "url": "https://github.com/sabertazimi/awesome-notes/issues"
-  },
-  "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
   "dependencies": {
     "@docusaurus/core": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
@@ -58,7 +56,7 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.14.3",
+    "@antfu/eslint-config": "^2.8.0",
     "@dg-scripts/stylelint-config": "^5.14.3",
     "@docusaurus/module-type-aliases": "3.1.1",
     "@docusaurus/theme-classic": "^3.1.1",
@@ -69,6 +67,10 @@
     "ci-info": "^4.0.0",
     "commit-and-tag-version": "^12.2.0",
     "eslint": "^8.57.0",
+    "eslint-plugin-format": "^0.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "markdownlint-cli": "^0.39.0",
     "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
