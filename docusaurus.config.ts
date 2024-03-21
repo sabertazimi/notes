@@ -1,12 +1,12 @@
-import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
-import ci from 'ci-info';
-import { themes } from 'prism-react-renderer';
-import katex from 'rehype-katex';
-import math from 'remark-math';
+import type * as Preset from '@docusaurus/preset-classic'
+import type { Config } from '@docusaurus/types'
+import ci from 'ci-info'
+import { themes } from 'prism-react-renderer'
+import katex from 'rehype-katex'
+import math from 'remark-math'
 
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
+const lightCodeTheme = themes.github
+const darkCodeTheme = themes.dracula
 
 const config: Config = {
   title: 'Awesome Notes',
@@ -255,6 +255,6 @@ const config: Config = {
       ],
     },
   } satisfies Preset.ThemeConfig,
-};
+}
 
-export default config;
+export default config
