@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.17.0](https://github.com/sabertazimi/awesome-notes/compare/v3.16.1...v3.17.0) (2024-03-26)
+
+
+### :sparkles: Features
+
+* **eslint:** switch to eslint flat configuration ([#490](https://github.com/sabertazimi/awesome-notes/issues/490)) ([7ab6407](https://github.com/sabertazimi/awesome-notes/commit/7ab640761e4cabfcb350cb195db5083e8427f6f2))
+
+
+### :sparkles: Today I Learned
+
+* **cs-math:** point calculation ([f0f18f4](https://github.com/sabertazimi/awesome-notes/commit/f0f18f4aaa4ec621c2ee5b5ef3466056c67cb42d))
+* **css:** media query changes listener ([e04e2a9](https://github.com/sabertazimi/awesome-notes/commit/e04e2a97651a573f08dfceb6b604665874380450))
+* **css:** use shorthand `inset` ([#413](https://github.com/sabertazimi/awesome-notes/issues/413)) ([2692a43](https://github.com/sabertazimi/awesome-notes/commit/2692a43b024e1e2c7461a39d9cc9a367a102418e))
+* **design patterns:** more use case ([baeb1fd](https://github.com/sabertazimi/awesome-notes/commit/baeb1fd983d2a82378408b99c5361eefb26d6ed0))
+* **github-copilot:** tips and best practices ([0871717](https://github.com/sabertazimi/awesome-notes/commit/087171790d8450bf5e571e350ee3bc636d69180b))
+* **html-head:** all sizes of favicons ([7ce4429](https://github.com/sabertazimi/awesome-notes/commit/7ce4429f4ecb24f27435aa7c1ad6b5095d0f36c3))
+* **js-URL:** download files ([857601c](https://github.com/sabertazimi/awesome-notes/commit/857601c378d0810f6e3dc0cce6ff2b22b0810158))
+* **library:** tidy up ([d9da265](https://github.com/sabertazimi/awesome-notes/commit/d9da26549abe1f92540f656f5abf3a378ea3d69c))
+* **linux-wsl:** http proxy for GitHub CLI ([b40cf81](https://github.com/sabertazimi/awesome-notes/commit/b40cf81ac5d7681ead27b4287c1b72f134bae13b))
+* **node-pnpm:** ship to pnpm ([2e4c688](https://github.com/sabertazimi/awesome-notes/commit/2e4c6885f4908c7f997ac87cd58a463bce1d0904))
+* **node.js:** `exports` field for public API ([26bb795](https://github.com/sabertazimi/awesome-notes/commit/26bb795fe8f099391c9ecc48d4c9bff328e4fe1c))
+* **web-css:** color palettes with `color-mix()` function ([794eccb](https://github.com/sabertazimi/awesome-notes/commit/794eccbed51aa1f7c80e2deb1ed2c74ea74db41d))
+* **web-css:** fifty-fifty two column pattern ([48f5dc5](https://github.com/sabertazimi/awesome-notes/commit/48f5dc572af514a36d02e69050a160fcb4e6e988))
+* **web-css:** prefer color scheme ([e1d135e](https://github.com/sabertazimi/awesome-notes/commit/e1d135ede53e245987c4d1a5af7a470618ae161c))
+* **web-js:** formData API usage ([956bd15](https://github.com/sabertazimi/awesome-notes/commit/956bd1531c599917cf69850857221ef2d92cc295))
+* **web-js:** prefer `userEvent` for testing ([50ad2b8](https://github.com/sabertazimi/awesome-notes/commit/50ad2b8e773042c17b9ba5dff459192bedfb1aca))
+* **web-library:** dashboard and search library ([350ec3f](https://github.com/sabertazimi/awesome-notes/commit/350ec3f563c26f25459cd8262b8ff79d8fb0eea0))
+* **web-library:** emoji ([3ce6951](https://github.com/sabertazimi/awesome-notes/commit/3ce6951f5e10c44cfc26e6180c57731788288f5a))
+* **web-library:** full-stack Next.js app generator ([4c491d0](https://github.com/sabertazimi/awesome-notes/commit/4c491d0f68b63ad92c9010afb34d7b0acd7d73c2))
+* **web-library:** headless command menu ([7ef3347](https://github.com/sabertazimi/awesome-notes/commit/7ef33479ad0534f24a5341ebb52be555db510b85))
+* **web-library:** Monaco for React ([ea08da6](https://github.com/sabertazimi/awesome-notes/commit/ea08da6b5f4063cd45e37668282671a470e2473c))
+* **web-library:** origin private file system ([3675112](https://github.com/sabertazimi/awesome-notes/commit/367511212a2ef70b819d0930ad7e51b2f260025d))
+* **web-library:** react video player ([d7f59ed](https://github.com/sabertazimi/awesome-notes/commit/d7f59edd6d8a3fc7e8878df5e75e8ba57c91a279))
+* **web-library:** tons of web components ([72df217](https://github.com/sabertazimi/awesome-notes/commit/72df2174f8024c2ca6cf90326095fb4238152a31))
+* **web-library:** tons of web components ([ac3dbea](https://github.com/sabertazimi/awesome-notes/commit/ac3dbea5f9125eb8c8578846355853d2f4b2f020))
+* **web-library:** WebRTC library ([2592f08](https://github.com/sabertazimi/awesome-notes/commit/2592f083e4002fac5f04babbeda444bfe5d23df4))
+* **web-ts:** modern TypeScript configuration ([74dde29](https://github.com/sabertazimi/awesome-notes/commit/74dde2928b3268697c811bf2ed7de8acada8e7c5))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#417](https://github.com/sabertazimi/awesome-notes/issues/417)) ([f5bb6a5](https://github.com/sabertazimi/awesome-notes/commit/f5bb6a5a4db42275ecdce63a8e50bdcc1ab2835c))
+* **deps:** update dependencies (non-major) ([#424](https://github.com/sabertazimi/awesome-notes/issues/424)) ([ef43e58](https://github.com/sabertazimi/awesome-notes/commit/ef43e5863485d4ecd3f0325075ea4cf0a39cdfe2))
+* **deps:** update dependencies (non-major) ([#429](https://github.com/sabertazimi/awesome-notes/issues/429)) ([0202482](https://github.com/sabertazimi/awesome-notes/commit/02024820117f5ac80f8072c886044b66d3043e1f))
+* **deps:** update dependencies (non-major) ([#456](https://github.com/sabertazimi/awesome-notes/issues/456)) ([c45d283](https://github.com/sabertazimi/awesome-notes/commit/c45d283ba6176095bc37b658a0a9b968a3c09581))
+* **deps:** update dependencies (non-major) ([#458](https://github.com/sabertazimi/awesome-notes/issues/458)) ([05ab0bc](https://github.com/sabertazimi/awesome-notes/commit/05ab0bcfdcbaeca1889b6215c710ada3083573b9))
+* **deps:** update dependencies (non-major) ([#465](https://github.com/sabertazimi/awesome-notes/issues/465)) ([734a6cb](https://github.com/sabertazimi/awesome-notes/commit/734a6cb1c2ab0c81c7117d1a6f4481e366316d4d))
+* **deps:** update dependencies (non-major) to v3.1.0 ([#476](https://github.com/sabertazimi/awesome-notes/issues/476)) ([bb05d6b](https://github.com/sabertazimi/awesome-notes/commit/bb05d6bc4efd19b64c7ad06f996ea0ac190aa67d))
+* **deps:** update dependencies (non-major) to v3.1.1 ([#481](https://github.com/sabertazimi/awesome-notes/issues/481)) ([adcc6ba](https://github.com/sabertazimi/awesome-notes/commit/adcc6baa42341600c2c4beb32e3de5f4c14b9fbe))
+* **deps:** update dependency katex to ^0.16.8 ([#437](https://github.com/sabertazimi/awesome-notes/issues/437)) ([bb8fd51](https://github.com/sabertazimi/awesome-notes/commit/bb8fd51df1f7dd982c6e4c1792b076462d5b1148))
+* **deps:** update dependency rehype-katex to v7 ([#459](https://github.com/sabertazimi/awesome-notes/issues/459)) ([f06991d](https://github.com/sabertazimi/awesome-notes/commit/f06991d64592ad0cd89ab1ee922061266d4e656a))
+* **deps:** update dependency remark-math to v6 ([#460](https://github.com/sabertazimi/awesome-notes/issues/460)) ([0dd39ea](https://github.com/sabertazimi/awesome-notes/commit/0dd39eadd600904645e0c34fa6155efc5b619a20))
+* **deps:** update docusaurus monorepo to v3 (major) ([#470](https://github.com/sabertazimi/awesome-notes/issues/470)) ([aa8434d](https://github.com/sabertazimi/awesome-notes/commit/aa8434d39545417d891b2795bb16cf0b1d5a8995))
+* lift up blog link ([16a7aca](https://github.com/sabertazimi/awesome-notes/commit/16a7acaec469509766758901e2c5c1ede319c901))
+* remove useless link ([2aebc79](https://github.com/sabertazimi/awesome-notes/commit/2aebc79d5d3254a298f21722fe8cfde1e4d8e22d))
+* **website:** remove legacy imports style ([4adc705](https://github.com/sabertazimi/awesome-notes/commit/4adc7055a5b86a068c1978a1704ec10c12642320))
+
 ## 3.16.1 (2023-03-08)
 
 
