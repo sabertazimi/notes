@@ -34,12 +34,12 @@ dependencies:
     version: 6.0.0
 
 devDependencies:
-  '@antfu/eslint-config':
-    specifier: ^2.11.5
-    version: 2.11.5(@vue/compiler-sfc@3.4.21)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-react@7.34.1)(eslint@8.57.0)(typescript@5.4.3)
+  '@dg-scripts/eslint-config':
+    specifier: ^5.15.0
+    version: 5.15.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
   '@dg-scripts/stylelint-config':
-    specifier: ^5.14.3
-    version: 5.14.3(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1)
+    specifier: ^5.15.0
+    version: 5.15.0(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1)
   '@docusaurus/module-type-aliases':
     specifier: 3.2.0
     version: 3.2.0(react-dom@18.2.0)(react@18.2.0)
@@ -67,18 +67,6 @@ devDependencies:
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
-  eslint-plugin-format:
-    specifier: ^0.1.0
-    version: 0.1.0(eslint@8.57.0)
-  eslint-plugin-react:
-    specifier: ^7.34.1
-    version: 7.34.1(eslint@8.57.0)
-  eslint-plugin-react-hooks:
-    specifier: ^4.6.0
-    version: 4.6.0(eslint@8.57.0)
-  eslint-plugin-react-refresh:
-    specifier: ^0.4.6
-    version: 0.4.6(eslint@8.57.0)
   markdownlint-cli:
     specifier: ^0.39.0
     version: 0.39.0
@@ -1588,8 +1576,38 @@ packages:
       postcss-selector-parser: 6.0.16
     dev: true
 
-  /@dg-scripts/stylelint-config@5.14.3(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1):
-    resolution: {integrity: sha512-E9UF6P3KYHWZjM0/e6W7CnytfhETbKuAWb2Bsy8yKCt8hEZSt/kKA3JYZflOA+/R8jOpzoa22RIal6X9JUkp2A==}
+  /@dg-scripts/eslint-config@5.15.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3):
+    resolution: {integrity: sha512-7QVj4q+MBOUeQZFSy3oSWY3j8259RY9LtMOpCjfwceDi2MKYNt6alGVU5/dUyzKBedKZweTrjPpkonX8tGXvuA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      eslint: ^8.0.0
+      prettier: ^3.0.0
+      typescript: ^5.0.0
+    dependencies:
+      '@antfu/eslint-config': 2.11.5(@vue/compiler-sfc@3.4.21)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.6)(eslint-plugin-react@7.34.1)(eslint@8.57.0)(typescript@5.4.3)
+      eslint: 8.57.0
+      eslint-plugin-format: 0.1.0(eslint@8.57.0)
+      eslint-plugin-react: 7.34.1(eslint@8.57.0)
+      eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
+      eslint-plugin-react-refresh: 0.4.6(eslint@8.57.0)
+      prettier: 3.2.5
+      typescript: 5.4.3
+    transitivePeerDependencies:
+      - '@unocss/eslint-plugin'
+      - '@vue/compiler-sfc'
+      - astro-eslint-parser
+      - eslint-plugin-astro
+      - eslint-plugin-svelte
+      - prettier-plugin-astro
+      - prettier-plugin-slidev
+      - supports-color
+      - svelte
+      - svelte-eslint-parser
+      - vitest
+    dev: true
+
+  /@dg-scripts/stylelint-config@5.15.0(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1):
+    resolution: {integrity: sha512-qy8Q11TAEfmmsUCwBOjQ3f4yEibogi7oaYIN7+Zp8GPyr1boMl2nO/4A05gJx4fHCmRAubd+j3vPUDGsZVyRNw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -1597,7 +1615,7 @@ packages:
     dependencies:
       prettier: 3.2.5
       stylelint: 16.3.1(typescript@5.4.3)
-      stylelint-config-bod: 5.14.3(postcss@8.4.38)(stylelint@16.3.1)
+      stylelint-config-bod: 5.15.1(postcss@8.4.38)(stylelint@16.3.1)
       stylelint-prettier: 5.0.0(prettier@3.2.5)(stylelint@16.3.1)
     transitivePeerDependencies:
       - postcss
@@ -2736,6 +2754,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -2745,6 +2764,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
@@ -2754,6 +2774,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -2763,6 +2784,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
@@ -11254,8 +11276,8 @@ packages:
       postcss: 8.4.38
       postcss-selector-parser: 6.0.16
 
-  /stylelint-config-bod@5.14.3(postcss@8.4.38)(stylelint@16.3.1):
-    resolution: {integrity: sha512-xCkZuGUqGUEoFNfg8SLARV5ixntftDiXcAHO68ok5FMyCcLodXxjXe/V5LSbjDsegfCmpJus6DP1sVXOMAcPIw==}
+  /stylelint-config-bod@5.15.1(postcss@8.4.38)(stylelint@16.3.1):
+    resolution: {integrity: sha512-YhT8yVIa8N1FzMB8BcBO2fvJatsCUG3FxcMBezccx5y/NN+imm9VBkK/hzqKRC/V5kCsUOm7zpVg4Qm8cTK/xA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       stylelint: ^15.0.0 || ^16.0.0
@@ -11264,7 +11286,7 @@ packages:
       postcss-markdown: 1.2.0
       stylelint: 16.3.1(typescript@5.4.3)
       stylelint-config-html: 1.1.0(postcss-html@1.6.0)(stylelint@16.3.1)
-      stylelint-config-recess-order: 4.6.0(stylelint@16.3.1)
+      stylelint-config-recess-order: 5.0.0(stylelint@16.3.1)
       stylelint-config-standard: 36.0.0(stylelint@16.3.1)
       stylelint-config-standard-scss: 13.0.0(postcss@8.4.38)(stylelint@16.3.1)
     transitivePeerDependencies:
@@ -11283,10 +11305,10 @@ packages:
       stylelint: 16.3.1(typescript@5.4.3)
     dev: true
 
-  /stylelint-config-recess-order@4.6.0(stylelint@16.3.1):
-    resolution: {integrity: sha512-V76fhv3YtcNXh/hyAuAdSzi5FmcrG54Mp2AThJ3D/PTMTSYzUPd7GIhP6z9mTqnRhmkk6YTfcu/JWB8h+Yrcaw==}
+  /stylelint-config-recess-order@5.0.0(stylelint@16.3.1):
+    resolution: {integrity: sha512-D+/Got844O96No2mj/H2NhLjj555iKAy/Mea+JCerfKB9TBKQW3/IudSVkTCxE4QiRDLldfH15x6FH1D1Anjhw==}
     peerDependencies:
-      stylelint: '>=15'
+      stylelint: '>=16'
     dependencies:
       stylelint: 16.3.1(typescript@5.4.3)
       stylelint-order: 6.0.4(stylelint@16.3.1)
