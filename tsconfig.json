@@ -1,9 +1,9 @@
 {
   "extends": "@docusaurus/tsconfig",
-  "include": ["src"],
-  "exclude": ["node_modules", "build", ".yarn"],
   "compilerOptions": {
     "baseUrl": ".",
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*", "notes/**/*"],
+  "exclude": ["node_modules", "build", "dist"]
 }

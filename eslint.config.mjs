@@ -1,1 +1,1 @@
-export { default } from '@dg-scripts/eslint-config'
+export { disableTypeAware as default } from '@dg-scripts/eslint-config'
