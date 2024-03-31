@@ -15,7 +15,7 @@ sidebar_position: 1
 [![Author](https://img.shields.io/badge/author-sabertaz-lightgrey?style=for-the-badge)](https://github.com/sabertazimi)
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/awesome-notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/awesome-notes/main/LICENSE)
 
-[![Code Lines](https://img.shields.io/tokei/lines/github/sabertazimi/awesome-notes?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/awesome-notes)
+[![Code Lines](https://tokei.rs/b1/github/sabertazimi/awesome-notes?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/awesome-notes)
 [![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/awesome-notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
 
 Personal Learning Notes - **Awesome Notes** for Myself.
