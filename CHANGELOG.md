@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.17.1](https://github.com/sabertazimi/awesome-notes/compare/v3.17.0...v3.17.1) (2024-04-01)
+
+
+### :sparkles: Today I Learned
+
+* **css-transition:** view transitions API ([97e2c84](https://github.com/sabertazimi/awesome-notes/commit/97e2c84acef6bf406b190d3ad13ef68e6042a167))
+* **linux-wsl:** Wi-Fi delay start problem ([f5d13c8](https://github.com/sabertazimi/awesome-notes/commit/f5d13c87a887c7c21cff173c52af491fe00d1f51))
+* **web-eslint:** flat config compatibility ([3fe3d00](https://github.com/sabertazimi/awesome-notes/commit/3fe3d009967727a275bd5e7ba9a9245ff5bf34a5))
+* **web-js:** prefers `userEvent` in testing-library ([17e1f80](https://github.com/sabertazimi/awesome-notes/commit/17e1f804e10d47954df59d71857d329580205b1a))
+* **web-library:** design systems database ([89d58ae](https://github.com/sabertazimi/awesome-notes/commit/89d58ae3424d4c2687e59088d92b9f07e5c2be0e))
+* **web-library:** hooks library ([a9ee634](https://github.com/sabertazimi/awesome-notes/commit/a9ee634ee1b5898487b37a14b445d7a55221a237))
+* **web-library:** JSON library ([e33c390](https://github.com/sabertazimi/awesome-notes/commit/e33c390879382a85573f27d7296a8ddf49a99a03))
+* **web-library:** library hunt website ([50a0704](https://github.com/sabertazimi/awesome-notes/commit/50a070479c0a2f1b19da5ed65fd9677484e52c9b))
+* **web-library:** tons of components ([aca686a](https://github.com/sabertazimi/awesome-notes/commit/aca686a4f0e0b94ad4571273ba245609952b3b0a))
+* **web-security:** CSP usage ([82e9229](https://github.com/sabertazimi/awesome-notes/commit/82e92292c9c0822a381bca6a1b3bef409b4b5e76))
+
 ## [3.17.0](https://github.com/sabertazimi/awesome-notes/compare/v3.16.1...v3.17.0) (2024-03-26)
 
 
