@@ -35,11 +35,11 @@ dependencies:
 
 devDependencies:
   '@dg-scripts/eslint-config':
-    specifier: ^5.18.0
-    version: 5.18.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
+    specifier: ^5.20.1
+    version: 5.20.1(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3)
   '@dg-scripts/stylelint-config':
-    specifier: ^5.18.0
-    version: 5.18.0(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1)
+    specifier: ^5.20.1
+    version: 5.20.1(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1)
   '@docusaurus/module-type-aliases':
     specifier: 3.2.0
     version: 3.2.0(react-dom@18.2.0)(react@18.2.0)
@@ -1576,8 +1576,8 @@ packages:
       postcss-selector-parser: 6.0.16
     dev: true
 
-  /@dg-scripts/eslint-config@5.18.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3):
-    resolution: {integrity: sha512-YCCvbP6mkH1v1kLHyxSX9sgXC41xKV/3VEKAbJXpuvPGjL7VCBVBDnWI7PZ37XsHnlR7xcyWYLUuzngTKoiv7Q==}
+  /@dg-scripts/eslint-config@5.20.1(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.3):
+    resolution: {integrity: sha512-vDLy9pVD56lSYiN43mdV4aKbUDRx8uuBvOVUX8LOWXKoW0Gv4Pa53kTblXCRoQhob4iiMfc9wBwumFx4K+Kw+g==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: ^8.0.0
@@ -1595,9 +1595,12 @@ packages:
       '@eslint/eslintrc': 3.0.2
       eslint: 8.57.0
       eslint-plugin-format: 0.1.0(eslint@8.57.0)
+      eslint-plugin-promise: 6.1.1(eslint@8.57.0)
       eslint-plugin-react: 7.34.1(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
       eslint-plugin-react-refresh: 0.4.6(eslint@8.57.0)
+      eslint-plugin-security: 2.1.1
+      eslint-plugin-testing-library: 6.2.0(eslint@8.57.0)(typescript@5.4.3)
       local-pkg: 0.5.0
       prettier: 3.2.5
       typescript: 5.4.3
@@ -1615,8 +1618,8 @@ packages:
       - vitest
     dev: true
 
-  /@dg-scripts/stylelint-config@5.18.0(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1):
-    resolution: {integrity: sha512-I96LX9NV5vPj5XIVnIkBUwrF3iVV4USn79LXqvgqjFixtMTVjTgTNNKgREPMYhf+uObNntImloK2BcAdyxtWzA==}
+  /@dg-scripts/stylelint-config@5.20.1(postcss@8.4.38)(prettier@3.2.5)(stylelint@16.3.1):
+    resolution: {integrity: sha512-HBbUhSUYBb7Prj4KUaVK44e1qXr6t3AYmmUUGJIoztTi3Le5U/9Kj9c4Jio2kke8PM1ujeOxUyz70jxv5K9EKA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -1624,7 +1627,7 @@ packages:
     dependencies:
       prettier: 3.2.5
       stylelint: 16.3.1(typescript@5.4.3)
-      stylelint-config-bod: 5.18.0(postcss@8.4.38)(stylelint@16.3.1)
+      stylelint-config-bod: 5.20.1(postcss@8.4.38)(stylelint@16.3.1)
       stylelint-prettier: 5.0.0(prettier@3.2.5)(stylelint@16.3.1)
     transitivePeerDependencies:
       - postcss
@@ -5962,6 +5965,15 @@ packages:
       - typescript
     dev: true
 
+  /eslint-plugin-promise@6.1.1(eslint@8.57.0):
+    resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.57.0
+    dev: true
+
   /eslint-plugin-react-hooks@4.6.0(eslint@8.57.0):
     resolution: {integrity: sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==}
     engines: {node: '>=10'}
@@ -6004,6 +6016,25 @@ packages:
       resolve: 2.0.0-next.5
       semver: 6.3.1
       string.prototype.matchall: 4.0.10
+    dev: true
+
+  /eslint-plugin-security@2.1.1:
+    resolution: {integrity: sha512-7cspIGj7WTfR3EhaILzAPcfCo5R9FbeWvbgsPYWivSurTBKW88VQxtP3c4aWMG9Hz/GfJlJVdXEJ3c8LqS+u2w==}
+    dependencies:
+      safe-regex: 2.1.1
+    dev: true
+
+  /eslint-plugin-testing-library@6.2.0(eslint@8.57.0)(typescript@5.4.3):
+    resolution: {integrity: sha512-+LCYJU81WF2yQ+Xu4A135CgK8IszcFcyMF4sWkbiu6Oj+Nel0TrkZq/HvDw0/1WuO3dhDQsZA/OpEMGd0NfcUw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
+    peerDependencies:
+      eslint: ^7.5.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.62.0(eslint@8.57.0)(typescript@5.4.3)
+      eslint: 8.57.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /eslint-plugin-toml@0.10.0(eslint@8.57.0):
@@ -10786,6 +10817,12 @@ packages:
       is-regex: 1.1.4
     dev: true
 
+  /safe-regex@2.1.1:
+    resolution: {integrity: sha512-rx+x8AMzKb5Q5lQ95Zoi6ZbJqwCLkqi3XuJXp5P3rT8OEc6sZCJG5AE5dU3lsgRr/F4Bs31jSlVN+j5KrsGu9A==}
+    dependencies:
+      regexp-tree: 0.1.27
+    dev: true
+
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
@@ -11317,8 +11354,8 @@ packages:
       postcss: 8.4.38
       postcss-selector-parser: 6.0.16
 
-  /stylelint-config-bod@5.18.0(postcss@8.4.38)(stylelint@16.3.1):
-    resolution: {integrity: sha512-eXtnxPk5kEvMYlaLWGuhzZMl3iAOGDSLVYlBNh2W1LS1Q+ewzwjVDaOPJSj62sk/5MMH9ZmE8T7Uh7xLkEeEqg==}
+  /stylelint-config-bod@5.20.1(postcss@8.4.38)(stylelint@16.3.1):
+    resolution: {integrity: sha512-RNfjTxJYMoFgmi4qHAWLtuQPY6C3gA8AHoGQXyl+s9q02yXlG8uDsBrG9KsvQuB1zYLBaxAQfB9wRyLr79wbUA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       stylelint: ^15.0.0 || ^16.0.0
