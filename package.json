@@ -63,7 +63,7 @@
     "@docusaurus/tsconfig": "3.2.1",
     "@docusaurus/types": "3.2.1",
     "@mdx-js/react": "^3.0.1",
-    "@types/node": "^20.12.4",
+    "@types/node": "^20.12.5",
     "ci-info": "^4.0.0",
     "commit-and-tag-version": "^12.2.0",
     "eslint": "^8.57.0",
