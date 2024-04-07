@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.0](https://github.com/sabertazimi/awesome-notes/compare/v3.17.1...v3.18.0) (2024-04-07)
+
+
+### :sparkles: Features
+
+* **ai-library:** AI copilot ([48f66a6](https://github.com/sabertazimi/awesome-notes/commit/48f66a610a893bc65bdc17555fae786b237ce67b))
+* **AI-transformer:** self-attention mechanism ([23c5ad1](https://github.com/sabertazimi/awesome-notes/commit/23c5ad1d9186c8f81952ebed466e34bc09fc9913))
+* **math-AI:** start to learn AI basic knowledge ([288e471](https://github.com/sabertazimi/awesome-notes/commit/288e471d236f6647ff49aadd64fe23219148735c))
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** AI agents ([c4fb97e](https://github.com/sabertazimi/awesome-notes/commit/c4fb97e0e63161e346e08a9546584d0e854ba853))
+* **ai-library:** AI-as-a-service ([0f63ec7](https://github.com/sabertazimi/awesome-notes/commit/0f63ec7a0911493465f0081775e61e7aa4eb3fc9))
+* **ai-library:** AI-powered developer tools ([b9fdce7](https://github.com/sabertazimi/awesome-notes/commit/b9fdce7ee78a5df048c4b734953f50757e7ac0ed))
+* **css-design:** design systems and tokens ([b5df036](https://github.com/sabertazimi/awesome-notes/commit/b5df0367f2a0ce939ff6ca1d175e04e794bfcb93))
+* **css-design:** homepage design principles ([86ebfaa](https://github.com/sabertazimi/awesome-notes/commit/86ebfaac1a4c8dbcd73f92d1f2de064ee900a6c3))
+* **css-query:** interactive container query guide ([05bd9ed](https://github.com/sabertazimi/awesome-notes/commit/05bd9ed8414b8324a06eb10e543f274d4169cb7e))
+* **js-auth:** session auth in Next.js ([11b1952](https://github.com/sabertazimi/awesome-notes/commit/11b1952bb21cb248d8f58f570bea80fd12542ca0))
+* **js-testing:** testing-library tips ([bc0fa95](https://github.com/sabertazimi/awesome-notes/commit/bc0fa9548c1746b1887fabc3613c828569522cb9))
+* **js-testing:** vitest with React Testing Library ([036b64e](https://github.com/sabertazimi/awesome-notes/commit/036b64ec9ab10e8c4c20352d97505780fc648374))
+* **library-ai:** offline ChatGPT alternative ([91e70e9](https://github.com/sabertazimi/awesome-notes/commit/91e70e99248ebd61b6003d0418d2e57646b0ed0e))
+* **library-web:** auth and crypto utils ([174dfbf](https://github.com/sabertazimi/awesome-notes/commit/174dfbfff75f26d79c26090765bfd4548b4a00ce))
+* **node-pnpm:** install pnpm via corepack ([56f27c0](https://github.com/sabertazimi/awesome-notes/commit/56f27c0618718f9653c29e8f911ed2dd386523dc))
+* **react-docs:** update react docs links to react.dev ([b5b5595](https://github.com/sabertazimi/awesome-notes/commit/b5b5595bba0b03036d52f5c31d3322ff52e95899))
+* **react-hooks:** custom compare deps for useEffect ([4a715d4](https://github.com/sabertazimi/awesome-notes/commit/4a715d4ef23f953f16be842ea553d16665e4969c))
+* **react-hooks:** useOptimistic hook dispatcher ([7e5fd3e](https://github.com/sabertazimi/awesome-notes/commit/7e5fd3e73a99d13896e99cba418c2a78b0f9cbc6))
+* **react-server:** React Server Components ([682a0ba](https://github.com/sabertazimi/awesome-notes/commit/682a0ba66e29661f3af10cf63adc6d35afe46ecf))
+* **rust-installation:** rust up for WSL2 ([292421a](https://github.com/sabertazimi/awesome-notes/commit/292421a177b00c6599c051a55de30550fde48236))
+* **vim-neovim:** LazyVim distributions for NeoVim ([1c22b3d](https://github.com/sabertazimi/awesome-notes/commit/1c22b3d3e274c4753240c8827b9a31ef722f45ad))
+* **vim:** vim setup and configuration ([7f2e205](https://github.com/sabertazimi/awesome-notes/commit/7f2e2055888810990ccf64caa3c67f04e059a4cc))
+* **web-html:** self-closing tags discussion ([c32d29c](https://github.com/sabertazimi/awesome-notes/commit/c32d29ccb1953e9b5bc2777aaf08ddb65cf5f4ea))
+* **web-js:** a new array method `with` ([30ceb37](https://github.com/sabertazimi/awesome-notes/commit/30ceb37550f30e5bfc00389e0e1b0394a0f0cb79))
+* **web-js:** BFCache compatible page ([a5ac548](https://github.com/sabertazimi/awesome-notes/commit/a5ac54861ee05c9b0dd25afb6a6165416cab734f))
+* **web-library:** CRDT library ([4d4648b](https://github.com/sabertazimi/awesome-notes/commit/4d4648b2b9f35cc104b8fa131bbe5dc1cbf96af4))
+* **web-library:** DaaS and BaaS ([1e5eac5](https://github.com/sabertazimi/awesome-notes/commit/1e5eac57970586fea4eba7342d62b1f1571fb830))
+* **web-library:** fast glob library ([edda3a0](https://github.com/sabertazimi/awesome-notes/commit/edda3a0ce4e7c5f5b9f7c78ecaf1cd1bf304d9b1))
+* **web-library:** local-first library ([09961df](https://github.com/sabertazimi/awesome-notes/commit/09961df0c288b356eb778727dedbc73ee5d5d918))
+* **web-library:** pattern matching library ([bfb3ad4](https://github.com/sabertazimi/awesome-notes/commit/bfb3ad448cd81f3afb32879f5de281a215a206cc))
+* **web-library:** remove obsoleted audio library ([3a7c4cb](https://github.com/sabertazimi/awesome-notes/commit/3a7c4cbb2110347b11a3b109b70c8a6c55e2bd12))
+* **web-library:** star history website ([66ac50f](https://github.com/sabertazimi/awesome-notes/commit/66ac50f408192e71d8c285a0ab90f72d3d9fc30f))
+* **web-library:** TypeScript scheme utils ([133faf7](https://github.com/sabertazimi/awesome-notes/commit/133faf7fae76e2821fdd759fcaf885e81e7e4a3e))
+* **web-node:** pnpm non-flat node_modules ([111faef](https://github.com/sabertazimi/awesome-notes/commit/111faef5b677bb8df49ccf9893a2491b54dcddf6))
+* **web-perf:** images optimization tips ([5a5f31f](https://github.com/sabertazimi/awesome-notes/commit/5a5f31f94890925569082f17c35fb0e2dcd92039))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#502](https://github.com/sabertazimi/awesome-notes/issues/502)) ([3b238f4](https://github.com/sabertazimi/awesome-notes/commit/3b238f4025be1f035c26b447c2f65d188e8c829d))
+
+
+### :zap: Performance
+
+* [ImgBot] optimize images ([#506](https://github.com/sabertazimi/awesome-notes/issues/506)) ([0bd3d50](https://github.com/sabertazimi/awesome-notes/commit/0bd3d50a91e2d0e045a811b896aed3aeaa1374db))
+
 ## [3.17.1](https://github.com/sabertazimi/awesome-notes/compare/v3.17.0...v3.17.1) (2024-04-01)
 
 
