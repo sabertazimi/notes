@@ -64,8 +64,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       commit-and-tag-version:
-        specifier: ^12.2.0
-        version: 12.2.0
+        specifier: ^12.4.0
+        version: 12.4.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -2309,8 +2309,8 @@ packages:
     resolution: {integrity: sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==}
     engines: {node: '>= 12.0.0'}
 
-  commit-and-tag-version@12.2.0:
-    resolution: {integrity: sha512-t8kvDy8dVTCF/j2u7Elt/J3tzCPyh16ssK8ECpj44R6jJiCUJMhWwZ36L652iChvqz4BAem9XU7WyuMYHlmSvA==}
+  commit-and-tag-version@12.4.0:
+    resolution: {integrity: sha512-8uZyuGmVPCyq2Bzg/1GkUCdbCTRPrx0bP2hCYyYHTRTruq960WgCf7hYwg2/UiqSrdoZMrRBsHK5eLYeanSTkA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6695,8 +6695,8 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.4.0:
-    resolution: {integrity: sha512-j9iR8g+/t0lArF4V6NE/QCfT+CO7iLqrXAHZbJdo+LfjqP1vR8Fg5bSiaq6Q2lOD1AUEVrEVIgABvBFYojJVYQ==}
+  yaml@2.4.1:
+    resolution: {integrity: sha512-pIXzoImaqmfOrL7teGUBt/T7ZDnyeGBWyXQBvOVhLkWLN37GXv8NMLK406UY6dS51JfcQHsmcW5cJ441bHg6Lg==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -9902,7 +9902,7 @@ snapshots:
 
   comment-parser@1.4.1: {}
 
-  commit-and-tag-version@12.2.0:
+  commit-and-tag-version@12.4.0:
     dependencies:
       chalk: 2.4.2
       conventional-changelog: 3.1.25
@@ -9918,6 +9918,7 @@ snapshots:
       jsdom: 23.2.0
       semver: 7.6.0
       w3c-xmlserializer: 5.0.0
+      yaml: 2.4.1
       yargs: 17.7.2
     transitivePeerDependencies:
       - bufferutil
@@ -15221,11 +15222,11 @@ snapshots:
     dependencies:
       eslint-visitor-keys: 3.4.3
       lodash: 4.17.21
-      yaml: 2.4.0
+      yaml: 2.4.1
 
   yaml@1.10.2: {}
 
-  yaml@2.4.0: {}
+  yaml@2.4.1: {}
 
   yargs-parser@20.2.9: {}
 
