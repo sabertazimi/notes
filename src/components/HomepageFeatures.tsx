@@ -61,8 +61,8 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {FeatureList.map(({ title, Svg, description }) => (
+            <Feature key={title} title={title} Svg={Svg} description={description} />
           ))}
         </div>
       </div>
