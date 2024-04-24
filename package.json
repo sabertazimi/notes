@@ -56,8 +56,8 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.21.0",
-    "@dg-scripts/stylelint-config": "^5.21.0",
+    "@dg-scripts/eslint-config": "^5.21.1",
+    "@dg-scripts/stylelint-config": "^5.21.1",
     "@docusaurus/module-type-aliases": "3.2.1",
     "@docusaurus/theme-classic": "^3.2.1",
     "@docusaurus/tsconfig": "3.2.1",
