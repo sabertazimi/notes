@@ -50,8 +50,8 @@
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
     "clsx": "^2.1.1",
     "katex": "^0.16.10",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0"
   },
