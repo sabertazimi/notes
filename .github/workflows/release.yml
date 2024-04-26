@@ -1,0 +1,97 @@
+name: Release
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 1
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+      - name: Setup Node environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          architecture: x64
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: Run linter tests
+        run: |
+          pnpm lint
+
+  build:
+    name: Building
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20]
+        architecture: [x64]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+      - name: Setup Node environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          architecture: ${{ matrix.architecture }}
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: Build application
+        run: |
+          pnpm build
+
+  release:
+    name: Release
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    needs: [lint, build]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Import GPG key and setup git
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+          git_tag_gpgsign: true
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+      - name: Setup Node environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          architecture: x64
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: Commit and tag version
+        run: |
+          pnpm release
+          git push --follow-tags origin main
