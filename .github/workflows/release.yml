@@ -72,6 +72,7 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+          token: ${{ secrets.PAT_TOKEN }}
       - name: Import GPG key and setup git
         uses: crazy-max/ghaction-import-gpg@v6
         with:
@@ -94,4 +95,9 @@ jobs:
       - name: Commit and tag version
         run: |
           pnpm release
-          git push --follow-tags origin main
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
