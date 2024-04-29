@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.4](https://github.com/sabertazimi/awesome-notes/compare/v3.18.3...v3.18.4) (2024-04-29)
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) to ^18.3.1 ([#520](https://github.com/sabertazimi/awesome-notes/issues/520)) ([1acb7bc](https://github.com/sabertazimi/awesome-notes/commit/1acb7bc61aa6a2267344a9d75b238fd3df96db4f))
+
 ## [3.18.3](https://github.com/sabertazimi/awesome-notes/compare/v3.18.2...v3.18.3) (2024-04-26)
 
 
