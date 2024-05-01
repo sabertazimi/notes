@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.5](https://github.com/sabertazimi/awesome-notes/compare/v3.18.4...v3.18.5) (2024-05-01)
+
+
+### :sparkles: Today I Learned
+
+* **ai-CNN:** simple introduction to CNNs ([cb5dab8](https://github.com/sabertazimi/awesome-notes/commit/cb5dab88371273f77db808885c08b85314b0d2d4))
+* **ai-library:** huggingface transformers in browser ([da32c76](https://github.com/sabertazimi/awesome-notes/commit/da32c76acd5bfb80594a8288f5360b217c9361f2))
+* **cs-math:** central limit theorem ([6106cc3](https://github.com/sabertazimi/awesome-notes/commit/6106cc30260e0c8b5bc0d6c9f6fdcb9fd54ddffd))
+* **cs-math:** convolution ([9ed358c](https://github.com/sabertazimi/awesome-notes/commit/9ed358c8ed18c4c3f86ceaaac10367501eb19795))
+* **cs-math:** discrete fourier transform ([55fe925](https://github.com/sabertazimi/awesome-notes/commit/55fe9250fcc8770dab910664fa6ce425a1aaaafe))
+* **cs-math:** fast convolution algorithm with FFT ([3ebffb5](https://github.com/sabertazimi/awesome-notes/commit/3ebffb5381370320568570c55f9428450e76f3ea))
+* **cs-math:** fourier transform ([701021a](https://github.com/sabertazimi/awesome-notes/commit/701021aab8a1669e44a634012cafeb5f1bc898ca))
+* **css-design:** prefer web fonts than system fonts ([9bf5efd](https://github.com/sabertazimi/awesome-notes/commit/9bf5efdf49d59403577b022952e6f71cdf20f23b))
+* **node:** web scraping with impersonation ([c6699ba](https://github.com/sabertazimi/awesome-notes/commit/c6699ba1ab79c80718e2677ec0240cf66e5e1a5c))
+* **react-fiber:** ability of React Fiber ([83b3dab](https://github.com/sabertazimi/awesome-notes/commit/83b3dab934149a0b0227164bb4ff9b39d0ec5f6c))
+* **web-a11y:** a11y references ([2a77a33](https://github.com/sabertazimi/awesome-notes/commit/2a77a33b0736c42e71bfb33595bb196b7682ba33))
+* **web-a11y:** assistive technology key points ([5d70ee7](https://github.com/sabertazimi/awesome-notes/commit/5d70ee7436366ee0178aa19780e6a34b1fdb9f22))
+* **web-a11y:** semantic HTML ([9498c52](https://github.com/sabertazimi/awesome-notes/commit/9498c5231791ff13d312386ec20f032d3ccf136d))
+* **web-library:** effect system for TypeScript ([d099b4c](https://github.com/sabertazimi/awesome-notes/commit/d099b4c38af744bd5d1a2a7f9de7086075affc61))
+* **web-library:** modern crontab parser ([20280f9](https://github.com/sabertazimi/awesome-notes/commit/20280f90ec711a6c262cd249b941b096357bd458))
+* **web-library:** rapier physics and mesh for react-three-fiber ([a40566c](https://github.com/sabertazimi/awesome-notes/commit/a40566c544602b1f1f823cfc8a0717cfb6858c23))
+* **web-library:** WebSockets library ([ca67aba](https://github.com/sabertazimi/awesome-notes/commit/ca67abaebf8b80ef94e0b2864824cdbb0089fad0))
+* **web-library:** youtube.js ([29e81ed](https://github.com/sabertazimi/awesome-notes/commit/29e81edfb4652c8e9b21ae31438ca9dd627f8ccb))
+* **web-perf:** Next.js INP optimization tips ([44cbd19](https://github.com/sabertazimi/awesome-notes/commit/44cbd1903e050f273de5c48a3cdc760c5333ace7))
+* **web-perf:** performance budgets ([8789d88](https://github.com/sabertazimi/awesome-notes/commit/8789d882bef1731c1e903d68b329d048d1ddc991))
+
 ## [3.18.4](https://github.com/sabertazimi/awesome-notes/compare/v3.18.3...v3.18.4) (2024-04-29)
 
 
