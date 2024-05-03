@@ -226,8 +226,9 @@ const config: Config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
+      // https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L25
       additionalLanguages: [
+        'bash',
         'cmake',
         'csharp',
         'csv',
@@ -235,7 +236,7 @@ const config: Config = {
         'haskell',
         'http',
         'java',
-        'kotlin',
+        'json',
         'latex',
         'lisp',
         'lua',
@@ -244,10 +245,8 @@ const config: Config = {
         'php',
         'regex',
         'ruby',
-        'rust',
         'scala',
         'scheme',
-        'swift',
         'tcl',
         'verilog',
         'vhdl',
