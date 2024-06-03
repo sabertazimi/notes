@@ -2,6 +2,7 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "strictNullChecks": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*", "notes/**/*"],
