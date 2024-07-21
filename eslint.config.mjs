@@ -13,5 +13,6 @@ export default eslintConfig.append({
     'react/no-unsafe-component-will-receive-props': 'off',
     'react/no-unused-class-component-members': 'off',
     'react-refresh/only-export-components': 'off',
+    'ts/no-unsafe-function-type': 'off',
   },
 })
