@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.8](https://github.com/sabertazimi/awesome-notes/compare/v3.18.7...v3.18.8) (2024-08-15)
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) ([#548](https://github.com/sabertazimi/awesome-notes/issues/548)) ([881ef74](https://github.com/sabertazimi/awesome-notes/commit/881ef745b954a434eb2d579705c027dc6d9e1f65))
+* **deps:** update dependencies (non-major) ([#553](https://github.com/sabertazimi/awesome-notes/issues/553)) ([3b31c55](https://github.com/sabertazimi/awesome-notes/commit/3b31c557e88a89bcde33a5b53b4026e0120fd595))
+* **deps:** update dependencies (non-major) to v3.5.1 ([#554](https://github.com/sabertazimi/awesome-notes/issues/554)) ([5d4d9a2](https://github.com/sabertazimi/awesome-notes/commit/5d4d9a2b3729af762b7b9697f0e91b74a6fb82de))
+* **linux-wsl2:** networking config for WSL2 ([33bd781](https://github.com/sabertazimi/awesome-notes/commit/33bd7815d31ddf30ec27e6a3ed3861dca524f960))
+* **web-react:** form loading state in React v19 ([dd467df](https://github.com/sabertazimi/awesome-notes/commit/dd467df4978bb7de790511f66ceaefc6629be534))
+
 ## [3.18.7](https://github.com/sabertazimi/awesome-notes/compare/v3.18.6...v3.18.7) (2024-06-15)
 
 
