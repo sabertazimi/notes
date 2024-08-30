@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.18.8",
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
   "license": "MIT",
@@ -63,13 +63,13 @@
     "@docusaurus/tsconfig": "3.5.2",
     "@docusaurus/types": "3.5.2",
     "@mdx-js/react": "^3.0.1",
-    "@types/node": "^20.16.1",
+    "@types/node": "^20.16.2",
     "ci-info": "^4.0.0",
     "commit-and-tag-version": "^12.4.2",
     "eslint": "^8.57.0",
     "markdownlint-cli": "^0.41.0",
     "prettier": "^3.3.3",
-    "stylelint": "^16.8.2",
+    "stylelint": "^16.9.0",
     "typescript": "^5.5.4"
   },
   "browserslist": {
