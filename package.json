@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.18.9",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.12.1",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
   "license": "MIT",
@@ -47,7 +47,7 @@
   "dependencies": {
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
-    "@easyops-cn/docusaurus-search-local": "^0.44.5",
+    "@easyops-cn/docusaurus-search-local": "^0.45.0",
     "clsx": "^2.1.1",
     "katex": "^0.16.11",
     "react": "^18.3.1",
@@ -63,14 +63,14 @@
     "@docusaurus/tsconfig": "3.5.2",
     "@docusaurus/types": "3.5.2",
     "@mdx-js/react": "^3.0.1",
-    "@types/node": "^20.16.10",
+    "@types/node": "^20.16.11",
     "ci-info": "^4.0.0",
-    "commit-and-tag-version": "^12.4.4",
+    "commit-and-tag-version": "^12.5.0",
     "eslint": "^8.57.1",
     "markdownlint-cli": "^0.42.0",
     "prettier": "^3.3.3",
-    "stylelint": "^16.9.0",
-    "typescript": "^5.6.2"
+    "stylelint": "^16.10.0",
+    "typescript": "^5.6.3"
   },
   "browserslist": {
     "production": [
