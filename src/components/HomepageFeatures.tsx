@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import React from 'react'
 import MountainSVG from '../../static/img/undraw_docusaurus_mountain.svg'
-import TreeSVG from '../../static/img/undraw_docusaurus_tree.svg'
 import ReactSVG from '../../static/img/undraw_docusaurus_react.svg'
+import TreeSVG from '../../static/img/undraw_docusaurus_tree.svg'
 import styles from './HomepageFeatures.module.css'
 
 const FeatureList = [
