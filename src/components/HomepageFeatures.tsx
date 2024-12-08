@@ -1,14 +1,15 @@
 import clsx from 'clsx'
-import React from 'react'
 import MountainSVG from '../../static/img/undraw_docusaurus_mountain.svg'
 import ReactSVG from '../../static/img/undraw_docusaurus_react.svg'
 import TreeSVG from '../../static/img/undraw_docusaurus_tree.svg'
 import styles from './HomepageFeatures.module.css'
 
+type SVG = React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+
 const FeatureList = [
   {
     title: 'Powered by Markdown',
-    Svg: MountainSVG,
+    Svg: MountainSVG as unknown as SVG,
     description: (
       <>
         Simply write notes with Markdown/MDX. Even embed JSX components into
@@ -18,7 +19,7 @@ const FeatureList = [
   },
   {
     title: 'Built Using React',
-    Svg: TreeSVG,
+    Svg: TreeSVG as unknown as SVG,
     description: (
       <>
         Extend or customize notes layout by reusing React. Notes can be extended
@@ -28,7 +29,7 @@ const FeatureList = [
   },
   {
     title: 'Today I Learned',
-    Svg: ReactSVG,
+    Svg: ReactSVG as unknown as SVG,
     description: (
       <>
         All notes come from everyday I learned. Deploy to both Github Pages and
@@ -39,14 +40,14 @@ const FeatureList = [
 ]
 
 function Feature({ Svg, title, description }: {
-  Svg: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+  Svg: SVG
   title: string
   description: React.ReactNode
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.feature} alt={title} />
+        <Svg className={styles.feature} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
@@ -56,7 +57,7 @@ function Feature({ Svg, title, description }: {
   )
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
