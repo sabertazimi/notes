@@ -25,7 +25,8 @@ jobs:
       - name: Setup Node environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: lts/*
+          check-latest: true
           architecture: x64
           registry-url: https://registry.npmjs.org/
           cache: pnpm
@@ -42,7 +43,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [20]
+        node-version: [lts/*]
         architecture: [x64]
     steps:
       - name: Checkout repository
@@ -56,6 +57,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          check-latest: true
           architecture: ${{ matrix.architecture }}
           registry-url: https://registry.npmjs.org/
           cache: pnpm
@@ -67,7 +69,7 @@ jobs:
           pnpm build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
-        if: ${{ matrix.node-version == 20 && matrix.os == 'ubuntu-latest' && matrix.architecture == 'x64' }}
+        if: ${{ matrix.node-version == 'lts/*' && matrix.os == 'ubuntu-latest' && matrix.architecture == 'x64' }}
         with:
           name: build
           path: build
@@ -109,7 +111,8 @@ jobs:
       - name: Setup Node environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: lts/*
+          check-latest: true
           architecture: x64
           registry-url: https://registry.npmjs.org/
       - name: Release to GitHub
