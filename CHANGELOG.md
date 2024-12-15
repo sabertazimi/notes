@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.12](https://github.com/sabertazimi/awesome-notes/compare/v3.18.11...v3.18.12) (2024-12-15)
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) ([#575](https://github.com/sabertazimi/awesome-notes/issues/575)) ([56f6d70](https://github.com/sabertazimi/awesome-notes/commit/56f6d7094d07454dd261c63ecc75d9405cacec37)), closes [facebook/docusaurus#10694](https://github.com/facebook/docusaurus/issues/10694)
+* **deps:** update dependencies (non-major) ([#577](https://github.com/sabertazimi/awesome-notes/issues/577)) ([7a0683e](https://github.com/sabertazimi/awesome-notes/commit/7a0683e4c23678beebc0f08f4608884e6453e09f))
+* **deps:** update dependencies (non-major) ([#580](https://github.com/sabertazimi/awesome-notes/issues/580)) ([9875da5](https://github.com/sabertazimi/awesome-notes/commit/9875da5378236f306628b78ee633597dba73e103))
+* **deps:** update react monorepo to v19 ([#579](https://github.com/sabertazimi/awesome-notes/issues/579)) ([2a06b24](https://github.com/sabertazimi/awesome-notes/commit/2a06b24abb8325d526e518f627864c435ab4264c))
+* **web-library:** modern React UI library ([fb09218](https://github.com/sabertazimi/awesome-notes/commit/fb092186c6dec1b89bd994545e65f51fd0db8ef5))
+* **website:** rectify broken types ([ae16fa9](https://github.com/sabertazimi/awesome-notes/commit/ae16fa97a7bee913b34403469f35748d4b2b6929))
+
 ## [3.18.11](https://github.com/sabertazimi/awesome-notes/compare/v3.18.10...v3.18.11) (2024-11-15)
 
 
