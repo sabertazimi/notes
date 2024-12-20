@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.18.12",
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@9.15.1",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
   "license": "MIT",
@@ -49,7 +49,7 @@
     "@docusaurus/preset-classic": "3.6.3",
     "@easyops-cn/docusaurus-search-local": "^0.46.1",
     "clsx": "^2.1.1",
-    "katex": "^0.16.15",
+    "katex": "^0.16.18",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rehype-katex": "^7.0.1",
