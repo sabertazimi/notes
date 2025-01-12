@@ -69,7 +69,7 @@
     "eslint": "^9.18.0",
     "markdownlint-cli": "^0.43.0",
     "prettier": "^3.4.2",
-    "stylelint": "^16.12.0",
+    "stylelint": "^16.13.0",
     "typescript": "^5.7.3"
   },
   "browserslist": {
