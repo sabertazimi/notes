@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.18.13](https://github.com/sabertazimi/awesome-notes/compare/v3.18.12...v3.18.13) (2025-01-15)
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) ([#584](https://github.com/sabertazimi/awesome-notes/issues/584)) ([ca8a2f5](https://github.com/sabertazimi/awesome-notes/commit/ca8a2f5d2207a4232d4277e687d7fbecb94e4011))
+* **deps:** update dependencies (non-major) ([#586](https://github.com/sabertazimi/awesome-notes/issues/586)) ([361947d](https://github.com/sabertazimi/awesome-notes/commit/361947d5d1f6fd1fe7e2cc2e409cd975a402edc3))
+* **deps:** update dependencies (non-major) ([#587](https://github.com/sabertazimi/awesome-notes/issues/587)) ([6429d7d](https://github.com/sabertazimi/awesome-notes/commit/6429d7d55270e2fd827ea3c443276261f8ece84d))
+* **devops-library:** code search tool ([2b5c7d5](https://github.com/sabertazimi/awesome-notes/commit/2b5c7d58cf7b87ca293f35052aab7d6a04160e3d))
+* **react-refs:** ref as a prop starting in React 19 ([8a43fbc](https://github.com/sabertazimi/awesome-notes/commit/8a43fbc43490aa62ac801a4ab259984d75afe066))
+* **react-refs:** string refs removed in React 19 ([65b69a0](https://github.com/sabertazimi/awesome-notes/commit/65b69a084fffa25e9491ab062254160fc197207b))
+* **react-refs:** use callback refs instead of string refs ([faf781b](https://github.com/sabertazimi/awesome-notes/commit/faf781b7b31521ca27ce6ae991c65d860f0d0a83))
+* **web-library:** AI workflow automation ([15af8cb](https://github.com/sabertazimi/awesome-notes/commit/15af8cbcb49360437e94921d03b1923d31fe8b1f))
+* **web-library:** cloud operating system for DevOps ([6f22e52](https://github.com/sabertazimi/awesome-notes/commit/6f22e528f009214c45a34b7a8f3d2b2b119ad9ed))
+* **web-library:** next-gen web extension framework ([93f48a0](https://github.com/sabertazimi/awesome-notes/commit/93f48a075fc9e43c1a86f3c263b5409058b12280))
+* **web-library:** tailwind animations plugin ([c40cf43](https://github.com/sabertazimi/awesome-notes/commit/c40cf4329108df4b19224a9cc4514a36115362fa))
+* **web-network:** how NAT traversal works ([20b6146](https://github.com/sabertazimi/awesome-notes/commit/20b6146647dd29f7ef0a91779f9580ccca142efd))
+
 ## [3.18.12](https://github.com/sabertazimi/awesome-notes/compare/v3.18.11...v3.18.12) (2024-12-15)
 
 
