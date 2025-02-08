@@ -1,7 +1,7 @@
 {
   "name": "awesome-notes",
   "version": "3.18.13",
-  "packageManager": "pnpm@9.15.5",
+  "packageManager": "pnpm@10.2.1",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
   "license": "MIT",
