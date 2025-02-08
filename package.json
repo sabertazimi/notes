@@ -66,7 +66,7 @@
     "@types/node": "^22.13.1",
     "ci-info": "^4.1.0",
     "commit-and-tag-version": "^12.5.0",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "markdownlint-cli": "^0.44.0",
     "prettier": "^3.4.2",
     "stylelint": "^16.14.1",
