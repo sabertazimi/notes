@@ -46,6 +46,7 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 #### Math
 
 - [AI Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/AIBasicNotes)
+- [Economics Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/EconomicsBasicNotes)
 - [Mahjong Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/MahjongBasicNotes)
 
 #### Operating Systems
