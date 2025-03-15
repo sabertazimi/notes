@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.19.0](https://github.com/sabertazimi/awesome-notes/compare/v3.18.14...v3.19.0) (2025-03-15)
+
+
+### :sparkles: Features
+
+* **math-economics:** relationship between government and economics ([c4b7bba](https://github.com/sabertazimi/awesome-notes/commit/c4b7bba90b3ec6f4b16c22e5cf291957e39ceecf))
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** web AI agent ([ff7fd0f](https://github.com/sabertazimi/awesome-notes/commit/ff7fd0fa40367bd4e4305de71be390fc2cbf1856))
+* **ai-llm:** LLM survey ([cbf4f2b](https://github.com/sabertazimi/awesome-notes/commit/cbf4f2bd976ec09f8bc66331c13dbdf47dbbca75))
+* **ai-prompts:** developer prompts ([dae82d0](https://github.com/sabertazimi/awesome-notes/commit/dae82d0eb32db9ac2a670884d00df42686b5ac4b))
+* **css-selector:** `:has(:not)` vs `:not(:has)` ([1b9e41e](https://github.com/sabertazimi/awesome-notes/commit/1b9e41ede0b0823d51412efa73960df0127ace00))
+* **deps:** update dependencies (non-major) ([#608](https://github.com/sabertazimi/awesome-notes/issues/608)) ([119575b](https://github.com/sabertazimi/awesome-notes/commit/119575b271d3e19e5c17e1bf5e3f595c4e62d8d7))
+* **git-config:** better configure for developer ([89557f2](https://github.com/sabertazimi/awesome-notes/commit/89557f261dbaaf19e01e4c0b0fdcab339ccc5040))
+* **git-config:** better diff configuration ([c5a38a7](https://github.com/sabertazimi/awesome-notes/commit/c5a38a71eab8648b66977e292d5e5e8446e9218c))
+* **library-ai:** chat box AI client ([6c64bac](https://github.com/sabertazimi/awesome-notes/commit/6c64bac762cff757c08b61800c22c9c3a3e3d107))
+* **llm-prompts:** comprehensive framework from Kimi AI ([9126428](https://github.com/sabertazimi/awesome-notes/commit/91264281af71e613eb6a07bb208a55302223ab87))
+* **math-economics:** remove white spaces ([234738a](https://github.com/sabertazimi/awesome-notes/commit/234738a976a5a24a59b45d3784a19430650d088e))
+* **react-internals:** change code links ([2534ea5](https://github.com/sabertazimi/awesome-notes/commit/2534ea53c9ba1425e51fcf14ee7bc94b0fe46e79))
+* **react-internals:** commit order ([ca827e1](https://github.com/sabertazimi/awesome-notes/commit/ca827e151bb03724d81adc89657e3471ff95f826))
+* **react-internals:** interactive slide for React workflow ([4676cba](https://github.com/sabertazimi/awesome-notes/commit/4676cbae935be3d9b6a7756f41d790783c9c57d2))
+* **react-internals:** lanes for bailout process ([d0f6da6](https://github.com/sabertazimi/awesome-notes/commit/d0f6da6207e1ed0442e0641a73d6c2b97dae61ef))
+* **react-internals:** React core workflow ([535f532](https://github.com/sabertazimi/awesome-notes/commit/535f532b765e78f679afe4c86e9904a61b4c61b2))
+* **react-perf:** React performance guide ([fdf3da1](https://github.com/sabertazimi/awesome-notes/commit/fdf3da1c698bee4fa33f99f675ad8f51b8b3c314))
+* **ts-config:** modern TypeScript configuration ([0f79789](https://github.com/sabertazimi/awesome-notes/commit/0f79789268d5b606e70c3b911897909909281952))
+* **typo:** rectify typo ([4a3387f](https://github.com/sabertazimi/awesome-notes/commit/4a3387feed03313bafcd54765e6db59a8b7c758c))
+* **typo:** rectify typo ([eddcff0](https://github.com/sabertazimi/awesome-notes/commit/eddcff0586b2fd151a7f32c0316cc17ad44b71fd))
+* **vim-config:** LazyVim configure for NeoVim ([5b49a8d](https://github.com/sabertazimi/awesome-notes/commit/5b49a8d626ed80647f93b5ec733172ebde86d99d))
+* **web-library:** async key-value storage ([e0834d4](https://github.com/sabertazimi/awesome-notes/commit/e0834d44401a769a9960019cf3c2bf5c3d7f4126))
+
+
+### :zap: Performance
+
+* [ImgBot] optimize images ([#602](https://github.com/sabertazimi/awesome-notes/issues/602)) ([3e21efa](https://github.com/sabertazimi/awesome-notes/commit/3e21efa42f70092876d8b38b0fd566de33f50386))
+
 ## [3.18.14](https://github.com/sabertazimi/awesome-notes/compare/v3.18.13...v3.18.14) (2025-02-15)
 
 
