@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.19.1](https://github.com/sabertazimi/awesome-notes/compare/v3.19.0...v3.19.1) (2025-04-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** desktop client for AI LLMs ([62ae2cb](https://github.com/sabertazimi/awesome-notes/commit/62ae2cb1904cef0f642c40056716f0dca7e98d38))
+* **ai-library:** MCP servers ([cf2a81e](https://github.com/sabertazimi/awesome-notes/commit/cf2a81e6d384c4ab7602936d4fa74b7d0e8f24ab))
+* **ai-prompting:** cursor rules ([7fcdd60](https://github.com/sabertazimi/awesome-notes/commit/7fcdd607098085befa30e08e20c920956d782cb2))
+* **ai-prompts:** cursor prompts ([ce65a00](https://github.com/sabertazimi/awesome-notes/commit/ce65a00af54a3217668b191210abe22093baed72))
+* **ai-prompts:** cursor rules ([ead2ca4](https://github.com/sabertazimi/awesome-notes/commit/ead2ca4eee25b3d0476fdb1546635914ed676ec4))
+* **db-mysql:** setup mysql in docker ([ed665b7](https://github.com/sabertazimi/awesome-notes/commit/ed665b750b5078e56745e82789cf23d0c4469704))
+* **deps:** update dependencies (non-major) ([#610](https://github.com/sabertazimi/awesome-notes/issues/610)) ([a254cdc](https://github.com/sabertazimi/awesome-notes/commit/a254cdc8d27d9d2e92540c845941e2f540e9babf))
+* **deps:** update dependencies (non-major) ([#611](https://github.com/sabertazimi/awesome-notes/issues/611)) ([9d1cc88](https://github.com/sabertazimi/awesome-notes/commit/9d1cc889c0a03940a127ad5fc433fca259941514))
+* **deps:** update dependencies (non-major) ([#613](https://github.com/sabertazimi/awesome-notes/issues/613)) ([d8b9d0c](https://github.com/sabertazimi/awesome-notes/commit/d8b9d0cc4288415d5742ddbddfddaecaabd42cb0))
+* **git-config:** polish up for copying usage ([50cd01e](https://github.com/sabertazimi/awesome-notes/commit/50cd01e2b4f909e07a976f8bc5709363f88ab6a0))
+* **git-gpg:** change default GitHub signature ([3696550](https://github.com/sabertazimi/awesome-notes/commit/3696550b74f08a23b9846329ee1f1635d8fc8c93))
+* **git:** git diff alias ([cb8a0a1](https://github.com/sabertazimi/awesome-notes/commit/cb8a0a1fe3cb25924ee9facdd868678a24221d3a))
+* **python-class:** import class from module ([b1791e9](https://github.com/sabertazimi/awesome-notes/commit/b1791e926b59a31ef40cdb26894459f1a59be34a))
+* **python-conda:** conda setup ([5c266f1](https://github.com/sabertazimi/awesome-notes/commit/5c266f17d73704fd384bea624760faf5597c3a64))
+* **python-exception:** basic exception handling ([3bef64f](https://github.com/sabertazimi/awesome-notes/commit/3bef64f7a4f7c6796617ae9e1e81066f436f107a))
+* **python-file:** more file demos ([c066bd1](https://github.com/sabertazimi/awesome-notes/commit/c066bd112cfc54cf661f029370e0b59bfcebcb03))
+* **python-file:** text file operation ([366eff0](https://github.com/sabertazimi/awesome-notes/commit/366eff0c0a05b7c7fb6bb77eb20c117e67c7c316))
+* **python-function:** default parameter ([5365af3](https://github.com/sabertazimi/awesome-notes/commit/5365af3411dca23a1a5faa3aef642747cce06108))
+* **python-function:** rest parameter ([a5ac880](https://github.com/sabertazimi/awesome-notes/commit/a5ac8808a22b5c1bcf159cc548ea83930334e01f))
+* **python-list:** list basis ([8ed52e8](https://github.com/sabertazimi/awesome-notes/commit/8ed52e81b5d229a8d44e15b28fc9973a5e71b029))
+* **python-module:** import function from module ([301b4df](https://github.com/sabertazimi/awesome-notes/commit/301b4df71e8f4eaa024961e7dea7177321b02ef0))
+* **python-string:** more string methods ([cc4a763](https://github.com/sabertazimi/awesome-notes/commit/cc4a7631179a5adeea33afb557c2dedd94f53cb5))
+* **python-string:** string methods ([cdcf2c1](https://github.com/sabertazimi/awesome-notes/commit/cdcf2c140d4c99a5e8378cc8d55ad5f288498338))
+* **python-testing:** pytest use case ([bf768ce](https://github.com/sabertazimi/awesome-notes/commit/bf768cea4e147aacfdf3dec3a72cec3c53aa9527))
+* **python:** anaconda installation ([0b61e45](https://github.com/sabertazimi/awesome-notes/commit/0b61e45d0b86dc8531c0c9d82234ac6e92774979))
+* **python:** csv file ([7293cfd](https://github.com/sabertazimi/awesome-notes/commit/7293cfd793c72cb23d895fc30a1a26176d72a0fe))
+* **python:** dictionary ([79ca969](https://github.com/sabertazimi/awesome-notes/commit/79ca96925d0cb2683495b2e1759e190ce1576c72))
+* **python:** input function ([ea3ae21](https://github.com/sabertazimi/awesome-notes/commit/ea3ae21919e4e3156c10e74d972a66baaba7880a))
+* **typescript:** tsconfig file ([cb84322](https://github.com/sabertazimi/awesome-notes/commit/cb84322368327cbb1f36182283e9e33b33c7fed1))
+* **web-library:** vue admin system ([a2694bc](https://github.com/sabertazimi/awesome-notes/commit/a2694bc3577b6a4b41400b4f0c4d5abc4008daf2))
+
 ## [3.19.0](https://github.com/sabertazimi/awesome-notes/compare/v3.18.14...v3.19.0) (2025-03-15)
 
 
