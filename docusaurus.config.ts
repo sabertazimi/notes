@@ -74,7 +74,7 @@ const config: Config = {
           activeBasePath: 'intro',
         },
         {
-          to: 'ComputerScience/Math/AIBasicNotes',
+          to: 'ComputerScience/Algorithms/AlgorithmsBasicNotes',
           label: 'Computer Science',
           position: 'left',
           activeBasePath: 'ComputerScience',
@@ -96,6 +96,12 @@ const config: Config = {
           label: 'Web',
           position: 'left',
           activeBasePath: 'Web',
+        },
+        {
+          to: 'AI/Theory/AIBasicNotes',
+          label: 'AI',
+          position: 'left',
+          activeBasePath: 'AI',
         },
         {
           type: 'dropdown',
@@ -153,7 +159,7 @@ const config: Config = {
               label: 'Getting Started',
             },
             {
-              to: 'ComputerScience/Math/AIBasicNotes',
+              to: 'ComputerScience/Algorithms/AlgorithmsBasicNotes',
               label: 'Computer Science',
             },
             {
@@ -167,6 +173,10 @@ const config: Config = {
             {
               to: 'Web/JavaScript/JavaScriptBasicNotes',
               label: 'Web',
+            },
+            {
+              to: 'AI/Theory/AIBasicNotes',
+              label: 'AI',
             },
           ],
         },

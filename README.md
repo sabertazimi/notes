@@ -45,7 +45,6 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 #### Math
 
-- [AI Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/AIBasicNotes)
 - [Economics Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/EconomicsBasicNotes)
 - [Mahjong Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/MahjongBasicNotes)
 
@@ -165,6 +164,17 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 - [Vue Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Vue/VueBasicNotes)
 - [Vue Advanced Notes](https://sabertazimi.github.io/awesome-notes/Web/Vue/VueAdvancedNotes)
+
+### AI
+
+#### Theory
+
+- [AI Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/Theory/AIBasicNotes)
+
+#### LLM
+
+- [LLM Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/LLM/LLMBasicNotes)
+- [Prompt Engineering Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/LLM/PromptEngineeringBasicNotes)
 
 ## License
 
