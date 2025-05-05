@@ -147,6 +147,7 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 - [GraphQL Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/GraphQLBasicNotes)
 - [Message Queue Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/MessageQueueBasicNotes)
 - [Node Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/NodeBasicNotes)
+- [Redis Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/RedisBasicNotes)
 
 #### React
 
