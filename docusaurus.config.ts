@@ -155,10 +155,6 @@ const config: Config = {
           title: 'Notes',
           items: [
             {
-              to: '/intro',
-              label: 'Getting Started',
-            },
-            {
               to: 'ComputerScience/Algorithms/AlgorithmsBasicNotes',
               label: 'Computer Science',
             },
