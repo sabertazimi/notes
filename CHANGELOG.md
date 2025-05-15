@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.20.0](https://github.com/sabertazimi/awesome-notes/compare/v3.19.1...v3.20.0) (2025-05-15)
+
+
+### :sparkles: Features
+
+* **ai:** setup AI notes ([2c27f32](https://github.com/sabertazimi/awesome-notes/commit/2c27f32194e69e131a596df7d670c20d43099978))
+
+
+### :sparkles: Today I Learned
+
+* **ai-cursor:** AI learning copilot prompt ([afe9129](https://github.com/sabertazimi/awesome-notes/commit/afe912991d7cac6d0efe1baa3bbdea532c6418e2))
+* **ai-cursor:** cursor custom modes ([c304bf0](https://github.com/sabertazimi/awesome-notes/commit/c304bf0a0686ec7434eeebb2b8110e8b112672f0))
+* **ai-cursor:** link syntax for cursor rule file ([741499f](https://github.com/sabertazimi/awesome-notes/commit/741499f94b6a3dbcee898ceb437401bb9f9f9c52))
+* **ai-library:** AI agents devtools ([9944452](https://github.com/sabertazimi/awesome-notes/commit/99444529e24749e0dbcad8fe8d2b2b08a40e996d))
+* **ai-prompts:** cursor prompts ([63e81a0](https://github.com/sabertazimi/awesome-notes/commit/63e81a0ef88d8223d284c7ecd6b7eb940b7dc02e))
+* **ai-prompts:** system analysis prompts ([0f0d5b7](https://github.com/sabertazimi/awesome-notes/commit/0f0d5b7845d561750b537901a7ca072c01d2da75))
+* **ai-prompts:** UI rules and prompts ([ddf81f8](https://github.com/sabertazimi/awesome-notes/commit/ddf81f807dd96786e3cec1f7a3dabc008800215a))
+* **database-mysql:** basic SQL statements ([61e95f6](https://github.com/sabertazimi/awesome-notes/commit/61e95f66acf250a983148a3e2c0042da800dcd93))
+* **database-mysql:** mysql docker configuration ([70b05dc](https://github.com/sabertazimi/awesome-notes/commit/70b05dcbff7e77eddedf0da530fa8cbcb4891c61))
+* **database-mysql:** mysql infrastructure ([bf05ae7](https://github.com/sabertazimi/awesome-notes/commit/bf05ae7d1fa0554d81166fbdef0e3e73793edee3))
+* **devops-docker:** docker logs ([83acb52](https://github.com/sabertazimi/awesome-notes/commit/83acb524a0034f3e4d583ddf486726fbc6069c91))
+* **devops-kubernetes:** basic kubectl commands ([b2b53d1](https://github.com/sabertazimi/awesome-notes/commit/b2b53d106fa0699d0f2b6bf1159773d5f6880ed2))
+* **docker:** docker hub mirrors ([bb3319a](https://github.com/sabertazimi/awesome-notes/commit/bb3319a0d633bd4e3cd6cb70858a031fd1347d9c))
+* **git:** commit template path ([1324541](https://github.com/sabertazimi/awesome-notes/commit/132454199059d3daa128f1ac8d802b2c47fae3ae))
+* **intro:** add redis chapter ([c8d9b09](https://github.com/sabertazimi/awesome-notes/commit/c8d9b09fff5f46693b7fa0d33420871087861d64))
+* **java-maven:** basic usage of maven ([29055e0](https://github.com/sabertazimi/awesome-notes/commit/29055e0106c65f337ff26c1ee592d0c9110220f9))
+* **java-maven:** maven dependency ([e8f79c4](https://github.com/sabertazimi/awesome-notes/commit/e8f79c4a8e674566ade219dc26919c49048cd82d))
+* **java-maven:** maven modules ([38f7c68](https://github.com/sabertazimi/awesome-notes/commit/38f7c68599e248d9f8ffd869623efd1a9a31870f))
+* **java-maven:** maven properties ([351edf5](https://github.com/sabertazimi/awesome-notes/commit/351edf5fd5ffb2c10f7f57b0477c0949b77c5131))
+* **linux-gfw:** raw github hosts ip ([cc72746](https://github.com/sabertazimi/awesome-notes/commit/cc7274673b07b47139eb0a5b1b2d99da3e9878df))
+* **linux-ssh:** setup ssh key ([f034c57](https://github.com/sabertazimi/awesome-notes/commit/f034c577cc9327925a6a89854ca753a25ce4d2bf))
+* **linux-ssh:** use ssh-copy-id to sync key ([56a1acd](https://github.com/sabertazimi/awesome-notes/commit/56a1acd34d92b750176f79d4181d4a8887d60fd8))
+* **linux-systemctl:** custom systemctl service ([4ad45b1](https://github.com/sabertazimi/awesome-notes/commit/4ad45b156f048a7c5110c7ebbfb77356abadc50b))
+* **linux-zsh:** install zsh on windows ([b804b3e](https://github.com/sabertazimi/awesome-notes/commit/b804b3e4f0b1caa4c08f2c0b10c9249d9e0e168d))
+* **python-uv:** setup uv pip mirrror ([e9c8ce6](https://github.com/sabertazimi/awesome-notes/commit/e9c8ce6fc9d2c2fda624db51d5cc5a43c8681f79))
+* **react-hook:** effect lifecycle ([361372c](https://github.com/sabertazimi/awesome-notes/commit/361372cb084056fe9671b31af0ac92c33ff01dbb))
+* **react-hook:** reusable-behavior-hooks-through-ref ([5c5ce50](https://github.com/sabertazimi/awesome-notes/commit/5c5ce50a9b449d58fad15b872bf8e29788b2aece))
+* **react-ref:** `uesRef` internals ([74b11fe](https://github.com/sabertazimi/awesome-notes/commit/74b11fef3994383ae0708ea55d2518c01f3cdca2))
+* **react-suspense:** suspense fiber structure ([283eaa5](https://github.com/sabertazimi/awesome-notes/commit/283eaa5c0314722ac1bcaf7120fdb220b851704e))
+* **react-transition:** opt-in concurrent mode via transition ([3889121](https://github.com/sabertazimi/awesome-notes/commit/3889121687bd2b284dd0097c88de16b66c11aef4))
+* **redis:** basic commands ([61a7b25](https://github.com/sabertazimi/awesome-notes/commit/61a7b251378743fd5e611da3483d982e9d66c6cf))
+* **vim-jump:** `:jumps` and `:changes` ([a5e9995](https://github.com/sabertazimi/awesome-notes/commit/a5e9995cfff7f30a25954f03c0135e5e734bd0b8))
+
+
+### :zap: Performance
+
+* [ImgBot] optimize images ([#617](https://github.com/sabertazimi/awesome-notes/issues/617)) ([3e01dc3](https://github.com/sabertazimi/awesome-notes/commit/3e01dc33cf0f63cf017441d4a03bda6c40a05679))
+
 ## [3.19.1](https://github.com/sabertazimi/awesome-notes/compare/v3.19.0...v3.19.1) (2025-04-15)
 
 
