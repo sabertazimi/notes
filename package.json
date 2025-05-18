@@ -67,7 +67,7 @@
     "ci-info": "^4.2.0",
     "commit-and-tag-version": "^12.5.1",
     "eslint": "^9.27.0",
-    "markdownlint-cli": "^0.44.0",
+    "markdownlint-cli": "^0.45.0",
     "prettier": "^3.5.3",
     "stylelint": "^16.19.1",
     "typescript": "^5.8.3"
