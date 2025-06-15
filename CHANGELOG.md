@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.20.1](https://github.com/sabertazimi/awesome-notes/compare/v3.20.0...v3.20.1) (2025-06-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-mcp:** mcp server list ([6280e4f](https://github.com/sabertazimi/awesome-notes/commit/6280e4f4daa98015796af42f8e29bd159054c836))
+* **ai-prompts:** code review prompt ([24e7a3a](https://github.com/sabertazimi/awesome-notes/commit/24e7a3af48431cf5d8543f8bc730acb4e385dfb6))
+* **ai-prompts:** cursor prototype mode ([40fb6d4](https://github.com/sabertazimi/awesome-notes/commit/40fb6d4a74519047d7676944dbd27a41ca5df190))
+* **ai-rules:** RIPER-5 rule ([d222989](https://github.com/sabertazimi/awesome-notes/commit/d222989c13576669cf05a827c506e8a567928f92))
+* **deps:** update dependencies (non-major) ([#622](https://github.com/sabertazimi/awesome-notes/issues/622)) ([3e86b1d](https://github.com/sabertazimi/awesome-notes/commit/3e86b1d7f112667b7b5a2fa02beceac863472290))
+* **deps:** update dependencies (non-major) ([#623](https://github.com/sabertazimi/awesome-notes/issues/623)) ([28893ef](https://github.com/sabertazimi/awesome-notes/commit/28893ef735c4926cba0924088aaafc7d290918d8))
+* **deps:** update dependencies (non-major) ([#624](https://github.com/sabertazimi/awesome-notes/issues/624)) ([3295fd3](https://github.com/sabertazimi/awesome-notes/commit/3295fd3a60f9ababfbe2e27553a62188a8d46501))
+* **git-config:** better git configuration ([51efe75](https://github.com/sabertazimi/awesome-notes/commit/51efe7599a1756a15e0fd8e24c60e8e7c851dfa1))
+* **java-bean:** java bean ([63c02f9](https://github.com/sabertazimi/awesome-notes/commit/63c02f963c3d01f961b6a3e17f3ad2ef617b28c3))
+* **java-gui:** remove legacy GUI notes ([0ad7cfd](https://github.com/sabertazimi/awesome-notes/commit/0ad7cfdfd6523ce8cae73318896ce0daa7e60962))
+* **java-mybatis:** mybatis proxy and interceptor ([7230b8e](https://github.com/sabertazimi/awesome-notes/commit/7230b8e43f45a24ee8e28ecf3fb02c082f09b9d8))
+* **java-record:** record class ([f3a9c00](https://github.com/sabertazimi/awesome-notes/commit/f3a9c0044d093bb2de35a6d42a8e3d64c5b9ca89))
+* **java:** design patterns for GUI ([eeadea0](https://github.com/sabertazimi/awesome-notes/commit/eeadea0384525abbf99b03983771f47e963a82d9))
+* **java:** enum class ([2dacf77](https://github.com/sabertazimi/awesome-notes/commit/2dacf7737c3024222d58f6fba4b2c5b08bdd7bab))
+* **java:** refactor chapters ([a2e34dd](https://github.com/sabertazimi/awesome-notes/commit/a2e34dd92f15f65ea0f20847c673225d93e50a0e))
+* **java:** remove redundant marks ([077e4e4](https://github.com/sabertazimi/awesome-notes/commit/077e4e47940666fb069642950775ba44d5f9a8f5))
+* **java:** wrapper classes ([e5089e1](https://github.com/sabertazimi/awesome-notes/commit/e5089e179482ab4ed78b905fcb1487587639cac8))
+* **linux-perf:** linux perf tools ([193f956](https://github.com/sabertazimi/awesome-notes/commit/193f956b865d5866d64005a76794ef4132eb536a))
+* **prompts-codex:** OpenAI Codex system message ([9a1d63d](https://github.com/sabertazimi/awesome-notes/commit/9a1d63dec5a7fb422f2d67fff59099c2f8fd69bd))
+* **react-hooks:** demo for useOptimistic ([bc010d1](https://github.com/sabertazimi/awesome-notes/commit/bc010d19ab1570f220f792590a18ffab53078f4a))
+* **react-hooks:** effects commit order ([e9e6f59](https://github.com/sabertazimi/awesome-notes/commit/e9e6f593bdbef3592c7c53ee08f0ab47d9303f1f))
+* **react-hooks:** useSyncExternal shim ([9f43f41](https://github.com/sabertazimi/awesome-notes/commit/9f43f41e743d05d75c89a45622378fe46d874d90))
+* **react-lazy:** lazy module loader ([5a64650](https://github.com/sabertazimi/awesome-notes/commit/5a646505270d4addf99fd4191da70b3d8ea57c34))
+* **react-ssr:** hydration with suspense ([57a9ca0](https://github.com/sabertazimi/awesome-notes/commit/57a9ca0e739e4d5d3b9c7f85137d505ef234a460))
+* **react:** remove react 18 suffix ([663cfc4](https://github.com/sabertazimi/awesome-notes/commit/663cfc4e485ffc3e5d754668dfdb46afb0f6718f))
+
 ## [3.20.0](https://github.com/sabertazimi/awesome-notes/compare/v3.19.1...v3.20.0) (2025-05-15)
 
 
