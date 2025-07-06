@@ -48,6 +48,7 @@
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@easyops-cn/docusaurus-search-local": "^0.51.1",
+    "@types/react": "^19.1.8",
     "clsx": "^2.1.1",
     "katex": "^0.16.22",
     "react": "^19.1.0",

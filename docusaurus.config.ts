@@ -104,6 +104,12 @@ const config: Config = {
           activeBasePath: 'AI',
         },
         {
+          to: 'Web/Frameworks/LibraryBasicNotes',
+          label: 'Library Gallery',
+          position: 'right',
+          activeBasePath: 'Web/Frameworks/LibraryBasicNotes',
+        },
+        {
           type: 'dropdown',
           label: 'Links',
           position: 'right',
@@ -174,6 +180,10 @@ const config: Config = {
               to: 'AI/Theory/AIBasicNotes',
               label: 'AI',
             },
+            {
+              to: 'Web/Frameworks/LibraryBasicNotes',
+              label: 'Library Gallery',
+            },
           ],
         },
         {
@@ -221,8 +231,12 @@ const config: Config = {
               href: 'https://github.com/sabertazimi/dragon-zsh-theme',
             },
             {
-              label: 'Minimal Boilerplate',
-              href: 'https://github.com/sabertazimi/boilerplate',
+              label: 'LaTeX Snippets',
+              href: 'https://github.com/sabertazimi/LaTeX-snippets',
+            },
+            {
+              label: 'Lab Notes',
+              href: 'https://github.com/sabertazimi/hust-lab',
             },
           ],
         },

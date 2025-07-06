@@ -1,0 +1,220 @@
+/* stylelint-disable selector-class-pattern -- disable for CSS modules */
+
+.container {
+  max-width: 1200px;
+  padding: 0 var(--ifm-spacing-horizontal);
+  margin: 0 auto;
+}
+
+.sectionSelector {
+  margin-bottom: 2rem;
+}
+
+.sectionSelector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-content);
+}
+
+/* 下拉菜单容器 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 下拉菜单触发按钮 */
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: var(--ifm-font-size-base);
+  color: var(--ifm-color-content);
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius);
+  transition: all 0.2s ease;
+}
+
+.dropdownButton:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.dropdownButton:focus {
+  border-color: var(--ifm-color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+/* 下拉箭头 */
+.dropdownArrow {
+  width: 0;
+  height: 0;
+  margin-left: 0.5rem;
+  border-top: 4px solid var(--ifm-color-content-secondary);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.dropdownOpen .dropdownArrow {
+  transform: rotate(180deg);
+}
+
+/* 下拉菜单列表 */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  max-height: 300px;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  list-style: none;
+  visibility: hidden;
+  background-color: rgb(255 255 255 / 90%);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+  opacity: 0;
+  transition: all 0.2s ease;
+  transform: translateY(-10px);
+}
+
+.dropdownOpen .dropdownMenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 下拉菜单项 */
+.dropdownItem {
+  padding: 0.5rem 1rem;
+  color: var(--ifm-color-content);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: var(--ifm-menu-color-background-hover);
+}
+
+.dropdownItem.active {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-menu-color-active);
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+.sectionContent {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--ifm-color-content);
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  text-decoration: none;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  transition: all 0.2s ease;
+}
+
+.itemCard:hover {
+  text-decoration: none;
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+}
+
+.itemTitle {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary);
+}
+
+.itemDescription {
+  flex-grow: 1;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+}
+
+.subSection {
+  margin-bottom: 3rem;
+}
+
+.subSectionTitle {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-content);
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.subSubSection {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.subSubSectionTitle {
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-content);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.emptyState {
+  padding: 3rem 1rem;
+  color: var(--ifm-color-content-secondary);
+  text-align: center;
+}
+
+.emptyState h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--ifm-color-content);
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* 响应式设计 */
+@media (width <= 768px) {
+  .itemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdown {
+    max-width: 100%;
+  }
+}
