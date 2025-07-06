@@ -48,35 +48,35 @@ export function parseMarkdown(content: string): Section[] {
   const sections = content
     .split(/\n## /)
     .filter(section => section.trim() !== '')
-    .map((section) => {
-      const [name, ...subSections] = section.split(/\n### /).filter(Boolean)
-      const [sectionName, ...items] = name.split(/\n/).filter(Boolean)
+    .map((rawSection) => {
+      const [section, ...subSections] = rawSection.split(/\n### /).filter(Boolean)
+      const [sectionName, ...items] = section.split(/\n/).filter(Boolean)
       const sectionItems = parseItems(items)
 
       if (subSections.length === 0) {
         return {
-          name: sectionName,
+          name: sectionName.trim(),
           items: sectionItems,
           subSections: [],
         }
       } else {
         return {
-          name: sectionName,
+          name: sectionName.trim(),
           items: sectionItems,
-          subSections: subSections.map((subSection) => {
-            const [subSectionName, ...subSubSections] = subSection.split(/\n#### /).filter(Boolean)
-            const [subName, ...subItems] = subSectionName.split(/\n/).filter(Boolean)
+          subSections: subSections.map((rawSubSection) => {
+            const [subSection, ...subSubSections] = rawSubSection.split(/\n#### /).filter(Boolean)
+            const [subSectionName, ...subItems] = subSection.split(/\n/).filter(Boolean)
             const subSectionItems = parseItems(subItems)
 
             if (subSubSections.length === 0) {
               return {
-                name: subName.trim(),
+                name: subSectionName.trim(),
                 items: subSectionItems,
                 subSubSections: [],
               }
             } else {
               return {
-                name: subName.trim(),
+                name: subSectionName.trim(),
                 items: subSectionItems,
                 subSubSections: subSubSections.map((subSubSection) => {
                   const [subSubSectionName, ...subSubItems] = subSubSection.split(/\n/).filter(Boolean)
