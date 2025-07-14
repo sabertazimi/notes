@@ -18,6 +18,10 @@ const config: Config = {
   favicon: 'img/logo.svg',
   organizationName: 'sabertazimi',
   projectName: 'awesome-notes',
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -54,6 +58,12 @@ const config: Config = {
   ],
   themeConfig: {
     respectPrefersColorScheme: true,
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'dark',
+      },
+    },
     docs: {
       sidebar: {
         hideable: true,
