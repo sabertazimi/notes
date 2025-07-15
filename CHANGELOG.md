@@ -2,6 +2,58 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.0](https://github.com/sabertazimi/awesome-notes/compare/v3.20.1...v3.21.0) (2025-07-15)
+
+
+### :sparkles: Features
+
+* **web-library:** implement library gallery page ([#630](https://github.com/sabertazimi/awesome-notes/issues/630)) ([3fe51cf](https://github.com/sabertazimi/awesome-notes/commit/3fe51cf950e0ac2b956174e594e9d4235ade1c28))
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** AI chat web framework ([d0df7db](https://github.com/sabertazimi/awesome-notes/commit/d0df7db4600ad4b032979b52461051855aacfd2a))
+* **ai-llm:** agent instruction best practices ([93e27fb](https://github.com/sabertazimi/awesome-notes/commit/93e27fb6eb5a759a801f6394ec260081cbdbae69))
+* **ai-llm:** agent orchestraion and guardrails ([4a5462c](https://github.com/sabertazimi/awesome-notes/commit/4a5462c995c958c5142c3efdc018f7473ff50de3))
+* **ai-llm:** llm tools ([b54ae05](https://github.com/sabertazimi/awesome-notes/commit/b54ae05319b474c4876cb9e5931e6f7710fd70bf))
+* **ai-prompts:** awesome cursor rules ([8ece4e8](https://github.com/sabertazimi/awesome-notes/commit/8ece4e84dcba3426b48c81a3334f6bd26d8c178c))
+* **ai-prompts:** awesome rules and prompts ([#628](https://github.com/sabertazimi/awesome-notes/issues/628)) ([4994a0e](https://github.com/sabertazimi/awesome-notes/commit/4994a0e2c3e8ef7cfcecd5b943b7b63a4ec70bb7))
+* **ai-prompts:** comments prompt ([dd7d431](https://github.com/sabertazimi/awesome-notes/commit/dd7d4318a7a961acc992d402fd74c6477edf9bc8))
+* **ai-prompts:** cursor custom mode for prototyping ([f478d0b](https://github.com/sabertazimi/awesome-notes/commit/f478d0be9b310af09a792e4eae2b8a449af59c36))
+* **ai-prompts:** cursor custom prototype mode ([bf231d6](https://github.com/sabertazimi/awesome-notes/commit/bf231d60b0307e896562b618d4f18a4ba196cd74))
+* **ai-prompts:** cursor user rule ([ddd0d40](https://github.com/sabertazimi/awesome-notes/commit/ddd0d40f81cad4eef3510a5acf41002b74a41b3c))
+* **ai-prompts:** custom Cursor rules ([a980fe1](https://github.com/sabertazimi/awesome-notes/commit/a980fe1362edf352c8142e32c5e1e3cdfe2140a2))
+* **ai-prompts:** figma and context7 MCP for prototype mode ([bc61c3b](https://github.com/sabertazimi/awesome-notes/commit/bc61c3bf978ff85c3f0593218f7bee10ec166aea))
+* **ai-prompts:** full optimized prototype rule ([f949eee](https://github.com/sabertazimi/awesome-notes/commit/f949eee1d7ccdc45599f089a563d18e2d06a182a))
+* **ai-prompts:** gemini prompts cookbook ([1dd753a](https://github.com/sabertazimi/awesome-notes/commit/1dd753a36b18b00f848316c839e8495d999eeba1))
+* **ai-prompts:** prototype custom mode ([852ca77](https://github.com/sabertazimi/awesome-notes/commit/852ca770c04f0ebbbf320137f9ae182f94ff340c))
+* **ai-prompts:** system prompts for AI tools ([8f248f7](https://github.com/sabertazimi/awesome-notes/commit/8f248f71b052c4891d6d197b3fb96502ec000e1e))
+* **ai-prompts:** 时间处理规则 ([4608eec](https://github.com/sabertazimi/awesome-notes/commit/4608eecda5f2d7b599183bb78ab7e6af24b79134))
+* **ai-prompts:** 设计原型实现模式 ([f319fed](https://github.com/sabertazimi/awesome-notes/commit/f319fedb67a0dff52e07b3b3221e630de2fd3232))
+* **css-design:** AI interfaces design patterns ([b7fb1ff](https://github.com/sabertazimi/awesome-notes/commit/b7fb1ff7863966092a3da206a86ddc930818559b))
+* **css-layouts:** flexible grids layout ([3a0ea7c](https://github.com/sabertazimi/awesome-notes/commit/3a0ea7c662f877a746711045986acf4e1bc3bab5))
+* **deps:** update dependencies (non-major) ([#625](https://github.com/sabertazimi/awesome-notes/issues/625)) ([eba9ac2](https://github.com/sabertazimi/awesome-notes/commit/eba9ac21c3df316d30c0337732dc5f1dfa1ccb6e))
+* **git-add:** stage new file in patch mode ([e0d81da](https://github.com/sabertazimi/awesome-notes/commit/e0d81da90a689ceae0df5311ce29856a145a323b))
+* **linux-perf:** linux perf commands and tips ([4fc85dc](https://github.com/sabertazimi/awesome-notes/commit/4fc85dcd2330dce9cb31d3cd56febe9c1dc46f0e))
+* **linux-perf:** perf command usage ([d91451d](https://github.com/sabertazimi/awesome-notes/commit/d91451d53854285c0ab764dfde759bc5ec962255))
+* **linux-wsl2:** wsl2 network configuration ([3642290](https://github.com/sabertazimi/awesome-notes/commit/36422905beaded64be4e022bec444ad937f3281e))
+* **node-worker:** worker pool implementation ([2c7a407](https://github.com/sabertazimi/awesome-notes/commit/2c7a407a7f3093f8228fc525e02adaaf94128c06))
+* **python-uv:** basic usage for uv ([0f763f1](https://github.com/sabertazimi/awesome-notes/commit/0f763f1d5f533a2d673d369c1c7c590c4fda0004))
+* **web-devtool:** chrome devtool tips ([302d324](https://github.com/sabertazimi/awesome-notes/commit/302d324f02f2817c70d451a515d7bb8d759a7e94))
+* **web-library:** AI UI framework ([f4bb3fe](https://github.com/sabertazimi/awesome-notes/commit/f4bb3fe1775cb36d27f22c2b1e8819a9212ba996))
+* **web-library:** animate UI based on shadcn/radix/base/headless UI ([2b2b631](https://github.com/sabertazimi/awesome-notes/commit/2b2b63101a4c08d92bd98b7e9815832cfe10076b))
+* **web-library:** cloud deployment platform ([d2062f8](https://github.com/sabertazimi/awesome-notes/commit/d2062f8ea7764303c98b6c1b33f39cb40fc9ccc1))
+* **web-library:** developer toolkit ([ca29fee](https://github.com/sabertazimi/awesome-notes/commit/ca29fee03bde6364e78ac408395bd9ff3a8265e0))
+* **web-library:** devtools disable library ([7688aa8](https://github.com/sabertazimi/awesome-notes/commit/7688aa8131883487e5aedb198a40b0f64524d558))
+* **web-library:** element plus x AI template ([de4ad7a](https://github.com/sabertazimi/awesome-notes/commit/de4ad7a7c948f2b22bab05e355c8f023c6ab0c57))
+* **web-library:** hero ui library ([f09f963](https://github.com/sabertazimi/awesome-notes/commit/f09f963d871f3344fddf3d5d66a68c7b45cd85e2))
+* **web-library:** html2canvas alternative ([0d42165](https://github.com/sabertazimi/awesome-notes/commit/0d421655327ddec54b53b9463da707d3894e9eb7))
+* **web-library:** mcp hook ([e3e93f6](https://github.com/sabertazimi/awesome-notes/commit/e3e93f6ea1ad659458c697e7b6a09d6b80abe717))
+* **web-library:** network diagrams drawing tool ([4765a01](https://github.com/sabertazimi/awesome-notes/commit/4765a0118e4708d92f0b6617de26f8e71f43c466))
+* **web-library:** tidy code up ([e1c70cd](https://github.com/sabertazimi/awesome-notes/commit/e1c70cd8095d6def134105c47a7c6182ccad3ce5))
+* **web-library:** toolkit ([3289a2d](https://github.com/sabertazimi/awesome-notes/commit/3289a2df7cec5312f0c2a3a8989f085571d2928a))
+* **web-library:** webapp and mini-program toolkits ([4d5769d](https://github.com/sabertazimi/awesome-notes/commit/4d5769d6e686e5fd5f1185d81d9997cd3b957bcb))
+
 ## [3.20.1](https://github.com/sabertazimi/awesome-notes/compare/v3.20.0...v3.20.1) (2025-06-15)
 
 
