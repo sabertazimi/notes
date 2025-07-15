@@ -2,3 +2,4 @@
 *.env linguist-detectable=false
 config.js linguist-detectable=false
 *.config.js linguist-detectable=false
+*.mdx linguist-detectable=false
