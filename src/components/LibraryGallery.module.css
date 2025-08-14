@@ -47,8 +47,8 @@
 }
 
 .dropdownButton:focus {
-  border-color: var(--ifm-color-primary);
   outline: none;
+  border-color: var(--ifm-color-primary);
   box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
 }
 
@@ -74,20 +74,20 @@
   right: 0;
   left: 0;
   z-index: 1000;
+  visibility: hidden;
   max-height: 300px;
   padding: 0;
   margin: 0;
   overflow-y: auto;
   list-style: none;
-  visibility: hidden;
   background-color: rgb(255 255 255 / 90%);
-  backdrop-filter: blur(4px);
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-button-border-radius);
   box-shadow: var(--ifm-global-shadow-md);
   opacity: 0;
-  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
   transform: translateY(-10px);
+  transition: all 0.2s ease;
 }
 
 .dropdownOpen .dropdownMenu {

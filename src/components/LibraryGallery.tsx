@@ -1,4 +1,5 @@
-import { type Item, parseMarkdown, type Section, type SubSection, type SubSubSection } from '@site/src/utils'
+import type { Item, Section, SubSection, SubSubSection } from '@site/src/utils'
+import { parseMarkdown } from '@site/src/utils'
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './LibraryGallery.module.css'
 
