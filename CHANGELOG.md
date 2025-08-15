@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.1](https://github.com/sabertazimi/awesome-notes/compare/v3.21.0...v3.21.1) (2025-08-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-llm:** the need for context engineering ([8965ea2](https://github.com/sabertazimi/awesome-notes/commit/8965ea272afb6a1484f5a23ca8ecdbb56614eb19))
+* **ai-prompts:** API integration prompt ([29b4647](https://github.com/sabertazimi/awesome-notes/commit/29b464772606d962686e9c35003fb12b9936fd61))
+* **css-components:** gradient border ([60f230d](https://github.com/sabertazimi/awesome-notes/commit/60f230d4425b752a1b690d1194e62d94ec2402ac))
+* **css-components:** modern switch component ([f5ad237](https://github.com/sabertazimi/awesome-notes/commit/f5ad23712fb1dcb3ad160a014726b172d4e2b9c7))
+* **css-flexbox:** flex box width calculation ([f01f942](https://github.com/sabertazimi/awesome-notes/commit/f01f942a31486cf29f8e2ba4fcbb67a7cb5fb6a0))
+* **css-layouts:** count `auto-fit` columns ([3c835e8](https://github.com/sabertazimi/awesome-notes/commit/3c835e8e1daf8fcb69d14a95be170c6cdd134103))
+* **css-position:** anchor positioning ([6a2248a](https://github.com/sabertazimi/awesome-notes/commit/6a2248a47f6e02156f17c2880babc69bc8400ae1))
+* **css-selectors:** `:has()` magic usage ([41bbc98](https://github.com/sabertazimi/awesome-notes/commit/41bbc98935b317ea4de28b60db299f6a1bc324c8))
+* **css-selectors:** combine `:has()` with structural pseudo class ([174789b](https://github.com/sabertazimi/awesome-notes/commit/174789be88d9ffeacbdc4c7c7485eb52735692e0))
+* **css-selectors:** disallow `:has()` nesting ([482e23b](https://github.com/sabertazimi/awesome-notes/commit/482e23b7a57fa19f8e3f32f0f291d25b528df903))
+* **css:** gradient border with transparent background ([7207b40](https://github.com/sabertazimi/awesome-notes/commit/7207b40ea3d592449b1a7091226a3307d9be45b4))
+* **css:** liquid glass effect ([6b9582e](https://github.com/sabertazimi/awesome-notes/commit/6b9582e316ccca26e7f85c8bf893aec18975e940))
+* **css:** tweaked frosted glass effect ([ad45714](https://github.com/sabertazimi/awesome-notes/commit/ad457148fbf84a5eff1deb6a7fcfb322ad8bcbd9))
+* **css:** underline styles ([b98460b](https://github.com/sabertazimi/awesome-notes/commit/b98460bece2225d8c3d25ce8d9ce9226d6bc586f))
+* **deps:** update dependencies (non-major) ([#633](https://github.com/sabertazimi/awesome-notes/issues/633)) ([0d4d9bf](https://github.com/sabertazimi/awesome-notes/commit/0d4d9bfa9bcfd6716575113f4098ed0759a1fcfb))
+* **deps:** update dependencies (non-major) ([#635](https://github.com/sabertazimi/awesome-notes/issues/635)) ([2f5a2b0](https://github.com/sabertazimi/awesome-notes/commit/2f5a2b05a6c3c9a4e910a17a6b45ab1f80c7936b))
+* **deps:** update dependencies (non-major) ([#636](https://github.com/sabertazimi/awesome-notes/issues/636)) ([5fbac30](https://github.com/sabertazimi/awesome-notes/commit/5fbac30fe88ee5153fbb6a798ec6c8e69e00e8a5))
+* **devops-docker:** docker hub proxy ([f41b2ca](https://github.com/sabertazimi/awesome-notes/commit/f41b2cacb55b22af7c5ac47319d8acbaeaf78107))
+* **network-http:** series of posts on HTTP status codes ([db2f7cb](https://github.com/sabertazimi/awesome-notes/commit/db2f7cba51f70cca0049eab48b6b002ce96c5b91))
+* **network-tcp:** 14kB rule for websites ([4630e9f](https://github.com/sabertazimi/awesome-notes/commit/4630e9f6268e36f8856c05d0354aa5b5d24bf714))
+* **node:** Node.js modern patterns ([ec884c6](https://github.com/sabertazimi/awesome-notes/commit/ec884c60d0af90cfcc0e9ebac1940c7ccb4a6018))
+* rectify linter errors ([3ad3fad](https://github.com/sabertazimi/awesome-notes/commit/3ad3fad2eb7fc14ee27620fe74fccf6a5e046a59))
+* **web-js:** difference between named function and arrow function ([9a2661b](https://github.com/sabertazimi/awesome-notes/commit/9a2661b6a68569dd89b79dee215349d700845ec7))
+* **web-library:** 2D physics engine ([bf3c0ee](https://github.com/sabertazimi/awesome-notes/commit/bf3c0eee2f2a1108e16d7dda5f93d0c7e62b99f0))
+* **web-library:** animation library ([b38fe5b](https://github.com/sabertazimi/awesome-notes/commit/b38fe5b40997d84c345225c7383442145dde04c5))
+* **web-library:** email library ([8bf2b54](https://github.com/sabertazimi/awesome-notes/commit/8bf2b5457b03cc09c4b8ecd51cc42655753ea98a))
+* **web-library:** open source video editor ([232e0d4](https://github.com/sabertazimi/awesome-notes/commit/232e0d44ee087d7e32f75bb44d1c781b6b4a3b0e))
+* **web-library:** smooth scroll util ([da83634](https://github.com/sabertazimi/awesome-notes/commit/da8363425e3881ab7f886c66b15cf0ab3f2a09ad))
+* **web-library:** WebGL graph library ([24ac679](https://github.com/sabertazimi/awesome-notes/commit/24ac679994ed4a35196017cfd6dbbe8451f0bbf1))
+* **web-ts:** better promise all utility types ([d81116c](https://github.com/sabertazimi/awesome-notes/commit/d81116cc089c038daafca16dee1ec4e0f9859c64))
+
 ## [3.21.0](https://github.com/sabertazimi/awesome-notes/compare/v3.20.1...v3.21.0) (2025-07-15)
 
 
