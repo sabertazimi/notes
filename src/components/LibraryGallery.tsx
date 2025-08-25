@@ -81,6 +81,20 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
     </div>
   )
 
+  const parseInlineCode = (text: string) => {
+    const parts = text.split(/(`[^`]+`)/)
+
+    return parts.map((part, index) => {
+      if (part.startsWith('`') && part.endsWith('`')) {
+        const codeContent = part.slice(1, -1)
+        const keyId = `${text.length}-${codeContent}-${index}`
+        return <code key={keyId}>{codeContent}</code>
+      }
+
+      return part
+    })
+  }
+
   const renderItemCard = (item: Item) => (
     <a
       key={item.name}
@@ -91,7 +105,11 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
       title={item.name}
     >
       <span className={styles.itemTitle}>{item.name}</span>
-      {item.description != null && <div className={styles.itemDescription}>{item.description}</div>}
+      {item.description != null && (
+        <div className={styles.itemDescription}>
+          {parseInlineCode(item.description)}
+        </div>
+      )}
     </a>
   )
 
