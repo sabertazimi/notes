@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.2](https://github.com/sabertazimi/awesome-notes/compare/v3.21.1...v3.21.2) (2025-09-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** agent UI library and chatbot client ([f8f4325](https://github.com/sabertazimi/awesome-notes/commit/f8f4325b5855956fb5a766d73ba5b599e47fc356))
+* **ai-prompts:** project porting prompt ([7c80219](https://github.com/sabertazimi/awesome-notes/commit/7c80219b7bce002797b27517441b03a7764cf52b))
+* **ai-prompts:** url to markdown agent command ([7598fe5](https://github.com/sabertazimi/awesome-notes/commit/7598fe54bb7a2389560f18cb9b135d04a0e9e84d))
+* **ai-security:** prompt injection ([b28dd5d](https://github.com/sabertazimi/awesome-notes/commit/b28dd5d2ef54e9a243da0eee12cab2a727236d43))
+* **cs:** asymmetry of verification and verifiers ([79cf5e2](https://github.com/sabertazimi/awesome-notes/commit/79cf5e223c386ea0ab24d0b6cb9bbd240acd0c74))
+* **css-design:** pricing page design ([bb4abcd](https://github.com/sabertazimi/awesome-notes/commit/bb4abcdaf6cf603f6df42db4364ccf10c4ce3e0b))
+* **css:** liquid glass CSS SVG ([40f58e4](https://github.com/sabertazimi/awesome-notes/commit/40f58e469380a2e1093d24a9f05f412bbd471458))
+* **deps:** update dependencies (non-major) ([#640](https://github.com/sabertazimi/awesome-notes/issues/640)) ([face9d1](https://github.com/sabertazimi/awesome-notes/commit/face9d1af76b5ceed2c32b8ff163dfe4c070a8cf))
+* **deps:** update dependencies (non-major) ([#641](https://github.com/sabertazimi/awesome-notes/issues/641)) ([5709512](https://github.com/sabertazimi/awesome-notes/commit/5709512a35a95e8288ed050d34df99ca103b9ec1))
+* **deps:** update dependencies (non-major) ([#646](https://github.com/sabertazimi/awesome-notes/issues/646)) ([46fc4ce](https://github.com/sabertazimi/awesome-notes/commit/46fc4cea47d67227ef1085320ddd12d93cbed732))
+* **mdx:** parse inline code ([091b3bc](https://github.com/sabertazimi/awesome-notes/commit/091b3bc3716d9c3e7ebee17f721c028ec18c308a))
+* **web-library:** naive ui library ([75dcf3f](https://github.com/sabertazimi/awesome-notes/commit/75dcf3fe8ceda82b6461567d1158d4e64e8677e8))
+
 ## [3.21.1](https://github.com/sabertazimi/awesome-notes/compare/v3.21.0...v3.21.1) (2025-08-15)
 
 
