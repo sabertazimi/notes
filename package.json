@@ -51,7 +51,7 @@
     "@easyops-cn/docusaurus-search-local": "^0.52.1",
     "@types/react": "^19.2.2",
     "clsx": "^2.1.1",
-    "katex": "^0.16.23",
+    "katex": "^0.16.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rehype-katex": "^7.0.1",
