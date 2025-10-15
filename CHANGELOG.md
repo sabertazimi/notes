@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.3](https://github.com/sabertazimi/awesome-notes/compare/v3.21.2...v3.21.3) (2025-10-15)
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) ([#649](https://github.com/sabertazimi/awesome-notes/issues/649)) ([cec5181](https://github.com/sabertazimi/awesome-notes/commit/cec51816f69e35776816fbed5044c715e014f7b3))
+* **deps:** update dependencies (non-major) ([#651](https://github.com/sabertazimi/awesome-notes/issues/651)) ([2001ced](https://github.com/sabertazimi/awesome-notes/commit/2001cede538a4806cb01789a07a5b0edbfffc8b9))
+* **deps:** update dependencies (non-major) ([#653](https://github.com/sabertazimi/awesome-notes/issues/653)) ([b260aad](https://github.com/sabertazimi/awesome-notes/commit/b260aadb649d19e989bcaf91d218aadb25ae1465))
+* **deps:** update dependency @types/react to ^19.1.15 ([#650](https://github.com/sabertazimi/awesome-notes/issues/650)) ([dfddfaa](https://github.com/sabertazimi/awesome-notes/commit/dfddfaa133d71ab9e8a18c4eb356b369763fa4f2))
+* **deps:** update dependency katex to ^0.16.24 ([#656](https://github.com/sabertazimi/awesome-notes/issues/656)) ([54bae9e](https://github.com/sabertazimi/awesome-notes/commit/54bae9ec64bba93a6715e9ce4a13eea840458784))
+
 ## [3.21.2](https://github.com/sabertazimi/awesome-notes/compare/v3.21.1...v3.21.2) (2025-09-15)
 
 
