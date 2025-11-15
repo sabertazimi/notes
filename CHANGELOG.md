@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.4](https://github.com/sabertazimi/awesome-notes/compare/v3.21.3...v3.21.4) (2025-11-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-library:** context-aware desktop AI assistant ([0991170](https://github.com/sabertazimi/awesome-notes/commit/09911700ef418d65435b4264d98c542defd4b33e))
+* **deps:** update dependencies (non-major) ([#657](https://github.com/sabertazimi/awesome-notes/issues/657)) ([ac6d5e2](https://github.com/sabertazimi/awesome-notes/commit/ac6d5e21f9a1e63deb91374a6ec92e8fe8ca170b))
+* **linux-library:** linux mirrors ([6a87344](https://github.com/sabertazimi/awesome-notes/commit/6a87344e7ec17dbe7ec494b11fbbdbdfddd8a762))
+* **security-linux:** linux server security guide ([5461f92](https://github.com/sabertazimi/awesome-notes/commit/5461f92b21880df1777ad029ed273114f820987e))
+
 ## [3.21.3](https://github.com/sabertazimi/awesome-notes/compare/v3.21.2...v3.21.3) (2025-10-15)
 
 
