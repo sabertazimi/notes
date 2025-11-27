@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    name: Linting
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,7 +33,7 @@ jobs:
           pnpm lint
 
   build:
-    name: Building
+    name: Build
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
