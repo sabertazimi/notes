@@ -82,6 +82,9 @@ jobs:
     steps:
       - name: Download production artifacts
         uses: actions/download-artifact@v6
+        with:
+          name: build
+          path: build
       - name: List production artifacts
         run: |
           ls -R
