@@ -70,7 +70,7 @@
     "commit-and-tag-version": "^12.6.0",
     "eslint": "^9.39.1",
     "markdownlint-cli": "^0.46.0",
-    "prettier": "^3.7.2",
+    "prettier": "^3.7.3",
     "stylelint": "^16.26.1",
     "typescript": "^5.9.3"
   },
