@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.5](https://github.com/sabertazimi/awesome-notes/compare/v3.21.4...v3.21.5) (2025-12-01)
+
+
+### :sparkles: Today I Learned
+
+* **ai-llm:** rectify broken code ([eddadd7](https://github.com/sabertazimi/awesome-notes/commit/eddadd71685ae7dae304374a9a5a9419ed30d6c7))
+* **deps:** update dependencies (non-major) ([#663](https://github.com/sabertazimi/awesome-notes/issues/663)) ([7c77f7b](https://github.com/sabertazimi/awesome-notes/commit/7c77f7bf7c605d88da7b4244b543f64775dc0111))
+* **deps:** update dependencies (non-major) ([#665](https://github.com/sabertazimi/awesome-notes/issues/665)) ([3b3b4ad](https://github.com/sabertazimi/awesome-notes/commit/3b3b4adebd3bd4d0e978f46dc4373e4ced069083))
+* **deps:** update dependencies (non-major) ([#667](https://github.com/sabertazimi/awesome-notes/issues/667)) ([4a1e0d8](https://github.com/sabertazimi/awesome-notes/commit/4a1e0d82eff619667d1145d1f88baf421a511844))
+* **web-library:** command menu component ([4849c16](https://github.com/sabertazimi/awesome-notes/commit/4849c1619683a10b03434df0a720e5f960252963))
+* **web-library:** icon gallery and sets ([edf9d95](https://github.com/sabertazimi/awesome-notes/commit/edf9d95c50948f3a4b4c35ae67ba7e40be5f0675))
+* **web-library:** icons library ([18d18e1](https://github.com/sabertazimi/awesome-notes/commit/18d18e134bf7b6ea9c0b3d8b63fed54045bc2700))
+* **web-library:** React shadcn components ([d4b0aa6](https://github.com/sabertazimi/awesome-notes/commit/d4b0aa613cd91ed0bd828e70b6906cd2d5816f86))
+* **web-library:** remove deprecated rich text editor ([cef9d30](https://github.com/sabertazimi/awesome-notes/commit/cef9d30294ddd426bcaf0bf28815d0fd38b30b91))
+* **web-library:** shadcn ui registry ([c08eb47](https://github.com/sabertazimi/awesome-notes/commit/c08eb4753b8e2d610df96b162ca5239c8454ae60))
+* **web-library:** shadcn/ui studio ([823130a](https://github.com/sabertazimi/awesome-notes/commit/823130aff1eaf5ef87ef93cbaff4600a8eb25388))
+* **web-perf:** Next.js SEO course ([5baadcb](https://github.com/sabertazimi/awesome-notes/commit/5baadcbcac55df1ef5dde4737c7d631fdeb3fadd))
+
 ## [3.21.4](https://github.com/sabertazimi/awesome-notes/compare/v3.21.3...v3.21.4) (2025-11-15)
 
 

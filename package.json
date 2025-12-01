@@ -1,6 +1,6 @@
 {
   "name": "awesome-notes",
-  "version": "3.21.4",
+  "version": "3.21.5",
   "packageManager": "pnpm@10.24.0",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
