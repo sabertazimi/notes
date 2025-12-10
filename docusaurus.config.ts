@@ -11,7 +11,7 @@ const darkCodeTheme = themes.dracula
 const config: Config = {
   title: 'Awesome Notes',
   tagline: 'Today I Learned',
-  url: 'https://sabertazimi.github.io',
+  url: 'https://tazimi.dev',
   baseUrl: ci.GITHUB_ACTIONS ? '/awesome-notes/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

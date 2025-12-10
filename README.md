@@ -15,7 +15,7 @@
 
 Personal Learning Notes - **Awesome Notes** for Myself.
 
-[GitHub](https://sabertazimi.github.io/awesome-notes) | [Vercel](https://notes.tazimi.dev)
+[GitHub](https://tazimi.dev/awesome-notes) | [Vercel](https://notes.tazimi.dev)
 
 ## Notes
 
@@ -23,158 +23,158 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 
 #### Algorithms
 
-- [Algorithm Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Algorithms/AlgorithmsBasicNotes)
-- [OJ Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Algorithms/OJBasicNotes)
+- [Algorithm Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Algorithms/AlgorithmsBasicNotes)
+- [OJ Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Algorithms/OJBasicNotes)
 
 #### Architecture
 
-- [Architecture Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Architecture/ArchBasicNotes)
-- [Graph Processing Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Architecture/GraphProcessingBasicNotes)
+- [Architecture Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Architecture/ArchBasicNotes)
+- [Graph Processing Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Architecture/GraphProcessingBasicNotes)
 
 #### Compilers
 
-- [Compiler Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Compilers/CompilersBasicNotes)
+- [Compiler Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Compilers/CompilersBasicNotes)
 
 #### Database
 
-- [Database Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Database/DatabaseBasicNotes)
+- [Database Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Database/DatabaseBasicNotes)
 
 #### LaTeX
 
-- [LaTeX Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/LaTeX/LaTeXBasicNotes)
+- [LaTeX Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/LaTeX/LaTeXBasicNotes)
 
 #### Math
 
-- [Economics Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/EconomicsBasicNotes)
-- [Mahjong Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Math/MahjongBasicNotes)
+- [Economics Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Math/EconomicsBasicNotes)
+- [Mahjong Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Math/MahjongBasicNotes)
 
 #### Operating Systems
 
-- [Computer Systems: A Programmer's Perspective Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/OperatingSystems/CSAPP)
-- [Operating System Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/OperatingSystems/OperatingSystemsBasicNotes)
+- [Computer Systems: A Programmer's Perspective Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/OperatingSystems/CSAPP)
+- [Operating System Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/OperatingSystems/OperatingSystemsBasicNotes)
 
 #### Virtualization
 
-- [Virtualization Basic Notes](https://sabertazimi.github.io/awesome-notes/ComputerScience/Virtualization/VirtualBasicNotes)
+- [Virtualization Basic Notes](https://tazimi.dev/awesome-notes/ComputerScience/Virtualization/VirtualBasicNotes)
 
 ### Programming
 
 #### Android
 
-- [Android Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Android/AndroidBasicNotes)
+- [Android Basic Notes](https://tazimi.dev/awesome-notes/Programming/Android/AndroidBasicNotes)
 
 #### DevOps
 
-- [Clean Code Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/DevOps/CleanCodeBasicNotes)
-- [Clean Architecture Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/DevOps/CleanArchitectureBasicNotes)
-- [Docker Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/DevOps/DockerBasicNotes)
+- [Clean Code Basic Notes](https://tazimi.dev/awesome-notes/Programming/DevOps/CleanCodeBasicNotes)
+- [Clean Architecture Basic Notes](https://tazimi.dev/awesome-notes/Programming/DevOps/CleanArchitectureBasicNotes)
+- [Docker Basic Notes](https://tazimi.dev/awesome-notes/Programming/DevOps/DockerBasicNotes)
 
 #### Functional Programming
 
-- [Functional Programming Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/FunctionalProgramming/FunctionalProgrammingBasicNotes)
+- [Functional Programming Basic Notes](https://tazimi.dev/awesome-notes/Programming/FunctionalProgramming/FunctionalProgrammingBasicNotes)
 
 #### Gaming
 
-- [Game Design Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Gaming/GameDesignBasicNotes)
+- [Game Design Basic Notes](https://tazimi.dev/awesome-notes/Programming/Gaming/GameDesignBasicNotes)
 
 #### Linux
 
-- [Linux Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Linux/LinuxBasicNotes)
+- [Linux Basic Notes](https://tazimi.dev/awesome-notes/Programming/Linux/LinuxBasicNotes)
 
 #### Tools
 
-- [CMake Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Tools/BuildTools/CMakeBasicNotes)
-- [Git Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Tools/Git/GitBasicNotes)
-- [Vim Basic Notes](https://sabertazimi.github.io/awesome-notes/Programming/Tools/Vim/VimBasicNotes)
+- [CMake Basic Notes](https://tazimi.dev/awesome-notes/Programming/Tools/BuildTools/CMakeBasicNotes)
+- [Git Basic Notes](https://tazimi.dev/awesome-notes/Programming/Tools/Git/GitBasicNotes)
+- [Vim Basic Notes](https://tazimi.dev/awesome-notes/Programming/Tools/Vim/VimBasicNotes)
 
 ### Language
 
-- [Assembly Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Assembly/AssemblyBasicNotes)
-- [C Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/C/CBasicNotes)
-- [C++ Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/CPP/CPPBasicNotes)
-- [Go Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Go/GoBasicNotes)
-- [Haskell Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Haskell/HaskellBasicNotes)
-- [Java Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Java/JavaBasicNotes)
-- [Python Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Python/PythonBasicNotes)
-- [Rust Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Rust/RustBasicNotes)
-- [Verilog Basic Notes](https://sabertazimi.github.io/awesome-notes/Language/Verilog/VerilogBasicNotes)
+- [Assembly Basic Notes](https://tazimi.dev/awesome-notes/Language/Assembly/AssemblyBasicNotes)
+- [C Basic Notes](https://tazimi.dev/awesome-notes/Language/C/CBasicNotes)
+- [C++ Basic Notes](https://tazimi.dev/awesome-notes/Language/CPP/CPPBasicNotes)
+- [Go Basic Notes](https://tazimi.dev/awesome-notes/Language/Go/GoBasicNotes)
+- [Haskell Basic Notes](https://tazimi.dev/awesome-notes/Language/Haskell/HaskellBasicNotes)
+- [Java Basic Notes](https://tazimi.dev/awesome-notes/Language/Java/JavaBasicNotes)
+- [Python Basic Notes](https://tazimi.dev/awesome-notes/Language/Python/PythonBasicNotes)
+- [Rust Basic Notes](https://tazimi.dev/awesome-notes/Language/Rust/RustBasicNotes)
+- [Verilog Basic Notes](https://tazimi.dev/awesome-notes/Language/Verilog/VerilogBasicNotes)
 
 ### Web
 
 #### Angular
 
-- [Angular Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Angular/AngularBasicNotes)
+- [Angular Basic Notes](https://tazimi.dev/awesome-notes/Web/Angular/AngularBasicNotes)
 
 #### CSS
 
-- [CSS Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSBasicNotes)
-- [CSS Advanced Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSAdvancedNotes)
-- [CSS Layout Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSLayoutNotes)
-- [CSS Animation Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSAnimationNotes)
-- [CSS Components Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSComponentsNotes)
-- [CSS Design Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/CSSDesignNotes)
-- [Bootstrap Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/BootstrapBasicNotes)
-- [Sass Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/CSS/SassBasicNotes)
+- [CSS Basic Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSBasicNotes)
+- [CSS Advanced Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSAdvancedNotes)
+- [CSS Layout Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSLayoutNotes)
+- [CSS Animation Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSAnimationNotes)
+- [CSS Components Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSComponentsNotes)
+- [CSS Design Notes](https://tazimi.dev/awesome-notes/Web/CSS/CSSDesignNotes)
+- [Bootstrap Basic Notes](https://tazimi.dev/awesome-notes/Web/CSS/BootstrapBasicNotes)
+- [Sass Basic Notes](https://tazimi.dev/awesome-notes/Web/CSS/SassBasicNotes)
 
 #### Frameworks
 
-- [Electron Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Frameworks/ElectronBasicNotes)
-- [jQuery Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Frameworks/jQueryBasicNotes)
-- [Library List](https://sabertazimi.github.io/awesome-notes/Web/Frameworks/LibraryBasicNotes)
+- [Electron Basic Notes](https://tazimi.dev/awesome-notes/Web/Frameworks/ElectronBasicNotes)
+- [jQuery Basic Notes](https://tazimi.dev/awesome-notes/Web/Frameworks/jQueryBasicNotes)
+- [Library List](https://tazimi.dev/awesome-notes/Web/Frameworks/LibraryBasicNotes)
 
 #### HTML
 
-- [HTML Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/HTML/HTMLBasicNotes)
+- [HTML Basic Notes](https://tazimi.dev/awesome-notes/Web/HTML/HTMLBasicNotes)
 
 #### JavaScript
 
-- [JavaScript Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptBasicNotes)
-- [JavaScript Advanced Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptAdvancedNotes)
-- [JavaScript API Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptAPINotes)
-- [JavaScript Performance Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptPerformanceNotes)
-- [JavaScript Testing Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptTestingNotes)
-- [JavaScript DevOps Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/JavaScriptDevOpsNotes)
-- [TypeScript Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/JavaScript/TypeScriptBasicNotes)
+- [JavaScript Basic Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptBasicNotes)
+- [JavaScript Advanced Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptAdvancedNotes)
+- [JavaScript API Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptAPINotes)
+- [JavaScript Performance Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptPerformanceNotes)
+- [JavaScript Testing Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptTestingNotes)
+- [JavaScript DevOps Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/JavaScriptDevOpsNotes)
+- [TypeScript Basic Notes](https://tazimi.dev/awesome-notes/Web/JavaScript/TypeScriptBasicNotes)
 
 #### Network
 
-- [Network Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Network/NetworkBasicNotes)
+- [Network Basic Notes](https://tazimi.dev/awesome-notes/Web/Network/NetworkBasicNotes)
 
 #### Node
 
-- [Express Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/ExpressBasicNotes)
-- [GraphQL Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/GraphQLBasicNotes)
-- [Message Queue Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/MessageQueueBasicNotes)
-- [Node Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/NodeBasicNotes)
-- [Redis Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Node/RedisBasicNotes)
+- [Express Basic Notes](https://tazimi.dev/awesome-notes/Web/Node/ExpressBasicNotes)
+- [GraphQL Basic Notes](https://tazimi.dev/awesome-notes/Web/Node/GraphQLBasicNotes)
+- [Message Queue Basic Notes](https://tazimi.dev/awesome-notes/Web/Node/MessageQueueBasicNotes)
+- [Node Basic Notes](https://tazimi.dev/awesome-notes/Web/Node/NodeBasicNotes)
+- [Redis Basic Notes](https://tazimi.dev/awesome-notes/Web/Node/RedisBasicNotes)
 
 #### React
 
-- [React Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/React/ReactBasicNotes)
-- [React Advanced Notes](https://sabertazimi.github.io/awesome-notes/Web/React/ReactAdvancedNotes)
-- [React Hooks Notes](https://sabertazimi.github.io/awesome-notes/Web/React/ReactHooksNotes)
-- [React Router Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/React/ReactRouterBasicNotes)
-- [Redux Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/React/ReduxBasicNotes)
+- [React Basic Notes](https://tazimi.dev/awesome-notes/Web/React/ReactBasicNotes)
+- [React Advanced Notes](https://tazimi.dev/awesome-notes/Web/React/ReactAdvancedNotes)
+- [React Hooks Notes](https://tazimi.dev/awesome-notes/Web/React/ReactHooksNotes)
+- [React Router Basic Notes](https://tazimi.dev/awesome-notes/Web/React/ReactRouterBasicNotes)
+- [Redux Basic Notes](https://tazimi.dev/awesome-notes/Web/React/ReduxBasicNotes)
 
 #### Security
 
-- [Security Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Security/SecurityBasicNotes)
+- [Security Basic Notes](https://tazimi.dev/awesome-notes/Web/Security/SecurityBasicNotes)
 
 #### Vue
 
-- [Vue Basic Notes](https://sabertazimi.github.io/awesome-notes/Web/Vue/VueBasicNotes)
-- [Vue Advanced Notes](https://sabertazimi.github.io/awesome-notes/Web/Vue/VueAdvancedNotes)
+- [Vue Basic Notes](https://tazimi.dev/awesome-notes/Web/Vue/VueBasicNotes)
+- [Vue Advanced Notes](https://tazimi.dev/awesome-notes/Web/Vue/VueAdvancedNotes)
 
 ### AI
 
 #### Theory
 
-- [AI Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/Theory/AIBasicNotes)
+- [AI Basic Notes](https://tazimi.dev/awesome-notes/AI/Theory/AIBasicNotes)
 
 #### LLM
 
-- [LLM Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/LLM/LLMBasicNotes)
-- [Prompt Engineering Basic Notes](https://sabertazimi.github.io/awesome-notes/AI/LLM/PromptEngineeringBasicNotes)
+- [LLM Basic Notes](https://tazimi.dev/awesome-notes/AI/LLM/LLMBasicNotes)
+- [Prompt Engineering Basic Notes](https://tazimi.dev/awesome-notes/AI/LLM/PromptEngineeringBasicNotes)
 
 ## License
 
