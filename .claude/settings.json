@@ -1,4 +1,5 @@
 {
+  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "Bash",

@@ -86,3 +86,7 @@ yarn-error.log
 # Docusaurus generated files
 .docusaurus
 .cache-loader
+
+# Agent files
+**/.claude/*.local.json
+**/.claude/*.local.md
