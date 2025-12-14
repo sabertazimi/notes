@@ -105,11 +105,7 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
       title={item.name}
     >
       <span className={styles.itemTitle}>{item.name}</span>
-      {item.description != null && (
-        <div className={styles.itemDescription}>
-          {parseInlineCode(item.description)}
-        </div>
-      )}
+      {item.description != null && <div className={styles.itemDescription}>{parseInlineCode(item.description)}</div>}
     </a>
   )
 
