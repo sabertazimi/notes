@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Edit",
+      "Write",
+      "Skill",
+      "SlashCommand",
+      "WebFetch",
+      "WebSearch",
+      "mcp__context7",
+      "mcp__shadcn",
+      "mcp__playwright"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}
