@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.21.6](https://github.com/sabertazimi/awesome-notes/compare/v3.21.5...v3.21.6) (2025-12-15)
+
+
+### :sparkles: Today I Learned
+
+* **ai-agents:** `AGENTS.md` templates ([ef55edd](https://github.com/sabertazimi/awesome-notes/commit/ef55eddf3417e29d451935b671b7471da517b20d))
+* **ai-agents:** agents.md website ([3539032](https://github.com/sabertazimi/awesome-notes/commit/353903227a49c84798f0999c74a8699356ff3aad))
+* **ai-agents:** claude code best practices ([8fd8c33](https://github.com/sabertazimi/awesome-notes/commit/8fd8c33dd71fed3e393e2885d69c706e0a0cb541))
+* **ai-agents:** claude code built-in tools reference ([50ca43a](https://github.com/sabertazimi/awesome-notes/commit/50ca43ab7829af7251d52e15569f877dbb894693))
+* **ai-claude:** claude code plugins ([7144c8d](https://github.com/sabertazimi/awesome-notes/commit/7144c8d5c40fee25031d2cff13e3694313c87a95))
+* **ai-claude:** claude code skills ([f159bf8](https://github.com/sabertazimi/awesome-notes/commit/f159bf879036a9a6baddcbdf4291cd1e01ef2642))
+* **ai-claude:** claude custom slash commands ([da521e1](https://github.com/sabertazimi/awesome-notes/commit/da521e172ed73d94361715b182ace53b7f735cd7))
+* **ai-llm:** zread github repo reader ([f45545a](https://github.com/sabertazimi/awesome-notes/commit/f45545adef61882852c0bec40f60cb5b091df2a1))
+* **ai-prompts:** vibe coding guide ([11e4d29](https://github.com/sabertazimi/awesome-notes/commit/11e4d29a5cfdd1b071a6ca5c9f5b980c6154ae92))
+* **ai-prompts:** writing a good `AGENTS.md` ([cd13036](https://github.com/sabertazimi/awesome-notes/commit/cd130368c2b006053c3f5b901951d7d199f88f76))
+* **css-colors:** `oklch()` color function ([b654a71](https://github.com/sabertazimi/awesome-notes/commit/b654a7180a9000aeeefd8d8fc158d04130b3ada6))
+* **css-layouts:** flexbox width limits ([3ff4ae4](https://github.com/sabertazimi/awesome-notes/commit/3ff4ae46667233fcedd754f4f4fb3603ba0c175c))
+* **deps:** update dependencies (non-major) ([#670](https://github.com/sabertazimi/awesome-notes/issues/670)) ([18a12c5](https://github.com/sabertazimi/awesome-notes/commit/18a12c56e991ebb66337637b29e91fcceb224c12))
+* **vim-nvim:** 4 nvim distribution ([20ed470](https://github.com/sabertazimi/awesome-notes/commit/20ed47084d92d21600318d106ddd55a266dfe388))
+* **vim-nvim:** install astro nvim ([b428b0d](https://github.com/sabertazimi/awesome-notes/commit/b428b0d9c50d9e16caa689fe02eb44d230b28f34))
+* **vim-nvim:** remove LunarVim distribution ([3132e3a](https://github.com/sabertazimi/awesome-notes/commit/3132e3a2f4d8f5274543688cda2f5f2f07f6418c))
+* **vim:** quick formatting motion in VSCode Vim ([9988338](https://github.com/sabertazimi/awesome-notes/commit/998833882189546ff9979a7a8556294579e7165f))
+* **web-css:** caveat usage of `dvh` ([2545e61](https://github.com/sabertazimi/awesome-notes/commit/2545e61816156712c2332df93e14a6e67f8c2b7a))
+* **web-libraray:** dbeaver database tool and SQL client ([9c0f452](https://github.com/sabertazimi/awesome-notes/commit/9c0f452cfb48c531003a50aa666b451955968c8f))
+* **web-library:** AI streaming markdown library ([7d54219](https://github.com/sabertazimi/awesome-notes/commit/7d54219c2e811bcfde31b1b9495f582748c1c622))
+* **web-library:** email library ([3f0e6ae](https://github.com/sabertazimi/awesome-notes/commit/3f0e6aee330b5314a7a19d80bee0e5578bcce685))
+* **web-library:** rich text editor based on TipTap and shadcn/ui ([e53cda9](https://github.com/sabertazimi/awesome-notes/commit/e53cda96bb68c8c17cdfcbf3e71e2c51bae9486a))
+* **web-library:** shadcn/ui components and themes ([eb20217](https://github.com/sabertazimi/awesome-notes/commit/eb20217d7337a4c5b2918feabd905b8b90ef01d4))
+* **web-library:** shadcn/ui theme editor ([d9355fd](https://github.com/sabertazimi/awesome-notes/commit/d9355fdffa10da1cf6234e3ee81ecc006e2e8855))
+* **web-library:** tiny bench library ([2179a68](https://github.com/sabertazimi/awesome-notes/commit/2179a68746289023c1be8d21b52f48d7350427e9))
+* **web-library:** web storage library ([1ec5a26](https://github.com/sabertazimi/awesome-notes/commit/1ec5a264dac08c8c3cebaea6696085c2db351fe7))
+* **web-perf:** anatomy of web perf report ([968053a](https://github.com/sabertazimi/awesome-notes/commit/968053a0cb3aa8b0c7bd60c14524222df68456c5))
+* **web-rss:** RSS hub and reader ([9cac654](https://github.com/sabertazimi/awesome-notes/commit/9cac654b6f310b9b0c86a3a8a92b868627450f88))
+* **web-security:** mutation cross-site scripting ([e9437c3](https://github.com/sabertazimi/awesome-notes/commit/e9437c3faa7f4ca4c0ed4b4b31f40ec6849d4db2))
+* **web-security:** token-based authorization ([436f86a](https://github.com/sabertazimi/awesome-notes/commit/436f86a8c755ce563ff3f992fd0c589c921b45aa))
+
 ## [3.21.5](https://github.com/sabertazimi/awesome-notes/compare/v3.21.4...v3.21.5) (2025-12-01)
 
 
