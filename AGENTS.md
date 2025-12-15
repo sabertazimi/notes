@@ -155,3 +155,7 @@ The GitHub Actions workflow (.github/workflows/ci.yml):
 - Use `pnpm dev` for live preview
 - Run `pnpm build` to ensure production build succeeds
 - Check `pnpm lint` before committing
+
+## Constraints
+
+- DO NOT add Claude co-authorship footer to commits
