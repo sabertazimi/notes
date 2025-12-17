@@ -174,7 +174,12 @@ Examples:
 - `fix(react-hooks): correct hook usage examples`
 - `feat(ai-llm): add comprehensive guide to LLM prompting`
 
-PR titles follow same format. Scope uses directory/category (e.g., `css-layouts`, `ai-prompts`).
+**Scope Guidelines**:
+
+- Use specific section/topic from filename (e.g., `react-hooks`, `css-layouts`).
+- Use top-level category (e.g., `web-react`) only when changes span multiple areas or don't fit a specific scope.
+
+PR titles follow same format.
 
 ## Constraints
 
