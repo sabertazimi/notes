@@ -156,6 +156,26 @@ The GitHub Actions workflow (.github/workflows/ci.yml):
 - Run `pnpm build` to ensure production build succeeds
 - Check `pnpm lint` before committing
 
+## Commit and Pull Request Guidelines
+
+Follows Conventional Commits with changelog auto-generation.
+Key types (defined in `.versionrc.json`):
+
+- **feat**: New notes files or new knowledge domains
+- **fix**: Updates to existing notes (fixes, reorganization, new sections)
+- **update**: General improvements
+- **build**: Build changes
+- **perf**: Performance optimizations
+- **test**: Test changes
+
+Format: `<type>(<scope>): <description>`
+Examples:
+
+- `fix(react-hooks): correct hook usage examples`
+- `feat(ai-llm): add comprehensive guide to LLM prompting`
+
+PR titles follow same format. Scope uses directory/category (e.g., `css-layouts`, `ai-prompts`).
+
 ## Constraints
 
 - DO NOT add Claude co-authorship footer to commits
