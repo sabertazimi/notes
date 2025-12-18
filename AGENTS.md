@@ -162,7 +162,7 @@ Follows Conventional Commits with changelog auto-generation.
 Key types (defined in `.versionrc.json`):
 
 - **feat**: New notes files or new knowledge domains
-- **fix**: Updates to existing notes (fixes, reorganization, new sections)
+- **fix**: Updates to existing notes
 - **update**: General improvements
 - **build**: Build changes
 - **perf**: Performance optimizations
@@ -171,15 +171,27 @@ Key types (defined in `.versionrc.json`):
 Format: `<type>(<scope>): <description>`
 Examples:
 
-- `fix(react-hooks): correct hook usage examples`
-- `feat(ai-llm): add comprehensive guide to LLM prompting`
-
-**Scope Guidelines**:
-
-- Use specific section/topic from filename (e.g., `react-hooks`, `css-layouts`).
-- Use top-level category (e.g., `web-react`) only when changes span multiple areas or don't fit a specific scope.
+- `fix(react-hooks): hook usage examples`
+- `feat(ai-llm): comprehensive guide to LLM prompting`
 
 PR titles follow same format.
+
+### Scope Guidelines
+
+- Use specific section/topic from filename (e.g., `react-hooks`, `css-layouts`)
+- Use top-level category (e.g., `web-react`) only when changes span multiple areas or don't fit a specific scope
+
+### Description Guidelines
+
+- Summarize the actual knowledge/concept in the commit
+- Focus on what changed, not how you changed it
+- Be specific: "useEffect cleanup" not "useEffect section"
+
+**Good Examples**:
+
+- `fix(rust-ownership): borrow checker concepts`
+- `fix(react-hooks): custom hook patterns`
+- `fix(css-layout): flexbox gap vs margin differences`
 
 ## Constraints
 

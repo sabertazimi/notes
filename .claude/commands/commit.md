@@ -16,11 +16,25 @@ description: Create a git commit
 
 1. Analyze the diff content to understand the nature and purpose of the changes
 2. Generate 3 commit message candidates based on the changes
-   - Each candidate should be concise, clear, and capture the essence of the changes
-   - Prefer Conventional Commits format (feat:, fix:, docs:, refactor:, etc.)
+   - Each candidate should follow `<type>(<scope>): <description>` format
+   - Use specific section/topic from filename (e.g., `react-hooks`, `css-layouts`) as scope
+   - **Description should summarize the actual knowledge/concept**
+   - Focus on what changed, not how you changed it
+   - Be specific: "useEffect cleanup" not "useEffect section"
 3. Select the most appropriate commit message from the 3 candidates and explain the reasoning for your choice
 4. Stage changes if necessary using git add
 5. Execute git commit using the selected commit message
+
+## Examples
+
+- Instead of: `add useEffect section`
+- Use: `useEffect cleanup patterns` or `useEffect dependency array`
+
+- Instead of: `fix CSS notes`
+- Use: `flexbox gap vs margin` or `CSS grid auto-placement`
+
+- Instead of: `update algorithms section`
+- Use: `binary search optimization` or `time complexity analysis`
 
 ## Options
 
