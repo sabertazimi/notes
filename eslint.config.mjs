@@ -1,21 +1,36 @@
-import eslintConfig from '@dg-scripts/eslint-config'
+import { defineConfig } from '@dg-scripts/eslint-config'
 
-export default eslintConfig.append({
+export default defineConfig({
+  name: 'base',
   rules: {
-    'eslint-comments/require-description': 'off',
+    'no-extend-native': 'off',
+    'no-new': 'off',
+    'no-new-func': 'off',
+    'no-new-wrappers': 'off',
+    'no-proto': 'off',
+    'no-prototype-builtins': 'off',
+    'no-restricted-properties': 'off',
+    'antfu/top-level-function': 'off',
+    'no-self-compare': 'off',
+    'prefer-promise-reject-errors': 'off',
     'react/no-access-state-in-setstate': 'off',
     'react/no-children-map': 'off',
     'react/no-children-to-array': 'off',
     'react/no-clone-element': 'off',
     'react/no-set-state-in-component-did-mount': 'off',
     'react/no-string-refs': 'off',
+    'react/no-unnecessary-use-prefix': 'off',
     'react/no-unsafe-component-will-mount': 'off',
     'react/no-unsafe-component-will-receive-props': 'off',
     'react/no-unused-class-component-members': 'off',
+    'react-hooks/exhaustive-deps': 'off',
     'react-hooks/refs': 'off',
     'react-hooks/set-state-in-effect': 'off',
     'react-hooks-extra/no-direct-set-state-in-use-effect': 'off',
     'react-refresh/only-export-components': 'off',
+    'ts/no-this-alias': 'off',
     'ts/no-unsafe-function-type': 'off',
+    'unicorn/new-for-builtins': 'off',
+    'unicorn/no-instanceof-builtins': 'off',
   },
 })

@@ -12,8 +12,6 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
   const [selectedSectionIndex, setSelectedSectionIndex] = useState(0)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
-
-  // eslint-disable-next-line security/detect-object-injection -- index is safe
   const selectedSection = sections?.[selectedSectionIndex] ?? null
 
   // 点击外部关闭下拉菜单
