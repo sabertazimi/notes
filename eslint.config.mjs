@@ -1,6 +1,7 @@
 import { defineConfig } from '@dg-scripts/eslint-config'
 
 export default defineConfig({
+  typescript: true,
   name: 'base',
   rules: {
     'no-extend-native': 'off',
