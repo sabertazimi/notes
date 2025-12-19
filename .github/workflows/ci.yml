@@ -68,7 +68,7 @@ jobs:
         run: |
           pnpm build
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: ${{ matrix.node-version == 'lts/*' && matrix.os == 'ubuntu-latest' && matrix.architecture == 'x64' }}
         with:
           name: build
@@ -81,7 +81,7 @@ jobs:
     needs: [lint, build]
     steps:
       - name: Download production artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: build
           path: build
