@@ -172,7 +172,7 @@ Personal Learning Notes - **Awesome Notes** for Myself.
 #### LLM
 
 - [LLM Basic Notes](https://tazimi.dev/awesome-notes/AI/LLM/LLMBasicNotes)
-- [Prompt Engineering Basic Notes](https://tazimi.dev/awesome-notes/AI/LLM/PromptEngineeringBasicNotes)
+- [Prompt and Agent Engineering Notes](https://tazimi.dev/awesome-notes/AI/LLM/PromptAndAgentEngineeringNotes)
 
 ## License
 
