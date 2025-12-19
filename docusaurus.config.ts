@@ -14,12 +14,14 @@ const config: Config = {
   url: 'https://tazimi.dev',
   baseUrl: ci.GITHUB_ACTIONS ? '/awesome-notes/' : '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
   organizationName: 'sabertazimi',
   projectName: 'awesome-notes',
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
   presets: [
