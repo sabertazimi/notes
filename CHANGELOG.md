@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/sabertazimi/awesome-notes/compare/v3.21.6...v4.0.0) (2025-12-21)
+
+
+### :sparkles: Features
+
+* **ai-llm:** separate agent and prompt engineering notes into dedicated files ([003df1f](https://github.com/sabertazimi/awesome-notes/commit/003df1ff07da6a5f1a3411ad054ccecad18d3510))
+* **git-branch:** add squash branch deletion workflow ([1da543a](https://github.com/sabertazimi/awesome-notes/commit/1da543a2a00495da6014042feb0afaa46e4609a2))
+* **linux-tools:** consolidate modern unix tools with cross-platform installation ([b4c1a6d](https://github.com/sabertazimi/awesome-notes/commit/b4c1a6db16b95f54c7de5e4ea7c4119790b5041f))
+
+
+### :sparkles: Today I Learned
+
+* **agent-claude:** Claude Code memory session capture and context injection ([c26d12f](https://github.com/sabertazimi/awesome-notes/commit/c26d12f9275156efedaa731355b7d62da5aa9fb0))
+* **agents-engineering:** comprehensive development prompts and strategies ([78ba1e5](https://github.com/sabertazimi/awesome-notes/commit/78ba1e5ddd27483b1a1348bde4552f631ea03951))
+* **ai-llm:** prompt caching ([1572c6e](https://github.com/sabertazimi/awesome-notes/commit/1572c6e7da97665c535ae278414091692d5b63dd))
+* **css-animation:** scroll-driven animation timeline ([d6f18a6](https://github.com/sabertazimi/awesome-notes/commit/d6f18a62c00977fd91a7f3d80875b27f28f4a4e8))
+* **css-animtion:** add animation performance tier list ([7d05e83](https://github.com/sabertazimi/awesome-notes/commit/7d05e83a3c36ce262adc0f7f60926072d9159278))
+* **css-colors:** modernize button variant styling with relative colors ([93ff7fc](https://github.com/sabertazimi/awesome-notes/commit/93ff7fc11cb529eabbd735f998b6d37d565def33))
+* **css-components:** add advanced liquid glass effect with SVG refraction ([ad0338f](https://github.com/sabertazimi/awesome-notes/commit/ad0338fcff0870bcdef5924affd7d3b030b0ccc6))
+* **css-design:** breadcrumbs are deprecated ([f2e12a8](https://github.com/sabertazimi/awesome-notes/commit/f2e12a89024518d69a320eee177daece1e131f88))
+* **css-design:** UX conversion insights ([6fe301e](https://github.com/sabertazimi/awesome-notes/commit/6fe301e527a93d5c6a5319f03b2ddd2edc559535))
+* **deps:** update dependencies (non-major) ([#673](https://github.com/sabertazimi/awesome-notes/issues/673)) ([590eb48](https://github.com/sabertazimi/awesome-notes/commit/590eb4877cc113694624d75c5d54f95033017195))
+* **git-config:** add Delta pager for enhanced diff viewing ([347fbcc](https://github.com/sabertazimi/awesome-notes/commit/347fbcc4baaa55841bd2e6debc68a124459f4784))
+* **git-gui:** LazyGit installation and setup ([865b474](https://github.com/sabertazimi/awesome-notes/commit/865b4748dc6fc0096e85ee9b9444b4ed3d8bdd53))
+* **git-mirror:** update github mirror link ([b7d0844](https://github.com/sabertazimi/awesome-notes/commit/b7d0844b6a32716e3c4fb0db0e1f8f9c5583200e))
+* **javascript-generators:** generator patterns for reducing coupling and callbacks ([6d96922](https://github.com/sabertazimi/awesome-notes/commit/6d96922cceacc233c52ee7693afc334339702251))
+* **linux-bash:** bash alias quote style consistency ([5946117](https://github.com/sabertazimi/awesome-notes/commit/5946117b63672f0fd684e60a02320d54c44bdc71))
+* **linux-bash:** Windows Terminal git bash flicker fix ([0827970](https://github.com/sabertazimi/awesome-notes/commit/08279705b2ae76367d18bb2bb588810c4f0f7cf6))
+* **linux-fx:** add fx JSON processing tool with examples ([55d4f8c](https://github.com/sabertazimi/awesome-notes/commit/55d4f8c313fd78c810a6f0bc9d0f9487835f12ac))
+* **linux-fzf:** configure fd integration for fuzzy finder ([96162b5](https://github.com/sabertazimi/awesome-notes/commit/96162b58c13157816fda08c7bf6818801d4215ad))
+* **linux-fzf:** fuzzy finder command line tool ([1bdbdab](https://github.com/sabertazimi/awesome-notes/commit/1bdbdaba27e6738c76d3b5536fa1b9ba776caee4))
+* **linux-fzf:** glob pattern for git directory exclusion ([b97edea](https://github.com/sabertazimi/awesome-notes/commit/b97edea4f58845c221ba797fcbf519b53a3f403d))
+* **linux-fzf:** organize FZF configuration order for consistency ([6a5a854](https://github.com/sabertazimi/awesome-notes/commit/6a5a854afb0f8337268e6f4b914756b763007628))
+* **linux-ripgrep:** add file list example with -l flag ([1eeb040](https://github.com/sabertazimi/awesome-notes/commit/1eeb040632fd9e010ad12a5ff81f05dc9cfdfca7))
+* **linux-ripgrep:** add smart-case option for case-insensitive search ([aa3163f](https://github.com/sabertazimi/awesome-notes/commit/aa3163fffeb7499591fdd14039512151b9bbc954))
+* **linux-tools:** explicit alias declarations for modern Unix replacements ([1e38957](https://github.com/sabertazimi/awesome-notes/commit/1e389572544e56f643dcf54b7278dd4f59ae27e6))
+* **linux-tools:** RipGrep installation ([372440d](https://github.com/sabertazimi/awesome-notes/commit/372440d0276af1f02bb64da1cfc4c94809850dc5))
+* **prompts-agents:** plan mode workflow and phases documentation ([bdaa813](https://github.com/sabertazimi/awesome-notes/commit/bdaa813916e564edeb9de92bc25d4a38ca65c231))
+* **prompts-slides:** slide design ([baeaaa2](https://github.com/sabertazimi/awesome-notes/commit/baeaaa282548bc23fdf8a1288beddea47cfdd335))
+* **react-perf:** add production case studies and best practices ([729ca18](https://github.com/sabertazimi/awesome-notes/commit/729ca18b50753572bdd0eaee96b6eda396de7c96))
+* **react-state:** modernize state management sections ([4be31d6](https://github.com/sabertazimi/awesome-notes/commit/4be31d602eaf9d628900eecd9e2404266f9d12f1))
+* **testing-tools:** remove incomplete Karma coverage entry ([98f4484](https://github.com/sabertazimi/awesome-notes/commit/98f4484a87bf6a81d1aaad59ec73959b7a961917))
+* **web-js:** JavaScript runtimes ([356c5fc](https://github.com/sabertazimi/awesome-notes/commit/356c5fc8707c068343043181bbbffd6389e72bd5))
+* **web-js:** weak reference usage ([c60b580](https://github.com/sabertazimi/awesome-notes/commit/c60b580cf6c17ca4b40c3320ba131bdcba0d57ee))
+* **web-library:**  node modules inspector ([7e08132](https://github.com/sabertazimi/awesome-notes/commit/7e081320dc093f3d82cd191292089eb8367e8aa9))
+* **web-library:** high quality free and open-source softwares ([95ef681](https://github.com/sabertazimi/awesome-notes/commit/95ef681b0ed35584d9cdafa53b41f17f59f8150b))
+* **web-library:** JellyFin media system ([42ddcfc](https://github.com/sabertazimi/awesome-notes/commit/42ddcfc0ac1abafeefbdbe0ce1eb608b0e666f31))
+* **web-library:** package publish linter ([cbd08c0](https://github.com/sabertazimi/awesome-notes/commit/cbd08c074e6b6a43e27008af161c93ae21754674))
+* **web-library:** tailwind animation plugins ([61c11d2](https://github.com/sabertazimi/awesome-notes/commit/61c11d282367cbbeaccd5bebaef3f3832bdd402e))
+* **web-library:** video player, editor and library ([cfaeea2](https://github.com/sabertazimi/awesome-notes/commit/cfaeea2bac4db69db9ecf60ac577503777cfb8cd))
+* **web-library:** web dev container ([b9302b1](https://github.com/sabertazimi/awesome-notes/commit/b9302b12f8e580819a03db46f2a05d39d08fe14f))
+* **web-node.js:** event emitter module ([41aaa43](https://github.com/sabertazimi/awesome-notes/commit/41aaa434de22809f9eab02510f48f508b24e84f3))
+* **web-node.js:** modern features replacing npm packages ([5ebd9e9](https://github.com/sabertazimi/awesome-notes/commit/5ebd9e93ce072f986fca9da4b4ff47b8ced0700f))
+* **web-node.js:** modern guide for reading and writing files ([8c4adf1](https://github.com/sabertazimi/awesome-notes/commit/8c4adf15b03ff23371e23ec547c72d776e2dce80))
+* **web-node.js:** node.js testing best practices ([02ccf71](https://github.com/sabertazimi/awesome-notes/commit/02ccf7129573131da4186c98166129eacd600ac2))
+* **web-node.js:** stream module ([7395d05](https://github.com/sabertazimi/awesome-notes/commit/7395d0565f671646e1d44e013e6ab41b9f78f9c0))
+
 ## [3.21.6](https://github.com/sabertazimi/awesome-notes/compare/v3.21.5...v3.21.6) (2025-12-15)
 
 
