@@ -1,2 +1,2 @@
-export { parseMarkdown } from './parseMarkdown'
-export type { Item, Section, SubSection, SubSubSection } from './parseMarkdown'
+export { parseMarkdown } from './parse-markdown'
+export type { Item, Section, SubSection, SubSubSection } from './parse-markdown'

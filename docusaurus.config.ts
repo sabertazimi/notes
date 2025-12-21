@@ -86,40 +86,40 @@ const config: Config = {
           activeBasePath: 'intro',
         },
         {
-          to: 'ComputerScience/Algorithms/AlgorithmsBasicNotes',
-          label: 'Computer Science',
-          position: 'left',
-          activeBasePath: 'ComputerScience',
-        },
-        {
-          to: 'Programming/DevOps/CleanCodeBasicNotes',
-          label: 'Programming',
-          position: 'left',
-          activeBasePath: 'Programming',
-        },
-        {
-          to: 'Language/Rust/RustBasicNotes',
-          label: 'Language',
-          position: 'left',
-          activeBasePath: 'Language',
-        },
-        {
-          to: 'Web/JavaScript/JavaScriptBasicNotes',
-          label: 'Web',
-          position: 'left',
-          activeBasePath: 'Web',
-        },
-        {
-          to: 'AI/Theory/AIBasicNotes',
+          to: 'ai/llm/agent-basic-notes',
           label: 'AI',
           position: 'left',
-          activeBasePath: 'AI',
+          activeBasePath: 'ai',
         },
         {
-          to: 'Web/Frameworks/LibraryBasicNotes',
+          to: 'cs/algorithms/algorithms-basic-notes',
+          label: 'CS',
+          position: 'left',
+          activeBasePath: 'cs',
+        },
+        {
+          to: 'programming/devops/clean-code-basic-notes',
+          label: 'Programming',
+          position: 'left',
+          activeBasePath: 'programming',
+        },
+        {
+          to: 'language/rust/rust-basic-notes',
+          label: 'Language',
+          position: 'left',
+          activeBasePath: 'language',
+        },
+        {
+          to: 'web/javascript/javascript-basic-notes',
+          label: 'Web',
+          position: 'left',
+          activeBasePath: 'web',
+        },
+        {
+          to: 'web/frameworks/library-basic-notes',
           label: 'Library Gallery',
           position: 'right',
-          activeBasePath: 'Web/Frameworks/LibraryBasicNotes',
+          activeBasePath: 'web/frameworks/library-basic-notes',
         },
         {
           type: 'dropdown',
@@ -131,8 +131,8 @@ const config: Config = {
               href: 'https://github.com/sabertazimi',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/sabertazimi',
+              label: 'X',
+              href: 'https://x.com/sabertazimi',
             },
             {
               label: 'Email',
@@ -173,27 +173,27 @@ const config: Config = {
           title: 'Notes',
           items: [
             {
-              to: 'ComputerScience/Algorithms/AlgorithmsBasicNotes',
-              label: 'Computer Science',
-            },
-            {
-              to: 'Programming/DevOps/CleanCodeBasicNotes',
-              label: 'Programming',
-            },
-            {
-              to: 'Language/Rust/RustBasicNotes',
-              label: 'Language',
-            },
-            {
-              to: 'Web/JavaScript/JavaScriptBasicNotes',
-              label: 'Web',
-            },
-            {
-              to: 'AI/Theory/AIBasicNotes',
+              to: 'ai/llm/agent-basic-notes',
               label: 'AI',
             },
             {
-              to: 'Web/Frameworks/LibraryBasicNotes',
+              to: 'cs/algorithms/algorithms-basic-notes',
+              label: 'CS',
+            },
+            {
+              to: 'programming/devops/clean-code-basic-notes',
+              label: 'Programming',
+            },
+            {
+              to: 'language/rust/rust-basic-notes',
+              label: 'Language',
+            },
+            {
+              to: 'web/javascript/javascript-basic-notes',
+              label: 'Web',
+            },
+            {
+              to: 'web/frameworks/library-basic-notes',
               label: 'Library Gallery',
             },
           ],
@@ -206,8 +206,8 @@ const config: Config = {
               href: 'https://github.com/sabertazimi',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/sabertazimi',
+              label: 'X',
+              href: 'https://x.com/sabertazimi',
             },
             {
               label: 'Facebook',

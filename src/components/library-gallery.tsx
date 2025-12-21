@@ -1,7 +1,7 @@
 import type { Item, Section, SubSection, SubSubSection } from '@site/src/utils'
 import { parseMarkdown } from '@site/src/utils'
 import React, { useEffect, useRef, useState } from 'react'
-import styles from './LibraryGallery.module.css'
+import styles from './library-gallery.module.css'
 
 interface Props {
   content: string

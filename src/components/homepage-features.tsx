@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import MountainSVG from '../../static/img/undraw_docusaurus_mountain.svg'
 import ReactSVG from '../../static/img/undraw_docusaurus_react.svg'
 import TreeSVG from '../../static/img/undraw_docusaurus_tree.svg'
-import styles from './HomepageFeatures.module.css'
+import styles from './homepage-features.module.css'
 
 type SVG = React.FunctionComponent<React.SVGProps<SVGSVGElement>>
 

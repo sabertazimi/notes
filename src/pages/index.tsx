@@ -2,7 +2,7 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 import clsx from 'clsx'
-import HomepageFeatures from '../components/HomepageFeatures'
+import HomepageFeatures from '../components/homepage-features'
 import styles from './index.module.css'
 import 'katex/dist/katex.css'
 
