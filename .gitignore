@@ -91,4 +91,7 @@ yarn-error.log
 **/.claude/*.local.json
 **/.claude/*.local.md
 
-.obsidian
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/core-plugins.json
