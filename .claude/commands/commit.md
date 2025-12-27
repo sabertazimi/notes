@@ -14,27 +14,22 @@ description: Create a git commit
 
 ## Your task
 
-1. Analyze the diff content to understand the nature and purpose of the changes
-2. Generate 3 commit message candidates based on the changes
-   - Each candidate should follow `<type>(<scope>): <description>` format
-   - Use specific section/topic from filename (e.g., `react-hooks`, `css-layouts`) as scope
-   - **Description should summarize the actual knowledge/concept**
-   - Focus on what changed, not how you changed it
-   - Be specific: "useEffect cleanup" not "useEffect section"
+1. Analyze the diff to understand what knowledge/concept is being documented
+2. Generate 3 commit message candidates based on the changes following `<type>(<scope>): <description>` format:
+   - Types: `feat` (new notes/domains), `fix` (updates to existing notes), `update`, `build`, `perf`, `test`
+   - Scope: extract from filename (e.g. `react-hooks`); use category (e.g. `web-react`) only for multi-area changes
+   - Description: the actual knowledge/concept name, extracted from headings, code examples, or explanatory text
+   - Key principle: never use structural words like `section`, `content`, `notes` in descriptions
+     Examples:
+     Bad: `fix(react-hooks): add useEffect section`
+     Good: `fix(react-hooks): useEffect cleanup functions`
+     Bad: `fix(css): update grid subsection`
+     Good: `fix(css-grid): grid auto-placement behavior`
+     Bad: `fix(rust): add ownership part`
+     Good: `fix(rust-ownership): borrow checker rules`
 3. Select the most appropriate commit message from the 3 candidates and explain the reasoning for your choice
 4. Stage changes if necessary using git add
 5. Execute git commit using the selected commit message
-
-## Examples
-
-- Instead of: `add useEffect section`
-- Use: `useEffect cleanup patterns` or `useEffect dependency array`
-
-- Instead of: `fix CSS notes`
-- Use: `flexbox gap vs margin` or `CSS grid auto-placement`
-
-- Instead of: `update algorithms section`
-- Use: `binary search optimization` or `time complexity analysis`
 
 ## Options
 
