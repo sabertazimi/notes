@@ -52,6 +52,7 @@
     "@types/react": "^19.2.7",
     "clsx": "^2.1.1",
     "katex": "^0.16.27",
+    "prism-react-renderer": "^2.4.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "rehype-katex": "^7.0.1",
@@ -73,7 +74,6 @@
     "lint-staged": "^16.2.7",
     "markdownlint-cli": "^0.47.0",
     "prettier": "^3.7.4",
-    "prism-react-renderer": "^2.4.1",
     "stylelint": "^16.26.1",
     "typescript": "^5.9.3"
   },
