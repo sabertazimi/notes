@@ -253,7 +253,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sabertazimi.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Sabertaz.`,
     },
     prism: {
       theme: lightCodeTheme,
