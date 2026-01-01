@@ -19,7 +19,8 @@ description: Create a git commit
    - Types: `feat` (new notes/domains), `fix` (updates to existing notes), `update`, `build`, `perf`, `test`
    - Scope: extract from filename (e.g. `react-hooks`); use category (e.g. `web-react`) only for multi-area changes
    - Description: the actual knowledge/concept name, extracted from headings, code examples, or explanatory text
-   - Key principle: never use structural words like `section`, `content`, `notes` in descriptions
+   - Key principle: never use structural words like `section`, `content`, `notes` or action verbs
+     like `add`, `update`, `remove`, `delete`, `modify` in descriptions
      Examples:
      Bad: `fix(react-hooks): add useEffect section`
      Good: `fix(react-hooks): useEffect cleanup functions`
