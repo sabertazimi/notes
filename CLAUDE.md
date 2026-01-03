@@ -158,9 +158,20 @@ The GitHub Actions workflow (.github/workflows/ci.yml):
 
 ## Commit and Pull Request Guidelines
 
-Follows Conventional Commits format.
-See `.claude/commands/commit.md` for detailed specifications
-including types, scope rules, and description guidelines.
+Follows Conventional Commits format:
+
+- Types: `feat` (new notes/domains), `fix` (updates to existing notes), `update`, `build`, `perf`, `test`
+- Scope: extract from filename (e.g. `react-hooks`); use category (e.g. `web-react`) only for multi-area changes
+- Description: the actual knowledge/concept name, extracted from headings, code examples, or explanatory text
+- Key principle: never use structural words like `section`, `content`, `notes` or action verbs
+  like `add`, `update`, `remove`, `delete`, `modify` in descriptions
+  Examples:
+  Bad: `fix(react-hooks): add useEffect section`
+  Good: `fix(react-hooks): useEffect cleanup functions`
+  Bad: `fix(css): update grid subsection`
+  Good: `fix(css-grid): grid auto-placement behavior`
+  Bad: `fix(rust): add ownership part`
+  Good: `fix(rust-ownership): borrow checker rules`
 
 ## Constraints
 
