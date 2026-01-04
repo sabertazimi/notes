@@ -115,6 +115,10 @@ Personal learning [Notes](https://notes.tazimi.dev): **awesome notes** for mysel
 
 ### Web
 
+#### Library
+
+- [Library List](https://notes.tazimi.dev/web/library/library-basic-notes/)
+
 #### Angular
 
 - [Angular Basic Notes](https://notes.tazimi.dev/web/angular/angular-basic-notes/)
@@ -129,12 +133,6 @@ Personal learning [Notes](https://notes.tazimi.dev): **awesome notes** for mysel
 - [CSS Design Notes](https://notes.tazimi.dev/web/css/css-design-notes/)
 - [Bootstrap Basic Notes](https://notes.tazimi.dev/web/css/bootstrap-basic-notes/)
 - [Sass Basic Notes](https://notes.tazimi.dev/web/css/sass-basic-notes/)
-
-#### Frameworks
-
-- [Electron Basic Notes](https://notes.tazimi.dev/web/frameworks/electron-basic-notes/)
-- [jQuery Basic Notes](https://notes.tazimi.dev/web/frameworks/jquery-basic-notes/)
-- [Library List](https://notes.tazimi.dev/web/frameworks/library-basic-notes/)
 
 #### HTML
 
@@ -170,14 +168,22 @@ Personal learning [Notes](https://notes.tazimi.dev): **awesome notes** for mysel
 - [React Router Basic Notes](https://notes.tazimi.dev/web/react/react-router-basic-notes/)
 - [Redux Basic Notes](https://notes.tazimi.dev/web/react/redux-basic-notes/)
 
-#### Security
-
-- [Security Basic Notes](https://notes.tazimi.dev/web/security/security-basic-notes/)
-
 #### Vue
 
 - [Vue Basic Notes](https://notes.tazimi.dev/web/vue/vue-basic-notes/)
 - [Vue Advanced Notes](https://notes.tazimi.dev/web/vue/vue-advanced-notes/)
+
+#### Electron
+
+- [Electron Basic Notes](https://notes.tazimi.dev/web/electron/electron-basic-notes/)
+
+#### jQuery
+
+- [jQuery Basic Notes](https://notes.tazimi.dev/web/jquery/jquery-basic-notes/)
+
+#### Security
+
+- [Security Basic Notes](https://notes.tazimi.dev/web/security/security-basic-notes/)
 
 ## License
 

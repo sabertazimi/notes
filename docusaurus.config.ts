@@ -116,10 +116,10 @@ const config: Config = {
           activeBasePath: 'web',
         },
         {
-          to: 'web/frameworks/library-basic-notes',
+          to: 'web/library/library-basic-notes',
           label: 'Library Gallery',
           position: 'right',
-          activeBasePath: 'web/frameworks/library-basic-notes',
+          activeBasePath: 'web/library/library-basic-notes',
         },
         {
           type: 'dropdown',
@@ -193,7 +193,7 @@ const config: Config = {
               label: 'Web',
             },
             {
-              to: 'web/frameworks/library-basic-notes',
+              to: 'web/library/library-basic-notes',
               label: 'Library Gallery',
             },
           ],
