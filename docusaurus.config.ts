@@ -86,7 +86,7 @@ const config: Config = {
           activeBasePath: 'intro',
         },
         {
-          to: 'ai/llm/agent-basic-notes',
+          to: 'ai/llm',
           label: 'AI',
           position: 'left',
           activeBasePath: 'ai',
@@ -173,7 +173,7 @@ const config: Config = {
           title: 'Notes',
           items: [
             {
-              to: 'ai/llm/agent-basic-notes',
+              to: 'ai/llm',
               label: 'AI',
             },
             {
