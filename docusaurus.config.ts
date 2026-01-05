@@ -110,7 +110,7 @@ const config: Config = {
           activeBasePath: 'language',
         },
         {
-          to: 'web/javascript/javascript-basic-notes',
+          to: 'web/javascript',
           label: 'Web',
           position: 'left',
           activeBasePath: 'web',
@@ -189,7 +189,7 @@ const config: Config = {
               label: 'Language',
             },
             {
-              to: 'web/javascript/javascript-basic-notes',
+              to: 'web/javascript',
               label: 'Web',
             },
             {
