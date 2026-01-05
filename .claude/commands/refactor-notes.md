@@ -1,9 +1,19 @@
 ---
-allowed-tools: AskUserQuestion, Bash, Read, Write, Edit, Grep, Glob, TodoWrite, Task, Skill
+allowed-tools: AskUserQuestion, Bash, Read, Write, Edit, Grep, Glob, TodoWrite, Task, Skill, EnterPlanMode
 description: 重构大笔记文件，进行扁平化拆分
 ---
 
 # Refactor Notes
+
+## 前置检查
+
+**重要**：此命令涉及复杂的多步骤重构，必须先完成规划阶段。
+
+- 如果当前不在 **plan mode**，将自动调用 `EnterPlanMode` 进入规划模式
+- 在 **plan mode 中**：完成「分析阶段」和「创建迁移计划」
+- 退出 **plan mode 后**：执行「执行拆分」和「验证与清理」
+
+---
 
 请你按照以下标准化流程，对 `$ARGUMENTS` 指定的笔记文件进行扁平化拆分：
 
@@ -25,6 +35,8 @@ description: 重构大笔记文件，进行扁平化拆分
 
 ## 工作流程
 
+### 📋 规划阶段（Plan Mode 中）
+
 1. **分析阶段**：
    - 使用 `Glob`/`Grep` 分析目标文件和目录结构
    - 使用 `Read` 读取原始文件，识别所有 H2 章节
@@ -34,6 +46,10 @@ description: 重构大笔记文件，进行扁平化拆分
    - 列出所有目标文件及其包含的章节
    - 规划 figures 子目录结构
    - 确保符合文件大小限制
+
+> **完成迁移计划后，请退出 plan mode 并确认，然后继续执行阶段**
+
+### ⚙️ 执行阶段（退出 Plan Mode 后）
 
 3. **执行拆分**：
    - 创建 figures 子目录（`Bash`）
@@ -45,10 +61,13 @@ description: 重构大笔记文件，进行扁平化拆分
    - 创建 `index.md` 索引文件
 
 4. **验证与清理**：
-   - 检查并修复内部链接（`Grep` + `Edit`）
-   - 删除原始文件
-   - 运行 `pnpm build` 验证构建成功
-   - 使用 `TodoWrite` 跟踪所有任务进度
+   - [ ] 使用 `Grep` 检查并修复内部链接
+   - [ ] 验证所有图片路径已更新
+   - [ ] 运行 `pnpm build` 确保构建成功
+   - [ ] 运行 `pnpm lint:notes` 确保 markdown 格式正确
+   - [ ] 手动检查生成的 `index.md` 文件
+   - [ ] 删除原始文件
+   - [ ] 使用 `TodoWrite` 标记所有任务完成
 
 ## 注意事项
 
