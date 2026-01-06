@@ -5,8 +5,8 @@ This file provides guidance to code agents when working with code in this reposi
 ## Project Overview
 
 Awesome Notes is a personal learning notes (TIL - Today I Learned) documentation website built with Docusaurus.
-It serves as a comprehensive knowledge repository
-covering computer science, programming languages, web technologies, AI, and more.
+It serves as a comprehensive knowledge repository covering
+computer science, programming languages, web technologies, AI, and more.
 
 ## Development Commands
 
@@ -46,30 +46,32 @@ covering computer science, programming languages, web technologies, AI, and more
 
 ```plaintext
 awesome-notes/
-├── notes/              # All documentation content (Markdown files)
-│   ├── AI/            # AI and machine learning topics
-│   ├── ComputerScience/  # CS fundamentals (Algorithms, OS, Database, etc.)
-│   ├── Language/      # Programming languages (C, C++, Go, Rust, etc.)
-│   ├── Programming/   # Programming practices and tools
-│   └── Web/           # Web technologies (React, Vue, CSS, JS, etc.)
-├── src/               # Docusaurus source files and custom CSS
-├── static/            # Static assets (images, logos, etc.)
+├── notes/                # All documentation content (Markdown files)
+│   ├── AI/               # AI and machine learning topics
+│   ├── CS/               # CS fundamentals (Algorithms, OS, Database, etc.)
+│   ├── Web/              # Web technologies (React, Vue, CSS, JS, etc.)
+│   ├── Language/         # Programming languages (C, C++, Go, Rust, etc.)
+│   └── Programming/      # Programming practices and tools
+├── src/                  # Docusaurus source files and custom CSS
+├── static/               # Static assets (images, logos, etc.)
 ├── docusaurus.config.ts  # Main Docusaurus configuration
-└── sidebars.ts        # Auto-generated sidebar configuration
+└── sidebars.ts           # Auto-generated sidebar configuration
 ```
 
 ### Content Structure
 
 - All notes are Markdown files in the `notes/` directory
-- Notes follow the naming pattern `*Notes.md`
-- Each note requires frontmatter with author metadata:
+- Each note requires frontmatter:
 
   ```yaml
   ---
-  author: Sabertazimi
-  authorTitle: Web Developer
-  authorURL: https://github.com/sabertazimi
-  authorImageURL: https://github.com/sabertazimi.png
+  tags: [Category, Subcategory]
+  ---
+  ```
+
+  ```yaml
+  ---
+  sidebar_position: 8
   tags: [Category, Subcategory]
   ---
   ```
@@ -115,10 +117,8 @@ awesome-notes/
 ### Creating New Notes
 
 1. Create Markdown file in appropriate category under `notes/`
-2. Follow the `*Notes.md` naming convention
-3. Include required frontmatter with author metadata
-4. Use appropriate tags for categorization
-5. Leverage Docusaurus components (Tabs, Admonitions, etc.)
+2. Use appropriate tags for categorization
+3. Leverage Docusaurus components (Tabs, Admonitions, etc.)
 
 ### Supported Features in Notes
 
