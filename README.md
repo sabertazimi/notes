@@ -49,11 +49,13 @@ notes
 │   └── verilog
 ├── programming
 │   ├── android
+│   ├── cmake
 │   ├── devops
 │   ├── functional-programming
-│   ├── gaming
+│   ├── game
+│   ├── git
 │   ├── linux
-│   └── tools
+│   └── vim
 └── web
     ├── angular
     ├── css
