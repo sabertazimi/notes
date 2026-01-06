@@ -26,7 +26,7 @@ description: 重构大笔记文件，进行扁平化拆分
    - 例外：单个 H2 章节超过 1000 行时保持独立
 
 2. **创建索引文件**：
-   - 每个目录创建 `index.md` 作为导航中心
+   - 每个目录创建同名 `.md` 文件作为导航中心
    - 仅包含 Map of Content，不含笔记内容
 
 3. **图片资源拆分**：
@@ -55,22 +55,23 @@ description: 重构大笔记文件，进行扁平化拆分
    - 创建 figures 子目录（`Bash`）
    - 移动图片到对应子目录（`Bash`）
    - 使用 `Write` 创建新文件，包含：
-     - 调整后的 frontmatter（标题、标签）
+     - 调整后的 frontmatter（`sidebar_position`、标题、标签）
      - 原 H2-H4 内容
      - 更新后的图片路径
-   - 创建 `index.md` 索引文件
+   - 创建索引文件
 
 4. **验证与清理**：
    - [ ] 使用 `Grep` 检查并修复内部链接
    - [ ] 验证所有图片路径已更新
+   - [ ] 验证索引文件中列出的顺序与 sidebar_position 顺序一致
    - [ ] 运行 `pnpm build` 确保构建成功
    - [ ] 运行 `pnpm lint:notes` 确保 markdown 格式正确
-   - [ ] 手动检查生成的 `index.md` 文件
+   - [ ] 手动检查生成的索引文件
    - [ ] 删除原始文件
    - [ ] 使用 `TodoWrite` 标记所有任务完成
 
 ## 注意事项
 
-- 保持原始 frontmatter 格式，仅调整 title 和 tags
+- 保持原始 frontmatter 格式，仅调整 sidebar_position、title 和 tags
 - 图片路径格式：`./figures/subdirectory/filename.ext`
 - 提交时遵循项目的 Conventional Commits 规范
