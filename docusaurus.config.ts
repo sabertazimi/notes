@@ -110,7 +110,7 @@ const config: Config = {
           activeBasePath: 'language',
         },
         {
-          to: 'programming/devops/clean-code',
+          to: 'programming/design/patterns',
           label: 'Programming',
           position: 'left',
           activeBasePath: 'programming',
@@ -189,7 +189,7 @@ const config: Config = {
               label: 'Language',
             },
             {
-              to: 'programming/devops/clean-code',
+              to: 'programming/design/patterns',
               label: 'Programming',
             },
             {
