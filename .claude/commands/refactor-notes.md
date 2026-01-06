@@ -67,6 +67,7 @@ description: 重构大笔记文件，进行扁平化拆分
    - [ ] 运行 `pnpm build` 确保构建成功
    - [ ] 运行 `pnpm lint:notes` 确保 markdown 格式正确
    - [ ] 手动检查生成的索引文件
+   - [ ] 验证拆分文件总行数 > 原始文件行数：`wc -l <original_file> <target_files>/*.md`
    - [ ] 删除原始文件
    - [ ] 使用 `TodoWrite` 标记所有任务完成
 
