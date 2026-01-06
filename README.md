@@ -1,6 +1,14 @@
 ---
 sidebar_label: 'Awesome Notes'
 sidebar_position: 1
+authors:
+  name: Sabertaz
+  url: https://tazimi.dev
+  image_url: https://github.com/sabertazimi.png
+  email: sabertazimi@gmail.com
+  socials:
+    github: sabertazimi
+    x: sabertazimi
 ---
 
 # Awesome Notes
