@@ -92,22 +92,10 @@ const config: Config = {
           activeBasePath: 'ai',
         },
         {
-          to: 'cs/algorithms/algorithms-basic-notes',
+          to: 'cs/algorithms',
           label: 'CS',
           position: 'left',
           activeBasePath: 'cs',
-        },
-        {
-          to: 'programming/devops/clean-code-basic-notes',
-          label: 'Programming',
-          position: 'left',
-          activeBasePath: 'programming',
-        },
-        {
-          to: 'language/rust/rust-basic-notes',
-          label: 'Language',
-          position: 'left',
-          activeBasePath: 'language',
         },
         {
           to: 'web/javascript',
@@ -116,10 +104,22 @@ const config: Config = {
           activeBasePath: 'web',
         },
         {
-          to: 'web/library/library-basic-notes',
+          to: 'language/rust',
+          label: 'Language',
+          position: 'left',
+          activeBasePath: 'language',
+        },
+        {
+          to: 'programming/devops/clean-code',
+          label: 'Programming',
+          position: 'left',
+          activeBasePath: 'programming',
+        },
+        {
+          to: 'web/library',
           label: 'Library Gallery',
           position: 'right',
-          activeBasePath: 'web/library/library-basic-notes',
+          activeBasePath: 'web/library',
         },
         {
           type: 'dropdown',
@@ -177,23 +177,23 @@ const config: Config = {
               label: 'AI',
             },
             {
-              to: 'cs/algorithms/algorithms-basic-notes',
+              to: 'cs/algorithms',
               label: 'CS',
-            },
-            {
-              to: 'programming/devops/clean-code-basic-notes',
-              label: 'Programming',
-            },
-            {
-              to: 'language/rust/rust-basic-notes',
-              label: 'Language',
             },
             {
               to: 'web/javascript',
               label: 'Web',
             },
             {
-              to: 'web/library/library-basic-notes',
+              to: 'language/rust',
+              label: 'Language',
+            },
+            {
+              to: 'programming/devops/clean-code',
+              label: 'Programming',
+            },
+            {
+              to: 'web/library',
               label: 'Library Gallery',
             },
           ],
