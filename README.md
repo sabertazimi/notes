@@ -42,7 +42,7 @@ notes
 │   ├── graph
 │   ├── latex
 │   ├── math
-│   ├── operating-systems
+│   ├── os
 │   └── virtualization
 ├── intro.md
 ├── language
@@ -58,7 +58,8 @@ notes
 ├── programming
 │   ├── android
 │   ├── cmake
-│   ├── devops
+│   ├── design
+│   ├── docker
 │   ├── functional-programming
 │   ├── game
 │   ├── git
