@@ -110,7 +110,7 @@ const config: Config = {
           activeBasePath: 'language',
         },
         {
-          to: 'programming/design/patterns',
+          to: 'programming/linux',
           label: 'Programming',
           position: 'left',
           activeBasePath: 'programming',
@@ -189,7 +189,7 @@ const config: Config = {
               label: 'Language',
             },
             {
-              to: 'programming/design/patterns',
+              to: 'programming/linux',
               label: 'Programming',
             },
             {
