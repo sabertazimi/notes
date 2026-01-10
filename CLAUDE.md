@@ -31,7 +31,7 @@ It serves as a comprehensive knowledge repository covering AI, CS, web, programm
 
 Follows Conventional Commits format:
 
-- Types: `feat` (new notes/domains), `fix` (updates to existing notes), `update`, `build`, `perf`, `test`
+- Types: `feat` (new notes/domains), `fix` (updates to existing notes), `perf`, `test`, `ci`, `chore`
 - Scope:
   - **CRITICAL**: Only 1-2 levels allowed, maximum one `-` separator
   - Single file: Extract from filename omitting top-level (e.g. `react-hooks`)
