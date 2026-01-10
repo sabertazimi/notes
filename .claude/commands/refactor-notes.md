@@ -26,8 +26,9 @@ description: 重构大笔记文件，进行扁平化拆分
    - 例外：单个 H2 章节超过 1000 行时保持独立
 
 2. **创建索引文件**：
-   - 每个目录创建同名 `.md` 文件作为导航中心
-   - 仅包含 Map of Content，不含笔记内容
+   - 每个目录创建同名 `.md` 文件作为导航中心，仅含 Map of Content
+   - 结构原则：渐进式分组，层次清晰
+   - 链接格式：`- [Display Name](./relative-path.md) - Concise description here`
 
 3. **图片资源拆分**：
    - `figures/` 按主题分类到子目录
