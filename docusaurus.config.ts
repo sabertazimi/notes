@@ -86,31 +86,31 @@ const config: Config = {
           activeBasePath: 'intro',
         },
         {
-          to: 'ai/llm',
+          to: 'ai',
           label: 'AI',
           position: 'left',
           activeBasePath: 'ai',
         },
         {
-          to: 'cs/algorithms',
+          to: 'cs',
           label: 'CS',
           position: 'left',
           activeBasePath: 'cs',
         },
         {
-          to: 'web/javascript',
+          to: 'web',
           label: 'Web',
           position: 'left',
           activeBasePath: 'web',
         },
         {
-          to: 'language/rust',
+          to: 'language',
           label: 'Language',
           position: 'left',
           activeBasePath: 'language',
         },
         {
-          to: 'programming/linux',
+          to: 'programming',
           label: 'Programming',
           position: 'left',
           activeBasePath: 'programming',
@@ -173,23 +173,23 @@ const config: Config = {
           title: 'Notes',
           items: [
             {
-              to: 'ai/llm',
+              to: 'ai',
               label: 'AI',
             },
             {
-              to: 'cs/algorithms',
+              to: 'cs',
               label: 'CS',
             },
             {
-              to: 'web/javascript',
+              to: 'web',
               label: 'Web',
             },
             {
-              to: 'language/rust',
+              to: 'language',
               label: 'Language',
             },
             {
-              to: 'programming/linux',
+              to: 'programming',
               label: 'Programming',
             },
             {
