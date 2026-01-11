@@ -50,6 +50,8 @@ export default defineConfig(
     name: 'ui',
     files: ['src/components/ui/**/*.tsx'],
     rules: {
+      'react/no-array-index-key': 'off',
+      'react-hooks-extra/no-direct-set-state-in-use-effect': 'off',
       'react-refresh/only-export-components': 'off',
     },
   },

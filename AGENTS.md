@@ -7,7 +7,7 @@ This file provides guidance to coding agents when working with code in this repo
 Awesome Notes is a personal TIL (Today I Learned) documentation website built with Docusaurus.
 It serves as a comprehensive knowledge repository covering AI, CS, web, programming, and more.
 
-**Tech Stack**: Docusaurus + TypeScript + pnpm + React
+**Tech Stack**: Docusaurus + TypeScript + shadcn/ui + pnpm + React
 
 **Structure**: `notes/{AI,CS,Web,Language,Programming}/{topic}/{file}.md`
 
