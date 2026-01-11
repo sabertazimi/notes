@@ -126,7 +126,7 @@ See [examples.md](./examples.md) for complete index file templates.
 
 ### 3. Verification Checklist
 
-- [ ] Frontmatter added to split files (`tags`, `sidebar_position`)
+- [ ] Frontmatter added to split files (`sidebar_position` + `tags`)
 - [ ] Internal links updated (use `Grep`)
 - [ ] Image paths corrected (`./figures/subdirectory/file.ext`)
 - [ ] Index order matches `sidebar_position`
