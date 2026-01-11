@@ -27,10 +27,11 @@ function Hero(): React.JSX.Element {
 }
 
 export default function Home(): React.JSX.Element {
-  const { siteConfig } = useDocusaurusContext()
-
   return (
-    <Layout title={`Hello from ${siteConfig.title}`} description="Today I Learned">
+    <Layout
+      title="Today I Learned"
+      description="Awesome Notes is a personal TIL (Today I Learned) documentation website built with Docusaurus. It serves as a comprehensive knowledge repository covering AI, CS, web, programming, and more."
+    >
       <Hero />
     </Layout>
   )
