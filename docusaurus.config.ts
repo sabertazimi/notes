@@ -2,8 +2,9 @@ import type * as Preset from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
 import ci from 'ci-info'
 import { themes } from 'prism-react-renderer'
-import katex from 'rehype-katex'
-import math from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import tailwind from './src/plugins/tailwind'
 
 const lightCodeTheme = themes.github
 const darkCodeTheme = themes.dracula
@@ -35,8 +36,8 @@ const config: Config = {
           editUrl: 'https://github.com/sabertazimi/awesome-notes/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -57,6 +58,7 @@ const config: Config = {
         hashed: true,
       },
     ],
+    tailwind,
   ],
   themeConfig: {
     respectPrefersColorScheme: true,

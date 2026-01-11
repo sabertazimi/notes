@@ -9,10 +9,9 @@
   padding: 4rem 0;
   overflow: hidden;
   text-align: center;
-  background-color: var(--hero-grid-bg);
+  background-color: var(--background);
   background-image:
-    linear-gradient(var(--hero-grid-line) var(--hero-grid-line-width), transparent var(--hero-grid-line-width)),
-    linear-gradient(90deg, var(--hero-grid-line) var(--hero-grid-line-width), transparent var(--hero-grid-line-width));
+    linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -21,87 +20,11 @@
   inset: 0;
   pointer-events: none;
   content: '';
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, var(--hero-grid-glow), transparent);
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, var(--primary) / 15%, transparent);
 }
 
 @media only screen and (width <= 966px) {
   .banner {
     padding: 2rem;
-  }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button {
-  position: relative;
-  background:
-    linear-gradient(var(--rainbow-color), var(--rainbow-color)),
-    linear-gradient(var(--rainbow-color) 50%, rgb(18 18 19 / 60%) 80%, rgb(18 18 19 / 0%)),
-    linear-gradient(
-      90deg,
-      var(--rainbow-color-1),
-      var(--rainbow-color-5),
-      var(--rainbow-color-3),
-      var(--rainbow-color-4),
-      var(--rainbow-color-2)
-    );
-  background-clip: padding-box, border-box, border-box;
-  background-origin: border-box;
-  background-size: 200% 200%;
-  transition: all 0.3s ease;
-  animation: rainbow 3s linear infinite;
-}
-
-.button::before {
-  position: absolute;
-  bottom: -20%;
-  left: 50%;
-  z-index: 0;
-  width: 60%;
-  height: 20%;
-  content: '';
-  background: linear-gradient(
-    90deg,
-    var(--rainbow-color-1),
-    var(--rainbow-color-5),
-    var(--rainbow-color-3),
-    var(--rainbow-color-4),
-    var(--rainbow-color-2)
-  );
-  background-size: 200% 200%;
-  filter: blur(12px);
-  transform: translateX(-50%);
-  animation: rainbow 3s linear infinite;
-}
-
-[data-theme='dark'] .button {
-  background:
-    linear-gradient(var(--rainbow-color), var(--rainbow-color)),
-    linear-gradient(var(--rainbow-color) 50%, rgb(255 255 255 / 60%) 80%, rgb(0 0 0 / 0%)),
-    linear-gradient(
-      90deg,
-      var(--rainbow-color-1),
-      var(--rainbow-color-5),
-      var(--rainbow-color-3),
-      var(--rainbow-color-4),
-      var(--rainbow-color-2)
-    );
-}
-
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
   }
 }

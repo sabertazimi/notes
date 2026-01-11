@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import { RainbowButton } from '@site/src/components/ui/rainbow-button'
 import Heading from '@theme/Heading'
 import Layout from '@theme/Layout'
 import clsx from 'clsx'
@@ -16,9 +17,11 @@ function Hero(): React.JSX.Element {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link className={clsx('button button--lg', styles.button)} to="/intro">
-            Start to Read 🎉
+        <div className="flex items-center justify-center">
+          <Link to="/intro">
+            <RainbowButton size="lg">
+              Start to Read 🎉
+            </RainbowButton>
           </Link>
         </div>
       </div>
