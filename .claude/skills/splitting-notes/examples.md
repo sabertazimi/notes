@@ -67,7 +67,6 @@ notes/language/python/
 ```markdown
 ---
 tags: [Language, Python]
-sidebar_position: 1
 ---
 
 # Python
@@ -177,7 +176,6 @@ notes/web/vue/
 ```markdown
 ---
 tags: [Web, Vue]
-sidebar_position: 1
 ---
 
 # Vue
@@ -316,7 +314,6 @@ notes/web/react/
 ```markdown
 ---
 tags: [Web, React]
-sidebar_position: 1
 ---
 
 # React
@@ -352,7 +349,6 @@ sidebar_position: 1
 ```markdown
 ---
 tags: [Category, Subcategory]
-sidebar_position: 1
 ---
 
 # Topic Name

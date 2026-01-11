@@ -114,6 +114,7 @@ notes/topic/
 - Short chapters (<100 lines) → merge
 - Long chapters → separate file
 - Single H2 > 1000 lines → keep independent
+- Add `sidebar_position` and adjusted `tags` frontmatter to each split file
 
 **Create index file** (same name as directory):
 
@@ -125,6 +126,7 @@ See [examples.md](./examples.md) for complete index file templates.
 
 ### 3. Verification Checklist
 
+- [ ] Frontmatter added to split files (`tags`, `sidebar_position`)
 - [ ] Internal links updated (use `Grep`)
 - [ ] Image paths corrected (`./figures/subdirectory/file.ext`)
 - [ ] Index order matches `sidebar_position`
