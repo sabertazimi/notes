@@ -90,6 +90,7 @@ yarn-error.log
 # Agent files
 **/.claude/*.local.json
 **/.claude/*.local.md
+.playwright-mcp/
 
 .obsidian/*
 !.obsidian/app.json
