@@ -46,7 +46,7 @@ const DefaultNotes: Note[][] = [
   ],
   // Row 5: Development Practices
   [
-    { title: 'SOLID Principle', category: 'Design', href: '/programming/design/solid' },
+    { title: 'Patterns', category: 'Design', href: '/programming/design/patterns' },
     { title: 'Shell Scripts', category: 'Linux', href: '/programming/linux/shell' },
     { title: 'Internals', category: 'Git', href: '/programming/git/internals' },
     { title: 'Neovim', category: 'Vim', href: '/programming/vim/toolchain' },
