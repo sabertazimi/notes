@@ -14,10 +14,10 @@ interface Note {
 const DefaultNotes: Note[][] = [
   // Row 1: AI & Machine Learning
   [
-    { title: 'Neural Architectures', category: 'AI', href: '/ai/theory/neural-architectures' },
+    { title: 'AI Agent', category: 'Agent', href: '/ai/llm/agent' },
     { title: 'Prompt Engineering', category: 'LLM', href: '/ai/llm/prompt-engineering' },
     { title: 'Claude Code', category: 'Agent', href: '/ai/llm/claude-code' },
-    { title: 'Transformer', category: 'AI', href: '/ai/theory/transformers' },
+    { title: 'Transformer', category: 'AI', href: '/ai/dl/transformer' },
     { title: 'RAG System', category: 'LLM', href: '/ai/llm/rag' },
   ],
   // Row 2: Systems & Algorithms
@@ -50,7 +50,7 @@ const DefaultNotes: Note[][] = [
     { title: 'Shell Scripts', category: 'Linux', href: '/programming/linux/shell' },
     { title: 'Internals', category: 'Git', href: '/programming/git/internals' },
     { title: 'Neovim', category: 'Vim', href: '/programming/vim/toolchain' },
-    { title: 'Docker & K8s', category: 'DevOps', href: '/programming/devops/docker' },
+    { title: 'Kubernetes', category: 'DevOps', href: '/programming/devops/k8s' },
   ],
 ]
 
