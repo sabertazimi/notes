@@ -1,5 +1,5 @@
-import type { Item, Section, SubSection, SubSubSection } from '@site/src/utils/parse-markdown'
-import { parseMarkdown } from '@site/src/utils/parse-markdown'
+import type { Item, Section, SubSection, SubSubSection } from '@site/src/lib/parse-markdown'
+import { parseMarkdown } from '@site/src/lib/parse-markdown'
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './library-gallery.module.css'
 

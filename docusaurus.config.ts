@@ -137,6 +137,14 @@ const config: Config = {
               href: 'https://x.com/sabertazimi',
             },
             {
+              label: 'Facebook',
+              href: 'https://facebook.com/sabertazimi',
+            },
+            {
+              label: 'Weibo',
+              href: 'https://weibo.com/sabertazimi',
+            },
+            {
               label: 'Email',
               href: 'mailto:sabertazimi@gmail.com',
             },
@@ -158,6 +166,18 @@ const config: Config = {
             {
               label: 'Bod CLI',
               href: 'https://github.com/sabertazimi/bod',
+            },
+            {
+              label: 'Dragon ZSH Theme',
+              href: 'https://github.com/sabertazimi/dragon-zsh-theme',
+            },
+            {
+              label: 'LaTeX Snippets',
+              href: 'https://github.com/sabertazimi/LaTeX-snippets',
+            },
+            {
+              label: 'Lab Notes',
+              href: 'https://github.com/sabertazimi/hust-lab',
             },
           ],
         },
@@ -254,7 +274,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sabertaz.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Sabertaz`,
     },
     prism: {
       theme: lightCodeTheme,
