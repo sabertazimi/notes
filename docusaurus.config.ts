@@ -124,64 +124,6 @@ const config: Config = {
           activeBasePath: 'web/library',
         },
         {
-          type: 'dropdown',
-          label: 'Links',
-          position: 'right',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/sabertazimi',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/sabertazimi',
-            },
-            {
-              label: 'Facebook',
-              href: 'https://facebook.com/sabertazimi',
-            },
-            {
-              label: 'Weibo',
-              href: 'https://weibo.com/sabertazimi',
-            },
-            {
-              label: 'Email',
-              href: 'mailto:sabertazimi@gmail.com',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Repos',
-          position: 'right',
-          items: [
-            {
-              label: 'Next.js Blog',
-              href: 'https://github.com/sabertazimi/blog',
-            },
-            {
-              label: 'Awesome Web',
-              href: 'https://github.com/sabertazimi/awesome-web',
-            },
-            {
-              label: 'Bod CLI',
-              href: 'https://github.com/sabertazimi/bod',
-            },
-            {
-              label: 'Dragon ZSH Theme',
-              href: 'https://github.com/sabertazimi/dragon-zsh-theme',
-            },
-            {
-              label: 'LaTeX Snippets',
-              href: 'https://github.com/sabertazimi/LaTeX-snippets',
-            },
-            {
-              label: 'Lab Notes',
-              href: 'https://github.com/sabertazimi/hust-lab',
-            },
-          ],
-        },
-        {
           href: 'https://github.com/sabertazimi/awesome-notes',
           label: 'GitHub',
           position: 'right',
