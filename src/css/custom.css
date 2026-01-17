@@ -263,11 +263,6 @@ html[data-theme='dark'] {
     @apply bg-background text-foreground tracking-normal;
   }
 
-  /* Add border to site footer */
-  .footer {
-    @apply border-t;
-  }
-
   /* Revert tailwind presets */
   ol {
     @apply list-decimal;
@@ -284,6 +279,18 @@ html[data-theme='dark'] {
   a svg {
     @apply inline align-baseline;
   }
+}
+
+.footer {
+  @apply border-t;
+}
+
+strong {
+  @apply text-primary;
+}
+
+.markdown a {
+  @apply underline underline-offset-2;
 }
 
 @media (width >= 96rem) {
