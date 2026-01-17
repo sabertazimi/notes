@@ -86,6 +86,8 @@
   --ifm-color-primary-lightest: var(--primary-lightest);
   --ifm-background-color: var(--background);
   --ifm-font-color-base: var(--foreground);
+  --ifm-color-content: var(--foreground);
+  --ifm-card-background-color: var(--card);
   --ifm-footer-background-color: var(--background);
   --ifm-navbar-background-color: var(--background);
   --ifm-code-font-size: 95%;
@@ -168,6 +170,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: var(--primary-lightest);
   --ifm-background-color: var(--background);
   --ifm-font-color-base: var(--foreground);
+  --ifm-color-content: var(--foreground);
+  --ifm-card-background-color: var(--card);
   --ifm-footer-background-color: var(--background);
   --ifm-navbar-background-color: var(--background);
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
@@ -279,6 +283,12 @@ html[data-theme='dark'] {
 
   a svg {
     @apply inline align-baseline;
+  }
+}
+
+@media (width >= 96rem) {
+  .container {
+    max-width: 80rem;
   }
 }
 

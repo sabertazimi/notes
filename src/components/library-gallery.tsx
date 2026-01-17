@@ -1,4 +1,4 @@
-import type { Item, Section, SubSection, SubSubSection } from '@site/src/lib/parse-markdown'
+import type { Category, Item, Section, SubSection } from '@site/src/lib/parse-markdown'
 import { parseMarkdown } from '@site/src/lib/parse-markdown'
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './library-gallery.module.css'
@@ -8,11 +8,11 @@ interface Props {
 }
 
 export default function LibraryGallery({ content }: Props): React.JSX.Element {
-  const sections = parseMarkdown(content)
-  const [selectedSectionIndex, setSelectedSectionIndex] = useState(0)
+  const categories = parseMarkdown(content)
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
-  const selectedSection = sections?.[selectedSectionIndex] ?? null
+  const selectedCategory = categories?.[selectedCategoryIndex] ?? null
 
   // 点击外部关闭下拉菜单
   useEffect(() => {
@@ -41,11 +41,11 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
           break
         case 'ArrowUp':
           event.preventDefault()
-          setSelectedSectionIndex(prev => (prev > 0 ? prev - 1 : sections.length - 1))
+          setSelectedCategoryIndex(prev => (prev > 0 ? prev - 1 : categories.length - 1))
           break
         case 'ArrowDown':
           event.preventDefault()
-          setSelectedSectionIndex(prev => (prev < sections.length - 1 ? prev + 1 : 0))
+          setSelectedCategoryIndex(prev => (prev < categories.length - 1 ? prev + 1 : 0))
           break
         case 'Enter':
         case ' ':
@@ -61,14 +61,14 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isDropdownOpen, sections.length])
+  }, [isDropdownOpen, categories.length])
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
 
-  const handleSectionSelect = (index: number) => {
-    setSelectedSectionIndex(index)
+  const handleCategorySelect = (index: number) => {
+    setSelectedCategoryIndex(index)
     setIsDropdownOpen(false)
   }
 
@@ -115,36 +115,34 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
     return <div className={styles.itemsGrid}>{items.map(item => renderItemCard(item))}</div>
   }
 
-  const renderSection = (section: Section | null) => {
-    if (!section) {
+  const renderCategory = (category: Category | null) => {
+    if (!category) {
       return renderEmptyState()
     }
 
-    const hasItems = section.items.length > 0
-    const hasSubSections = section.subSections.length > 0
+    const hasItems = category.items.length > 0
+    const hasSections = category.sections.length > 0
 
     return (
-      <div className={styles.sectionContent}>
-        <h2 className={styles.sectionTitle}>{section.name}</h2>
+      <div className={styles.categoryContent}>
+        {/* 渲染 category 级别的 items */}
+        {hasItems && renderItemsGrid(category.items)}
 
-        {/* 渲染 section 级别的 items */}
-        {hasItems && renderItemsGrid(section.items)}
-
-        {/* 渲染 subSections */}
-        {hasSubSections && (
+        {/* 渲染 sections */}
+        {hasSections && (
           <>
-            {section.subSections.map((subSection: SubSection) => (
-              <div key={subSection.name} className={styles.subSection}>
-                <h3 className={styles.subSectionTitle}>{subSection.name}</h3>
-                {renderItemsGrid(subSection.items)}
+            {category.sections.map((section: Section) => (
+              <div key={section.name}>
+                <h2 className={styles.sectionTitle}>{section.name}</h2>
+                {renderItemsGrid(section.items)}
 
-                {/* 渲染 subSubSections */}
-                {subSection.subSubSections.length > 0 && (
+                {/* 渲染 subSections */}
+                {section.subSections.length > 0 && (
                   <>
-                    {subSection.subSubSections.map((subSubSection: SubSubSection) => (
-                      <div key={subSubSection.name} className={styles.subSubSection}>
-                        <h4 className={styles.subSubSectionTitle}>{subSubSection.name}</h4>
-                        {renderItemsGrid(subSubSection.items)}
+                    {section.subSections.map((subSection: SubSection) => (
+                      <div key={subSection.name}>
+                        <h3 className={styles.subSectionTitle}>{subSection.name}</h3>
+                        {renderItemsGrid(subSection.items)}
                       </div>
                     ))}
                   </>
@@ -154,13 +152,13 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
           </>
         )}
 
-        {/* 如果既没有 items 也没有 subSections，显示空状态 */}
-        {!hasItems && !hasSubSections && renderEmptyState()}
+        {/* 如果既没有 items 也没有 sections，显示空状态 */}
+        {!hasItems && !hasSections && renderEmptyState()}
       </div>
     )
   }
 
-  if (sections.length === 0) {
+  if (categories.length === 0) {
     return (
       <div className={styles.container}>
         <div className={styles.emptyState}>
@@ -173,9 +171,9 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      {/* Section 选择下拉菜单 */}
-      <div className={styles.sectionSelector}>
-        <label htmlFor="section-dropdown">选择分类：</label>
+      {/* Category 选择下拉菜单 */}
+      <div className={styles.categorySelector}>
+        <label htmlFor="category-dropdown">选择分类：</label>
         <div ref={dropdownRef} className={`${styles.dropdown} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
           <div
             className={styles.dropdownButton}
@@ -190,37 +188,37 @@ export default function LibraryGallery({ content }: Props): React.JSX.Element {
             role="button"
             aria-expanded={isDropdownOpen}
             aria-haspopup="listbox"
-            id="section-dropdown"
+            id="category-dropdown"
           >
-            <span>{selectedSection?.name ?? '请选择分类'}</span>
+            <span>{selectedCategory?.name ?? '请选择分类'}</span>
             <div className={styles.dropdownArrow} />
           </div>
 
-          <ul className={styles.dropdownMenu} role="listbox" aria-labelledby="section-dropdown">
-            {sections.map((section: Section, index: number) => (
+          <ul className={styles.dropdownMenu} role="listbox" aria-labelledby="category-dropdown">
+            {categories.map((category: Category, index: number) => (
               <li
-                key={section.name}
-                className={`${styles.dropdownItem} ${index === selectedSectionIndex ? styles.active : ''}`}
-                onClick={() => handleSectionSelect(index)}
+                key={category.name}
+                className={`${styles.dropdownItem} ${index === selectedCategoryIndex ? styles.active : ''}`}
+                onClick={() => handleCategorySelect(index)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault()
-                    handleSectionSelect(index)
+                    handleCategorySelect(index)
                   }
                 }}
                 tabIndex={0}
                 role="option"
-                aria-selected={index === selectedSectionIndex}
+                aria-selected={index === selectedCategoryIndex}
               >
-                {section.name}
+                {category.name}
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      {/* 渲染选中的 section */}
-      {renderSection(selectedSection)}
+      {/* 渲染选中的 category */}
+      {renderCategory(selectedCategory)}
     </div>
   )
 }

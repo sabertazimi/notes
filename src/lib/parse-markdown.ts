@@ -4,21 +4,21 @@ export interface Item {
   description?: string
 }
 
-export interface SubSubSection {
-  name: string
-  items: Item[]
-}
-
 export interface SubSection {
   name: string
   items: Item[]
-  subSubSections: SubSubSection[]
 }
 
 export interface Section {
   name: string
   items: Item[]
   subSections: SubSection[]
+}
+
+export interface Category {
+  name: string
+  items: Item[]
+  sections: Section[]
 }
 
 function parseItems(items?: string[]) {
@@ -44,44 +44,44 @@ function parseItems(items?: string[]) {
     })
 }
 
-export function parseMarkdown(content: string): Section[] {
-  const sections = content
+export function parseMarkdown(content: string): Category[] {
+  const categories = content
     .split(/\n## /)
-    .filter(section => section.trim() !== '')
-    .map((rawSection) => {
-      const [section, ...subSections] = rawSection.split(/\n### /).filter(Boolean)
-      const [sectionName, ...items] = section.split(/\n/).filter(Boolean)
-      const sectionItems = parseItems(items)
+    .filter(category => category.trim() !== '')
+    .map((rawCategory) => {
+      const [category, ...sections] = rawCategory.split(/\n### /).filter(Boolean)
+      const [categoryName, ...items] = category.split(/\n/).filter(Boolean)
+      const categoryItems = parseItems(items)
 
-      if (subSections.length === 0) {
+      if (sections.length === 0) {
         return {
-          name: sectionName.trim(),
-          items: sectionItems,
-          subSections: [],
+          name: categoryName.trim(),
+          items: categoryItems,
+          sections: [],
         }
       } else {
         return {
-          name: sectionName.trim(),
-          items: sectionItems,
-          subSections: subSections.map((rawSubSection) => {
-            const [subSection, ...subSubSections] = rawSubSection.split(/\n#### /).filter(Boolean)
-            const [subSectionName, ...subItems] = subSection.split(/\n/).filter(Boolean)
-            const subSectionItems = parseItems(subItems)
+          name: categoryName.trim(),
+          items: categoryItems,
+          sections: sections.map((rawSection) => {
+            const [section, ...subSections] = rawSection.split(/\n#### /).filter(Boolean)
+            const [sectionName, ...subItems] = section.split(/\n/).filter(Boolean)
+            const sectionItems = parseItems(subItems)
 
-            if (subSubSections.length === 0) {
+            if (subSections.length === 0) {
               return {
-                name: subSectionName.trim(),
-                items: subSectionItems,
-                subSubSections: [],
+                name: sectionName.trim(),
+                items: sectionItems,
+                subSections: [],
               }
             } else {
               return {
-                name: subSectionName.trim(),
-                items: subSectionItems,
-                subSubSections: subSubSections.map((subSubSection) => {
-                  const [subSubSectionName, ...subSubItems] = subSubSection.split(/\n/).filter(Boolean)
+                name: sectionName.trim(),
+                items: sectionItems,
+                subSections: subSections.map((rawSubSection) => {
+                  const [subSectionName, ...subSubItems] = rawSubSection.split(/\n/).filter(Boolean)
                   return {
-                    name: subSubSectionName.trim(),
+                    name: subSectionName.trim(),
                     items: parseItems(subSubItems),
                   }
                 }),
@@ -92,5 +92,5 @@ export function parseMarkdown(content: string): Section[] {
       }
     })
 
-  return sections
+  return categories
 }
