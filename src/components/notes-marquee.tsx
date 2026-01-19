@@ -58,7 +58,7 @@ function NoteCard({ note, className }: { note: Note, className?: string }) {
   return (
     <Link to={note.href} className={cn('block no-underline!', className)}>
       <Card className="group w-56 h-full truncate border-none p-0 shadow-none">
-        <MagicCard gradientColor="#D9D9D955" className="py-6">
+        <MagicCard className="py-6">
           <CardHeader>
             <Badge className="mb-2">{note.category}</Badge>
             <CardTitle className="text-left">{note.title}</CardTitle>
