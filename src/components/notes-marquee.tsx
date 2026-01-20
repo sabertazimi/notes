@@ -14,17 +14,17 @@ interface Note {
 const DefaultNotes: Note[][] = [
   // Row 1: AI & Machine Learning
   [
+    { title: 'Self-Supervised Learning', category: 'AI', href: '/ai/ml/self-supervised' },
     { title: 'AI Agent', category: 'Agent', href: '/ai/llm/agent' },
     { title: 'Prompt Engineering', category: 'LLM', href: '/ai/llm/prompt-engineering' },
     { title: 'Claude Code', category: 'Agent', href: '/ai/llm/claude-code' },
     { title: 'Transformer', category: 'AI', href: '/ai/dl/transformer' },
-    { title: 'RAG System', category: 'LLM', href: '/ai/llm/rag' },
   ],
   // Row 2: Systems & Algorithms
   [
     { title: 'Graph Algorithms', category: 'Algorithms', href: '/cs/algorithms/graph' },
     { title: 'Process Management', category: 'OS', href: '/cs/os/process' },
-    { title: 'Dynamic Programming', category: 'Algorithms', href: '/cs/algorithms/dp' },
+    { title: 'Microarchitecture', category: 'Architecture', href: '/cs/architecture' },
     { title: 'Garbage Collection', category: 'Compilers', href: '/cs/compilers/gc' },
     { title: 'SQL Indexing', category: 'Database', href: '/cs/database/indexing' },
   ],
