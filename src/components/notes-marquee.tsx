@@ -15,7 +15,7 @@ const DefaultNotes: Note[][] = [
   // Row 1: AI & Machine Learning
   [
     { title: 'Self-Supervised Learning', category: 'AI', href: '/ai/ml/self-supervised' },
-    { title: 'AI Agent', category: 'Agent', href: '/ai/gen/agent' },
+    { title: 'Multi-Agent System', category: 'Agent', href: '/ai/gen/agent/multi-agent' },
     { title: 'Prompt Engineering', category: 'LLM', href: '/ai/gen/prompt-engineering' },
     { title: 'Claude Code', category: 'Agent', href: '/ai/gen/claude-code' },
     { title: 'Transformer', category: 'AI', href: '/ai/dl/transformer' },
