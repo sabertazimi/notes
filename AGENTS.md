@@ -48,7 +48,7 @@ Examples:
 | `notes/web/react/hooks/event.md`                 | `react-hooks`           | `useEffectEvent latest value` |
 | `notes/language/rust/ownership.md`               | `rust-ownership`        | `borrow checker rules`        |
 | `notes/cs/algorithm/sort.md`                     | `algorithm-sort`        | `quick sort partition`        |
-| `notes/ai/llm/gpt.md` + `notes/ai/llm/claude.md` | `ai-llm`                | `comparison of models`        |
+| `notes/ai/gen/gpt.md` + `notes/ai/gen/claude.md` | `ai-gen`                | `comparison of models`        |
 
 ## Constraints
 
