@@ -4,7 +4,7 @@
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/awesome-notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/awesome-notes/main/LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/awesome-notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
 
-Personal learning [Notes](https://notes.tazimi.dev) (Today I Learned)
+Personal Learning [Notes](https://notes.tazimi.dev): Today I Learned (TIL)
 
 ![Awesome Notes](./.github/hero.png 'Awesome Notes')
 
