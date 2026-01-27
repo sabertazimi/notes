@@ -1,0 +1,264 @@
+---
+sidebar_position: 8
+tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitoring, Crontab]
+---
+
+# System
+
+## Grub
+
+### Boot System
+
+- 自动挂载项 /etc/fstab etc/rc.local
+- 自定义脚本-新建目录(加入环境变量)
+- 自定义别名 ~/.bashrc
+
+### Configuration
+
+- `/etc/default/grub`配置文件, 用于一些基本的修改项,
+  如默认启动项, Grub 界面等待时长, Grub 主题 etc.
+  More details in `info -f grub -n 'Simple configuration'`
+
+```bash
+# Default Startup OS
+GRUB_DEFAULT=0
+
+# Default Timeout
+GRUB_TIMEOUT=5
+
+# https://github.com/vinceliuice/grub2-themes
+GRUB_THEME="/boot/grub/themes/Tela/theme.txt"
+```
+
+- `/etc/grub.d/*`生成`/boot/grub/grub.cfg`的执行脚本(`update-grub`命令),
+  可以更细致地修改启动项, 如各个启动项的名称、顺序等.
+
+### Windows Repair
+
+- easyBCD for non-efi loader
+- with efi loader, run command:
+
+```bash
+# root commander
+bcdedit /set "{bootmgr}" path \EFI\ubuntu\grubx64.efi
+```
+
+### Ubuntu Live Repair
+
+```bash
+sudo add-apt add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt update
+sudo apt install boot-repair
+boot-repair
+```
+
+## SSH
+
+### Key
+
+```bash
+ssh-keygen -t rsa
+ssh-add ~/.ssh/id_rsa
+```
+
+### SSHD
+
+- config file in `/etc/ssh/sshd_config`
+
+```bash
+sudo systemctl reload sshd
+sudo service restart sshd
+```
+
+```bash
+AllowUsers root
+AllowUsers sabertaz
+```
+
+### Config File
+
+`~/.ssh/config`:
+
+- Host 别名
+  - HostName 主机名(ip) `ssh user@ip`
+  - Port 可忽略
+  - User 登录用户名 `ssh user@ip`
+  - PreferredAuthentications publicKey
+  - IdentityFile 密钥文件完整路径 `ssh -i file`
+
+```bash
+Host github.com
+  HostName github.com
+  PreferredAuthentications publicKey
+  IdentityFile ~/.ssh/id_rsa
+Host cs.github.com
+  HostName github.com
+  PreferredAuthentications publicKey
+  IdentityFile ~/.ssh/cs
+Host cloud
+    HostName xx.org
+    User  root
+    IdentityFile ~/.ssh/dsl_private_key
+Host bwg
+    HostName 23.106.150.152
+    User root
+    Port 29692
+```
+
+```bash
+git clone git@github.com:user/repo
+git clone git@cs.github.com:user/repo
+```
+
+```bash
+ssh -qTfnN -D 1080 bwg
+google-chrome socks5 127.0.0.1 1080
+```
+
+### Key File
+
+Setup [SSH key](https://github.com/appleboy/ssh-action):
+
+```bash
+# Generate SSH key
+ssh-keygen -t ed25519 -a 200 -C "your_email@example.com"
+
+# Add SSH public key to remote host
+cat ~/.ssh/id_ed25519.pub | ssh b@B 'cat >> ~/.ssh/authorized_keys'
+
+# Add SSH public key to remote host
+ssh-copy-id -i ~/.ssh/id_ed25519.pub user@192.168.x.xxx
+
+# Copy SSH private key to clipboard
+xclip < ~/.ssh/id_ed25519
+```
+
+```bash
+# Login to remote host
+ssh -i sabertaz root@119.29.140.60
+
+# File transfer
+sftp -i sabertaz root@119.29.140.60
+
+# Login to database
+mysql -h 10.66.135.125 -P 3306 -u root -p
+```
+
+### 远程传输文件
+
+```bash
+rsync -ax -e 'ssh -c blowfish' /root/start_dir root@x.x.x.x:/root/dest_dir
+```
+
+```bash
+sshpass -p "$DEPLOY_PASSWORD" \
+  scp -o StrictHostKeyChecking=no \
+      -P $DEPLOY_PORT \
+      -r ./build $DEPLOY_USER@$DEPLOY_ADDR:/var/www/html
+```
+
+## Systemctl
+
+```bash
+systemctl enable local
+```
+
+in `/etc/init.d/local`
+
+```bash
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          local
+# Required-Start:    $all
+# Required-Stop:
+# Default-Start:     3 4 5
+# Default-Stop:
+# Short-Description: Personal start script
+
+sslocal -c shadowsocks.json -d start
+```
+
+内存控制
+
+```bash
+sysctl vm [-options] CONFIG
+swapoff
+```
+
+### Custom Service
+
+```bash
+sudo vim /etc/systemd/system/ruoyi-server.service
+sudo systemctl daemon-reload
+sudo systemctl start ruoyi-server
+sudo systemctl enable ruoyi-server
+sudo systemctl status ruoyi-server
+sudo journalctl -u ruoyi-server -e -f
+```
+
+```bash
+[Unit]
+Description=RuoYi Server Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/java -jar /root/ruoyi-admin.jar
+WorkingDirectory=/root
+User=root
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## Crontab
+
+- `/etc/crontab`
+- [Crontab Quick Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html)
+- [Crontab Generator](https://crontab.guru)
+
+```bash
+crontab -l(list)
+crontab -e(establish)
+```
+
+- `m,n`: 分隔多个时间.
+- `m-n`: 表示时间范围.
+- `/n`: 表示每隔 n 时间.
+- `天数`与`星期`之间为`逻辑或`关系.
+- `/var/spool/cron/user_name/`.
+- `/var/log/con`.
+- `/etc/cron.*ly`: 时间表.
+- `/etc/anacrontab`: 异步时间表.
+
+## Job
+
+### Background
+
+- jobs —— 所有作业
+- atq —— 延时作业队列
+- at -M(不使用邮件发送运行结果) -f filename deltaTime
+- atrm 作业号/名
+- bg/fg 作业号/名
+- nohup 脚本 & —— 脱离控制台并后台运行脚本
+  19 ~ -20 （-20 优先级最高）
+- nice -n number 作业号/名
+- renice number -p PID
+
+### Startup
+
+- /etc/rc.local —— 系统开机任务
+- /etc/profile/ /etc/bash.bashrc —— bash 启动任务/远程登陆任务
+- /etc/bash.bashrc —— SSH 连接任务
+
+## Parallel Execution
+
+命令间插入符
+
+- command1;command2 顺序执行，相当于 C 语言中语句结束符
+- command1&&command2 命令同时执行(当 1 正确时)或同时不执行(当 1 出错时)
+- command1 || command2 只执行一个命令(正确命令)
+- command1 | command2 前一正确命令的输出结果作为后一命令的输入结果
+
+> e.g. ls && echo yes >> .log || echo no >> .log

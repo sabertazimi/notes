@@ -1,23 +1,26 @@
 {
-  "name": "awesome-notes",
+  "name": "notes",
   "version": "5.0.0",
   "packageManager": "pnpm@10.28.1",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
   "license": "MIT",
-  "homepage": "https://github.com/sabertazimi/awesome-notes#readme",
+  "homepage": "https://github.com/sabertazimi/notes#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sabertazimi/awesome-notes.git"
+    "url": "git+https://github.com/sabertazimi/notes.git"
   },
   "bugs": {
-    "url": "https://github.com/sabertazimi/awesome-notes/issues"
+    "url": "https://github.com/sabertazimi/notes/issues"
   },
   "keywords": [
-    "CS",
-    "Notes",
     "Docusaurus",
-    "GitBook",
+    "Notes",
+    "CS",
+    "AI",
+    "Agent",
+    "Claude Code",
+    "Skills",
     "HTML",
     "CSS",
     "JavaScript",
@@ -32,12 +35,12 @@
     "clone": "git clone https://$VERCEL_GIT_PROVIDER.com/$VERCEL_GIT_REPO_OWNER/$VERCEL_GIT_REPO_SLUG && rm -fr .git && cp -fr $VERCEL_GIT_REPO_SLUG/.git . && rm -fr $VERCEL_GIT_REPO_SLUG",
     "clear": "docusaurus clear",
     "dev": "docusaurus start",
-    "lint": "pnpm lint:notes && pnpm lint:style && pnpm lint:type-check",
-    "lint:notes": "eslint ./notes && stylelint ./notes/**/*.md && markdownlint ./notes",
+    "lint": "pnpm lint:content && pnpm lint:style && pnpm lint:type-check",
+    "lint:content": "eslint ./content && stylelint ./content/**/*.md && markdownlint ./content",
     "lint:style": "eslint ./src && stylelint ./src/**/*.css",
     "lint:type-check": "tsc --noEmit",
-    "lint:fix": "pnpm lint:notes:fix && pnpm lint:style:fix",
-    "lint:notes:fix": "eslint ./notes --fix && stylelint ./notes/**/*.md --fix && markdownlint ./notes --fix",
+    "lint:fix": "pnpm lint:content:fix && pnpm lint:style:fix",
+    "lint:content:fix": "eslint ./content --fix && stylelint ./content/**/*.md --fix && markdownlint ./content --fix",
     "lint:style:fix": "eslint ./src --fix && stylelint ./src/**/*.css --fix",
     "changeset": "commit-and-tag-version --dry-run -s",
     "release": "commit-and-tag-version -s",

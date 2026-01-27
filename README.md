@@ -1,12 +1,12 @@
-# Awesome Notes
+# Notes
 
 [![Author](https://img.shields.io/badge/author-sabertaz-lightgrey?style=for-the-badge)](https://github.com/sabertazimi)
-[![LICENSE](https://img.shields.io/github/license/sabertazimi/awesome-notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/awesome-notes/main/LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/awesome-notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/awesome-notes/actions/workflows/ci.yml)
+[![LICENSE](https://img.shields.io/github/license/sabertazimi/notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/notes/main/LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/notes/actions/workflows/ci.yml)
 
-Personal Learning [Notes](https://notes.tazimi.dev): Today I Learned (TIL)
+Personal [Notes](https://notes.tazimi.dev): Today I Learned (TIL)
 
-![Awesome Notes](./.github/hero.png 'Awesome Notes')
+![Notes](./.github/hero.png 'Notes')
 
 ## License
 

@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Awesome Notes is a personal TIL (Today I Learned) documentation website built with Docusaurus.
+Notes is a TIL (Today I Learned) documentation website built with Docusaurus.
 It serves as a comprehensive knowledge repository covering AI, CS, web, programming, and more.
 
 **Tech Stack**: Docusaurus + TypeScript + shadcn/ui + pnpm + React
 
-**Structure**: `notes/{AI,CS,Web,Language,Programming}/{topic}/{file}.md`
+**Structure**: `content/{AI,CS,Web,Language,Programming}/{topic}/{file}.md`
 
 ## Development Commands
 
@@ -22,7 +22,7 @@ It serves as a comprehensive knowledge repository covering AI, CS, web, programm
 
 ## Content Guidelines
 
-- Notes are Markdown files in `notes/` directory
+- Notes are Markdown files in `content/` directory
 - Require frontmatter: `tags: [Category, Subcategory]`
 - Supports MDX, KaTeX math (`$inline$`, `$$block$$`), Mermaid diagrams
 - Sidebar auto-generated from directory structure
@@ -31,7 +31,7 @@ It serves as a comprehensive knowledge repository covering AI, CS, web, programm
 
 Follows Conventional Commits format:
 
-- Types: `feat` (new notes/domains), `fix` (updates to existing notes), `perf`, `test`, `ci`, `chore`
+- Types: `feat` (new note or domain), `fix` (updates to existing notes), `perf`, `test`, `ci`, `chore`
 - Scope:
   - **CRITICAL**: Only 1-2 levels allowed, maximum one `-` separator
   - Single file: Extract from filename omitting top-level (e.g. `react-hooks`)
@@ -43,12 +43,12 @@ Follows Conventional Commits format:
 
 Examples:
 
-| File Path                                        | Scope (1-2 levels only) | Description                   |
-| ------------------------------------------------ | ----------------------- | ----------------------------- |
-| `notes/web/react/hooks/event.md`                 | `react-hooks`           | `useEffectEvent latest value` |
-| `notes/language/rust/ownership.md`               | `rust-ownership`        | `borrow checker rules`        |
-| `notes/cs/algorithm/sort.md`                     | `algorithm-sort`        | `quick sort partition`        |
-| `notes/ai/gen/gpt.md` + `notes/ai/gen/claude.md` | `ai-gen`                | `comparison of models`        |
+| File Path                                            | Scope (1-2 levels only) | Description                   |
+| ---------------------------------------------------- | ----------------------- | ----------------------------- |
+| `content/web/react/hooks/event.md`                   | `react-hooks`           | `useEffectEvent latest value` |
+| `content/language/rust/ownership.md`                 | `rust-ownership`        | `borrow checker rules`        |
+| `content/cs/algorithm/sort.md`                       | `algorithm-sort`        | `quick sort partition`        |
+| `content/ai/gen/gpt.md` + `content/ai/gen/claude.md` | `ai-gen`                | `comparison of models`        |
 
 ## Constraints
 

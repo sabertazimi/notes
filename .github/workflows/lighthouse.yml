@@ -50,7 +50,7 @@ jobs:
         with:
           urls: |
             ${{ steps.vercel.outputs.url }}
-            ${{ steps.vercel.outputs.url }}/web/css/cssAdvancedNotes
+            ${{ steps.vercel.outputs.url }}/web/css/border
           configPath: ./.github/workflows/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

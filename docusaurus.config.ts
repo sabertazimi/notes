@@ -10,14 +10,14 @@ const lightCodeTheme = themes.github
 const darkCodeTheme = themes.dracula
 
 const config: Config = {
-  title: 'Awesome Notes',
+  title: 'Personal Notes',
   tagline: 'Today I Learned',
   url: 'https://tazimi.dev',
-  baseUrl: ci.GITHUB_ACTIONS ? '/awesome-notes/' : '/',
+  baseUrl: ci.GITHUB_ACTIONS ? '/notes/' : '/',
   onBrokenLinks: 'throw',
   favicon: 'img/logo.svg',
   organizationName: 'sabertazimi',
-  projectName: 'awesome-notes',
+  projectName: 'notes',
   markdown: {
     mermaid: true,
     hooks: {
@@ -30,10 +30,10 @@ const config: Config = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: 'notes',
+          path: 'content',
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/sabertazimi/awesome-notes/edit/main/',
+          editUrl: 'https://github.com/sabertazimi/notes/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           remarkPlugins: [remarkMath],
@@ -52,7 +52,7 @@ const config: Config = {
         indexDocs: true,
         indexBlog: false,
         indexPages: false,
-        docsDir: 'notes',
+        docsDir: 'content',
         docsRouteBasePath: '/',
         language: ['en', 'zh'],
         hashed: true,
@@ -74,9 +74,9 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Awesome Notes',
+      title: 'Notes',
       logo: {
-        alt: 'Awesome Notes',
+        alt: 'Notes',
         src: 'img/logo.svg',
       },
       hideOnScroll: true,
@@ -124,7 +124,7 @@ const config: Config = {
           activeBasePath: 'web/library',
         },
         {
-          href: 'https://github.com/sabertazimi/awesome-notes',
+          href: 'https://github.com/sabertazimi/notes',
           label: 'GitHub',
           position: 'right',
         },
@@ -194,8 +194,8 @@ const config: Config = {
               href: 'https://github.com/sabertazimi/blog',
             },
             {
-              label: 'Awesome Web',
-              href: 'https://github.com/sabertazimi/awesome-web',
+              label: 'Lab',
+              href: 'https://github.com/sabertazimi/lab',
             },
             {
               label: 'Bod CLI',
@@ -210,7 +210,7 @@ const config: Config = {
               href: 'https://github.com/sabertazimi/LaTeX-snippets',
             },
             {
-              label: 'Lab Notes',
+              label: 'HUST Lab',
               href: 'https://github.com/sabertazimi/hust-lab',
             },
           ],

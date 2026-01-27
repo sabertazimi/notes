@@ -4,7 +4,7 @@ Complete examples showing how to split large note files into modular structures 
 
 ## Example 1: Simple Split - Python Basics (300 lines)
 
-### Before: `notes/language/python/python.md`
+### Before: `content/language/python/python.md`
 
 **Structure** (300 lines total):
 
@@ -54,7 +54,7 @@ Better to split for discoverability.
 ### After: Directory Structure for `python/`
 
 ```text
-notes/language/python/
+content/language/python/
 ├── python.md          # Index (30 lines)
 ├── basics.md          # Installation + String (90 lines)
 ├── list.md            # List operations (60 lines)
@@ -90,7 +90,7 @@ tags: [Language, Python]
 
 ## Example 2: Medium Split - Vue Guide (850 lines)
 
-### Before: `notes/web/vue/vue.md`
+### Before: `content/web/vue/vue.md`
 
 **Structure** (850 lines total):
 
@@ -162,7 +162,7 @@ tags: [Web, Vue]
 ### After: Directory Structure for `vue/`
 
 ```text
-notes/web/vue/
+content/web/vue/
 ├── vue.md          # Index (40 lines)
 ├── basics.md       # Toolchain + Directives (200 lines)
 ├── components.md   # Components (180 lines)
@@ -207,7 +207,7 @@ These notes cover both Vue 2 (Options API) and Vue 3 (Composition API).
 
 ## Example 3: Complex Split - React Ecosystem (1500 lines)
 
-### Before: `notes/web/react/react.md`
+### Before: `content/web/react/react.md`
 
 **Structure** (1500 lines total):
 
@@ -298,7 +298,7 @@ tags: [Web, React]
 ### After: Directory Structure for `react/`
 
 ```text
-notes/web/react/
+content/web/react/
 ├── react.md           # Index (50 lines)
 ├── basics.md          # Installation + JSX (150 lines)
 ├── components.md      # Components (200 lines)
@@ -429,19 +429,19 @@ After splitting, verify:
 
 ```bash
 # 1. Check file sizes
-wc -l notes/web/react/*.md
+wc -l content/web/react/*.md
 
 # 2. Verify internal links
-grep -r "\[.*\](./" notes/web/react/
+grep -r "\[.*\](./" content/web/react/
 
 # 3. Check image references
-grep -r "](figures/" notes/web/react/
+grep -r "](figures/" content/web/react/
 
 # 4. Build test
 pnpm build
 
 # 5. Lint check
-pnpm lint:notes
+pnpm lint:content
 
 # 6. Manual verify
 # Open each file and check:

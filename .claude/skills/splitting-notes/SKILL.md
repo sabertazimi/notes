@@ -57,7 +57,7 @@ If not currently in **plan mode**, invoke `EnterPlanMode` before starting.
 **Before** - Monolithic file:
 
 ```text
-notes/topic/large-file.md (1500+ lines)
+content/topic/large-file.md (1500+ lines)
 ├── H2 Chapter 1
 ├── H2 Chapter 2
 ├── H2 Chapter 3
@@ -67,7 +67,7 @@ notes/topic/large-file.md (1500+ lines)
 **After** - Modular structure:
 
 ```text
-notes/topic/
+content/topic/
 ├── topic.md (index, ~50 lines)
 ├── chapter-1.md (~200 lines)
 ├── chapter-2.md (~150 lines)
@@ -131,7 +131,7 @@ See [examples.md](./examples.md) for complete index file templates.
 - [ ] Image paths corrected (`./figures/subdirectory/file.ext`)
 - [ ] Index order matches `sidebar_position`
 - [ ] Build succeeds: `pnpm build`
-- [ ] Lint passes: `pnpm lint:notes`
+- [ ] Lint passes: `pnpm lint:content`
 - [ ] Line count verified: `wc -l original new/*`
 - [ ] Original file deleted
 - [ ] Use `TodoWrite` to mark all tasks complete

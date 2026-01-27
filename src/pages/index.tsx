@@ -16,7 +16,7 @@ function Hero(): React.JSX.Element {
     <main className={clsx('hero', styles.banner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          Awesome
+          Personal
           <LineShadowText className="italic ml-2">Notes</LineShadowText>
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -35,7 +35,7 @@ export default function Home(): React.JSX.Element {
   return (
     <Layout
       title="Today I Learned"
-      description="Awesome Notes is a personal TIL (Today I Learned) documentation website built with Docusaurus. It serves as a comprehensive knowledge repository covering AI, CS, web, programming, and more."
+      description="TIL (Today I Learned) documentation website built with Docusaurus. It serves as a comprehensive knowledge repository covering AI, CS, web, programming, and more."
     >
       <Hero />
     </Layout>

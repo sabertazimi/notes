@@ -4,5 +4,5 @@
  */
 export default {
   '*.{md,css}': 'stylelint --fix',
-  'notes/**/*.md': 'markdownlint --fix',
+  'content/**/*.md': 'markdownlint --fix',
 }
