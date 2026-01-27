@@ -2,6 +2,7 @@
 
 [![Author](https://img.shields.io/badge/author-sabertaz-lightgrey?style=for-the-badge)](https://github.com/sabertazimi)
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/notes?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/notes/main/LICENSE)
+[![Coverage](https://img.shields.io/codecov/c/github/sabertazimi/notes?logo=codecov&style=for-the-badge)](https://codecov.io/gh/sabertazimi/notes)
 [![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/notes/actions/workflows/ci.yml)
 
 Personal [Notes](https://notes.tazimi.dev): Today I Learned (TIL)

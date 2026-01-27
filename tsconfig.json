@@ -8,7 +8,8 @@
     "types": [
       "node",
       "@docusaurus/module-type-aliases",
-      "@docusaurus/theme-classic"
+      "@docusaurus/theme-classic",
+      "vitest/globals"
     ],
     "strictNullChecks": true,
     "skipLibCheck": true
