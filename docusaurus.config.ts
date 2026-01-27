@@ -74,9 +74,9 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Notes',
+      title: 'TIL',
       logo: {
-        alt: 'Notes',
+        alt: 'Today I Learned',
         src: 'img/logo.svg',
       },
       hideOnScroll: true,
