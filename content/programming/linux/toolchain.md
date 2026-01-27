@@ -574,7 +574,7 @@ plot ARG1 using 1:7 title "snd_cwnd", \
      ARG1 using 1:($8>=2147483647 ? 0 : $8) title "snd_ssthresh"
 ```
 
-### Developer Toolkit
+## Developer Toolkit
 
 - [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts):
   Microsoft KMS activation scripts.
@@ -586,6 +586,12 @@ plot ARG1 using 1:7 title "snd_cwnd", \
   Collection of powerful web-based toolkit for everyday tasks.
 - [Miku](https://github.com/Ice-Hazymoon/MikuTools):
   Lightweight toolkit collection.
+
+## Dotfiles
+
+- [macOS](https://github.com/mathiasbynens/dotfiles)
+- [Linux](https://github.com/thoughtbot/dotfiles)
+- [Ubuntu](https://github.com/tracyone/oh-my-ubuntu)
 
 ## References
 
