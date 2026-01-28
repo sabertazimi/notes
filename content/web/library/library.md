@@ -116,11 +116,16 @@ import LibraryGallery from '@site/src/components/library-gallery'
 
 ### Headless CMS
 
-- [StrAPI](https://github.com/strapi/strapi).
-- [Payload](https://github.com/payloadcms/payload).
-- [Ghost](https://github.com/TryGhost/Ghost).
-- [TinaCMS](https://github.com/tinacms/tinacms).
-- [KeyStone](https://github.com/keystonejs/keystone).
+- [Strapi](https://github.com/strapi/strapi):
+  Leading headless CMS.
+- [Ghost](https://github.com/TryGhost/Ghost):
+  Modern publishing, memberships, subscriptions and newsletters.
+- [Payload](https://github.com/payloadcms/payload):
+  Fullstack Next.js framework.
+- [Tina](https://github.com/tinacms/tinacms):
+  Markdown and visual editing.
+- [Keystone](https://github.com/keystonejs/keystone):
+  GraphQL headless CMS.
 
 ### Desktop Solution
 
@@ -1443,12 +1448,12 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Display PDFs in React app as easily as if they were images.
 - [PDF.js](https://github.com/mozilla/pdf.js):
   PDF reader.
+- [LibPDF](https://github.com/libpdf-js/core):
+  Parse, modify, and generate modern PDFs.
 - [jsPDF](https://github.com/parallax/jsPDF):
   Client-side PDF generation.
-- [Make](https://github.com/bpampuch/pdfmake):
-  PDF document generation and printing.
 - [Kit](https://github.com/foliojs/pdfkit):
-  PDF document generation.
+  Isomorphic PDF generation.
 - [Docx](https://github.com/dolanmiu/docx):
   Generate and modify `.docx` files.
 
