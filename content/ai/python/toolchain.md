@@ -275,24 +275,26 @@ RUN uv pip install -r requirements.txt
 CMD ["uv", "run", "my_app"]
 ```
 
-## Ruff
+## Linter
+
+```bash
+uv add --dev pyright ruff
+```
 
 ```toml
+[tool.pyright]
+typeCheckingMode = "strict"
+
 [tool.ruff.lint]
 select = [
-  # pycodestyle
-  "E",
-  # Pyflakes
-  "F",
-  # pyupgrade
-  "UP",
-  # flake8-bugbear
-  "B",
-  # flake8-simplify
-  "SIM",
-  # isort
-  "I",
+  "E", # pycodestyle
+  "F", # Pyflakes
+  "UP", # pyupgrade
+  "B", # flake8-bugbear
+  "SIM", # flake8-simplify
+  "I", # isort
 ]
+ignore = [ "E501" ] # 忽略行长度限制
 ```
 
 ```bash
