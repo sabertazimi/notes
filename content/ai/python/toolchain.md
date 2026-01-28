@@ -32,6 +32,15 @@ uv python list
 uvx python@3.14 -c "print('hello world')"
 ```
 
+## Initialize
+
+```bash
+uv init hello-app
+uv init --package hello-package
+uv init --lib hello-lib
+uv init --script hello-script.py --python 3.14
+```
+
 ## Packages
 
 Install packages:
@@ -67,19 +76,6 @@ Create lockfile:
 uv lock
 ```
 
-## Execution
-
-Toolchain execution:
-
-```bash
-uv tool install black
-uv tool run black ./myfile.py
-
-uvx pycowsay 'hello world!'
-uvx ruff format ./myscript.py
-uvx python@3.13.2 -c "print('hello world')"
-```
-
 ## Virtual Environment
 
 Manage virtual environments:
@@ -104,6 +100,19 @@ Run standalone scripts:
 uv init --script example.py --python 3.13
 uv add --index "https://mirrors.aliyun.com/pypi/simple" --script example.py 'requests<3' 'rich'
 uv run example.py
+```
+
+## Execution
+
+Toolchain execution:
+
+```bash
+uv tool install black
+uv tool run black ./myfile.py
+
+uvx pycowsay 'hello world!'
+uvx ruff format ./myscript.py
+uvx python@3.13.2 -c "print('hello world')"
 ```
 
 ## Project
