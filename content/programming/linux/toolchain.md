@@ -462,3 +462,4 @@ alias curl="curlie"
 ## References
 
 - Terminal [tool of the week](https://terminaltrove.com/tool-of-the-week).
+- Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).
