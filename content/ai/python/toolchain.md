@@ -178,7 +178,14 @@ albatross
 ```
 
 ```bash
-uv run --package bird-feeder
+# Initialize package
+uv init packages/bash-agent
+
+# Run package
+uv run --package bash-agent
+
+# Add package as workspace dependency
+uv add bash-agent --workspace
 ```
 
 ## Caching
