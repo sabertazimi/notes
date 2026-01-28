@@ -48,17 +48,6 @@ uv init --lib hello-lib
 uv init --script hello-script.py --python 3.14
 ```
 
-## Packages
-
-Install packages:
-
-```bash
-uv pip install requests
-uv pip install --system pandas
-uv pip list
-uv pip list --outdated
-```
-
 ## Dependencies
 
 Manage dependencies:
@@ -74,6 +63,35 @@ uv tree --outdated
 uv tree --depth 2
 uv run main.py
 ```
+
+:::tip[Distribution and Import]
+
+Python 中存在两个不同的[包名](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package)：
+
+| 概念     | 英文术语             | 示例            | 用途                  |
+| -------- | -------------------- | --------------- | --------------------- |
+| 分发包名 | Distribution Package | `python-dotenv` | `uv add xxx`          |
+| 导入包名 | Import Package       | `dotenv`        | `from xxx import ...` |
+
+安装包后, `site-packages` 目录会包含两类文件夹:
+
+- `*.dist-info/` 目录名对应 **PyPI 包名**
+- 源码目录名对应**导入名**
+- `top_level.txt` 文件记录了导入名映射
+
+```bash
+# 查看包安装位置和版本
+uv pip show python-dotenv
+
+# 查看依赖树
+uv tree
+```
+
+- [PEP 427](https://peps.python.org/pep-0427): Wheel 格式规范（定义 `.dist-info`）.
+- [PEP 503](https://peps.python.org/pep-0503): 包名规范化.
+- `.dist-info` [目录结构](https://packaging.python.org/en/latest/specifications/recording-installed-packages).
+
+:::
 
 ## Lockfile
 
