@@ -120,3 +120,22 @@ git log main..feature
 git reflog
 git reset HEAD@{index}
 ```
+
+## Revision
+
+| 符号   | 含义                                      |
+| ------ | ----------------------------------------- |
+| `~`    | 沿提交历史回退 `n` 步                     |
+| `^n`   | 第 `n` 个父提交（仅合并提交有多个父提交） |
+| `@{n}` | reflog 第 `n` 步之前的位置                |
+
+```bash
+# 查看倒数第 2 个提交
+git show HEAD~2
+
+# 回退到 2 次操作前的状态
+git reset HEAD@{2}
+
+# 合并提交的第 2 个父分支
+git show HEAD^2
+```
