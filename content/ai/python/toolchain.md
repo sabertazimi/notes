@@ -168,7 +168,7 @@ explicit = true
 
 ## Workspace
 
-Monorepo support:
+### Monorepo
 
 ```toml
 [project]
@@ -211,7 +211,18 @@ albatross
         └── main.py
 ```
 
-Package in workspace:
+### Package
+
+```bash
+# Initialize package
+uv init --package packages/bash-agent
+
+# Add workspace package as dependency
+uv add --workspace bash-agent
+
+# Run package
+uv run bash-agent
+```
 
 ```toml
 [project]
@@ -229,15 +240,10 @@ requires = [ "uv_build>=0.9.27,<0.10.0" ]
 build-backend = "uv_build"
 ```
 
+### Command
+
 ```bash
-# Initialize package
-uv init --package packages/bash-agent
-
-# Add workspace package as dependency
-uv add --workspace bash-agent
-
-# Run package
-uv run bash-agent
+uv add --package bash-agent anthropic python-dotenv
 ```
 
 ## Caching
