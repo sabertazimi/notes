@@ -193,15 +193,33 @@ albatross
         └── main.py
 ```
 
+Package in workspace:
+
+```toml
+[project]
+name = "bash-agent"
+version = "0.1.0"
+description = "Minimal Claude Code."
+readme = "README.md"
+requires-python = ">=3.13"
+
+[project.scripts]
+bash-agent = "bash_agent:main"
+
+[build-system]
+requires = [ "uv_build>=0.9.27,<0.10.0" ]
+build-backend = "uv_build"
+```
+
 ```bash
 # Initialize package
-uv init packages/bash-agent
+uv init --package packages/bash-agent
+
+# Add package to dependency
+uv add --workspace bash-agent
 
 # Run package
-uv run --package bash-agent
-
-# Add package as workspace dependency
-uv add bash-agent --workspace
+uv run bash-agent
 ```
 
 ## Caching
