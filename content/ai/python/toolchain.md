@@ -13,6 +13,13 @@ echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
 echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
 ```
 
+```bash
+uv cache clean
+rm -r "$(uv python dir)"
+rm -r "$(uv tool dir)"
+rm ~/.local/bin/uv ~/.local/bin/uvx
+```
+
 ## Mirrors
 
 ```bash
