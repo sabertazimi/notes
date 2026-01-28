@@ -5,7 +5,7 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 
 # Toolchain
 
-## Modern Unix
+## Modern
 
 - Cross-platform Rust rewrite of the [GNU core utils](https://github.com/uutils/coreutils).
 - Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
@@ -60,7 +60,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
-### Scoop
+## Scoop
 
 [Scoop](https://github.com/ScoopInstaller/Scoop):
 
@@ -77,7 +77,7 @@ scoop info fzf
 scoop bucket add extras
 ```
 
-### WinGet
+## WinGet
 
 [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget):
 
@@ -119,7 +119,7 @@ winget install ClashVergeRev.ClashVergeRev Mihomo-Party.Mihomo-Party Google.Chro
 winget install ByteDance.Feishu NetEase.CloudMusic Tencent.QQ.NT Tencent.WeChat Tencent.WeType Valve.Steam
 ```
 
-### Mise
+## Mise
 
 [Mise](https://github.com/jdx/mise):
 
@@ -135,7 +135,7 @@ mise u -g node@lts
 node -v
 ```
 
-### Zoxide
+## Zoxide
 
 [zoxide](https://github.com/ajeetdsouza/zoxide):
 
@@ -151,7 +151,7 @@ eval "$(zoxide init bash)"
 alias cd="z"
 ```
 
-### Bat
+## Bat
 
 [bat](https://github.com/sharkdp/bat):
 
@@ -165,7 +165,7 @@ winget install sharkdp.bat
 alias cat="bat"
 ```
 
-### Eza
+## Eza
 
 [eza](https://github.com/eza-community/eza):
 
@@ -179,7 +179,7 @@ winget install eza-community.eza
 alias ls="eza"
 ```
 
-### Delta
+## Delta
 
 [delta](https://github.com/dandavison/delta):
 
@@ -208,7 +208,7 @@ git stash show -p
 git reflog -p
 ```
 
-### Dust
+## Dust
 
 [dust](https://github.com/bootandy/dust):
 
@@ -222,7 +222,7 @@ winget install bootandy.dust
 alias du="dust"
 ```
 
-### Duf
+## Duf
 
 [duf](https://github.com/muesli/duf):
 
@@ -236,7 +236,7 @@ winget install muesli.duf
 alias df="duf"
 ```
 
-### Fd
+## Fd
 
 [fd](https://github.com/sharkdp/fd):
 
@@ -250,7 +250,7 @@ winget install sharkdp.fd
 alias find="fd --hidden --follow --exclude .git"
 ```
 
-### RipGrep
+## RipGrep
 
 [rg](https://github.com/BurntSushi/ripgrep):
 
@@ -289,7 +289,7 @@ web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
 rg -l text
 ```
 
-### Fzf
+## Fzf
 
 [fzf](https://github.com/junegunn/fzf):
 
@@ -328,7 +328,7 @@ Command line fuzzy finder:
 - `ctrl-k` / `ctrl-j`: move cursor up and down.
 - Multi-select(`-m`): `tab` and `shift-tab` to mark multiple items.
 
-### Jq
+## Jq
 
 [jq](https://github.com/jqlang/jq):
 
@@ -342,7 +342,7 @@ winget install jqlang.jq
 echo "version=$(jq -r '.devDependencies["@playwright/test"]' package.json | sed 's/^[^0-9]*//')"
 ```
 
-### Fx
+## Fx
 
 [fx](https://github.com/antonmedv/fx):
 
@@ -371,7 +371,7 @@ fx package.json 'x.version = x.version.replace(/\d+$/, n => +n + 1), x'
 curl -i https://fx.wtf/example.json | fx
 ```
 
-### TLDR
+## TLDR
 
 [TLDR](https://github.com/tldr-pages/tldr):
 
@@ -385,7 +385,7 @@ winget install tldr-pages.tlrc
 alias man="tldr"
 ```
 
-### Bottom
+## Bottom
 
 [bottom](https://github.com/ClementTsang/bottom):
 
@@ -399,7 +399,7 @@ winget install Clement.bottom
 alias top="btm"
 ```
 
-### Gping
+## Gping
 
 [gping](https://github.com/orf/gping):
 
@@ -413,7 +413,7 @@ winget install orf.gping
 alias ping="gping"
 ```
 
-### Procs
+## Procs
 
 [procs](https://github.com/dalance/procs):
 
@@ -427,7 +427,7 @@ winget install dalance.procs
 alias ps="procs"
 ```
 
-### Curlie
+## Curlie
 
 [Curlie](https://github.com/rs/curlie):
 
@@ -440,7 +440,7 @@ scoop install curlie
 alias curl="curlie"
 ```
 
-## Developer Toolkit
+## Developer
 
 - [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts):
   Microsoft KMS activation scripts.
