@@ -694,11 +694,23 @@ whereas private properties model build requirements of targets.
 
 ## Toolchain
 
-`ldd` and `ar`:
+### Ldd
 
 ```bash
+ldd ./lib.sio
 ldd library.so
+```
+
+### Ar
+
+```bash
 ar -t library.a
+```
+
+### Nm
+
+```bash
+nm -Ca ./lib.so
 ```
 
 ## References
