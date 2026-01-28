@@ -1,5 +1,28 @@
 # Workspace
 
+## Settings
+
+`.claude/settings.json`:
+
+```json
+{
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash",
+      "Edit",
+      "Skill"
+    ]
+  }
+}
+```
+
+## Instructions
+
+`CLAUDE.md`:
+
+```md
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Workspace Purpose
@@ -21,7 +44,7 @@ Configuration files maintained across repositories:
 
 **User commands apply to all repositories by default**, not the workspace root itself.
 
-Example: "update Claude Code `defaultMode`" means updating `.claude/settings.json` in each repo, not the workspace directory.
+Example: "update Claude Code `defaultMode`" means updating `.claude/settings.json` in each repository, not workspace directory.
 
 When applying user commands:
 
@@ -31,5 +54,6 @@ When applying user commands:
 
 ### Edge Cases
 
-**Monorepos**: Some repositories may contain subdirectories with their own configuration files that also need to be synchronized.
+**Monorepos**:Some repositories may contain subdirectories with their own configuration files that also need to be synchronized.
 Always search recursively to discover all instances.
+```
