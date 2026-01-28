@@ -20,7 +20,7 @@ import { NotesMarquee } from '@site/src/components/notes-marquee'
 [![Coverage](https://img.shields.io/codecov/c/github/sabertazimi/notes?logo=codecov&style=for-the-badge)](https://codecov.io/gh/sabertazimi/notes)
 [![CI](https://img.shields.io/github/actions/workflow/status/sabertazimi/notes/ci.yml?branch=main&style=for-the-badge&logo=github)](https://github.com/sabertazimi/notes/actions/workflows/ci.yml)
 
-Personal [Notes](https://notes.tazimi.dev): Today I Learned (TIL)
+Personal [notes](https://notes.tazimi.dev): today I learned.
 
 <NotesMarquee />
 
