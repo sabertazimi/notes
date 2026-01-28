@@ -136,7 +136,6 @@ uv tool install black
 uv tool run black ./myfile.py
 
 uvx pycowsay 'hello world!'
-uvx ruff format ./myscript.py
 uvx python@3.13.2 -c "print('hello world')"
 ```
 
@@ -274,6 +273,31 @@ COPY requirements.txt .
 RUN uv pip install -r requirements.txt
 
 CMD ["uv", "run", "my_app"]
+```
+
+## Ruff
+
+```toml
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+]
+```
+
+```bash
+uvx ruff check
+uvx ruff format ./script.py
 ```
 
 ## Library
