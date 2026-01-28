@@ -22,10 +22,14 @@ export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python
 export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
 ```
 
+## Python
+
+Install Python:
+
 ```bash
-uv pip install 3.13.2
+uv python install 3.14
 uv python list
-uvx python@3.13.2 -c "print('hello world')"
+uvx python@3.14 -c "print('hello world')"
 ```
 
 ## Packages
