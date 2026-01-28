@@ -57,8 +57,8 @@ uv pip list --outdated
 Manage dependencies:
 
 ```bash
-uv init hello-world # 初始化项目
 uv add 'requests==2.31.0' # 增加依赖
+uv add -r requirements.txt # Import from requirements files
 uv lock --upgrade-package requests # 更新项目依赖
 uv remove requests # 删除项目依赖
 
