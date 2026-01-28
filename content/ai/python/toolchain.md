@@ -59,6 +59,14 @@ uv tree --depth 2
 uv run main.py
 ```
 
+## Lockfile
+
+Create lockfile:
+
+```bash
+uv lock
+```
+
 ## Execution
 
 Toolchain execution:
@@ -88,7 +96,7 @@ deactivate
 uv venv --seed
 ```
 
-## Script
+## Scripts
 
 Run standalone scripts:
 
