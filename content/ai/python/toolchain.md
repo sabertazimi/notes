@@ -215,7 +215,7 @@ build-backend = "uv_build"
 # Initialize package
 uv init --package packages/bash-agent
 
-# Add package to dependency
+# Add workspace package as dependency
 uv add --workspace bash-agent
 
 # Run package
