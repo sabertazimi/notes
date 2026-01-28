@@ -76,10 +76,12 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
 
 - [Code](https://github.com/sourcegraph/awesome-code-ai):
   Coding agents.
-- [SWEAgent](https://github.com/princeton-nlp/SWE-agent):
+- [SWE](https://github.com/princeton-nlp/SWE-agent):
   Issue auto-fixer.
-- [PRAgent](https://github.com/qodo-ai/pr-agent):
+- [PR](https://github.com/qodo-ai/pr-agent):
   Pull request reviewer.
+- [Poke](https://github.com/pokeagent/pokeagent.github.io):
+  NeurIPS 2025 Pokémon agent challenge.
 
 ### Multi-Agent
 
