@@ -16,6 +16,8 @@ scoop install mise zoxide bat eza delta dust duf fd ripgrep fzf jq fx tlrc botto
 
 ```bash
 eval "$(mise activate bash)"
+eval "$(uv generate-shell-completion bash)"
+eval "$(uvx --generate-shell-completion bash)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 source <(fx --comp bash)

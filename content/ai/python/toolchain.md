@@ -5,6 +5,14 @@ tags: [AI, Language, Python, Toolchain, UV]
 
 # Toolchain
 
+## Installation
+
+```bash
+scoop install main/uv
+echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
+echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
+```
+
 ## Mirrors
 
 ```bash
