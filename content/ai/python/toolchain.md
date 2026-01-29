@@ -319,6 +319,8 @@ uvx ruff format ./script.py
   HTTP client for humans.
 - [DDGS](https://github.com/deedy5/ddgs):
   DuckDuckGo search.
+- [Markdownify](https://github.com/matthewwithanm/python-markdownify):
+  Convert HTML to Markdown.
 
 ### UI
 
