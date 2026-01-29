@@ -53,6 +53,21 @@ Start of context: [Original goal - far away, forgotten]
 End of context: [Recently read task_plan.md - gets ATTENTION!]
 ```
 
+:::tip[Cache]
+
+Treat context as [append-only log](https://github.com/shareAI-lab/learn-claude-code/blob/main/articles/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%BC%93%E5%AD%98%E7%BB%8F%E6%B5%8E%E5%AD%A6.md),
+not editable document:
+
+| Anti-Pattern          | Effect                             | Cost Multiplier            |
+| --------------------- | ---------------------------------- | -------------------------- |
+| Dynamic system prompt | 100% cache miss                    | **20-50x**                 |
+| Sliding window        | 100% cache miss                    | **30-50x**                 |
+| Message compression   | Invalidates from replacement point | **5-15x**                  |
+| Message editing       | Invalidates from edit point        | **10-30x**                 |
+| Multi-agent full mesh | Context explosion                  | **3-4x** (vs single agent) |
+
+:::
+
 :::caution[MCP]
 
 MCP 服务器可通过 `notifications/tools/list_changed` 随时更改提供的工具列表.
