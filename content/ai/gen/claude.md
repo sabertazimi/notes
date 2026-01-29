@@ -93,7 +93,7 @@ How to use skills:
 - When you invoke a skill, you will see <command-message>The "{name}" skill is loading</command-message>
 - The skill's prompt will expand and provide detailed instructions
 
-Important:
+IMPORTANT:
 - Only use skills listed in <available_skills> below
 - Do not invoke a skill that is already running
 </skills_instructions>
@@ -146,6 +146,7 @@ graph TD
 - 高级功能分离.
 - [按需加载](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#how-skills-work):
   metadata -> instructions -> resources and code.
+- Persistent storage + on-demand loading + human-editable.
 
 :::tip[工具选择]
 
