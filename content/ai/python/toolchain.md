@@ -304,13 +304,28 @@ uvx ruff format ./script.py
 
 ## Library
 
+### ASGI
+
 - [FastAPI](https://github.com/fastapi/fastapi):
   High-performance web framework.
 - [Uvicorn](https://github.com/Kludex/uvicorn):
   ASGI web server.
+
+### Display
+
 - [IPython](https://github.com/ipython/ipython):
   Productive interactive computing.
+- [Rich](https://github.com/Textualize/rich):
+  Rich text and beautiful formatting for terminal.
+- [Progress](https://github.com/tqdm/tqdm):
+  Fast, Extensible Progress Bar for CLI.
+
+### AI
+
 - [Extract](https://github.com/google/langextract):
   Extracting structured information from unstructured text using LLMs.
+
+### Debugging
+
 - [Snooper](https://github.com/cool-RR/PySnooper):
   Poor man's debugger.
