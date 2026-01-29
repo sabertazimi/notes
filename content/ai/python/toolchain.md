@@ -317,6 +317,8 @@ uvx ruff format ./script.py
   Next generation HTTP client.
 - [Requests](https://github.com/psf/requests):
   HTTP client for humans.
+- [DDGS](https://github.com/deedy5/ddgs):
+  DuckDuckGo search.
 
 ### UI
 
