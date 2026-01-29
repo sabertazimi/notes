@@ -31,7 +31,7 @@ LLM 并未统一利用其上下文,
 - Long-term memory.
 - External knowledge.
 - Tool outputs.
-- Sub-agent outputs.
+- Subagent outputs.
 - Artifacts.
 
 [![Context Engineering](./figures/context-engineering.jpg)](https://addyo.substack.com/p/how-good-is-ai-at-coding-react-really)

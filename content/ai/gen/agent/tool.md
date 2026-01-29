@@ -13,7 +13,7 @@ tags: [AI, Generative AI, LLM, Agent, Tool]
 2. Function calling.
 3. Bash: composable static scripts.
 4. Codegen: dynamic programs.
-5. Agent calling: agent tools, sub-agents, multi-agent systems.
+5. Agent calling: agent tools, subagents, multi-agent systems.
 
 ## Documentation
 

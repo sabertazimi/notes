@@ -153,7 +153,7 @@ graph TD
 - 临时任务 -> prompts
 - 标准作业程序 -> skills
 - 连接外部系统 -> MCP
-- 复杂独立任务 -> sub-agents
+- 复杂独立任务 -> subagents
 
 :::
 
