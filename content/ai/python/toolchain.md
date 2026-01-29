@@ -311,6 +311,13 @@ uvx ruff format ./script.py
 - [Uvicorn](https://github.com/Kludex/uvicorn):
   ASGI web server.
 
+### HTTP
+
+- [HTTPX](https://github.com/encode/httpx):
+  Next generation HTTP client.
+- [Requests](https://github.com/psf/requests):
+  HTTP client for humans.
+
 ### UI
 
 - [Rich](https://github.com/Textualize/rich):
