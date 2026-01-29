@@ -1,13 +1,61 @@
 ---
 sidebar_position: 13
-tags: [AI, Language, Python, I/O, CLI]
+tags: [AI, Language, Python, I/O, CLI, Process, Bash]
 ---
 
 # Command Line
 
 ## Input
 
-- `input(prompt)`: read a line from the user.
+`input(prompt)`: read a line from the user.
+
+## Subprocess
+
+### Environment Variables
+
+`subprocess.run()` 默认继承父进程所有环境变量 (`VIRTUAL_ENV`、`PATH` etc.):
+
+```python
+subprocess.run(["bash", "-c", "echo $VIRTUAL_ENV"], capture_output=True, text=True)
+```
+
+通过 `env` 自定义环境变量:
+
+```python
+# 隔离：清空环境
+subprocess.run(["bash", "-c", command], env={})
+
+# 自定义环境
+env = {
+    "PATH": "/usr/bin:/bin",
+    "HOME": os.environ.get("HOME", ""),
+}
+
+# 加载 ~/.bashrc（让 alias/function 生效）
+env["BASH_ENV"] = str(Path.home() / ".bashrc")
+
+subprocess.run(["bash", "-c", command], env=env)
+```
+
+### Non-Interactive Shell
+
+`bash -c "command"` 是 non-interactive shell, 不加载用户配置文件:
+
+```bash
+echo $-  # hBc (不含 'i')
+```
+
+| Shell 类型             | 加载的配置文件                                   |
+| ---------------------- | ------------------------------------------------ |
+| Interactive login      | `/etc/profile` → `~/.bash_profile` → `~/.bashrc` |
+| Interactive non-login  | `~/.bashrc`                                      |
+| Non-interactive (`-c`) | 无                                               |
+
+| 特性     | Non-Interactive       |
+| -------- | --------------------- |
+| Alias    | ❌ `~/.bashrc` 未加载 |
+| Function | ❌ `~/.bashrc` 未加载 |
+| 环境变量 | ✅ 从父进程继承       |
 
 ## Click
 
