@@ -311,12 +311,14 @@ uvx ruff format ./script.py
 - [Uvicorn](https://github.com/Kludex/uvicorn):
   ASGI web server.
 
-### Display
+### UI
 
 - [IPython](https://github.com/ipython/ipython):
   Productive interactive computing.
 - [Rich](https://github.com/Textualize/rich):
   Rich text and beautiful formatting for terminal.
+- [Textual](https://github.com/Textualize/textual):
+  Build sophisticated user interfaces.
 - [Progress](https://github.com/tqdm/tqdm):
   Fast, Extensible Progress Bar for CLI.
 
