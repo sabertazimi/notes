@@ -313,14 +313,16 @@ uvx ruff format ./script.py
 
 ### UI
 
-- [IPython](https://github.com/ipython/ipython):
-  Productive interactive computing.
 - [Rich](https://github.com/Textualize/rich):
   Rich text and beautiful formatting for terminal.
 - [Textual](https://github.com/Textualize/textual):
   Build sophisticated user interfaces.
 - [Progress](https://github.com/tqdm/tqdm):
   Fast, Extensible Progress Bar for CLI.
+- [IPython](https://github.com/ipython/ipython):
+  Productive interactive computing.
+- [Art](https://github.com/sepandhaghighi/art):
+  ASCII art.
 
 ### AI
 
