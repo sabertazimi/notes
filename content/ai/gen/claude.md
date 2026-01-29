@@ -328,8 +328,10 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
 
 ### Frontend
 
-- [Vercel](https://github.com/vercel-labs/agent-skills):
+- [React](https://github.com/vercel-labs/agent-skills):
   React best practices and web design guidelines.
+- [Vue](https://github.com/antfu/skills):
+  Vue, Vite, Vitest, slidev, etc.
 - [UI/UX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill):
   Design intelligence for professional UI/UX.
 - [Figma](https://github.com/figma/mcp-server-guide):
