@@ -326,6 +326,8 @@ uvx ruff format ./script.py
 
 - [Extract](https://github.com/google/langextract):
   Extracting structured information from unstructured text using LLMs.
+- [Toad](https://github.com/batrachianai/toad):
+  Unified client for terminal agents.
 
 ### Debugging
 
