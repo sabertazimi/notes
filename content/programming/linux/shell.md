@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-tags: [Programming, OS, Linux, Shell]
+tags: [Programming, OS, Linux, Shell, Bash, Zsh]
 ---
 
 # Shell Scripts
