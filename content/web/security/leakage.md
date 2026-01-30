@@ -55,3 +55,7 @@ tags: [Web, Security, Leakage, Privacy, Vulnerability]
 - 对任何敏感信息源使用双因素认证.
 - 执行审核来查找潜在的漏洞.
 - 使用评估工具来确定是否存在从指定位置外的任何位置访问敏感信息源的可能.
+
+## References
+
+- Leaked secrets in [forced commits and orphan commits](https://github.com/trufflesecurity/force-push-scanner).
