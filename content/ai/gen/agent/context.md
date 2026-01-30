@@ -36,6 +36,8 @@ LLM 并未统一利用其上下文,
 
 [![Context Engineering](./figures/context-engineering.jpg)](https://addyo.substack.com/p/how-good-is-ai-at-coding-react-really)
 
+### Plan
+
 Planning with files in [Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus):
 
 1. Design around **KV-cache**:
@@ -53,7 +55,7 @@ Start of context: [Original goal - far away, forgotten]
 End of context: [Recently read task_plan.md - gets ATTENTION!]
 ```
 
-:::tip[Cache]
+### Cache
 
 Treat context as [append-only log](https://github.com/shareAI-lab/learn-claude-code/blob/main/articles/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%BC%93%E5%AD%98%E7%BB%8F%E6%B5%8E%E5%AD%A6.md),
 not editable document:
@@ -66,14 +68,29 @@ not editable document:
 | Message editing       | Invalidates from edit point        | **10-30x**                 |
 | Multi-agent full mesh | Context explosion                  | **3-4x** (vs single agent) |
 
-:::
-
 :::caution[MCP]
 
 MCP 服务器可通过 `notifications/tools/list_changed` 随时更改提供的工具列表.
 在长对话中响应此通知可能会导致代价高昂的[缓存未命中](https://openai.com/index/unrolling-the-codex-agent-loop).
 
 :::
+
+### Reduction
+
+减少上下文中的信息量:
+
+1. Keep-N: 只保留前 N 个字符或关键片段作为预览, 原始完整内容被移除.
+2. 总结摘要: 使用 LLM 对整段内容进行总结摘要, 保留关键信息, 丢弃细节.
+
+### Offloading
+
+原始完整内容被卸载到外部存储 (e.g. 文件系统, 数据库), 消息中只保留最小必要的引用 (e.g 文件路径, UUID).
+当需要完整内容时, 可以通过引用重新加载.
+
+### Isolation
+
+通过多智能体架构 (Multi-Agent), 将上下文拆分到不同的子智能体中.
+主智能体编写任务指令, 子智能体的整个上下文仅由该指令组成, 主智能体只需要最终结果.
 
 ## Session
 
