@@ -354,3 +354,10 @@ uvx ruff format ./script.py
 
 - [Snooper](https://github.com/cool-RR/PySnooper):
   Poor man's debugger.
+
+### Testing
+
+- [Pytest](https://github.com/pytest-dev/pytest):
+  Testing framework.
+- [Coverage](https://github.com/pytest-dev/pytest-cov):
+  Coverage reporting.
