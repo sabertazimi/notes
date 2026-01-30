@@ -367,6 +367,8 @@ window.CSS.registerProperty({
 })
 ```
 
+### Color
+
 CSS 不支持背景渐变色的直接过渡动画,
 需要使用**两层**背景渐变 (`background` + `::before`/`::after` `background`)
 [`opacity` 变化](https://codepen.io/chriscoyier/pen/eRbLWP)
@@ -437,6 +439,33 @@ CSS 不支持背景渐变色的直接过渡动画,
   --per: 60%;
 }
 ```
+
+### Number
+
+Animating [number counters](https://css-tricks.com/animating-number-counters):
+
+```css
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+div {
+  counter-reset: num var(--num);
+  transition: --num 1s;
+}
+
+div:hover {
+  --num: 10000;
+}
+
+div::after {
+  content: counter(num);
+}
+```
+
+### Fallback
 
 `@property` feature detection and fallback:
 
