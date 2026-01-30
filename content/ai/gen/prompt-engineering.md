@@ -170,22 +170,34 @@ Let's break down this problem and give me the solution with code format.
 
 ## Automatic
 
-APE (Automatic Prompt Engineering) 利用机器 (machine) 生成 prompts:
-
-- Soft prompt:
-  将向量作为输入, 与文字合并成一个完整的 prompt,
-  作用类似于 BERT adapter.
-- Reinforcement learning prompting:
-  通过强化学习训练一个模型, 负责生成 prompts.
-- [LLM prompting](https://iclr.cc/virtual/2023/10850):
-  通过 LLM 自身生成 prompts.
-- LLMs collaboration:
-  - Utilize multiple LLMs, each with different strengths.
-  - [EoT](https://aclanthology.org/2023.emnlp-main.936):
-    exchange-of-thought, encourage divergent thinking
-    through cross-model communication and multi-agent debate.
+APE (Automatic Prompt Engineering) 利用机器 (machine) 生成 prompts.
 
 [![Automatic Prompting Engineer](./figures/automatic-prompt-engineer.png)](https://github.com/keirp/automatic_prompt_engineer)
+
+### Soft Prompt
+
+将向量作为输入, 与文字合并成一个完整的 prompt,
+作用类似于 BERT adapter.
+
+### Reinforcement Learning
+
+通过强化学习训练一个模型, 负责生成 prompts.
+
+### Self-Consistency
+
+利用 Best-of-N 策略, 生成 N 个答案, 选择最优的答案.
+
+### Self-Refinement
+
+[Self-refinement](https://iclr.cc/virtual/2023/10850):
+通过 LLM 自身生成 prompts, 然后通过 LLM 自身评估 prompts 的质量, 并进行自我优化.
+
+### LLMs Collaboration
+
+- Utilize multiple LLMs, each with different strengths.
+- [EoT](https://aclanthology.org/2023.emnlp-main.936):
+  exchange-of-thought, encourage divergent thinking
+  through cross-model communication and multi-agent debate.
 
 ## Codegen
 
