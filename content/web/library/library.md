@@ -1301,6 +1301,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Functional music theory library.
 - [AlphaTab](https://github.com/CoderLine/alphaTab):
   Cross platform music notation and guitar tablature rendering library.
+- [Feishin](https://github.com/jeffvli/feishin):
+  Modern self-hosted music player.
 
 ### Video
 
