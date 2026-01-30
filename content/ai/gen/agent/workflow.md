@@ -103,7 +103,7 @@ You have two modes of operation:
 
 [Ralph loop](https://mp.weixin.qq.com/s/K4ZUGBzT0s9RwFlaYcuHiA):
 
-1. 明确任务 + 完成条件: 定义可验证的成功标准.
+1. 明确任务 + 完成条件: 定义可验证的 (verifiable) 成功标准.
 2. `Stop` hook 阻止提前退出: 未达标时强制继续.
 3. `max-iterations` 安全阀: 防止无限循环.
 
