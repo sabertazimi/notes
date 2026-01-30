@@ -702,8 +702,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Comment system powered by GitHub discussion.
 - [Waline](https://github.com/walinejs/waline):
   Simple, safe comment system inspired by Valine.
-- [Disqus](https://github.com/disqus/disqus-react):
-  React component for Disqus.
+- [Cloudflare](https://github.com/anghunk/cwd):
+  Cloudflare workers discuss.
 
 ### Modal
 
