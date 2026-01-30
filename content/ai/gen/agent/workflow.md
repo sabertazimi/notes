@@ -86,6 +86,33 @@ You have two modes of operation:
 - When in plan mode always output the full updated plan in every response.
 ```
 
+## RIPER-5
+
+[RIPER-5](https://github.com/johnpeterman72/cursor_memory_riper_framework)
+给 AI 规定了 [5 种行为模式](../recipes/prompts/riper-5.md)：
+
+```md
+- "ENTER RESEARCH MODE" // 进入研究模式
+- "ENTER INNOVATE MODE" // 进入创新模式
+- "ENTER PLAN MODE" // 进入规划模式
+- "ENTER EXECUTE MODE" // 进入执行模式
+- "ENTER REVIEW MODE" // 进入审查模式
+```
+
+## Ralph Loop
+
+[Ralph loop](https://mp.weixin.qq.com/s/K4ZUGBzT0s9RwFlaYcuHiA):
+
+1. 明确任务 + 完成条件: 定义可验证的成功标准.
+2. `Stop` hook 阻止提前退出: 未达标时强制继续.
+3. `max-iterations` 安全阀: 防止无限循环.
+
+智能体会维护以下[关键文件](../recipes/code/ralph.md):
+
+1. `prd.json`: 结构化的任务清单. 智能体每完成一个子项, 就会在该文件中标记 `passes: true`.
+2. `progress.txt`: 追加形式的日志文件, 记录了每一轮迭代的尝试、遇到的坑以及已经确认的模式.
+3. Git 提交记录: 循环被要求在每一步成功后进行提交.
+
 ## Debug
 
 Cursor [debug mode](https://cursor.com/blog/agent-best-practices#bug-debug-mode):
@@ -125,19 +152,6 @@ Cursor [debug mode](https://cursor.com/blog/agent-best-practices#bug-debug-mode)
 - 从代码审查中提取模式.
 - 建立可复用的工作流程: slash commands, hooks, guardrails, and skills.
 - Linter rules, regression tests, `AGENTS.md` improvements, checklist updates.
-
-## RIPER-5
-
-[RIPER-5](https://github.com/johnpeterman72/cursor_memory_riper_framework)
-给 AI 规定了 [5 种行为模式](../recipes/prompts/riper-5.md)：
-
-```md
-- "ENTER RESEARCH MODE" // 进入研究模式
-- "ENTER INNOVATE MODE" // 进入创新模式
-- "ENTER PLAN MODE" // 进入规划模式
-- "ENTER EXECUTE MODE" // 进入执行模式
-- "ENTER REVIEW MODE" // 进入审查模式
-```
 
 ## Actions
 
