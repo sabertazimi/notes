@@ -96,6 +96,8 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
 
 - [Mem0](https://github.com/mem0ai/mem0):
   Universal memory layer.
+- [MemOS](https://github.com/MemTensor/MemOS):
+  Memory operating system.
 
 ### Workflow
 
