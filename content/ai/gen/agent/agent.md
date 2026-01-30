@@ -9,7 +9,6 @@ AI Agent system that uses LLMs as core reasoning engine, augmented with tools, m
 
 ## Fundamentals
 
-- [Principles](./principles.md) - Agent components and first-principles thinking
 - [Patterns](./patterns.md) - Agent-native design and context management patterns
 - [Instructions](./instructions.md) - Writing effective agent system prompts
 - [Tool](./tool.md) - Tool calling, bash scripts, and codegen
