@@ -350,11 +350,13 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
 
 - [Cloudflare](https://github.com/cloudflare/skills).
 
-### Documentation
+### Notes
 
-- [Notion](https://github.com/makenotion/claude-code-notion-plugin).
 - [NotebookLM](https://github.com/PleasePrompto/notebooklm-skill).
+- [Notion](https://github.com/makenotion/claude-code-notion-plugin).
 - [Obsidian](https://github.com/kepano/obsidian-skills).
+- [Reading](https://github.com/ginobefun/deep-reading-analyst-skill):
+  Deep reading analysis.
 
 ### Math
 
