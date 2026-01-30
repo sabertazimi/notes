@@ -92,6 +92,11 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
 - [ChatDev](https://github.com/OpenBMB/ChatDev):
   Multi-Agent collaboration.
 
+### Memory
+
+- [Mem0](https://github.com/mem0ai/mem0):
+  Universal memory layer.
+
 ### Workflow
 
 - [n8n](https://github.com/Zie619/n8n-workflows):
