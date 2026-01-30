@@ -149,3 +149,4 @@ Cursor [debug mode](https://cursor.com/blog/agent-best-practices#bug-debug-mode)
 - OpenAI agents [cookbook](https://cookbook.openai.com/topic/agents).
 - Vibe coding [guide](https://github.com/tukuaiai/vibe-coding-cn).
 - First-principles agentic coding [guide](https://mp.weixin.qq.com/s/a5UDlkD6Db2kKCAj7LN6gQ).
+- Agent 系统[设计指南](https://mp.weixin.qq.com/s/8ArJk0vpGP0o97kEtqscqA).
