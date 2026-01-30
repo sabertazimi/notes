@@ -70,3 +70,7 @@ server {
   }
 }
 ```
+
+## References
+
+- Selectively disabling [HTTP/1.X](https://markmcb.com/web/selectively_disabling_http_1).
