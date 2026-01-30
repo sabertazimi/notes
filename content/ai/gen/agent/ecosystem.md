@@ -76,6 +76,8 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
 
 - [Code](https://github.com/sourcegraph/awesome-code-ai):
   Coding agents.
+- [Claw](https://github.com/openclaw/openclaw):
+  Personal AI assistant.
 - [SWE](https://github.com/princeton-nlp/SWE-agent):
   Issue auto-fixer.
 - [PR](https://github.com/qodo-ai/pr-agent):
@@ -147,8 +149,6 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
 
 ### Copilot
 
-- [Clawd](https://github.com/clawdbot/clawdbot):
-  Personal AI assistant.
 - [Everywhere](https://github.com/DearVa/Everywhere):
   Context-aware assistant for desktop.
 - [Immersive](https://github.com/immersive-translate/immersive-translate):
