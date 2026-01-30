@@ -82,6 +82,22 @@ MCP 服务器可通过 `notifications/tools/list_changed` 随时更改提供的�
 1. Keep-N: 只保留前 N 个字符或关键片段作为预览, 原始完整内容被移除.
 2. 总结摘要: 使用 LLM 对整段内容进行总结摘要, 保留关键信息, 丢弃细节.
 
+```python
+from langchain.agents import create_agent
+from langchain.agents.middleware import SummarizationMiddleware
+
+agent = create_agent(
+    model="gpt-4o",
+    middleware=[
+        SummarizationMiddleware(
+            model="gpt-4o-mini",
+            max_tokens_before_summary=4000, # 4000 tokens 时触发摘要
+            messages_to_keep=20,            # 摘要后保留最后 20 条消息
+        ),
+    ],
+)
+```
+
 ### Offloading
 
 原始完整内容被卸载到外部存储 (e.g. 文件系统, 数据库), 消息中只保留最小必要的引用 (e.g 文件路径, UUID).
@@ -192,3 +208,4 @@ Dynamic context [discovery](https://cursor.com/cn/blog/dynamic-context-discovery
 ## References
 
 - Context engineering [whitepaper](https://www.kaggle.com/whitepaper-context-engineering-sessions-and-memory).
+- Memory [system](https://mp.weixin.qq.com/s/mftM6jr0YiFxRATeNvm5Qg).
