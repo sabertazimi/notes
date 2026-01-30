@@ -39,7 +39,7 @@ uv python list
 uvx python@3.14 -c "print('hello world')"
 ```
 
-## Initialize
+## Initialization
 
 ```bash
 uv init hello-app
@@ -127,9 +127,9 @@ uv add --index "https://mirrors.aliyun.com/pypi/simple" --script example.py 'req
 uv run example.py
 ```
 
-## Execution
+## Tools
 
-Toolchain execution:
+### Execution
 
 ```bash
 uv tool install black
@@ -137,6 +137,14 @@ uv tool run black ./myfile.py
 
 uvx pycowsay 'hello world!'
 uvx python@3.13.2 -c "print('hello world')"
+```
+
+### Development
+
+Hot reload:
+
+```bash
+uv tool install --editable packages/agent-cli
 ```
 
 ## Project
