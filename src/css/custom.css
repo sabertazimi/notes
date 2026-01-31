@@ -4,8 +4,11 @@
  * work well for content-centric websites.
  */
 
-@import 'tailwindcss';
+@layer theme, base, components, utilities;
+
 @import 'tw-animate-css';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
 @custom-variant dark (&:is([data-theme="dark"] *));
 
@@ -263,39 +266,26 @@ html[data-theme='dark'] {
     @apply bg-background text-foreground tracking-normal;
   }
 
-  /* Revert tailwind presets */
-  ol {
-    @apply list-decimal;
+  .footer {
+    @apply border-t;
   }
 
-  ul {
-    @apply list-disc;
-  }
+  .markdown {
+    a {
+      @apply underline underline-offset-2;
+    }
 
-  img {
-    @apply inline;
-  }
-
-  a svg {
-    @apply inline align-baseline;
+    strong {
+      @apply text-primary;
+    }
   }
 }
 
-.footer {
-  @apply border-t;
-}
-
-strong {
-  @apply text-primary;
-}
-
-.markdown a {
-  @apply underline underline-offset-2;
-}
-
-@media (width >= 96rem) {
-  .container {
-    max-width: 80rem;
+@layer utilities {
+  @media (width >= 96rem) {
+    .container {
+      max-width: 80rem;
+    }
   }
 }
 
