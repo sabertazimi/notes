@@ -5,6 +5,17 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 # Claude Code
 
+## Installlation
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+```bash
+brew install --cask claude-code
+winget install Anthropic.ClaudeCode
+```
+
 ## Configuration
 
 `~/.claude/settings.json`:
