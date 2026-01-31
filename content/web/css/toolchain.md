@@ -7,8 +7,7 @@ tags: [Web, CSS, Toolchain, PostCSS, StyleLint, Tailwind]
 
 ## PostCSS
 
-- [PostCSS Preset Env](https://github.com/csstools/postcss-plugins)
-- [PostCSS Flexbox Bug Checker](https://github.com/luisrudge/postcss-flexbugs-fixes)
+- PostCSS [modern preset](https://github.com/csstools/postcss-plugins)
 
 ### Vendor Prefix
 
@@ -407,12 +406,23 @@ module.exports = {
 
 ### Configuration
 
-:::danger[JIT Mode]
+:::caution[JIT Mode]
 
-Missing `.html`/`.tsx`/`.vue` directory
-will lead to class purged.
+Missing `.html`/`.tsx`/`.vue` directory will lead to class purged.
 
 :::
+
+### Preflight
+
+`@import 'tailwindcss'` [injects](https://github.com/tailwindlabs/tailwindcss/discussions/17324):
+
+```css
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+```
 
 ### Directives
 
