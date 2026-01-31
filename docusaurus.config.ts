@@ -18,6 +18,10 @@ const config: Config = {
   favicon: 'img/logo.svg',
   organizationName: 'sabertazimi',
   projectName: 'notes',
+  future: {
+    v4: true,
+    experimental_faster: true,
+  },
   markdown: {
     mermaid: true,
     hooks: {
@@ -42,7 +46,7 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      },
+      } satisfies Preset.Options,
     ],
   ],
   plugins: [
@@ -61,7 +65,9 @@ const config: Config = {
     tailwind,
   ],
   themeConfig: {
-    respectPrefersColorScheme: true,
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     mermaid: {
       theme: {
         light: 'neutral',
