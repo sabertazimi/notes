@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@docusaurus/core':
-        specifier: 3.9.2
+        specifier: ^3.9.2
         version: 3.9.2(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)))(@mdx-js/react@3.1.1(@types/react@19.2.9)(react@19.2.3))(@rspack/core@1.7.4)(@swc/core@1.15.11)(debug@4.4.3)(lightningcss@1.30.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@docusaurus/faster':
         specifier: ^3.9.2
         version: 3.9.2(@docusaurus/types@3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@docusaurus/preset-classic':
-        specifier: 3.9.2
+        specifier: ^3.9.2
         version: 3.9.2(@algolia/client-search@5.39.0)(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)))(@mdx-js/react@3.1.1(@types/react@19.2.9)(react@19.2.3))(@rspack/core@1.7.4)(@swc/core@1.15.11)(@types/react@19.2.9)(lightningcss@1.30.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(search-insights@2.13.0)(typescript@5.9.3)
       '@docusaurus/theme-mermaid':
         specifier: ^3.9.2
@@ -70,16 +70,16 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0(postcss@8.5.6)(stylelint-order@6.0.4(stylelint@17.0.0(typescript@5.9.3)))(stylelint@17.0.0(typescript@5.9.3))
       '@docusaurus/module-type-aliases':
-        specifier: 3.9.2
+        specifier: ^3.9.2
         version: 3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@docusaurus/theme-classic':
         specifier: ^3.9.2
         version: 3.9.2(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)))(@rspack/core@1.7.4)(@swc/core@1.15.11)(@types/react@19.2.9)(lightningcss@1.30.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@docusaurus/tsconfig':
-        specifier: 3.9.2
+        specifier: ^3.9.2
         version: 3.9.2
       '@docusaurus/types':
-        specifier: 3.9.2
+        specifier: ^3.9.2
         version: 3.9.2(@swc/core@1.15.11)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@mdx-js/react':
         specifier: ^3.1.1
@@ -7747,9 +7747,6 @@ packages:
   std-env@3.10.0:
     resolution: {integrity: sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==}
 
-  std-env@3.7.0:
-    resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
-
   string-argv@0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
     engines: {node: '>=0.6.19'}
@@ -8832,12 +8829,12 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.25.9':
     dependencies:
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
 
   '@babel/helper-builder-binary-assignment-operator-visitor@7.25.9':
     dependencies:
       '@babel/traverse': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -8883,7 +8880,7 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.25.9':
     dependencies:
       '@babel/traverse': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -8905,7 +8902,7 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.25.9':
     dependencies:
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
 
   '@babel/helper-plugin-utils@7.25.9': {}
 
@@ -8930,14 +8927,14 @@ snapshots:
   '@babel/helper-simple-access@7.25.9':
     dependencies:
       '@babel/traverse': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-skip-transparent-expression-wrappers@7.25.9':
     dependencies:
       '@babel/traverse': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -8951,7 +8948,7 @@ snapshots:
     dependencies:
       '@babel/template': 7.25.9
       '@babel/traverse': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9317,7 +9314,7 @@ snapshots:
       '@babel/helper-module-imports': 7.25.9
       '@babel/helper-plugin-utils': 7.25.9
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9497,7 +9494,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.25.9
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
       esutils: 2.0.3
 
   '@babel/preset-react@7.25.9(@babel/core@7.26.0)':
@@ -11619,7 +11616,7 @@ snapshots:
 
   '@svgr/hast-util-to-babel-ast@8.0.0':
     dependencies:
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.6
       entities: 4.5.0
 
   '@svgr/plugin-jsx@8.1.0(@svgr/core@8.1.0(typescript@5.9.3))':
@@ -13299,7 +13296,7 @@ snapshots:
 
   css-minimizer-webpack-plugin@5.0.1(clean-css@5.3.3)(lightningcss@1.30.2)(webpack@5.96.1(@swc/core@1.15.11)):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.25
+      '@jridgewell/trace-mapping': 0.3.31
       cssnano: 6.1.2(postcss@8.5.6)
       jest-worker: 29.7.0
       postcss: 8.5.6
@@ -17935,8 +17932,6 @@ snapshots:
 
   std-env@3.10.0: {}
 
-  std-env@3.7.0: {}
-
   string-argv@0.3.2: {}
 
   string-ts@2.3.1: {}
@@ -18689,7 +18684,7 @@ snapshots:
       figures: 3.2.0
       markdown-table: 2.0.0
       pretty-time: 1.1.0
-      std-env: 3.7.0
+      std-env: 3.10.0
       webpack: 5.96.1(@swc/core@1.15.11)
       wrap-ansi: 7.0.0
 
