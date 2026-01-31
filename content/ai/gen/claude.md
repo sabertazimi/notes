@@ -36,6 +36,12 @@ winget install Anthropic.ClaudeCode
 }
 ```
 
+:::tip
+
+Remove `~/.claude/projects/` for bug releases.
+
+:::
+
 ## Memory
 
 Captures everything Claude does during your coding sessions, compresses it with Claude `agent-sdk`,
