@@ -6,9 +6,9 @@
 
 @layer theme, base, components, utilities;
 
-@import 'tw-animate-css';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is([data-theme="dark"] *));
 
@@ -258,10 +258,6 @@ html[data-theme='dark'] {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
   body {
     @apply bg-background text-foreground tracking-normal;
   }
