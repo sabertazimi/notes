@@ -100,7 +100,11 @@ while WinGet is app installer.
 Recommended software for Windows:
 
 ```bash
-winget install astral-sh.uv BellSoft.LibericaJDK.11 CoreyButler.NVMforWindows Rustlang.Rustup Tencent.WeixinDevTools zig.zig
+winget install BellSoft.LibericaJDK.11 Rustlang.Rustup Tencent.WeixinDevTools zig.zig
+```
+
+```bash
+winget install Git.Git GitHub.cli Oven-sh.Bun CoreyButler.NVMforWindows astral-sh.uv
 ```
 
 ```bash
@@ -108,7 +112,7 @@ winget install Google.Antigravity Microsoft.VisualStudioCode Neovim.Neovim Obsid
 ```
 
 ```bash
-winget install Git.Git GitHub.cli kangfenmao.CherryStudio Microsoft.WindowsTerminal ImageMagick.ImageMagick Gyan.FFmpeg
+winget install kangfenmao.CherryStudio Microsoft.WindowsTerminal ImageMagick.ImageMagick Gyan.FFmpeg
 ```
 
 ```bash
