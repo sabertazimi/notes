@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35513"],{74013(e){e.exports=JSON.parse('{"tag":{"label":"Guard","permalink":"/notes/tags/guard","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/narrowing","title":"Narrowing","description":"Type Inference","permalink":"/notes/web/typescript/narrowing"}],"unlisted":false}}')}}]);

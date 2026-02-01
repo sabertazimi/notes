@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["88630"],{60384(e){e.exports=JSON.parse('{"tag":{"label":"Enum","permalink":"/notes/tags/enum","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/enum","title":"Enum","description":"Number","permalink":"/notes/web/typescript/enum"}],"unlisted":false}}')}}]);

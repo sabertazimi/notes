@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["65832"],{27619(s){s.exports=JSON.parse('{"tag":{"label":"Column","permalink":"/notes/tags/column","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/column","title":"Column","description":"Block","permalink":"/notes/web/css/column"}],"unlisted":false}}')}}]);

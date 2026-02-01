@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["72392"],{41383(e){e.exports=JSON.parse('{"tag":{"label":"Modal","permalink":"/notes/tags/modal","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/components/interaction","title":"Interaction","description":"Modal","permalink":"/notes/web/css/components/interaction"}],"unlisted":false}}')}}]);

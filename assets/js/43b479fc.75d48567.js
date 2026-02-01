@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["78912"],{61309(s){s.exports=JSON.parse('{"tag":{"label":"UML","permalink":"/notes/tags/uml","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/database/design","title":"Design","description":"Database","permalink":"/notes/cs/database/design"}],"unlisted":false}}')}}]);

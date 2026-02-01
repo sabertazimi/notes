@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35977"],{88347(e){e.exports=JSON.parse('{"tag":{"label":"i18n","permalink":"/notes/tags/i-18-n","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/i18n","title":"Internationalization","description":"- XLIFF:","permalink":"/notes/web/react/i18n"}],"unlisted":false}}')}}]);

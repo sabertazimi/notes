@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["45756"],{18655(e){e.exports=JSON.parse('{"tag":{"label":"TLS","permalink":"/notes/tags/tls","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/tls","title":"TLS","description":"Transport Layer Security","permalink":"/notes/web/network/tls"}],"unlisted":false}}')}}]);
