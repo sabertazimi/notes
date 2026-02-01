@@ -321,6 +321,8 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
 
 ### Bootstrap
 
+- [Templates](https://github.com/davila7/claude-code-templates):
+  Configuring and monitoring tool.
 - [Everything](https://github.com/affaan-m/everything-claude-code):
   Complete configuration collection.
 - [Showcase](https://github.com/ChrisWiles/claude-code-showcase):
