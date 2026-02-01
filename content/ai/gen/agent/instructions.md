@@ -144,5 +144,6 @@ AI agents powered by tricky LLMs prompting:
 
 ## References
 
-- Claude system [prompts](https://platform.claude.com/docs/en/release-notes/system-prompts).
-- Agent system [prompts](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools).
+- Claude [system prompts](https://platform.claude.com/docs/en/release-notes/system-prompts).
+  Claude code [system prompts](https://github.com/Piebald-AI/claude-code-system-prompts).
+- Agent [system prompts](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools).
