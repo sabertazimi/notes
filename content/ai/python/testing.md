@@ -5,6 +5,23 @@ tags: [AI, Language, Python, Testing]
 
 # Testing
 
+## Configuration
+
+```toml
+[dependency-groups]
+dev = [
+  "pytest>=9.0.0",
+  "pytest-cov>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=packages --cov-report=term-missing"
+testpaths = [ "packages" ]
+pythonpath = [ "." ]
+```
+
+## Fixtures
+
 ```python
 import pytest
 from survey import AnonymousSurvey
