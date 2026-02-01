@@ -31,8 +31,11 @@ winget install Anthropic.ClaudeCode
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
     "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
-  }
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_BUG_COMMAND": "1"
+  },
+  "autoUpdatesChannel": "stable"
 }
 ```
 
