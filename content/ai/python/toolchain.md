@@ -292,6 +292,8 @@ uv add --dev pyright ruff
 ```toml
 [tool.pyright]
 typeCheckingMode = "strict"
+include = [ "packages" ]
+extraPaths = [ "packages/agent-cli/src" ]
 
 [tool.ruff.lint]
 select = [
