@@ -128,8 +128,7 @@ Build [good](https://www.philschmid.de/mcp-best-practices) MCP servers:
 
 :::tip[No MCP]
 
-Use [MCPorter](https://github.com/steipete/mcporter)
-to wrap MCP servers as CLI tools.
+Use [MCPorter](https://github.com/steipete/mcporter) to wrap MCP servers into CLI tools.
 
 :::
 
