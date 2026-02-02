@@ -16,7 +16,10 @@ Agents [eval](https://www.anthropic.com/engineering/demystifying-evals-for-ai-ag
 5. Make sure the problems are hard enough for model.
 6. Iterate on evaluations to improve signal-to-noise ratio.
 7. Read transcripts (记录).
-8. Pick framework: [prompt foo](https://github.com/promptfoo/promptfoo), [harbor](https://github.com/laude-institute/harbor).
+8. Pick framework:
+   - [Promptfoo](https://github.com/promptfoo/promptfoo)
+   - [Harbor](https://github.com/laude-institute/harbor)
+   - [Terminal](https://github.com/laude-institute/terminal-bench)
 
 :::tip[Agent Failure]
 
