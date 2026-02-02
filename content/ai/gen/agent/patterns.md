@@ -122,3 +122,4 @@ use runtime experience and external signals to optimize future behavior:
 ## References
 
 - Agents [whitepaper](https://www.kaggle.com/whitepaper-agents).
+- Minimal coding agent design [patterns](https://mariozechner.at/posts/2025-11-30-pi-coding-agent).
