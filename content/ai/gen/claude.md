@@ -198,6 +198,16 @@ description: Extract text and tables from PDF files, fill forms, merge documents
   forms, or document extraction.
 ```
 
+### Patterns
+
+Common skills [patterns](https://claude.com/blog/complete-guide-to-building-skills-for-claude):
+
+- Sequential workflow orchestration.
+- Multi-MCP coordination.
+- Iterative refinement: [ralph loop](./recipes/code/ralph.md), etc.
+- Context-aware tool selection.
+- Domain-specific intelligence: finance, marketing, math, etc.
+
 ### Effective
 
 1. Core quality:
