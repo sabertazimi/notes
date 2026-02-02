@@ -34,8 +34,10 @@ export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
 Install Python:
 
 ```bash
-uv python install 3.14
+uv python install --default # Global
+uv python install 3.14      # Virtual environment
 uv python list
+uv run --python 3.14 script.py
 uvx python@3.14 -c "print('hello world')"
 ```
 
@@ -122,9 +124,10 @@ uv venv --seed
 Run standalone scripts:
 
 ```bash
-uv init --script example.py --python 3.13
+uv init --script example.py --python 3.14
 uv add --index "https://mirrors.aliyun.com/pypi/simple" --script example.py 'requests<3' 'rich'
 uv run example.py
+uv run --python 3.14 example.py
 ```
 
 ## Tools
@@ -136,7 +139,7 @@ uv tool install black
 uv tool run black ./myfile.py
 
 uvx pycowsay 'hello world!'
-uvx python@3.13.2 -c "print('hello world')"
+uvx python@3.14.2 -c "print('hello world')"
 ```
 
 ### Development
@@ -237,7 +240,7 @@ name = "bash-agent"
 version = "0.1.0"
 description = "Minimal Claude Code."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 
 [project.scripts]
 bash-agent = "bash_agent:main"
