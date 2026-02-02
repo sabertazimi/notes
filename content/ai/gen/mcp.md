@@ -126,6 +126,13 @@ Build [good](https://www.philschmid.de/mcp-best-practices) MCP servers:
 - Name for discovery `{service}_{action}_{resource}`: e.g. `slack_send_message`, `linear_list_issues`.
 - Paginate large results.
 
+:::tip[No MCP]
+
+Use [MCPorter](https://github.com/steipete/mcporter)
+to wrap MCP servers as CLI tools.
+
+:::
+
 ## Library
 
 ### SDK
