@@ -173,8 +173,7 @@ THE SOFTWARE.
 
 ### Installation
 
-Install `gh` by `apt`,
-according of [official introduction](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
+Setup [`gh`](https://cli.github.com/manual):
 
 ```bash
 gh auth login
@@ -191,13 +190,94 @@ gh issue list
 
 ### Pull Request
 
+Create PR:
+
 ```bash
-gh pr checkout
-gh pr create
-gh pr close
-gh pr merge
-gh pr status
-gh pr list
+gh pr create --base main --title "Title" --body "Description"
+
+gh pr create --base main --title "Title" --body "$(cat <<'EOF'
+## Summary
+- Feature 1
+- Feature 2
+
+## Test Plan
+- [x] Unit tests
+- [x] Integration tests
+EOF
+)"
+
+gh pr create --draft
+```
+
+Check PR:
+
+```bash
+gh pr checks <pr-number> --watch  # 实时监控
+```
+
+Merge PR:
+
+```bash
+gh pr merge <pr-number> --squash --delete-branch
+```
+
+Edit PR:
+
+```bash
+gh pr edit <pr-number> --add-label "bug,high-priority"
+gh pr edit <pr-number> --add-reviewer "username1,username2"
+```
+
+List PR:
+
+```bash
+gh pr list --state open
+gh pr list --state closed
+gh pr list --state merged
+gh pr list --author username
+gh pr list --label bug
+```
+
+View PR:
+
+```bash
+# 获取 PR 标题
+gh pr view <pr-number> --json title --jq '.title'
+
+# 获取 PR 作者
+gh pr view <pr-number> --json author --jq '.author.login'
+
+# 获取 PR 评论
+gh pr view <pr-number> --json comments --jq '.comments[] | "\(.author.login): \(.body)"'
+
+# 获取所有检查的状态
+gh pr view <pr-number> --json statusCheckRollup --jq '.statusCheckRollup[] | "\(.name): \(.conclusion)"'
+
+# 筛选失败的检查
+gh pr view <pr-number> --json statusCheckRollup --jq '.statusCheckRollup[] | select(.conclusion != "SUCCESS")
+```
+
+Workflow for PR:
+
+```bash
+# 等待 PR 检查通过后合并
+while ! gh pr checks <pr-number> | grep -q "pass"; do sleep 30; done && gh pr merge <pr-number> --squash --delete-branch
+
+# 查看所有开放 PR 的状态
+for pr in $(gh pr list --json number --jq '.[].number'); do echo "PR #$pr:"; gh pr checks $pr; echo ""; done
+
+# 批量关闭 PR
+gh pr list --state open --json number --jq '.[].number' | xargs -I {} gh pr close {} --comment "Closing as inactive"
+```
+
+### Workflow
+
+View and watch Workflow:
+
+```bash
+gh run view
+gh run view --log
+gh run watch
 ```
 
 ### Repository
@@ -234,16 +314,6 @@ List repo:
 
 ```bash
 gh repo list sabertazimi
-```
-
-### Workflow
-
-View and watch Workflow:
-
-```bash
-gh run view
-gh run view --log
-gh run watch
 ```
 
 ## Wiki
@@ -381,4 +451,4 @@ updates:
 
 ## Copilot
 
-- GitHub Copilot usage [tips](https://github.blog/2024-03-25-how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices).
+- GitHub Copilot [tips and best practices](https://github.blog/2024-03-25-how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices).
