@@ -372,6 +372,7 @@ export function Button({
 - [Inline Validation](https://www.smashingmagazine.com/2022/09/inline-validation-web-forms-ux)
 - [Pronouns Selector](https://uxdesign.cc/asking-users-for-their-pronouns-a-guide-for-ux-designers-4f31736ae808)
 - [Mobile Apps](https://www.smashingmagazine.com/2024/04/things-users-would-appreciate-mobile-apps)
+- [Combobox vs Multi-select vs Listbox](https://www.smashingmagazine.com/2026/02/combobox-vs-multiselect-vs-listbox)
 
 ### Home
 
@@ -431,7 +432,7 @@ NNGroup article [homepage design principles](https://www.nngroup.com/articles/ho
 - Put tangentially related actions above the form.
 - Place extra buttons based on what they do.
 - In some single field forms put the button next to the input (e.g. `search` button).
-- Put buttons on multi select forms above the form.
+- Put buttons on multi-select forms above the form.
 
 ### Card
 
