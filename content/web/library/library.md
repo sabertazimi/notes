@@ -289,10 +289,10 @@ import LibraryGallery from '@site/src/components/library-gallery'
 
 ### Concurrent and Parallel Programming
 
-- [Bull](https://github.com/OptimalBits/bull):
-  Premium queue package for handling distributed jobs and messages.
-- [Bree](https://github.com/breejs/bree):
-  JavaScript job task scheduler with worker threads, cron, Date, and human syntax.
+- [PQueue](https://github.com/sindresorhus/p-queue):
+  Promise queue with concurrency control.
+- [PMap](https://github.com/sindresorhus/p-map):
+  Map over promises concurrently.
 - [WorkerPool](https://github.com/josdejong/workerpool):
   Offload tasks to workers on Node.js and in browser.
 - [TinyPool](https://github.com/tinylibs/tinypool):
@@ -301,10 +301,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Fast and consistently responsive apps using single function call.
 - [GRFN](https://github.com/TomerAberbach/grfn):
   Executes dependency graph of async functions concurrently.
-- [PQueue](https://github.com/sindresorhus/p-queue):
-  Promise queue with concurrency control.
-- [PMap](https://github.com/sindresorhus/p-map):
-  Map over promises concurrently.
+- [Croner](https://github.com/hexagon/croner):
+  Evaluate cron expressions.
 
 ### Functional Programming
 
