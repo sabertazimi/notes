@@ -154,3 +154,50 @@ Embed [best practice](https://web.dev/embed-best-practices):
 - `parent`: 在父框架集中打开被链接文档.
 - `top`: 在整个窗口中打开被链接文档.
 - `framename`: 在指定的框架中打开被链接文档.
+
+## Geo
+
+```html
+<geolocation autolocate>
+  <button onclick="updateMap(event)">Use my location</button>
+</geolocation>
+<div role="status"></div>
+
+<script>
+  const getLocation = (e) => {
+    let coords
+
+    if (e.coords) {
+      coords = e.coords
+    } else {
+      coords = e.target.position.coords
+    }
+
+    return `<dl>
+    <dt>Accuracy</dt>
+    <dd>${coords.accuracy}</dd>
+    <dt>Latitude</dt>
+    <dd>${coords.latitude}</dd>
+    <dt>Longitude</dt>
+    <dd>${coords.longitude}</dd>
+  </dl>`
+  }
+
+  const updateMap = (e) => {
+    let result,
+      geolocation = 'HTMLGeolocationElement' in window
+
+    if (geolocation) {
+      result = getLocation(e)
+      e.target.nextElementSibling.innerHTML = result
+    } else {
+      navigator.geolocation.getCurrentPosition((e) => {
+        result = getLocation(e)
+        e.target.parentNode.nextElementSibling.innerHTML = result
+      })
+    }
+  }
+  const geo = document.querySelector('geolocation')
+  geo.addEventListener('location', updateMap)
+</script>
+```
