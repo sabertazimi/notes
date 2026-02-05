@@ -238,6 +238,16 @@ body {
 }
 ```
 
+## Box
+
+[Precise](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/text-box) vertical text alignment:
+
+```css
+.vertical-align-text {
+  text-box: trim-both cap alphabetic;
+}
+```
+
 ## White Space
 
 Web default:
