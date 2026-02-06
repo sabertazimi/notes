@@ -260,6 +260,8 @@ from circle to circle:
 
 ## Select
 
+[Modern select](https://nerdy.dev/nice-select):
+
 ```css
 .custom-select {
   width: 15%;
