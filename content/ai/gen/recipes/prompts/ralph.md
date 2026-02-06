@@ -79,26 +79,26 @@ Otherwise end normally.
 
 ## Loop
 
-Coverage:
+### Coverage
 
-````md
+```md
 @coverage-report.txt
 查找覆盖率报告中的未覆盖行。
 为最关键未覆盖的代码路径编写测试。
 再次运行覆盖率并更新 coverage-report.txt。
 目标：至少 80% 覆盖率。
-``
+```
 
-Linting:
+### Linting
 
 ```md
 运行：npm run lint
 一次修复一个 Linting 错误。
 再次运行 lint 以验证修复。
 重复直到没有错误。
-````
+```
 
-Entropy:
+### Entropy
 
 ```md
 扫描代码异味：未使用的导出、死代码、不一致的模式。
