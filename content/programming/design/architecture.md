@@ -183,3 +183,4 @@ more than two out of the following three guarantees:
 - Nest.js clean architecture [template](https://medium.com/@jonathan.pretre91/clean-architecture-with-nestjs-e089cef65045).
 - Domain driven design layout in [Golang](https://github.com/lupguo/ddd-layout).
 - Scaling PostgreSQL to [millions of QPS](https://openai.com/index/scaling-postgresql).
+- Scaling a system [from 0 to 10 million users](https://blog.algomaster.io/p/scaling-a-system-from-0-to-10-million-users).
