@@ -148,7 +148,9 @@ If `containing block` `height` is `auto`, it calculated to `0`.
 
 ## Anchor
 
-[Anchor positioning](https://chrome.dev/anchor-tool):
+### Area
+
+[Anchor area](https://chrome.dev/anchor-tool):
 
 ```css
 .profile-button {
@@ -163,6 +165,8 @@ If `containing block` `height` is `auto`, it calculated to `0`.
 }
 ```
 
+### Offset
+
 ```css
 .profile-button {
   anchor-name: --profile-button;
@@ -171,10 +175,34 @@ If `containing block` `height` is `auto`, it calculated to `0`.
 .profile-menu {
   position-anchor: --profile-button;
   position: absolute;
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   inset-block-start: anchor(end); /* top: anchor(--profile-button bottom) */
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   inset-inline-start: anchor(start); /* left: anchor(--profile-button left) */
+}
+```
+
+### Pseudo-element
+
+Pseudo-element [anchor positioning](http://rolandfranke.nl/frontend-stories/drawing-connections-with-css-anchor-positioning):
+
+```css
+.comment {
+  anchor-name: --comment;
+}
+
+.reply {
+  anchor-name: --reply;
+  anchor-scope: --reply;
+}
+
+.reply::after {
+  position: absolute;
+  inset-block: anchor(--comment end) anchor(--reply center);
+  inset-inline: calc(anchor(--comment start) + 1.5rem) anchor(--reply start);
+  content: '';
+  border: 1px solid var(--text);
+  border-block-start-color: transparent;
+  border-inline-end-color: transparent;
+  border-radius: 0 0 0 0.75rem;
 }
 ```
 
