@@ -98,6 +98,8 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
   Universal memory layer.
 - [MemOS](https://github.com/MemTensor/MemOS):
   Memory operating system.
+- [Beads](https://github.com/steveyegge/beads):
+  Git-backed graph issue tracker and persistent memory.
 
 ### Workflow
 
