@@ -265,8 +265,6 @@ else
 fi
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ```bash
 #!/usr/bin/bash
 
@@ -288,8 +286,6 @@ else
   grep -r $1 $exclude;
 fi
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### Case
 
