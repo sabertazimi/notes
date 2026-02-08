@@ -65,8 +65,6 @@ Use a markdown table for clear presentation:
 
 ## Common Mistakes
 
-<!-- markdownlint-disable MD013 -->
-
 | Mistake                      | Why It's Wrong                                      | Fix                                     |
 | ---------------------------- | --------------------------------------------------- | --------------------------------------- |
 | Not fetching before checking | Uses stale remote references, misses remote changes | Always run `git fetch` first            |
@@ -75,8 +73,6 @@ Use a markdown table for clear presentation:
 | Not handling missing remotes | Command fails or gives unclear output               | Add `2>/dev/null \|\| echo "No remote"` |
 | Outputting raw numbers       | Hard to parse mentally                              | Format as readable table                |
 | Forgetting to cd into repo   | Command runs in wrong directory                     | Each check needs `cd repo &&`           |
-
-<!-- markdownlint-enable MD013 -->
 
 ## Real-World Impact
 

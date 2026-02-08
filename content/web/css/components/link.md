@@ -91,8 +91,6 @@ a:focus::after {
 
 ## GitHub
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <a href="https://github.com/Trevald/WhatTheTag.com" class="github-corner" aria-label="View source on GitHub">
   <svg
@@ -117,8 +115,6 @@ a:focus::after {
   </svg>
 </a>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ```css
 .github-corner:focus .octo-arm,

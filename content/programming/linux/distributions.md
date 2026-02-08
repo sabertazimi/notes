@@ -130,7 +130,6 @@ wget https://aur.archlinux.org/packages.gz
 [Upgrade to WSL2](https://docs.microsoft.com/windows/wsl/install-manual):
 
 ```bash
-# <!-- markdownlint-disable-next-line MD013 -->
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 

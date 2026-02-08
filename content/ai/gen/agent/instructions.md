@@ -28,7 +28,7 @@ How to write a great `AGENTS.md` [lessons from over 2500 repositories](https://g
    Defines who the agent is (expert technical writer),
    what skills it has (Markdown, TypeScript),
    and what it does (read code, write docs).
-2. Executable **commands**: Gives AI tools it can run (npm run docs:build and npx markdownlint docs/). Commands come first.
+2. Executable **commands**: Gives AI tools it can run. Commands come first.
 3. **Project** knowledge: Specifies tech stack with versions (React 18, TypeScript, Vite, Tailwind CSS) and exact file locations.
 4. Real **examples**: Shows what good output looks like with actual code. No abstract descriptions.
 5. Three-tier **boundaries**: Set clear rules using always do, ask first, never do. Prevents destructive mistakes.

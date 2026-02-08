@@ -178,8 +178,6 @@ This is also used to create **icon systems**.
 
 ## Clip Path
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <svg class="svg">
   <clipPath id="circle" clipPathUnits="objectBoundingBox">
@@ -189,8 +187,6 @@ This is also used to create **icon systems**.
   </clipPath>
 </svg>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ```css
 .item {
