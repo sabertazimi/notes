@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["76950"],{57871(e){e.exports=JSON.parse('{"tag":{"label":"Box","permalink":"/notes/tags/box","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/box","title":"Box Model","description":"Box model:","permalink":"/notes/web/css/box"}],"unlisted":false}}')}}]);

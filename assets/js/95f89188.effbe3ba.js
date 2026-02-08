@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["33894"],{51203(e){e.exports=JSON.parse('{"tag":{"label":"Vitals","permalink":"/notes/tags/vitals","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/performance/vitals","title":"Web Vitals","description":"APIs","permalink":"/notes/web/performance/vitals"}],"unlisted":false}}')}}]);

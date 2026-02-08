@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["12545"],{13803(a){a.exports=JSON.parse('{"tag":{"label":"OOP","permalink":"/notes/tags/oop","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/java/class","title":"\u5BF9\u8C61\u4E0E\u7C7B","description":"\u7279\u5F81","permalink":"/notes/language/java/class"}],"unlisted":false}}')}}]);

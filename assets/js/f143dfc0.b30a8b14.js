@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["15637"],{58111(e){e.exports=JSON.parse('{"tag":{"label":"Tool","permalink":"/notes/tags/tool","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/gen/agent/tool","title":"Tool","description":"Taxonomy","permalink":"/notes/ai/gen/agent/tool"}],"unlisted":false}}')}}]);

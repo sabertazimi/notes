@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["79234"],{37467(e){e.exports=JSON.parse('{"tag":{"label":"IR","permalink":"/notes/tags/ir","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/compilers/ir","title":"Intermediate Representation","description":"IR:","permalink":"/notes/cs/compilers/ir"}],"unlisted":false}}')}}]);

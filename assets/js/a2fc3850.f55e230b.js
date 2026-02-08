@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["51074"],{28376(e){e.exports=JSON.parse('{"tag":{"label":"Gate","permalink":"/notes/tags/gate","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/verilog/gate","title":"Gate","description":"- and","permalink":"/notes/language/verilog/gate"}],"unlisted":false}}')}}]);

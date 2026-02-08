@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["40601"],{69283(e){e.exports=JSON.parse('{"tag":{"label":"RegExp","permalink":"/notes/tags/reg-exp","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/regexp","title":"Regular Expression","description":"Flags","permalink":"/notes/web/javascript/regexp"}],"unlisted":false}}')}}]);

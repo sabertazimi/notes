@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["44631"],{95185(e){e.exports=JSON.parse('{"tag":{"label":"MCP","permalink":"/notes/tags/mcp","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/gen/mcp","title":"Model Context Protocol","description":"Model Context Protocol","permalink":"/notes/ai/gen/mcp"}],"unlisted":false}}')}}]);
