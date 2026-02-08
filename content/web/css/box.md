@@ -200,12 +200,14 @@ Box sizing:
 The `display` property can have **two parts**: an outer and an inner value:
 
 ```css
-/* Modern equivalent of inline-block */
-display: inline flow-root;
-
-/* Outer value: how element behaves with other elements (inline, block) */
-
-/* Inner value: how element behaves with its own content (flow, flow-root, grid, flex) */
+/**
+ * Modern equivalent of inline-block
+ * Outer value: how element behaves with other elements (inline, block)
+ * Inner value: how element behaves with its own content (flow, flow-root, grid, flex)
+ */
+.display {
+  display: inline flow-root;
+}
 ```
 
 - `inline-block` is legacy syntax for `inline flow-root`
@@ -507,7 +509,9 @@ The `middle` value is **not** exact middle of line:
 
 ```css
 /* middle = baseline + (x-height / 2) */
-vertical-align: middle;
+.text {
+  vertical-align: middle;
+}
 ```
 
 It's calculated from `font` metrics and `line-height`,

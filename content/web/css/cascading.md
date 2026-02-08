@@ -140,6 +140,7 @@ tags: [Web, CSS, Cascading, Layer, Scope, Specificity, Inheritance]
     background-color: red;
   }
 
+  /* stylelint-disable-next-line no-duplicate-selectors */
   & img {
     background-color: red;
   }
