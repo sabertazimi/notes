@@ -532,9 +532,10 @@ match.addEventListener('change', (e) => {
 Detecting media query support in CSS:
 
 ```css
-/* stylelint-disable-next-line media-feature-name-no-unknown */
 @media not all and (prefers-reduced-data), (prefers-reduced-data) {
-  color: blue;
+  .text {
+    color: blue;
+  }
 }
 ```
 
