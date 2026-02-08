@@ -79,9 +79,7 @@ tags: [Web, CSS, Gradient]
 ```css
 .radial-gradient {
   background-image: radial-gradient(50px, white, deepskyblue);
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   background-image: radial-gradient(50px 50%, white, deepskyblue);
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   background-image: radial-gradient(50% 50%, white, deepskyblue);
   background-image: radial-gradient(100px at 0 0, white, deepskyblue);
   background-image: radial-gradient(100px at left top, white, deepskyblue);

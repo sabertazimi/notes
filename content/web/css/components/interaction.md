@@ -60,13 +60,6 @@ tags: [Web, CSS, Component, Interaction, Modal, Dialog, Tooltip]
   z-index: 99;
   text-align: center;
   white-space: nowrap;
-
-  /* for IE8 */
-  background: url('data:image/png;base64,iVB...g==');
-
-  /* for IE9+ */
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
-  background: rgb(0 0 0 / 50%), none;
 }
 
 .container::after {

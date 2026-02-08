@@ -71,6 +71,20 @@ tag-not-found::backdrop,
 }
 ```
 
+## Background
+
+```css
+.container {
+  /* for IE8 */
+
+  /* background: url('data:image/png;base64,iVB...g=='); */
+
+  /* for IE9+ */
+
+  /* background: rgb(0 0 0 / 50%), none; */
+}
+```
+
 ## References
 
 - Browser [hacks](https://github.com/4ae9b8/browserhacks).

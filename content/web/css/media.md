@@ -203,10 +203,7 @@ tags: [Web, CSS, Responsive, Media]
 
 [`viewport-segments`](https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Foldables/explainer.md):
 
-<!-- markdownlint-disable MD013 -->
-
 ```css
-/* stylelint-disable-next-line media-feature-name-no-unknown */
 @media (horizontal-viewport-segments <= 2) and (vertical-viewport-segments <= 1) {
   main article {
     flex: 1 1 env(viewport-segment-width 0 0);
@@ -217,8 +214,6 @@ tags: [Web, CSS, Responsive, Media]
   }
 }
 ```
-
-<!-- markdownlint-enable MD013 -->
 
 ## Display Mode
 

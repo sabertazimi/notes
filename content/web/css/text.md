@@ -17,8 +17,6 @@ tags: [Web, CSS, Typography, Text]
 .wrap {
   text-align: justify;
   text-align-last: justify; /* 一个块或行的最后一行对齐方式 */
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
-  text-justify: distribute-all-lines; /* ie6-8 */
 }
 ```
 
@@ -431,8 +429,6 @@ Set whether lines of text are laid out horizontally or **vertically**:
   writing-mode: vertical-lr; /* 竖直从左向右 */
   writing-mode: vertical-rl; /* 竖直从右向左 */
   writing-mode: lr-tb; /* IE: 水平排列 */
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
-  writing-mode: tb-lr; /* IE: 竖直从左向右 */
   writing-mode: tb-rl; /* IE: 竖直从右向左 */
 }
 ```

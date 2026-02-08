@@ -173,7 +173,6 @@ animating an element along a defined path:
   offset: none;
 
   /* Offset path */
-  /* stylelint-disable-next-line function-no-unknown */
   offset: ray(45deg closest-side);
   offset: url('arc.svg');
   offset: path('M 100 100 L 300 100 L 200 300 z');
@@ -185,7 +184,6 @@ animating an element along a defined path:
   offset: url('circle.svg') 50px 20deg;
 
   /* Including offset anchor */
-  /* stylelint-disable-next-line function-no-unknown */
   offset: ray(45deg closest-side) / 40px 20px;
   offset: url('arc.svg') 2cm / 0.5cm 3cm;
   offset: url('arc.svg') 30deg / 50px 100px;

@@ -96,7 +96,6 @@ $colors: (
 
 // Yep but nope
 $params: (true, 42, 'kittens');
-// stylelint-disable-next-line function-no-unknown
 $value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
 
 // Yep
