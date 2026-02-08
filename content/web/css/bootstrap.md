@@ -51,9 +51,7 @@ Some useful best practices:
 }
 
 @function theme-color-level($color-name: 'primary', $level: 0) {
-  /* stylelint-disable-next-line function-no-unknown */
   $color: theme-color($color-name);
-  /* stylelint-disable-next-line function-no-unknown */
   $color-base: if($level > 0, #000, #fff);
   $level: abs($level);
 
@@ -62,9 +60,7 @@ Some useful best practices:
 
 /* color contrast: color-yiq(color) */
 .custom-element {
-  /* stylelint-disable-next-line function-no-unknown */
   color: color-yiq(theme-color('dark'));
-  /* stylelint-disable-next-line function-no-unknown */
   background-color: color-yiq(#000);
 }
 ```
@@ -221,7 +217,6 @@ $card-bg: $violet-0;
 $breadcrumb-bg: $violet-0;
 $breadcrumb-divider-color: $gray-600;
 $breadcrumb-active-color: $violet-3;
-/* stylelint-disable-next-line function-no-unknown */
 $breadcrumb-divider: quote('>');
 ```
 

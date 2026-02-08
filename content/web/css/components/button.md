@@ -75,7 +75,6 @@ a.btn-custom {
 }
 
 .ripple-button:active {
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   background-image: radial-gradient(160% 100% at 50% 0%, hsl(0deg 0% 100% / 30%) 50%, hsl(0deg 0% 100% / 0%) 52%);
 }
 

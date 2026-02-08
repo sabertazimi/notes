@@ -685,7 +685,6 @@ Background gradient square shape:
 }
 
 .checkerboard-conic-gradient {
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
   background-size: 30px 30px;
 }

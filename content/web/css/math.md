@@ -95,8 +95,6 @@ lead to broken `calc()` addition and subtraction operator.
 
 Generate fluid size for [`Tailwind.css`](https://davidhellmann.com/blog/development/tailwindcss-fluid-typography-with-css-clamp):
 
-<!-- markdownlint-disable line-length -->
-
 ```ts
 const settings = {
   typography: {
@@ -147,7 +145,8 @@ function clamp(multiMin = 0, multiMax = null) {
   const _calcMulti = calcMulti(multiMin, multiMax || multiMin)
   const _fsMin = _calcMulti.fsMin
   const _fsMax = _calcMulti.fsMax
-  return `clamp(${_fsMin}rem, calc(${_fsMin}rem + (${_fsMax} - ${_fsMin}) * ((100vw - ${screenMin}rem) / (${screenMax} - ${screenMin}))), ${_fsMax}rem)`
+  const _calc = `calc(${_fsMin}rem + (${_fsMax} - ${_fsMin}) * ((100vw - ${screenMin}rem) / (${screenMax} - ${screenMin})))`
+  return `clamp(${_fsMin}rem, ${_calc}, ${_fsMax}rem)`
 }
 
 const fontSize = {
@@ -173,8 +172,6 @@ module.exports = {
   },
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ```css
 :root {
