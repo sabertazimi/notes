@@ -26,4 +26,4 @@ AI Agent system that uses LLMs as core reasoning engine, augmented with tools, m
 
 ## Resources
 
-- [Ecosystem](./ecosystem.md) - SDKs, frameworks, and agent tools
+- [Toolchain](./toolchain.md) - SDKs, frameworks, and agent tools
