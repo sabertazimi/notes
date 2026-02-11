@@ -444,6 +444,17 @@ Scroll bars take up space within `padding box`.
 }
 ```
 
+### Gutter
+
+[`scrollbar-gutter`](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/scrollbar-gutter),
+预留滚动条占用空间, 防止 layout shift:
+
+```css
+html {
+  scrollbar-gutter: stable;
+}
+```
+
 ## Parallax
 
 ### Background Attachment
