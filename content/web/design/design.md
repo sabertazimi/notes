@@ -493,3 +493,5 @@ for AI Interfaces:
   Design team for fast-moving founders.
 - [Web Almanac](https://almanac.httparchive.org):
   Annual state of the web report.
+- [Selection](https://www.projectwallace.com/the-css-selection/2026):
+  The state of real-world CSS usage.
