@@ -3,6 +3,7 @@
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  '*.{md,css}': 'stylelint --fix',
+  'src/**/*.css': 'stylelint --fix',
+  'content/web/css/**/*.md': 'stylelint --fix',
   'content/**/*.md': 'markdownlint --fix',
 }
