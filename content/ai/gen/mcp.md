@@ -149,6 +149,10 @@ Use [MCPorter](https://github.com/steipete/mcporter) to wrap MCP servers into CL
 - [Playwright](https://github.com/microsoft/playwright-mcp).
 - [StageWise](https://github.com/stagewise-io/stagewise).
 
+### Backend
+
+- [Database](https://github.com/Anarkh-Lee/universal-db-mcp).
+
 ### Integration
 
 - [Figma](https://github.com/figma/mcp-server-guide).
