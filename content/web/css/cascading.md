@@ -132,23 +132,50 @@ tags: [Web, CSS, Cascading, Layer, Scope, Specificity, Inheritance]
     <figcaption>Figure Caption</figcaption>
   </figure>
 </section>
+
+<style>
+  @scope (.scope-root) to (.scope-limit) {
+    img {
+      background-color: red;
+    }
+
+    /* stylelint-disable-next-line no-duplicate-selectors */
+    & img {
+      background-color: red;
+    }
+
+    :scope img {
+      background-color: red;
+    }
+  }
+</style>
 ```
 
-```css
-@scope (.scope-root) to (.scope-limit) {
-  img {
-    background-color: red;
+When two elements have equal specificity,
+the one whose scope root is closer to the matched element
+[wins](https://www.smashingmagazine.com/2026/02/css-scope-alternative-naming-conventions):
+
+```html
+<div class="sidebar">
+  <div class="container">
+    <h2 class="title">Hello</h2>
+  </div>
+</div>
+
+<style>
+  @scope (.container) {
+    .title {
+      color: green;
+    }
   }
 
-  /* stylelint-disable-next-line no-duplicate-selectors */
-  & img {
-    background-color: red;
+  /* The <h2 > is closer to .container than to .sidebar so 'color: green' wins. */
+  @scope (.sidebar) {
+    .title {
+      color: red;
+    }
   }
-
-  :scope img {
-    background-color: red;
-  }
-}
+</style>
 ```
 
 ## Nesting
