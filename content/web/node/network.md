@@ -262,3 +262,7 @@ dns.resolve('github.com', 'MX', (err, res) => {
 // true 表示调用 queryString 模块查询字符串
 url.parse(request.url, true)
 ```
+
+## References
+
+- HTTP request definitive [guide](https://nodejsdesignpatterns.com/blog/nodejs-http-request).
