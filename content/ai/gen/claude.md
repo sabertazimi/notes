@@ -329,7 +329,7 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
 
 ## Library
 
-### Bootstrap
+### Boilerplate
 
 - [Templates](https://github.com/davila7/claude-code-templates):
   Configuring and monitoring tool.
