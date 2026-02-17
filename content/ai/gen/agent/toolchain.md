@@ -109,6 +109,8 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
   n8n workflows.
 - [Dify](https://github.com/langgenius/dify):
   LLM app development platform combines workflow, RAG pipeline, agent capabilities.
+- [GitHub](https://github.com/github/gh-aw):
+  GitHub agentic workflows.
 
 ### Project
 
