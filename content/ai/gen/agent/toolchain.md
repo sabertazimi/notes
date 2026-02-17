@@ -3,7 +3,7 @@ sidebar_position: 50
 tags: [AI, Generative AI, LLM, Agent, Library, Toolchain]
 ---
 
-# Ecosystem
+# Toolchain
 
 ## LangChain
 
@@ -78,6 +78,8 @@ Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-bui
   Coding agents.
 - [Claw](https://github.com/openclaw/openclaw):
   Personal AI assistant.
+- [CUA](https://github.com/trycua/cua)
+  Infrastructure for computer-use agents.
 - [SWE](https://github.com/princeton-nlp/SWE-agent):
   Issue auto-fixer.
 - [PR](https://github.com/qodo-ai/pr-agent):
