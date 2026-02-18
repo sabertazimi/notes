@@ -263,6 +263,31 @@ dns.resolve('github.com', 'MX', (err, res) => {
 url.parse(request.url, true)
 ```
 
+```ts
+function buildUrl(baseUrl, params) {
+  const url = new URL(baseUrl)
+
+  for (const [key, value] of Object.entries(params)) {
+    if (value !== undefined && value !== null) {
+      url.searchParams.append(key, value)
+    }
+  }
+
+  return url.toString()
+}
+
+const url = buildUrl('https://api.example.com/search', {
+  query: 'node.js',
+  page: 1,
+  limit: 20,
+  sort: 'date',
+})
+
+const response = await fetch(url)
+console.log(url)
+// https://api.example.com/search?query=node.js&page=1&limit=20&sort=date
+```
+
 ## Best Practices
 
 1. Always handle errors (`try/catch` and status codes).
