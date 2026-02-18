@@ -99,6 +99,52 @@ return {
 
 See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunity).
 
+### ESLint
+
+`~/.config/nvim/lua/plugins/astrolsp.lua`:
+
+```lua
+return {
+  opts = {
+    config = {
+      eslint = {
+        filetypes = {
+          "javascript",
+          "javascriptreact",
+          "javascript.jsx",
+          "typescript",
+          "typescriptreact",
+          "typescript.tsx",
+          "vue",
+          "html",
+          "markdown",
+          "json",
+          "jsonc",
+          "yaml",
+          "toml",
+          "xml",
+          "gql",
+          "graphql",
+          "astro",
+          "svelte",
+          "css",
+          "less",
+          "scss",
+          "pcss",
+          "postcss",
+        },
+      },
+    },
+    on_attach = function(client, bufnr)
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        command = "EslintFixAll",
+      })
+    end,
+  },
+}
+```
+
 ## Easy Motion
 
 | Motion Command                      | Description                           |
