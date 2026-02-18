@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-tags: [Web, Node.js, Network, Fetch, HTTP, Socket, DNS, URL]
+tags: [Web, Node.js, Network, Fetch, HTTP, Socket, DNS, URL, Best Practice]
 ---
 
 # Network
@@ -261,6 +261,53 @@ dns.resolve('github.com', 'MX', (err, res) => {
 ```ts
 // true 表示调用 queryString 模块查询字符串
 url.parse(request.url, true)
+```
+
+## Best Practices
+
+1. Always handle errors (`try/catch` and status codes).
+2. Set timeouts (`AbortController`).
+3. Validate responses before accessing properties.
+4. Use environment variables for URLs and tokens.
+5. Consider rate limiting (backoff strategies for retries).
+6. Log requests in development.
+
+```ts
+// Example: Wrapper with best practices
+async function apiRequest(endpoint, options = {}) {
+  // [Practice #4] Load sensitive values from environment variables
+  const baseUrl = process.env.API_BASE_URL
+  const token = process.env.API_TOKEN
+
+  // [Practice #1] Wrap in try/catch to handle errors
+  try {
+    const response = await fetch(`${baseUrl}${endpoint}`, {
+      ...options,
+      signal: AbortSignal.timeout(10000), // [Practice #2] Set 10s timeout
+      headers: {
+        'Authorization': `Bearer ${token}`, // [Practice #4] Use env var for token
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+    })
+
+    // [Practice #1] Check response status and handle errors
+    if (!response.ok) {
+      const errorBody = await response.text()
+      throw new Error(`API error ${response.status}: ${errorBody}`)
+    }
+
+    // [Practice #3] Parse response (caller should validate structure)
+    return await response.json()
+  } catch (error) {
+    // [Practice #2] Handle timeout specifically
+    if (error.name === 'TimeoutError') {
+      throw new Error(`Request to ${endpoint} timed out`)
+    }
+
+    throw error
+  }
+}
 ```
 
 ## References
