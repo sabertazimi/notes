@@ -118,6 +118,18 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
 ```
 
+## Pacman
+
+```bash
+sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
+  noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+  ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
+  mandb fastfetch cmatrix \
+  zsh github-cli neovim nvm \
+  xdg-desktop-portal-gnome rclone \
+  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+```
+
 ## Grub
 
 ```bash
@@ -126,13 +138,22 @@ sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /et
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Pacman
+## Snapshot
 
 ```bash
-sudo pacman -Sy noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
-  fastfetch cmatrix zsh github-cli nvm neovim xdg-desktop-portal-gnome rclone \
-  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+sudo systemctl enable --now grub-btrfsd
+reboot
+
+# Create snapshots
+sudo snapper -c root create-config /
+sudo snapper -c home create-config /home
+sudo snapper list-configs
+sudo snapper -c root create -d "Initial root snapshot"
+sudo snapper -c home create -d "Initial home snapshot"
+sudo snapper list
+
+# Generate grub menu entry
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Locale
