@@ -100,6 +100,18 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
     Mod+Shift+Ctrl+V { expel-window-from-column; }
 ```
 
+:::tip [Polkit]
+
+If polkit in DMS broken:
+
+```bash
+sudo pacman -Sy polkit-gnome
+echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"' >> ~/.config/niri/config.kdl
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+```
+
+:::
+
 ## Proxy
 
 ```bash
