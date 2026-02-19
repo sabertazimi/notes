@@ -138,6 +138,11 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
 
+```bash
+# Check package information
+sudo pacman -Si <package-name>
+```
+
 ## AUR
 
 ```bash
