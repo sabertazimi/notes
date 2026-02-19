@@ -88,31 +88,35 @@ sed -i '/binds {/a \    Mod+G { spawn "google-chrome-unstable"; }\n' ~/.config/n
 
 Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
 
-- `Super+Shift+/` for important hotkeys.
-- Launcher: `Super+Space`.
-- Terminal: `Super+t`
+- `Super`+`Shift`+`/` for important hotkeys.
+- Launcher: `Super`+`Space`.
+- Terminal: `Super`+`t`.
 - Window:
-  - Switch: `Alt+Tab`.
-  - Navigation: `Super+h/j/k/l`.
-  - Move: `Super+shift+h/j/k/l`.
+  - Switch: `Alt`+`Tab`.
+  - Navigation: `Super`+`h`/`j`/`k`/`l`.
+  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`.
 - Monitor:
-  - Navigation: `Super+Ctrl+h/j/k/l`.
-  - Move: `Super+Shift+Ctrl+h/j/k/l`.
+  - Navigation: `Super`+`Ctrl`+`h`/`j`/`k`/`l`.
+  - Move: `Super`+`Shift`+`Ctrl`+`h`/`j`/`k`/`l`.
 - Workspace:
-  - Navigation: `Super+u/i`.
-  - Move: `Super+Ctrl+u/i`(column), `Super+Shift+u/i`(workspace).
+  - Navigation: `Super`+`u`/`i`.
+  - Move: `Super`+`Ctrl`+`u`/`i` (column), `Super`+`Shift`+`u`/`i` (workspace).
 - Vertical:
-  - Left: `Super+[`.
-  - Right: `Super+]`.
-  - Expel: `Super+.`.
+  - Left: `Super`+`[`.
+  - Right: `Super`+`]`.
+  - Tab (stack): `Super`+`w`, `Super`+`j`/`k`.
+  - Expel: `Super`+`.`.
 - Floating:
-  - Toogle: `Super+Shift+t`.
-  - Switch: `Super+Shift+v`.
-  - Move: `Super+Shift+h/j/k/l`.
-- Size: `Super+-/+`, `Super+Shift+-/+`, `Super+f`, `Super+Shift+f`.
-- Close: `Super+q`.
+  - Toggle: `Super`+`Shift`+`t`.
+  - Switch: `Super`+`Shift`+`v`.
+  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`.
+- Size:
+  - Maximize: `Super`+`f`, `Super`+`Shift`+`f`.
+  - Preset: `Super`+`r`, `Super`+`Shift`+`r`, `Super`+`Ctrl`+`r`.
+  - Manual: `Super`+`-`/`+`, `Super`+`Shift`+`-`/`+`
+- Close: `Super`+`q`.
 
-:::tip [Polkit]
+:::tip[Polkit]
 
 If polkit in DMS broken:
 
