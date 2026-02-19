@@ -127,7 +127,8 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   zsh github-cli neovim wl-clipboard \
   nvm jre8-openjdk \
   xdg-desktop-portal xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
-  flatpak
+  flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon \
+  imagemagick ffmpeg \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
 
