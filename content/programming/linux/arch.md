@@ -149,13 +149,163 @@ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
 ```
 
-## Git
-
-See [git configuration](../git/config.md).
-
 ## Toolchain
 
-See [linux toolchain](./toolchain.md).
+[Modern toolchain](./toolchain.md):
+
+```bash
+# ~/.zshrc
+eval "$(mise activate zsh)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+source <(fx --comp zsh)
+
+# bind 'set bell-style none'
+
+# Use fd for listing path candidates
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd for list directory candidates
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
+
+alias app="scoop"
+alias cc="claude"
+alias ccc="claude -c"
+alias ccr="claude -r"
+alias ccm="claude -p 'commit'"
+alias code="cursor"
+alias np="pnpm"
+alias vim="nvim"
+
+alias cd="z"
+alias cat="bat"
+alias ls="eza"
+alias du="dust"
+alias df="duf"
+alias find="fd --hidden --follow --exclude .git"
+alias grep="rg"
+alias top="btm"
+alias ping="gping"
+alias ps="procs"
+alias curl="curlie"
+
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+`$HOME/.ripgreprc`:
+
+```bash
+# Add 'web' type.
+--type-add
+web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
+
+# Search hidden files / directories (e.g. dotfiles) by default
+--hidden
+
+# Using glob patterns to include/exclude files or folders
+--glob
+!**/.git/*
+
+# Ignore case unless all caps
+--smart-case
+```
+
+## Git
+
+[Git configuration](../git/config.md):
+
+```bash
+git config --global user.name "sabertazimi"
+git config --global user.email sabertazimi@gmail.com
+git config --global core.autocrlf false
+git config --global core.editor nvim
+git config --global credential.helper store
+git config --global color.ui true
+git config --global commit.template ~/.gitmsg.md
+
+git config --global init.defaultBranch main
+git config --global merge.conflictstyle diff3
+git config --global push.default simple
+git config --global push.autoSetupRemote true
+git config --global pull.rebase true
+git config --global fetch.prune true
+git config --global fetch.pruneTags true
+git config --global fetch.all true
+git config --global rebase.autoSquash true
+git config --global rebase.autoStash true
+git config --global rebase.updateRefs true
+
+git config --global diff.algorithm histogram
+git config --global diff.colorMoved plain
+git config --global diff.mnemonicPrefix true
+git config --global diff.renames true
+
+# brew install git-delta
+# sudo pacman -Sy git-delta
+# winget install dandavison.delta
+# scoop install delta
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global delta.dark true
+git config --global delta.line-numbers true
+git config --global delta.side-by-side true
+git config --global merge.conflictStyle zdiff3
+
+git config --global alias.s "status"
+git config --global alias.c "commit --verbose"
+git config --global alias.a "add"
+git config --global alias.rs "restore --staged"
+git config --global alias.st "stash"
+git config --global alias.pr "pull --rebase"
+git config --global alias.d '!sh -c "git diff --cached | cat"'
+
+# after 1s, git auto correct wrong command
+git config --global help.autocorrect 10
+```
+
+## GitHub
+
+```bash
+# Generate GPG key
+gpg --full-generate-key
+# List GPG keys
+gpg --list-secret-keys --keyid-format=long
+
+# Export GPG public key as an ASCII armored version
+gh auth refresh -s write:gpg_key
+gpg --armor --export <pub-keyID> | gh gpg-key add --title "Archlinux" -
+
+# Export GPG private key as an ASCII armored version
+# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
+
+# Git global configuration for GPG signature commits
+git config --global commit.gpgsign true
+git config --global gpg.program gpg
+git config --global user.signingkey <pub-keyID>
+
+# Import GitHugit log --show-signatureb signature
+curl https://github.com/web-flow.gpg | gpg --import
+# gpg --sign-key <GitHub-keyID>
+gpg --sign-key B5690EEEBB952194
+
+# Log git signature
+git log --show-signature
+
+# WSL2 fix: Add to ~/.zshrc
+# export GPG_TTY=$(tty)
+
+# Single signature commit
+# git commit -S -m "..."
+```
 
 ## OneDrive
 
