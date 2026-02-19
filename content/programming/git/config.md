@@ -85,7 +85,7 @@ gpg --list-secret-keys --keyid-format=long
 
 # Export GPG public key as an ASCII armored version
 gh auth refresh -s write:gpg_key
-gpg --armor --export <pub-keyID> | gh gpg-key add --title "Archlinux" -
+gpg --armor --export <pub-keyID> | gh gpg-key add --title "Arch Linux" -
 
 # Export GPG private key as an ASCII armored version
 # gpg --armor --export-secret-key sabertazimi@gmail.com -w0
