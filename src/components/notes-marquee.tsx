@@ -47,7 +47,7 @@ const DefaultNotes: Note[][] = [
   // Row 5: Development Practices
   [
     { title: 'Patterns', category: 'Design', href: '/programming/design/patterns' },
-    { title: 'Shell Scripts', category: 'Linux', href: '/programming/linux/shell' },
+    { title: 'Arch Linux', category: 'Linux', href: '/programming/linux/arch' },
     { title: 'Internals', category: 'Git', href: '/programming/git/internals' },
     { title: 'Neovim', category: 'Vim', href: '/programming/vim/toolchain' },
     { title: 'Kubernetes', category: 'DevOps', href: '/programming/devops/k8s' },
