@@ -48,7 +48,6 @@ sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git unzip vim
 ```bash
 mkdir -vp /home/sabertaz/.cargo
 
-
 cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
 [source.crates-io]
 replace-with = 'ustc'
