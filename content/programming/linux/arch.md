@@ -84,10 +84,14 @@ dms greeter sync
 ```
 
 ```bash
+# Change window switch scope to all monitors
+sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
+
+# Customize hotkeys
 sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+G { spawn "google-chrome-unstable"; }\n    Mod+E { spawn "nautilus"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
-Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
+Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
 
 - `Super`+`Shift`+`/` for important hotkeys.
 - Launcher: `Super`+`Space`.
