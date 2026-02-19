@@ -103,13 +103,16 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
 
 ```bash
 sudo pacman -Sy noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation
+  ttf-dejavu ttf-liberation \
+  fcitx5-im fcitx5-chinese-addons
 ```
 
 ```bash
 sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
 sudo locale-gen
 sudo localectl set-locale LANG=zh_CN.UTF-8
+echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 ```
 
 ## Proxy
@@ -121,7 +124,7 @@ paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
 ## Development
 
 ```bash
-sudo pacman -Sy zsh github-cli nvm neovim fastfetch cmatrix
+sudo pacman -Sy fastfetch cmatrix zsh github-cli nvm neovim rclone xdg-desktop-portal-gnome
 ```
 
 ```bash
@@ -153,3 +156,9 @@ See [git configuration](../git/config.md).
 ## Toolchain
 
 See [linux toolchain](./toolchain.md).
+
+## OneDrive
+
+```bash
+rclone config
+```
