@@ -78,51 +78,6 @@ fc-list
 fc-list : family | sort | uniq
 ```
 
-## Arch Linux
-
-### Setup
-
-```bash
-less /usr/share/aif/docs/official_installation_guide_en
-pacman -S lynx arch-wiki-docs arch-wiki-lite
-lynx /usr/share/doc/arch-wiki/html/index.html
-```
-
-```bash
-systemctl enable dhcpcd
-reboot
-pacman -S --needed base-devel git wget jshon expac yajl zsh vim
-```
-
-- makepkg
-
-```bash
-curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/package_name.tar.gz
-cd package_name
-less PKGBUILD
-less package_name.install
-
-makepkg -si
-# -s sync deps
-# -i install
-# -r rm deps
-# -c clean up
-```
-
-### Pacman
-
-- /etc/pacman.conf
-- /etc/pacman.d/mirrorlist
-
-### AUR
-
-- [yaourt](https://archlinux.fr/yaourt-en)
-
-```bash
-# packages' list
-wget https://aur.archlinux.org/packages.gz
-```
-
 ## WSL
 
 ### Installation
