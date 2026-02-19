@@ -124,8 +124,10 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
   mandb fastfetch cmatrix \
-  zsh github-cli neovim wl-clipboard nvm \
-  xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
+  zsh github-cli neovim wl-clipboard \
+  nvm jre8-openjdk \
+  xdg-desktop-portal xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
+  flatpak
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
 
@@ -168,6 +170,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
 sudo locale-gen
 sudo localectl set-locale LANG=zh_CN.UTF-8
+
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 
@@ -212,6 +215,15 @@ nvim
 {
   "password-store": "gnome-libsecret"
 }
+```
+
+```bash
+echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/login
+echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/greetd
+```
+
+```bash
+xdg-mime default code.desktop text/plain
 ```
 
 ## Toolchain
