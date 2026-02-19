@@ -240,6 +240,37 @@ echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_
 xdg-mime default code.desktop text/plain
 ```
 
+### Claude Code
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+```bash
+sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
+```
+
+`~/.claude/settings.json`:
+
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "ANTHROPIC_MODEL": "glm-4.7",
+    "ANTHROPIC_SMALL_FAST_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
+    "API_TIMEOUT_MS": "3000000",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_BUG_COMMAND": "1"
+  },
+  "autoUpdatesChannel": "stable"
+}
+```
+
 ## Toolchain
 
 [Modern toolchain](./toolchain.md):

@@ -18,6 +18,10 @@ winget install Anthropic.ClaudeCode
 
 ## Configuration
 
+```bash
+sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
+```
+
 `~/.claude/settings.json`:
 
 ```json
@@ -281,33 +285,15 @@ it will extend Claude Code through the plugin system with:
 
 ```bash
 /plugin marketplace add anthropics/claude-plugins-official
-```
-
-```bash
 /plugin marketplace add anthropics/skills
-```
-
-```bash
 /plugin marketplace add obra/superpowers-marketplace
-```
-
-```bash
 /plugin marketplace add sabertazimi/claude-code
 ```
 
 ```bash
 /plugin install frontend-design
-```
-
-```bash
 /plugin install ralph-wiggum
-```
-
-```bash
 /plugin install superpowers@superpowers-marketplace
-```
-
-```bash
 /plugin install sabertaz-claude-code
 ```
 
