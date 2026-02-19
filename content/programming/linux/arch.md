@@ -150,7 +150,8 @@ sudo snapper -c home create-config /home
 sudo snapper list-configs
 sudo snapper -c root create -d "Initial root snapshot"
 sudo snapper -c home create -d "Initial home snapshot"
-sudo snapper list
+sudo snapper list -a
+sudo snapper -c <config-name> delete <number-id>
 
 # Generate grub menu entry
 sudo grub-mkconfig -o /boot/grub/grub.cfg
