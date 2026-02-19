@@ -271,6 +271,24 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 }
 ```
 
+```bash
+/plugin marketplace add anthropics/skills
+/plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+/plugin marketplace add sabertazimi/claude-code
+```
+
+```bash
+/plugin install ralph-loop
+/plugin install superpowers@superpowers-marketplace
+/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+/plugin install sabertaz
+```
+
+```bash
+pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
+```
+
 ## Toolchain
 
 [Modern toolchain](./toolchain.md):

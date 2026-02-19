@@ -273,7 +273,7 @@ grep -r "eval" .
 
 ## Plugins
 
-Install [plugins](https://github.com/anthropics/claude-code/tree/main/plugins)
+Install [plugins](https://github.com/anthropics/claude-plugins-official)
 from [marketplace](https://code.claude.com/docs/en/plugin-marketplaces),
 it will extend Claude Code through the plugin system with:
 
@@ -284,17 +284,21 @@ it will extend Claude Code through the plugin system with:
 - MCP servers.
 
 ```bash
-/plugin marketplace add anthropics/claude-plugins-official
 /plugin marketplace add anthropics/skills
 /plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
 /plugin marketplace add sabertazimi/claude-code
 ```
 
 ```bash
-/plugin install frontend-design
-/plugin install ralph-wiggum
+/plugin install ralph-loop
 /plugin install superpowers@superpowers-marketplace
-/plugin install sabertaz-claude-code
+/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+/plugin install sabertaz
+```
+
+```bash
+pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 ```
 
 ## SDK
