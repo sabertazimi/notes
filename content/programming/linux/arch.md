@@ -48,11 +48,12 @@ pacman -Sy lynx arch-wiki-docs arch-wiki-lite
 ## Setup
 
 ```bash
-sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git vim unzip wget
+sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober \
+  git zsh vim neovim unzip wget
 ```
 
 ```bash
-echo "EDITOR=vim" | sudo tee -a /etc/environment
+echo "EDITOR=nvim" | sudo tee -a /etc/environment
 mkdir -vp /home/sabertaz/.cargo
 
 cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
@@ -141,7 +142,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
   mandb cmatrix fastfetch net-tools archlinux-wallpaper \
-  zsh github-cli neovim wl-clipboard \
+  github-cli wl-clipboard \
   nvm jre8-openjdk \
   xdg-desktop-portal xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon \
