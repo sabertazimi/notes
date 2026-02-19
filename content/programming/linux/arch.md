@@ -146,3 +146,11 @@ echo "alias vim=nvim" >> ~/.zshrc
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
 ```
+
+## Git
+
+See [git configuration](../git/config.md).
+
+## Toolchain
+
+See [linux toolchain](./toolchain.md).
