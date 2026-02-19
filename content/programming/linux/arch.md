@@ -208,6 +208,9 @@ sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
 sudo locale-gen
 sudo localectl set-locale LANG=zh_CN.UTF-8
 
+LC_ALL=C.UTF-8 xdg-user-dirs-update --force
+cat ~/.config/user-dirs.dirs
+
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 
