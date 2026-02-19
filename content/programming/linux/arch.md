@@ -148,11 +148,9 @@ echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
 nvm install --lts
 npm config set registry https://registry.npmmirror.com --global
 npm install -g pnpm
-echo "alias np=pnpm" >> ~/.zshrc
 ```
 
 ```bash
-echo "alias vim=nvim" >> ~/.zshrc
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
 ```
@@ -182,12 +180,10 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-alias app="scoop"
 alias cc="claude"
 alias ccc="claude -c"
 alias ccr="claude -r"
 alias ccm="claude -p 'commit'"
-alias code="cursor"
 alias np="pnpm"
 alias vim="nvim"
 
@@ -322,4 +318,5 @@ rclone config
 mkdir -p ~/onedrive
 rclone mount <remote-name>: ~/onedrive --vfs-cache-mode writes
 rclone ls <remote-name>:
+echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"' >> ~/.zshrc
 ```
