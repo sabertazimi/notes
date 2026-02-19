@@ -125,8 +125,14 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
   mandb fastfetch cmatrix \
   zsh github-cli neovim wl-clipboard nvm \
-  xdg-desktop-portal-gnome rclone \
+  xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+```
+
+## AUR
+
+```bash
+paru -S visual-studio-code-bin
 ```
 
 ## Grub
@@ -168,13 +174,19 @@ sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XM
 
 ## Development
 
+### Zsh
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+### Github CLI
+
 ```bash
 gh auth login
 ```
+
+### Node.js
 
 ```bash
 echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
@@ -183,9 +195,21 @@ npm config set registry https://registry.npmmirror.com --global
 npm install -g pnpm
 ```
 
+### Neovim
+
 ```bash
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
+```
+
+### VSCode
+
+`Preferences: Configure Runtime Arguments`:
+
+```json
+{
+  "password-store": "gnome-libsecret"
+}
 ```
 
 ## Toolchain
