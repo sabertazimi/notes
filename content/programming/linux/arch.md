@@ -487,3 +487,11 @@ rclone mount <remote-name>: ~/onedrive --vfs-cache-mode writes
 rclone ls <remote-name>:
 echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"' >> ~/.zshrc
 ```
+
+## Steam
+
+静默启动:
+
+```bash
+sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
+```
