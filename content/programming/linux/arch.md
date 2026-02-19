@@ -123,7 +123,7 @@ paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
 sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
-  mandb fastfetch cmatrix \
+  mandb fastfetch cmatrix net-tools \
   zsh github-cli neovim wl-clipboard \
   nvm jre8-openjdk \
   xdg-desktop-portal xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
@@ -135,7 +135,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
 ## AUR
 
 ```bash
-paru -S visual-studio-code-bin
+paru -S visual-studio-code-bin uudeck
 ```
 
 ## Flatpak
