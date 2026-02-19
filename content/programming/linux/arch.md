@@ -46,6 +46,7 @@ sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git unzip vim
 ```
 
 ```bash
+echo "EDITOR=vim" | sudo tee -a /etc/environment
 mkdir -vp /home/sabertaz/.cargo
 
 cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
