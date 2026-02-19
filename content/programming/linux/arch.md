@@ -192,9 +192,7 @@ sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XM
 git  clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh
 ```
 
-## Development
-
-### Zsh
+## Zsh
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -203,13 +201,13 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 # p10k configure
 ```
 
-### Github CLI
+## Github CLI
 
 ```bash
 gh auth login
 ```
 
-### Node.js
+## Node.js
 
 ```bash
 echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
@@ -218,14 +216,14 @@ npm config set registry https://registry.npmmirror.com --global
 npm install -g pnpm
 ```
 
-### Neovim
+## Neovim
 
 ```bash
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
 ```
 
-### VSCode
+## VSCode
 
 `Preferences: Configure Runtime Arguments`:
 
@@ -244,7 +242,7 @@ echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_
 xdg-mime default code.desktop text/plain
 ```
 
-### Claude Code
+## Claude Code
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
@@ -291,6 +289,13 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 
 ```bash
 pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
+```
+
+## Ghostty
+
+```bash
+git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+echo "custom-shader = shaders/cusor_warp.glsl" >> ~/.config/ghostty/config
 ```
 
 ## Toolchain
