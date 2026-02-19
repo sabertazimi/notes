@@ -190,6 +190,7 @@ alias ls="eza"
 
 ```bash
 brew install git-delta
+sudo pacman -Sy git-delta
 scoop install delta
 winget install dandavison.delta
 ```

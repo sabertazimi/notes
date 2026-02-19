@@ -45,10 +45,10 @@ git config --global diff.renames true
 ```
 
 ```bash
-brew install git-delta
-winget install dandavison.delta
-scoop install delta
-
+# brew install git-delta
+# sudo pacman -Sy git-delta
+# winget install dandavison.delta
+# scoop install delta
 git config --global core.pager delta
 git config --global interactive.diffFilter 'delta --color-only'
 git config --global delta.navigate true
@@ -71,6 +71,63 @@ git config --global alias.d '!sh -c "git diff --cached | cat"'
 ```bash
 # after 1s, git auto correct wrong command
 git config --global help.autocorrect 10
+```
+
+## GPG
+
+[Generate new GPG key](https://docs.github.com/authentication/managing-commit-signature-verification/generating-a-new-gpg-key):
+
+```bash
+# Generate GPG key
+gpg --full-generate-key
+# List GPG keys
+gpg --list-secret-keys --keyid-format=long
+
+# Export GPG public key as an ASCII armored version
+gh auth refresh -s write:gpg_key
+gpg --armor --export <pub-keyID> | gh gpg-key add --title "Archlinux" -
+
+# Export GPG private key as an ASCII armored version
+# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
+
+# Git global configuration for GPG signature commits
+git config --global commit.gpgsign true
+git config --global gpg.program gpg
+git config --global user.signingkey <pub-keyID>
+
+# Import GitHugit log --show-signatureb signature
+curl https://github.com/web-flow.gpg | gpg --import
+# gpg --sign-key <GitHub-keyID>
+gpg --sign-key B5690EEEBB952194
+
+# Log git signature
+git log --show-signature
+
+# WSL2 fix: Add to ~/.zshrc
+export GPG_TTY=$(tty)
+
+# Single signature commit
+git commit -S -m "..."
+```
+
+[Update existing GPG key](https://inspirezone.tech/using-gpg-keys-on-github):
+
+```bash
+gpg --edit-key <pub-keyID>
+> expire
+> passwd
+> save
+```
+
+After this
+[update](https://github.blog/changelog/2022-05-31-improved-verification-of-historic-git-commit-signatures)
+commits signed with expired GPG key (before it expired)
+no longer become `unverified` state.
+
+```bash
+git config --global commit.gpgsign true
+git config --global gpg.program gpg
+git config --global user.signingkey <pub-keyID>
 ```
 
 ## Proxy
@@ -97,14 +154,6 @@ To fix `SSL_ERROR_SYSCALL in connection to github.com:443`:
 - Change DNS server configuration (`8.8.8.8`).
 
 :::
-
-## GPG
-
-```bash
-git config --global commit.gpgsign true
-git config --global gpg.program gpg
-git config --global user.signingkey <pub-keyID>
-```
 
 ## List
 

@@ -5,57 +5,6 @@ tags: [Programming, Git, GitHub]
 
 # GitHub
 
-## GPG
-
-[Generate new GPG key](https://docs.github.com/authentication/managing-commit-signature-verification/generating-a-new-gpg-key):
-
-```bash
-# Generate GPG key
-gpg --full-generate-key
-# List GPG keys
-gpg --list-secret-keys --keyid-format=long
-
-# Export GPG public key as an ASCII armored version
-gpg --armor --export <pub-keyID>
-# Copy output to GitHub GPG textarea
-
-# Export GPG private key as an ASCII armored version
-# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
-
-# Git global configuration for GPG signature commits
-git config --global commit.gpgsign true
-git config --global gpg.program gpg
-git config --global user.signingkey <pub-keyID>
-
-# WSL2 fix: Add to ~/.zshrc
-export GPG_TTY=$(tty)
-
-# Import GitHugit log --show-signatureb signature
-curl https://github.com/web-flow.gpg | gpg --import
-# gpg --sign-key <GitHub-keyID>
-gpg --sign-key B5690EEEBB952194
-
-# Log git signature
-git log --show-signature
-
-# Single signature commit
-git commit -S -m "..."
-```
-
-[Update existing GPG key](https://inspirezone.tech/using-gpg-keys-on-github):
-
-```bash
-gpg --edit-key <pub-keyID>
-> expire
-> passwd
-> save
-```
-
-After this
-[update](https://github.blog/changelog/2022-05-31-improved-verification-of-historic-git-commit-signatures)
-commits signed with expired GPG key (before it expired)
-no longer become `unverified` state.
-
 ## LICENSE
 
 ### Popular
@@ -177,6 +126,15 @@ Setup [`gh`](https://cli.github.com/manual):
 
 ```bash
 gh auth login
+```
+
+### GPG
+
+```bash
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format=long
+gh auth refresh -s write:gpg_key
+gpg --armor --export <pub-keyID> | gh gpg-key add --title "Archlinux" -
 ```
 
 ### Issue
