@@ -137,6 +137,20 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
 paru -S visual-studio-code-bin
 ```
 
+## Flatpak
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org
+```
+
+```bash
+flatpak install flathub com.jianguoyun.Nutstore
+```
+
+```bash
+flatpak run com.jianguoyun.Nutstore
+```
+
 ## Grub
 
 ```bash
