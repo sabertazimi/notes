@@ -76,6 +76,10 @@ dms greeter enable
 dms greeter sync
 ```
 
+```bash
+sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Shift+Ctrl+V { expel-window-from-column; }\n    Mod+G { spawn "google-chrome-unstable"; }\n' ~/.config/niri/dms/binds.kdl
+```
+
 DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
 
 - `Super+Shift+/` for important hotkeys.
@@ -94,11 +98,6 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
   - Move workspace: `Super+Shift+u/i`.
 - Size: `Super+-/+`, `Super+Shift+-/+`, `Super+f`, `Super+Shift+f`.
 - Close: `Super+q`.
-
-```kdl
-    Mod+Ctrl+V { consume-window-into-column; }
-    Mod+Shift+Ctrl+V { expel-window-from-column; }
-```
 
 :::tip [Polkit]
 
