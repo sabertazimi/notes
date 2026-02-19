@@ -212,12 +212,6 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 # p10k configure
 ```
 
-## Github CLI
-
-```bash
-gh auth login
-```
-
 ## Node.js
 
 ```bash
@@ -232,74 +226,6 @@ npm install -g pnpm
 ```bash
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
-```
-
-## VSCode
-
-`Preferences: Configure Runtime Arguments`:
-
-```json
-{
-  "password-store": "gnome-libsecret"
-}
-```
-
-```bash
-echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/login
-echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/greetd
-```
-
-```bash
-xdg-mime default code.desktop text/plain
-```
-
-## Claude Code
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
-```bash
-sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
-```
-
-`~/.claude/settings.json`:
-
-```json
-{
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
-    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "ANTHROPIC_MODEL": "glm-4.7",
-    "ANTHROPIC_SMALL_FAST_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
-    "API_TIMEOUT_MS": "3000000",
-    "DISABLE_TELEMETRY": "1",
-    "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_BUG_COMMAND": "1"
-  },
-  "autoUpdatesChannel": "stable"
-}
-```
-
-```bash
-/plugin marketplace add anthropics/skills
-/plugin marketplace add obra/superpowers-marketplace
-/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
-/plugin marketplace add sabertazimi/claude-code
-```
-
-```bash
-/plugin install ralph-loop
-/plugin install superpowers@superpowers-marketplace
-/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
-/plugin install sabertaz
-```
-
-```bash
-pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 ```
 
 ## Ghostty
@@ -377,6 +303,10 @@ web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
 ```
 
 ## Git
+
+```bash
+gh auth login
+```
 
 [Git configuration](../git/config.md):
 
@@ -463,6 +393,74 @@ git log --show-signature
 
 # Single signature commit
 # git commit -S -m "..."
+```
+
+## VSCode
+
+`Preferences: Configure Runtime Arguments`:
+
+```json
+{
+  "password-store": "gnome-libsecret"
+}
+```
+
+```bash
+echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/login
+echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/greetd
+```
+
+```bash
+xdg-mime default code.desktop text/plain
+```
+
+## Claude Code
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+```bash
+sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
+```
+
+`~/.claude/settings.json`:
+
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "ANTHROPIC_MODEL": "glm-4.7",
+    "ANTHROPIC_SMALL_FAST_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
+    "API_TIMEOUT_MS": "3000000",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_BUG_COMMAND": "1"
+  },
+  "autoUpdatesChannel": "stable"
+}
+```
+
+```bash
+/plugin marketplace add anthropics/skills
+/plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+/plugin marketplace add sabertazimi/claude-code
+```
+
+```bash
+/plugin install ralph-loop
+/plugin install superpowers@superpowers-marketplace
+/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+/plugin install sabertaz
+```
+
+```bash
+pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 ```
 
 ## OneDrive
