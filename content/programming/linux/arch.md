@@ -32,8 +32,8 @@ archinstall
 2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
 3. Swap on zram: Disabled.
 4. Bootloader: Grub.
-5. Authentication: Root and user.
-6. Kernel: linux-lts.
+5. Kernel: linux-lts.
+6. Authentication: Root and user.
 7. Profile: Niri.
 8. Applications: Bluetooth, audio, print, power.
 9. Network: Network Manager.
@@ -99,13 +99,22 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
     Mod+Shift+Ctrl+V { expel-window-from-column; }
 ```
 
-## Locale
+## Proxy
+
+```bash
+paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
+```
+
+## Pacman
 
 ```bash
 sudo pacman -Sy noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation \
-  fcitx5-im fcitx5-chinese-addons
+  ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
+  fastfetch cmatrix zsh github-cli nvm neovim xdg-desktop-portal-gnome rclone \
+  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
+
+## Locale
 
 ```bash
 sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
@@ -115,17 +124,7 @@ echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 ```
 
-## Proxy
-
-```bash
-paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
-```
-
 ## Development
-
-```bash
-sudo pacman -Sy fastfetch cmatrix zsh github-cli nvm neovim rclone xdg-desktop-portal-gnome
-```
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
