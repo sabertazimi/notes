@@ -7,17 +7,11 @@ tags: [Programming, OS, Linux, Distributions, Ubuntu, Arch Linux, WSL]
 
 ## Install
 
-:::caution
+:::caution[BIOS]
 
 Disable BIOS secure boot.
 
 :::
-
-```bash
-less /usr/share/aif/docs/official_installation_guide_en
-pacman -S lynx arch-wiki-docs arch-wiki-lite
-lynx /usr/share/doc/arch-wiki/html/index.html
-```
 
 ```bash
 timedatectl set-ntp true
@@ -27,6 +21,18 @@ pacman-key —init
 pacman -Sy archinstall
 archinstall
 ```
+
+:::tip[TTY Guide]
+
+Browse Arch Wiki and official installation guide in TTY:
+
+```bash
+less /usr/share/aif/docs/official_installation_guide_en
+lynx /usr/share/doc/arch-wiki/html/index.html
+pacman -Sy lynx arch-wiki-docs arch-wiki-lite
+```
+
+:::
 
 1. Mirrors: China.
 2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
