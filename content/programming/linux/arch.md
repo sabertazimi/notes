@@ -116,6 +116,7 @@ Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
   - Preset: `Super`+`r`, `Super`+`Shift`+`r`, `Super`+`Ctrl`+`r`.
   - Manual: `Super`+`-`/`+`, `Super`+`Shift`+`-`/`+`
 - Close: `Super`+`q`.
+- Lock: `Super`+`Alt`+`l`.
 
 :::tip[Polkit]
 
