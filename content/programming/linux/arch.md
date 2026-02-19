@@ -161,4 +161,7 @@ See [linux toolchain](./toolchain.md).
 
 ```bash
 rclone config
+mkdir -p ~/onedrive
+rclone mount <remote-name>: ~/onedrive --vfs-cache-mode writes
+rclone ls <remote-name>:
 ```
