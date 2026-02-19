@@ -134,7 +134,7 @@ gh auth login
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long
 gh auth refresh -s write:gpg_key
-gpg --armor --export <pub-keyID> | gh gpg-key add --title "Archlinux" -
+gpg --armor --export <pub-keyID> | gh gpg-key add --title "Arch Linux" -
 ```
 
 ### Issue

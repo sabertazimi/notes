@@ -24,4 +24,4 @@ tags: [Programming, OS, Linux]
 ## Distributions
 
 - [Distributions](./distributions.md) - WSL, Ubuntu, and Arch Linux specific configurations
-- [Archlinux](./arch.md) - Archlinux configurations
+- [Arch Linux](./arch.md) - Arch Linux configurations
