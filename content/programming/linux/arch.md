@@ -145,7 +145,7 @@ paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
 ```bash
 sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
+  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd fcitx5-im fcitx5-chinese-addons \
   mandb cmatrix fastfetch net-tools archlinux-wallpaper \
   github-cli wl-clipboard \
   nvm jre8-openjdk \
