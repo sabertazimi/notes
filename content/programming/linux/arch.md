@@ -84,7 +84,7 @@ dms greeter sync
 ```
 
 ```bash
-sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+G { spawn "google-chrome-unstable"; }\n    Mod+E { spawn "nautilus"; }\n' ~/.config/niri/dms/binds.kdl
+sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+G { spawn "google-chrome-unstable"; }\n    Mod+E { spawn "nautilus"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
 Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
