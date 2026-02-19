@@ -83,7 +83,7 @@ dms greeter sync
 ```
 
 ```bash
-sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Shift+Ctrl+V { expel-window-from-column; }\n    Mod+G { spawn "google-chrome-unstable"; }\n' ~/.config/niri/dms/binds.kdl
+sed -i '/binds {/a \    Mod+G { spawn "google-chrome-unstable"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
 Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
@@ -101,6 +101,10 @@ Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
 - Workspace:
   - Navigation: `Super+u/i`.
   - Move: `Super+Ctrl+u/i`(column), `Super+Shift+u/i`(workspace).
+- Vertical:
+  - Left: `Super+[`.
+  - Right: `Super+]`.
+  - Expel: `Super+.`.
 - Floating:
   - Toogle: `Super+Shift+t`.
   - Switch: `Super+Shift+v`.
