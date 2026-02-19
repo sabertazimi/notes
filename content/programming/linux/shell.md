@@ -769,8 +769,8 @@ sudo apt install zsh powerline powerline-status
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install zsh themes
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone --depth=1 https://github.com/sabertazimi/dragon-zsh-theme.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/dragon
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone --depth=1 https://github.com/sabertazimi/dragon-zsh-theme.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/dragon"
 
 plugins=(fzf git history vi-mode)
 ```
