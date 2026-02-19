@@ -145,6 +145,13 @@ return {
 }
 ```
 
+### System Clipboard
+
+```bash
+sudo pacman -Sy wl-clipboard
+# :checkhealth vim.provider
+```
+
 ## Easy Motion
 
 | Motion Command                      | Description                           |

@@ -125,7 +125,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation fcitx5-im fcitx5-chinese-addons \
   mandb fastfetch cmatrix \
-  zsh github-cli neovim nvm \
+  zsh github-cli neovim wl-clipboard nvm \
   xdg-desktop-portal-gnome rclone \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
