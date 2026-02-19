@@ -1,8 +1,15 @@
+---
+sidebar_position: 10
+tags: [Programming, OS, Linux, Distributions, Ubuntu, Arch Linux, WSL]
+---
+
+# Archlinux
+
 ## Install
 
 :::caution
 
-Disable BIOS secure boot
+Disable BIOS secure boot.
 
 :::
 
@@ -21,23 +28,21 @@ pacman -Sy archinstall
 archinstall
 ```
 
-1. Mirrors: China
-2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`
-3. Swap on zram: Disabled
-4. Bootloader: Grub
-5. Authentication: Root and user
-6. Kernel: linux-lts
-7. Profile: Niri
-8. Applications: Bluetooth, audio, print, power
-9. Network: Network Manager
-10. Timezone: Asia/Shanghai
+1. Mirrors: China.
+2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
+3. Swap on zram: Disabled.
+4. Bootloader: Grub.
+5. Authentication: Root and user.
+6. Kernel: linux-lts.
+7. Profile: Niri.
+8. Applications: Bluetooth, audio, print, power.
+9. Network: Network Manager.
+10. Timezone: Asia/Shanghai.
 
 ## Setup
 
 ```bash
-sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober \
-  git github-cli unzip vim neovim zsh \
-  fastfetch cmatrix
+sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git unzip vim
 ```
 
 ```bash
@@ -90,6 +95,11 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
 - Size: `Super+-/+`, `Super+Shift+-/+`, `Super+f`, `Super+Shift+f`.
 - Close: `Super+q`.
 
+```kdl
+    Mod+Ctrl+V { consume-window-into-column; }
+    Mod+Shift+Ctrl+V { expel-window-from-column; }
+```
+
 ## Locale
 
 ```bash
@@ -103,9 +113,36 @@ sudo locale-gen
 sudo localectl set-locale LANG=zh_CN.UTF-8
 ```
 
-## Software
-
+## Proxy
 
 ```bash
 paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
+```
+
+## Development
+
+```bash
+sudo pacman -Sy zsh github-cli nvm neovim fastfetch cmatrix
+```
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+```bash
+gh auth login
+```
+
+```bash
+echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
+nvm install --lts
+npm config set registry https://registry.npmmirror.com --global
+npm install -g pnpm
+echo "alias np=pnpm" >> ~/.zshrc
+```
+
+```bash
+echo "alias vim=nvim" >> ~/.zshrc
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+nvim
 ```
