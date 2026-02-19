@@ -86,7 +86,7 @@ dms greeter sync
 sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Shift+Ctrl+V { expel-window-from-column; }\n    Mod+G { spawn "google-chrome-unstable"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
-DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
+Niri shortkeys (`~/.config/niri/dms/binds.kdl`):
 
 - `Super+Shift+/` for important hotkeys.
 - Launcher: `Super+Space`.
@@ -94,14 +94,17 @@ DMS shortkeys (`~/.config/niri/dms/binds.kdl`):
 - Window:
   - Switch: `Alt+Tab`.
   - Navigation: `Super+h/j/k/l`.
-  - Move column: `Super+shift+h/j/k/l`.
+  - Move: `Super+shift+h/j/k/l`.
 - Monitor:
   - Navigation: `Super+Ctrl+h/j/k/l`.
-  - Move column: `Super+Shift+Ctrl+h/j/k/l`.
+  - Move: `Super+Shift+Ctrl+h/j/k/l`.
 - Workspace:
   - Navigation: `Super+u/i`.
-  - Move column: `Super+Ctrl+u/i`.
-  - Move workspace: `Super+Shift+u/i`.
+  - Move: `Super+Ctrl+u/i`(column), `Super+Shift+u/i`(workspace).
+- Floating:
+  - Toogle: `Super+Shift+t`.
+  - Switch: `Super+Shift+v`.
+  - Move: `Super+Shift+h/j/k/l`.
 - Size: `Super+-/+`, `Super+Shift+-/+`, `Super+f`, `Super+Shift+f`.
 - Close: `Super+q`.
 
