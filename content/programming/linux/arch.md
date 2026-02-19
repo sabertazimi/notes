@@ -42,7 +42,7 @@ archinstall
 ## Setup
 
 ```bash
-sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git unzip vim
+sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober git vim unzip wget
 ```
 
 ```bash
@@ -170,6 +170,8 @@ sudo locale-gen
 sudo localectl set-locale LANG=zh_CN.UTF-8
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
+
+git  clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh
 ```
 
 ## Development
