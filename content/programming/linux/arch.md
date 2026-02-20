@@ -26,9 +26,9 @@ archinstall
 Browse Arch Wiki and official installation guide in TTY:
 
 ```bash
+pacman -Sy lynx arch-wiki-docs arch-wiki-lite
 less /usr/share/aif/docs/official_installation_guide_en
 lynx /usr/share/doc/arch-wiki/html/index.html
-pacman -Sy lynx arch-wiki-docs arch-wiki-lite
 ```
 
 :::
