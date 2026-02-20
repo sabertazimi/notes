@@ -88,7 +88,7 @@ dms greeter sync
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
 
 # Customize hotkeys
-sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+G { spawn "google-chrome-unstable"; }\n    Mod+E { spawn "nautilus"; }\n' ~/.config/niri/dms/binds.kdl
+sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+E { spawn "nautilus"; }\n    Mod+G { spawn "firefox"; }\n    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
 Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
@@ -137,7 +137,7 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 ## Proxy
 
 ```bash
-paru -S mihomo-party-bin google-chrome-dev
+paru -S mihomo-party-bin google-chrome
 # paru -S clash-verge-rev-bin
 ```
 
@@ -147,14 +147,14 @@ paru -S mihomo-party-bin google-chrome-dev
 sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd fcitx5-im fcitx5-chinese-addons \
-  mandb cmatrix fastfetch net-tools archlinux-wallpaper \
-  github-cli wl-clipboard \
+  mandb cmatrix fastfetch net-tools \
   nvm jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
-  flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon \
-  cava khal fprintd i2c-tools \
+  github-cli wl-clipboard firefox firefox-i18n-zh-cn \
+  cava khal fprintd i2c-tools archlinux-wallpaper \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
-  xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone
+  xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone \
+  flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
 ```
 
 ```bash
