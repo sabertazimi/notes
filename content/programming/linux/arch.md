@@ -135,7 +135,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   nvm uv rust jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
-  cava khal fprintd i2c-tools archlinux-wallpaper \
+  cava khal fprintd i2c-tools speech-dispatcher archlinux-wallpaper \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
