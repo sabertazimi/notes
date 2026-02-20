@@ -129,7 +129,8 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 ```bash
 sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd fcitx5-im fcitx5-chinese-addons \
+  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
+  wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   mandb cmatrix fastfetch net-tools \
   nvm uv rust jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
@@ -207,11 +208,20 @@ sudo localectl set-locale LANG=zh_CN.UTF-8
 LC_ALL=C.UTF-8 xdg-user-dirs-update --force
 cat ~/.config/user-dirs.dirs
 
-echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
+mkdir -p ~/.local/share/fcitx5/rime \
+  && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
+
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
+echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 
 git  clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh
 ```
+
+Fcitx5 附加组件 `经典用户界面` 配置:
+
+1. 勾选 `垂直候选列表`.
+2. 主题: `默认`, 深色主题: `默认深色`.
+3. 勾选 `跟随系统` + `使用系统重点色`.
 
 ## Zsh
 
