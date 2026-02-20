@@ -2083,11 +2083,9 @@ import LibraryGallery from '@site/src/components/library-gallery'
 
 - [Reactotron](https://github.com/infinitered/reactotron):
   Desktop app for inspecting React and React Native apps.
-- [Tracking](https://github.com/nytimes/react-tracking):
-  Declarative tracking for React apps.
-- [Tracked](https://github.com/dai-shi/react-tracked):
-  State usage tracking with proxies for React apps.
-- [RenderTracker](https://github.com/lahmatiy/react-render-tracker):
+- [Doctor](https://github.com/millionco/react-doctor):
+  React diagnose for coding agents.
+- [Tracker](https://github.com/lahmatiy/react-render-tracker):
   Discover performance issues related to unintentional re-renders and unmounts.
 - [OpenReplay](https://github.com/openreplay/openreplay):
   Session replay.
