@@ -154,7 +154,8 @@ sudo pacman -Sy --needed <package-list>
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin google-chrome visual-studio-code-bin uudeck
+paru -S mihomo-party-bin visual-studio-code-bin uudeck \
+  google-chrome zen-browser-bin
 # paru -S clash-verge-rev-bin
 ```
 
