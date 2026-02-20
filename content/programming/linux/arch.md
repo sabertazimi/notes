@@ -230,7 +230,9 @@ git  clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
 # p10k configure
+source ~/.zshrc
 ```
 
 ## Node.js
