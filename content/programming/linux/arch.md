@@ -138,7 +138,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd fcitx5-im fcitx5-chinese-addons \
   mandb cmatrix fastfetch net-tools \
-  nvm jre8-openjdk \
+  nvm uv rust jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools archlinux-wallpaper \
@@ -236,6 +236,34 @@ echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
 nvm install --lts
 npm config set registry https://registry.npmmirror.com --global
 npm install -g pnpm
+```
+
+## Python
+
+```bash
+# Python mirror
+export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"
+# PyPI mirror
+export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
+# Global
+uv python install --default
+```
+
+## Rust
+
+```bash
+mkdir -vp /home/sabertaz/.cargo
+
+cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
+
+[registries.ustc]
+index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
+EOF
 ```
 
 ## Neovim
