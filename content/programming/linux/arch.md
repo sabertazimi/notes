@@ -477,6 +477,8 @@ echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_
 echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/greetd
 ```
 
+`~/.config/mimeapps.list`:
+
 ```bash
 xdg-mime default code.desktop text/plain
 ```
