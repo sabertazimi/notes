@@ -19,6 +19,23 @@ cargo -V
 rustc -V
 ```
 
+## Mirrors
+
+```bash
+mkdir -vp /home/sabertaz/.cargo
+
+cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
+
+[registries.ustc]
+index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
+EOF
+```
+
 ## Cargo
 
 ### Commands
