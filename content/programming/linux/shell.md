@@ -762,20 +762,25 @@ printf -- ' DONE!\n';
 ## Zsh
 
 ```bash
-# Install zsh and powerline
-sudo apt install zsh powerline powerline-status
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
+```
 
-# Install oh-my-zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+[Starship](https://github.com/starship/starship) theme:
 
-# Install zsh themes
+```bash
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+source ~/.zshrc
+```
+
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme:
+
+```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 git clone --depth=1 https://github.com/sabertazimi/dragon-zsh-theme.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/dragon"
-
-# Customize theme and plugin
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
-sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
-source ~/.zshrc
 ```
 
 Install zsh on [Windows](https://gist.github.com/fworks/af4c896c9de47d827d4caa6fd7154b6b):

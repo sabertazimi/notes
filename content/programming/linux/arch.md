@@ -134,6 +134,7 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mandb cmatrix fastfetch net-tools \
   nvm uv rust jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
+  starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools speech-dispatcher archlinux-wallpaper \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
@@ -227,11 +228,22 @@ Fcitx5 附加组件 `经典用户界面` 配置:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
+```
+
+[Starship](https://github.com/starship/starship) theme:
+
+```bash
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+source ~/.zshrc
+```
+
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme:
+
+```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
-sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
-# p10k configure
-source ~/.zshrc
 ```
 
 ## Node.js
