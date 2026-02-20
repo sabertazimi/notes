@@ -560,12 +560,19 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 dms doctor
 ```
 
-## References
+## Library
 
-- Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
 - [Dank](https://github.com/AvengeMedia/DankMaterialShell):
   Desktop shell for wayland compositors.
 - [Caelestia](https://github.com/caelestia-dots/shell):
   Desktop shell for Hyprland.
 - [Illogical Impulse](https://github.com/end-4/dots-hyprland):
   Usability-first dotfiles for Hyprland.
+- [Shorin](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
+  One-click Arch Linux desktop environment configuration.
+
+## References
+
+- Wayland [protocol](https://wayland.app/protocols).
+- XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
+- Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
