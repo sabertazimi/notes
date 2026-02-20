@@ -250,9 +250,13 @@ nvim
 
 ## Ghostty
 
+- `Ctrl`+`Shift`+`p`: command palette.
+- `Ctrl`+`Shift`+`,`: reload config.
+
 ```bash
 git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-echo "custom-shader = shaders/cusor_warp.glsl" >> ~/.config/ghostty/config
+sed -i 's/background-opacity = .*/background-opacity = 0.6/' ~/.config/ghostty/config \
+  && echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
 ```
 
 ## Toolchain
