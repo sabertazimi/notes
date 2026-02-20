@@ -500,3 +500,7 @@ echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"
 ```bash
 sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
 ```
+
+## References
+
+- Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
