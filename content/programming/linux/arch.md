@@ -538,3 +538,9 @@ dms doctor
 ## References
 
 - Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
+- [Dank](https://github.com/AvengeMedia/DankMaterialShell):
+  Desktop shell for wayland compositors.
+- [Caelestia](https://github.com/caelestia-dots/shell):
+  Desktop shell for Hyprland.
+- [Illogical Impulse](https://github.com/end-4/dots-hyprland):
+  Usability-first dotfiles for Hyprland.
