@@ -137,7 +137,8 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 ## Proxy
 
 ```bash
-paru -S clash-verge-rev-bin mihomo-party-bin google-chrome-dev
+paru -S mihomo-party-bin google-chrome-dev
+# paru -S clash-verge-rev-bin
 ```
 
 ## Pacman
