@@ -16,7 +16,6 @@ Disable BIOS secure boot.
 ```bash
 timedatectl set-ntp true
 reflector -a 12 -c cn -f 10 —sort score —v —save /etc/pacman.d/mirrorlist
-sed -i '/^#\[multilib\]/{N;s/^#//gm}' /etc/pacman.conf
 pacman-key —init
 pacman -Sy archinstall
 archinstall
@@ -48,30 +47,22 @@ pacman -Sy lynx arch-wiki-docs arch-wiki-lite
 ## Setup
 
 ```bash
-sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober \
-  git zsh vim neovim unzip wget
-```
+sudo sed -i '/^#\[multilib\]/{N;s/^#//gm}' /etc/pacman.conf
 
-```bash
-echo "EDITOR=nvim" | sudo tee -a /etc/environment
-mkdir -vp /home/sabertaz/.cargo
-
-cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
-[source.crates-io]
-replace-with = 'ustc'
-
-[source.ustc]
-registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
-
-[registries.ustc]
-index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
+cat << EOF | sudo tee -a /etc/pacman.conf
+[archlinuxcn]
+Server = https://mirrors.cernet.edu.cn/archlinuxcn/\$arch
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
+Server = https://mirrors.aliyun.com/archlinuxcn/\$arch
 EOF
-```
 
-```bash
-git clone https://aur.archlinux.org/paru.git \
-  && cd paru \
-  && makepkg -si
+sudo pacman -Sy archlinuxcn-keyring
+
+sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober \
+  unzip wget git zsh vim neovim paru
+
+echo "EDITOR=nvim" | sudo tee -a /etc/environment
 ```
 
 ## Desktop
@@ -86,7 +77,6 @@ dms greeter sync
 ```bash
 # Change window switch scope to all monitors
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
-
 # Customize hotkeys
 sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+E { spawn "nautilus"; }\n    Mod+G { spawn "firefox"; }\n    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
 ```
