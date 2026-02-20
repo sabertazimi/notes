@@ -1,6 +1,6 @@
 ---
 sidebar_position: 8
-tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitoring, Crontab]
+tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitoring, Crontab, Power]
 ---
 
 # System
@@ -262,3 +262,62 @@ crontab -e(establish)
 - command1 | command2 前一正确命令的输出结果作为后一命令的输入结果
 
 > e.g. ls && echo yes >> .log || echo no >> .log
+
+## Power Management
+
+### UPower
+
+Enumerate power devices:
+
+```bash
+upower -e
+```
+
+Show detailed device information:
+
+```bash
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+```
+
+Monitor device changes:
+
+```bash
+upower --monitor
+upower --monitor-detail
+```
+
+### Systemd Power Targets
+
+```bash
+systemctl suspend      # Suspend to RAM
+systemctl hibernate    # Suspend to disk
+systemctl hybrid-sleep # Both RAM and disk
+systemctl suspend-then-hibernate
+```
+
+### TLP
+
+Advanced power management for Linux (optimize battery life):
+
+```bash
+sudo tlp start        # Start battery saving
+sudo tlp-stat -s      # Show battery status
+sudo tlp-stat         # Show all configuration
+```
+
+### CPU Power
+
+CPU frequency and voltage scaling:
+
+```bash
+cpupower frequency-info
+cpupower frequency-set -g performance  # performance / powersave / conservative
+```
+
+### Thermald
+
+Thermal daemon for Intel CPUs:
+
+```bash
+systemctl status thermald
+```
