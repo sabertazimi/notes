@@ -205,6 +205,9 @@ sudo snapper -c home create -d "Initial home snapshot"
 sudo snapper -c <config-name> list
 sudo snapper -c <config-name> delete <number-id>
 
+# Enable cleanup timer
+sudo systemctl enable --now snapper-cleanup.timer
+
 # Generate grub menu entry
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
