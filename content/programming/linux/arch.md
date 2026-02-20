@@ -124,13 +124,6 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 
 :::
 
-## Proxy
-
-```bash
-paru -S mihomo-party-bin google-chrome
-# paru -S clash-verge-rev-bin
-```
-
 ## Pacman
 
 ```bash
@@ -148,23 +141,25 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
 ```
 
 ```bash
-# Check package information
+# Search packages
+sudo pacman -Ss <keyword>
+# Check information
 sudo pacman -Si <package-name>
+# Skip installed packages
+sudo pacman -Sy --needed <package-list>
 ```
 
 ## AUR
 
 ```bash
-paru -S visual-studio-code-bin uudeck
+paru -S mihomo-party-bin google-chrome visual-studio-code-bin uudeck
+# paru -S clash-verge-rev-bin
 ```
 
 ## Flatpak
 
 ```bash
 flatpak remote-add --if-not-exists flathub https://flathub.org
-```
-
-```bash
 flatpak install flathub com.jianguoyun.Nutstore
 ```
 
