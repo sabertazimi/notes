@@ -405,7 +405,7 @@ git config --global commit.gpgsign true
 git config --global gpg.program gpg
 git config --global user.signingkey <pub-keyID>
 
-# Import GitHugit log --show-signatureb signature
+# Import GitHub `git log --show-signature` signature
 curl https://github.com/web-flow.gpg | gpg --import
 # gpg --sign-key <GitHub-keyID>
 gpg --sign-key B5690EEEBB952194
