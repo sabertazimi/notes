@@ -149,10 +149,11 @@ sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mandb cmatrix fastfetch net-tools archlinux-wallpaper \
   github-cli wl-clipboard \
   nvm jre8-openjdk \
-  xdg-desktop-portal xdg-desktop-portal-gnome rclone gnome-keyring libsecret \
+  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon \
-  yazi ffmpeg imagemagick resvg poppler 7zip \
-  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+  cava khal fprintd i2c-tools \
+  yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
+  xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone
 ```
 
 ```bash
