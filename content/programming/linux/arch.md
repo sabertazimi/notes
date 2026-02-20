@@ -262,7 +262,7 @@ nvim
 
 ```bash
 git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-sed -i 's/background-opacity = .*/background-opacity = 0.6/' ~/.config/ghostty/config \
+sed -i 's/background-opacity = .*/background-opacity = 0.75/' ~/.config/ghostty/config \
   && echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
 ```
 
@@ -521,12 +521,14 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
    - `自动`: `Tonal Spot`.
    - `应用 GTK 配色`.
 3. 时间与天气: `24 小时制`.
-4. Dank Bar: 状态栏透明度 `0%`.
+4. Dank Bar:
+   - 状态栏透明度: `0%`.
+   - 部件透明度: `75%`.
 5. 通知: 弹出位置 `右下角`.
 6. 程序坞:
    - `显示程序坞`.
    - `智能自动隐藏`.
-   - 程序坞透明度 `0%`.
+   - 程序坞透明度 `75%`.
 7. 启动器:
    - `系统 Logo`.
    - `主题色`.
