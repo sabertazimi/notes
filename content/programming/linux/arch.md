@@ -508,6 +508,29 @@ echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"
 sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
 ```
 
+## Settings
+
+1. 壁纸:
+   - `/usr/share/backgrounds/archlinux`.
+   - `自动轮换`: Time `18:00` + `Disc`.
+2. 主题与配色:
+   - `自动`: `Tonal Spot`.
+   - `应用 GTK 配色`.
+3. 时间与天气: `24 小时制`.
+4. Dank Bar: 状态栏透明度 `0%`.
+5. 通知: 弹出位置 `右下角`.
+6. 程序坞:
+   - `显示程序坞`.
+   - `智能自动隐藏`.
+   - 程序坞透明度 `0%`.
+7. 启动器:
+   - `系统 Logo`.
+   - `主题色`.
+
+```bash
+dms doctor
+```
+
 ## References
 
 - Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
