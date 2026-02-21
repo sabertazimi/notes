@@ -148,7 +148,7 @@ return {
 ### System Clipboard
 
 ```bash
-sudo pacman -Sy wl-clipboard
+sudo pacman -S wl-clipboard
 # :checkhealth vim.provider
 ```
 

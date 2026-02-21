@@ -46,7 +46,7 @@ git config --global diff.renames true
 
 ```bash
 # brew install git-delta
-# sudo pacman -Sy git-delta
+# sudo pacman -S git-delta
 # winget install dandavison.delta
 # scoop install delta
 git config --global core.pager delta

@@ -26,7 +26,7 @@ archinstall
 Browse Arch Wiki and official installation guide in TTY:
 
 ```bash
-pacman -Sy lynx arch-wiki-docs arch-wiki-lite
+pacman -S lynx arch-wiki-docs arch-wiki-lite
 less /usr/share/aif/docs/official_installation_guide_en
 lynx /usr/share/doc/arch-wiki/html/index.html
 ```
@@ -59,7 +59,7 @@ EOF
 
 sudo pacman -Sy archlinuxcn-keyring
 
-sudo pacman -Sy base-devel linux-lts-headers btrfs-progs os-prober \
+sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
   unzip wget git zsh vim neovim paru
 
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
@@ -127,7 +127,7 @@ echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 ## Pacman
 
 ```bash
-sudo pacman -Sy snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
+sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
@@ -148,8 +148,15 @@ sudo pacman -Ss <keyword>
 # Check information
 sudo pacman -Si <package-name>
 # Skip installed packages
-sudo pacman -Sy --needed <package-list>
+sudo pacman -S --needed <package-list>
 ```
+
+:::danger[Partial Upgrade]
+
+DO NOT use `pacman -Sy <package-name>`.
+[Partial upgrade](wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported) are unsupported.
+
+:::
 
 ## AUR
 
@@ -173,7 +180,7 @@ flatpak run com.jianguoyun.Nutstore
 ## Grub
 
 ```bash
-# sudo pacman -Sy os-prober
+# sudo pacman -S os-prober
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
@@ -404,7 +411,7 @@ git config --global diff.mnemonicPrefix true
 git config --global diff.renames true
 
 # brew install git-delta
-# sudo pacman -Sy git-delta
+# sudo pacman -S git-delta
 # winget install dandavison.delta
 # scoop install delta
 git config --global core.pager delta
