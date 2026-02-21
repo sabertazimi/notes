@@ -152,6 +152,17 @@ sudo pacman -S wl-clipboard
 # :checkhealth vim.provider
 ```
 
+### Spell
+
+`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`),
+`~/.config/nvim/lua/polish.lua`:
+
+```lua
+vim.opt.spelllang = { "en", "cjk" }
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+```
+
 ## Easy Motion
 
 | Motion Command                      | Description                           |
