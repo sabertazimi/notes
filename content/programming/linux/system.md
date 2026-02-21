@@ -5,7 +5,7 @@ tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitori
 
 # System
 
-## Grub
+## GRUB
 
 ### Boot System
 
@@ -25,7 +25,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ### Configuration
 
 `/etc/default/grub`配置文件, 用于一些基本的修改项,
-如默认启动项, Grub 界面等待时长, Grub 主题 etc,
+如默认启动项, GRUB 界面等待时长, GRUB 主题 etc.
 `info -f grub -n 'Simple configuration'`:
 
 ```bash
@@ -126,7 +126,7 @@ google-chrome socks5 127.0.0.1 1080
 
 ### Key File
 
-Setup [SSH key](https://github.com/appleboy/ssh-action):
+Set up [SSH key](https://github.com/appleboy/ssh-action):
 
 ```bash
 # Generate SSH key
