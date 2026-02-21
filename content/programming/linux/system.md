@@ -9,15 +9,24 @@ tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitori
 
 ### Boot System
 
-- 自动挂载项 /etc/fstab etc/rc.local
-- 自定义脚本-新建目录(加入环境变量)
-- 自定义别名 ~/.bashrc
+- 自动挂载项 `/etc/fstab`, `etc/rc.local`.
+- 自定义脚本: 新建目录 (加入环境变量).
+- 自定义别名 `~/.bashrc`.
+
+```bash
+genfstab -U /mnt > /mnt/etc/fstab
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --removable
+# grub-install --target=x86_64-efi --efi-directory=/efi --boot-directory=/efi --removable
+# ln -s /efi/grub /boot/grub
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ### Configuration
 
-- `/etc/default/grub`配置文件, 用于一些基本的修改项,
-  如默认启动项, Grub 界面等待时长, Grub 主题 etc.
-  More details in `info -f grub -n 'Simple configuration'`
+`/etc/default/grub`配置文件, 用于一些基本的修改项,
+如默认启动项, Grub 界面等待时长, Grub 主题 etc,
+`info -f grub -n 'Simple configuration'`:
 
 ```bash
 # Default Startup OS
@@ -30,13 +39,13 @@ GRUB_TIMEOUT=5
 GRUB_THEME="/boot/grub/themes/Tela/theme.txt"
 ```
 
-- `/etc/grub.d/*`生成`/boot/grub/grub.cfg`的执行脚本(`update-grub`命令),
-  可以更细致地修改启动项, 如各个启动项的名称、顺序等.
+`/etc/grub.d/*`生成`/boot/grub/grub.cfg`的执行脚本 (`update-grub`命令),
+可以更细致地修改启动项, 如各个启动项的名称、顺序等.
 
 ### Windows Repair
 
-- easyBCD for non-efi loader
-- with efi loader, run command:
+1. `easyBCD` for non-EFI loader.
+2. For EFI loader, run command:
 
 ```bash
 # root commander
