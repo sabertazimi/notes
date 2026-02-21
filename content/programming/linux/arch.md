@@ -21,6 +21,17 @@ pacman -Sy archinstall
 archinstall
 ```
 
+1. Mirrors: China.
+2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
+3. Swap on zram: Disabled.
+4. Bootloader: Grub.
+5. Kernel: linux-lts.
+6. Authentication: Root and user.
+7. Profile: Niri.
+8. Applications: Bluetooth, audio, print, power.
+9. Network: Network Manager.
+10. Timezone: Asia/Shanghai.
+
 :::tip[TTY Guide]
 
 Browse Arch Wiki and official installation guide in TTY:
@@ -33,16 +44,37 @@ lynx /usr/share/doc/arch-wiki/html/index.html
 
 :::
 
-1. Mirrors: China.
-2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
-3. Swap on zram: Disabled.
-4. Bootloader: Grub.
-5. Kernel: linux-lts.
-6. Authentication: Root and user.
-7. Profile: Niri.
-8. Applications: Bluetooth, audio, print, power.
-9. Network: Network Manager.
-10. Timezone: Asia/Shanghai.
+:::tip[Manual Partition]
+
+```bash
+lsblk -pf
+fdisk -l /dev/nvme1n1
+cfdisk /dev/nvme1n1 # 1GB for `EFI System`, rest for `Linux filesystem`.
+
+mkfs.fat -F 32 /dev/nvme1n1p1
+mkfs.btrfs /dev/nvme1n1p2
+mount -t btrfs -o compress=zstd /dev/nvme1n1p2 /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@swap
+
+umount /mnt
+mount -t btrfs -o subvol=/@,compress=zstd /dev/nvme1n1p2 /mnt
+mount --mkdir -t btrfs -o subvol=/@home,compress=zstd /dev/nvme1n1p2 /mnt/home
+mount --mkdir -t btrfs -o subvol=/@swap,compress=zstd /dev/nvme1n1p2 /mnt/swap
+mount --mkdir /dev/nvme1n1p1 /mnt/boot
+
+pacman -Sy archlinux-keyring
+pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs
+pacstrap /mnt networkmanager vim neovim amd-ucode os-prober
+
+btrfs filesystem mkswapfile --size 32g --uuid clear /mnt/swap/swapfile
+swapon /mnt/swap/swapfile
+genfstab -U /mnt > /mnt/etc/fstab
+arch-chroot /mnt
+```
+
+:::
 
 ## Setup
 
