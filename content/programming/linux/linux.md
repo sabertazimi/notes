@@ -23,5 +23,7 @@ tags: [Programming, OS, Linux]
 
 ## Distributions
 
-- [Distributions](./distributions.md) - WSL, Ubuntu, and Arch Linux specific configurations
-- [Arch Linux](./arch.md) - Arch Linux configurations
+- [Arch Linux](./arch.md) - Arch Linux
+- [Ubuntu](./ubuntu.md) - Ubuntu
+- [WSL](./wsl.md) - Windows Subsystem for Linux
+- [Desktop](./desktop.md) - Linux desktop ecosystem

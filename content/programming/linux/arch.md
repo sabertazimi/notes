@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-tags: [Programming, OS, Linux, Distributions, Ubuntu, Arch Linux, WSL]
+tags: [Programming, OS, Linux, Distribution, Arch Linux, Niri]
 ---
 
 # Arch Linux
@@ -653,6 +653,7 @@ dms doctor
 
 ## References
 
+- Linux from scratch [guide](https://www.linuxfromscratch.org/lfs/read.html).
 - Wayland [protocol](https://wayland.app/protocols).
 - XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
 - Arch Linux [简明指南](https://github.com/nakanomikuorg/arch-guide).
