@@ -11,6 +11,7 @@ ghostty
 glsl
 gsap
 gson
+hyprland
 i/o
 linux
 lts
@@ -28,6 +29,7 @@ pytest
 quickshell
 tty
 verilog
+wayland
 winget
 worktre
 zsh
