@@ -36,7 +36,7 @@ GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 
 # https://github.com/vinceliuice/grub2-themes
-GRUB_THEME="/boot/grub/themes/Tela/theme.txt"
+GRUB_THEME="/boot/grub/themes/tela/theme.txt"
 ```
 
 `/etc/grub.d/*`生成`/boot/grub/grub.cfg`的执行脚本 (`update-grub`命令),
