@@ -1,4 +1,5 @@
 agentic
+bootloader
 btrfs
 codegen
 convolutional
@@ -6,12 +7,15 @@ cout
 fcitx
 ghostty
 glsl
+grub
 gsap
 gson
 linux
+lts
 makepkg
 matplotlib
 mihomo
+multilib
 niri
 noto
 onedrive
@@ -19,6 +23,7 @@ pacman
 paru
 polkit
 pytest
+tty
 verilog
 winget
 worktre
