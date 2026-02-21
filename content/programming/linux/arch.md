@@ -114,10 +114,17 @@ Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
 
 :::tip[Polkit]
 
-If polkit in DMS broken:
+Polkit (Quickshell feature) need `quickshell-git`:
 
 ```bash
-sudo pacman -Sy polkit-gnome
+dms doctor
+paru -S quickshell-git
+```
+
+Or use `polkit-gnome` instead:
+
+```bash
+sudo pacman -S polkit-gnome
 echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"' >> ~/.config/niri/config.kdl
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
 ```
