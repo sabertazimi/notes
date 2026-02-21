@@ -238,7 +238,7 @@ flatpak run com.jianguoyun.Nutstore
 # sudo pacman -S os-prober
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
 git clone https://github.com/vinceliuice/grub2-themes \
-  && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k
+  && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k && cd ..
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -280,7 +280,7 @@ mkdir -p ~/.local/share/fcitx5/rime \
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 
-git  clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh
+git clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
 ```
 
 Fcitx5 附加组件 `经典用户界面` 配置:
