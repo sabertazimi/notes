@@ -204,6 +204,9 @@ sudo pacman -Ss <keyword>
 sudo pacman -Si <package-name>
 # Skip installed packages
 sudo pacman -S --needed <package-list>
+
+# Local installed packages
+sudo pacman -Qq | wc -l
 ```
 
 :::danger[Partial Upgrade]
