@@ -666,11 +666,13 @@ dms doctor
 ## Library
 
 - [Dank](https://github.com/AvengeMedia/DankMaterialShell):
-  Desktop shell for wayland compositors.
+  Desktop shell for Wayland compositors.
 - [Caelestia](https://github.com/caelestia-dots/shell):
   Desktop shell for Hyprland.
 - [Illogical Impulse](https://github.com/end-4/dots-hyprland):
   Usability-first dotfiles for Hyprland.
+- [HyDE](https://github.com/HyDE-Project/HyDE):
+  Hyprland desktop environment.
 - [Shorin](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
   One-click Arch Linux desktop environment configuration.
 
