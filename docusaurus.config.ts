@@ -208,8 +208,8 @@ const config: Config = {
               href: 'https://github.com/sabertazimi/bod',
             },
             {
-              label: 'Dragon ZSH Theme',
-              href: 'https://github.com/sabertazimi/dragon-zsh-theme',
+              label: 'Dotfiles',
+              href: 'https://github.com/sabertazimi/doftiles',
             },
             {
               label: 'LaTeX Snippets',
