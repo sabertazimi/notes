@@ -21,7 +21,7 @@ pacman -Sy archinstall
 archinstall
 ```
 
-1. Mirrors: China.
+1. Mirrors: China + multilib.
 2. Disk: 1GB fat32 /boot, 16GB linux-swap, compress=zstd btrfs with `@` subvolume mount `/` and `@home` subvolume mount `/home`.
 3. Swap on zram: Disabled.
 4. Bootloader: Grub.
