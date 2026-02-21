@@ -226,9 +226,10 @@ DO NOT use `pacman -Sy <package-name>`.
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin visual-studio-code-bin uudeck \
-  google-chrome zen-browser-bin
+paru -S mihomo-party-bin
 # paru -S clash-verge-rev-bin
+paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin \
+  animeko-appimage nipaplay-reload-bin
 ```
 
 ## Flatpak
