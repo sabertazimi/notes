@@ -161,7 +161,7 @@ sudo pacman -S --needed <package-list>
 :::danger[Partial Upgrade]
 
 DO NOT use `pacman -Sy <package-name>`.
-[Partial upgrade](wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported) are unsupported.
+[Partial upgrade](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported) are unsupported.
 
 :::
 
