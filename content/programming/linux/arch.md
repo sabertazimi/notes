@@ -229,7 +229,16 @@ DO NOT use `pacman -Sy <package-name>`.
 paru -S mihomo-party-bin
 # paru -S clash-verge-rev-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin \
-  animeko-appimage nipaplay-reload-bin
+  animeko-appimage nipaplay-reload-bin go-musicfox
+```
+
+```bash
+# Customize musicfox
+sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
+sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
+sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
+sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
+sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
 ```
 
 ## Flatpak
