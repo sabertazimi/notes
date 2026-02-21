@@ -630,6 +630,7 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 6. 程序坞:
    - `显示程序坞`.
    - `智能自动隐藏`.
+   - `按应用分组`.
    - 程序坞透明度 `65%`.
 7. 启动器:
    - `系统 Logo`.
