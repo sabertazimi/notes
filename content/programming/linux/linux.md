@@ -19,7 +19,7 @@ tags: [Programming, OS, Linux]
 - [I/O](./io.md) - Zero copy, swap file, mount, partition, and device management
 - [Network](./network.md) - Network commands, certificates, firewall, and connectivity
 - [User](./user.md) - User and group management, permissions, ACL, and privilege control
-- [System](./system.md) - Boot system (Grub), SSH, cron jobs, and system monitoring
+- [System](./system.md) - Boot system (GRUB), SSH, cronjobs, and system monitoring
 
 ## Distributions
 

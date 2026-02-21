@@ -23,7 +23,7 @@ archinstall
 
 1. Mirrors: China + multilib.
 2. Disk: `1GB` `fat32` `/boot`, `16GB` linux-swap, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`.
-3. Bootloader: Grub.
+3. Bootloader: GRUB.
 4. Kernel: linux-lts.
 5. Authentication: Root and user.
 6. Profile: Niri.
@@ -235,7 +235,7 @@ flatpak install flathub com.jianguoyun.Nutstore
 flatpak run com.jianguoyun.Nutstore
 ```
 
-## Grub
+## GRUB
 
 ```bash
 # sudo pacman -S os-prober
