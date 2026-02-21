@@ -187,7 +187,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   mandb cmatrix fastfetch lolcat net-tools \
-  nvm uv rust jre8-openjdk \
+  nvm uv rustup jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
   starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
@@ -350,6 +350,8 @@ registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
 [registries.ustc]
 index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
 EOF
+
+rustup default stable
 ```
 
 ## Neovim
