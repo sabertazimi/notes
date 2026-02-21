@@ -56,7 +56,9 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.aliyun.com/archlinuxcn/\$arch
 EOF
+```
 
+```bash
 sudo pacman -Sy archlinuxcn-keyring
 
 sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
@@ -78,7 +80,15 @@ dms greeter sync
 # Change window switch scope to all monitors
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
 # Customize hotkeys
-sed -i '/binds {/a \    Mod+Ctrl+V { consume-window-into-column; }\n    Mod+Alt+A { screenshot; }\n    Mod+E { spawn "nautilus"; }\n    Mod+G { spawn "firefox"; }\n    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+Comma/Mod+Shift+Comma/g' ~/.config/niri/dms/binds.kdl
+sed -i \
+  '/binds {/a \
+    Mod+Comma { "consume-window-into-column"; }\
+    Mod+Alt+A { screenshot; }\
+    Mod+E { spawn "nautilus"; }\
+    Mod+A { spawn "firefox"; }\
+    Mod+Z { spawn "code"; }' \
+  ~/.config/niri/dms/binds.kdl
 ```
 
 Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
