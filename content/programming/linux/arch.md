@@ -199,14 +199,21 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
 
 ```bash
 # Search packages
-sudo pacman -Ss <keyword>
+pacman -Ss <keyword>
 # Check information
-sudo pacman -Si <package-name>
+pacman -Si <package-name>
 # Skip installed packages
 sudo pacman -S --needed <package-list>
 
-# Local installed packages
-sudo pacman -Qq | wc -l
+# List local installed packages
+pacman -Qq | wc -l
+# List local orphans packages
+pacman -Qdtq
+
+# Remove package
+sudo pacman -Rns <package-name>
+# Autoremove
+sudo pacman -Rns $(pacman -Qdtq)
 ```
 
 :::danger[Partial Upgrade]
