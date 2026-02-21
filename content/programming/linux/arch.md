@@ -604,4 +604,5 @@ dms doctor
 
 - Wayland [protocol](https://wayland.app/protocols).
 - XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
+- Arch Linux [简明指南](https://github.com/nakanomikuorg/arch-guide).
 - Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
