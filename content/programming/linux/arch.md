@@ -72,6 +72,12 @@ btrfs filesystem mkswapfile --size 32g --uuid clear /mnt/swap/swapfile
 swapon /mnt/swap/swapfile
 genfstab -U /mnt > /mnt/etc/fstab
 arch-chroot /mnt
+passwd
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --removable
+# grub-install --target=x86_64-efi --efi-directory=/efi --boot-directory=/efi --removable
+# ln -s /efi/grub /boot/grub
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 :::
