@@ -237,6 +237,8 @@ flatpak run com.jianguoyun.Nutstore
 ```bash
 # sudo pacman -S os-prober
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
+git clone https://github.com/vinceliuice/grub2-themes \
+  && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
