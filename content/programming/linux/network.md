@@ -149,6 +149,16 @@ nftables 命令行工具 (network filter): nft.
 - -z 一个输入输出模式
 - -u UDP 协议
 
+## Socat
+
+```bash
+sudo pacman -S socat
+# 将本地 8080 端口的流量转发到远程服务器的 80 端口
+socat TCP4-LISTEN:8080,fork TCP4:remote-server.com:80
+# 读写串口设备
+socat - /dev/ttyS0,raw,echo=0,crnl
+```
+
 ## Sar
 
 Check network interface throughput:
