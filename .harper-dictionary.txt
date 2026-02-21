@@ -5,6 +5,7 @@ btrfs
 codegen
 convolutional
 cout
+crontab
 fcitx
 flatpak
 ghostty

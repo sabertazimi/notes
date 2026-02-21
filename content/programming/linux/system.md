@@ -221,6 +221,31 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
+### Systemd Analyze
+
+系统启动性能分析工具, 用于诊断启动时间和服务依赖:
+
+```bash
+# 查看总体启动时间
+systemd-analyze time
+# 按服务启动耗时排序, 找出启动最慢的服务
+systemd-analyze blame
+# 显示启动关键路径, 找出影响启动时间的瓶颈
+systemd-analyze critical-chain
+# 生成 SVG 启动依赖图
+systemd-analyze plot > boot.svg
+# 生成点格式依赖图 (需 graphviz 渲染)
+systemd-analyze dot | dot -Tsvg > boot-deps.svg
+```
+
+### Verify Unit Files
+
+检查服务配置文件语法:
+
+```bash
+systemd-analyze verify [service-file]
+```
+
 ## Crontab
 
 - `/etc/crontab`
