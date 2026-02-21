@@ -154,8 +154,9 @@ sudo pacman -S wl-clipboard
 
 ### Spell
 
-`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`),
-`~/.config/nvim/lua/polish.lua`:
+1. `:LspInstall harper_ls` Grammarly LSP with `<Leader>la` LSP code action.
+2. `zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`),
+   `~/.config/nvim/lua/polish.lua`:
 
 ```lua
 vim.opt.spelllang = { "en", "cjk" }
