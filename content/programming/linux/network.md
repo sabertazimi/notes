@@ -62,6 +62,15 @@ watch -n 1 "ifconfig eth1"
 watch -n 1 "ifconfig eth2"
 ```
 
+## Network Manager
+
+`nmcli` for CLI tool,
+`nmtui` for terminal user interface:
+
+```bash
+nmcli dev wifi connect <name> password <password>
+```
+
 ## Ufw
 
 ```bash

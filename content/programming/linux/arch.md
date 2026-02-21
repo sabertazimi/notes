@@ -97,6 +97,7 @@ EOF
 ```
 
 ```bash
+sudo systemctl enable --now NetworkManager
 sudo pacman -Sy archlinuxcn-keyring
 
 sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
