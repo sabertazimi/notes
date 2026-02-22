@@ -184,6 +184,14 @@ Check key TCP metrics:
 
 ## GFW
 
+### Hosts
+
+[GitHub520](https://github.com/521xueweihan/GitHub520):
+
+```bash
+curl -L https://raw.hellogithub.com/hosts >> /etc/hosts
+```
+
 ### Client
 
 - [Party](https://github.com/mihomo-party-org/clash-party):
