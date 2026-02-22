@@ -396,7 +396,7 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 mkdir -p ~/.config/matugen
 mkdir -p ~/.config/matugen/templates
-cat <<EOF > ~/.config/matugen/config.toml
+cat << EOF > ~/.config/matugen/config.toml
 [config]
 
 [templates.starship]
@@ -440,6 +440,9 @@ npm install -g pnpm
 ## Python
 
 ```bash
+echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
+
 # Python mirror
 export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"
 # PyPI mirror
@@ -490,54 +493,50 @@ sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/
 [Modern toolchain](./toolchain.md):
 
 ```bash
-# ~/.zshrc
-eval "$(mise activate zsh)"
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
-eval "$(zoxide init zsh)"
-eval "$(fzf --zsh)"
-source <(fx --comp zsh)
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+echo "source <(fzf --zsh)" >> ~/.zshrc
+echo "source <(fx --comp zsh)" >> ~/.zshrc
 
-# bind 'set bell-style none'
-
+cat << EOF >> ~/.zshrc
 # Use fd for listing path candidates
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  fd --hidden --follow --exclude ".git" . "\$1"
 }
 
 # Use fd for list directory candidates
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+  fd --type d --hidden --follow --exclude ".git" . "\$1"
 }
+EOF
 
-alias cc="claude"
-alias ccc="claude -c"
-alias ccr="claude -r"
-alias ccm="claude -p 'commit'"
-alias np="pnpm"
-alias vim="nvim"
+echo 'alias cc="claude"' >> ~/.zshrc
+echo 'alias ccc="claude -c"' >> ~/.zshrc
+echo 'alias ccr="claude -r"' >> ~/.zshrc
+echo 'alias ccm="claude -p commit"' >> ~/.zshrc
+echo 'alias np="pnpm"' >> ~/.zshrc
+echo 'alias vim="nvim"' >> ~/.zshrc
 
-alias cd="z"
-alias cat="bat"
-alias ls="eza"
-alias diff="delta"
-alias du="dust"
-alias df="duf"
-alias find="fd --hidden --follow --exclude .git"
-alias grep="rg"
-alias top="btm"
-alias ping="gping"
-alias ps="procs"
-alias curl="curlie"
+echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
+echo 'alias cd="z"' >> ~/.zshrc
+echo 'alias cat="bat"' >> ~/.zshrc
+echo 'alias ls="eza"' >> ~/.zshrc
+echo 'alias diff="delta"' >> ~/.zshrc
+echo 'alias du="dust"' >> ~/.zshrc
+echo 'alias df="duf"' >> ~/.zshrc
+echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
+echo 'alias grep="rg"' >> ~/.zshrc
+echo 'alias top="btm"' >> ~/.zshrc
+echo 'alias ping="gping"' >> ~/.zshrc
+echo 'alias ps="procs"' >> ~/.zshrc
+echo 'alias curl="curlie"' >> ~/.zshrc
 
-export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-export PATH="$HOME/.local/bin:$PATH"
-```
+# Respecting `.gitignore`
+echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
+echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
-`$HOME/.ripgreprc`:
-
-```bash
+cat << EOF >> ~/.ripgreprc
 # Add 'web' type.
 --type-add
 web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
@@ -551,6 +550,7 @@ web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
 
 # Ignore case unless all caps
 --smart-case
+EOF
 ```
 
 ## Git

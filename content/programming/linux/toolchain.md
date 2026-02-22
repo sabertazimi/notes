@@ -11,55 +11,8 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 - Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
 
 ```bash
-scoop install mise zoxide bat eza delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie
-```
-
-```bash
-eval "$(mise activate bash)"
-eval "$(uv generate-shell-completion bash)"
-eval "$(uvx --generate-shell-completion bash)"
-eval "$(zoxide init bash)"
-eval "$(fzf --bash)"
-source <(fx --comp bash)
-
-bind 'set bell-style none'
-
-# Use fd for listing path candidates
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-
-# Use fd for list directory candidates
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
-
-alias app="scoop"
-alias cc="claude"
-alias ccc="claude -c"
-alias ccr="claude -r"
-alias ccm="claude -p 'commit'"
-alias code="cursor"
-alias np="pnpm"
-alias vim="nvim"
-
-alias cd="z"
-alias cat="bat"
-alias ls="eza"
-alias diff="delta"
-alias du="dust"
-alias df="duf"
-alias find="fd --hidden --follow --exclude .git"
-alias grep="rg"
-alias man="tldr"
-alias top="btm"
-alias ping="gping"
-alias ps="procs"
-alias curl="curlie"
-
-export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-export PATH="$HOME/.local/bin:$PATH"
+scoop install mise fastfetch zoxide bat eza delta dust duf \
+  fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
 
 ## Scoop
@@ -139,6 +92,14 @@ winget install jdx.mise
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 mise u -g node@lts
 node -v
+```
+
+## Fastfetch
+
+[Fastfetch](https://github.com/fastfetch-cli/fastfetch):
+
+```bash
+echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
 ```
 
 ## Zoxide
@@ -278,6 +239,7 @@ echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
 `$HOME/.ripgreprc`:
 
 ```bash
+cat << EOF >> ~/.ripgreprc
 # Add 'web' type.
 --type-add
 web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
@@ -291,6 +253,7 @@ web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
 
 # Ignore case unless all caps
 --smart-case
+EOF
 ```
 
 ```bash
@@ -312,7 +275,7 @@ scoop install fzf
 echo 'eval "$(fzf --bash)"' >> ~/.bashrc
 echo "source <(fzf --zsh)" >> ~/.zshrc
 
-cat <<EOF >> ~/.zshrc
+cat << EOF >> ~/.zshrc
 # Use fd for listing path candidates
 _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "\$1"
@@ -464,6 +427,7 @@ echo 'alias curl="curlie"' >> ~/.zshrc
 
 - [macOS](https://github.com/mathiasbynens/dotfiles)
 - [Linux](https://github.com/thoughtbot/dotfiles)
+- [Arch](https://github.com/sabertazimi/dotfiles)
 - [Ubuntu](https://github.com/tracyone/oh-my-ubuntu)
 
 ## References
