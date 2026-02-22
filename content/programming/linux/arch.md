@@ -317,6 +317,7 @@ Fcitx5 附加组件 `经典用户界面` 配置:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
 sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
 ```
 
