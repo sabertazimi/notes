@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 21
 tags: [Programming, OS, Linux, Distribution, Ubuntu]
 ---
 
