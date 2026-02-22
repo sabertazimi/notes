@@ -232,8 +232,8 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs \
   curlie net-tools speedtest-cli rclone ncdu starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
-  cava khal fprintd i2c-tools speech-dispatcher \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
+  cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python \
   tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller baobab gnome-disk-utility gnome-keyring libsecret \
