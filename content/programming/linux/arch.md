@@ -274,7 +274,7 @@ paru -S mihomo-party-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   linuxqq wechat com.qq.weixin.work.deepin \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage nipaplay-reload-bin go-musicfox
+  animeko-appimage nipaplay-reload-bin netease-cloud-music-gtk4 go-musicfox
 ```
 
 :::tip[Shorthand]
@@ -736,9 +736,10 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 
 ## Music
 
-Customize `musicfox`:
-
 ```bash
+# Customize netease-cloud-music-gtk4
+echo 'alias ncm="netease-cloud-music-gtk4"' >> ~/.zshrc
+# Customize musicfox
 sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
 sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
 sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
