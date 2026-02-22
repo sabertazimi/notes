@@ -9,8 +9,8 @@ tags: [AI, Language, Python, Toolchain, UV]
 
 ```bash
 scoop install main/uv
-echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
-echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
+echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 ```
 
 ```bash
