@@ -355,3 +355,14 @@ Thermal daemon for Intel CPUs:
 ```bash
 systemctl status thermald
 ```
+
+## Kernel Module
+
+### Blocklist
+
+`/etc/modprobe.d/blacklist.conf`:
+
+```bash
+# 禁用蜂鸣器内核模块
+blacklist pcspkr
+```
