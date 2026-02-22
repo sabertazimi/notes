@@ -71,6 +71,22 @@ watch -n 1 "ifconfig eth2"
 nmcli dev wifi connect <name> password <password>
 ```
 
+## Wi-Fi
+
+```bash
+lspci -k | grep Network
+rfkill list # 查看无线连接是否被禁用 (blocked: yes)
+ip link set wlan0 up
+rfkill unblock wifi
+
+iwctl # 进入交互式命令行
+device list # 列出无线网卡设备名
+station wlan0 scan # 扫描网络
+station wlan0 get-networks # 列出所有 Wi-Fi 网络
+station wlan0 connect wifi-name # 进行连接
+exit # 退出交互式命令行
+```
+
 ## Ufw
 
 ```bash
