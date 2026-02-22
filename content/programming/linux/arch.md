@@ -232,7 +232,7 @@ DO NOT use `pacman -Sy <package-name>`.
 ```bash
 paru -S mihomo-party-bin
 # paru -S clash-verge-rev-bin
-paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin \
+paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   animeko-appimage nipaplay-reload-bin go-musicfox
 ```
 
