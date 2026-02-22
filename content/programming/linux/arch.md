@@ -190,13 +190,12 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   mandb cmatrix fastfetch lolcat \
   nvm uv rustup jre8-openjdk \
-  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
-  net-tools speedtest-cli ncdu baobab gnome-disk-utility \
-  starship \
+  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs \
+  curlie net-tools speedtest-cli rclone ncdu starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools speech-dispatcher \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
-  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python gnome-keyring libsecret rclone \
+  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
 ```
