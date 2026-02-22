@@ -233,6 +233,7 @@ DO NOT use `pacman -Sy <package-name>`.
 paru -S mihomo-party-bin
 # paru -S clash-verge-rev-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
+  linuxqq wechat wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts \
   animeko-appimage nipaplay-reload-bin go-musicfox
 ```
 
