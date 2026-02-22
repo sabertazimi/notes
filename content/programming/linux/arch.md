@@ -393,6 +393,31 @@ sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME=""/' ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset gruvbox-rainbow -o ~/.config/starship.toml
+
+mkdir -p ~/.config/matugen
+mkdir -p ~/.config/matugen/templates
+cat <<EOF > ~/.config/matugen/config.toml
+[config]
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship.toml'
+output_path = '~/.config/starship.toml'
+EOF
+cp -fr ~/.config/starship.toml ~/.config/matugen/templates/starship.toml
+sed -i \
+  -e 's/^color_fg0.*/color_fg0 = '"'"'{{colors.on_primary.default.hex}}'"'"'/' \
+  -e '/^color_fg0.*/a\color_fg1 = '"'"'{{colors.on_surface.default.hex}}'"'"'' \
+  -e 's/^color_bg1.*/color_bg1 = '"'"'{{colors.secondary_container.default.hex}}'"'"'/' \
+  -e 's/^color_bg3.*/color_bg3 = '"'"'{{colors.secondary.default.hex}}'"'"'/' \
+  -e 's/^color_blue.*/color_blue = '"'"'{{colors.inverse_primary.default.hex}}'"'"'/' \
+  -e 's/^color_aqua.*/color_aqua = '"'"'{{colors.on_secondary_container.default.hex}}'"'"'/' \
+  -e 's/^color_green.*/color_green = '"'"'{{colors.primary.default.hex}}'"'"'/' \
+  -e 's/^color_orange.*/color_orange = '"'"'{{colors.primary_fixed_dim.default.hex}}'"'"'/' \
+  -e 's/^color_yellow.*/color_yellow = '"'"'{{colors.tertiary.default.hex}}'"'"'/' \
+  -e 's/fg:color_fg0 bg:color_blue/fg:color_fg1 bg:color_blue/g' \
+  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' \
+  ~/.config/matugen/templates/starship.toml
+
 source ~/.zshrc
 ```
 
