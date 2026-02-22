@@ -363,18 +363,21 @@ cat ~/.config/user-dirs.dirs
 mkdir -p ~/.local/share/fcitx5/rime \
   && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
 
+# Fcitx5 附加组件 `经典用户界面` 配置
+sed -i 's/^Vertical Candidate List=.*/Vertical Candidate List=True/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^Font=.*/Font="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^MenuFont=.*/MenuFont="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^TrayFont=.*/TrayFont="霞鹜文楷 Medium 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^Theme=.*/Theme=default/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^DarkTheme=.*/DarkTheme=default-dark/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classicui.conf
+
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 
 git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
 ```
-
-Fcitx5 附加组件 `经典用户界面` 配置:
-
-1. 勾选 `垂直候选列表`.
-2. 字体: `霞鹜文楷`.
-3. 主题: `默认`, 深色主题: `默认深色`.
-4. 勾选 `跟随系统` + `使用系统重点色`.
 
 ## Zsh
 
