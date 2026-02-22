@@ -133,7 +133,30 @@ sed -i \
   ~/.config/niri/dms/binds.kdl
 ```
 
-Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
+:::tip[Polkit]
+
+Polkit (Quickshell feature) need `quickshell-git`:
+
+```bash
+dms doctor
+paru -S quickshell-git
+```
+
+Or use `polkit-gnome` instead:
+
+```bash
+sudo pacman -S polkit-gnome
+echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"' >> ~/.config/niri/config.kdl
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+```
+
+:::
+
+## Niri
+
+### Hotkeys
+
+`~/.config/niri/dms/binds.kdl`:
 
 - `Super`+`Shift`+`/` for important hotkeys.
 - Launcher: `Super`+`Space`.
@@ -164,24 +187,38 @@ Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
 - Close: `Super`+`q`.
 - Lock: `Super`+`Alt`+`l`.
 
-:::tip[Polkit]
-
-Polkit (Quickshell feature) need `quickshell-git`:
+### Outputs
 
 ```bash
-dms doctor
-paru -S quickshell-git
+niri msg outputs
 ```
 
-Or use `polkit-gnome` instead:
+```kdl
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=0 y=0
+}
+
+output "eDP-1" {
+    mode "2880x1800@90.007"
+    scale 1.75
+    position x=1920 y=0
+}
+```
+
+### Window Rules
 
 ```bash
-sudo pacman -S polkit-gnome
-echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"' >> ~/.config/niri/config.kdl
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+niri msg windows
 ```
 
-:::
+```kdl
+window-rule {
+    match app-id="^firefox$"
+    open-maximized true
+}
+```
 
 ## Pacman
 
