@@ -22,6 +22,14 @@ grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+:::tip[UEFI Mode]
+
+```bash
+ls /sys/firmware/efi/efivars
+```
+
+:::
+
 ### Configuration
 
 `/etc/default/grub`配置文件, 用于一些基本的修改项,
