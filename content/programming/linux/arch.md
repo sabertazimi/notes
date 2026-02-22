@@ -197,7 +197,9 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools speech-dispatcher \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
-  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python baobab gnome-disk-utility gnome-keyring libsecret \
+  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python \
+  tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
+  gvfs-smb file-roller baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
 ```
