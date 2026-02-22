@@ -191,7 +191,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mandb cmatrix fastfetch lolcat \
   nvm uv rustup jre8-openjdk \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
-  net-tools ncdu baobab gnome-disk-utility \
+  net-tools speedtest-cli ncdu baobab gnome-disk-utility \
   starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools speech-dispatcher \
