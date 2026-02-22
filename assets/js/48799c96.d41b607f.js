@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["17123"],{40894(s){s.exports=JSON.parse('{"tag":{"label":"Sort","permalink":"/notes/tags/sort","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/algorithms/sort","title":"Sort","description":"Sorting Algorithms","permalink":"/notes/cs/algorithms/sort"}],"unlisted":false}}')}}]);

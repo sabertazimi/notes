@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["16058"],{78522(a){a.exports=JSON.parse('{"tag":{"label":"MyBatis","permalink":"/notes/tags/my-batis","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/java/mybatis","title":"MyBatis","description":"Proxy and Interceptor","permalink":"/notes/language/java/mybatis"}],"unlisted":false}}')}}]);

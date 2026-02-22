@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35176"],{19699(e){e.exports=JSON.parse('{"tag":{"label":"Flex","permalink":"/notes/tags/flex","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/flex","title":"Flex","description":"Width","permalink":"/notes/web/css/flex"}],"unlisted":false}}')}}]);

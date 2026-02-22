@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["31026"],{51285(e){e.exports=JSON.parse('{"tag":{"label":"Niri","permalink":"/notes/tags/niri","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/arch","title":"Arch Linux","description":"Install","permalink":"/notes/programming/linux/arch"}],"unlisted":false}}')}}]);

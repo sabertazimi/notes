@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["85041"],{12555(e){e.exports=JSON.parse('{"tag":{"label":"Effect","permalink":"/notes/tags/effect","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/hooks/effects","title":"Effects","description":"Dispatcher","permalink":"/notes/web/react/hooks/effects"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["65963"],{22376(e){e.exports=JSON.parse('{"tag":{"label":"WebRTC","permalink":"/notes/tags/web-rtc","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/webrtc","title":"WebRTC","description":"Communication","permalink":"/notes/web/javascript/webrtc"}],"unlisted":false}}')}}]);

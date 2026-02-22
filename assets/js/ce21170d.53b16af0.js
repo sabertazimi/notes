@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["81989"],{67554(e){e.exports=JSON.parse('{"tag":{"label":"Virtual DOM","permalink":"/notes/tags/virtual-dom","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/vue/virtual-dom","title":"Virtual DOM","description":"VNode Type:","permalink":"/notes/web/vue/virtual-dom"}],"unlisted":false}}')}}]);

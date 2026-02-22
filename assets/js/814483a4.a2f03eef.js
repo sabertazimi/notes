@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["61387"],{57672(t){t.exports=JSON.parse('{"tag":{"label":"Condition","permalink":"/notes/tags/condition","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/control-flow","title":"Control Flow","description":"Condition","permalink":"/notes/ai/python/control-flow"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["62722"],{49967(e){e.exports=JSON.parse('{"tag":{"label":"CMake","permalink":"/notes/tags/c-make","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/cmake/cmake","title":"CMake","description":"Build System","permalink":"/notes/programming/cmake/"}],"unlisted":false}}')}}]);

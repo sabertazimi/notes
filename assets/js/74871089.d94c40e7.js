@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["88344"],{42240(t){t.exports=JSON.parse('{"tag":{"label":"UV","permalink":"/notes/tags/uv","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/toolchain","title":"Toolchain","description":"Installation","permalink":"/notes/ai/python/toolchain"}],"unlisted":false}}')}}]);

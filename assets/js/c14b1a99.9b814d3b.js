@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["1938"],{19586(e){e.exports=JSON.parse('{"tag":{"label":"Sensor","permalink":"/notes/tags/sensor","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/android/device","title":"Device","description":"Map","permalink":"/notes/programming/android/device"}],"unlisted":false}}')}}]);
