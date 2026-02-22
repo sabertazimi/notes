@@ -102,7 +102,9 @@ sudo systemctl enable --now NetworkManager
 sudo pacman -Sy archlinuxcn-keyring
 
 sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
-  unzip wget git zsh vim neovim paru
+  unzip wget git zsh vim neovim paru \
+  # Temporary proxy from archlinuxcn
+  clash-verge-rev
 
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
 ```
@@ -230,7 +232,6 @@ DO NOT use `pacman -Sy <package-name>`.
 
 ```bash
 paru -S mihomo-party-bin
-# paru -S clash-verge-rev-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   linuxqq wechat wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage nipaplay-reload-bin go-musicfox
