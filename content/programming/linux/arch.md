@@ -193,7 +193,8 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs curlie \
   starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
-  cava khal fprintd i2c-tools speech-dispatcher archlinux-wallpaper \
+  cava khal fprintd i2c-tools speech-dispatcher \
+  archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
@@ -260,7 +261,7 @@ flatpak run com.jianguoyun.Nutstore
 # sudo pacman -S os-prober
 # mount --mkdir /dev/nvme0n1p1 /mnt/winboot
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
-git clone https://github.com/vinceliuice/grub2-themes \
+git clone --depth=1 https://github.com/vinceliuice/grub2-themes \
   && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k && cd ..
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
@@ -303,7 +304,7 @@ mkdir -p ~/.local/share/fcitx5/rime \
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 
-git clone https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
+git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
 ```
 
 Fcitx5 附加组件 `经典用户界面` 配置:
@@ -376,7 +377,7 @@ rustup default stable
 ## Neovim
 
 ```bash
-git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+git clone --depth=1 https://github.com/AstroNvim/template ~/.config/nvim
 nvim
 ```
 
@@ -386,7 +387,7 @@ nvim
 - `Ctrl`+`Shift`+`,`: reload config.
 
 ```bash
-git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
 sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config \
   && echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
 ```
@@ -637,6 +638,13 @@ echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"
 
 ```bash
 sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
+```
+
+## Wallpapers
+
+```bash
+git clone --depth=1 https://github.com/sabertazimi/dotfiles
+bash dotfiles/wallpapers/install.sh
 ```
 
 ## Settings
