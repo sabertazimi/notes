@@ -9,11 +9,7 @@
   "alwaysThinkingEnabled": true,
   "permissions": {
     "defaultMode": "acceptEdits",
-    "allow": [
-      "Bash",
-      "Edit",
-      "Skill"
-    ]
+    "allow": ["Bash", "Edit", "Skill"]
   }
 }
 ```
@@ -23,6 +19,8 @@
 `CLAUDE.md`:
 
 ```md
+# CLAUDE.md
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Workspace Purpose
