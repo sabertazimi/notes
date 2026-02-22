@@ -156,7 +156,7 @@ Niri hotkeys (`~/.config/niri/dms/binds.kdl`):
 - Floating:
   - Toggle: `Super`+`Shift`+`t`.
   - Switch: `Super`+`Shift`+`v`.
-  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`.
+  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`, `Super` + click.
 - Size:
   - Maximize: `Super`+`f`, `Super`+`Shift`+`f`.
   - Preset: `Super`+`r`, `Super`+`Shift`+`r`, `Super`+`Ctrl`+`r`.
