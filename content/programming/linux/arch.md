@@ -326,6 +326,7 @@ sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
 [Starship](https://github.com/starship/starship) theme:
 
 ```bash
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME=""/' ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset gruvbox-rainbow -o ~/.config/starship.toml
 source ~/.zshrc
