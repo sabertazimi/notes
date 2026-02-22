@@ -233,7 +233,7 @@ DO NOT use `pacman -Sy <package-name>`.
 paru -S mihomo-party-bin
 # paru -S clash-verge-rev-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
-  linuxqq wechat wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts \
+  linuxqq wechat wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage nipaplay-reload-bin go-musicfox
 ```
 
@@ -641,6 +641,14 @@ echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"
 
 ```bash
 sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
+```
+
+## Office
+
+修复[中文输入法](https://wiki.archlinuxcn.org/wiki/WPS_Office#Fcitx5_无法输入中文):
+
+```bash
+sudo sed -i '1a export GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx5\nexport XMODIFIERS=@im=fcitx' /usr/bin/wps
 ```
 
 ## Wallpapers
