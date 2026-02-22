@@ -85,6 +85,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ```bash
 sudo sed -i '/^#\[multilib\]/{N;s/^#//gm}' /etc/pacman.conf
+sudo sed -i 's/^#Color/Color/' /etc/pacman.conf
+sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
 
 cat << EOF | sudo tee -a /etc/pacman.conf
 [archlinuxcn]
