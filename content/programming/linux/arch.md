@@ -195,9 +195,9 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   starship \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   cava khal fprintd i2c-tools speech-dispatcher \
-  archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
-  xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret rclone \
+  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python gnome-keyring libsecret rclone \
+  archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
 ```
 
