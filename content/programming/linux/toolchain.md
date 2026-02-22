@@ -46,6 +46,7 @@ alias vim="nvim"
 alias cd="z"
 alias cat="bat"
 alias ls="eza"
+alias diff="delta"
 alias du="dust"
 alias df="duf"
 alias find="fd --hidden --follow --exclude .git"
@@ -135,7 +136,7 @@ winget install jdx.mise
 ```
 
 ```bash
-echo 'eval "$(mise activate bash)"' >> ~/.bashrc
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 mise u -g node@lts
 node -v
 ```
@@ -151,9 +152,8 @@ winget install ajeetdsouza.zoxide
 ```
 
 ```bash
-eval "$(zoxide init bash)"
-
-alias cd="z"
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+echo 'alias cd="z"' >> ~/.zshrc
 ```
 
 ## Bat
@@ -167,7 +167,7 @@ winget install sharkdp.bat
 ```
 
 ```bash
-alias cat="bat"
+echo 'alias cat="bat"' >> ~/.zshrc
 ```
 
 ## Eza
@@ -181,7 +181,7 @@ winget install eza-community.eza
 ```
 
 ```bash
-alias ls="eza"
+echo 'alias ls="eza"' >> ~/.zshrc
 ```
 
 ## Delta
@@ -193,6 +193,10 @@ brew install git-delta
 sudo pacman -S git-delta
 scoop install delta
 winget install dandavison.delta
+```
+
+```bash
+echo 'alias diff="delta"' >> ~/.zshrc
 ```
 
 ```bash
@@ -225,7 +229,7 @@ winget install bootandy.dust
 ```
 
 ```bash
-alias du="dust"
+echo 'alias du="dust"' >> ~/.zshrc
 ```
 
 ## Duf
@@ -239,7 +243,7 @@ winget install muesli.duf
 ```
 
 ```bash
-alias df="duf"
+echo 'alias df="duf"' >> ~/.zshrc
 ```
 
 ## Fd
@@ -253,7 +257,7 @@ winget install sharkdp.fd
 ```
 
 ```bash
-alias find="fd --hidden --follow --exclude .git"
+echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 ```
 
 ## RipGrep
@@ -267,9 +271,8 @@ scoop install ripgrep
 ```
 
 ```bash
-alias grep="rg"
-
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+echo 'alias grep="rg"' >> ~/.zshrc
+echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
 ```
 
 `$HOME/.ripgreprc`:
@@ -306,23 +309,23 @@ scoop install fzf
 ```
 
 ```bash
-# ~/.bashrc
-eval "$(fzf --bash)"
-# ~/.zshrc
-source <(fzf --zsh)
+echo 'eval "$(fzf --bash)"' >> ~/.bashrc
+echo "source <(fzf --zsh)" >> ~/.zshrc
 
+cat <<EOF >> ~/.zshrc
 # Use fd for listing path candidates
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  fd --hidden --follow --exclude ".git" . "\$1"
 }
 
 # Use fd for list directory candidates
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+  fd --type d --hidden --follow --exclude ".git" . "\$1"
 }
+EOF
 
 # Respecting `.gitignore`
-export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
 ```
 
 Command line fuzzy finder:
@@ -358,10 +361,8 @@ scoop install fx
 ```
 
 ```bash
-# ~/.bashrc
-source <(fx --comp bash)
-# ~/.zshrc
-source <(fx --comp zsh)
+echo "source <(fx --comp bash)" >> ~/.bashrc
+echo "source <(fx --comp zsh)" >> ~/.zshrc
 ```
 
 Terminal JSON [viewer and processor](https://fx.wtf/getting-started):
@@ -388,7 +389,7 @@ winget install tldr-pages.tlrc
 ```
 
 ```bash
-alias man="tldr"
+echo 'alias man="tldr"' >> ~/.zshrc
 ```
 
 ## Bottom
@@ -402,7 +403,7 @@ winget install Clement.bottom
 ```
 
 ```bash
-alias top="btm"
+echo 'alias top="btm"' >> ~/.zshrc
 ```
 
 ## Gping
@@ -416,7 +417,7 @@ winget install orf.gping
 ```
 
 ```bash
-alias ping="gping"
+echo 'alias ping="gping"' >> ~/.zshrc
 ```
 
 ## Procs
@@ -430,7 +431,7 @@ winget install dalance.procs
 ```
 
 ```bash
-alias ps="procs"
+echo 'alias ps="procs"' >> ~/.zshrc
 ```
 
 ## Curlie
@@ -443,7 +444,7 @@ scoop install curlie
 ```
 
 ```bash
-alias curl="curlie"
+echo 'alias curl="curlie"' >> ~/.zshrc
 ```
 
 ## Developer
