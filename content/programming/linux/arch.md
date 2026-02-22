@@ -212,14 +212,14 @@ pacman -Si <package-name>
 # Skip installed packages
 sudo pacman -S --needed <package-list>
 
-# List local installed packages
+# List installed packages
 pacman -Qq | wc -l
-# List local orphans packages
+# List orphans packages
 pacman -Qdtq
 
 # Remove package
 sudo pacman -Rns <package-name>
-# Autoremove
+# Clean orphans packages
 sudo pacman -Rns $(pacman -Qdtq)
 ```
 
@@ -239,6 +239,13 @@ paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage nipaplay-reload-bin go-musicfox
 ```
+
+:::tip[Shorthand]
+
+1. `paru`: `sudo pacman -Syu`
+2. `paru -c`: `sudo pacman -Rns $(pacman -Qtdq)`
+
+:::
 
 :::tip[AUR 滚动]
 
