@@ -391,11 +391,49 @@ sudo apt-get install screenfetch
 dmesg -T | tail
 ```
 
-### Journalctl
+### Journal
+
+Options:
 
 ```bash
+# Reverse
 journalctl -r
-journalctl -u <service_name>
+# Unit
+journalctl -u <service-name>
+# Level
+journalctl -p 3
+# entries
+journalctl -n 50
+# User
+journalctl -xe --user -u <service-name>
+# Boot
+journalctl -b
+journalctl -b -1
+journalctl --list-boots
+
+```
+
+Recipes:
+
+```bash
+# Error
+journalctl -p 3 -xb
+journalctl -p 3 -x -b -1
+# Last 50 logs from last boot
+journalctl -n 50 -b -1
+```
+
+### Coredump
+
+```bash
+coredumpctl list
+coredumpctl info <PID>
+```
+
+### Boot
+
+```bash
+last -x shutdown reboot
 ```
 
 ## Performance
