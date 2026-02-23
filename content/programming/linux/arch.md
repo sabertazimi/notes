@@ -239,7 +239,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
-  flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon
+  flatpak steam lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon vulkan-headers
 ```
 
 ```bash
