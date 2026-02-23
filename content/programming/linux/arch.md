@@ -276,7 +276,8 @@ DO NOT use `pacman -Sy <package-name>`.
 
 ```bash
 paru -S mihomo-party-bin chsrc-bin
-paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
+paru -S ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
+  visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   linuxqq wechat com.qq.weixin.work.deepin \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage nipaplay-reload-bin splayer go-musicfox
