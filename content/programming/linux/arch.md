@@ -114,7 +114,10 @@ sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf
 
 ```bash
 curl -fsSL https://install.danklinux.com | sh
-paru -S greetd-dms-greeter-git dsearch-bin
+paru -S qt6ct-kde greetd-dms-greeter-git dsearch-bin
+
+echo "QT_QPA_PLATFORMTHEME=qt6ct" >> ~/.config/environment.d/90-dms.conf
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
 dms greeter enable
 dms greeter sync
 ```
@@ -809,10 +812,10 @@ jq --arg home "$HOME" '
 ' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
 ```
 
-:::caution[GTK]
+:::caution[Application Theme]
 
-由于 `Theme.applyGtkColors` 没有 `dms ipc` 接口,
-需要手动点击 `主题与配色` 底部的 `应用 GTK 配色`.
+由于 `Theme.applyGtkColors`/`Theme.applyQtColors` 没有 `dms ipc` 接口,
+需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`.
 
 :::
 
