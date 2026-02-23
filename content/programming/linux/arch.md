@@ -90,9 +90,9 @@ sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
 
 cat << EOF | sudo tee -a /etc/pacman.conf
 [archlinuxcn]
-Server = https://mirrors.cernet.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
+Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/\$arch
 Server = https://mirrors.aliyun.com/archlinuxcn/\$arch
 EOF
 ```
@@ -271,7 +271,7 @@ DO NOT use `pacman -Sy <package-name>`.
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin
+paru -S mihomo-party-bin chsrc-bin
 paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   linuxqq wechat com.qq.weixin.work.deepin \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
