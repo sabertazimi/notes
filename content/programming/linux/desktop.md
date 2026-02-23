@@ -65,23 +65,6 @@ sudo pacman -S gwenview # 图片查看器
 - Desktop shortcut: `/usr/share/applications`
 - Start up apps: `gnome-session-properties` or `gnome-tweaks`
 
-## Defaults
-
-`update-alternatives`: maintain symbolic links determining default commands.
-
-```bash
-sudo update-alternatives --get-selections
-```
-
-```bash
-sudo update-alternatives --install /usr/bin/x-terminal-emulator
- \ x-terminal-emulator /opt/Hyper/hyper 50
-```
-
-```bash
-sudo update-alternatives --config x-terminal-emulator
-```
-
 ## Icons
 
 Nightly build for Numix Circle icon:
