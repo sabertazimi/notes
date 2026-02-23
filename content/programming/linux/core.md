@@ -505,6 +505,12 @@ perf report -n --stdio
 perf report -n -g 'flamegraph'
 ```
 
+### Stress
+
+```bash
+sudo pacman -S s-tui
+```
+
 ## References
 
 - Linux [cheatsheets](https://github.com/trimstray/the-book-of-secret-knowledge).
