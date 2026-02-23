@@ -289,7 +289,7 @@ paru -S visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-
 
 :::
 
-:::tip[AUR 滚动]
+### Rolling Updates
 
 - `PKGBUILD` 在 [AUR 仓库](https://aur.archlinux.org) 单独维护
 - `-git` 包的 `pkgver()` 由 makepkg 自动执行, 格式: `0.2.0.r1.g783b971` (tag.revision.commit)
@@ -308,6 +308,11 @@ paru -S quickshell-git --rebuild
 git clone https://aur.archlinux.org/quickshell-git.git
 cd quickshell-git && makepkg -si
 ```
+
+:::caution[Devel]
+
+paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
+运行 `sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf` 进行关闭.
 
 :::
 
