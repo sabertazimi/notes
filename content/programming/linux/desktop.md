@@ -5,39 +5,9 @@ tags: [Programming, OS, Linux, Distribution, Desktop Environment, Compositor, X1
 
 # Desktop
 
-## Applications
+## GNOME
 
-- desktop shortcut: `/usr/share/applications`
-- startup apps: `gnome-session-properties` or `gnome-tweaks`
-
-## Defaults
-
-`update-alternatives`: maintain symbolic links determining default commands.
-
-```bash
-sudo update-alternatives --get-selections
-```
-
-```bash
-sudo update-alternatives --install /usr/bin/x-terminal-emulator
- \ x-terminal-emulator /opt/Hyper/hyper 50
-```
-
-```bash
-sudo update-alternatives --config x-terminal-emulator
-```
-
-## Icons
-
-Nightly build for Numix Circle icon:
-
-```bash
-sudo add-apt-repository ppa:numix/ppa
-sudo apt update
-sudo apt install numix-icon-theme-circle
-```
-
-## GTK
+### GTK
 
 GTK/GNOME themes located in `/usr/share/themes/` or `~/.themes/`:
 
@@ -66,13 +36,61 @@ sudo dpkg-reconfigure gdm3
 sudo apt install --reinstall gdm3 lightdm ubuntu-desktop
 ```
 
-## Shell
+### Shell
 
 GNOME shell extension:
 
 - Install GNOME shell extension for browser.
 - Install local binding app: `sudo apt install chrome-gnome-shell`.
 - Visit `extensions.gnome.org` to install extensions.
+
+## KDE
+
+[Set up](https://arch.icekylin.online/guide/rookie/desktop-env-and-app.html):
+
+```bash
+sudo pacman -S plasma-workspace xdg-desktop-portal
+sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf # 声音固件
+sudo pacman -S ntfs-3g # NTFS 硬盘
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 中文字体
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 谷歌字体及表情
+sudo pacman -S firefox chromium # 浏览器
+sudo pacman -S ark # 压缩软件
+sudo pacman -S packagekit-qt6 packagekit appstream-qt appstream # Discover 依赖
+sudo pacman -S gwenview # 图片查看器
+```
+
+## Applications
+
+- Desktop shortcut: `/usr/share/applications`
+- Start up apps: `gnome-session-properties` or `gnome-tweaks`
+
+## Defaults
+
+`update-alternatives`: maintain symbolic links determining default commands.
+
+```bash
+sudo update-alternatives --get-selections
+```
+
+```bash
+sudo update-alternatives --install /usr/bin/x-terminal-emulator
+ \ x-terminal-emulator /opt/Hyper/hyper 50
+```
+
+```bash
+sudo update-alternatives --config x-terminal-emulator
+```
+
+## Icons
+
+Nightly build for Numix Circle icon:
+
+```bash
+sudo add-apt-repository ppa:numix/ppa
+sudo apt update
+sudo apt install numix-icon-theme-circle
+```
 
 ## References
 
