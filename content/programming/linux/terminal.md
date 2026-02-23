@@ -18,22 +18,9 @@ tags: [Programming, OS, Linux, Terminal, Tmux]
   - Local: PTY Master is Terminal, PTY Slave is `bash` and `ssh client`.
   - Remote: PTY Master is `ssh server`, PTY Slave is `bash`.
 
-## Default
+## TTY
 
-`update-alternatives`: maintain symbolic links determining default commands.
-
-```bash
-sudo update-alternatives --get-selections
-```
-
-```bash
-sudo update-alternatives --install /usr/bin/x-terminal-emulator
- \ x-terminal-emulator /opt/Hyper/hyper 50
-```
-
-```bash
-sudo update-alternatives --config x-terminal-emulator
-```
+`Ctrl`+`Alt`+`F1 ~ F6` 在 TTY1 ~ TTY6 间切换.
 
 ## Tmux
 
