@@ -5,14 +5,34 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 
 # Toolchain
 
-## Modern
-
-- Cross-platform Rust rewrite of the [GNU core utils](https://github.com/uutils/coreutils).
-- Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
-
 ```bash
 scoop install mise fastfetch zoxide bat eza delta dust duf \
   fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+```
+
+## Change Mirror Source
+
+```bash
+sudo paru -S chsrc-bin
+scoop install chsrc
+winget install RubyMetric.chsrc
+```
+
+```bash
+# Auto
+chsrc set node
+chsrc set python
+chsrc set rust
+chsrc set docker
+chsrc set brew
+chsrc set flatpak
+chsrc set winget
+sudo chsrc set arch
+sudo chsrc set archlinuxcn
+
+# Manual
+chsrc ls ruby
+chsrc set ruby rubychina
 ```
 
 ## Scoop
@@ -432,5 +452,7 @@ echo 'alias curl="curlie"' >> ~/.zshrc
 
 ## References
 
+- Cross-platform Rust rewrite of the [GNU core utils](https://github.com/uutils/coreutils).
+- Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
 - Terminal [tool of the week](https://terminaltrove.com/tool-of-the-week).
 - Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).
