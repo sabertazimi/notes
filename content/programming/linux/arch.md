@@ -384,8 +384,10 @@ git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash ins
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
-sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir /' ~/.zshrc
+sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir zsh-autosuggestions zsh-syntax-highlighting /' ~/.zshrc
 ```
 
 [Starship](https://github.com/starship/starship) theme:
