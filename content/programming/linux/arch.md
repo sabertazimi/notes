@@ -235,7 +235,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   github-cli wl-clipboard firefox firefox-i18n-zh-cn \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
-  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python \
+  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
   tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
