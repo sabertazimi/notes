@@ -122,15 +122,16 @@ dms greeter sync
 # Change window switch scope to all monitors
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
 # Customize hotkeys
-sed -i 's/Mod+Comma/Mod+Shift+Comma/g' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+M /Mod+Shift+M /g' ~/.config/niri/dms/binds.kdl
 sed -i \
   '/binds {/a \
     Mod+Comma { "consume-window-into-column"; }\
     Mod+Alt+A { screenshot; }\
-    Mod+E { spawn "nautilus"; }\
     Mod+A { spawn "firefox"; }\
-    Mod+Z { spawn "code"; }' \
-  ~/.config/niri/dms/binds.kdl
+    Mod+E { spawn "nautilus"; }\
+    Mod+M { spawn "netease-cloud-music-gtk4" ; }\
+    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
 :::tip[Polkit]
@@ -415,8 +416,7 @@ sed -i \
   -e 's/^color_orange.*/color_orange = '"'"'{{colors.primary_fixed_dim.default.hex}}'"'"'/' \
   -e 's/^color_yellow.*/color_yellow = '"'"'{{colors.tertiary.default.hex}}'"'"'/' \
   -e 's/fg:color_fg0 bg:color_blue/fg:color_fg1 bg:color_blue/g' \
-  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' \
-  ~/.config/matugen/templates/starship.toml
+  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' ~/.config/matugen/templates/starship.toml
 
 source ~/.zshrc
 ```
