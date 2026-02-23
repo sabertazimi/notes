@@ -139,8 +139,8 @@ sed -i \
 Polkit (Quickshell feature) need `quickshell-git`:
 
 ```bash
-dms doctor
 paru -S quickshell-git
+dms doctor
 ```
 
 Or use `polkit-gnome` instead:
@@ -777,29 +777,42 @@ bash dotfiles/wallpapers/install.sh
 
 ## Settings
 
-1. 壁纸:
-   - `/usr/share/backgrounds/archlinux`.
-   - `自动轮换`: Time `18:00` + `Disc`.
-2. 主题与配色:
-   - `自动`: `Tonal Spot`.
-   - `应用 GTK 配色`.
-3. 时间与天气: `24 小时制`.
-4. Dank Bar:
-   - 状态栏透明度: `0%`.
-   - 部件透明度: `65%`.
-5. 通知: 弹出位置 `右下角`.
-6. 程序坞:
-   - `显示程序坞`.
-   - `智能自动隐藏`.
-   - `按应用分组`.
-   - 程序坞透明度 `65%`.
-7. 启动器:
-   - `系统 Logo`.
-   - `主题色`.
-
 ```bash
-dms doctor
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell" "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell"
+touch "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
+
+jq '
+    .wallpaperFillMode = "Stretch" |
+    .currentThemeName = "dynamic" |
+    .currentThemeCategory = "dynamic" |
+    .matugenScheme = "scheme-tonal-spot" |
+    .use24HourClock = true |
+    .weatherEnabled = true |
+    .barConfigs |= map(if .id == "default" or .id == null then .transparency = 0 | .widgetTransparency = 0.65 else . end) |
+    .notificationPopupPosition = 3 |
+    .showDock = true |
+    .dockSmartAutoHide = true |
+    .dockGroupByApp = true |
+    .dockTransparency = 0.65 |
+    .launcherLogoMode = "os" |
+    .launcherLogoColorOverride = "primary"
+' "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" > /tmp/dms-settings.json && mv /tmp/dms-settings.json "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json"
+
+jq --arg home "$HOME" '
+    .wallpaperPath = "\($home)/.local/share/wallpapers/archbtw.png" |
+    .wallpaperCyclingEnabled = true |
+    .wallpaperCyclingMode = "time" |
+    .wallpaperCyclingTime = "18:00" |
+    .wallpaperTransition = "disc"
+' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
 ```
+
+:::caution[GTK]
+
+由于 `Theme.applyGtkColors` 没有 `dms ipc` 接口,
+需要手动点击 `主题与配色` 底部的 `应用 GTK 配色`.
+
+:::
 
 ## Library
 
