@@ -13,29 +13,38 @@ tags: [Programming, OS, Linux, Security, User, Group]
 
 ### 创建组
 
+```bash
 groupadd test
+```
 
 ### 修改组
 
+```bash
 groupmod -n test2 test -g
+```
 
 ### 删除组
 
+```bash
 groupdel test2
+```
 
 ### 查看组
 
-- groups someUser
-- cat /etc/group
+查看用户所属组:
 
 ```bash
-cat /etc/passwd | awk -F [:] ‘{print $4}’
-\ |sort|uniq | getent group |awk -F [:] ‘{print $1}’
+groups <username>
+cat /etc/group
 ```
 
 `/etc/passwd` is a configuration file which stores user account information.
-It is a plain text-based file containing information like
-username, user ID and group ID.
+It is a plaintext-based file containing information
+like username, user ID and group ID.
+
+```bash
+cat /etc/passwd | awk -F [:] ‘{print $4}’ | sort | uniq | getent group | awk -F [:] ‘{print $1}’
+```
 
 ## 用户
 
