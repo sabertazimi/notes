@@ -5,6 +5,14 @@ tags: [Programming, OS, Linux, Distribution, Desktop Environment, Compositor, X1
 
 # Desktop
 
+## Compositor
+
+```bash
+echo $WAYLAND_DISPLAY
+glxgears
+glxinfo | grep "direct rendering" # Yes: 3D 硬件加速正常
+```
+
 ## GNOME
 
 ### GTK
