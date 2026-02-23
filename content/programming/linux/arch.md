@@ -107,6 +107,7 @@ sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
   clash-verge-rev
 
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
+sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf
 ```
 
 ## Desktop
