@@ -2,6 +2,7 @@ agentic
 aur
 bootloader
 btrfs
+claude
 codegen
 convolutional
 cout

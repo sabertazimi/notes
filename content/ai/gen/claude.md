@@ -309,6 +309,7 @@ pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 
 Claude code [best practices](https://www.anthropic.com/engineering/claude-code-best-practices):
 
+- Research mode: `deeply`/`intricacies`/`in great details`/`go through everything`.
 - Plan mode: 对于复杂的任务, 使用 plan mode 先进行规划, 会比直接执行更高效.
 - Extended thinking mode: [`MAX_THINKING_TOKENS`](https://decodeclaude.com/ultrathink-deprecated).
 - Claude code has [built-in toolkit](https://code.claude.com/docs/en/settings#tools-available-to-claude),
