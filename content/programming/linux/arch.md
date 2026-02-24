@@ -233,10 +233,11 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   mandb cmatrix fastfetch lolcat \
-  nvm uv rustup jre8-openjdk \
-  mise zoxide bat eza git-delta dust duf fd ripgrep fzf jq fx tlrc bottom gping procs \
-  curlie net-tools speedtest-cli rclone ncdu starship \
-  github-cli wl-clipboard firefox firefox-i18n-zh-cn \
+  nvm uv rustup jre8-openjdk mise \
+  zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
+  tlrc bottom gping procs curlie \
+  net-tools rsync rclone speedtest-cli \
+  github-cli starship wl-clipboard firefox firefox-i18n-zh-cn \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
