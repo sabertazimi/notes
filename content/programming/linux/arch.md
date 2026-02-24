@@ -237,7 +237,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
   tlrc bottom gping procs curlie \
   net-tools rsync rclone speedtest-cli \
-  firefox firefox-i18n-zh-cn github-cli starship wl-clipboard satty \
+  firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard satty \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
@@ -533,8 +533,8 @@ echo 'alias cc="claude"' >> ~/.zshrc
 echo 'alias ccc="claude -c"' >> ~/.zshrc
 echo 'alias ccr="claude -r"' >> ~/.zshrc
 echo 'alias ccm="claude -p commit"' >> ~/.zshrc
-echo 'alias np="pnpm"' >> ~/.zshrc
 echo 'alias vim="nvim"' >> ~/.zshrc
+echo 'alias dot="chezmoi"' >> ~/.zshrc
 
 echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
 echo 'alias cd="z"' >> ~/.zshrc
@@ -829,6 +829,35 @@ jq --arg home "$HOME" '
 需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`.
 
 :::
+
+## Dotfiles
+
+Set up new machine with single command:
+
+```bash
+# sudo pacman -S chezmoi
+dot init --apply -v sabertazimi
+```
+
+Set up new machine from remote dotfiles:
+
+```bash
+dot init sabertazimi
+dot diff
+dot apply -v
+dot update -v
+```
+
+Sync local dotfiles to remote repository:
+
+```bash
+dot add ~/.zshrc
+dot cd
+git add .
+git commit
+git push
+exit
+```
 
 ## Library
 
