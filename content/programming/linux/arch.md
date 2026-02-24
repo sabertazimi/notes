@@ -240,6 +240,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   github-cli starship wl-clipboard firefox firefox-i18n-zh-cn \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
+  bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
   sushi tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller loupe baobab gnome-disk-utility gnome-keyring libsecret \
