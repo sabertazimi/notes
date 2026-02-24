@@ -469,17 +469,17 @@ uv python install --default
 ## Rust
 
 ```bash
-mkdir -vp ~/.cargo
+mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-cat << EOF | tee -a ~/.cargo/config.toml
+cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
 [source.crates-io]
 replace-with = 'ustc'
 
 [source.ustc]
-registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
 [registries.ustc]
-index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
+index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 EOF
 
 rustup default stable
