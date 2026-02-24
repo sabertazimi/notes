@@ -279,7 +279,7 @@ DO NOT use `pacman -Sy <package-name>`.
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin chsrc-bin
+paru -S mihomo-party-bin chsrc-bin downgrade
 paru -S ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
   visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
   linuxqq wechat com.qq.weixin.work.deepin \
