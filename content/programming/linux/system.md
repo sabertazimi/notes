@@ -207,8 +207,7 @@ swapoff
 ```bash
 sudo vim /etc/systemd/system/ruoyi-server.service
 sudo systemctl daemon-reload
-sudo systemctl start ruoyi-server
-sudo systemctl enable ruoyi-server
+sudo systemctl enable --now ruoyi-server
 sudo systemctl status ruoyi-server
 sudo journalctl -u ruoyi-server -e -f
 ```
