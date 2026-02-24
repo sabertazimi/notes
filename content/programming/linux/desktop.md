@@ -57,7 +57,7 @@ GNOME shell extension:
 [Set up](https://arch.icekylin.online/guide/rookie/desktop-env-and-app.html):
 
 ```bash
-sudo pacman -S plasma-workspace xdg-desktop-portal
+sudo pacman -S plasma-meta plasma-workspace xdg-desktop-portal konsole dolphin
 sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf # 声音固件
 sudo pacman -S ntfs-3g # NTFS 硬盘
 sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 中文字体
