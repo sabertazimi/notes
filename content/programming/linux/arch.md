@@ -237,7 +237,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
   tlrc bottom gping procs curlie \
   net-tools rsync rclone speedtest-cli \
-  github-cli starship wl-clipboard firefox firefox-i18n-zh-cn \
+  firefox firefox-i18n-zh-cn github-cli starship wl-clipboard satty \
   yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
