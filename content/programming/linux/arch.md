@@ -816,7 +816,8 @@ jq '
 jq --arg home "$HOME" '
     .wallpaperPath = "\($home)/.local/share/wallpapers/archbtw.png" |
     .wallpaperCyclingEnabled = true |
-    .wallpaperCyclingMode = "time" |
+    .wallpaperCyclingMode = "interval" |
+    .wallpaperCyclingInterval = 3600 |
     .wallpaperCyclingTime = "18:00" |
     .wallpaperTransition = "disc"
 ' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
