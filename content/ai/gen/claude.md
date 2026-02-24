@@ -24,7 +24,8 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 
 `~/.claude/settings.json`:
 
-```json
+```bash
+cat << EOF > ~/.claude/settings.json
 {
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
@@ -41,6 +42,7 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
   },
   "autoUpdatesChannel": "stable"
 }
+EOF
 ```
 
 :::tip

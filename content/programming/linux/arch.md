@@ -469,9 +469,9 @@ uv python install --default
 ## Rust
 
 ```bash
-mkdir -vp /home/sabertaz/.cargo
+mkdir -vp ~/.cargo
 
-cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
+cat << EOF | tee -a ~/.cargo/config.toml
 [source.crates-io]
 replace-with = 'ustc'
 
@@ -698,7 +698,8 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 
 `~/.claude/settings.json`:
 
-```json
+```bash
+cat << EOF > ~/.claude/settings.json
 {
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
@@ -715,6 +716,7 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
   },
   "autoUpdatesChannel": "stable"
 }
+EOF
 ```
 
 ```bash
@@ -769,7 +771,7 @@ sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-
 ## WeChat
 
 Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -o %o %u")`
-to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable)
+to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable):
 
 ```bash
 paru -S com.qq.weixin.work.deepin --fm nvim
@@ -786,8 +788,8 @@ sudo sed -i '1a export GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx5\nexport X
 ## Wallpapers
 
 ```bash
-git clone --depth=1 https://github.com/sabertazimi/dotfiles
-bash dotfiles/wallpapers/install.sh
+git clone --depth=1 https://github.com/sabertazimi/dotfiles ~/dotfiles
+bash ~/dotfiles/wallpapers/install.sh
 ```
 
 ## Settings
