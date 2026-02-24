@@ -5,6 +5,13 @@ tags: [Programming, OS, Linux, System, Boot, Grub, SSH, Administration, Monitori
 
 # System
 
+## Information
+
+```bash
+sudo pacman -S dmidecode
+sudo dmidecode
+```
+
 ## GRUB
 
 ### Boot System
