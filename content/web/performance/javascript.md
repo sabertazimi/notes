@@ -516,20 +516,20 @@ _.throttle = function (func, wait, options) {
 
 ```ts
 function useAnimation() {
-  const frameId = useRef(0)
-  const ticking = useRef(false)
+  const frameIdRef = useRef(0)
+  const tickingRef = useRef(false)
 
   const handleResize = (event) => {
-    if (ticking.current) {
+    if (tickingRef.current) {
       return
     }
-    ticking.current = true
-    frameId.current = requestAnimationFrame(() => handleUpdate(event))
+    tickingRef.current = true
+    frameIdRef.current = requestAnimationFrame(() => handleUpdate(event))
   }
 
   const handleUpdate = (event) => {
     console.log('resize update')
-    ticking.current = false
+    tickingRef.current = false
   }
 
   useMount(() => {
@@ -538,7 +538,7 @@ function useAnimation() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      cancelAnimationFrame(frameId.current)
+      cancelAnimationFrame(frameIdRef.current)
     }
   })
 }

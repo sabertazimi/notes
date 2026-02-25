@@ -27,10 +27,10 @@ Context 中只定义被大多数组件所共用的属性
 import { createContext, use, useMemo, useState } from 'react'
 import { fakeAuth } from './app/services/auth'
 
-const authContext = createContext()
+const AuthContext = createContext()
 
 function useAuth() {
-  return use(authContext)
+  return use(AuthContext)
 }
 
 export default function AuthProvider({ children }: { children: ReactElement }) {
@@ -58,7 +58,7 @@ export default function AuthProvider({ children }: { children: ReactElement }) {
     }
   }, [user, signIn, signOut])
 
-  return <authContext value={auth}>{children}</authContext>
+  return <AuthContext value={auth}>{children}</AuthContext>
 }
 ```
 
@@ -68,8 +68,8 @@ export default function AuthProvider({ children }: { children: ReactElement }) {
 // Context.js
 import { Component, createContext } from 'react'
 
-const context = createContext()
-const { Provider: ContextProvider, Consumer } = context
+const CustomContext = createContext()
+const { Provider: ContextProvider, Consumer } = CustomContext
 
 class Provider extends Component<{ children: ReactElement }> {
   // refs

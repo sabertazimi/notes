@@ -148,6 +148,7 @@ class Koa extends EventEmitter {
     res.statusCode = 404
 
     // Create context proxy for `req` and `res` operations.
+    // eslint-disable-next-line react-naming-convention/context-name -- Not a React context.
     const ctx = this.createContext(req, res)
 
     // Middleware (open api for Koa users).

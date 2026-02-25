@@ -349,17 +349,17 @@ export default function Counter() {
 }
 
 function useInterval(callback, delay) {
-  const savedCallback = useRef(callback)
+  const savedCallbackRef = useRef(callback)
 
   // Remember the latest callback if it changes
   useEffect(() => {
-    savedCallback.current = callback
+    savedCallbackRef.current = callback
   }, [callback])
 
   // Set up the interval
   useEffect(() => {
     function tick() {
-      savedCallback.current()
+      savedCallbackRef.current()
     }
 
     const id = setInterval(tick, delay)

@@ -20,14 +20,14 @@ tags: [Web, React, Hook, Server, Form]
 
 ```tsx
 function useOptimistic(state, optimisticDispatcher) {
-  const [optimisticState, setState] = useState(state)
+  const [optimisticState, setOptimisticState] = useState(state)
 
   useLayoutEffect(() => {
-    setState(optimisticState)
+    setOptimisticState(optimisticState)
   }, [state])
 
   const dispatch = (action) => {
-    setState(state => optimisticDispatcher(state, action))
+    setOptimisticState(state => optimisticDispatcher(state, action))
   }
 
   return [

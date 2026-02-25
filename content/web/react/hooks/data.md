@@ -167,8 +167,8 @@ function useFetch<T = unknown>(
   url?: string,
   options?: AxiosRequestConfig
 ): State<T> {
-  const cache = useRef<Cache<T>>({})
-  const cancelRequest = useRef<boolean>(false)
+  const cacheRef = useRef<Cache<T>>({})
+  const cancelRequestRef = useRef<boolean>(false)
 
   const initialState: State<T> = {
     status: 'init',
@@ -199,19 +199,19 @@ function useFetch<T = unknown>(
     const fetchData = async () => {
       dispatch({ type: 'request' })
 
-      if (cache.current[url]) {
-        dispatch({ type: 'success', payload: cache.current[url] })
+      if (cacheRef.current[url]) {
+        dispatch({ type: 'success', payload: cacheRef.current[url] })
       } else {
         try {
           const response = await axios(url, options)
-          cache.current[url] = response.data
+          cacheRef.current[url] = response.data
 
-          if (cancelRequest.current)
+          if (cancelRequestRef.current)
             return
 
           dispatch({ type: 'success', payload: response.data })
         } catch (error) {
-          if (cancelRequest.current)
+          if (cancelRequestRef.current)
             return
 
           dispatch({ type: 'failure', payload: error.message })
@@ -222,7 +222,7 @@ function useFetch<T = unknown>(
     fetchData()
 
     return () => {
-      cancelRequest.current = true
+      cancelRequestRef.current = true
     }
   }, [url])
 

@@ -23,10 +23,10 @@ store.setState = store.setState.bind(store)
 
 // this is the custom hook we'll call on components.
 export default function useStore() {
-  const [state, set] = useState(store.state)
+  const [state, setState] = useState(store.state)
 
-  if (!store.setters.includes(set))
-    store.setters.push(set)
+  if (!store.setters.includes(setState))
+    store.setters.push(setState)
 
   return [state, store.setState]
 }
@@ -68,14 +68,14 @@ export default function useStore(props: useStoreProps) {
     }, {}),
   })
 
-  const currentState = useRef(state)
-  currentState.current = state
+  const currentStateRef = useRef(state)
+  currentStateRef.current = state
 
-  const getState = useCallback(() => currentState.current, [])
+  const getState = useCallback(() => currentStateRef.current, [])
   const publisher = useMemo(() => new Publisher(getState), [getState])
 
   useEffect(() => {
-    currentState.current = state
+    currentStateRef.current = state
     publisher.notify()
   }, [publisher, state])
 

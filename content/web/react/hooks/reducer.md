@@ -197,10 +197,10 @@ Use `useReducer` if:
 
 ```ts
 function App() {
-  const [state, dispatch] = useState({ count: 0 })
+  const [state, setState] = useState({ count: 0 })
 
   // 等价于
-  const [state, dispatch] = useReducer(
+  const [state, setState] = useReducer(
     (state, action) => {
       return typeof action === 'function' ? action(state) : action
     },
@@ -208,6 +208,7 @@ function App() {
   )
 
   // 当需要更新 state 时, 有 2 种方式:
+  const dispatch = typeof setState === 'function' ? setState : () => {}
   // 1. 直接设置:
   dispatch({ count: 1 })
   // 2.通过回调函数设置:
