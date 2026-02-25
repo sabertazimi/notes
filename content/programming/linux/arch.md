@@ -125,9 +125,12 @@ dms greeter sync
 ```bash
 # Change window switch scope to all monitors
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
-# Customize hotkeys
+# Remove hotkeys
+sed -i '/Ctrl+Shift+R/,/^[[:space:]]*}[[:space:]]*$/d' ~/.config/niri/dms/binds.kdl
+# Change hotkeys
 sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
 sed -i 's/Mod+M /Mod+Shift+M /g' ~/.config/niri/dms/binds.kdl
+# Add hotkeys
 sed -i \
   '/binds {/a \
     Mod+Comma { "consume-window-into-column"; }\
