@@ -105,18 +105,18 @@ through ref:
 
 ```tsx
 function useEvent(event, handler, option = {}) {
-  const refPrev = useRef()
+  const prevRef = useRef()
   const attach = useCallback(
     (el) => {
       el.addEventListener(event, handler, option)
-      refPrev.current = el
+      prevRef.current = el
     },
     [handler]
   )
   const detach = useCallback(
     (el) => {
-      refPrev.current.removeEventListener(event, handler)
-      refPrev.current = null
+      prevRef.current.removeEventListener(event, handler)
+      prevRef.current = null
     },
     [handler]
   )

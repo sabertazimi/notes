@@ -2,7 +2,7 @@ import type { VariantProps } from 'class-variance-authority'
 import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@site/src/lib/utils'
 import { cva } from 'class-variance-authority'
-import React from 'react'
+import * as React from 'react'
 
 const rainbowButtonVariants = cva(
   cn(

@@ -24,8 +24,6 @@ tags: [Web, JavaScript, ECMAScript]
 | `function` | Complete           | Block         | Yes                       |
 | `import`   | Complete           | Module-global | No                        |
 
-<!-- eslint-disable -->
-
 ```ts
 // 我们知道这个行不通 (假设没有未定义的全局变量)
 function example() {
@@ -36,6 +34,7 @@ function example() {
 // 注意: 真正的值 `true` 不会被提升.
 function example() {
   console.log(declaredButNotAssigned) // => undefined
+  // eslint-disable-next-line no-var, vars-on-top -- for demonstration of variable hoisting
   var declaredButNotAssigned = true
 }
 
@@ -55,8 +54,6 @@ function example() {
 }
 ```
 
-<!-- eslint-disable -->
-
 ```ts
 function example() {
   console.log(named) // => undefined
@@ -65,13 +62,12 @@ function example() {
 
   superPower() // => ReferenceError superPower is not defined
 
+  // eslint-disable-next-line no-var, vars-on-top -- for demonstration of variable hoisting
   var named = function superPower() {
     console.log('Flying')
   }
 }
 ```
-
-<!-- eslint-enable -->
 
 ## Let
 

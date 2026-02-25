@@ -56,17 +56,17 @@ export function useField(
   const [errors, setErrors] = useState([])
   const [pristine, setPristine] = useState(true)
   const [validating, setValidating] = useState(false)
-  const validateCounter = useRef(0)
+  const validateCounterRef = useRef(0)
 
   const validate = async () => {
-    const validateIteration = ++validateCounter.current
+    const validateIteration = ++validateCounterRef.current
     setValidating(true)
     const formData = form.getFormData()
     let errorMessages = await Promise.all(
       validations.map(validation => validation(formData, name))
     )
     errorMessages = errorMessages.filter(Boolean)
-    if (validateIteration === validateCounter.current) {
+    if (validateIteration === validateCounterRef.current) {
       // this is the most recent invocation
       setErrors(errorMessages)
       setValidating(false)
@@ -102,17 +102,17 @@ export function useField(
 export function useForm({ onSubmit }) {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
-  const fields = useRef([])
+  const fieldsRef = useRef([])
 
   const validateFields = async (fieldNames) => {
     let fieldsToValidate
     if (Array.is(fieldNames)) {
-      fieldsToValidate = fields.current.filter(field =>
+      fieldsToValidate = fieldsRef.current.filter(field =>
         fieldNames.includes(field.name)
       )
     } else {
       // If fieldNames not provided, validate all fields.
-      fieldsToValidate = fields.current
+      fieldsToValidate = fieldsRef.current
     }
     const fieldsValid = await Promise.all(
       fieldsToValidate.map(field => field.validate())
@@ -121,7 +121,7 @@ export function useForm({ onSubmit }) {
   }
 
   const getFormData = () => {
-    return fields.current.reduce((formData, f) => {
+    return fieldsRef.current.reduce((formData, f) => {
       formData[f.name] = f.value
       return formData
     }, {})
@@ -137,8 +137,8 @@ export function useForm({ onSubmit }) {
       setSubmitting(false)
       return returnVal
     },
-    isValid: () => fields.current.every(f => f.errors.length === 0),
-    addField: field => fields.current.push(field),
+    isValid: () => fieldsRef.current.every(f => f.errors.length === 0),
+    addField: field => fieldsRef.current.push(field),
     getFormData,
     validateFields,
     submitted,
@@ -389,12 +389,12 @@ function createFormControl() {
 
 function useForm() {
   // Detailed logic handlers: DOM refs, field getter/setter, submit handler.
-  const formControl = useRef<FormControl>(createFormControl())
+  const formControlRef = useRef<FormControl>(createFormControl())
   // Entire form state: valid, errors etc.
   const formState = useState<FormState>()
 
   return {
-    ...formControl.current,
+    ...formControlRef.current,
   }
 }
 

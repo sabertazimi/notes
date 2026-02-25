@@ -1,6 +1,7 @@
 import type { Category, Item, Section, SubSection } from '@site/src/lib/parse-markdown'
 import { parseMarkdown } from '@site/src/lib/parse-markdown'
-import React, { useEffect, useRef, useState } from 'react'
+import * as React from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './library-gallery.module.css'
 
 interface Props {

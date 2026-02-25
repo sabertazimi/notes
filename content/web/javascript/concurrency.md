@@ -288,11 +288,9 @@ class WorkerPool {
 }
 ```
 
-<!-- eslint-disable no-restricted-globals -->
-
 ```ts
 // worker.js
-self.onmessage = ({ data }) => {
+globalThis.onmessage = ({ data }) => {
   const view = new Float32Array(data.arrayBuffer)
   let sum = 0
   // 求和
@@ -301,11 +299,11 @@ self.onmessage = ({ data }) => {
     sum += view[i]
   }
   // 把结果发送给工作者线程
-  self.postMessage(sum)
+  globalThis.postMessage(sum)
 }
 // 发送消息给 TaskWorker
 // 通知工作者线程准备好接收任务了
-self.postMessage('ready')
+globalThis.postMessage('ready')
 
 // main.js
 const totalFloats = 1e8
@@ -342,8 +340,6 @@ Promise.all(partialSumPromises)
 // (在这个例子中, 和应该约等于 1E8/2)
 // 49997075.47203197
 ```
-
-<!-- eslint-enable no-restricted-globals -->
 
 ### Performance
 

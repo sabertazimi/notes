@@ -102,24 +102,25 @@ function abstractEqualityComparison(x, y) {
 - `NaN` is not equal to anything, including `NaN`.
 - `null` and `undefined` types are not equal with `===`, but equal with `==`.
 
-<!-- eslint-disable eqeqeq -->
-
 ```ts
+// eslint-disable-next-line eqeqeq -- for demonstration of loose equality
 const true1 = 0 == false // true
 const false1 = 0 === false // false
+// eslint-disable-next-line eqeqeq -- for demonstration of loose equality
 const true2 = 1 == '1' // true
 const false2 = 1 === '1' // false
 const true3 = undefined == null // true
 const false3 = undefined === null // false
+// eslint-disable-next-line eqeqeq -- for demonstration of loose equality
 const true4 = '0' == false // true
 const false4 = '0' === false // false
+// eslint-disable-next-line eqeqeq -- for demonstration of loose equality
 const false5 = [] == [] // false, refer different objects in memory
 const false6 = [] === [] // false, refer different objects in memory
+// eslint-disable-next-line eqeqeq -- for demonstration of loose equality
 const false7 = {} == {} // false, refer different objects in memory
 const false8 = {} === {} // false, refer different objects in memory
 ```
-
-<!-- eslint-enable eqeqeq -->
 
 `Object.is`:
 

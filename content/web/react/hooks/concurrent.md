@@ -145,17 +145,17 @@ import { useRef, useState, useTransition } from 'react'
 import Spinner from './Spinner'
 
 export default function App() {
-  const input = useRef('')
+  const inputRef = useRef('')
   const [searchInputValue, setSearchInputValue] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
   const [isPending, startTransition] = useTransition()
 
   // Urgent: show what was typed.
-  setSearchInputValue(input)
+  setSearchInputValue(inputRef)
 
   // Debounced callback.
   startTransition(() => {
-    setSearchQuery(input)
+    setSearchQuery(inputRef)
   })
 
   return <div>{isPending && <Spinner />}</div>

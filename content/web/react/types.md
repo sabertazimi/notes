@@ -235,7 +235,7 @@ function useEventListener<T extends HTMLElement = HTMLDivElement>(
   element?: RefObject<T>,
 ) {
   // Create a ref that stores handler
-  const savedHandler = useRef<(event: Event) => void>()
+  const saveHandlerRef = useRef<(event: Event) => void>()
 
   useEffect(() => {
     // Define the listening target
@@ -244,12 +244,12 @@ function useEventListener<T extends HTMLElement = HTMLDivElement>(
       return
 
     // Update saved handler if necessary
-    if (savedHandler.current !== handler)
-      savedHandler.current = handler
+    if (saveHandlerRef.current !== handler)
+      saveHandlerRef.current = handler
 
     // Create event listener that calls handler function stored in ref
     const eventListener = (event: Event) => {
-      savedHandler?.current(event)
+      saveHandlerRef?.current(event)
     }
 
     targetElement.addEventListener(eventName, eventListener)
@@ -392,22 +392,22 @@ export class Modal extends React.Component<{ children: ReactElement }> {
 ```
 
 ```tsx
-import type React from 'react'
+import type * as React from 'react'
 import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 
 const modalRoot = document.querySelector('#modal-root') as HTMLElement
 
 const Modal: React.FC<object> = ({ children }) => {
-  const el = useRef(document.createElement('div'))
+  const elRef = useRef(document.createElement('div'))
 
   useEffect(() => {
-    const current = el.current
+    const current = elRef.current
     modalRoot!.appendChild(current)
     return () => modalRoot!.removeChild(current)
   }, [])
 
-  return createPortal(children, el.current)
+  return createPortal(children, elRef.current)
 }
 
 export default Modal
@@ -523,9 +523,9 @@ Use `as const` type assertion to avoid type inference
 
 ```ts
 export function useLoading() {
-  const [isLoading, setState] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false)
   const load = () => {
-    setState(true)
+    setSIsLoading(true)
   }
 
   // return `[boolean, () => void]` as want
@@ -691,8 +691,8 @@ function useFetch<T = unknown>(
   url?: string,
   options?: AxiosRequestConfig,
 ): State<T> {
-  const cache = useRef<Cache<T>>({})
-  const cancelRequest = useRef<boolean>(false)
+  const cacheRef = useRef<Cache<T>>({})
+  const cancelRequestRef = useRef<boolean>(false)
 
   const initialState: State<T> = {
     status: 'init',
@@ -723,19 +723,19 @@ function useFetch<T = unknown>(
     const fetchData = async () => {
       dispatch({ type: 'request' })
 
-      if (cache.current[url]) {
-        dispatch({ type: 'success', payload: cache.current[url] })
+      if (cacheRef.current[url]) {
+        dispatch({ type: 'success', payload: cacheRef.current[url] })
       } else {
         try {
           const response = await axios(url, options)
-          cache.current[url] = response.data
+          cacheRef.current[url] = response.data
 
-          if (cancelRequest.current)
+          if (cancelRequestRef.current)
             return
 
           dispatch({ type: 'success', payload: response.data })
         } catch (error) {
-          if (cancelRequest.current)
+          if (cancelRequestRef.current)
             return
 
           dispatch({ type: 'failure', payload: error.message })
@@ -746,7 +746,7 @@ function useFetch<T = unknown>(
     fetchData()
 
     return () => {
-      cancelRequest.current = true
+      cancelRequestRef.current = true
     }
   }, [url])
 

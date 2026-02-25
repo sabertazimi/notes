@@ -97,18 +97,18 @@ export default function useLongPress(time = 500) {
   const [action, setAction] = useState()
 
   const timerRef = useRef()
-  const isLongPress = useRef()
+  const isLongPressRef = useRef()
 
   function startPressTimer() {
-    isLongPress.current = false
+    isLongPressRef.current = false
     timerRef.current = setTimeout(() => {
-      isLongPress.current = true
+      isLongPressRef.current = true
       setAction('LongPress')
     }, time)
   }
 
   function handleClick() {
-    if (isLongPress.current)
+    if (isLongPressRef.current)
       return
 
     setAction('Click')
