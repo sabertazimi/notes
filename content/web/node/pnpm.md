@@ -42,3 +42,9 @@ chmod +x ./pnpm
 ```bash
 pnpm config set registry https://registry.npmmirror.com/
 ```
+
+## Workspace
+
+```bash
+pnpm update -r @dg-scripts/eslint-config @dg-scripts/stylelint-config --latest
+```
