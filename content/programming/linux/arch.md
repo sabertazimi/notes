@@ -241,7 +241,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   tlrc bottom gping procs curlie \
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard satty \
-  yazi ffmpeg imagemagick kimageformats resvg poppler 7zip \
+  yazi ffmpeg imagemagick kimageformats resvg poppler 7zip trash-cli \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
