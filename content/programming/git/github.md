@@ -308,7 +308,6 @@ This is a [link to a web page][mylabel].
 Then at the end of the document …
 
 [mylabel]: https://url.com 'Optional title'
-[mylabel]: https://url.com 'Optional title'
 ```
 
 ```md

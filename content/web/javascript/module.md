@@ -477,10 +477,9 @@ Import map `importmap`:
 
 Export default value:
 
-<!-- eslint-disable -->
-
 ```ts
 // module.js
+// eslint-disable-next-line import/no-mutable-exports -- for demonstration
 let thing = 'initial'
 
 export { thing }
@@ -491,11 +490,11 @@ setTimeout(() => {
 }, 500)
 ```
 
-<!-- eslint-disable -->
-
 ```ts
 // main.js
+// eslint-disable-next-line import/no-duplicates, import/no-named-default -- for demonstration
 import { default as defaultThing, thing } from './module.js'
+// eslint-disable-next-line import/no-duplicates -- for demonstration
 import anotherDefaultThing from './module.js'
 
 setTimeout(() => {
@@ -507,10 +506,9 @@ setTimeout(() => {
 
 Export live reference:
 
-<!-- eslint-disable -->
-
 ```ts
 // module.js
+// eslint-disable-next-line import/no-mutable-exports -- for demonstration
 export let thing = 'initial'
 
 setTimeout(() => {
@@ -518,12 +516,12 @@ setTimeout(() => {
 }, 500)
 ```
 
-<!-- eslint-disable -->
-
 ```ts
 // main.js
 import { thing as importedThing } from './module.js'
+
 const module = await import('./module.js')
+// eslint-disable-next-line prefer-const -- for demonstration
 let { thing } = await import('./module.js') // Destructuring behavior
 
 setTimeout(() => {
@@ -535,11 +533,11 @@ setTimeout(() => {
 
 To sum up:
 
-<!-- eslint-disable -->
-
 ```ts
 // Live reference:
+// eslint-disable-next-line import/no-duplicates -- for demonstration
 import { thing } from './module.js'
+// eslint-disable-next-line import/no-duplicates -- for demonstration
 import { thing as otherName } from './module.js'
 
 // Current value:
@@ -555,5 +553,3 @@ export default function thing() {}
 export default thing
 export default 'hello!'
 ```
-
-<!-- eslint-enable -->

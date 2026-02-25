@@ -49,14 +49,14 @@ function updateRef<T>(initialValue: T) {
 ```tsx
 export default function Example() {
   const [count, setCount] = useState(0)
-  const latestCount = useRef(count)
+  const latestCountRef = useRef(count)
 
   useEffect(() => {
     // Set the mutable latest value
-    latestCount.current = count
+    latestCountRef.current = count
     const timeout = setTimeout(() => {
       // Read the mutable latest value
-      console.log(`You clicked ${latestCount.current} times`)
+      console.log(`You clicked ${latestCountRef.current} times`)
     }, 3000)
 
     return () => clearTimeout(timeout)
@@ -88,14 +88,14 @@ export default function Username({ name }: { name: string }) {
 
 ```tsx
 export default function User() {
-  const user = useRef({
+  const userRef = useRef({
     name: 'UserName',
     avatarURL: 'https://avatar.com/avatar',
   })
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      user.current = {
+      userRef.current = {
         name: 'NewUserName',
         avatarURL: 'https://avatar.com/newavatar',
       }

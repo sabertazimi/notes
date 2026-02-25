@@ -1,6 +1,7 @@
 import { cn } from '@site/src/lib/utils'
 import { motion, useMotionTemplate, useMotionValue } from 'motion/react'
-import React, { useCallback, useEffect } from 'react'
+import * as React from 'react'
+import { useCallback, useEffect } from 'react'
 
 interface MagicCardProps {
   children?: React.ReactNode
