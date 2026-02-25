@@ -5,6 +5,152 @@ tags: [Programming, OS, Linux, I/O, Swap, File, Zip]
 
 # I/O
 
+## File
+
+### Cat
+
+concatenate files
+
+### Sort
+
+sort lines of text
+
+### Uniq
+
+report or omit repeated lines
+
+### Wc
+
+print newline, word, and byte counts for each file
+
+### Head and Tail
+
+output the first/last part of a file
+
+```bash
+head -n 5 filename
+tail -f filename
+```
+
+### Tee
+
+read from standard input and write to standard output and files
+
+```bash
+[me@linuxBox ~]$ ls /usr/bin | tee ls.txt | grep zip
+bunzip2
+bzip2
+....
+```
+
+### Nl
+
+number lines
+
+### Fold
+
+wrap each line to a specified length
+
+### Fmt
+
+a simple text formatter
+
+### Pr
+
+prepare text for printing
+
+### Printf
+
+format and print data
+
+## Compression
+
+### Zip
+
+- `zip -r(目录) 压缩文件 源文件/源目录`.
+- `unzip 源文件 -d 指定路径`.
+
+```bash
+zip -r archive_name.zip folder_to_compress
+unzip archive_name.zip
+
+zipinfo archive_name.zip
+unzip -l archive_name.zip
+```
+
+### Gz
+
+- `gzip 源文件`.
+- `gzip –c 源文件 > 压缩文件`.
+- `gzip -r 源目录 将源目录下所有子文件分别单独压缩`.
+- `gzip –d(解压缩) 文件`.
+- `gunzip 压缩文件`.
+
+### Bz2
+
+不可压缩目录:
+
+- `bzip2 –k(保留源文件) 源文件`.
+- `bzip2 –d(解压缩) –k(保留压缩文件) 压缩文件`.
+- `bunzip2 –k(保留压缩文件) 压缩文件`.
+
+### Tar
+
+`.tar.gz`/`.tar.bz2`:
+
+`tar [可选参数] 压缩文件(可指定压缩路径) [-c 解压缩路径]源文件/源目录`:
+
+- `-z`: 将 `.tar` 压缩为 `.tar.gz`.
+- `-j`: 将 `.tar` 压缩为 `.tar.bz2`.
+- `-c`: 打包 `-x` 解打包.
+- `-t`: 查看压缩文件.
+- `-v`: 显示过程.
+- `-f`: 指定压缩文件名.
+- `-C`: 指定解压缩路径.
+- `-zcvf`/`-zxvf`/`-ztcf`.
+- `-jcvf`/`-jxvf`/`-jtvf`.
+
+```bash
+tar -xzf archive.tar.gz
+```
+
+### 7z
+
+- `a`: add.
+- `x`: extract.
+- `-r`: recursive.
+- `-o`: specific path.
+- `-t`: type.
+
+```bash
+7z x manager.7z -r -o /home/xx
+7z a -t7z -r manager.7z /home/manager/*
+```
+
+### UnAr
+
+Decompress files of any format:
+
+```bash
+unar archive_name.zip
+unar archive_name.7z
+unar archive_name.rar
+unar archive_name.ISO
+unar archive_name.tar.gz
+```
+
+### LsAr
+
+Peek files in a compress file of any format:
+
+```bash
+lsar -l archive_name.zip
+lsar -l archive_name.7z
+lsar -l archive_name.ISO
+lsar -l archive_name.rar
+lsar -l archive_name.tar.gz
+```
+
 ## Zero Copy
 
 - `read` + `write`: 4 context switch, 4 data copy (2 DMA, 2 CPU).
@@ -210,148 +356,21 @@ sudo get-edid | parse-edid
 synclient TouchpadOff=0
 ```
 
-## File
+## Audio Server
 
-### Cat
-
-concatenate files
-
-### Sort
-
-sort lines of text
-
-### Uniq
-
-report or omit repeated lines
-
-### Wc
-
-print newline, word, and byte counts for each file
-
-### Head and Tail
-
-output the first/last part of a file
+[Pipewire](https://gitlab.freedesktop.org/pipewire/pipewire):
 
 ```bash
-head -n 5 filename
-tail -f filename
-```
+pactl info | grep "Server Name"
+systemctl --user status pipewire
 
-### Tee
+wpctl status
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ # 音量增加  5%
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.5 # 音量设为 50%
 
-read from standard input and write to standard output and files
-
-```bash
-[me@linuxBox ~]$ ls /usr/bin | tee ls.txt | grep zip
-bunzip2
-bzip2
-....
-```
-
-### Nl
-
-number lines
-
-### Fold
-
-wrap each line to a specified length
-
-### Fmt
-
-a simple text formatter
-
-### Pr
-
-prepare text for printing
-
-### Printf
-
-format and print data
-
-## Compression
-
-### Zip
-
-- `zip -r(目录) 压缩文件 源文件/源目录`.
-- `unzip 源文件 -d 指定路径`.
-
-```bash
-zip -r archive_name.zip folder_to_compress
-unzip archive_name.zip
-
-zipinfo archive_name.zip
-unzip -l archive_name.zip
-```
-
-### Gz
-
-- `gzip 源文件`.
-- `gzip –c 源文件 > 压缩文件`.
-- `gzip -r 源目录 将源目录下所有子文件分别单独压缩`.
-- `gzip –d(解压缩) 文件`.
-- `gunzip 压缩文件`.
-
-### Bz2
-
-不可压缩目录:
-
-- `bzip2 –k(保留源文件) 源文件`.
-- `bzip2 –d(解压缩) –k(保留压缩文件) 压缩文件`.
-- `bunzip2 –k(保留压缩文件) 压缩文件`.
-
-### Tar
-
-`.tar.gz`/`.tar.bz2`:
-
-`tar [可选参数] 压缩文件(可指定压缩路径) [-c 解压缩路径]源文件/源目录`:
-
-- `-z`: 将 `.tar` 压缩为 `.tar.gz`.
-- `-j`: 将 `.tar` 压缩为 `.tar.bz2`.
-- `-c`: 打包 `-x` 解打包.
-- `-t`: 查看压缩文件.
-- `-v`: 显示过程.
-- `-f`: 指定压缩文件名.
-- `-C`: 指定解压缩路径.
-- `-zcvf`/`-zxvf`/`-ztcf`.
-- `-jcvf`/`-jxvf`/`-jtvf`.
-
-```bash
-tar -xzf archive.tar.gz
-```
-
-### 7z
-
-- `a`: add.
-- `x`: extract.
-- `-r`: recursive.
-- `-o`: specific path.
-- `-t`: type.
-
-```bash
-7z x manager.7z -r -o /home/xx
-7z a -t7z -r manager.7z /home/manager/*
-```
-
-### UnAr
-
-Decompress files of any format:
-
-```bash
-unar archive_name.zip
-unar archive_name.7z
-unar archive_name.rar
-unar archive_name.ISO
-unar archive_name.tar.gz
-```
-
-### LsAr
-
-Peek files in a compress file of any format:
-
-```bash
-lsar -l archive_name.zip
-lsar -l archive_name.7z
-lsar -l archive_name.ISO
-lsar -l archive_name.rar
-lsar -l archive_name.tar.gz
+pw-top
+pw-cli ls Node
+pw-cli info <ID>
+pw-play <filename>
+pw-record <filename>
 ```
