@@ -556,7 +556,7 @@ echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
 cat << EOF >> ~/.ripgreprc
-# Add 'web' type.
+# Add 'web' type
 --type-add
 web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
 
