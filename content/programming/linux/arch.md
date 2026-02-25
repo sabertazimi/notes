@@ -686,7 +686,12 @@ echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_
 `~/.config/mimeapps.list`:
 
 ```bash
+# Query
+xdg-mime query default text/plain
+xdg-mime query filetype ~/workspace/notes/src/components/notes-marquee.tsx
+# Update
 xdg-mime default code.desktop text/plain
+xdg-mime default code.desktop application/javascript
 ```
 
 ## Claude Code
