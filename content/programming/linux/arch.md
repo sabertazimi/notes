@@ -807,7 +807,7 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell" "${XDG_STATE_HOME
 touch "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
 
 jq '
-    .wallpaperFillMode = "Stretch" |
+    .wallpaperFillMode = "Fill" |
     .currentThemeName = "dynamic" |
     .currentThemeCategory = "dynamic" |
     .matugenScheme = "scheme-tonal-spot" |
