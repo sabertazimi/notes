@@ -861,6 +861,22 @@ git push
 exit
 ```
 
+Edit and sync dotfiles:
+
+```bash
+# Edit dotfile
+dot edit ~/.zshrc
+# Apply to local machine
+dot diff
+dot apply -v
+# Push to remote repository
+dot cd
+git add .
+git commit
+git push
+exit
+```
+
 ## Library
 
 - [Dank](https://github.com/AvengeMedia/DankMaterialShell):
