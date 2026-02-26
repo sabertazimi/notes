@@ -804,6 +804,7 @@ echo 'alias onedrive="rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full -
 echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "/home/sabertaz/onedrive" "--vfs-cache-mode" "full" "--daemon"' >> ~/.config/niri/config.kdl
 rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full --daemon
 rclone ls onedrive:/
+rclone rcd --rc-web-gui
 ```
 
 ## Steam
