@@ -259,23 +259,15 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mesa-utils s-tui
 ```
 
+### Sync
+
 ```bash
 # Search packages
 pacman -Ss <keyword>
-# Check information
+# Show information
 pacman -Si <package-name>
 # Skip installed packages
 sudo pacman -S --needed <package-list>
-
-# List installed packages
-pacman -Qq | wc -l
-# List orphans packages
-pacman -Qdtq
-
-# Remove package
-sudo pacman -Rns <package-name>
-# Clean orphans packages
-sudo pacman -Rns $(pacman -Qdtq)
 ```
 
 :::danger[Partial Upgrade]
@@ -284,6 +276,28 @@ DO NOT use `pacman -Sy <package-name>`.
 [Partial upgrade](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported) are unsupported.
 
 :::
+
+### Query
+
+```bash
+# Show information
+pacman -Qi <package-name>
+# List installed packages
+pacman -Qq | wc -l
+# List orphans packages
+pacman -Qdtq
+# Check owns package
+pacman -Qo /usr/lib/bluetooth/bluetoothd # -> bluez
+```
+
+### Remove
+
+```bash
+# Remove package
+sudo pacman -Rns <package-name>
+# Clean orphans packages
+sudo pacman -Rns $(pacman -Qdtq)
+```
 
 ## AUR
 
