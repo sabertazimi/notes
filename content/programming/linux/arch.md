@@ -24,7 +24,7 @@ archinstall
 1. Mirrors: China + multilib.
 2. Disk: `1GB` `fat32` `/boot`, `16GB` linux-swap, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`.
 3. Bootloader: GRUB.
-4. Kernel: linux-lts.
+4. Kernel: `linux`.
 5. Authentication: Root and user.
 6. Profile: Niri.
 7. Applications: Bluetooth, audio, print, power.
@@ -101,7 +101,8 @@ EOF
 sudo systemctl enable --now NetworkManager
 sudo pacman -Sy archlinuxcn-keyring
 
-sudo pacman -S base-devel linux-lts-headers btrfs-progs os-prober \
+sudo pacman -S base-devel btrfs-progs os-prober \
+  linux-headers linux-lts linux-lts-headers \
   pacman-contrib unzip wget git zsh vim neovim paru \
   # Temporary proxy from archlinuxcn
   clash-verge-rev
@@ -341,6 +342,7 @@ flatpak run com.jianguoyun.Nutstore
 # sudo pacman -S os-prober
 # mount --mkdir /dev/nvme0n1p1 /mnt/winboot
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
+echo 'GRUB_TOP_LEVEL="/boot/vmlinuz-linux"' | sudo tee -a /etc/default/grub
 git clone --depth=1 https://github.com/vinceliuice/grub2-themes \
   && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k && cd ..
 sudo grub-mkconfig -o /boot/grub/grub.cfg
