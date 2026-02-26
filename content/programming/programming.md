@@ -9,7 +9,6 @@ tags: [Programming]
 - [CMake](./cmake/cmake.md) - CMake build system
 - [Design](./design/design.md) - Software architecture and design patterns
 - [DevOps](./devops/devops.md) - DevOps practices
-- [FFmpeg](./ffmpeg/ffmpeg.md) - FFmpeg multimedia framework
 - [Game](./game/game.md) - Game development
 - [Git](./git/git.md) - Git version control
 - [Linux](./linux/linux.md) - Linux development
