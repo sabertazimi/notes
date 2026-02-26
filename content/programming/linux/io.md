@@ -374,3 +374,24 @@ pw-cli info <ID>
 pw-play <filename>
 pw-record <filename>
 ```
+
+## Bluetooth
+
+```bash
+sudo pacman -S bluez bluez-utils
+sudo systemctl enable --now bluetooth
+```
+
+```bash
+bluetoothctl
+> help
+> power on
+> agent on
+> default-agent
+> scan on
+> pair [MAC]
+> trust [MAC]
+> connect [MAC]
+> devices
+> exit
+```
