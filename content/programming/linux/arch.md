@@ -800,9 +800,9 @@ rclone config
 
 # Mount to local disk
 mkdir -p ~/onedrive
-echo 'alias onedrive="rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full"' >> ~/.zshrc
+echo 'alias onedrive="rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full & disown"' >> ~/.zshrc
 echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "$HOME/onedrive" "--vfs-cache-mode" "full"' >> ~/.config/niri/config.kdl
-rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full
+rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full & disown
 rclone ls onedrive:/
 ```
 
