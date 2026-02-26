@@ -109,6 +109,11 @@ sudo pacman -S base-devel btrfs-progs os-prober \
 
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
 sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf
+cat << EOF >> ~/.zshrc
+alias pac="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias pacr="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
+alias pacl="paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi"
+EOF
 ```
 
 ## Desktop
@@ -291,14 +296,31 @@ paru -S ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
   animeko-appimage nipaplay-reload-bin splayer go-musicfox
 ```
 
-:::tip[Shorthand]
+### Helpers
 
-1. `paru`: `sudo pacman -Syu`
-2. `paru -c`: `sudo pacman -Rns $(pacman -Qtdq)`
+Rolling updates:
 
-:::
+```bash
+# sudo pacman -Syu
+paru
+```
 
-### Rolling Updates
+Clean up packages:
+
+```bash
+# sudo pacman -Rns $(pacman -Qtdq)
+paru -c
+```
+
+Install, remove, and browse packages with `fzf`:
+
+```bash
+paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S
+paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns
+paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi
+```
+
+### Repository
 
 - `PKGBUILD` 在 [AUR 仓库](https://aur.archlinux.org) 单独维护
 - `-git` 包的 `pkgver()` 由 makepkg 自动执行, 格式: `0.2.0.r1.g783b971` (tag.revision.commit)
