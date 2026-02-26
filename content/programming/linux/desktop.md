@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 43
 tags: [Programming, OS, Linux, Distribution, Desktop Environment, Compositor, X11, Wayland, GNOME, KDE, GTK, QT]
 ---
 

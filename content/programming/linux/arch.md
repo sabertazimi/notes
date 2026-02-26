@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 40
 tags: [Programming, OS, Linux, Distribution, Arch Linux, Niri]
 ---
 
