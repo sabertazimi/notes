@@ -470,7 +470,6 @@ sed -i \
   -e 's/^color_bg3.*/color_bg3 = '"'"'{{colors.secondary.default.hex}}'"'"'/' \
   -e 's/^color_blue.*/color_blue = '"'"'{{colors.inverse_primary.default.hex}}'"'"'/' \
   -e 's/^color_aqua.*/color_aqua = '"'"'{{colors.on_secondary_container.default.hex}}'"'"'/' \
-  -e 's/^color_green.*/color_green = '"'"'{{colors.primary.default.hex}}'"'"'/' \
   -e 's/^color_orange.*/color_orange = '"'"'{{colors.primary_fixed_dim.default.hex}}'"'"'/' \
   -e 's/^color_yellow.*/color_yellow = '"'"'{{colors.tertiary.default.hex}}'"'"'/' \
   -e 's/fg:color_fg0 bg:color_blue/fg:color_fg1 bg:color_blue/g' \
