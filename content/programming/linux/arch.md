@@ -237,7 +237,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   mandb cmatrix fastfetch lolcat \
-  nvm uv rustup jre8-openjdk mise \
+  nvm uv rustup go jre8-openjdk mise \
   zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
   tlrc bottom gping procs curlie \
   net-tools rsync rclone speedtest-cli \
@@ -488,6 +488,13 @@ index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 EOF
 
 rustup default stable
+```
+
+## Go
+
+```bash
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 ## Neovim
