@@ -6,7 +6,7 @@ tags: [Programming, Linux, Media, Video, FFmpeg]
 # FFmpeg
 
 ```bash
-sudo pacman -S ffmpeg 
+sudo pacman -S ffmpeg
 ```
 
 [Media conversion](https://web.dev/media-conversion):
