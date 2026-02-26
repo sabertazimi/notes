@@ -282,6 +282,8 @@ DO NOT use `pacman -Sy <package-name>`.
 ```bash
 # Show information
 pacman -Qi <package-name>
+# List package contents
+pacman -Ql <package-name> | grep '/usr/bin/'
 # List installed packages
 pacman -Qq | wc -l
 # List orphans packages
