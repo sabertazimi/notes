@@ -795,11 +795,15 @@ pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 ## OneDrive
 
 ```bash
+# Set up ondrive config
 rclone config
+
+# Mount to local disk
 mkdir -p ~/onedrive
-rclone mount <remote-name>: ~/onedrive --vfs-cache-mode writes
-rclone ls <remote-name>:
-echo 'alias onedrive="rclone mount onedrive: ~/onedrive --vfs-cache-mode writes"' >> ~/.zshrc
+echo 'alias onedrive="rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full"' >> ~/.zshrc
+echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "$HOME/onedrive" "--vfs-cache-mode" "full"' >> ~/.config/niri/config.kdl
+rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full
+rclone ls onedrive:/
 ```
 
 ## Steam
