@@ -307,10 +307,12 @@ sudo pacman -Rns $(pacman -Qdtq)
 ```bash
 paru -S mihomo-party-bin chsrc-bin downgrade
 paru -S ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
-  visual-studio-code-bin uudeck google-chrome zen-browser-bin zen-browser-i18n-zh-cn \
-  linuxqq wechat com.qq.weixin.work.deepin \
+  visual-studio-code-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage nipaplay-reload-bin splayer go-musicfox
+  animeko-appimage splayer
+# paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
+# paru -S com.qq.weixin.work.deepin
+# paru -S nipaplay-reload-bin go-musicfox
 ```
 
 ### Helpers
@@ -368,11 +370,7 @@ paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
 
 ```bash
 flatpak remote-add --if-not-exists flathub https://flathub.org
-flatpak install flathub com.jianguoyun.Nutstore
-```
-
-```bash
-flatpak run com.jianguoyun.Nutstore
+# flatpak install flathub com.jianguoyun.Nutstore
 ```
 
 ## GRUB
