@@ -397,6 +397,9 @@ Command line fuzzy finder:
 - `ctrl-k` / `ctrl-j`: move cursor up and down.
 - Multi-select(`-m`): `tab` and `shift-tab` to mark multiple items.
 
+See [practical guide](https://thevaluable.dev/practical-guide-fzf-example)
+for more `fzf` examples.
+
 ## Television
 
 [Television](https://github.com/alexpasmantier/television):
@@ -573,3 +576,4 @@ echo 'alias curl="curlie"' >> ~/.zshrc
 - Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
 - Terminal [tool of the week](https://terminaltrove.com/tool-of-the-week).
 - Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).
+- `fzf` [practical guide](https://thevaluable.dev/practical-guide-fzf-example).
