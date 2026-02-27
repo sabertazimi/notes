@@ -384,6 +384,34 @@ Command line fuzzy finder:
 - `ctrl-k` / `ctrl-j`: move cursor up and down.
 - Multi-select(`-m`): `tab` and `shift-tab` to mark multiple items.
 
+## Television
+
+[Television](https://github.com/alexpasmantier/television):
+
+```bash
+sudo pacman -S television
+brew install television
+scoop bucket add extras
+scoop install television
+winget install alexpasmantier.television
+```
+
+```bash
+echo 'eval "$(tv init zsh)"' >> ~/.zshrc
+```
+
+```bash
+tv
+tv files
+tv text
+tv git-repos
+tv env
+tv list-channels
+```
+
+More community [channels](https://alexpasmantier.github.io/television/community/channels-unix)
+like `cargo-crates`, `gh-issues`, `pacman-packages`.
+
 ## Jq
 
 [jq](https://github.com/jqlang/jq):
