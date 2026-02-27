@@ -917,7 +917,7 @@ jq '
 ' "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" > /tmp/dms-settings.json && mv /tmp/dms-settings.json "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json"
 
 jq --arg home "$HOME" '
-    .wallpaperPath = "\($home)/.local/share/wallpapers/archbtw.png" |
+    .wallpaperPath = "\($home)/.local/share/wallpapers/arceus_pokemon.jpg" |
     .wallpaperCyclingEnabled = true |
     .wallpaperCyclingMode = "interval" |
     .wallpaperCyclingInterval = 1800 |
@@ -950,7 +950,8 @@ jq --arg home "$HOME" '
 :::caution[Application Theme]
 
 由于 `Theme.applyGtkColors`/`Theme.applyQtColors` 没有 `dms ipc` 接口,
-需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`.
+需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`,
+**统一应用 DMS 图标与配色**.
 
 :::
 
