@@ -244,7 +244,7 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   mandb cmatrix fastfetch lolcat \
   nvm uv rustup go jre8-openjdk mise \
   zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
-  tlrc bottom gping procs curlie \
+  tlrc bottom nvtop gping procs curlie \
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
   yazi satty imagemagick kimageformats resvg poppler 7zip \
