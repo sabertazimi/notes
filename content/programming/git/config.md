@@ -5,13 +5,13 @@ tags: [Programming, Linux, Git]
 
 # Configuration
 
-- `/etc/gitconfig`.
-- `~/.gitconfig` 或 `~/.config/git/config`.
-- `repo/.git/config`.
-
 ## Setup
 
 [Configure git](https://blog.gitbutler.com/how-git-core-devs-configure-git):
+
+```bash
+gh auth login
+```
 
 ```bash
 git config --global user.name "sabertazimi"
