@@ -420,11 +420,14 @@ tv text
 tv git-repos
 tv env
 tv list-channels
-tv update-channels
 ```
 
-More community [channels](https://alexpasmantier.github.io/television/community/channels-unix)
-like `cargo-crates`, `gh-issues`, `pacman-packages`.
+Fetch community [channels](https://alexpasmantier.github.io/television/community/channels-unix)
+like `cargo-crates`, `gh-issues`, `pacman-packages`:
+
+```bash
+tv update-channels
+```
 
 ## Jq
 

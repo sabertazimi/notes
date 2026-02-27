@@ -397,6 +397,14 @@ git clone --depth=1 https://github.com/AstroNvim/template ~/.config/nvim
 git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
 ```
 
+## Toolchain
+
+Modern Linux [toolchain](./toolchain.md):
+
+```bash
+tv update-channels
+```
+
 ## Git
 
 **Copy complete commands** from git config [guide](../git/config.md#setup).
