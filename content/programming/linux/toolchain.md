@@ -6,13 +6,14 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 # Toolchain
 
 ```bash
-scoop install mise fastfetch zoxide bat eza delta dust duf \
-  fd ripgrep fzf jq fx tlrc bottom gping procs curlie
+sudo pacman -S mise zoxide bat eza git-delta dust duf \
+  fd ripgrep fzf television jq fx tldr bottom gping procs curlie
 ```
 
 ```bash
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+echo 'eval "$(tv init zsh)"' >> ~/.zshrc
 echo "source <(fzf --zsh)" >> ~/.zshrc
 echo "source <(fx --comp zsh)" >> ~/.zshrc
 echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
@@ -45,6 +46,7 @@ echo 'alias du="dust"' >> ~/.zshrc
 echo 'alias df="duf"' >> ~/.zshrc
 echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 echo 'alias grep="rg"' >> ~/.zshrc
+echo 'alias man="tldr"' >> ~/.zshrc
 echo 'alias top="btm"' >> ~/.zshrc
 echo 'alias ping="gping"' >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
@@ -428,6 +430,7 @@ curl -i https://fx.wtf/example.json | fx
 [TLDR](https://github.com/tldr-pages/tldr):
 
 ```bash
+sudo pacman -S tldr
 brew install tlrc
 scoop install tlrc
 winget install tldr-pages.tlrc

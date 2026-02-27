@@ -133,8 +133,8 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   cmatrix fastfetch lolcat \
   nvm uv rustup go jre8-openjdk mise \
-  zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
-  bottom nvtop gping procs curlie \
+  zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf television \
+  jq fx tldr bottom nvtop gping procs curlie \
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
   yazi satty imagemagick kimageformats resvg poppler 7zip \
