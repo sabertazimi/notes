@@ -947,6 +947,10 @@ jq --arg home "$HOME" '
 ' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
 ```
 
+```bash
+reboot
+```
+
 :::caution[Application Theme]
 
 由于 `Theme.applyGtkColors`/`Theme.applyQtColors` 没有 `dms ipc` 接口,
