@@ -133,6 +133,21 @@ setw -g mode-keys vi      # Vi
 set-window-option -g window-status-current-bg red
 ```
 
+## Ghostty
+
+- `Ctrl`+`Shift`+`p`: command palette.
+- `Ctrl`+`Shift`+`,`: reload config.
+
+```bash
+git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config
+echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
+echo "keybind = alt+h=goto_split:left" >> ~/.config/ghostty/config
+echo "keybind = alt+j=goto_split:down" >> ~/.config/ghostty/config
+echo "keybind = alt+k=goto_split:up" >> ~/.config/ghostty/config
+echo "keybind = alt+l=goto_split:right" >> ~/.config/ghostty/config
+```
+
 ## Windows
 
 ```bash

@@ -40,7 +40,7 @@ chmod +x ./pnpm
 ## Configuration
 
 ```bash
-pnpm config set registry https://registry.npmmirror.com/
+pnpm config -g set registry https://registry.npmmirror.com/
 ```
 
 ## Workspace

@@ -5,12 +5,187 @@ tags: [Programming, OS, Linux, Distribution, Desktop Environment, Compositor, X1
 
 # Desktop
 
+## Dotfiles
+
+Set up new machine with single command:
+
+```bash
+# sudo pacman -S chezmoi
+dot init --apply -v sabertazimi
+```
+
+Set up new machine from remote dotfiles:
+
+```bash
+dot init sabertazimi
+dot diff
+dot apply -v
+dot update -v
+```
+
+Sync local dotfiles to remote repository:
+
+```bash
+dot add ~/.zshrc
+dot cd
+git add .
+git commit
+git push
+exit
+```
+
+Edit and sync dotfiles:
+
+```bash
+# Edit dotfile
+dot edit ~/.zshrc
+# Apply to local machine
+dot diff
+dot apply -v
+# Push to remote repository
+dot cd
+git add .
+git commit
+git push
+exit
+```
+
+## Locale
+
+### System
+
+```bash
+sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
+sudo locale-gen
+sudo localectl set-locale LANG=zh_CN.UTF-8
+```
+
+### User Directories
+
+```bash
+LC_ALL=C.UTF-8 xdg-user-dirs-update --force
+cat ~/.config/user-dirs.dirs
+```
+
+### Input Method
+
+```bash
+mkdir -p ~/.local/share/fcitx5/rime \
+  && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
+
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
+echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
+```
+
+```bash
+sed -i 's/^Vertical Candidate List=.*/Vertical Candidate List=True/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^Font=.*/Font="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^MenuFont=.*/MenuFont="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^TrayFont=.*/TrayFont="霞鹜文楷 Medium 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^Theme=.*/Theme=default/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^DarkTheme=.*/DarkTheme=default-dark/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classicui.conf
+```
+
+### Fonts
+
+```bash
+git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
+```
+
 ## Compositor
 
 ```bash
 echo $WAYLAND_DISPLAY
 glxgears
 glxinfo | grep "direct rendering" # Yes: 3D 硬件加速正常
+```
+
+## Niri
+
+```bash
+echo "QT_QPA_PLATFORMTHEME=qt6ct" >> ~/.config/environment.d/90-dms.conf
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
+sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
+
+sed -i '/Ctrl+Shift+R/,/^[[:space:]]*}[[:space:]]*$/d' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+M /Mod+Shift+M /g' ~/.config/niri/dms/binds.kdl
+sed -i \
+  '/binds {/a \
+    Mod+Comma { "consume-window-into-column"; }\
+    Mod+Alt+A { screenshot; }\
+    Mod+A { spawn "firefox"; }\
+    Mod+E { spawn "nautilus"; }\
+    Mod+M { spawn "/opt/SPlayer/SPlayer" ; }\
+    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
+```
+
+### Hotkeys
+
+`~/.config/niri/dms/binds.kdl`:
+
+- `Super`+`Shift`+`/` for important hotkeys.
+- Launcher: `Super`+`Space`.
+- Terminal: `Super`+`t`.
+- Window:
+  - Switch: `Alt`+`Tab`.
+  - Navigation: `Super`+`h`/`j`/`k`/`l`.
+  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`.
+- Monitor:
+  - Navigation: `Super`+`Ctrl`+`h`/`j`/`k`/`l`.
+  - Move: `Super`+`Shift`+`Ctrl`+`h`/`j`/`k`/`l`.
+- Workspace:
+  - Navigation: `Super`+`u`/`i`.
+  - Move: `Super`+`Ctrl`+`u`/`i` (column), `Super`+`Shift`+`u`/`i` (workspace).
+- Vertical:
+  - Left: `Super`+`[`.
+  - Right: `Super`+`]`.
+  - Tab (stack): `Super`+`w`, `Super`+`j`/`k`.
+  - Expel: `Super`+`.`.
+- Floating:
+  - Toggle: `Super`+`Shift`+`t`.
+  - Switch: `Super`+`Shift`+`v`.
+  - Move: `Super`+`Shift`+`h`/`j`/`k`/`l`, `Super` + click.
+- Size:
+  - Maximize: `Super`+`f`, `Super`+`Shift`+`f`.
+  - Preset: `Super`+`r`, `Super`+`Shift`+`r`, `Super`+`Ctrl`+`r`.
+  - Manual: `Super`+`-`/`+`, `Super`+`Shift`+`-`/`+`
+- Close: `Super`+`q`.
+- Lock: `Super`+`Alt`+`l`.
+
+### Outputs
+
+```bash
+niri msg outputs
+```
+
+```kdl
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=0 y=0
+}
+
+output "eDP-1" {
+    mode "2880x1800@90.007"
+    scale 1.75
+    position x=1920 y=0
+}
+```
+
+### Window Rules
+
+```bash
+niri msg windows
+```
+
+```kdl
+window-rule {
+    match app-id="^firefox$"
+    open-maximized true
+}
 ```
 
 ## GNOME
@@ -72,6 +247,24 @@ sudo pacman -S gwenview # 图片查看器
 
 - Desktop shortcut: `/usr/share/applications`
 - Start up apps: `gnome-session-properties` or `gnome-tweaks`
+
+## Music Player
+
+SPlayer:
+
+```bash
+echo 'alias ncm="/opt/SPlayer/SPlayer"' >> ~/.zshrc
+```
+
+MusicFox:
+
+```bash
+sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
+sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
+sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
+sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
+sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
+```
 
 ## Icons
 

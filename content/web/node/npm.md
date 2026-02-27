@@ -40,9 +40,16 @@ scoop install nvm
 ```
 
 ```bash
-nvm i lts
-nvm use lts
-node -v
+echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
+source ~/.zshrc
+```
+
+```bash
+nvm install --lts
+npm config -g set registry https://registry.npmmirror.com/
+pnpm config -g set registry https://registry.npmmirror.com/
+npm install -g pnpm
+
 ```
 
 ### FNM

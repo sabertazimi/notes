@@ -10,6 +10,8 @@ tags: [Language, Go]
 sudo apt install golang
 echo "export GOPATH=$HOME/gopath"
 echo "export PATH=$PATH:$GOPATH/bin"
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
 go env
 ```
 

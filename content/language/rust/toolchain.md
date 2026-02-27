@@ -5,6 +5,23 @@ tags: [Language, Rust, Toolchain]
 
 # Toolchain
 
+## Mirrors
+
+```bash
+mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+
+cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registries.ustc]
+index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+EOF
+```
+
 ## Installation
 
 ```bash
@@ -17,23 +34,6 @@ sudo apt install build-essential libssl-dev pkg-config
 # Done.
 cargo -V
 rustc -V
-```
-
-## Mirrors
-
-```bash
-mkdir -vp /home/sabertaz/.cargo
-
-cat << EOF | tee -a /home/sabertaz/.cargo/config.toml
-[source.crates-io]
-replace-with = 'ustc'
-
-[source.ustc]
-registry = sparse+https://mirrors.ustc.edu.cn/crates.io-index/
-
-[registries.ustc]
-index = sparse+https://mirrors.ustc.edu.cn/creates.io-index/
-EOF
 ```
 
 ## Cargo
