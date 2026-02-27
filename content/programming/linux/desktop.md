@@ -52,32 +52,10 @@ exit
 
 ## Locale
 
-### System
-
-```bash
-sudo sed -i '/zh_CN\.UTF-8 UTF-8/s/^#\s*//' /etc/locale.gen
-sudo locale-gen
-sudo localectl set-locale LANG=zh_CN.UTF-8
-```
-
-### User Directories
-
-```bash
-LC_ALL=C.UTF-8 xdg-user-dirs-update --force
-cat ~/.config/user-dirs.dirs
-```
-
-### Input Method
-
 ```bash
 mkdir -p ~/.local/share/fcitx5/rime \
   && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
 
-sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
-echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
-```
-
-```bash
 sed -i 's/^Vertical Candidate List=.*/Vertical Candidate List=True/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^Font=.*/Font="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^MenuFont=.*/MenuFont="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
@@ -86,12 +64,6 @@ sed -i 's/^Theme=.*/Theme=default/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^DarkTheme=.*/DarkTheme=default-dark/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classicui.conf
-```
-
-### Fonts
-
-```bash
-git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
 ```
 
 ## Compositor
