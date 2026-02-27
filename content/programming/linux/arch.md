@@ -138,7 +138,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
   yazi satty imagemagick kimageformats resvg poppler 7zip \
-  trash-cli ffmpeg yt-dlp flatpak steam \
+  trash-cli ffmpeg mpv yt-dlp flatpak steam \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
@@ -343,20 +343,6 @@ sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XM
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 
 git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
-```
-
-## Mime
-
-`~/.config/mimeapps.list`:
-
-```bash
-xdg-mime default code.desktop text/plain
-xdg-mime default code.desktop application/javascript
-```
-
-```bash
-# xdg-mime query default text/plain
-# xdg-mime query filetype ~/workspace/notes/src/components/notes-marquee.tsx
 ```
 
 ## Zsh
