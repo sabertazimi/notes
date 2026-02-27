@@ -15,6 +15,7 @@ echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 echo "source <(fzf --zsh)" >> ~/.zshrc
 echo "source <(fx --comp zsh)" >> ~/.zshrc
+echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
 
 cat << EOF >> ~/.zshrc
 # Use fd for listing path candidates
