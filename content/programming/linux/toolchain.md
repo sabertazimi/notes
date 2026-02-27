@@ -167,6 +167,7 @@ winget install ByteDance.Feishu NetEase.CloudMusic Tencent.QQ.NT Tencent.WeChat 
 [Mise](https://github.com/jdx/mise):
 
 ```bash
+sudo pacman -S mise
 brew install mise
 scoop install mise
 winget install jdx.mise
@@ -183,6 +184,10 @@ node -v
 [Fastfetch](https://github.com/fastfetch-cli/fastfetch):
 
 ```bash
+sudo pacman -S fastfetch
+```
+
+```bash
 echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
 ```
 
@@ -191,6 +196,7 @@ echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
 [zoxide](https://github.com/ajeetdsouza/zoxide):
 
 ```bash
+sudo pacman -S zoxide
 brew install zoxide
 scoop install zoxide
 winget install ajeetdsouza.zoxide
@@ -206,6 +212,7 @@ echo 'alias cd="z"' >> ~/.zshrc
 [bat](https://github.com/sharkdp/bat):
 
 ```bash
+sudo pacman -S bat
 brew install bat
 scoop install bat
 winget install sharkdp.bat
@@ -220,6 +227,7 @@ echo 'alias cat="bat"' >> ~/.zshrc
 [eza](https://github.com/eza-community/eza):
 
 ```bash
+sudo pacman -S eza
 brew install eza
 scoop install eza
 winget install eza-community.eza
@@ -234,8 +242,8 @@ echo 'alias ls="eza"' >> ~/.zshrc
 [delta](https://github.com/dandavison/delta):
 
 ```bash
-brew install git-delta
 sudo pacman -S git-delta
+brew install git-delta
 scoop install delta
 winget install dandavison.delta
 ```
@@ -268,6 +276,7 @@ git reflog -p
 [dust](https://github.com/bootandy/dust):
 
 ```bash
+sudo pacman -S dust
 brew install dust
 scoop install dust
 winget install bootandy.dust
@@ -282,6 +291,7 @@ echo 'alias du="dust"' >> ~/.zshrc
 [duf](https://github.com/muesli/duf):
 
 ```bash
+sudo pacman -S duf
 brew install duf
 scoop install duf
 winget install muesli.duf
@@ -296,6 +306,7 @@ echo 'alias df="duf"' >> ~/.zshrc
 [fd](https://github.com/sharkdp/fd):
 
 ```bash
+sudo pacman -S fd
 brew install fd
 scoop install fd
 winget install sharkdp.fd
@@ -310,6 +321,7 @@ echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 [rg](https://github.com/BurntSushi/ripgrep):
 
 ```bash
+sudo pacman -S ripgrep
 brew install ripgrep
 winget install BurntSushi.ripgrep.MSVC
 scoop install ripgrep
@@ -350,6 +362,7 @@ rg -l text
 [fzf](https://github.com/junegunn/fzf):
 
 ```bash
+sudo pacman -S fzf
 brew install fzf
 winget install fzf
 scoop install fzf
@@ -407,6 +420,7 @@ tv text
 tv git-repos
 tv env
 tv list-channels
+tv update-channels
 ```
 
 More community [channels](https://alexpasmantier.github.io/television/community/channels-unix)
@@ -417,6 +431,7 @@ like `cargo-crates`, `gh-issues`, `pacman-packages`.
 [jq](https://github.com/jqlang/jq):
 
 ```bash
+sudo pacman -S jq
 brew install jq
 scoop install jq
 winget install jqlang.jq
@@ -431,6 +446,7 @@ echo "version=$(jq -r '.devDependencies["@playwright/test"]' package.json | sed 
 [fx](https://github.com/antonmedv/fx):
 
 ```bash
+sudo pacman -S fx
 brew install fx
 scoop install fx
 ```
@@ -473,6 +489,7 @@ echo 'alias man="tldr"' >> ~/.zshrc
 [bottom](https://github.com/ClementTsang/bottom):
 
 ```bash
+sudo pacman -S bottom
 brew install bottom
 scoop install bottom
 winget install Clement.bottom
@@ -487,6 +504,7 @@ echo 'alias top="btm"' >> ~/.zshrc
 [gping](https://github.com/orf/gping):
 
 ```bash
+sudo pacman -S gping
 brew install gping
 scoop install gping
 winget install orf.gping
@@ -501,12 +519,14 @@ echo 'alias ping="gping"' >> ~/.zshrc
 [procs](https://github.com/dalance/procs):
 
 ```bash
+sudo pacman -S procs
 brew install procs
 scoop install procs
 winget install dalance.procs
 ```
 
 ```bash
+echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
 ```
 
@@ -515,6 +535,7 @@ echo 'alias ps="procs"' >> ~/.zshrc
 [Curlie](https://github.com/rs/curlie):
 
 ```bash
+sudo pacman -S curlie
 brew install curlie
 scoop install curlie
 ```
