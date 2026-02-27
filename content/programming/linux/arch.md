@@ -109,7 +109,7 @@ sudo pacman -Sy archlinuxcn-keyring
 ```bash
 sudo pacman -S --needed base-devel btrfs-progs os-prober \
   linux-headers linux-lts linux-lts-headers \
-  pacman-contrib unzip wget git zsh vim neovim paru \
+  pacman-contrib unzip wget git zsh less vim neovim paru \
   clash-verge-rev
 ```
 
