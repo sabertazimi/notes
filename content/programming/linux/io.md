@@ -261,6 +261,16 @@ n p e l 新 主 逻辑 扩展 分区 w 激活
 du -sh /home/user
 ```
 
+## Loop
+
+挂载 ISO 镜像或创建虚拟磁盘:
+
+```bash
+losetup -a
+sudo udisksctl loop-delete -b /dev/loop1
+rm -rf ~/.cache/paru/clone/ttf-ms-win11-*
+```
+
 ## Host System Information
 
 ```bash
