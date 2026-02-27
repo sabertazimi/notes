@@ -45,10 +45,6 @@ git config --global diff.renames true
 ```
 
 ```bash
-# brew install git-delta
-# sudo pacman -S git-delta
-# winget install dandavison.delta
-# scoop install delta
 git config --global core.pager delta
 git config --global interactive.diffFilter 'delta --color-only'
 git config --global delta.navigate true
@@ -69,7 +65,6 @@ git config --global alias.d '!sh -c "git diff --cached | cat"'
 ```
 
 ```bash
-# after 1s, git auto correct wrong command
 git config --global help.autocorrect 10
 ```
 
