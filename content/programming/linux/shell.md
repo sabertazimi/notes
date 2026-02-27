@@ -764,6 +764,9 @@ printf -- ' DONE!\n';
 ```bash
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
@@ -779,7 +782,7 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 
 mkdir -p ~/.config/matugen
 mkdir -p ~/.config/matugen/templates
-cat <<EOF > ~/.config/matugen/config.toml
+cat << EOF > ~/.config/matugen/config.toml
 [config]
 
 [templates.starship]
@@ -794,12 +797,10 @@ sed -i \
   -e 's/^color_bg3.*/color_bg3 = '"'"'{{colors.secondary.default.hex}}'"'"'/' \
   -e 's/^color_blue.*/color_blue = '"'"'{{colors.inverse_primary.default.hex}}'"'"'/' \
   -e 's/^color_aqua.*/color_aqua = '"'"'{{colors.on_secondary_container.default.hex}}'"'"'/' \
-  -e 's/^color_green.*/color_green = '"'"'{{colors.primary.default.hex}}'"'"'/' \
   -e 's/^color_orange.*/color_orange = '"'"'{{colors.primary_fixed_dim.default.hex}}'"'"'/' \
   -e 's/^color_yellow.*/color_yellow = '"'"'{{colors.tertiary.default.hex}}'"'"'/' \
   -e 's/fg:color_fg0 bg:color_blue/fg:color_fg1 bg:color_blue/g' \
-  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' \
-  ~/.config/matugen/templates/starship.toml
+  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' ~/.config/matugen/templates/starship.toml
 
 source ~/.zshrc
 ```

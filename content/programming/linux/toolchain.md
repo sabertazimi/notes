@@ -10,6 +10,67 @@ scoop install mise fastfetch zoxide bat eza delta dust duf \
   fd ripgrep fzf jq fx tlrc bottom gping procs curlie
 ```
 
+```bash
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+echo "source <(fzf --zsh)" >> ~/.zshrc
+echo "source <(fx --comp zsh)" >> ~/.zshrc
+
+cat << EOF >> ~/.zshrc
+# Use fd for listing path candidates
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "\$1"
+}
+
+# Use fd for list directory candidates
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "\$1"
+}
+EOF
+
+echo 'alias cc="claude"' >> ~/.zshrc
+echo 'alias ccc="claude -c"' >> ~/.zshrc
+echo 'alias ccr="claude -r"' >> ~/.zshrc
+echo 'alias ccm="claude -p commit"' >> ~/.zshrc
+echo 'alias vim="nvim"' >> ~/.zshrc
+echo 'alias dot="chezmoi"' >> ~/.zshrc
+
+echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
+echo 'alias cd="z"' >> ~/.zshrc
+echo 'alias cat="bat"' >> ~/.zshrc
+echo 'alias ls="eza"' >> ~/.zshrc
+echo 'alias diff="delta"' >> ~/.zshrc
+echo 'alias du="dust"' >> ~/.zshrc
+echo 'alias df="duf"' >> ~/.zshrc
+echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
+echo 'alias grep="rg"' >> ~/.zshrc
+echo 'alias top="btm"' >> ~/.zshrc
+echo 'alias ping="gping"' >> ~/.zshrc
+echo 'alias ps="procs"' >> ~/.zshrc
+echo 'alias curl="curlie"' >> ~/.zshrc
+
+# Respecting `.gitignore`
+echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
+echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+
+cat << EOF >> ~/.ripgreprc
+# Add 'web' type
+--type-add
+web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
+
+# Search hidden files / directories (e.g. dotfiles) by default
+--hidden
+
+# Using glob patterns to include/exclude files or folders
+--glob
+!**/.git/*
+
+# Ignore case unless all caps
+--smart-case
+EOF
+```
+
 ## Change Mirror Source
 
 ```bash

@@ -21,9 +21,8 @@ git config --global core.editor nvim
 git config --global credential.helper store
 git config --global color.ui true
 git config --global commit.template ~/.gitmsg.md
-```
+echo "fix():" >> ~/.gitmsg.md
 
-```bash
 git config --global init.defaultBranch main
 git config --global merge.conflictstyle diff3
 git config --global push.default simple
@@ -35,16 +34,12 @@ git config --global fetch.all true
 git config --global rebase.autoSquash true
 git config --global rebase.autoStash true
 git config --global rebase.updateRefs true
-```
 
-```bash
 git config --global diff.algorithm histogram
 git config --global diff.colorMoved plain
 git config --global diff.mnemonicPrefix true
 git config --global diff.renames true
-```
 
-```bash
 git config --global core.pager delta
 git config --global interactive.diffFilter 'delta --color-only'
 git config --global delta.navigate true
@@ -52,9 +47,7 @@ git config --global delta.dark true
 git config --global delta.line-numbers true
 git config --global delta.side-by-side true
 git config --global merge.conflictStyle zdiff3
-```
 
-```bash
 git config --global alias.s "status"
 git config --global alias.c "commit --verbose"
 git config --global alias.a "add"
@@ -62,9 +55,7 @@ git config --global alias.rs "restore --staged"
 git config --global alias.st "stash"
 git config --global alias.pr "pull --rebase"
 git config --global alias.d '!sh -c "git diff --cached | cat"'
-```
 
-```bash
 git config --global help.autocorrect 10
 ```
 
@@ -73,36 +64,32 @@ git config --global help.autocorrect 10
 [Generate new GPG key](https://docs.github.com/authentication/managing-commit-signature-verification/generating-a-new-gpg-key):
 
 ```bash
-# Generate GPG key
 gpg --full-generate-key
-# List GPG keys
 gpg --list-secret-keys --keyid-format=long
 
-# Export GPG public key as an ASCII armored version
 gh auth refresh -s write:gpg_key
 gpg --armor --export <pub-keyID> | gh gpg-key add --title "Arch Linux" -
 
-# Export GPG private key as an ASCII armored version
-# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
-
-# Git global configuration for GPG signature commits
 git config --global commit.gpgsign true
 git config --global gpg.program gpg
 git config --global user.signingkey <pub-keyID>
 
-# Import GitHub `git log --show-signature` signature
 curl https://github.com/web-flow.gpg | gpg --import
-# gpg --sign-key <GitHub-keyID>
 gpg --sign-key B5690EEEBB952194
+```
+
+```bash
+# Export GPG private key as an ASCII armored version
+# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
 
 # Log git signature
-git log --show-signature
+# git log --show-signature
 
 # WSL2 fix: Add to ~/.zshrc
-export GPG_TTY=$(tty)
+# export GPG_TTY=$(tty)
 
 # Single signature commit
-git commit -S -m "..."
+# git commit -S -m "..."
 ```
 
 [Update existing GPG key](https://inspirezone.tech/using-gpg-keys-on-github):

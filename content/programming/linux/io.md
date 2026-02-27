@@ -204,6 +204,40 @@ sudo debugfs /dev/sda9
 
 ## Partition
 
+```bash
+lsblk -pf
+fdisk -l /dev/nvme1n1
+cfdisk /dev/nvme1n1 # 1GB for `EFI System`, rest for `Linux filesystem`.
+
+mkfs.fat -F 32 /dev/nvme1n1p1
+mkfs.btrfs /dev/nvme1n1p2
+mount -t btrfs -o compress=zstd /dev/nvme1n1p2 /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@swap
+
+umount /mnt
+mount -t btrfs -o subvol=/@,compress=zstd /dev/nvme1n1p2 /mnt
+mount --mkdir -t btrfs -o subvol=/@home,compress=zstd /dev/nvme1n1p2 /mnt/home
+mount --mkdir -t btrfs -o subvol=/@swap,compress=zstd /dev/nvme1n1p2 /mnt/swap
+mount --mkdir /dev/nvme1n1p1 /mnt/boot
+
+pacman -Sy archlinux-keyring
+pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs
+pacstrap /mnt networkmanager vim neovim amd-ucode os-prober
+
+btrfs filesystem mkswapfile --size 32g --uuid clear /mnt/swap/swapfile
+swapon /mnt/swap/swapfile
+genfstab -U /mnt > /mnt/etc/fstab
+arch-chroot /mnt
+passwd
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --boot-directory=/boot --removable
+# grub-install --target=x86_64-efi --efi-directory=/efi --boot-directory=/efi --removable
+# ln -s /efi/grub /boot/grub
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ### Fdisk
 
 分区表类型 MBR
