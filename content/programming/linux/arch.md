@@ -237,7 +237,7 @@ window-rule {
 ## Pacman
 
 ```bash
-sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
+sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
@@ -248,16 +248,16 @@ sudo pacman -S snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
   yazi satty imagemagick kimageformats resvg poppler 7zip \
-  trash-cli ffmpeg yt-dlp \
+  trash-cli ffmpeg yt-dlp flatpak steam \
   cava khal fprintd grim slurp i2c-tools speech-dispatcher \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
   xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
   sushi tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller loupe baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
-  flatpak steam \
   lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon vulkan-headers \
-  mesa-utils s-tui
+  mesa-utils s-tui \
+  qemu-full virt-manager dnsmasq swtpm
 ```
 
 ### Sync
@@ -891,6 +891,13 @@ jq --arg home "$HOME" '
 需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`.
 
 :::
+
+## Virtualization
+
+```bash
+sudo usermod -aG libvirt $USER
+sudo systemctl enable --now libvirtd.service
+```
 
 ## Dotfiles
 
