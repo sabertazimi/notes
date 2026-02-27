@@ -84,6 +84,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## Setup
 
 ```bash
+sudo pacman -S firefox
+```
+
+```bash
 sudo sed -i '/^#\[multilib\]/{N;s/^#//gm}' /etc/pacman.conf
 sudo sed -i 's/^#Color/Color/' /etc/pacman.conf
 sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
@@ -100,43 +104,55 @@ EOF
 ```bash
 sudo systemctl enable --now NetworkManager
 sudo pacman -Sy archlinuxcn-keyring
+```
 
-sudo pacman -S base-devel btrfs-progs os-prober \
+```bash
+sudo pacman -S --needed base-devel btrfs-progs os-prober \
   linux-headers linux-lts linux-lts-headers \
   pacman-contrib unzip wget git zsh vim neovim paru \
-  # Temporary proxy from archlinuxcn
   clash-verge-rev
+```
 
+```bash
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
 sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf
-cat << EOF >> ~/.zshrc
-alias pac="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
-alias pacr="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
-alias pacl="paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi"
-EOF
 ```
+
+:::tip[Polkit]
+
+Use `polkit-gnome` to enable `clash-verge-rev` tun mode:
+
+```bash
+sudo pacman -S polkit-gnome
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
+```
+
+:::
 
 ## Desktop
 
 ```bash
 curl -fsSL https://install.danklinux.com | sh
-paru -S qt6ct-kde greetd-dms-greeter-git dsearch-bin
+```
 
-echo "QT_QPA_PLATFORMTHEME=qt6ct" >> ~/.config/environment.d/90-dms.conf
-sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
+```bash
+paru -S greetd-dms-greeter-git dsearch-bin qt6ct-kde
+```
+
+```bash
 dms greeter enable
 dms greeter sync
 ```
 
+Configure niri:
+
 ```bash
-# Change window switch scope to all monitors
+echo "QT_QPA_PLATFORMTHEME=qt6ct" >> ~/.config/environment.d/90-dms.conf
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
-# Remove hotkeys
 sed -i '/Ctrl+Shift+R/,/^[[:space:]]*}[[:space:]]*$/d' ~/.config/niri/dms/binds.kdl
-# Change hotkeys
 sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
 sed -i 's/Mod+M /Mod+Shift+M /g' ~/.config/niri/dms/binds.kdl
-# Add hotkeys
 sed -i \
   '/binds {/a \
     Mod+Comma { "consume-window-into-column"; }\
@@ -154,14 +170,6 @@ Polkit (Quickshell feature) need `quickshell-git`:
 ```bash
 paru -S quickshell-git
 dms doctor
-```
-
-Or use `polkit-gnome` instead:
-
-```bash
-sudo pacman -S polkit-gnome
-echo 'spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"' >> ~/.config/niri/config.kdl
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
 ```
 
 :::
@@ -241,10 +249,10 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
   wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
-  mandb cmatrix fastfetch lolcat \
+  cmatrix fastfetch lolcat \
   nvm uv rustup go jre8-openjdk mise \
   zoxide bat eza git-delta dust duf ncdu fd ripgrep fzf jq fx \
-  tlrc bottom nvtop gping procs curlie \
+  bottom nvtop gping procs curlie \
   net-tools rsync rclone speedtest-cli \
   firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
   yazi satty imagemagick kimageformats resvg poppler 7zip \
@@ -255,9 +263,13 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   sushi tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   gvfs-smb file-roller loupe baobab gnome-disk-utility gnome-keyring libsecret \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
-  lib32-nvidia-utils lib32-mesa lib32-mesa-driver lib32-vulkan-radeon vulkan-headers \
+  lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers \
   mesa-utils s-tui \
   qemu-full virt-manager dnsmasq swtpm
+```
+
+```bash
+sudo pacman -Rns polkit-gnome alacritty fuzzel mako waybar swaybg swayidle swaylock
 ```
 
 ### Sync
@@ -305,11 +317,22 @@ sudo pacman -Rns $(pacman -Qdtq)
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin chsrc-bin downgrade
-paru -S ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
+paru -S mihomo-party-bin
+```
+
+```bash
+paru -Rns clash-verge-rev
+```
+
+```bash
+paru -S --needed chsrc-bin downgrade \
+  ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
   visual-studio-code-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage splayer
+```
+
+```bash
 # paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
 # paru -S com.qq.weixin.work.deepin
 # paru -S nipaplay-reload-bin go-musicfox
@@ -370,6 +393,9 @@ paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
 
 ```bash
 flatpak remote-add --if-not-exists flathub https://flathub.org
+```
+
+```bash
 # flatpak install flathub com.jianguoyun.Nutstore
 ```
 
@@ -388,15 +414,23 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ## Snapshot
 
 ```bash
+sudo systemctl status grub-btrfsd
+sudo snapper list-configs
+```
+
+```bash
 sudo systemctl enable --now grub-btrfsd
 reboot
+```
 
+```bash
 # Create snapshots
 sudo snapper -c root create-config /
 sudo snapper -c home create-config /home
-sudo snapper list-configs
 sudo snapper -c root create -d "Initial root snapshot"
 sudo snapper -c home create -d "Initial home snapshot"
+
+# Config
 sudo snapper -c <config-name> list
 sudo snapper -c <config-name> delete <number-id>
 
@@ -420,6 +454,13 @@ cat ~/.config/user-dirs.dirs
 mkdir -p ~/.local/share/fcitx5/rime \
   && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
 
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
+echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
+
+git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
+```
+
+```bash
 sed -i 's/^Vertical Candidate List=.*/Vertical Candidate List=True/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^Font=.*/Font="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^MenuFont=.*/MenuFont="霞鹜文楷 10"/' ~/.config/fcitx5/conf/classicui.conf
@@ -428,21 +469,25 @@ sed -i 's/^Theme=.*/Theme=default/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^DarkTheme=.*/DarkTheme=default-dark/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classicui.conf
-
-sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
-echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
-
-git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
 ```
 
 ## Zsh
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
 sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir zsh-autosuggestions zsh-syntax-highlighting /' ~/.zshrc
+
+cat << EOF >> ~/.zshrc
+alias pac="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias pacr="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
+alias pacl="paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi"
+EOF
 ```
 
 [Starship](https://github.com/starship/starship) theme:
@@ -488,6 +533,10 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 
 ```bash
 echo "source /usr/share/nvm/init-nvm.sh" >> ~/.zshrc
+source ~/.zshrc
+```
+
+```bash
 nvm install --lts
 npm config set registry https://registry.npmmirror.com --global
 npm install -g pnpm
@@ -498,12 +547,8 @@ npm install -g pnpm
 ```bash
 echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
 echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
-
-# Python mirror
-export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"
-# PyPI mirror
-export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
-# Global
+echo 'export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"' >> ~/.zshrc
+echo 'export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"' >> ~/.zshrc
 uv python install --default
 ```
 
@@ -537,7 +582,6 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 ```bash
 git clone --depth=1 https://github.com/AstroNvim/template ~/.config/nvim
-nvim
 ```
 
 ## Ghostty
@@ -636,6 +680,7 @@ git config --global core.editor nvim
 git config --global credential.helper store
 git config --global color.ui true
 git config --global commit.template ~/.gitmsg.md
+echo "fix():" >> ~/.gitmsg.md
 
 git config --global init.defaultBranch main
 git config --global merge.conflictstyle diff3
@@ -654,10 +699,6 @@ git config --global diff.colorMoved plain
 git config --global diff.mnemonicPrefix true
 git config --global diff.renames true
 
-# brew install git-delta
-# sudo pacman -S git-delta
-# winget install dandavison.delta
-# scoop install delta
 git config --global core.pager delta
 git config --global interactive.diffFilter 'delta --color-only'
 git config --global delta.navigate true
@@ -674,37 +715,32 @@ git config --global alias.st "stash"
 git config --global alias.pr "pull --rebase"
 git config --global alias.d '!sh -c "git diff --cached | cat"'
 
-# after 1s, git auto correct wrong command
 git config --global help.autocorrect 10
 ```
 
 ## GitHub
 
 ```bash
-# Generate GPG key
 gpg --full-generate-key
-# List GPG keys
 gpg --list-secret-keys --keyid-format=long
 
-# Export GPG public key as an ASCII armored version
 gh auth refresh -s write:gpg_key
 gpg --armor --export <pub-keyID> | gh gpg-key add --title "Arch Linux" -
 
-# Export GPG private key as an ASCII armored version
-# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
-
-# Git global configuration for GPG signature commits
 git config --global commit.gpgsign true
 git config --global gpg.program gpg
 git config --global user.signingkey <pub-keyID>
 
-# Import GitHub `git log --show-signature` signature
 curl https://github.com/web-flow.gpg | gpg --import
-# gpg --sign-key <GitHub-keyID>
 gpg --sign-key B5690EEEBB952194
+```
+
+```bash
+# Export GPG private key as an ASCII armored version
+# gpg --armor --export-secret-key sabertazimi@gmail.com -w0
 
 # Log git signature
-git log --show-signature
+# git log --show-signature
 
 # WSL2 fix: Add to ~/.zshrc
 # export GPG_TTY=$(tty)
@@ -724,17 +760,18 @@ git log --show-signature
 ```
 
 ```bash
-echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/login
-echo -e "auth\t\toptional\tpam_gnome_keyring.so\nsession\t\toptional\tpam_gnome_keyring.so\tauto_start" | sudo tee -a /etc/pam.d/greetd
+echo -e "auth       optional     pam_gnome_keyring.so\nsession    optional     pam_gnome_keyring.so    auto_start" | sudo tee -a /etc/pam.d/login
+echo -e "auth       optional     pam_gnome_keyring.so\nsession    optional     pam_gnome_keyring.so    auto_start" | sudo tee -a /etc/pam.d/greetd
 ```
 
 `~/.config/mimeapps.list`:
 
 ```bash
-# Query
 xdg-mime query default text/plain
 xdg-mime query filetype ~/workspace/notes/src/components/notes-marquee.tsx
-# Update
+```
+
+```bash
 xdg-mime default code.desktop text/plain
 xdg-mime default code.desktop application/javascript
 ```
@@ -793,21 +830,23 @@ pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
 ## OneDrive
 
 ```bash
-# Set up ondrive config
 rclone config
+```
 
-# Mount to local disk
+```bash
 mkdir -p ~/onedrive
 echo 'alias onedrive="rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full --daemon"' >> ~/.zshrc
 echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "/home/sabertaz/onedrive" "--vfs-cache-mode" "full" "--daemon"' >> ~/.config/niri/config.kdl
-rclone mount onedrive:/ ~/onedrive --vfs-cache-mode full --daemon
-rclone ls onedrive:/
-rclone rcd --rc-web-gui
+```
+
+```bash
+# rclone ls onedrive:/
+# rclone rcd --rc-web-gui
 ```
 
 ## Steam
 
-静默启动:
+Appearance (设置 -> 界面) `中文`+`24小时制`+`开机自启`:
 
 ```bash
 sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
@@ -816,14 +855,15 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 ## Music
 
 ```bash
-# Customize netease cloud music
 echo 'alias ncm="/opt/SPlayer/SPlayer"' >> ~/.zshrc
-# Customize musicfox
-sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
-sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
-sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
-sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
-sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
+```
+
+```bash
+# sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
+# sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
+# sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
+# sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
+# sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
 ```
 
 ## WeChat
@@ -846,8 +886,10 @@ sudo sed -i '1a export GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx5\nexport X
 ## Wallpapers
 
 ```bash
-git clone --depth=1 https://github.com/sabertazimi/dotfiles ~/dotfiles
-bash ~/dotfiles/wallpapers/install.sh
+dot init sabertazimi
+dot cd
+bash wallpapers/third-party.sh
+exit
 ```
 
 ## Settings
@@ -879,7 +921,28 @@ jq --arg home "$HOME" '
     .wallpaperCyclingMode = "interval" |
     .wallpaperCyclingInterval = 1800 |
     .wallpaperCyclingTime = "18:00" |
-    .wallpaperTransition = "disc"
+    .wallpaperTransition = "disc" |
+    .pinnedApps = [
+        "firefox",
+        "com.mitchellh.ghostty",
+        "code",
+        "SPlayer",
+        "com.qq.weixin",
+        "qq",
+        "wps-office-prometheus",
+        "steam",
+        "animeko",
+        "virt-manager",
+        "io.missioncenter.MissionCenter",
+        "btrfs-assistant"
+    ] |
+    .hiddenApps = [
+        "mihomo-party",
+        "wps-office-wps",
+        "wps-office-et",
+        "wps-office-wpp",
+        "wps-office-pdf"
+    ]
 ' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
 ```
 

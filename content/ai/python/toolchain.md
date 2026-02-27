@@ -23,10 +23,8 @@ rm ~/.local/bin/uv ~/.local/bin/uvx
 ## Mirrors
 
 ```bash
-# Python mirror
-export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"
-# PyPI mirror
-export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
+echo 'export UV_PYTHON_INSTALL_MIRROR="https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download"' >> ~/.zshrc
+echo 'export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"' >> ~/.zshrc
 ```
 
 ## Python
