@@ -208,7 +208,7 @@ paru -Rns clash-verge-rev
 
 ```bash
 paru -S --needed chsrc-bin downgrade \
-  ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
+  ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans \
   visual-studio-code-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage splayer
