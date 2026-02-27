@@ -217,8 +217,55 @@ sudo pacman -S gwenview # 图片查看器
 
 ## Applications
 
-- Desktop shortcut: `/usr/share/applications`
-- Start up apps: `gnome-session-properties` or `gnome-tweaks`
+Desktop shortcut located in `/usr/share/applications`.
+
+## Mime
+
+`~/.config/mimeapps.list`:
+
+```bash
+xdg-mime default nvim.desktop text/plain
+xdg-mime default nvim.desktop text/x-csrc
+xdg-mime default nvim.desktop application/javascript
+xdg-mime default nvim.desktop application/json
+xdg-mime default nvim.desktop application/octet-stream
+xdg-mime default nvim.desktop application/x-shellscript
+xdg-mime default nvim.desktop application/x-zerosize
+
+xdg-mime default org.gnome.Loupe.desktop image/jpeg
+xdg-mime default org.gnome.Loupe.desktop image/png
+xdg-mime default org.gnome.Loupe.desktop image/gif
+xdg-mime default org.gnome.Loupe.desktop image/webp
+xdg-mime default org.gnome.Loupe.desktop image/bmp
+xdg-mime default org.gnome.Loupe.desktop image/svg+xml
+xdg-mime default org.gnome.Loupe.desktop image/tiff
+
+xdg-mime default mpv.desktop video/mp4
+xdg-mime default mpv.desktop video/avi
+xdg-mime default mpv.desktop video/webm
+xdg-mime default mpv.desktop video/quicktime
+xdg-mime default mpv.desktop video/x-matroska
+
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+
+xdg-mime default wine.desktop application/vnd.microsoft.portable-executable
+xdg-mime default wine.desktop application/x-msdownload
+```
+
+```bash
+xdg-mime query default text/plain
+xdg-mime query filetype ~/workspace/notes/src/components/notes-marquee.tsx
+```
+
+## Icons
+
+Nightly build for Numix Circle icon:
+
+```bash
+sudo add-apt-repository ppa:numix/ppa
+sudo apt update
+sudo apt install numix-icon-theme-circle
+```
 
 ## Music Player
 
@@ -236,16 +283,6 @@ sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' 
 sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
 sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
 sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
-```
-
-## Icons
-
-Nightly build for Numix Circle icon:
-
-```bash
-sudo add-apt-repository ppa:numix/ppa
-sudo apt update
-sudo apt install numix-icon-theme-circle
 ```
 
 ## References
