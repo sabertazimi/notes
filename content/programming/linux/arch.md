@@ -405,10 +405,6 @@ git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/
 
 ## Git
 
-```bash
-gh auth login
-```
-
 **Copy complete commands** from git config [guide](../git/config.md#setup).
 
 ## GitHub
