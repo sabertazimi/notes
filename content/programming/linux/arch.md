@@ -131,7 +131,8 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
-  ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono wqy-zenhei \
+  ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
+  adobe-source-han-sans-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
   jq fx tldr bottom gping procs curlie lazygit \
