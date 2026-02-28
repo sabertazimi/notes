@@ -42,48 +42,177 @@ winget install Neovim.Neovim
 sudo apt install neovim
 ```
 
-[AstroNvim](https://github.com/AstroNvim/AstroNvim):
-
-```bash
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
-git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
-nvim
-```
-
 [LazyVim](https://github.com/LazyVim/LazyVim):
 
 ```bash
 mv ~/.config/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim && nvim
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 
-[NvChad](https://github.com/NvChad/NvChad):
+[AstroNvim](https://github.com/AstroNvim/AstroNvim):
 
 ```bash
 mv ~/.config/nvim{,.bak}
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
-# Run :MasonInstallAll command after lazy.nvim finishes downloading plugins.
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 ```
 
-### Language server
+:::tip[Logs]
 
-- [LSP Config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
-- [LSP Installer](https://github.com/williamboman/nvim-lsp-installer)
+`:Inspect` 会显示 highlight group, `:messages` 会显示日志信息.
+
+:::
+
+### Language Server
+
+[LSP Config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md):
 
 ```vim
 :LspInstall typescript
 ```
 
-### TreeSitter
+### ESLint
 
-```vim
-:TSInstall html css javascript typescript tsx vue json jsonc yaml bash
+`~/.config/nvim/lua/plugins/lsp.lua`:
+
+```lua
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        eslint = {
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue",
+            "html",
+            "markdown",
+            "json",
+            "jsonc",
+            "yaml",
+            "toml",
+            "xml",
+            "graphql",
+            "astro",
+            "svelte",
+            "css",
+            "less",
+            "scss",
+          },
+        },
+      },
+    },
+  },
+}
 ```
 
-### Copilot
+### Markdown
+
+关闭 render 和 conceal:
+
+`~/.config/nvim/lua/plugins/markdown.lua`:
+
+```lua
+return {
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      enabled = false,
+    },
+  },
+}
+```
+
+`~/.config/nvim/lua/config/autocmds.lua`:
+
+```lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
+```
+
+### Clipboard
+
+```bash
+sudo pacman -S wl-clipboard
+# :checkhealth vim.provider
+```
+
+### Spell
+
+`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`).
+
+`~/.config/nvim/lua/config/keymaps.lua`:
+
+```lua
+local wk = require("which-key")
+
+local spell_lang = "en"
+local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
+
+wk.add({
+  {
+    "<leader>um",
+    function()
+      vim.cmd("mkspell! " .. spell_file)
+      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
+    end,
+    desc = "Rebuild Spell Dictionary",
+    icon = "󰓫 ",
+  },
+})
+```
+
+`~/.config/nvim/lua/config/options.lua`:
+
+```lua
+vim.opt.spelllang = { "en", "cjk" }
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+```
+
+:::tip[Grammar]
+
+`:LspInstall harper_ls` Grammarly LSP with `<Leader>la` LSP code action.
+:::
+
+### Extras Plugins
+
+`~/.config/nvim/lua/config/lazy.lua`:
+
+```lua
+require("lazy").setup({
+  spec = {
+    -- add LazyVim and import its plugins
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- import Lazy extras plugins
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
+    { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.linting.eslint" },
+    -- import/override with your plugins
+    { import = "plugins" },
+  },
+})
+```
+
+LazyVim extras plugins located in `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
+
+### Community Plugins
 
 `~/.config/nvim/lua/community.lua`:
 
@@ -98,71 +227,6 @@ return {
 ```
 
 See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunity).
-
-### ESLint
-
-`~/.config/nvim/lua/plugins/astrolsp.lua`:
-
-```lua
-return {
-  opts = {
-    config = {
-      eslint = {
-        filetypes = {
-          "javascript",
-          "javascriptreact",
-          "javascript.jsx",
-          "typescript",
-          "typescriptreact",
-          "typescript.tsx",
-          "vue",
-          "html",
-          "markdown",
-          "json",
-          "jsonc",
-          "yaml",
-          "toml",
-          "xml",
-          "gql",
-          "graphql",
-          "astro",
-          "svelte",
-          "css",
-          "less",
-          "scss",
-          "pcss",
-          "postcss",
-        },
-      },
-    },
-    on_attach = function(client, bufnr)
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        command = "EslintFixAll",
-      })
-    end,
-  },
-}
-```
-
-### System Clipboard
-
-```bash
-sudo pacman -S wl-clipboard
-# :checkhealth vim.provider
-```
-
-### Spell
-
-1. `:LspInstall harper_ls` Grammarly LSP with `<Leader>la` LSP code action.
-2. `zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`),
-   `~/.config/nvim/lua/polish.lua`:
-
-```lua
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-```
 
 ## Easy Motion
 

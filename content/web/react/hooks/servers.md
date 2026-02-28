@@ -33,11 +33,7 @@ export function TabList({ tabs, activeTab, onChange }: TabListProps) {
   return (
     <div>
       {tabs.map(tab => (
-        <button
-          key={tab.value}
-          onClick={() => onChange(tab.value)}
-          className={tab.value === activeTab ? 'active' : ''}
-        >
+        <button key={tab.value} onClick={() => onChange(tab.value)} className={tab.value === activeTab ? 'active' : ''}>
           {tab.label}
         </button>
       ))}
@@ -58,19 +54,11 @@ interface TabListProps {
   onChange?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export function TabList({
-  tabs,
-  activeTab,
-  changeAction,
-  onChange,
-}: TabListProps) {
+export function TabList({ tabs, activeTab, changeAction, onChange }: TabListProps) {
   const [optimisticTab, setOptimisticTab] = useOptimistic(activeTab)
   const [isPending, startTransition] = useTransition()
 
-  function handleTabChange(
-    e: React.MouseEvent<HTMLButtonElement>,
-    value: string
-  ) {
+  function handleTabChange(e: React.MouseEvent<HTMLButtonElement>, value: string) {
     onChange?.(e)
     startTransition(async () => {
       setOptimisticTab(value)
@@ -109,10 +97,7 @@ function useOptimistic(state, optimisticDispatcher) {
     setOptimisticState(state => optimisticDispatcher(state, action))
   }
 
-  return [
-    optimisticState,
-    dispatch
-  ]
+  return [optimisticState, dispatch]
 }
 
 function Thread({ messages, sendMessage }) {
@@ -124,16 +109,13 @@ function Thread({ messages, sendMessage }) {
     await sendMessage(formData)
   }
 
-  const [optimisticMessages, addOptimisticMessage] = useOptimistic(
-    messages,
-    (state, newMessage) => [
-      ...state,
-      {
-        text: newMessage,
-        sending: true
-      }
-    ]
-  )
+  const [optimisticMessages, addOptimisticMessage] = useOptimistic(messages, (state, newMessage) => [
+    ...state,
+    {
+      text: newMessage,
+      sending: true,
+    },
+  ])
 
   return (
     <>

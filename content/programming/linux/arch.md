@@ -390,16 +390,16 @@ uv python install --default
 rustup default stable
 ```
 
-## Neovim
-
-```bash
-git clone --depth=1 https://github.com/AstroNvim/template ~/.config/nvim
-```
-
 ## Ghostty
 
 ```bash
 git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+```
+
+## NeoVim
+
+```vim
+:mkspell! ~/.config/nvim/spell/en.utf-8.add
 ```
 
 ## Toolchain
