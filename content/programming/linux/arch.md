@@ -414,7 +414,7 @@ tv update-channels
 
 ## Claude Code
 
-**Copy complete commands** from Claude Code [guide](../../ai/gen/claude.md#setup).
+**Copy complete commands** from Claude Code [guide](../../ai/gen/claude-code.md#setup).
 
 ## OneDrive
 
