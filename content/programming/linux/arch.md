@@ -250,7 +250,7 @@ paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi
 ### Repository
 
 - `PKGBUILD` 在 [AUR 仓库](https://aur.archlinux.org) 单独维护
-- `-git` 包的 `pkgver()` 由 makepkg 自动执行, 格式: `0.2.0.r1.g783b971` (tag.revision.commit)
+- `-git` 包的 `pkgver()` 由 `makepkg` 自动执行, 格式: `0.2.0.r1.g783b971` (`tag.revision.commit`)
 - `-git` 包的**更新频率**由维护者控制, 确保代码可用后才推送 `pkgver` 更新
 
 ```bash
@@ -267,7 +267,7 @@ git clone https://aur.archlinux.org/quickshell-git.git
 cd quickshell-git && makepkg -si
 ```
 
-:::caution[Devel]
+:::caution[`Devel`]
 
 paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
 运行 `sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf` 进行关闭.
@@ -528,7 +528,7 @@ reboot
 
 由于 `Theme.applyGtkColors`/`Theme.applyQtColors` 没有 `dms ipc` 接口,
 需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`,
-**统一应用 DMS 图标与配色**.
+**统一应用 `DMS` 图标与配色**.
 
 :::
 
@@ -543,13 +543,13 @@ sudo systemctl enable --now libvirtd.service
 
 - [Dank](https://github.com/AvengeMedia/DankMaterialShell):
   Desktop shell for Wayland compositors.
-- [Caelestia](https://github.com/caelestia-dots/shell):
+- [`Caelestia`](https://github.com/caelestia-dots/shell):
   Desktop shell for Hyprland.
 - [Illogical Impulse](https://github.com/end-4/dots-hyprland):
   Usability-first dotfiles for Hyprland.
-- [HyDE](https://github.com/HyDE-Project/HyDE):
+- [`HyDE`](https://github.com/HyDE-Project/HyDE):
   Hyprland desktop environment.
-- [Shorin](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
+- [`Shorin`](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
   One-click Arch Linux desktop environment configuration.
 
 ## References
@@ -558,4 +558,4 @@ sudo systemctl enable --now libvirtd.service
 - Wayland [protocol](https://wayland.app/protocols).
 - XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
 - Arch Linux [简明指南](https://github.com/nakanomikuorg/arch-guide).
-- Shorin Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
+- `Shorin` Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
