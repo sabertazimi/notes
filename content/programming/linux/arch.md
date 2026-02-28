@@ -130,7 +130,8 @@ dms doctor
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd wqy-zenhei \
+  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
+  ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
   jq fx tldr bottom gping procs curlie lazygit \
@@ -346,10 +347,6 @@ sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XM
 echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 ```
 
-```bash
-git clone --depth=1 https://github.com/sabertazimi/fonts && cd fonts && bash install.sh && cd ..
-```
-
 Install Windows fonts with `linux-lts` kernel:
 
 ```bash
@@ -477,6 +474,8 @@ jq '
     .currentThemeName = "dynamic" |
     .currentThemeCategory = "dynamic" |
     .matugenScheme = "scheme-tonal-spot" |
+    .fontFamily = "Maple Mono NF CN" |
+    .monoFontFamily = "Maple Mono NF CN" |
     .use24HourClock = true |
     .weatherEnabled = true |
     .barConfigs |= map(if .id == "default" or .id == null then .transparency = 0 | .widgetTransparency = 0.65 else . end) |

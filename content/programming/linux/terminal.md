@@ -142,6 +142,7 @@ set-window-option -g window-status-current-bg red
 git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
 sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config
 sed -i 's/^keybind = ctrl+t=/# keybind = ctrl+t=/' ~/.config/ghostty/config
+echo 'font-family = "Maple Mono NF CN"' >> ~/.config/ghostty/config
 echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
 echo "keybind = alt+h=goto_split:left" >> ~/.config/ghostty/config
 echo "keybind = alt+j=goto_split:down" >> ~/.config/ghostty/config
