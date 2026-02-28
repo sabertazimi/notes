@@ -43,12 +43,12 @@ Follows Conventional Commits format:
 
 Examples:
 
-| File Path                                            | Scope (1-2 levels only) | Description                   |
-| ---------------------------------------------------- | ----------------------- | ----------------------------- |
-| `content/web/react/hooks/event.md`                   | `react-hooks`           | `useEffectEvent latest value` |
-| `content/language/rust/ownership.md`                 | `rust-ownership`        | `borrow checker rules`        |
-| `content/cs/algorithm/sort.md`                       | `algorithm-sort`        | `quick sort partition`        |
-| `content/ai/gen/gpt.md` + `content/ai/gen/claude.md` | `ai-gen`                | `comparison of models`        |
+| File Path                                                 | Scope (1-2 levels only) | Description                   |
+| --------------------------------------------------------- | ----------------------- | ----------------------------- |
+| `content/web/react/hooks/event.md`                        | `react-hooks`           | `useEffectEvent latest value` |
+| `content/language/rust/ownership.md`                      | `rust-ownership`        | `borrow checker rules`        |
+| `content/cs/algorithm/sort.md`                            | `algorithm-sort`        | `quick sort partition`        |
+| `content/ai/gen/gpt.md` + `content/ai/gen/claude-code.md` | `ai-gen`                | `comparison of models`        |
 
 ## Constraints
 
