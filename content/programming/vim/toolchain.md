@@ -24,8 +24,6 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 :set number
 :setlocal spell!
 
-set gfn=Operator\ Mono\ Lig,Operator\ Mono\ SSm,Operator\ Mono,Fira\ Code,Monospace
-
 let g:copilot_filetypes = {
     \ 'gitcommit': v:true,
     \ 'markdown': v:true,
