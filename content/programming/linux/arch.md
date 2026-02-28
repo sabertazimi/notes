@@ -22,7 +22,7 @@ archinstall
 ```
 
 1. Mirrors: China + multilib.
-2. Disk: `1GB` `fat32` `/boot`, `16GB` linux-swap, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`.
+2. Disk: `1GB` `fat32` `/boot`, `16GB` `linux-swap`, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`.
 3. Bootloader: GRUB.
 4. Kernel: `linux`.
 5. Authentication: Root and user.
@@ -394,12 +394,6 @@ rustup default stable
 
 ```bash
 git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-```
-
-## NeoVim
-
-```vim
-:mkspell! ~/.config/nvim/spell/en.utf-8.add
 ```
 
 ## Toolchain

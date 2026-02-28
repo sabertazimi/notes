@@ -34,7 +34,7 @@ let g:copilot_filetypes = {
     \ }
 ```
 
-## NeoVim
+## Neovim
 
 ```bash
 brew install neovim
@@ -184,7 +184,8 @@ vim.opt.spelloptions = "camel"
 
 :::tip[Grammar]
 
-`:LspInstall harper_ls` Grammarly LSP with `<Leader>la` LSP code action.
+`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
+
 :::
 
 ### Extras Plugins
