@@ -6,7 +6,7 @@ tags: [Programming, Vim]
 
 ## Getting Started
 
-- [Toolchain](./toolchain.md) - Vim/NeoVim installation, plugins, and configuration
+- [Toolchain](./toolchain.md) - Vim/Neovim installation, plugins, and configuration
 
 ## Core Modes
 

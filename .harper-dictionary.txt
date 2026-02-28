@@ -1,0 +1,6 @@
+TTY
+bootloader
+harper
+multilib
+niri
+polkit

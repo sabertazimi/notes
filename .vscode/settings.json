@@ -1,9 +1,9 @@
 {
   "cSpell.customDictionaries": {
-    "neovim-dict": {
-      "name": "neovim-dict",
-      "path": "~/.config/nvim/spell/en.utf-8.add",
-      "description": "Link to Neovim custom dictionary",
+    "harper-dict": {
+      "name": "Harper Dictionary",
+      "path": "${workspaceFolder}/.harper-dictionary.txt",
+      "description": "Link to Harper custom dictionary",
       "addWords": true
     }
   }
