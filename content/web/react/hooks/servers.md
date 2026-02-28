@@ -5,12 +5,12 @@ tags: [Web, React, Hook, Server, Form]
 
 # Servers
 
-## useOptimistic
+## `useOptimistic`
 
 [`updateOptimistic()`](https://jser.dev/2024-03-20-how-does-useoptimisticwork-internally-in-react#42-updateoptimistic):
 
 - An optimistic update has `revertLane` of `TransitionLaneXX` and `lane` of `SyncLane`.
-- Update is processed in `SyncLane` and also in all following renders,
+- Update is processed in `SyncLane` and in all following renders,
   but it is NOT skipped and always kept in the next update queue.
 - Update is reverted in `revertLane` (low priority transition lane),
   by NOT getting added to the next queue.
@@ -134,7 +134,7 @@ function Thread({ messages, sendMessage }) {
 }
 ```
 
-## useActionState
+## `useActionState`
 
 Form loading state:
 
@@ -170,7 +170,7 @@ export default function App() {
 }
 ```
 
-## useFormStatus
+## `useFormStatus`
 
 ```tsx
 import { useFormStatus } from 'react-dom'
