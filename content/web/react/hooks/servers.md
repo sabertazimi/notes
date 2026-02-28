@@ -18,6 +18,85 @@ tags: [Web, React, Hook, Server, Form]
   it suspends by throwing the promise.
   The revert will be tried again after the async action is done.
 
+### Async React
+
+Legacy React:
+
+```tsx
+interface TabListProps {
+  tabs: { label: string, value: string }[]
+  activeTab: string
+  onChange: (value: string) => void
+}
+
+export function TabList({ tabs, activeTab, onChange }: TabListProps) {
+  return (
+    <div>
+      {tabs.map(tab => (
+        <button
+          key={tab.value}
+          onClick={() => onChange(tab.value)}
+          className={tab.value === activeTab ? 'active' : ''}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  )
+}
+```
+
+Async React [design pattern](https://aurorascharff.no/posts/building-design-components-with-action-props-using-async-react):
+
+```tsx
+import { useOptimistic, useTransition } from 'react'
+
+interface TabListProps {
+  tabs: { label: string, value: string }[]
+  activeTab: string
+  changeAction?: (value: string) => void | Promise<void>
+  onChange?: (e: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+export function TabList({
+  tabs,
+  activeTab,
+  changeAction,
+  onChange,
+}: TabListProps) {
+  const [optimisticTab, setOptimisticTab] = useOptimistic(activeTab)
+  const [isPending, startTransition] = useTransition()
+
+  function handleTabChange(
+    e: React.MouseEvent<HTMLButtonElement>,
+    value: string
+  ) {
+    onChange?.(e)
+    startTransition(async () => {
+      setOptimisticTab(value)
+      await changeAction?.(value)
+    })
+  }
+
+  return (
+    <div>
+      {tabs.map(tab => (
+        <button
+          key={tab.value}
+          onClick={e => handleTabChange(e, tab.value)}
+          className={tab.value === optimisticTab ? 'active' : ''}
+        >
+          {tab.label}
+        </button>
+      ))}
+      {isPending && <Spinner />}
+    </div>
+  )
+}
+```
+
+### Internals
+
 ```tsx
 function useOptimistic(state, optimisticDispatcher) {
   const [optimisticState, setOptimisticState] = useState(state)
@@ -146,3 +225,7 @@ export default function App() {
   )
 }
 ```
+
+## References
+
+- Async React [design patterns](https://aurorascharff.no/posts/building-design-components-with-action-props-using-async-react).
