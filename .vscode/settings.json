@@ -1,27 +1,10 @@
 {
-  "cSpell.words": [
-    "agentic",
-    "btrfs",
-    "codegen",
-    "convolutional",
-    "cout",
-    "fcitx",
-    "ghostty",
-    "glsl",
-    "gsap",
-    "gson",
-    "makepkg",
-    "matplotlib",
-    "mihomo",
-    "niri",
-    "noto",
-    "onedrive",
-    "pacman",
-    "paru",
-    "polkit",
-    "pytest",
-    "verilog",
-    "winget",
-    "worktree"
-  ]
+  "cSpell.customDictionaries": {
+    "neovim-dict": {
+      "name": "neovim-dict",
+      "path": "~/.config/nvim/spell/en.utf-8.add",
+      "description": "Link to Neovim custom dictionary",
+      "addWords": true
+    }
+  }
 }
