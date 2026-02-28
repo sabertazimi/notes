@@ -128,26 +128,30 @@ dms doctor
 
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
+  qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd \
-  wqy-zenhei fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
-  cmatrix fastfetch lolcat \
-  nvm uv rustup go jre8-openjdk mise \
+  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd wqy-zenhei \
+  fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
-  jq fx tldr bottom nvtop gping procs curlie \
+  jq fx tldr bottom gping procs curlie lazygit \
+  nvm uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
+  chezmoi starship github-cli \
+  fastfetch cmatrix lolcat s-tui nvtop \
   net-tools rsync rclone speedtest-cli \
-  firefox firefox-i18n-zh-cn github-cli chezmoi starship wl-clipboard \
-  yazi imv satty imagemagick kimageformats resvg poppler 7zip \
-  trash-cli mpv ffmpeg yt-dlp flatpak steam \
-  cava khal fprintd grim slurp i2c-tools speech-dispatcher \
-  bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack power-profiles-daemon \
-  xdg-desktop-portal xdg-desktop-portal-gnome nautilus-python mission-center \
-  sushi tumbler poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
-  gvfs-smb file-roller loupe gdu baobab gnome-disk-utility gnome-keyring libsecret \
+  bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
+  power-profiles-daemon speech-dispatcher fprintd i2c-tools \
+  xdg-desktop-portal xdg-desktop-portal-gnome \
+  mission-center gnome-disk-utility baobab gdu \
+  gnome-keyring libsecret \
+  nautilus-python sushi tumbler gvfs-smb file-roller \
+  poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
+  grim slurp satty wl-clipboard \
+  imv imagemagick kimageformats resvg poppler loupe \
+  mpv ffmpeg yt-dlp cava \
+  7zip trash-cli yazi khal \
+  lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
   archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
-  lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers \
-  mesa-utils s-tui \
-  qemu-full virt-manager dnsmasq swtpm
+  firefox firefox-i18n-zh-cn flatpak steam
 ```
 
 ```bash
