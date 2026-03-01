@@ -69,7 +69,7 @@ sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classic
 
 ## Fonts
 
-[`fontconfig`](https://wiki.archlinuxcn.org/wiki/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE):
+[`fontconfig`](https://wiki.archlinuxcn.org/wiki/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/%E4%B8%AD%E6%96%87):
 
 ```bash
 mkdir -p ~/.local/share/fonts/
