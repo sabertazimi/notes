@@ -34,7 +34,8 @@ git push
 exit
 ```
 
-Edit and sync dotfiles:
+[Edit](https://www.chezmoi.io/user-guide/frequently-asked-questions/usage/#how-do-i-edit-my-dotfiles-with-chezmoi)
+dotfiles:
 
 ```bash
 # Edit dotfile
