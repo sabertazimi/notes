@@ -57,9 +57,9 @@ mkdir -p ~/.local/share/fcitx5/rime \
   && echo -e "patch:\n  __include: rime_ice_suggestion:/" > ~/.local/share/fcitx5/rime/default.custom.yaml
 
 sed -i 's/^Vertical Candidate List=.*/Vertical Candidate List=True/' ~/.config/fcitx5/conf/classicui.conf
-sed -i 's/^Font=.*/Font="Maple Mono NF CN 10"/' ~/.config/fcitx5/conf/classicui.conf
-sed -i 's/^MenuFont=.*/MenuFont="Maple Mono NF CN 10"/' ~/.config/fcitx5/conf/classicui.conf
-sed -i 's/^TrayFont=.*/TrayFont="Maple Mono NF CN Medium Medium 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^Font=.*/Font="Source Han Sans CN 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^MenuFont=.*/MenuFont="Source Han Sans CN 10"/' ~/.config/fcitx5/conf/classicui.conf
+sed -i 's/^TrayFont=.*/TrayFont="Source Han Sans CN 10"/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^Theme=.*/Theme=default/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^DarkTheme=.*/DarkTheme=default-dark/' ~/.config/fcitx5/conf/classicui.conf
 sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.conf

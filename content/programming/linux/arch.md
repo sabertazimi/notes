@@ -132,7 +132,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
-  adobe-source-han-sans-cn-fonts wqy-zenhei \
+  adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
   jq fx tldr bottom gping procs curlie lazygit \
@@ -475,7 +475,7 @@ jq '
     .currentThemeName = "dynamic" |
     .currentThemeCategory = "dynamic" |
     .matugenScheme = "scheme-tonal-spot" |
-    .fontFamily = "Maple Mono NF CN" |
+    .fontFamily = "思源黑体 CN" |
     .monoFontFamily = "Maple Mono NF CN" |
     .use24HourClock = true |
     .weatherEnabled = true |
