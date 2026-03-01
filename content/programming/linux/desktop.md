@@ -80,7 +80,10 @@ glxinfo | grep "direct rendering" # Yes: 3D 硬件加速正常
 ```bash
 echo "QT_QPA_PLATFORMTHEME=qt6ct" >> ~/.config/environment.d/90-dms.conf
 sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
+sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
 sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
+echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
+echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "/home/sabertaz/onedrive" "--vfs-cache-mode" "full" "--daemon"' >> ~/.config/niri/config.kdl
 
 sed -i '/Ctrl+Shift+R/,/^[[:space:]]*}[[:space:]]*$/d' ~/.config/niri/dms/binds.kdl
 sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
