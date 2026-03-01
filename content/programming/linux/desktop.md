@@ -211,7 +211,7 @@ jq --arg home "$HOME" '
     "btrfs-assistant"
   ] |
   .hiddenApps = [
-    "mihomo-party",
+    "Clash Verge",
     "wps-office-wps",
     "wps-office-et",
     "wps-office-wpp",

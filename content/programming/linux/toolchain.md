@@ -155,7 +155,7 @@ winget install kangfenmao.CherryStudio Microsoft.WindowsTerminal ImageMagick.Ima
 ```
 
 ```bash
-winget install Mihomo-Party.Mihomo-Party Google.Chrome Microsoft.OneDrive
+winget install ClashVergeRev.ClashVergeRev Google.Chrome Microsoft.OneDrive
 ```
 
 ```bash

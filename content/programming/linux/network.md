@@ -210,10 +210,10 @@ curl -L https://raw.hellogithub.com/hosts >> /etc/hosts
 
 ### Client
 
-- [Party](https://github.com/mihomo-party-org/clash-party):
-  Another Mihomo GUI.
 - [Verge](https://github.com/clash-verge-rev/clash-verge-rev):
   Clash Meta (Mihomo) GUI based on Tauri.
+- [Party](https://github.com/mihomo-party-org/clash-party):
+  Another Mihomo GUI.
 - [ProxyChains](https://github.com/rofl0r/proxychains-ng):
   Proxy any TCP connection.
 
