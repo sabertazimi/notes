@@ -122,7 +122,7 @@ dms doctor
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   qemu-full virt-manager dnsmasq swtpm \
-  noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+  noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \

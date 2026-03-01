@@ -67,6 +67,21 @@ sed -i 's/^UseDarkTheme=.*/UseDarkTheme=True/' ~/.config/fcitx5/conf/classicui.c
 sed -i 's/^UseAccentColor=.*/UseAccentColor=True/' ~/.config/fcitx5/conf/classicui.conf
 ```
 
+## Fonts
+
+[`fontconfig`](https://wiki.archlinuxcn.org/wiki/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE):
+
+```bash
+mkdir -p ~/.local/share/fonts/
+cp -fr code-fonts ~/.local/share/fonts/
+fc-cache -fv
+fc-list
+fc-list : family | sort | uniq
+fc-list :lang=zh | sort | uniq
+fc-match sans-serif
+fc-cat ~/.config/fontconfig/fonts.conf
+```
+
 ## Compositor
 
 ```bash
@@ -268,7 +283,7 @@ sudo pacman -S plasma-meta plasma-workspace xdg-desktop-portal konsole dolphin
 sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf # 声音固件
 sudo pacman -S ntfs-3g # NTFS 硬盘
 sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 中文字体
-sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 谷歌字体及表情
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji # 谷歌字体及表情
 sudo pacman -S firefox chromium # 浏览器
 sudo pacman -S ark # 压缩软件
 sudo pacman -S packagekit-qt6 packagekit appstream-qt appstream # Discover 依赖

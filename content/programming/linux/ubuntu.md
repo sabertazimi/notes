@@ -33,13 +33,3 @@ sudo locale-gen zh_CN.GBK
 sudo locale-gen zh_CN.GB18030
 sudo dpkg-reconfigure locales
 ```
-
-## Fonts
-
-```bash
-mkdir -p ~/.local/share/fonts/
-cp -fr code-fonts ~/.local/share/fonts/
-fc-cache -f -v
-fc-list
-fc-list : family | sort | uniq
-```

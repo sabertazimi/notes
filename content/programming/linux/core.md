@@ -22,8 +22,8 @@ man hier
 
 - `/usr/src`: Kernel source code.
 - `/usr/share/applications`: Desktop shortcuts.
-- `/usr/share/fonts/opentype`: Open Type Fonts (OTF).
 - `/usr/share/fonts/truetype`: True Type Fonts (TTF).
+- `/usr/share/fonts/opentype`: Open Type Fonts (OTF).
 - `/etc/nginx`: Nginx.
 
 ## Getting Started
