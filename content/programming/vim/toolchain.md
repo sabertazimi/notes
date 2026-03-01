@@ -7,6 +7,8 @@ tags: [Programming, Vim, Toolchain]
 
 ## Vim
 
+### Installation
+
 ```bash
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
@@ -14,13 +16,18 @@ sudo apt install vim
 vim --version
 ```
 
+### Configuration
+
+Install [awesome `vimrc`](https://github.com/amix/vimrc):
+
 ```bash
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
+Custom configuration (`~/.vim_runtime/my_configs.vim`):
+
 ```vim
-" my_configs.vim
 :set number
 :setlocal spell!
 
@@ -40,7 +47,9 @@ winget install Neovim.Neovim
 sudo apt install neovim
 ```
 
-[LazyVim](https://github.com/LazyVim/LazyVim):
+### `LazyVim`
+
+[`LazyVim`](https://github.com/LazyVim/LazyVim) setup:
 
 ```bash
 mv ~/.config/nvim{,.bak}
@@ -50,7 +59,9 @@ mv ~/.cache/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 
-[AstroNvim](https://github.com/AstroNvim/AstroNvim):
+### `AstroNvim`
+
+[`AstroNvim`](https://github.com/AstroNvim/AstroNvim) setup:
 
 ```bash
 mv ~/.config/nvim{,.bak}
@@ -60,15 +71,9 @@ mv ~/.cache/nvim{,.bak}
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 ```
 
-:::tip[Logs]
-
-`:Inspect` 会显示 highlight group, `:messages` 会显示日志信息.
-
-:::
-
 ### Extras Plugins
 
-`~/.config/nvim/lua/config/lazy.lua`:
+`LazyVim` extras plugins (`~/.config/nvim/lua/config/lazy.lua`):
 
 ```lua
 require("lazy").setup({
@@ -89,11 +94,11 @@ require("lazy").setup({
 })
 ```
 
-LazyVim extras plugins located in `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
+`LazyVim` extras plugins 位于 `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
 
 ### Community Plugins
 
-`~/.config/nvim/lua/community.lua`:
+`AstroNvim` community plugins (`~/.config/nvim/lua/community.lua`):
 
 ```lua
 return {
@@ -115,9 +120,15 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 :LspInstall typescript
 ```
 
+:::tip[Logs]
+
+`:Inspect` 显示 highlight group, `:messages` 显示日志信息.
+
+:::
+
 ## ESLint
 
-`~/.config/nvim/lua/plugins/lsp.lua`:
+Configuration (`~/.config/nvim/lua/plugins/lsp.lua`):
 
 ```lua
 return {
@@ -153,122 +164,23 @@ return {
 }
 ```
 
-## Markdown
+## Git
 
-关闭 render 和 conceal:
+Vim fugitive commands:
 
-`~/.config/nvim/lua/plugins/markdown.lua`:
-
-```lua
-return {
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      enabled = false,
-    },
-  },
-}
-```
-
-`~/.config/nvim/lua/config/autocmds.lua`:
-
-```lua
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown" },
-  callback = function()
-    vim.opt_local.conceallevel = 0
-  end,
-})
-```
-
-## Clipboard
-
-```bash
-sudo pacman -S wl-clipboard
-# :checkhealth vim.provider
-```
-
-## Spell
-
-`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`).
-
-`~/.config/nvim/lua/config/keymaps.lua`:
-
-```lua
-local wk = require("which-key")
-
-local spell_lang = "en"
-local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
-
-wk.add({
-  {
-    "<leader>um",
-    function()
-      vim.cmd("mkspell! " .. spell_file)
-      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
-    end,
-    desc = "Rebuild Spell Dictionary",
-    icon = "󰓫 ",
-  },
-})
-```
-
-`~/.config/nvim/lua/config/options.lua`:
-
-```lua
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-```
-
-:::tip[Grammar]
-
-`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
-
-:::
-
-## Quick Navigation
-
-Neovim ([flash.nvim](https://github.com/folke/flash.nvim)):
-
-| Key | Command                  |
-| :-- | :----------------------- |
-| `s` | Search character         |
-| `f` | Find character forwards  |
-| `F` | Find character backwards |
-| `t` | Til character forwards   |
-| `T` | Til character backwards  |
-
-`VSCode` (Easy Motion):
-
-| Motion Command                      | Description                           |
-| ----------------------------------- | ------------------------------------- |
-| `<leader><leader> w`                | Start of word forwards                |
-| `<leader><leader> b`                | Start of word backwards               |
-| `<leader><leader> j`                | Start of line forwards                |
-| `<leader><leader> k`                | Start of line backwards               |
-| `<leader><leader> s <char>`         | Search character                      |
-| `<leader><leader> f <char>`         | Find character forwards               |
-| `<leader><leader> F <char>`         | Find character backwards              |
-| `<leader><leader> t <char>`         | Til character forwards                |
-| `<leader><leader> T <char>`         | Til character backwards               |
-| `<leader><leader> l`                | Matches begin & end of word forwards  |
-| `<leader><leader> h`                | Matches begin & end of word backwards |
-| `<leader><leader> e`                | End of word forwards                  |
-| `<leader><leader> ge`               | End of word backwards                 |
-| `<leader><leader> / <char>... <CR>` | Search n-character                    |
-| `<leader><leader><leader> bdt`      | Til character                         |
-| `<leader><leader><leader> bdw`      | Start of word                         |
-| `<leader><leader><leader> bde`      | End of word                           |
-| `<leader><leader><leader> bdjk`     | Start of line                         |
-| `<leader><leader><leader> j`        | JumpToAnywhere motion                 |
+| Command   | Description                          |
+| :-------- | :----------------------------------- |
+| `Gblame`  | View git blame (press `o` on commit) |
+| `Glog`    | View git log (`[q`/`]q`/`[Q`/`]Q`)   |
+| `Gdiff`   | View git diff                        |
+| `Gcommit` | Git commit                           |
+| `Gstatus` | Git status                           |
+| `Gpull`   | Git pull                             |
+| `Gpush`   | Git push                             |
 
 ## Color Schemes
 
-- Built-in fuzzy file search `:find`.
-- Need config.
-- `:AirlineTheme {theme}`.
-- `:colorscheme {theme}`.
+Vim color scheme configuration:
 
 ```vim
 set nocompatible
@@ -305,7 +217,7 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 " let g:netrw_list_hide=netrw_gitignore#Hide()
-" let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+" let g:netrw_list_hide=',\(^\|\s\s\)\zs\.\S\+'
 augroup ProjectDrawer
 autocmd!
 autocmd VimEnter * :Vexplore
@@ -330,14 +242,147 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = 'find %s -type f'
 ```
 
-## Ctags
+Commands:
+
+- `:colorscheme {theme}` - 切换颜色主题
+- `:AirlineTheme {theme}` - 切换 Airline 主题
+- `:find` - 内置模糊文件搜索
+
+## Spell
+
+`zg` 添加到字典 (`~/.config/nvim/spell/en.utf-8.add` 或 `~/.vim/spell/en.utf-8.add`).
+
+Key binding to rebuild dictionary (`~/.config/nvim/lua/config/keymaps.lua`):
+
+```lua
+local wk = require("which-key")
+
+local spell_lang = "en"
+local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
+
+wk.add({
+  {
+    "<leader>um",
+    function()
+      vim.cmd("mkspell! " .. spell_file)
+      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
+    end,
+    desc = "Rebuild Spell Dictionary",
+    icon = "󰓫 ",
+  },
+})
+```
+
+Spell options (`~/.config/nvim/lua/config/options.lua`):
+
+```lua
+vim.opt.spelllang = { "en", "cjk" }
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+```
+
+:::tip[Grammar]
+
+`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
+
+:::
+
+## Markdown
+
+关闭 render 和 conceal.
+
+`~/.config/nvim/lua/plugins/markdown.lua`:
+
+```lua
+return {
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      enabled = false,
+    },
+  },
+}
+```
+
+`~/.config/nvim/lua/config/autocmds.lua`:
+
+```lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
+```
+
+## Clipboard
+
+```bash
+sudo pacman -S wl-clipboard
+# :checkhealth vim.provider
+```
+
+## Quick Navigation
+
+### `flash.nvim`
+
+[`flash.nvim`](https://github.com/folke/flash.nvim) key bindings:
+
+| Key | Command                  |
+| :-- | :----------------------- |
+| `s` | Search character         |
+| `f` | Find character forwards  |
+| `F` | Find character backwards |
+| `t` | Til character forwards   |
+| `T` | Til character backwards  |
+
+### Easy Motion
+
+| Motion Command                      | Description                           |
+| ----------------------------------- | ------------------------------------- |
+| `<leader><leader> w`                | Start of word forwards                |
+| `<leader><leader> b`                | Start of word backwards               |
+| `<leader><leader> j`                | Start of line forwards                |
+| `<leader><leader> k`                | Start of line backwards               |
+| `<leader><leader> s <char>`         | Search character                      |
+| `<leader><leader> f <char>`         | Find character forwards               |
+| `<leader><leader> F <char>`         | Find character backwards              |
+| `<leader><leader> t <char>`         | Til character forwards                |
+| `<leader><leader> T <char>`         | Til character backwards               |
+| `<leader><leader> l`                | Matches begin & end of word forwards  |
+| `<leader><leader> h`                | Matches begin & end of word backwards |
+| `<leader><leader> e`                | End of word forwards                  |
+| `<leader><leader> ge`               | End of word backwards                 |
+| `<leader><leader> / <char>... <CR>` | Search n-character                    |
+| `<leader><leader><leader> bdt`      | Til character                         |
+| `<leader><leader><leader> bdw`      | Start of word                         |
+| `<leader><leader><leader> bde`      | End of word                           |
+| `<leader><leader><leader> bdjk`     | Start of line                         |
+| `<leader><leader><leader> j`        | Jump to anywhere motion               |
+
+### Quick Fix
+
+| 命令      | 作用                         |
+| :-------- | :--------------------------- |
+| `:cnext`  | 跳转到下一项                 |
+| `:cprev`  | 跳转到上一项                 |
+| `:cfirst` | 跳转到第一项                 |
+| `:clast`  | 跳转到最后一项               |
+| `:cnfile` | 跳转到下一个文件中的第一项   |
+| `:cpfile` | 跳转到上一个文件中的最后一项 |
+| `:cc N`   | 跳转到第 n 项                |
+| `:copen`  | 打开 Quick Fix 窗口          |
+| `:cclose` | 关闭 Quick Fix 窗口          |
+
+### `ctags`
+
+Generate tags:
 
 ```vim
-" ^] jump
-" g^] for ambiguous tags
-" ^t jump back
 command! MakeTags !ctags -R .
 ```
+
+Navigation commands:
 
 | 命令               | 作用                                                    |
 | :----------------- | :------------------------------------------------------ |
@@ -353,23 +398,9 @@ command! MakeTags !ctags -R .
 | `:tlast`           | 跳转到最后一处匹配的标签                                |
 | `:tselect`         | 提示用户从标签匹配列表中选择一项进行跳转                |
 
-## Make
+## Completion
 
-| QuickFix 命令 | 作用                         |
-| :------------ | :--------------------------- |
-| :cnext        | 跳转到下一项                 |
-| :cprev        | 跳转到上一项                 |
-| :cfirst       | 跳转到第一项                 |
-| :clast        | 跳转到最后一项               |
-| :cnfile       | 跳转到下一个文件中的第一项   |
-| :cpfile       | 跳转到上一个文件中的最后一项 |
-| :cc N         | 跳转到第 n 项                |
-| :copen        | 打开 QuickFix 窗口           |
-| :cclose       | 关闭 QuickFix 窗口           |
-
-## 内置补全
-
-In `insert` mode:
+在 `insert` 模式下:
 
 | 命令         | 补全类型         |
 | :----------- | :--------------- |
@@ -382,24 +413,16 @@ In `insert` mode:
 | `<C-x><C-f>` | 文件名补全       |
 | `<C-x><C-o>` | 全能（Omni）补全 |
 
-可供弹出式菜单使用的命令
+弹出式菜单操作:
 
-| 按键操作           | 作用                                             |
-| :----------------- | :----------------------------------------------- |
-| `<C-n>`            | 使用来自补全列表的下一个匹配项 (next 匹配项)     |
-| `<C-p>`            | 使用来自补全列表的上一个匹配项 (previous 匹配项) |
-| `<Down>`           | 选择来自补全列表的下一个匹配项                   |
-| `<Up>`             | 选择来自补全列表的上一个匹配项                   |
-| `<C-y>`            | 确认使用当前选中的匹配项 (yes)                   |
-| `<C-e>`            | 还原最早输入的文本(从自动补全中 exit)            |
-| `<C-h>`(与 `<BS>`) | 从当前匹配项中删除一个字符                       |
-| `<C-l>`            | 从当前匹配项中增加一个字符                       |
-| `{char}`           | 中止自动补全并插入字符 `{char}`                  |
-
-## Git
-
-- Gblame + key o.
-- Glog + `[q`/`]q`/`[Q`/`]Q`.
-- Gdiff.
-- Gcommit/Gstatus.
-- Gpull/Gpush.
+| 按键操作            | 作用                                  |
+| :------------------ | :------------------------------------ |
+| `<C-n>`             | 使用来自补全列表的下一个匹配项        |
+| `<C-p>`             | 使用来自补全列表的上一个匹配项        |
+| `<Down>`            | 选择来自补全列表的下一个匹配项        |
+| `<Up>`              | 选择来自补全列表的上一个匹配项        |
+| `<C-y>`             | 确认使用当前选中的匹配项              |
+| `<C-e>`             | 还原最早输入的文本(从自动补全中 exit) |
+| `<C-h>` (与 `<BS>`) | 从当前匹配项中删除一个字符            |
+| `<C-l>`             | 从当前匹配项中增加一个字符            |
+| `{char}`            | 中止自动补全并插入字符 `{char}`       |
