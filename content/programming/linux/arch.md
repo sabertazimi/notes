@@ -464,65 +464,7 @@ bash wallpapers/third-party.sh
 exit
 ```
 
-## Settings
-
-```bash
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell" "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell"
-touch "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
-
-jq '
-    .wallpaperFillMode = "Fill" |
-    .currentThemeName = "dynamic" |
-    .currentThemeCategory = "dynamic" |
-    .matugenScheme = "scheme-tonal-spot" |
-    .fontFamily = "思源黑体 CN" |
-    .monoFontFamily = "Maple Mono NF CN" |
-    .use24HourClock = true |
-    .weatherEnabled = true |
-    .barConfigs |= map(if .id == "default" or .id == null then .transparency = 0 | .widgetTransparency = 0.65 else . end) |
-    .notificationPopupPosition = 3 |
-    .showDock = true |
-    .dockSmartAutoHide = true |
-    .dockGroupByApp = true |
-    .dockTransparency = 0.65 |
-    .launcherLogoMode = "os" |
-    .launcherLogoColorOverride = "primary"
-' "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json" > /tmp/dms-settings.json && mv /tmp/dms-settings.json "${XDG_CONFIG_HOME:-$HOME/.config}/DankMaterialShell/settings.json"
-
-jq --arg home "$HOME" '
-    .wallpaperPath = "\($home)/.local/share/wallpapers/arceus_pokemon.jpg" |
-    .wallpaperCyclingEnabled = true |
-    .wallpaperCyclingMode = "interval" |
-    .wallpaperCyclingInterval = 1800 |
-    .wallpaperCyclingTime = "18:00" |
-    .wallpaperTransition = "disc" |
-    .pinnedApps = [
-        "firefox",
-        "com.mitchellh.ghostty",
-        "code",
-        "SPlayer",
-        "com.qq.weixin",
-        "qq",
-        "wps-office-prometheus",
-        "steam",
-        "animeko",
-        "virt-manager",
-        "io.missioncenter.MissionCenter",
-        "btrfs-assistant"
-    ] |
-    .hiddenApps = [
-        "mihomo-party",
-        "wps-office-wps",
-        "wps-office-et",
-        "wps-office-wpp",
-        "wps-office-pdf"
-    ]
-' "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json" > /tmp/dms-session.json && mv /tmp/dms-session.json "${XDG_STATE_HOME:-$HOME/.local/state}/DankMaterialShell/session.json"
-```
-
-```bash
-reboot
-```
+## Themes
 
 :::caution[Application Theme]
 
