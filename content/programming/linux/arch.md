@@ -106,9 +106,9 @@ dms greeter enable
 dms greeter sync
 ```
 
-:::tip[Polkit]
+:::tip[Quickshell]
 
-Polkit (Quickshell feature) need `quickshell-git`:
+Advanced `DMS` features (e.g. built-in Polkit GUI) need `quickshell-git`:
 
 ```bash
 paru -S quickshell-git
