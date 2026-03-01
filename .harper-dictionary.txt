@@ -1,3 +1,4 @@
+astro
 aur
 bootloader
 claude
@@ -8,6 +9,7 @@ hyprland
 multilib
 niri
 nvim
+omni
 onedrive
 pacman
 polkit
