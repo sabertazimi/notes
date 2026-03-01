@@ -106,13 +106,6 @@ dms greeter enable
 dms greeter sync
 ```
 
-Configure niri:
-
-```bash
-sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  QT_QPA_PLATFORMTHEME "qt6ct"\n  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"' ~/.config/niri/config.kdl
-sed -i 's/scope="output"/scope="all"/g' ~/.config/niri/config.kdl
-```
-
 :::tip[Polkit]
 
 Polkit (Quickshell feature) need `quickshell-git`:
@@ -344,8 +337,6 @@ sudo localectl set-locale LANG=zh_CN.UTF-8
 LC_ALL=C.UTF-8 xdg-user-dirs-update --force
 cat ~/.config/user-dirs.dirs
 
-sed -i '/^[[:space:]]*environment[[:space:]]*{/a \  LC_CTYPE "en_US.UTF-8"\n  XMODIFIERS "@im=fcitx"\n  LANG "zh_CN.UTF-8"' ~/.config/niri/config.kdl
-echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 ```
 
 Install Windows fonts with `linux-lts` kernel:
@@ -362,9 +353,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 ```bash
-dot init sabertazimi
-dot diff
-dot apply -v
+chezmoi init sabertazimi
+chezmoi diff
+chezmoi apply -v
 ```
 
 ```bash
@@ -422,10 +413,10 @@ rclone config
 
 ```bash
 mkdir -p ~/onedrive
-echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "/home/sabertaz/onedrive" "--vfs-cache-mode" "full" "--daemon"' >> ~/.config/niri/config.kdl
 ```
 
 ```bash
+# rclone mount onedrive:/ /home/sabertaz/onedrive --vfs-cache-mode full --daemon
 # rclone ls onedrive:/
 # rclone rcd --rc-web-gui
 ```
@@ -459,7 +450,7 @@ sudo sed -i '1a export GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx5\nexport X
 ## Wallpapers
 
 ```bash
-dot cd
+chezmoi cd
 bash wallpapers/third-party.sh
 exit
 ```
