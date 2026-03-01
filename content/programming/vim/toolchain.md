@@ -66,126 +66,6 @@ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 
 :::
 
-### Language Server
-
-[LSP Config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md):
-
-```vim
-:LspInstall typescript
-```
-
-### ESLint
-
-`~/.config/nvim/lua/plugins/lsp.lua`:
-
-```lua
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        eslint = {
-          filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-            "vue",
-            "html",
-            "markdown",
-            "json",
-            "jsonc",
-            "yaml",
-            "toml",
-            "xml",
-            "graphql",
-            "astro",
-            "svelte",
-            "css",
-            "less",
-            "scss",
-          },
-        },
-      },
-    },
-  },
-}
-```
-
-### Markdown
-
-关闭 render 和 conceal:
-
-`~/.config/nvim/lua/plugins/markdown.lua`:
-
-```lua
-return {
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      enabled = false,
-    },
-  },
-}
-```
-
-`~/.config/nvim/lua/config/autocmds.lua`:
-
-```lua
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown" },
-  callback = function()
-    vim.opt_local.conceallevel = 0
-  end,
-})
-```
-
-### Clipboard
-
-```bash
-sudo pacman -S wl-clipboard
-# :checkhealth vim.provider
-```
-
-### Spell
-
-`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`).
-
-`~/.config/nvim/lua/config/keymaps.lua`:
-
-```lua
-local wk = require("which-key")
-
-local spell_lang = "en"
-local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
-
-wk.add({
-  {
-    "<leader>um",
-    function()
-      vim.cmd("mkspell! " .. spell_file)
-      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
-    end,
-    desc = "Rebuild Spell Dictionary",
-    icon = "󰓫 ",
-  },
-})
-```
-
-`~/.config/nvim/lua/config/options.lua`:
-
-```lua
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-```
-
-:::tip[Grammar]
-
-`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
-
-:::
-
 ### Extras Plugins
 
 `~/.config/nvim/lua/config/lazy.lua`:
@@ -227,7 +107,139 @@ return {
 
 See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunity).
 
-## Easy Motion
+## Language Server
+
+[LSP Config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md):
+
+```vim
+:LspInstall typescript
+```
+
+## ESLint
+
+`~/.config/nvim/lua/plugins/lsp.lua`:
+
+```lua
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        eslint = {
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue",
+            "html",
+            "markdown",
+            "json",
+            "jsonc",
+            "yaml",
+            "toml",
+            "xml",
+            "graphql",
+            "astro",
+            "svelte",
+            "css",
+            "less",
+            "scss",
+          },
+        },
+      },
+    },
+  },
+}
+```
+
+## Markdown
+
+关闭 render 和 conceal:
+
+`~/.config/nvim/lua/plugins/markdown.lua`:
+
+```lua
+return {
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      enabled = false,
+    },
+  },
+}
+```
+
+`~/.config/nvim/lua/config/autocmds.lua`:
+
+```lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
+```
+
+## Clipboard
+
+```bash
+sudo pacman -S wl-clipboard
+# :checkhealth vim.provider
+```
+
+## Spell
+
+`zg` add to dictionary (`~/.config/nvim/spell/en.utf-8.add`/`~/.vim/spell/en.utf-8.add`).
+
+`~/.config/nvim/lua/config/keymaps.lua`:
+
+```lua
+local wk = require("which-key")
+
+local spell_lang = "en"
+local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
+
+wk.add({
+  {
+    "<leader>um",
+    function()
+      vim.cmd("mkspell! " .. spell_file)
+      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
+    end,
+    desc = "Rebuild Spell Dictionary",
+    icon = "󰓫 ",
+  },
+})
+```
+
+`~/.config/nvim/lua/config/options.lua`:
+
+```lua
+vim.opt.spelllang = { "en", "cjk" }
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+```
+
+:::tip[Grammar]
+
+`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
+
+:::
+
+## Quick Navigation
+
+Neovim ([flash.nvim](https://github.com/folke/flash.nvim)):
+
+| Key | Command                  |
+| :-- | :----------------------- |
+| `s` | Search character         |
+| `f` | Find character forwards  |
+| `F` | Find character backwards |
+| `t` | Til character forwards   |
+| `T` | Til character backwards  |
+
+`VSCode` (Easy Motion):
 
 | Motion Command                      | Description                           |
 | ----------------------------------- | ------------------------------------- |
