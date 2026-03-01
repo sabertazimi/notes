@@ -198,14 +198,6 @@ sudo pacman -Rns $(pacman -Qdtq)
 ## AUR
 
 ```bash
-paru -S mihomo-party-bin
-```
-
-```bash
-paru -Rns clash-verge-rev
-```
-
-```bash
 paru -S --needed chsrc-bin downgrade \
   visual-studio-code-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
