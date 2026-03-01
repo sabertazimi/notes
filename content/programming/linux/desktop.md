@@ -79,6 +79,8 @@ fc-list
 fc-list : family | sort | uniq
 fc-list :lang=zh | sort | uniq
 fc-match sans-serif
+fc-match "serif:lang=zh"
+fc-match "monospace:lang=zh-cn"
 fc-cat ~/.config/fontconfig/fonts.conf
 ```
 
