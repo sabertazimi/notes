@@ -134,7 +134,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   fastfetch cmatrix lolcat s-tui nvtop \
   net-tools rsync rclone speedtest-cli \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
-  power-profiles-daemon speech-dispatcher fprintd i2c-tools \
+  fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome \
   mission-center gnome-disk-utility baobab gdu \
   gnome-keyring libsecret \
