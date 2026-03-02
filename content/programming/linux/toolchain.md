@@ -179,18 +179,6 @@ mise u -g node@lts
 node -v
 ```
 
-## Fastfetch
-
-[Fastfetch](https://github.com/fastfetch-cli/fastfetch):
-
-```bash
-sudo pacman -S fastfetch
-```
-
-```bash
-echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
-```
-
 ## Zoxide
 
 [zoxide](https://github.com/ajeetdsouza/zoxide):
