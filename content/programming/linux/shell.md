@@ -773,6 +773,7 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 
 sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
 sed -i 's/^plugins=(/plugins=(vi-mode last-working-dir zsh-autosuggestions zsh-syntax-highlighting fzf-tab /' ~/.zshrc
+echo 'bindkey "^K" autosuggest-accept' >> ~/.zshrc
 ```
 
 [Starship](https://github.com/starship/starship) theme:
