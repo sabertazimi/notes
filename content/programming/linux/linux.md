@@ -13,13 +13,13 @@ tags: [Programming, OS, Linux]
 ## Development
 
 - [Terminal](./terminal.md) - Terminal configuration and emulators
-- [Toolchain](./toolchain.md) - Package managers (RPM, Yum), source installation, and startup services
+- [Toolchain](./toolchain.md) - Modern command line toolchain
 
 ## System Operations
 
 - [User](./user.md) - User and group management, permissions, ACL, and privilege control
 - [Process](./process.md) - Process statistics and management commands
-- [System](./system.md) - Boot system (GRUB), cronjobs, and system monitoring
+- [System](./system.md) - Boot system, cronjobs, and system monitoring
 - [Network](./network.md) - Network commands, certificates, firewall, and connectivity
 - [Profile](./profile.md) - Systematic debugging and performance profiling
 - [Virtualization](./virtualization.md) - Virtualization technologies

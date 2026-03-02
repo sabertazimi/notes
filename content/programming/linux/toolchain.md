@@ -39,7 +39,6 @@ echo 'alias vim="nvim"' >> ~/.zshrc
 echo 'alias dot="chezmoi"' >> ~/.zshrc
 
 echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
-echo 'alias cd="z"' >> ~/.zshrc
 echo 'alias cat="bat"' >> ~/.zshrc
 echo 'alias ls="eza"' >> ~/.zshrc
 echo 'alias diff="delta"' >> ~/.zshrc
@@ -102,9 +101,9 @@ chsrc ls ruby
 chsrc set ruby rubychina
 ```
 
-## Scoop
+## `scoop`
 
-[Scoop](https://github.com/ScoopInstaller/Scoop):
+[`scoop`](https://github.com/ScoopInstaller/Scoop):
 
 ```powershell
 # Command-line installer for Windows
@@ -119,9 +118,9 @@ scoop info fzf
 scoop bucket add extras
 ```
 
-## WinGet
+## `winget`
 
-[WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget):
+[`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget):
 
 ```bash
 winget search steam
@@ -130,9 +129,9 @@ winget show vscode
 winget list
 ```
 
-:::tip[Scoop vs WinGet]
+:::tip[scoop vs `winget`]
 
-[Scoop vs WinGet](https://daftdev.blog/2024/04/01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use):
+[scoop vs `winget`](https://daftdev.blog/2024/04/01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use):
 
 Scoop is command line installer,
 while WinGet is app installer.
@@ -165,9 +164,9 @@ winget install ClashVergeRev.ClashVergeRev Google.Chrome Microsoft.OneDrive
 winget install ByteDance.Feishu NetEase.CloudMusic Tencent.QQ.NT Tencent.WeChat Tencent.WeType Valve.Steam
 ```
 
-## Mise
+## `mise`
 
-[Mise](https://github.com/jdx/mise):
+[`mise`](https://github.com/jdx/mise):
 
 ```bash
 sudo pacman -S mise
@@ -182,9 +181,9 @@ mise u -g node@lts
 node -v
 ```
 
-## Zoxide
+## `zoxide`
 
-[zoxide](https://github.com/ajeetdsouza/zoxide):
+[`zoxide`](https://github.com/ajeetdsouza/zoxide):
 
 ```bash
 sudo pacman -S zoxide
@@ -194,8 +193,14 @@ winget install ajeetdsouza.zoxide
 ```
 
 ```bash
-echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
-echo 'alias cd="z"' >> ~/.zshrc
+echo 'eval "$(zoxide init --cmd cd zsh)"' >> ~/.zshrc
+```
+
+Interactive `fzf` menu:
+
+```bash
+cdi
+cd ambiguous-path <Tab>
 ```
 
 ## Bat
@@ -213,9 +218,9 @@ winget install sharkdp.bat
 echo 'alias cat="bat"' >> ~/.zshrc
 ```
 
-## Eza
+## `eza`
 
-[eza](https://github.com/eza-community/eza):
+[`eza`](https://github.com/eza-community/eza):
 
 ```bash
 sudo pacman -S eza
@@ -277,9 +282,9 @@ winget install bootandy.dust
 echo 'alias du="dust"' >> ~/.zshrc
 ```
 
-## Duf
+## `duf`
 
-[duf](https://github.com/muesli/duf):
+[`duf`](https://github.com/muesli/duf):
 
 ```bash
 sudo pacman -S duf
@@ -292,9 +297,9 @@ winget install muesli.duf
 echo 'alias df="duf"' >> ~/.zshrc
 ```
 
-## Fd
+## `fd`
 
-[fd](https://github.com/sharkdp/fd):
+[`fd`](https://github.com/sharkdp/fd):
 
 ```bash
 sudo pacman -S fd
@@ -307,9 +312,9 @@ winget install sharkdp.fd
 echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 ```
 
-## RipGrep
+## `ripgrep`
 
-[rg](https://github.com/BurntSushi/ripgrep):
+[`rg`](https://github.com/BurntSushi/ripgrep):
 
 ```bash
 sudo pacman -S ripgrep
@@ -348,9 +353,9 @@ EOF
 rg -l text
 ```
 
-## Fzf
+## `fzf`
 
-[fzf](https://github.com/junegunn/fzf):
+[`fzf`](https://github.com/junegunn/fzf):
 
 ```bash
 sudo pacman -S fzf
@@ -423,9 +428,9 @@ like `cargo-crates`, `gh-issues`, `pacman-packages`:
 tv update-channels
 ```
 
-## Jq
+## `jq`
 
-[jq](https://github.com/jqlang/jq):
+[`jq`](https://github.com/jqlang/jq):
 
 ```bash
 sudo pacman -S jq
@@ -438,9 +443,9 @@ winget install jqlang.jq
 echo "version=$(jq -r '.devDependencies["@playwright/test"]' package.json | sed 's/^[^0-9]*//')"
 ```
 
-## Fx
+## `fx`
 
-[fx](https://github.com/antonmedv/fx):
+[`fx`](https://github.com/antonmedv/fx):
 
 ```bash
 sudo pacman -S fx
@@ -466,9 +471,9 @@ fx package.json 'x.version = x.version.replace(/\d+$/, n => +n + 1), x'
 curl -i https://fx.wtf/example.json | fx
 ```
 
-## TLDR
+## `tldr`
 
-[TLDR](https://github.com/tldr-pages/tldr):
+[`tldr`](https://github.com/tldr-pages/tldr):
 
 ```bash
 sudo pacman -S tldr
@@ -496,9 +501,9 @@ winget install Clement.bottom
 echo 'alias top="btm"' >> ~/.zshrc
 ```
 
-## Gping
+## `gping`
 
-[gping](https://github.com/orf/gping):
+[`gping`](https://github.com/orf/gping):
 
 ```bash
 sudo pacman -S gping
@@ -511,9 +516,9 @@ winget install orf.gping
 echo 'alias ping="gping"' >> ~/.zshrc
 ```
 
-## Procs
+## `procs`
 
-[procs](https://github.com/dalance/procs):
+[`procs`](https://github.com/dalance/procs):
 
 ```bash
 sudo pacman -S procs
@@ -527,9 +532,9 @@ echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
 ```
 
-## Curlie
+## `curlie`
 
-[Curlie](https://github.com/rs/curlie):
+[`curlie`](https://github.com/rs/curlie):
 
 ```bash
 sudo pacman -S curlie
@@ -544,14 +549,14 @@ echo 'alias curl="curlie"' >> ~/.zshrc
 ## Developer
 
 - [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts):
-  Microsoft KMS activation scripts.
+  Microsoft `KMS` activation scripts.
 - [行书指南](https://github.com/xszn/xszn.github.io):
   高质量免费与开源软件列表.
 - [IT](https://github.com/CorentinTh/it-tools):
   Collection of handy online toolkit for developers.
 - [Omni](https://github.com/iib0011/omni-tools):
   Collection of powerful web-based toolkit for everyday tasks.
-- [Miku](https://github.com/Ice-Hazymoon/MikuTools):
+- [`Miku`](https://github.com/Ice-Hazymoon/MikuTools):
   Lightweight toolkit collection.
 
 ## Dotfiles
@@ -564,7 +569,7 @@ echo 'alias curl="curlie"' >> ~/.zshrc
 ## References
 
 - Cross-platform Rust rewrite of the [GNU core utils](https://github.com/uutils/coreutils).
-- Modern alternatives to [common unix commands](https://github.com/ibraheemdev/modern-unix).
+- Modern alternatives to [common Linux commands](https://github.com/ibraheemdev/modern-unix).
 - Terminal [tool of the week](https://terminaltrove.com/tool-of-the-week).
 - Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).
 - `fzf` [practical guide](https://thevaluable.dev/practical-guide-fzf-example).
