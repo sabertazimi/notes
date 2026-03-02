@@ -48,7 +48,7 @@ find . -name "*.bak" -type f -delete
 
 `grep` `[可选参数] '字符串' 文件名`:
 
-- `-I`: 不区分大小写
+- `-i`: 不区分大小写
 - `-v`: 排除指定字符串
 - `-r`: recursive on directory
 - `-l`: only print matched filename
