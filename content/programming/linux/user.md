@@ -120,6 +120,13 @@ finger apacheUser 查看单个用户信息
 - passwd -u 用户名 解锁用户
 - passwd -d 用户名 清除用户密码
 
+### 登录失败锁定
+
+```bash
+faillock --user username           # 查看用户失败登录记录
+faillock --reset --user username   # 重置用户失败登录计数
+```
+
 ## Common Privilege
 
 - chown 用户名：组名 文件名
