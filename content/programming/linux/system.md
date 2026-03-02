@@ -76,6 +76,15 @@ sudo apt install boot-repair
 boot-repair
 ```
 
+## Firmware
+
+```bash
+  fwupdmgr get-devices
+  fwupdmgr refresh
+  fwupdmgr get-updates
+  fwupdmgr update
+```
+
 ## SSH
 
 ### Key
