@@ -1,5 +1,5 @@
 ---
-sidebar_position: 22
+sidebar_position: 23
 tags: [Programming, OS, Linux, Network]
 ---
 
@@ -7,10 +7,10 @@ tags: [Programming, OS, Linux, Network]
 
 ## Certificate
 
-[CertBot](https://github.com/certbot/certbot)
+[`Certbot`](https://github.com/certbot/certbot)
 for SSL certificates.
 
-## Wget
+## `wget`
 
 - 下载全站资料
 - -P 表示下载到哪个目录
@@ -21,6 +21,111 @@ for SSL certificates.
 
 ```bash
 wget -r -p -np -k -P ~/tmp/ http://java-er.com
+```
+
+## SSH
+
+### Key
+
+```bash
+ssh-keygen -t rsa
+ssh-add ~/.ssh/id_rsa
+```
+
+### SSHD
+
+- config file in `/etc/ssh/sshd_config`
+
+```bash
+sudo systemctl reload sshd
+sudo service restart sshd
+```
+
+```bash
+AllowUsers root
+AllowUsers sabertaz
+```
+
+### Config File
+
+`~/.ssh/config`:
+
+- Host 别名
+  - HostName 主机名(ip) `ssh user@ip`
+  - Port 可忽略
+  - User 登录用户名 `ssh user@ip`
+  - PreferredAuthentications publicKey
+  - IdentityFile 密钥文件完整路径 `ssh -i file`
+
+```bash
+Host github.com
+  HostName github.com
+  PreferredAuthentications publicKey
+  IdentityFile ~/.ssh/id_rsa
+Host cs.github.com
+  HostName github.com
+  PreferredAuthentications publicKey
+  IdentityFile ~/.ssh/cs
+Host cloud
+    HostName xx.org
+    User  root
+    IdentityFile ~/.ssh/dsl_private_key
+Host bwg
+    HostName 23.106.150.152
+    User root
+    Port 29692
+```
+
+```bash
+git clone git@github.com:user/repo
+git clone git@cs.github.com:user/repo
+```
+
+```bash
+ssh -qTfnN -D 1080 bwg
+google-chrome socks5 127.0.0.1 1080
+```
+
+### Key File
+
+Set up [SSH key](https://github.com/appleboy/ssh-action):
+
+```bash
+# Generate SSH key
+ssh-keygen -t ed25519 -a 200 -C "your_email@example.com"
+
+# Add SSH public key to remote host
+cat ~/.ssh/id_ed25519.pub | ssh b@B 'cat >> ~/.ssh/authorized_keys'
+
+# Add SSH public key to remote host
+ssh-copy-id -i ~/.ssh/id_ed25519.pub user@192.168.x.xxx
+
+# Copy SSH private key to clipboard
+xclip < ~/.ssh/id_ed25519
+```
+
+```bash
+# Login to remote host
+ssh -i sabertaz root@119.29.140.60
+
+# File transfer
+sftp -i sabertaz root@119.29.140.60
+
+# Login to database
+mysql -h 10.66.135.125 -P 3306 -u root -p
+```
+
+### Remote Sync File
+
+```bash
+rsync -ax -e 'ssh -c blowfish' /root/start_dir root@x.x.x.x:/root/dest_dir
+```
+
+```bash
+sshpass -p "$DEPLOY_PASSWORD" \
+  scp -o StrictHostKeyChecking=no \
+      -P $DEPLOY_PORT \
+      -r ./build $DEPLOY_USER@$DEPLOY_ADDR:/var/www/html
 ```
 
 ## IP
