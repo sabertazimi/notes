@@ -34,6 +34,7 @@ echo 'alias cc="claude"' >> ~/.zshrc
 echo 'alias ccc="claude -c"' >> ~/.zshrc
 echo 'alias ccr="claude -r"' >> ~/.zshrc
 echo 'alias ccm="claude -p commit"' >> ~/.zshrc
+echo 'alias vi="nvim"' >> ~/.zshrc
 echo 'alias vim="nvim"' >> ~/.zshrc
 echo 'alias dot="chezmoi"' >> ~/.zshrc
 
