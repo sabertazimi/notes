@@ -79,10 +79,10 @@ boot-repair
 ## Firmware
 
 ```bash
-  fwupdmgr get-devices
-  fwupdmgr refresh
-  fwupdmgr get-updates
-  fwupdmgr update
+fwupdmgr get-devices
+fwupdmgr refresh
+fwupdmgr get-updates
+fwupdmgr update
 ```
 
 ## SSH
