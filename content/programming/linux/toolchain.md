@@ -53,6 +53,8 @@ echo 'alias ping="gping"' >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
 echo 'alias curl="curlie"' >> ~/.zshrc
 
+echo 'export EDITOR="nvim"' >> ~/.zshrc
+echo 'export VISUAL="nvim"' >> ~/.zshrc
 # Respecting `.gitignore`
 echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
 echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
