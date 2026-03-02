@@ -1,0 +1,676 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cs/virtualization/virtualization" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Virtualization | Personal Notes</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://tazimi.dev/notes/cs/virtualization/ /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Virtualization | Personal Notes"/><meta data-rh=true name=description content="How to Read Paper"/><meta data-rh=true property=og:description content="How to Read Paper"/><link data-rh=true rel=icon href=/notes/img/logo.svg /><link data-rh=true rel=canonical href=https://tazimi.dev/notes/cs/virtualization/ /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/virtualization/ hreflang=en /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/virtualization/ hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/","name":"CS","position":1},{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/virtualization/","name":"Virtualization","position":2}]}</script><link rel=stylesheet href=/notes/assets/css/styles.fe402815.css /><script src=/notes/assets/js/runtime~main.bff74981.js defer></script><script src=/notes/assets/js/main.105cc82a.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/notes/img/logo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_a95V href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_kMqm"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/notes/><div class=navbar__logo><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/></div><b class="navbar__title text--truncate">TIL</b></a><a class="navbar__item navbar__link" href=/notes/intro>Notes</a><a class="navbar__item navbar__link" href=/notes/ai>AI</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/notes/cs>CS</a><a class="navbar__item navbar__link" href=/notes/web>Web</a><a class="navbar__item navbar__link" href=/notes/language>Language</a><a class="navbar__item navbar__link" href=/notes/programming>Programming</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href=/notes/web/library>Library Gallery</a><a href=https://github.com/sabertazimi/notes target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><div class="toggle_xd5f colorModeToggle_uCEc"><button class="clean-btn toggleButton_uz0f toggleButtonDisabled_XkyR" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX lightToggleIcon_oj6Y"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX darkToggleIcon_H9YQ"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX systemToggleIcon_r7TJ"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_aifg><div class="navbar__search searchBarContainer_W0oD" dir=ltr><input placeholder=Search aria-label=Search class="navbar__search-input searchInput_juq5" value="" /><div class="loadingRing_rex3 searchBarLoadingRing_Y3Tw"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_rrKs"><div class=docsWrapper_NtUm><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_gzdI" type=button></button><div class=docRoot_PGsa><aside class="theme-doc-sidebar-container docSidebarContainer_aiRL"><div class=sidebarViewport_MLO7><div class="sidebar_G9Wb sidebarWithHideableNavbar_cKbE"><a tabindex=-1 class=sidebarLogo_mVm8 href=/notes/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/><b>TIL</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_CqPf"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/notes/intro><span title=Notes class=linkLabel_k54U>Notes</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/ai/><span title=AI class=categoryLinkLabel_QKTQ>AI</span></a><button aria-label="Expand sidebar category 'AI'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--active" href=/notes/cs/><span title=CS class=categoryLinkLabel_QKTQ>CS</span></a><button aria-label="Collapse sidebar category 'CS'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/algorithms/><span title=Algorithms class=categoryLinkLabel_QKTQ>Algorithms</span></a><button aria-label="Expand sidebar category 'Algorithms'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/architecture/><span title=Architecture class=linkLabel_k54U>Architecture</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/compilers/><span title=Compiler class=categoryLinkLabel_QKTQ>Compiler</span></a><button aria-label="Expand sidebar category 'Compiler'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/database/><span title=Database class=categoryLinkLabel_QKTQ>Database</span></a><button aria-label="Expand sidebar category 'Database'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/graph/><span title="Graph Processing" class=linkLabel_k54U>Graph Processing</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/latex/><span title=LaTeX class=linkLabel_k54U>LaTeX</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/notes/cs/math/economics><span title=Math class=categoryLinkLabel_QKTQ>Math</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/os/><span title="Operating System" class=categoryLinkLabel_QKTQ>Operating System</span></a><button aria-label="Expand sidebar category 'Operating System'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/notes/cs/virtualization/><span title=Virtualization class=linkLabel_k54U>Virtualization</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/web/><span title=Web class=categoryLinkLabel_QKTQ>Web</span></a><button aria-label="Expand sidebar category 'Web'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/language/><span title=Language class=categoryLinkLabel_QKTQ>Language</span></a><button aria-label="Expand sidebar category 'Language'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/programming/><span title=Programming class=categoryLinkLabel_QKTQ>Programming</span></a><button aria-label="Expand sidebar category 'Programming'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_fXvC"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_wrAS><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_Yxco><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_yicr"><div class=docItemContainer_qgPh><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_ZDU1" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/notes/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_bQmg><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/notes/cs/><span>CS</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Virtualization</span></ul></nav><div class="tocCollapsible_H0gK theme-doc-toc-mobile tocMobile_t31C"><button type=button class="clean-btn tocCollapsibleButton_mPmr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Virtualization</h1></header>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=how-to-read-paper>How to Read Paper<a href=#how-to-read-paper class=hash-link aria-label="Direct link to How to Read Paper" title="Direct link to How to Read Paper" translate=no>​</a></h2>
+<ul>
+<li class="">Abstract, introduction, related works, conclusion.</li>
+<li class="">Reference.</li>
+<li class=""><strong>Paper refers it</strong>.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=big-data>Big Data<a href=#big-data class=hash-link aria-label="Direct link to Big Data" title="Direct link to Big Data" translate=no>​</a></h2>
+<p>大数据处理典型问题:</p>
+<ul>
+<li class="">数据一致性问题</li>
+<li class="">数据容错与恢复问题</li>
+<li class="">节点通信问题</li>
+<li class="">能耗问题</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=in-memory-computing>In-Memory Computing<a href=#in-memory-computing class=hash-link aria-label="Direct link to In-Memory Computing" title="Direct link to In-Memory Computing" translate=no>​</a></h2>
+<p>内存计算特点:</p>
+<ul>
+<li class="">硬件: 大内存</li>
+<li class="">软件: 良好编程模型和编程接口</li>
+<li class="">面向数据密集型应用: 数据规模大, 实时性要求高</li>
+<li class="">大多支持并行处理数据</li>
+</ul>
+<p>内存计算分类:</p>
+<ul>
+<li class="">单节点</li>
+<li class="">分布式集群</li>
+<li class="">新型混合内存 (Hybrid Memory)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=单节点>单节点<a href=#单节点 class=hash-link aria-label="Direct link to 单节点" title="Direct link to 单节点" translate=no>​</a></h3>
+<p>节点拥有 1/n 个处理器(单/多核) + 共享内存 (Shared Memory):</p>
+<ul>
+<li class="">内存存储系统</li>
+<li class="">内存数据处理系统</li>
+<li class="">内存压缩技术</li>
+<li class="">提升 I/O 访问效率</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=分布式>分布式<a href=#分布式 class=hash-link aria-label="Direct link to 分布式" title="Direct link to 分布式" translate=no>​</a></h3>
+<p>容错与恢复,
+同步与一致性,
+内存分配与管理,
+网络瓶颈:</p>
+<ul>
+<li class="">分布式内存存储系统: 内存压缩技术</li>
+<li class="">内存缓存系统:<!-- -->
+<ul>
+<li class="">内存替换策略: LRU, LFU</li>
+<li class="">预取技术</li>
+</ul>
+</li>
+<li class="">分布式内存数据处理系统: Spark</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=混合式>混合式<a href=#混合式 class=hash-link aria-label="Direct link to 混合式" title="Direct link to 混合式" translate=no>​</a></h3>
+<ul>
+<li class="">铁电存储器: Ferroelectric Random Access Memory, 简称 FeRAM</li>
+<li class="">相变存储器: Phase Change Memory, 简称 PCM</li>
+<li class="">电阻存储器: Resistive Random Access Memory, 简称 RRAM</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=direct-segment>Direct Segment<a href=#direct-segment class=hash-link aria-label="Direct link to Direct Segment" title="Direct link to Direct Segment" translate=no>​</a></h3>
+<p>In light of the high cost of page-based virtual memory
+and its significant mismatch to “big-memory” application needs,
+we propose mapping part of a process’s linear virtual address
+with a direct segment rather than pages.</p>
+<p>Mapping part of a process’s linear virtual address space with a direct segment,
+while page mapping the rest of the virtual address space:</p>
+<ul>
+<li class="">retains a standard linear virtual address space</li>
+<li class="">is not overlaid on top of paging</li>
+<li class="">coexists with paging of other virtual addresses</li>
+<li class="">a one-time fixed-cost solution for any size memory</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=large-pages-shortcoming>Large Pages Shortcoming<a href=#large-pages-shortcoming class=hash-link aria-label="Direct link to Large Pages Shortcoming" title="Direct link to Large Pages Shortcoming" translate=no>​</a></h4>
+<ul>
+<li class="">Being a cache, TLBs are reliant on memory-access locality to be effective
+and it can be a mismatch for future big-memory workloads with poor locality</li>
+<li class="">efficient TLB support for multiple page sizes is difficult</li>
+<li class="">large page sizes are often few and far apart (not enough for big-memory workload)</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=big-memory-workload-analysis>Big-memory workload analysis<a href=#big-memory-workload-analysis class=hash-link aria-label="Direct link to Big-memory workload analysis" title="Direct link to Big-memory workload analysis" translate=no>​</a></h4>
+<ul>
+<li class="">While address translation can be accelerated by TLB hits,
+misses are costly, taking up to 100s of cycles</li>
+<li class="">A sparse memory access pattern can result in more misses with fewer TLB entries</li>
+</ul>
+<p>For the majority of their address space, big-memory workloads do not require:</p>
+<ul>
+<li class="">
+<p>swapping</p>
+</li>
+<li class="">
+<p>fragmentation mitigation</p>
+</li>
+<li class="">
+<p>fine-grained per-page protection</p>
+</li>
+<li class="">
+<p>Big-memory workloads pay a cost of page based virtual memory:
+substantial performance lost to TLB misses</p>
+</li>
+<li class="">
+<p>Big-memory workloads are long-running programs,
+receive little benefit from virtual memory optimizations
+whose primary goal is to allow quick program startup, such as demand paging</p>
+</li>
+<li class="">
+<p>Big-memory workloads consume almost all memory resources,
+are sized to match memory capacity</p>
+</li>
+<li class="">
+<p>Big-memory workloads isolate from other services,
+have one (or a few) primary process(es)</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=hardware-support>Hardware Support<a href=#hardware-support class=hash-link aria-label="Direct link to Hardware Support" title="Direct link to Hardware Support" translate=no>​</a></h4>
+<p>direct segments add three registers per core as follows:</p>
+<ul>
+<li class="">BASE holds the start address of the contiguous virtual address range
+mapped through direct segment</li>
+<li class="">LIMIT holds the end address of the virtual address range
+mapped through direct segment</li>
+<li class="">OFFSET holds the start address of direct segment’s backing
+contiguous physical memory minus the value in BASE.</li>
+</ul>
+<p>Direct segments are aligned to the base page size,
+so page offset bits are omitted from these registers (e.g., 12 bits for 4KB pages)</p>
+<p>Without real direct segment hardware,
+we emulate direct segment functionalities using 4KB pages</p>
+<p>More specifically, we modify Linux’s page fault handler
+so that on a page fault within the primary region
+it calculates the corresponding physical address from the faulting virtual page number.</p>
+<p>If VA fault is the 4KB page-aligned virtual address of a faulting page,
+then our modified page-fault handler first checks if BASE ≤ VA fault &lt; LIMIT.
+If so,
+the handler adds a mapping from VA fault to VA fault + OFFSET to the page table.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=software-support>Software Support<a href=#software-support class=hash-link aria-label="Direct link to Software Support" title="Direct link to Software Support" translate=no>​</a></h4>
+<p>The prototype implementation is simplified by assuming that only one process
+uses a direct segment at any time (called the primary process)</p>
+<ul>
+<li class="">A primary region is a contiguous range of virtual addresses
+in a process’s address space with uniform <strong>read-write</strong> access permission</li>
+<li class="">fine-grain protection, sparse allocation, swapping,
+and demand paging are not guaranteed for memory allocated within the primary region</li>
+<li class="">managing physical memory:
+create contiguous physical memory dynamically through periodic memory compaction</li>
+<li class="">managing direct segment registers:
+When the OS dispatches a thread;
+it loads the BASE, LIMIT, and OFFSET values from the PCB</li>
+<li class="">Growing and shrinking direct segment
+(by updating direct segment registers and page table entries)</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=virtual-machines-with-direct-segment>Virtual Machines with Direct Segment<a href=#virtual-machines-with-direct-segment class=hash-link aria-label="Direct link to Virtual Machines with Direct Segment" title="Direct link to Virtual Machines with Direct Segment" translate=no>​</a></h4>
+<p>In a virtualized environment the memory accesses
+goes through two levels of address translations:</p>
+<ol>
+<li class="">guest virtual address (gVA) to guest physical address (gPA)</li>
+<li class="">guest physical address (gPA) to system physical address (sPA)</li>
+</ol>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=results>Results<a href=#results class=hash-link aria-label="Direct link to Results" title="Direct link to Results" translate=no>​</a></h4>
+<p>In x86-64, page table entries (PTEs) have a set of reserved bits
+(41-51 in our test platform) that cause a trap when loaded into the TLB</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=redundant-memory-mappings-rmm>Redundant Memory Mappings (RMM)<a href=#redundant-memory-mappings-rmm class=hash-link aria-label="Direct link to Redundant Memory Mappings (RMM)" title="Direct link to Redundant Memory Mappings (RMM)" translate=no>​</a></h3>
+<p>在大内存系统中, 传统的段页式虚存管理技术存在性能问题 (TLBs 的有限性能):</p>
+<ul>
+<li class="">由于 TLBs 不再能覆盖工作集 (working sets: 指活动频繁的页表集), 导致 TLB 缺失 (TLB misses) 急剧上升</li>
+<li class="">在传统内存层次中, 利用 TLBs 完成地址转换后 (虚拟地址 -> 物理地址),
+需要从 L1 Cache 开始进行缓存标签匹配, 查看所需内存数据是否已在缓存上.
+因此，随意地增大 TLB 的大小以降低 TLB 缺失的方法会影响到所有内存操作的性能 (遍历 TLB 表耗时增大)</li>
+</ul>
+<p>The amount of memory accessible from the TLB
+or The working set of each process is stored in the TLB:
+TLB Reach = (TLB Size) X (Page Size)</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=old-methods>Old Methods<a href=#old-methods class=hash-link aria-label="Direct link to Old Methods" title="Direct link to Old Methods" translate=no>​</a></h4>
+<ul>
+<li class="">Clustered TLBs/Multi-Page Mappings: mapping multiple pages per page table entry</li>
+<li class="">Transparent Huge Pages/Super-Paging: 使得每个页表项覆盖更大的内存; 但受限于架构, 页面大小最大为 1GB</li>
+<li class="">Direct Segment: 将一个进程所需的虚拟内存直接映射到一个大段中; 但不利用操作系统的动态内存分配</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=multi-page-mapping>Multi Page mapping<a href=#multi-page-mapping class=hash-link aria-label="Direct link to Multi Page mapping" title="Direct link to Multi Page mapping" translate=no>​</a></h4>
+<ul>
+<li class="">pack multiple page table entries(PTEs) into a single TLB entry</li>
+<li class="">they pack only a small multiple of translations per entry,
+which limits their potential to reduce page-walks for large working sets</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=transparent-huge-pages>Transparent Huge pages<a href=#transparent-huge-pages class=hash-link aria-label="Direct link to Transparent Huge pages" title="Direct link to Transparent Huge pages" translate=no>​</a></h4>
+<ul>
+<li class="">memory should be size-aligned and contiguous</li>
+<li class="">many commodity processors provide limited numbers of large page TLB entries</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=direct-segment-method>Direct Segment Method<a href=#direct-segment-method class=hash-link aria-label="Direct link to Direct Segment Method" title="Direct link to Direct Segment Method" translate=no>​</a></h4>
+<ul>
+<li class="">applications explicitly allocate a direct segment during <code>startup</code></li>
+<li class="">OS can reserve a single <code>large contiguous range</code> of physical memory for a segment</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=new-methods>New Methods<a href=#new-methods class=hash-link aria-label="Direct link to New Methods" title="Direct link to New Methods" translate=no>​</a></h4>
+<p>two key challenges:</p>
+<ul>
+<li class="">The address space of a process can
+be decomposed into many chunks of variable length segments,
+which can be allocated dynamically</li>
+<li class="">address translation must be off the critical path:
+to support complicated many segment searches,
+address translation may take much longer compared to
+traditional fixed-sized page-based TLB lookups.</li>
+</ul>
+<p>changes:</p>
+<ul>
+<li class="">hardware: range TLB, CR-RT (Control Register - Range Translation)</li>
+<li class="">software: process creation, memory allocation, range table management</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=rmm-benefits>RMM Benefits<a href=#rmm-benefits class=hash-link aria-label="Direct link to RMM Benefits" title="Direct link to RMM Benefits" translate=no>​</a></h4>
+<ul>
+<li class=""><code>transparent</code> to applications</li>
+<li class="">maps multiple ranges with <code>no size-alignment restrictions</code></li>
+<li class="">each range contains an <code>unrestricted amount of memory</code></li>
+<li class="">RMM has the potential to map more than 99% of memory
+for all workloads with 50 or fewer range translations</li>
+<li class="">the range TLB achieves extremely high hit rates,
+eliminating the vast majority of costly page-walks
+compared to virtual memory systems that use paging alone.</li>
+</ul>
+<p>RMM performance depends on the range TLB achieving a high hit ratio with few entries</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=range-translation>Range Translation<a href=#range-translation class=hash-link aria-label="Direct link to Range Translation" title="Direct link to Range Translation" translate=no>​</a></h4>
+<p>Range translations are only base-page-aligned and redundant to paging:
+the page table still maps the entire virtual address space</p>
+<ul>
+<li class="">hardware: range TLBs</li>
+<li class="">software: range tables</li>
+<li class="">OS: change lazy demand page allocation to eager paging, <code>eager paging allocation</code></li>
+</ul>
+<p>Eager paging instantiates pages in physical memory at <code>allocation request time</code>,
+rather than at <code>first-access time</code> as with demand paging.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=range-table>Range Table<a href=#range-table class=hash-link aria-label="Direct link to Range Table" title="Direct link to Range Table" translate=no>​</a></h4>
+<ul>
+<li class="">when miss: 及时填补 PTE 以使访存操作正常执行, 将 Range TLB 更新移出访存关键路径 (后台更新)</li>
+<li class="">PTE 加入 range bit: 表示当前页是某个 Range 的一部分, 及时更新 Range TLB 和 Range Table</li>
+<li class="">利用 CR-RT 寄存器进行 Range Table 查找: OS handler 可以进行 Range Table 查找, 以简化硬件设计</li>
+<li class="">修改 INVLPG 指令： 使其同时无效化 Range TLB</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=contiguous-memory-allocation>Contiguous Memory Allocation<a href=#contiguous-memory-allocation class=hash-link aria-label="Direct link to Contiguous Memory Allocation" title="Direct link to Contiguous Memory Allocation" translate=no>​</a></h4>
+<ul>
+<li class="">One motivation for demand paging was to
+limit unnecessary swapping in multi-programmed workloads,
+which modern large memories make less common.</li>
+<li class="">RMM trades increased memory for better performance,
+a common tradeoff when memory is cheap and plentiful.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=google-file-system>Google File System<a href=#google-file-system class=hash-link aria-label="Direct link to Google File System" title="Direct link to Google File System" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=基本设计>基本设计<a href=#基本设计 class=hash-link aria-label="Direct link to 基本设计" title="Direct link to 基本设计" translate=no>​</a></h3>
+<ul>
+<li class="">
+<p>迅速地侦测、冗余并恢复失效的组件</p>
+</li>
+<li class="">
+<p>存储一定数量的大文件</p>
+</li>
+<li class="">
+<p>大规模的流式读取</p>
+</li>
+<li class="">
+<p>小规模的随机读取</p>
+</li>
+<li class="">
+<p>大规模的、顺序的、数据追加方式的写操作</p>
+</li>
+<li class="">
+<p>小规模的随机位置写入操作</p>
+</li>
+<li class="">
+<p>高性能的稳定网络带宽远比低延迟重要</p>
+</li>
+<li class="">
+<p>客户端和 Master 节点的通信只获取元数据，所有的数据操作都是由客户端直接和 Chunk 服务器进行交互的</p>
+</li>
+<li class="">
+<p>无论是客户端还是 Chunk 服务器都不需要缓存文件数据</p>
+</li>
+<li class="">
+<p>出于可靠性的考虑, 每个块都会复制到多个块服务器上.缺省情况下, 我们使用 3 个存储复制节点.</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=元数据>元数据<a href=#元数据 class=hash-link aria-label="Direct link to 元数据" title="Direct link to 元数据" translate=no>​</a></h4>
+<p>Master 节点主要存储三种类型元数据 (保存在内存中, 轮询 Chunk 服务器/周期心跳信息来更新元数据):</p>
+<ul>
+<li class="">文件和 Chunk 的命名空间</li>
+<li class="">文件和 Chunk 的对应关系</li>
+<li class="">每个 Chunk 副本的存放地点</li>
+</ul>
+<p>元数据操作日志:</p>
+<ul>
+<li class="">先写日志再响应请求</li>
+<li class="">Checkpoint 文件</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=chunk-尺寸>Chunk 尺寸<a href=#chunk-尺寸 class=hash-link aria-label="Direct link to Chunk 尺寸" title="Direct link to Chunk 尺寸" translate=no>​</a></h4>
+<p>较大的 Chunk 尺寸:</p>
+<ul>
+<li class="">降低元数据读取工作和缓存工作成本</li>
+<li class="">多次操作集中在少数 Chunk 上</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=一致性模型>一致性模型<a href=#一致性模型 class=hash-link aria-label="Direct link to 一致性模型" title="Direct link to 一致性模型" translate=no>​</a></h4>
+<h5 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=chunk-副本修改一致性>Chunk 副本修改一致性<a href=#chunk-副本修改一致性 class=hash-link aria-label="Direct link to Chunk 副本修改一致性" title="Direct link to Chunk 副本修改一致性" translate=no>​</a></h5>
+<ul>
+<li class="">对 Chunk 的所有副本的修改操作顺序一致</li>
+<li class="">根据版本号判断 Chunk 是否失效 (未成功进行某次修改), 使用垃圾收集系统回收失效 Chunk</li>
+</ul>
+<p>当某个 Chunk 副本失效, 称为不可用; 当所有 Chunk 副本失效, 称为损坏</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=系统交互>系统交互<a href=#系统交互 class=hash-link aria-label="Direct link to 系统交互" title="Direct link to 系统交互" translate=no>​</a></h3>
+<p>原则: 减小 Master 负担</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=租约机制>租约机制<a href=#租约机制 class=hash-link aria-label="Direct link to 租约机制" title="Direct link to 租约机制" translate=no>​</a></h4>
+<p>Master 为某个 Chunk 建立租约, 称为主 Chunk: 修改顺序由主 Chunk 进行管理, 从而减小 Master 管理负担:</p>
+<ul>
+<li class="">Client 与 Master 通信, 获取主 Chunk 信息</li>
+<li class="">Client 将数据传至所有 Chunk 副本</li>
+<li class="">Client 将操作发送至主 Chunk</li>
+<li class="">主 Chunk 为所有操作分配连续的序列号, 所有副本按照序列号顺序执行操作, 并在完成后回复主 Chunk</li>
+<li class="">主 Chunk 回复 Client</li>
+</ul>
+<p>实际上, 客户端通常会在一次请求中查询多个 Chunk 信息, Master 节点的回应也可能包含了紧跟着这些被请求的 Chunk 后面的 Chunk 的信息.
+在实际应用中, 这些额外的信息在没有任何代价的情况下, 避免了客户端和 Master 节点未来可能会发生的几次通讯.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=数据流>数据流<a href=#数据流 class=hash-link aria-label="Direct link to 数据流" title="Direct link to 数据流" translate=no>​</a></h4>
+<p>链式顺序最近推送原则: 推送至距离最近 (IP 地址) 的一个下游</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=原子追加操作>原子追加操作<a href=#原子追加操作 class=hash-link aria-label="Direct link to 原子追加操作" title="Direct link to 原子追加操作" translate=no>​</a></h4>
+<p>GFS 并不保证 Chunk 的所有副本在字节级别是完全一致的。它只保证数据作为一个整体原子的被至少写入一次</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=快照>快照<a href=#快照 class=hash-link aria-label="Direct link to 快照" title="Direct link to 快照" translate=no>​</a></h4>
+<p>copy-on-write 技术实现快照</p>
+<p>当 Master 节点收到一个快照请求，它首先取消作快照的文件的所有 Chunk 的租约。这个措施保证了后续对这些 Chunk 的写操作都必须与 Master 交互以找到租约持有者</p>
+<p>Master 节点通过复制源文件或者目录的元数据的方式，把这条日志记录的变化反映到保存在内存的状态中。新创建的快照文件和源文件指向完全相同的 Chunk 地址。</p>
+<p>确保数据在本地复制而不是通过网络复制</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=master-节点>Master 节点<a href=#master-节点 class=hash-link aria-label="Direct link to Master 节点" title="Direct link to Master 节点" translate=no>​</a></h3>
+<p>Master 节点管理所有的文件系统元数据</p>
+<p>元数据包括:</p>
+<ul>
+<li class="">名字空间</li>
+<li class="">访问控制信息</li>
+<li class="">文件和 Chunk 的映射信息</li>
+<li class="">当前 Chunk 的位置信息</li>
+</ul>
+<p>Master 节点基本工作:</p>
+<ul>
+<li class="">执行所有的名称空间操作</li>
+<li class="">管理着整个系统里所有 Chunk 的副本:
+决定 Chunk 的存储位置, 创建新 Chunk 和它的副本,
+协调各种各样的系统活动以保证 Chunk 被完全复制,
+在所有的 Chunk 服务器之间的进行负载均衡, 回收不再使用的存储空间</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=名称空间锁>名称空间锁<a href=#名称空间锁 class=hash-link aria-label="Direct link to 名称空间锁" title="Direct link to 名称空间锁" translate=no>​</a></h4>
+<p>每一个操作都获取一个目录名的上的读取锁和文件名上的写入锁.
+目录名的读取锁足以的防止目录被删除、改名以及被快照.
+文件名的写入锁序列化文件创建操作, 确保不会多次创建同名的文件.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=chunk-副本平衡>Chunk 副本平衡<a href=#chunk-副本平衡 class=hash-link aria-label="Direct link to Chunk 副本平衡" title="Direct link to Chunk 副本平衡" translate=no>​</a></h4>
+<ul>
+<li class="">平衡硬盘使用率</li>
+<li class="">限制同一台 Chunk 服务器上的正在进行的克隆操作的数量</li>
+<li class="">在机架间分布副本</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=垃圾回收>垃圾回收<a href=#垃圾回收 class=hash-link aria-label="Direct link to 垃圾回收" title="Direct link to 垃圾回收" translate=no>​</a></h4>
+<ul>
+<li class="">回收过期(版本号不一致)和损坏的 Chunk.</li>
+<li class="">GFS 空间回收采用惰性的策略: 只在文件和 Chunk 级的常规垃圾收集时进行真正的删除操作.</li>
+<li class="">垃圾回收把存储空间的回收操作合并到 Master 节点规律性的后台活动中(例行扫描和与 Chunk 服务器握手).</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=容错性>容错性<a href=#容错性 class=hash-link aria-label="Direct link to 容错性" title="Direct link to 容错性" translate=no>​</a></h3>
+<ul>
+<li class="">快速自启动</li>
+<li class="">Chunk 副本</li>
+<li class="">Master 服务器副本</li>
+<li class="">Chunk Checksum 检验数据完整性</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=map-reduce>Map Reduce<a href=#map-reduce class=hash-link aria-label="Direct link to Map Reduce" title="Direct link to Map Reduce" translate=no>​</a></h2>
+<ul>
+<li class="">分割输入数据 (数据分布)</li>
+<li class="">集群调度 (负载均衡)</li>
+<li class="">错误处理 (容错)</li>
+<li class="">集群通信</li>
+</ul>
+<ol>
+<li class="">用户程序首先调用的 MapReduce 库将输入文件分成 M 个数据片度，每个数据片段的大小一般从
+16MB 到 64MB(可以通过可选的参数来控制每个数据片段的大小)。然后用户程序在机群中创建大量
+的程序副本。</li>
+<li class="">这些程序副本中的有一个特殊的程序–master。副本中其它的程序都是 worker 程序，由 master 分配
+任务。有 M 个 Map 任务和 R 个 Reduce 任务将被分配，master 将一个 Map 任务或 Reduce 任务分配
+给一个空闲的 worker。</li>
+<li class="">被分配了 map 任务的 worker 程序读取相关的输入数据片段，从输入的数据片段中解析出 key/value
+pair，然后把 key/value pair 传递给用户自定义的 Map 函数，由 Map 函数生成并输出的中间 key/value
+pair，并缓存在内存中。</li>
+<li class="">缓存中的 key/value pair 通过分区函数分成 R 个区域，之后周期性的写入到本地磁盘上。缓存的
+key/value pair 在本地磁盘上的存储位置将被回传给 master，由 master 负责把这些存储位置再传送给
+Reduce worker。</li>
+<li class="">当 Reduce worker 程序接收到 master 程序发来的数据存储位置信息后，使用 RPC 从 Map worker 所在
+主机的磁盘上读取这些缓存数据。当 Reduce worker 读取了所有的中间数据后，通过对 key 进行排序
+后使得具有相同 key 值的数据聚合在一起。由于许多不同的 key 值会映射到相同的 Reduce 任务上，
+因此必须进行排序。如果中间数据太大无法在内存中完成排序，那么就要在外部进行排序。</li>
+<li class="">Reduce worker 程序遍历排序后的中间数据，对于每一个唯一的中间 key 值，Reduce worker 程序将这
+个 key 值和它相关的中间 value 值的集合传递给用户自定义的 Reduce 函数。Reduce 函数的输出被追
+加到所属分区的输出文件。</li>
+<li class="">当所有的 Map 和 Reduce 任务都完成之后，master 唤醒用户程序。在这个时候，在用户程序里的对
+MapReduce 调用才返回。</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=google-big-table>Google Big Table<a href=#google-big-table class=hash-link aria-label="Direct link to Google Big Table" title="Direct link to Google Big Table" translate=no>​</a></h2>
+<p>BigTable 是一个稀疏的、分布式的、持久化存储的多维度排序,
+Map: <code>(row: string, column: string, time: int64) -> string</code>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=数据模型>数据模型<a href=#数据模型 class=hash-link aria-label="Direct link to 数据模型" title="Direct link to 数据模型" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=行>行<a href=#行 class=hash-link aria-label="Direct link to 行" title="Direct link to 行" translate=no>​</a></h4>
+<ul>
+<li class="">对同一个行关键字的读或者写操作都是原子的</li>
+<li class="">BigTable 通过行关键字的字典顺序来组织数据</li>
+<li class="">表中的每个行都可以动态分区, 每个分区叫做一个 "Tablet"</li>
+<li class="">Tablet 是数据分布和负载均衡调整的最小单位</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=列族>列族<a href=#列族 class=hash-link aria-label="Direct link to 列族" title="Direct link to 列族" translate=no>​</a></h4>
+<ul>
+<li class="">列关键字组成的集合叫做 "列族", 列族是访问控制的基本单位</li>
+<li class="">存放在同一列族下的所有数据通常都属于同一个类型</li>
+<li class="">访问控制、磁盘和内存的使用统计都是在列族层面进行的</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=时间戳>时间戳<a href=#时间戳 class=hash-link aria-label="Direct link to 时间戳" title="Direct link to 时间戳" translate=no>​</a></h4>
+<ul>
+<li class="">在 BigTable 中, 表的每一个数据项都可以包含同一份数据的不同版本</li>
+<li class="">不同版本的数据通过时间戳来索引</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=依赖>依赖<a href=#依赖 class=hash-link aria-label="Direct link to 依赖" title="Direct link to 依赖" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=sstable>SSTable<a href=#sstable class=hash-link aria-label="Direct link to SSTable" title="Direct link to SSTable" translate=no>​</a></h4>
+<ul>
+<li class="">BigTable 内部存储数据的文件是 Google SSTable 格式的, SSTable 是一个持久化的、排序的、不可更改的 Map 结构</li>
+<li class="">SSTable 使用块索引（通常存储在 SSTable 的最后）来定位数据块</li>
+<li class="">在打开 SSTable 的时候，索引被加载到内存</li>
+<li class="">每次查找都可以通过一次磁盘搜索完成: 首先使用二分查找法在内存中的索引里找到数据块的位置，然后再从硬盘读取相应的数据块</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=chubby>Chubby<a href=#chubby class=hash-link aria-label="Direct link to Chubby" title="Direct link to Chubby" translate=no>​</a></h4>
+<p>BigTable 使用 Chubby 完成以下的几个任务：</p>
+<ol>
+<li class="">确保在任何给定的时间内最多只有一个活动的 Master 副本</li>
+<li class="">存储 BigTable 数据的自引导指令的位置</li>
+<li class="">查找 Tablet 服务器，以及在 Tablet 服务器失效时进行善后</li>
+<li class="">存储 BigTable 的模式信息(每张表的列族信息)</li>
+<li class="">存储访问控制列表</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=组件>组件<a href=#组件 class=hash-link aria-label="Direct link to 组件" title="Direct link to 组件" translate=no>​</a></h3>
+<p>BigTable 包括了三个主要的组件: 链接到客户程序中的库、一个 Master 服务器和多个 Tablet 服务器</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=master-服务器>Master 服务器<a href=#master-服务器 class=hash-link aria-label="Direct link to Master 服务器" title="Direct link to Master 服务器" translate=no>​</a></h4>
+<p>Master 服务器主要负责以下工作：</p>
+<ul>
+<li class="">为 Tablet 服务器分配 Tablets</li>
+<li class="">检测新加入的或者过期失效的 Table 服务器</li>
+<li class="">对 Tablet 服务器进行负载均衡</li>
+<li class="">对保存在 GFS 上的文件进行垃圾收集</li>
+<li class="">处理对模式的相关修改操作, 例如建立表和列族</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=tablet-服务器>Tablet 服务器<a href=#tablet-服务器 class=hash-link aria-label="Direct link to Tablet 服务器" title="Direct link to Tablet 服务器" translate=no>​</a></h4>
+<ul>
+<li class="">每个 Tablet 服务器都管理一个 Tablet 的集合（通常每个服务器有大约数十个至上千个 Tablet）</li>
+<li class="">每个 Tablet 服务器负责处理它所加载的 Tablet 的读写操作</li>
+<li class="">在 Tablets 过大时，对其进行分割</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=实现>实现<a href=#实现 class=hash-link aria-label="Direct link to 实现" title="Direct link to 实现" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=定位>定位<a href=#定位 class=hash-link aria-label="Direct link to 定位" title="Direct link to 定位" translate=no>​</a></h4>
+<ul>
+<li class="">使用三层 B+ 树结构存储 Tablets 的位置信息 (位于哪个 Tablet 服务器上)</li>
+<li class="">MetaTablet 中 的 row key 是通过 table id 和 end row 来计算出的:
+因为 row 是有序的, 所以在读取 row/column 型的数据时可以利用到有序性.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=服务>服务<a href=#服务 class=hash-link aria-label="Direct link to 服务" title="Direct link to 服务" translate=no>​</a></h4>
+<ul>
+<li class="">当写入表时, 先写日志, 再写入内存中的 memTable, 当其大小达到阈值后, 写入 GFS 中 (以 SSTable 存储)</li>
+<li class="">利用 Log-Structured Merge Tree 来表示 memTable 和 SSTable 之间的关系 (内存数据滚动合并至磁盘)</li>
+<li class="">对于一致性的处理，将 SSTable 不可改变化，然后对 memTable 使用 copy-on-write 技术实现读写并行</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=lxc>LXC<a href=#lxc class=hash-link aria-label="Direct link to LXC" title="Direct link to LXC" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=linux-namespaces>Linux Namespaces<a href=#linux-namespaces class=hash-link aria-label="Direct link to Linux Namespaces" title="Direct link to Linux Namespaces" translate=no>​</a></h3>
+<p>LXC 所实现的隔离性主要是来自内核的命名空间</p>
+<ul>
+<li class="">PID Namespace: 隔离进程</li>
+<li class="">Network Namespace: 隔离网络</li>
+<li class="">IPC Namespace: 隔离消息</li>
+<li class="">Mount Namespace: 隔离文件系统</li>
+<li class="">UTS Namespace: 隔离 hostname</li>
+<li class="">Users Namespace</li>
+</ul>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token comment" style=color:#999988;font-style:italic># PID Namespace</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">unshare </span><span class="token parameter variable" style=color:#36acaa>--fork</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>--pid</span><span class="token plain"> --mount-proc /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>ps</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-aux</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># Mount Namespace</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">unshare </span><span class="token parameter variable" style=color:#36acaa>--fork</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>--mount</span><span class="token plain"> /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> /tmp/mnt</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mount</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-t</span><span class="token plain"> tmpfs </span><span class="token parameter variable" style=color:#36acaa>-o</span><span class="token plain"> </span><span class="token assign-left variable" style=color:#36acaa>size</span><span class="token operator" style=color:#393A34>=</span><span class="token plain">1m tmpfs /tmp/mnt</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>df</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-h</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>|</span><span class="token function" style=color:#d73a49>grep</span><span class="token plain"> mnt</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># User Namespace</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token assign-left variable environment constant" style=color:#36acaa>PS1</span><span class="token operator" style=color:#393A34>=</span><span class="token string" style=color:#e3116c>'\u@container#'</span><span class="token plain"> unshare </span><span class="token parameter variable" style=color:#36acaa>--user</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-r</span><span class="token plain"> /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># UTS Namespace (isolated hostname)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">unshare </span><span class="token parameter variable" style=color:#36acaa>--fork</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>--uts</span><span class="token plain"> /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>hostname</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-b</span><span class="token plain"> container</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># IPC Namespace</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">unshare </span><span class="token parameter variable" style=color:#36acaa>--fork</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>--ipc</span><span class="token plain"> /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">ipcmk </span><span class="token parameter variable" style=color:#36acaa>-Q</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">ipcs </span><span class="token parameter variable" style=color:#36acaa>-q</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># Net Namespace</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">unshare </span><span class="token parameter variable" style=color:#36acaa>--fork</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>--net</span><span class="token plain"> /bin/bash</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>ip</span><span class="token plain"> addr</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>netstat</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-ntlp</span><br/></span></code></pre></div></div>
+<div class="language-go codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-go codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token keyword" style=color:#00009f>package</span><span class="token plain"> main</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>import</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token string" style=color:#e3116c>"log"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token string" style=color:#e3116c>"os"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token string" style=color:#e3116c>"os/exec"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token string" style=color:#e3116c>"syscall"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>func</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>main</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>switch</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Args</span><span class="token punctuation" style=color:#393A34>[</span><span class="token number" style=color:#36acaa>1</span><span class="token punctuation" style=color:#393A34>]</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>case</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"run"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        </span><span class="token function" style=color:#d73a49>run</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>case</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"child"</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        </span><span class="token function" style=color:#d73a49>child</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>default</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        log</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Fatal</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"Invalid command"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>func</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>run</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd </span><span class="token operator" style=color:#393A34>:=</span><span class="token plain"> exec</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Command</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"/proc/self/exe"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>append</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token builtin">string</span><span class="token punctuation" style=color:#393A34>{</span><span class="token string" style=color:#e3116c>"child"</span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Args</span><span class="token punctuation" style=color:#393A34>[</span><span class="token number" style=color:#36acaa>2</span><span class="token punctuation" style=color:#393A34>:</span><span class="token punctuation" style=color:#393A34>]</span><span class="token operator" style=color:#393A34>...</span><span class="token punctuation" style=color:#393A34>)</span><span class="token operator" style=color:#393A34>...</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdin </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdin</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdout </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdout</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stderr </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stderr</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">SysProcAttr </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>&</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">SysProcAttr </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        CloneFlags</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">CLONE_NEWUTS </span><span class="token operator" style=color:#393A34>|</span><span class="token plain"> syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">CLONE_NEWPID</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">          </span><span class="token operator" style=color:#393A34>|</span><span class="token plain"> syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">CLONE_NEWNS </span><span class="token operator" style=color:#393A34>|</span><span class="token plain"> syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">CLONE_NEWUSER</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        Credential</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>&</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Credential</span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain">Uid</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> Gid</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        UidMappings</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">SysProcIDMap</span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">            </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain">ContainerID</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> HostID</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Getuid</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> Size</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1</span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        </span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        GidMappings</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">SysProcIDMap</span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">            </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain">ContainerID</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> HostID</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Getgid</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> Size</span><span class="token punctuation" style=color:#393A34>:</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>1</span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        </span><span class="token punctuation" style=color:#393A34>}</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Run</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>func</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>child</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    log</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Printf</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"running %v as PID %d\n"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Args</span><span class="token punctuation" style=color:#393A34>[</span><span class="token number" style=color:#36acaa>2</span><span class="token punctuation" style=color:#393A34>:</span><span class="token punctuation" style=color:#393A34>]</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Getpid</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token comment" style=color:#999988;font-style:italic>// cg()</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd </span><span class="token operator" style=color:#393A34>:=</span><span class="token plain"> exec</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Command</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Args</span><span class="token punctuation" style=color:#393A34>[</span><span class="token number" style=color:#36acaa>2</span><span class="token punctuation" style=color:#393A34>]</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Args</span><span class="token punctuation" style=color:#393A34>[</span><span class="token number" style=color:#36acaa>3</span><span class="token punctuation" style=color:#393A34>:</span><span class="token punctuation" style=color:#393A34>]</span><span class="token operator" style=color:#393A34>...</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdin </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdin</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdout </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stdout</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stderr </span><span class="token operator" style=color:#393A34>=</span><span class="token plain"> os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token plain">Stderr</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Sethostname</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token function" style=color:#d73a49>byte</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"mocker"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Chroot</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"/home/sabertazimi/rootfs"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Chdir</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"/"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Mount</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>""</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">cmd</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Run</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Unmount</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>func</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">err </span><span class="token builtin">error</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>if</span><span class="token plain"> err </span><span class="token operator" style=color:#393A34>!=</span><span class="token plain"> </span><span class="token boolean" style=color:#36acaa>nil</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">        log</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Fatal</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">err</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=chroot>Chroot<a href=#chroot class=hash-link aria-label="Direct link to Chroot" title="Direct link to Chroot" translate=no>​</a></h3>
+<div class="language-go codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-go codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Chroot</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"/home/sabertazimi/rootfs"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Chdir</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"/"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">syscall</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Mount</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"proc"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>""</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=control-groups>Control Groups<a href=#control-groups class=hash-link aria-label="Direct link to Control Groups" title="Direct link to Control Groups" translate=no>​</a></h3>
+<p><code>cgroups</code> resources limitation for
+CPU, memory, disk I/O,
+process numbers, network bandwidth, device:</p>
+<ul>
+<li class="">Resource usage limit.</li>
+<li class="">Priority.</li>
+<li class="">Resource record.</li>
+<li class="">Process Control.</li>
+</ul>
+<p>List cgroup:</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token function" style=color:#d73a49>mount</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-t</span><span class="token plain"> cgroup</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>ls</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-l</span><span class="token plain"> /sys/fs/cgroup/</span><br/></span></code></pre></div></div>
+<p>Create cgroup:</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> /sys/fs/cgroup/cpu/loop</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>ls</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-l</span><span class="token plain"> /sys/fs/cgroup/cpu/loop</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>cat</span><span class="token plain"> /sys/fs/cgroup/cpu/loop/cpu.cfs_period_us </span><span class="token comment" style=color:#999988;font-style:italic># 100000us</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>cat</span><span class="token plain"> /sys/fs/cgroup/cpu/loop/cpu.cfs_quota_us  </span><span class="token comment" style=color:#999988;font-style:italic># -1 (no limit)</span><br/></span></code></pre></div></div>
+<p>Resource control via cgroup:</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token comment" style=color:#999988;font-style:italic># limit cpu usage to 50%</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">echo</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>50000</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>></span><span class="token plain">/sys/fs/cgroup/cpu/loop/cpu.cfs_quota_us</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token comment" style=color:#999988;font-style:italic># add pid to `loop` cgroup</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">echo</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>21497</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>></span><span class="token plain">/sys/fs/cgroup/cpu/loop/tasks</span><br/></span></code></pre></div></div>
+<div class="language-go codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-go codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token keyword" style=color:#00009f>func</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>cg</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    cgroups </span><span class="token operator" style=color:#393A34>:=</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"/sys/fs/cgroup/"</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    pids </span><span class="token operator" style=color:#393A34>:=</span><span class="token plain"> filepath</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Join</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">cgroups</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"pids"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Mkdir</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">filepath</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Join</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">pids</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"sabertazimi"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0755</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">ioutil</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>WriteFile</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">filepath</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Join</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">pids</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"sabertazimi/pids.max"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token function" style=color:#d73a49>byte</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"20"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0700</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">ioutil</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>WriteFile</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">filepath</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Join</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">pids</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"sabertazimi/notify_on_release"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token function" style=color:#d73a49>byte</span><span class="token punctuation" style=color:#393A34>(</span><span class="token string" style=color:#e3116c>"1"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0700</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token function" style=color:#d73a49>must</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">ioutil</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>WriteFile</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">filepath</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Join</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">pids</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"sabertazimi/cgroup.procs"</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">      </span><span class="token punctuation" style=color:#393A34>[</span><span class="token punctuation" style=color:#393A34>]</span><span class="token function" style=color:#d73a49>byte</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">strconv</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Itoa</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">os</span><span class="token punctuation" style=color:#393A34>.</span><span class="token function" style=color:#d73a49>Getpid</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>0700</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></span></code></pre></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=unikernel>Unikernel<a href=#unikernel class=hash-link aria-label="Direct link to Unikernel" title="Direct link to Unikernel" translate=no>​</a></h2>
+<p>小、简单、安全、高效</p>
+<p>Fast, Small, Secure Workloads</p>
+<p>Containers are Smaller and Faster, but Security is Still an Issue</p>
+<p>SELinux: 在一个开启了 SELinux 的内核中, 可能存在 10 万条以上的安全策略, 有时无法正常启动服务 (缺少权限)</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=unikernels>Unikernels<a href=#unikernels class=hash-link aria-label="Direct link to Unikernels" title="Direct link to Unikernels" translate=no>​</a></h3>
+<p>Unikernels do at compile time what standard programs do at runtime:</p>
+<ul>
+<li class="">Most unikernels use a specialized compiling system
+that compiles in the low-level functions the developer has selected</li>
+<li class="">The code for these low-level functions is
+compiled directly into the application executable through a library operating system</li>
+<li class="">library operating system: a special collection of libraries
+that provides needed operating system functions in a compilable format</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=security>Security<a href=#security class=hash-link aria-label="Direct link to Security" title="Direct link to Security" translate=no>​</a></h4>
+<ul>
+<li class="">There is no command shell to leverage</li>
+<li class="">There are no utilities to co-opt</li>
+<li class="">There are no unused device drivers or unused libraries to attack</li>
+<li class="">There are no password files or authorization information present</li>
+<li class="">There are no connections to machines and databases not needed by the application</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=debug>Debug<a href=#debug class=hash-link aria-label="Direct link to Debug" title="Direct link to Debug" translate=no>​</a></h4>
+<p>Since there is no operating system environment on a unikernel production VM,
+there are no tools, no debuggers,
+no shell access with which someone can probe a failure on a deployed program.</p>
+<p>Instead, all that can be done is to engineer the executable to log events and data
+so that the failure might be reconstructed on a development system,
+which still has access to all the debugging tools needed.</p>
+<p>People in our industry have successfully debugged failures of complex software
+for years without direct access to production systems,
+and I see no reason why they will fail to do so now.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=limits>Limits<a href=#limits class=hash-link aria-label="Direct link to Limits" title="Direct link to Limits" translate=no>​</a></h4>
+<ul>
+<li class="">Single Process (but Multiple Threads)</li>
+<li class="">Single User</li>
+<li class="">Limited Debugging</li>
+<li class="">Impoverished Library Ecosystem</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=ecosystem>Ecosystem<a href=#ecosystem class=hash-link aria-label="Direct link to Ecosystem" title="Direct link to Ecosystem" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=clickos>ClickOS<a href=#clickos class=hash-link aria-label="Direct link to ClickOS" title="Direct link to ClickOS" translate=no>​</a></h4>
+<p>network function virtualization (NFV) devices</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=rumprun>RumpRun<a href=#rumprun class=hash-link aria-label="Direct link to RumpRun" title="Direct link to RumpRun" translate=no>​</a></h4>
+<p>compile most of the programs found on a Linux or Unix-like operating system as unikernels</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=osv>OSv<a href=#osv class=hash-link aria-label="Direct link to OSv" title="Direct link to OSv" translate=no>​</a></h4>
+<p>It is unique among existing unikernels in that
+it provides a general-purpose unikernel base that can accept just about any program
+that can run in a single process
+(multiple threads are allowed, but multiple processes are not).</p>
+<p>As a result, OSv is a "fat" unikernel:
+the results are measured in megabytes, rather than kilobytes.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=mini-os>Mini-OS<a href=#mini-os class=hash-link aria-label="Direct link to Mini-OS" title="Direct link to Mini-OS" translate=no>​</a></h4>
+<p>Mini-OS is a tiny OS kernel distributed with the Xen Project Hypervisor sources:</p>
+<ul>
+<li class="">used as operating system for stub domains that are used for Dom0 Disaggregation.</li>
+<li class="">used as a basis for development of Unikernels,
+having been instrumental in the formation of multiple examples
+including ClickOS and Rump kernels.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=xen>Xen<a href=#xen class=hash-link aria-label="Direct link to Xen" title="Direct link to Xen" translate=no>​</a></h4>
+<p>Its paravirtualization capabilities allow unikernels to
+have a very small and efficient footprint interfacing with devices.
+This is one reason why the Xen Project has been at the forefront of unikernel development.</p>
+<p>Xen team has been consciously reworking the hypervisor’s capabilities
+so it can handle a future state where 2,000 or 3,000 simultaneous unikernel VMs
+may need to coexist on a single hardware host server.
+Currently, the hypervisor can handle about 1,000 unikernels simultaneously
+before scaling becomes nonlinear.
+The development work continues to improve unikernel support in each release.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=unik>Unik<a href=#unik class=hash-link aria-label="Direct link to Unik" title="Direct link to Unik" translate=no>​</a></h4>
+<ul>
+<li class="">UniK is an open source tool written in Go
+for compiling applications into unikernels and deploying those unikernels.</li>
+<li class="">UniK utilizes a simple Docker-like command-line interface,
+making developing on unikernels as easy as developing on containers.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=libos>libOS<a href=#libos class=hash-link aria-label="Direct link to libOS" title="Direct link to libOS" translate=no>​</a></h3>
+<ul>
+<li class="">implement drivers for the virtual hardware devices provided by the hypervisor</li>
+<li class="">create the protocol libraries to replace the services of a traditional OS</li>
+</ul>
+<p>the kernel is event-driven via an I/O loop that polls Xen devices</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=opam>OPAM<a href=#opam class=hash-link aria-label="Direct link to OPAM" title="Direct link to OPAM" translate=no>​</a></h3>
+<p>modern modular, functional and type-safe programming language</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token plain">opam </span><span class="token function" style=color:#d73a49>install</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam update </span><span class="token parameter variable" style=color:#36acaa>-u</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam switch</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam remote</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam depext</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=mirageos>MirageOS<a href=#mirageos class=hash-link aria-label="Direct link to MirageOS" title="Direct link to MirageOS" translate=no>​</a></h3>
+<p>Exokernel -> Library Operating System -> Unikernel:</p>
+<ul>
+<li class=""><strong>Unikernels</strong>: specialized, sealed, single purpose libOS VMs
+that run directly on the hypervisor</li>
+<li class="">A libOS is structured very differently from a conventional OS:
+all services, from the scheduler to the device drivers to the network stack,
+are implemented as libraries linked directly with the application.</li>
+<li class="">Coupled with the choice of a modern statically type-safe language
+for implementation, this affords configuration,
+performance and security benefits to unikernels.</li>
+<li class="">the current release contains clean-slate libraries for
+TLS, TCP/IP, DNS, Xen network and storage device drivers, HTTP
+and other common Internet protocols.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=installation>Installation<a href=#installation class=hash-link aria-label="Direct link to Installation" title="Direct link to Installation" translate=no>​</a></h4>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token plain">opam init</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam remote</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">ocaml </span><span class="token parameter variable" style=color:#36acaa>-version</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam switch </span><span class="token number" style=color:#36acaa>4.04</span><span class="token plain">.2</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">eval</span><span class="token plain"> </span><span class="token variable" style=color:#36acaa>`</span><span class="token variable" style=color:#36acaa>opam config </span><span class="token variable function" style=color:#d73a49>env</span><span class="token variable" style=color:#36acaa>`</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam list</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">opam </span><span class="token function" style=color:#d73a49>install</span><span class="token plain"> mirage</span><br/></span></code></pre></div></div>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token plain">mirage </span><span class="token parameter variable" style=color:#36acaa>--help</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">mirage configure </span><span class="token parameter variable" style=color:#36acaa>--xen</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>make</span><span class="token plain"> depend</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>make</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>sudo</span><span class="token plain"> xl create </span><span class="token parameter variable" style=color:#36acaa>-c</span><span class="token plain"> console.xl</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">strip console.xen</span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>bzip2</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-9</span><span class="token plain"> console.xen</span><br/></span></code></pre></div></div>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=development>Development<a href=#development class=hash-link aria-label="Direct link to Development" title="Direct link to Development" translate=no>​</a></h4>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token plain">opam </span><span class="token builtin class-name">source</span><span class="token plain"> repo.name --dev-repo </span><span class="token parameter variable" style=color:#36acaa>--pin</span><br/></span></code></pre></div></div>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=use-of-ocaml>Use of OCaml<a href=#use-of-ocaml class=hash-link aria-label="Direct link to Use of OCaml" title="Direct link to Use of OCaml" translate=no>​</a></h4>
+<p>OCaml is a pragmatic system that strikes a balance between imperative languages,
+e.g., C, and pure functional languages, e.g., Haskell.
+It features type inference, algebraic data types, and higher-order functions,
+but also permits references and mutable data structures
+while guaranteeing that all such side-effects are always type safe
+and will never cause memory corruption.</p>
+<ul>
+<li class="">(ICFP'10) a full-fledged systems programming language
+with a flexible programming model that supports functional,
+imperative and object-oriented programming</li>
+<li class="">OCaml has a simple yet high performance runtime making it
+an ideal platform for experimenting with
+the unikernel abstraction that interfaces the runtime with Xen.</li>
+<li class="">static typing eliminates type information at compile-time
+while retaining all the benefits of type-safety
+(remove dynamic typing overheads and introduce more safety at compile time).</li>
+<li class="">(SOSP'03/11) the open-source Xen Cloud Platform and critical system components
+are implemented in OCaml, making integration straightforward.</li>
+</ul>
+<h5 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=concurrency>Concurrency<a href=#concurrency class=hash-link aria-label="Direct link to Concurrency" title="Direct link to Concurrency" translate=no>​</a></h5>
+<ul>
+<li class="">lightweight control-flow threads for managing I/O and timeouts</li>
+<li class="">optimized inter-VM communication for parallel computation</li>
+</ul>
+<p>Each Mirage instance runs as on a single CPU core.
+Communication is optimized dynamically:
+if the VMs are running on the same physical machine,
+Mirage uses shared memory channels instead of the network stack.</p>
+<h5 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=thread-flow>Thread Flow<a href=#thread-flow class=hash-link aria-label="Direct link to Thread Flow" title="Direct link to Thread Flow" translate=no>​</a></h5>
+<ul>
+<li class="">The application’s main thread is launched immediately
+after boot and the VM shuts down when it returns.</li>
+<li class="">Mirage provides an evaluator that uses domain poll
+to listen for events and wake up lightweight threads.
+The VM is thus either executing OCaml code or blocked,
+with no internal preemption or asynchronous interrupts.</li>
+<li class="">The main thread repeatedly executes until it completes or throws an exception,
+and the domain subsequently shuts down with the VM exit code
+matching the thread return value.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=device-drivers>Device Drivers<a href=#device-drivers class=hash-link aria-label="Direct link to Device Drivers" title="Direct link to Device Drivers" translate=no>​</a></h4>
+<p>Data arrives to both the network and storage stacks
+as a stream of discrete packets.
+Mirage bridges the gap between packets and streams
+by using channel iterates that map functions over infinite streams of packets
+to produce a typed stream.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=io-stack>I/O Stack<a href=#io-stack class=hash-link aria-label="Direct link to I/O Stack" title="Direct link to I/O Stack" translate=no>​</a></h4>
+<p>Mirage implements a Xen block front VFS which interacts directly
+with a block device without an intervening filesystem.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=xen-soft-device>Xen Soft Device<a href=#xen-soft-device class=hash-link aria-label="Direct link to Xen Soft Device" title="Direct link to Xen Soft Device" translate=no>​</a></h2>
+<p>Device-level interfaces in operating systems
+present a very useful cut-point for researchers to experiment with new ideas.
+By virtualizing these interfaces, developers can create soft devices,
+which are used in the same way as normal hardware devices,
+but provide extra functionality in software.</p>
+<p>Rather than attempting to present
+a fully virtualized hardware interface to each OS in a Xen environment,
+guest OSes are modified to use a simple, narrow and idealized view of hardware.
+Soft devices take advantage of these narrow interface to
+capture and transform block requests, network packets, and USB messages.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=device-access-in-xen>Device Access in Xen<a href=#device-access-in-xen class=hash-link aria-label="Direct link to Device Access in Xen" title="Direct link to Device Access in Xen" translate=no>​</a></h3>
+<p>Physical driver runs in an isolated VM,
+connected over a shared memory device channel
+to a guest VM accessing the device.
+Operating systems wishing to access the device
+will use a front-end driver,
+and interact with the back-end driver over a device channel,
+which is a shared-memory communications primitive (原语).</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class=col><b>Tags:</b><ul class="tags_cGDs padding--none margin-left--sm"><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/cs>CS</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/system>System</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/virtualization>Virtualization</a></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_AxGk"><a href=https://github.com/sabertazimi/notes/edit/main/content/cs/virtualization/virtualization.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_dNJ2 aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_h9KE"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-01-27T12:48:04.000Z itemprop=dateModified>Jan 27, 2026</time></b> by <b>Sabertaz</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/notes/cs/os/filesystem><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Filesystem</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/notes/web/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Web</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_n7kj thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#how-to-read-paper class="table-of-contents__link toc-highlight">How to Read Paper</a><li><a href=#big-data class="table-of-contents__link toc-highlight">Big Data</a><li><a href=#in-memory-computing class="table-of-contents__link toc-highlight">In-Memory Computing</a><ul><li><a href=#单节点 class="table-of-contents__link toc-highlight">单节点</a><li><a href=#分布式 class="table-of-contents__link toc-highlight">分布式</a><li><a href=#混合式 class="table-of-contents__link toc-highlight">混合式</a><li><a href=#direct-segment class="table-of-contents__link toc-highlight">Direct Segment</a><li><a href=#redundant-memory-mappings-rmm class="table-of-contents__link toc-highlight">Redundant Memory Mappings (RMM)</a></ul><li><a href=#google-file-system class="table-of-contents__link toc-highlight">Google File System</a><ul><li><a href=#基本设计 class="table-of-contents__link toc-highlight">基本设计</a><li><a href=#系统交互 class="table-of-contents__link toc-highlight">系统交互</a><li><a href=#master-节点 class="table-of-contents__link toc-highlight">Master 节点</a><li><a href=#容错性 class="table-of-contents__link toc-highlight">容错性</a></ul><li><a href=#map-reduce class="table-of-contents__link toc-highlight">Map Reduce</a><li><a href=#google-big-table class="table-of-contents__link toc-highlight">Google Big Table</a><ul><li><a href=#数据模型 class="table-of-contents__link toc-highlight">数据模型</a><li><a href=#依赖 class="table-of-contents__link toc-highlight">依赖</a><li><a href=#组件 class="table-of-contents__link toc-highlight">组件</a><li><a href=#实现 class="table-of-contents__link toc-highlight">实现</a></ul><li><a href=#lxc class="table-of-contents__link toc-highlight">LXC</a><ul><li><a href=#linux-namespaces class="table-of-contents__link toc-highlight">Linux Namespaces</a><li><a href=#chroot class="table-of-contents__link toc-highlight">Chroot</a><li><a href=#control-groups class="table-of-contents__link toc-highlight">Control Groups</a></ul><li><a href=#unikernel class="table-of-contents__link toc-highlight">Unikernel</a><ul><li><a href=#unikernels class="table-of-contents__link toc-highlight">Unikernels</a><li><a href=#ecosystem class="table-of-contents__link toc-highlight">Ecosystem</a><li><a href=#libos class="table-of-contents__link toc-highlight">libOS</a><li><a href=#opam class="table-of-contents__link toc-highlight">OPAM</a><li><a href=#mirageos class="table-of-contents__link toc-highlight">MirageOS</a></ul><li><a href=#xen-soft-device class="table-of-contents__link toc-highlight">Xen Soft Device</a><ul><li><a href=#device-access-in-xen class="table-of-contents__link toc-highlight">Device Access in Xen</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Notes</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/notes/ai>AI</a><li class=footer__item><a class=footer__link-item href=/notes/cs>CS</a><li class=footer__item><a class=footer__link-item href=/notes/web>Web</a><li class=footer__item><a class=footer__link-item href=/notes/language>Language</a><li class=footer__item><a class=footer__link-item href=/notes/programming>Programming</a><li class=footer__item><a class=footer__link-item href=/notes/web/library>Library Gallery</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Social Media</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://x.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>X<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://facebook.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://weibo.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Weibo<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=mailto:sabertazimi@gmail.com target=_blank rel="noopener noreferrer" class=footer__link-item>Email<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Find More</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi/blog target=_blank rel="noopener noreferrer" class=footer__link-item>Next.js Blog<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/lab target=_blank rel="noopener noreferrer" class=footer__link-item>Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/bod target=_blank rel="noopener noreferrer" class=footer__link-item>Bod CLI<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/doftiles target=_blank rel="noopener noreferrer" class=footer__link-item>Dotfiles<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/LaTeX-snippets target=_blank rel="noopener noreferrer" class=footer__link-item>LaTeX Snippets<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/hust-lab target=_blank rel="noopener noreferrer" class=footer__link-item>HUST Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Sabertaz</div></div></div></footer></div></body>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["67009"],{89239(e){e.exports=JSON.parse('{"tag":{"label":"Diff","permalink":"/notes/tags/diff","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/git/diff","title":"Diff","description":"Staged","permalink":"/notes/programming/git/diff"}],"unlisted":false}}')}}]);

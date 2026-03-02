@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["66498"],{1742(e){e.exports=JSON.parse('{"tag":{"label":"Deployment","permalink":"/notes/tags/deployment","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/deploy","title":"Deployment","description":"Static Assets","permalink":"/notes/web/devops/deploy"}],"unlisted":false}}')}}]);

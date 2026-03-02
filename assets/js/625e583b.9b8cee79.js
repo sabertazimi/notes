@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["28630"],{10763(e){e.exports=JSON.parse('{"tag":{"label":"X11","permalink":"/notes/tags/x-11","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/desktop","title":"Desktop","description":"Dotfiles","permalink":"/notes/programming/linux/desktop"}],"unlisted":false}}')}}]);

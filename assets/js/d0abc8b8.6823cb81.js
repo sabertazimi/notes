@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["73038"],{30005(a){a.exports=JSON.parse('{"tag":{"label":"Grammar","permalink":"/notes/tags/grammar","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/compilers/grammar","title":"Grammar","description":"Structure","permalink":"/notes/cs/compilers/grammar"}],"unlisted":false}}')}}]);

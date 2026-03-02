@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["83043"],{27858(e){e.exports=JSON.parse('{"tag":{"label":"DNS","permalink":"/notes/tags/dns","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/node/network","title":"Network","description":"Fetch","permalink":"/notes/web/node/network"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["37240"],{6015(e){e.exports=JSON.parse('{"tag":{"label":"Ethernet","permalink":"/notes/tags/ethernet","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/ethernet","title":"Ethernet","description":"Media Access Control","permalink":"/notes/web/network/ethernet"}],"unlisted":false}}')}}]);

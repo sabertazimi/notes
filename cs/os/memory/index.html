@@ -1,0 +1,309 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cs/os/memory" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Memory | Personal Notes</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://tazimi.dev/notes/cs/os/memory /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Memory | Personal Notes"/><meta data-rh=true name=description content="Boot Loader"/><meta data-rh=true property=og:description content="Boot Loader"/><link data-rh=true rel=icon href=/notes/img/logo.svg /><link data-rh=true rel=canonical href=https://tazimi.dev/notes/cs/os/memory /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/os/memory hreflang=en /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/os/memory hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/","name":"CS","position":1},{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/os/","name":"Operating System","position":2},{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/os/memory","name":"Memory","position":3}]}</script><link rel=stylesheet href=/notes/assets/css/styles.fe402815.css /><script src=/notes/assets/js/runtime~main.bff74981.js defer></script><script src=/notes/assets/js/main.105cc82a.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/notes/img/logo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_a95V href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_kMqm"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/notes/><div class=navbar__logo><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/></div><b class="navbar__title text--truncate">TIL</b></a><a class="navbar__item navbar__link" href=/notes/intro>Notes</a><a class="navbar__item navbar__link" href=/notes/ai>AI</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/notes/cs>CS</a><a class="navbar__item navbar__link" href=/notes/web>Web</a><a class="navbar__item navbar__link" href=/notes/language>Language</a><a class="navbar__item navbar__link" href=/notes/programming>Programming</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href=/notes/web/library>Library Gallery</a><a href=https://github.com/sabertazimi/notes target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><div class="toggle_xd5f colorModeToggle_uCEc"><button class="clean-btn toggleButton_uz0f toggleButtonDisabled_XkyR" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX lightToggleIcon_oj6Y"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX darkToggleIcon_H9YQ"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX systemToggleIcon_r7TJ"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_aifg><div class="navbar__search searchBarContainer_W0oD" dir=ltr><input placeholder=Search aria-label=Search class="navbar__search-input searchInput_juq5" value="" /><div class="loadingRing_rex3 searchBarLoadingRing_Y3Tw"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_rrKs"><div class=docsWrapper_NtUm><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_gzdI" type=button></button><div class=docRoot_PGsa><aside class="theme-doc-sidebar-container docSidebarContainer_aiRL"><div class=sidebarViewport_MLO7><div class="sidebar_G9Wb sidebarWithHideableNavbar_cKbE"><a tabindex=-1 class=sidebarLogo_mVm8 href=/notes/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/><b>TIL</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_CqPf"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/notes/intro><span title=Notes class=linkLabel_k54U>Notes</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/ai/><span title=AI class=categoryLinkLabel_QKTQ>AI</span></a><button aria-label="Expand sidebar category 'AI'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--active" href=/notes/cs/><span title=CS class=categoryLinkLabel_QKTQ>CS</span></a><button aria-label="Collapse sidebar category 'CS'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/algorithms/><span title=Algorithms class=categoryLinkLabel_QKTQ>Algorithms</span></a><button aria-label="Expand sidebar category 'Algorithms'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/architecture/><span title=Architecture class=linkLabel_k54U>Architecture</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/compilers/><span title=Compiler class=categoryLinkLabel_QKTQ>Compiler</span></a><button aria-label="Expand sidebar category 'Compiler'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/database/><span title=Database class=categoryLinkLabel_QKTQ>Database</span></a><button aria-label="Expand sidebar category 'Database'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/graph/><span title="Graph Processing" class=linkLabel_k54U>Graph Processing</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/latex/><span title=LaTeX class=linkLabel_k54U>LaTeX</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/notes/cs/math/economics><span title=Math class=categoryLinkLabel_QKTQ>Math</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--active" tabindex=0 href=/notes/cs/os/><span title="Operating System" class=categoryLinkLabel_QKTQ>Operating System</span></a><button aria-label="Collapse sidebar category 'Operating System'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/concepts><span title=Concepts class=linkLabel_k54U>Concepts</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/boot><span title=Boot class=linkLabel_k54U>Boot</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/architecture><span title=Architecture class=linkLabel_k54U>Architecture</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/process><span title=Process class=linkLabel_k54U>Process</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/exception><span title=Exception class=linkLabel_k54U>Exception</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/concurrency><span title=Concurrency class=linkLabel_k54U>Concurrency</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/notes/cs/os/memory><span title=Memory class=linkLabel_k54U>Memory</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/device-io><span title="Device I/O" class=linkLabel_k54U>Device I/O</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/os/filesystem><span title=Filesystem class=linkLabel_k54U>Filesystem</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/virtualization/><span title=Virtualization class=linkLabel_k54U>Virtualization</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/web/><span title=Web class=categoryLinkLabel_QKTQ>Web</span></a><button aria-label="Expand sidebar category 'Web'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/language/><span title=Language class=categoryLinkLabel_QKTQ>Language</span></a><button aria-label="Expand sidebar category 'Language'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/programming/><span title=Programming class=categoryLinkLabel_QKTQ>Programming</span></a><button aria-label="Expand sidebar category 'Programming'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_fXvC"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_wrAS><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_Yxco><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_yicr"><div class=docItemContainer_qgPh><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_ZDU1" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/notes/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_bQmg><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/notes/cs/><span>CS</span></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/notes/cs/os/><span>Operating System</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Memory</span></ul></nav><div class="tocCollapsible_H0gK theme-doc-toc-mobile tocMobile_t31C"><button type=button class="clean-btn tocCollapsibleButton_mPmr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Memory</h1></header>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=boot-loader>Boot Loader<a href=#boot-loader class=hash-link aria-label="Direct link to Boot Loader" title="Direct link to Boot Loader" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=target>Target<a href=#target class=hash-link aria-label="Direct link to Target" title="Direct link to Target" translate=no>​</a></h3>
+<ul>
+<li class="">抽象: 逻辑地址空间(线性物理地址映射)</li>
+<li class="">保护: 独立地址空间(进程间互不影响)</li>
+<li class="">共享: 访问相同内存(内核空间与共享库)</li>
+<li class="">虚拟化: 独占内存空间假象</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=方式>方式<a href=#方式 class=hash-link aria-label="Direct link to 方式" title="Direct link to 方式" translate=no>​</a></h3>
+<ul>
+<li class="">重定位 (relocation)</li>
+<li class="">分段 (segmentation): 代码段/数据段</li>
+<li class="">分页 (paging)</li>
+<li class="">虚拟存储 (virtual memory): 内存视作硬盘的缓存, 硬盘视作虚拟内存</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=探测机器内存分布>探测机器内存分布<a href=#探测机器内存分布 class=hash-link aria-label="Direct link to 探测机器内存分布" title="Direct link to 探测机器内存分布" translate=no>​</a></h3>
+<p>为内存管理模块提供基础: 在进入实模式前, 调用 int 15h(88h, e801h, e820h), 借助 BIOS 中断获取内存信息</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=地址生成>地址生成<a href=#地址生成 class=hash-link aria-label="Direct link to 地址生成" title="Direct link to 地址生成" translate=no>​</a></h3>
+<ul>
+<li class="">编译时</li>
+<li class="">链接时</li>
+<li class="">加载时</li>
+<li class="">执行时(相对寻址)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=地址映射>地址映射<a href=#地址映射 class=hash-link aria-label="Direct link to 地址映射" title="Direct link to 地址映射" translate=no>​</a></h3>
+<p>软硬件结合:</p>
+<p>逻辑地址 ---> 物理地址</p>
+<ul>
+<li class="">硬件(CPU/MMU)完成映射地址</li>
+<li class="">操作系统建立映射规则(页表)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=地址检查>地址检查<a href=#地址检查 class=hash-link aria-label="Direct link to 地址检查" title="Direct link to 地址检查" translate=no>​</a></h3>
+<p>软硬件结合:</p>
+<ul>
+<li class="">操作系统设置的段机制和段长度</li>
+<li class="">硬件(CPU/MMU)根据段信息进行地址检查(内存访问是否异常)</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=特权级>特权级<a href=#特权级 class=hash-link aria-label="Direct link to 特权级" title="Direct link to 特权级" translate=no>​</a></h2>
+<p>0: 最高特权级, 3: 最低特权级</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=检查>检查<a href=#检查 class=hash-link aria-label="Direct link to 检查" title="Direct link to 检查" translate=no>​</a></h3>
+<ul>
+<li class="">CPL/RPL: 访问者特权级</li>
+<li class="">DRL: 段描述符/门描述符(中断/陷阱门)中保存的特权级, 表示被访问段/中断服务/陷阱的特权级</li>
+<li class="">CPL/RPL <code>&lt;=</code> DRL e.g. 0 &lt; 3</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=切换>切换<a href=#切换 class=hash-link aria-label="Direct link to 切换" title="Direct link to 切换" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=ring-0-to-ring-3>Ring 0 to Ring 3<a href=#ring-0-to-ring-3 class=hash-link aria-label="Direct link to Ring 0 to Ring 3" title="Direct link to Ring 0 to Ring 3" translate=no>​</a></h4>
+<ul>
+<li class="">interrupt/trap: push SS(<strong>RPL=3</strong>) -> ESP -> EFLAGS
+-> CS(<strong>RPL=3</strong>) -> EIP -> Error Code</li>
+<li class="">iret: pop above variables, move to ring 3</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=ring-3-to-ring-0>Ring 3 to Ring 0<a href=#ring-3-to-ring-0 class=hash-link aria-label="Direct link to Ring 3 to Ring 0" title="Direct link to Ring 3 to Ring 0" translate=no>​</a></h4>
+<p>特权级提升:</p>
+<ul>
+<li class="">interrupt/trap: stack switch</li>
+<li class="">push EFLAGS -> CS(<strong>RPL=0</strong>) -> EIP -> Error Code</li>
+<li class="">iret: pop above variables, move to ring 0</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=tss>TSS<a href=#tss class=hash-link aria-label="Direct link to TSS" title="Direct link to TSS" translate=no>​</a></h3>
+<p>Task State Segment:</p>
+<p>保存不同特权级的堆栈信息(SS/ESP)</p>
+<p>全局描述符表中保存一个 TSS Descriptor(TSS base + TSS limit):
+allocate TSS memory -> init TSS
+-> fill TSS descriptor in GDT -> set TSS selector(task register)</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=连续分配>连续分配<a href=#连续分配 class=hash-link aria-label="Direct link to 连续分配" title="Direct link to 连续分配" translate=no>​</a></h2>
+<ul>
+<li class="">malloc</li>
+<li class="">free</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=内存碎片>内存碎片<a href=#内存碎片 class=hash-link aria-label="Direct link to 内存碎片" title="Direct link to 内存碎片" translate=no>​</a></h3>
+<ul>
+<li class="">外部碎片: 已分配单元间无法利用空闲单元(请求内存单元过大)</li>
+<li class="">内部碎片: 已分配单元内空闲单元</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=动态分配>动态分配<a href=#动态分配 class=hash-link aria-label="Direct link to 动态分配" title="Direct link to 动态分配" translate=no>​</a></h3>
+<ul>
+<li class="">Fist-fit(最先匹配): 使用第一个可利用空闲块 - 容易产生外部碎片, 分配大块效率低</li>
+<li class="">Best-fit(最佳匹配): 使用利用度最高的空闲块 - 外部碎片过小, 释放时需重新排列空闲块链表(升序)</li>
+<li class="">Worst-fit(最差匹配): 使用利用度最差的空闲块 - 分配中块效率高, 释放时需重新排列空闲块链表(降序)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=碎片整理>碎片整理<a href=#碎片整理 class=hash-link aria-label="Direct link to 碎片整理" title="Direct link to 碎片整理" translate=no>​</a></h3>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=ucore>Ucore<a href=#ucore class=hash-link aria-label="Direct link to Ucore" title="Direct link to Ucore" translate=no>​</a></h2>
+<ul>
+<li class="">连续存放 n 个 page 结构, 形式表示内存页, 并在连续内存块的首页(header page)保存此连续块的连续页数目</li>
+<li class="">维护一个链表, 链表每项为大块连续内存块的起始页(header page address) 和 连续页数目, 管理分散的连续内存块</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=紧凑>紧凑<a href=#紧凑 class=hash-link aria-label="Direct link to 紧凑" title="Direct link to 紧凑" translate=no>​</a></h3>
+<p>Compaction, 将不同进程占用内存单元移至较为集中的地方:</p>
+<ul>
+<li class="">只可移动 可动态重定位程序</li>
+<li class="">只可移动 等待状态进程</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=分区对换>分区对换<a href=#分区对换 class=hash-link aria-label="Direct link to 分区对换" title="Direct link to 分区对换" translate=no>​</a></h3>
+<p>Swapping In and Swapping Out:</p>
+<p>将等待状态进程的分区对换至外存,以增大可用内存单元</p>
+<blockquote>
+<p>e.g. Linux Swap 分区: 安装系统时一般切割大小为内存大小的 50%~100% 的外存作为 Swap 分区</p>
+</blockquote>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=malloc>Malloc<a href=#malloc class=hash-link aria-label="Direct link to Malloc" title="Direct link to Malloc" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=启发式编程>启发式编程<a href=#启发式编程 class=hash-link aria-label="Direct link to 启发式编程" title="Direct link to 启发式编程" translate=no>​</a></h3>
+<p>Heuristic Programming:</p>
+<ul>
+<li class="">建立已分配 void 指针表,free 函数执行时,只回收表中存在的指针;不存在则报错</li>
+<li class="">对 heap 进行分区 - 小/中/大块内存请求,分别从不同区域(8/16/32 最小单位区)分配</li>
+<li class="">记录当前堆块的信息，如长度，空闲状态</li>
+<li class="">记录周围环境信息，如保留上/下一堆块的指针或记录上/下堆块空闲状态</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=伙伴系统>伙伴系统<a href=#伙伴系统 class=hash-link aria-label="Direct link to 伙伴系统" title="Direct link to 伙伴系统" translate=no>​</a></h3>
+<p>Buddy System:</p>
+<ul>
+<li class="">可分配内存单元总大小为 2^n</li>
+<li class="">总是将大小 <strong>小于</strong>请求大小的<strong>2 倍</strong>且为<strong>2 的幂次方</strong> 的某块内存单元分配出去(大小为 2^(i-1))</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=合并空闲块>合并空闲块<a href=#合并空闲块 class=hash-link aria-label="Direct link to 合并空闲块" title="Direct link to 合并空闲块" translate=no>​</a></h4>
+<ul>
+<li class="">空闲块相邻</li>
+<li class="">空闲块等大</li>
+<li class="">低地址空闲块的 起始地址 必须为 空闲块大小 的 2 的幂次方倍(2 倍以上)</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=非连续分配>非连续分配<a href=#非连续分配 class=hash-link aria-label="Direct link to 非连续分配" title="Direct link to 非连续分配" translate=no>​</a></h2>
+<ul>
+<li class="">支持一个程序使用非连续的物理地址空间</li>
+<li class="">支持共享代码与数据</li>
+<li class="">支持动态加载与动态链接</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=段式>段式<a href=#段式 class=hash-link aria-label="Direct link to 段式" title="Direct link to 段式" translate=no>​</a></h2>
+<p>将逻辑地址划分, 低位表示段内偏移, 高位(取摸)表示段号(类比缓存中的内存地址)</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=gdt>GDT<a href=#gdt class=hash-link aria-label="Direct link to GDT" title="Direct link to GDT" translate=no>​</a></h3>
+<div class="language-cpp codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-cpp codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token keyword" style=color:#00009f>typedef</span><span class="token plain"> </span><span class="token keyword" style=color:#00009f>struct</span><span class="token plain"> </span><span class="token class-name">gdt_ptr</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>uint16_t</span><span class="token plain"> gdt_limit</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">     </span><span class="token comment" style=color:#999988;font-style:italic>// gdt_length - 1</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>uint32_t</span><span class="token plain"> gdt_base</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"> </span><span class="token function" style=color:#d73a49>__attribute__</span><span class="token punctuation" style=color:#393A34>(</span><span class="token punctuation" style=color:#393A34>(</span><span class="token plain">packed</span><span class="token punctuation" style=color:#393A34>)</span><span class="token punctuation" style=color:#393A34>)</span><span class="token plain"> gdt_ptr_t</span><span class="token punctuation" style=color:#393A34>;</span><br/></span></code></pre></div></div>
+<ul>
+<li class="">用 16 位来表示表的长度(2 ^ 16 = 65532 bytes), 除以每一个描述符的 8 字节, 最多能创建 8192 个描述符</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=页式>页式<a href=#页式 class=hash-link aria-label="Direct link to 页式" title="Direct link to 页式" translate=no>​</a></h2>
+<p>开启页机制:</p>
+<ul>
+<li class="">init page directory(首址位于 cr3 寄存器), page table</li>
+<li class="">update GDT</li>
+<li class="">update ds,es,ss</li>
+<li class="">update cs with jmp instruction</li>
+<li class="">cr0 寄存器 bit31(most bit) 置 1</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=虚拟地址>虚拟地址<a href=#虚拟地址 class=hash-link aria-label="Direct link to 虚拟地址" title="Direct link to 虚拟地址" translate=no>​</a></h3>
+<p>TLB (Translation Lookaside Buffer in CPU/PM):</p>
+<ul>
+<li class="">Virtual Address =
+<code>2^(bits of virtual page offset) * virtual page number + virtual page offset</code>.</li>
+<li class="">VA = VPN (virtual page number point to PPN) + VPO(virtual page offset = PPO).</li>
+<li class="">根据 VPN 在页表中找到对应表项(VPN 表示项号), 每项保存着 PPN.</li>
+<li class="">TLB = TLBT (tag) + TLBI(index) + VPO.</li>
+<li class="">因为内存局部性原理, TLB 一般只需要很小 (比如 <strong>64 项</strong>) 即可达到不错的效果.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=物理地址>物理地址<a href=#物理地址 class=hash-link aria-label="Direct link to 物理地址" title="Direct link to 物理地址" translate=no>​</a></h3>
+<p>C(cache) PPO = VPO:</p>
+<ul>
+<li class="">Page Frame (帧): 高位为帧号, 低位为偏移.</li>
+<li class="">Physical Address =
+<code>2^(bits of phy page offset) * phy page/frame frame number + phy page offset</code></li>
+<li class="">PA = PPN (physical page number) + PPO (physical page offset = VPO).</li>
+<li class="">CA = CT(tag) + CI(index) + CO(offset).</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=页表>页表<a href=#页表 class=hash-link aria-label="Direct link to 页表" title="Direct link to 页表" translate=no>​</a></h3>
+<p>页表由操作系统建立, 硬件(CPU/MMU)根据页表信息将虚拟地址映射为物理地址:</p>
+<ul>
+<li class="">FN/PPN</li>
+<li class="">标志位: <code>resident</code> bit (存在位) + <code>dirty</code> bit (修改位) + <code>reference</code> bit (引用位)</li>
+</ul>
+<div class="theme-admonition theme-admonition-caution admonition_TrbN alert alert--warning"><div class=admonitionHeading_zXwB><span class=admonitionIcon_AhFl><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>Cons</div><div class=admonitionContent_nCa6><ul>
+<li class="">两次访存: 第一次获取页表项, 第二次访问实际数据</li>
+<li class="">页表占据大量内存单元</li>
+</ul></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=tlb>TLB<a href=#tlb class=hash-link aria-label="Direct link to TLB" title="Direct link to TLB" translate=no>​</a></h3>
+<p>Translation Lookaside Buffer:</p>
+<p>缓存页表项 - key: VPN, value: PPN 不用访问页表.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=多级页表>多级页表<a href=#多级页表 class=hash-link aria-label="Direct link to 多级页表" title="Direct link to 多级页表" translate=no>​</a></h3>
+<ul>
+<li class="">切割页表: 建立子页表</li>
+<li class="">Page Directory -> Page Table -> Physical Address</li>
+<li class="">将线性地址分成三部分 Directory+Table+Offset:
+cr3+Dir 取出 page table base,
+ptb+Tab 取出 physical address base, pab+offset = pa</li>
+</ul>
+<blockquote>
+<p>CR3 寄存器: 保存一级页表的基址</p>
+</blockquote>
+<ul>
+<li class="">父页表表项保存子页表起始地址, 逻辑地址某部分保存偏移地址(子表项号)</li>
+<li class="">存在位为 0 时, 不用保存子表, 节省内存单元</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=反置页表>反置页表<a href=#反置页表 class=hash-link aria-label="Direct link to 反置页表" title="Direct link to 反置页表" translate=no>​</a></h3>
+<ul>
+<li class="">PPN 作为页表索引, 页表项保存 VPN(或者 Hash(VPN|PID))</li>
+<li class="">将 VPN 映射为 PPN 时, 需遍历整个页表(但此页表只占用少量内存单元)</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=段页式>段页式<a href=#段页式 class=hash-link aria-label="Direct link to 段页式" title="Direct link to 段页式" translate=no>​</a></h2>
+<p>在页式存储管理基础上, 引入段式存储管理</p>
+<p><code>&lt;--- vsn --- vpn --- vpo ---></code> 映射为 <code>&lt;--- ppn --- ppo ---></code></p>
+<blockquote>
+<p>sn: segment number, pn<!-- -->:page<!-- --> number, po: page offset</p>
+</blockquote>
+<p>若以 4K(limit) 为 1 个页表大小, 则下级页表首址为 <code>段/页表中某项的值 &lt;&lt; 12</code>(2^12 = 4K)</p>
+<ul>
+<li class="">以 vsn 为索引在进程段表中找到段表项,
+获取段(页表)基址与段大小信息(item_value/limit):
+base = item_value <code>&lt;&lt;</code> log2(limit)</li>
+<li class="">以 vpn 为索引在进程页表(页表基址 = base 中找到页表项, 获取 ppn</li>
+<li class="">ppn <code>&lt;&lt;</code> log2(limit) + vpo(ppo) 为实际物理地址</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=虚拟页式>虚拟页式<a href=#虚拟页式 class=hash-link aria-label="Direct link to 虚拟页式" title="Direct link to 虚拟页式" translate=no>​</a></h2>
+<p>虚拟内存 = 物理内存 + 外存:</p>
+<ul>
+<li class="">只将运行进程所必需页面装入内存, 其余页面至于外存</li>
+<li class="">进程发生缺页异常时, 将所要求缺页装入内存:
+选择目标物理页面 -> 无未占用物理页面, 则换出闲置物理页面(访问位)
+-> 装入物理内存,更新页表项
+(换入逻辑地址与换出逻辑地址对应的页表项的驻留位/修改位/访问位/锁定位以及物理页号 ppn)</li>
+<li class="">监控已经装入内存的页面, 及时将不需要页面换出至外存</li>
+<li class="">为每个进程分配一个 vma 块, 模拟一个完整的物理内存</li>
+<li class="">vmas 按起始<strong>地址从小至大</strong>形成一个双向链表, 且地址空间<strong>没有任何交集</strong></li>
+</ul>
+<div class="language-cpp codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-cpp codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token macro property directive-hash" style=color:#36acaa>#</span><span class="token macro property directive keyword" style=color:#00009f>define</span><span class="token macro property" style=color:#36acaa> </span><span class="token macro property macro-name" style=color:#36acaa>VM_READ</span><span class="token macro property" style=color:#36acaa>  </span><span class="token macro property expression number" style=color:#36acaa>0x00000001</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token macro property directive-hash" style=color:#36acaa>#</span><span class="token macro property directive keyword" style=color:#00009f>define</span><span class="token macro property" style=color:#36acaa> </span><span class="token macro property macro-name" style=color:#36acaa>VM_WRITE</span><span class="token macro property" style=color:#36acaa> </span><span class="token macro property expression number" style=color:#36acaa>0x00000002</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token macro property directive-hash" style=color:#36acaa>#</span><span class="token macro property directive keyword" style=color:#00009f>define</span><span class="token macro property" style=color:#36acaa> </span><span class="token macro property macro-name" style=color:#36acaa>VM_EXEC</span><span class="token macro property" style=color:#36acaa>  </span><span class="token macro property expression number" style=color:#36acaa>0x00000004</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token macro property directive-hash" style=color:#36acaa>#</span><span class="token macro property directive keyword" style=color:#00009f>define</span><span class="token macro property" style=color:#36acaa> </span><span class="token macro property macro-name" style=color:#36acaa>VM_USER</span><span class="token macro property" style=color:#36acaa>  </span><span class="token macro property expression punctuation" style=color:#393A34>(</span><span class="token macro property expression" style=color:#36acaa>VM_READ </span><span class="token macro property expression operator" style=color:#393A34>|</span><span class="token macro property expression" style=color:#36acaa> VM_WRITE </span><span class="token macro property expression operator" style=color:#393A34>|</span><span class="token macro property expression" style=color:#36acaa> VM_EXEC</span><span class="token macro property expression punctuation" style=color:#393A34>)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>typedef</span><span class="token plain"> </span><span class="token keyword" style=color:#00009f>struct</span><span class="token plain"> </span><span class="token class-name">__mm</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    list_entry_t mmap_list</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain"> </span><span class="token comment" style=color:#999988;font-style:italic>// header of vmas' list</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    vma </span><span class="token operator" style=color:#393A34>*</span><span class="token plain">mmap_cache</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">        </span><span class="token comment" style=color:#999988;font-style:italic>// current accessed vma(used for speed purpose)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    pde_t </span><span class="token operator" style=color:#393A34>*</span><span class="token plain">pgdir</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">           </span><span class="token comment" style=color:#999988;font-style:italic>// PDT for vmas</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>int</span><span class="token plain"> map_count</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">          </span><span class="token comment" style=color:#999988;font-style:italic>// count of vmas</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>void</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>*</span><span class="token plain">sm_priv</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">          </span><span class="token comment" style=color:#999988;font-style:italic>// private data for swap manager</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"> mm</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token keyword" style=color:#00009f>typedef</span><span class="token plain"> </span><span class="token keyword" style=color:#00009f>struct</span><span class="token plain"> </span><span class="token class-name">__vma</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>struct</span><span class="token plain"> </span><span class="token class-name">mm</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>*</span><span class="token plain">vm_mm</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">       </span><span class="token comment" style=color:#999988;font-style:italic>// all vmas use the same PDT(page directory table)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    uintptr_t vm_start</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">     </span><span class="token comment" style=color:#999988;font-style:italic>// start address of vma (align to PGSIZE)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    uintptr_t vm_end</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">       </span><span class="token comment" style=color:#999988;font-style:italic>// end address of vma   (align to PGSIZE)</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    </span><span class="token keyword" style=color:#00009f>uint32_t</span><span class="token plain"> vm_flags</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">      </span><span class="token comment" style=color:#999988;font-style:italic>// flags of vma</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    list_entry_t vma_list</span><span class="token punctuation" style=color:#393A34>;</span><span class="token plain">  </span><span class="token comment" style=color:#999988;font-style:italic>// doubly linked list: sort all vmas by start address</span><span class="token plain"></span><br/></span><span class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"> vma</span><span class="token punctuation" style=color:#393A34>;</span><br/></span></code></pre></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=page-fault>Page Fault<a href=#page-fault class=hash-link aria-label="Direct link to Page Fault" title="Direct link to Page Fault" translate=no>​</a></h2>
+<ul>
+<li class="">虚拟地址越界: 访问不存在的虚拟地址</li>
+<li class="">对只读地址进行写操作</li>
+<li class="">访问未映射虚拟页 (swap in/out)</li>
+<li class="">CPU 将产生异常的的线性地址 (linear address) 存储在 <code>CR2</code> 寄存器中,
+将 errorCode (2 -> 访问权限异常, 1 -> 写异常, 0 -> 物理页不存在) 压入中断栈</li>
+</ul>
+<blockquote>
+<p>CR0: 处理器模式 (实/保护/分段/分页模式)
+CR2: Page Fault Linear Address
+CR3: Page-Directory Base Address Register</p>
+</blockquote>
+<p>当出现缺页异常且物理内存已满时, 需要以页面置换算法为指导, 换出闲置物理页面, 换入所要求缺页, 并更新页表项:</p>
+<ul>
+<li class="">尽可能减少物理页面的换入换出次数</li>
+<li class="">只可交换映射到用户空间的物理页</li>
+<li class="">当页表项中 <code>PTE_P</code> 为 0 时, 对应高位地址表示扇区地址(而不是物理位移)</li>
+<li class="">换入时机: <code>Page Fault</code> 缺页</li>
+<li class="">换出时机: 积极/消极换出策略</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=覆盖>覆盖<a href=#覆盖 class=hash-link aria-label="Direct link to 覆盖" title="Direct link to 覆盖" translate=no>​</a></h3>
+<p>Overlay:</p>
+<p>将程序中相互独立的模块分成一组, 为每组按最大模块分配内存单元</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=交换>交换<a href=#交换 class=hash-link aria-label="Direct link to 交换" title="Direct link to 交换" translate=no>​</a></h3>
+<p>Swap:</p>
+<p>将挂起进程的整个地址空间换出至外存(swap out), 将需用进程的整个地址空间换入至内存(swap in), 进程交替运行</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=标志位>标志位<a href=#标志位 class=hash-link aria-label="Direct link to 标志位" title="Direct link to 标志位" translate=no>​</a></h3>
+<ul>
+<li class="">驻留位: 此逻辑地址对应的页面在内存中</li>
+<li class="">修改位: 此页面是否被修改过, 判定此页面换出时策略(写回外存/直接丢弃)</li>
+<li class="">访问位: 此页面是否被读/写过, 判定此页面是否需要换出至外存</li>
+<li class="">锁定位: 此页面不会被换出</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=局部置换>局部置换<a href=#局部置换 class=hash-link aria-label="Direct link to 局部置换" title="Direct link to 局部置换" translate=no>​</a></h3>
+<p>换入进程 A 的某个页面时, 只可换出进程 A 的某个页面: 为进程分配固定数目的页面</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=最远未用>最远未用<a href=#最远未用 class=hash-link aria-label="Direct link to 最远未用" title="Direct link to 最远未用" translate=no>​</a></h4>
+<p>Least Recently Used (LRU) Algorithm:</p>
+<ul>
+<li class="">利用<strong>链表等线性结构</strong>维护页面访问时间, 队首为最近一次访问页面(每次访问一个页面后, 把它从线性结构中间抽出至队首), 队尾为最远一次访问页面</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=时钟>时钟<a href=#时钟 class=hash-link aria-label="Direct link to 时钟" title="Direct link to 时钟" translate=no>​</a></h4>
+<p>Clock Algorithm:</p>
+<ul>
+<li class="">利用<strong>循环链表</strong>维护页面(指针指向最先换入内存的页面), 页表项访问位维护访问记录(访问后将访问位置 1)</li>
+<li class="">缺页时, 从指针处开始查找页面进行置换: 若访问位为 0, 则进行置换; 若访问位为 1, 则将此页面访问位置 0, 继续查找未访问页面</li>
+<li class="">改进: 增加修改位</li>
+</ul>
+<table><thead><tr><th style=text-align:left>指针扫描前<th style=text-align:left>指针扫描后<tbody><tr><td style=text-align:left>访问位 修改位<td style=text-align:left>访问位 修改位<tr><td style=text-align:left>0 0<td style=text-align:left>置换<tr><td style=text-align:left>0 1<td style=text-align:left>0 0<tr><td style=text-align:left>1 0<td style=text-align:left>0 0<tr><td style=text-align:left>1 1<td style=text-align:left>0 1</table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=最不常用>最不常用<a href=#最不常用 class=hash-link aria-label="Direct link to 最不常用" title="Direct link to 最不常用" translate=no>​</a></h4>
+<p>Least Frequently Used (LFU) Algorithm:</p>
+<ul>
+<li class="">利用<strong>链表等线性结构</strong>维护页面访问时间, 队首为最多访问次数页面(每次访问一个页面后, 访问次数+1, 并排序), 队尾为最少访问次数页面</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=全局置换>全局置换<a href=#全局置换 class=hash-link aria-label="Direct link to 全局置换" title="Direct link to 全局置换" translate=no>​</a></h3>
+<ul>
+<li class="">换入进程 A 的某个页面时, 可换出其他进程的某个页面: 为进程分配可变数目的页面</li>
+<li class="">关键: 确定为不同进程分配的页面数目</li>
+<li class="">抖动(thrashing): 进程过多, 导致大部分进程的常驻集 <code>&lt;</code> 工作集, 缺页率较高</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=工作集>工作集<a href=#工作集 class=hash-link aria-label="Direct link to 工作集" title="Direct link to 工作集" translate=no>​</a></h4>
+<ul>
+<li class="">工作集(随时间动态变化集): 一个进程当前正在使用的逻辑页面集合,
+WorkingSet(currentTime, workingSetWindow(访问时间窗口)) <code>(cT - wSW, cT + wSW)</code></li>
+<li class="">根据工作集大小(逻辑页面集合), 为该进程分配常驻集(合适数目的物理页面集合): 若常驻集 > 工作集, 则缺页率较低</li>
+<li class="">再额外维护一个类希 LRU 算法中的访存链表, 记录近期访问过的物理页面, 将其也加入常驻集</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=缺页率>缺页率<a href=#缺页率 class=hash-link aria-label="Direct link to 缺页率" title="Direct link to 缺页率" translate=no>​</a></h4>
+<p>当缺页频繁时, 缺页时将缺页的页面加入常驻集; 当缺页不频繁时, 缺页时将不属于工作集的页面移出常驻集</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=toolchain>Toolchain<a href=#toolchain class=hash-link aria-label="Direct link to Toolchain" title="Direct link to Toolchain" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=perf>Perf<a href=#perf class=hash-link aria-label="Direct link to Perf" title="Direct link to Perf" translate=no>​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=trace>Trace<a href=#trace class=hash-link aria-label="Direct link to Trace" title="Direct link to Trace" translate=no>​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=vmstat>Vmstat<a href=#vmstat class=hash-link aria-label="Direct link to Vmstat" title="Direct link to Vmstat" translate=no>​</a></h3>
+<p>check usage of virtual memory and swap region</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token function" style=color:#d73a49>vmstat</span><span class="token plain"> </span><span class="token number" style=color:#36acaa>2</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=pmap>Pmap<a href=#pmap class=hash-link aria-label="Direct link to Pmap" title="Direct link to Pmap" translate=no>​</a></h3>
+<p>check detailed usage of memory</p>
+<div class="language-bash codeBlockContainer_dIby theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_qQ2k><pre tabindex=0 class="prism-code language-bash codeBlock_wuTj thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines__eLa><span class=token-line style=color:#393A34><span class="token plain">pmap PID</span><br/></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=hot-plug>Hot Plug<a href=#hot-plug class=hash-link aria-label="Direct link to Hot Plug" title="Direct link to Hot Plug" translate=no>​</a></h3>
+<p>Memory hotplug user <a href=http://www.kernel.org/doc/Documentation/memory-hotplug.txt target=_blank rel="noopener noreferrer" class="">guide</a>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=tcmalloc>TCMalloc<a href=#tcmalloc class=hash-link aria-label="Direct link to TCMalloc" title="Direct link to TCMalloc" translate=no>​</a></h3>
+<p>Google TCMalloc.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=oprofile>Oprofile<a href=#oprofile class=hash-link aria-label="Direct link to Oprofile" title="Direct link to Oprofile" translate=no>​</a></h3>
+<p>Oprofile user <a href=http://oprofile.sourceforge.net target=_blank rel="noopener noreferrer" class="">guide</a>.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class=col><b>Tags:</b><ul class="tags_cGDs padding--none margin-left--sm"><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/cs>CS</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/system>System</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/os>OS</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/memory>Memory</a></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_AxGk"><a href=https://github.com/sabertazimi/notes/edit/main/content/cs/os/memory.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_dNJ2 aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_h9KE"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-01-27T12:48:04.000Z itemprop=dateModified>Jan 27, 2026</time></b> by <b>Sabertaz</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/notes/cs/os/concurrency><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Concurrency</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/notes/cs/os/device-io><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Device I/O</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_n7kj thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#boot-loader class="table-of-contents__link toc-highlight">Boot Loader</a><ul><li><a href=#target class="table-of-contents__link toc-highlight">Target</a><li><a href=#方式 class="table-of-contents__link toc-highlight">方式</a><li><a href=#探测机器内存分布 class="table-of-contents__link toc-highlight">探测机器内存分布</a><li><a href=#地址生成 class="table-of-contents__link toc-highlight">地址生成</a><li><a href=#地址映射 class="table-of-contents__link toc-highlight">地址映射</a><li><a href=#地址检查 class="table-of-contents__link toc-highlight">地址检查</a></ul><li><a href=#特权级 class="table-of-contents__link toc-highlight">特权级</a><ul><li><a href=#检查 class="table-of-contents__link toc-highlight">检查</a><li><a href=#切换 class="table-of-contents__link toc-highlight">切换</a><li><a href=#tss class="table-of-contents__link toc-highlight">TSS</a></ul><li><a href=#连续分配 class="table-of-contents__link toc-highlight">连续分配</a><ul><li><a href=#内存碎片 class="table-of-contents__link toc-highlight">内存碎片</a><li><a href=#动态分配 class="table-of-contents__link toc-highlight">动态分配</a><li><a href=#碎片整理 class="table-of-contents__link toc-highlight">碎片整理</a></ul><li><a href=#ucore class="table-of-contents__link toc-highlight">Ucore</a><ul><li><a href=#紧凑 class="table-of-contents__link toc-highlight">紧凑</a><li><a href=#分区对换 class="table-of-contents__link toc-highlight">分区对换</a></ul><li><a href=#malloc class="table-of-contents__link toc-highlight">Malloc</a><ul><li><a href=#启发式编程 class="table-of-contents__link toc-highlight">启发式编程</a><li><a href=#伙伴系统 class="table-of-contents__link toc-highlight">伙伴系统</a></ul><li><a href=#非连续分配 class="table-of-contents__link toc-highlight">非连续分配</a><li><a href=#段式 class="table-of-contents__link toc-highlight">段式</a><ul><li><a href=#gdt class="table-of-contents__link toc-highlight">GDT</a></ul><li><a href=#页式 class="table-of-contents__link toc-highlight">页式</a><ul><li><a href=#虚拟地址 class="table-of-contents__link toc-highlight">虚拟地址</a><li><a href=#物理地址 class="table-of-contents__link toc-highlight">物理地址</a><li><a href=#页表 class="table-of-contents__link toc-highlight">页表</a><li><a href=#tlb class="table-of-contents__link toc-highlight">TLB</a><li><a href=#多级页表 class="table-of-contents__link toc-highlight">多级页表</a><li><a href=#反置页表 class="table-of-contents__link toc-highlight">反置页表</a></ul><li><a href=#段页式 class="table-of-contents__link toc-highlight">段页式</a><li><a href=#虚拟页式 class="table-of-contents__link toc-highlight">虚拟页式</a><li><a href=#page-fault class="table-of-contents__link toc-highlight">Page Fault</a><ul><li><a href=#覆盖 class="table-of-contents__link toc-highlight">覆盖</a><li><a href=#交换 class="table-of-contents__link toc-highlight">交换</a><li><a href=#标志位 class="table-of-contents__link toc-highlight">标志位</a><li><a href=#局部置换 class="table-of-contents__link toc-highlight">局部置换</a><li><a href=#全局置换 class="table-of-contents__link toc-highlight">全局置换</a></ul><li><a href=#toolchain class="table-of-contents__link toc-highlight">Toolchain</a><ul><li><a href=#perf class="table-of-contents__link toc-highlight">Perf</a><li><a href=#trace class="table-of-contents__link toc-highlight">Trace</a><li><a href=#vmstat class="table-of-contents__link toc-highlight">Vmstat</a><li><a href=#pmap class="table-of-contents__link toc-highlight">Pmap</a><li><a href=#hot-plug class="table-of-contents__link toc-highlight">Hot Plug</a><li><a href=#tcmalloc class="table-of-contents__link toc-highlight">TCMalloc</a><li><a href=#oprofile class="table-of-contents__link toc-highlight">Oprofile</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Notes</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/notes/ai>AI</a><li class=footer__item><a class=footer__link-item href=/notes/cs>CS</a><li class=footer__item><a class=footer__link-item href=/notes/web>Web</a><li class=footer__item><a class=footer__link-item href=/notes/language>Language</a><li class=footer__item><a class=footer__link-item href=/notes/programming>Programming</a><li class=footer__item><a class=footer__link-item href=/notes/web/library>Library Gallery</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Social Media</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://x.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>X<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://facebook.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://weibo.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Weibo<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=mailto:sabertazimi@gmail.com target=_blank rel="noopener noreferrer" class=footer__link-item>Email<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Find More</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi/blog target=_blank rel="noopener noreferrer" class=footer__link-item>Next.js Blog<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/lab target=_blank rel="noopener noreferrer" class=footer__link-item>Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/bod target=_blank rel="noopener noreferrer" class=footer__link-item>Bod CLI<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/doftiles target=_blank rel="noopener noreferrer" class=footer__link-item>Dotfiles<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/LaTeX-snippets target=_blank rel="noopener noreferrer" class=footer__link-item>LaTeX Snippets<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/hust-lab target=_blank rel="noopener noreferrer" class=footer__link-item>HUST Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Sabertaz</div></div></div></footer></div></body>

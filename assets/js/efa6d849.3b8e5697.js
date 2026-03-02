@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["30643"],{86371(e){e.exports=JSON.parse('{"tag":{"label":"Internet","permalink":"/notes/tags/internet","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/internet","title":"Internet","description":"Consist","permalink":"/notes/web/network/internet"}],"unlisted":false}}')}}]);

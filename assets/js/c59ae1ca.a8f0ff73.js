@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["58976"],{75569(e){e.exports=JSON.parse('{"tag":{"label":"UDP","permalink":"/notes/tags/udp","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/udp","title":"UDP","description":"Protocol","permalink":"/notes/web/network/udp"}],"unlisted":false}}')}}]);

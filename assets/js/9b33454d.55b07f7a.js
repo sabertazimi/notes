@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["50922"],{18498(s){s.exports=JSON.parse('{"tag":{"label":"Shadow","permalink":"/notes/tags/shadow","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/shadow","title":"Shadow","description":"Text Shadow","permalink":"/notes/web/css/shadow"}],"unlisted":false}}')}}]);

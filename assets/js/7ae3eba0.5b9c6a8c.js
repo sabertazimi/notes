@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["26618"],{98001(e){e.exports=JSON.parse('{"tag":{"label":"Outline","permalink":"/notes/tags/outline","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/border","title":"Border","description":"Radius","permalink":"/notes/web/css/border"}],"unlisted":false}}')}}]);

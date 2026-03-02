@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["72699"],{44102(e){e.exports=JSON.parse('{"tag":{"label":"Lexical","permalink":"/notes/tags/lexical","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/compilers/lexical","title":"Lexical Analysis","description":"Tokenizer","permalink":"/notes/cs/compilers/lexical"}],"unlisted":false}}')}}]);

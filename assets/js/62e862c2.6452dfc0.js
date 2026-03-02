@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["8084"],{35392(s){s.exports=JSON.parse('{"tag":{"label":"Simulation","permalink":"/notes/tags/simulation","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/algorithms/simulation","title":"Simulation","description":"Zig Zag","permalink":"/notes/cs/algorithms/simulation"}],"unlisted":false}}')}}]);

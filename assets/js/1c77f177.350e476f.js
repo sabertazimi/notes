@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["2417"],{75957(s){s.exports=JSON.parse('{"tag":{"label":"Anchor","permalink":"/notes/tags/anchor","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/position","title":"Position","description":"Static","permalink":"/notes/web/css/position"}],"unlisted":false}}')}}]);

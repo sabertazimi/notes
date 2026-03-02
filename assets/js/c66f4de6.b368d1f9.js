@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["24634"],{8924(e){e.exports=JSON.parse('{"tag":{"label":"Number","permalink":"/notes/tags/number","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/number","title":"Number","description":"- Binary: 0b10/0B10.","permalink":"/notes/web/javascript/number"}],"unlisted":false}}')}}]);

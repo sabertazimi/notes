@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["74966"],{48729(t){t.exports=JSON.parse('{"tag":{"label":"Plot","permalink":"/notes/tags/plot","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/plot","title":"Plot","description":"Types","permalink":"/notes/ai/python/plot"}],"unlisted":false}}')}}]);

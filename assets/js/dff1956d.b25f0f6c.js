@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["3179"],{30108(a){a.exports=JSON.parse('{"tag":{"label":"Angular","permalink":"/notes/tags/angular","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/angular/angular","title":"Angular","description":"Commands","permalink":"/notes/web/angular/"}],"unlisted":false}}')}}]);

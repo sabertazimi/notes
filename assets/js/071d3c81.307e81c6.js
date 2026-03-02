@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["18305"],{81369(e){e.exports=JSON.parse('{"tag":{"label":"CSRF","permalink":"/notes/tags/csrf","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/csrf","title":"CSRF","description":"Attack","permalink":"/notes/web/security/csrf"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["25806"],{29706(e){e.exports=JSON.parse('{"tag":{"label":"Hero","permalink":"/notes/tags/hero","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/components/hero","title":"Hero","description":"Jumbotron","permalink":"/notes/web/css/components/hero"}],"unlisted":false}}')}}]);

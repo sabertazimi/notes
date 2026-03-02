@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["6043"],{93534(s){s.exports=JSON.parse('{"tag":{"label":"CSSOM","permalink":"/notes/tags/cssom","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/cssom","title":"CSSOM","description":"CSS Object Model","permalink":"/notes/web/javascript/cssom"}],"unlisted":false}}')}}]);

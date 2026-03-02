@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["67033"],{45126(e){e.exports=JSON.parse('{"tag":{"label":"Inline","permalink":"/notes/tags/inline","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/inline","title":"Inline Element","description":"Height","permalink":"/notes/web/css/inline"}],"unlisted":false}}')}}]);

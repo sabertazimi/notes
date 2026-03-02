@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["71390"],{67277(e){e.exports=JSON.parse('{"tag":{"label":"Gradient","permalink":"/notes/tags/gradient","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/gradient","title":"Gradient","description":"Color Stop List","permalink":"/notes/web/css/gradient"}],"unlisted":false}}')}}]);

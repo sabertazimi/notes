@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["7743"],{58709(s){s.exports=JSON.parse('{"tag":{"label":"Step","permalink":"/notes/tags/step","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/components/display","title":"Display","description":"Table","permalink":"/notes/web/css/components/display"}],"unlisted":false}}')}}]);

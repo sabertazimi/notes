@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["68008"],{68575(e){e.exports=JSON.parse('{"tag":{"label":"Access","permalink":"/notes/tags/access","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/access","title":"Access Network","description":"ADSL","permalink":"/notes/web/network/access"}],"unlisted":false}}')}}]);

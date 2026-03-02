@@ -1,0 +1,1875 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cs/math/mahjong" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Mahjong | Personal Notes</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://tazimi.dev/notes/cs/math/mahjong /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Mahjong | Personal Notes"/><meta data-rh=true name=description content=牌效 /><meta data-rh=true property=og:description content=牌效 /><link data-rh=true rel=icon href=/notes/img/logo.svg /><link data-rh=true rel=canonical href=https://tazimi.dev/notes/cs/math/mahjong /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/math/mahjong hreflang=en /><link data-rh=true rel=alternate href=https://tazimi.dev/notes/cs/math/mahjong hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/","name":"CS","position":1},{"@type":"ListItem","item":"https://tazimi.dev/notes/cs/math/mahjong","name":"Mahjong","position":2}]}</script><link rel=stylesheet href=/notes/assets/css/styles.fe402815.css /><script src=/notes/assets/js/runtime~main.bff74981.js defer></script><script src=/notes/assets/js/main.105cc82a.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/notes/img/logo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_a95V href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_kMqm"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/notes/><div class=navbar__logo><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/></div><b class="navbar__title text--truncate">TIL</b></a><a class="navbar__item navbar__link" href=/notes/intro>Notes</a><a class="navbar__item navbar__link" href=/notes/ai>AI</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/notes/cs>CS</a><a class="navbar__item navbar__link" href=/notes/web>Web</a><a class="navbar__item navbar__link" href=/notes/language>Language</a><a class="navbar__item navbar__link" href=/notes/programming>Programming</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href=/notes/web/library>Library Gallery</a><a href=https://github.com/sabertazimi/notes target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><div class="toggle_xd5f colorModeToggle_uCEc"><button class="clean-btn toggleButton_uz0f toggleButtonDisabled_XkyR" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX lightToggleIcon_oj6Y"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX darkToggleIcon_H9YQ"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_vzhX systemToggleIcon_r7TJ"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_aifg><div class="navbar__search searchBarContainer_W0oD" dir=ltr><input placeholder=Search aria-label=Search class="navbar__search-input searchInput_juq5" value="" /><div class="loadingRing_rex3 searchBarLoadingRing_Y3Tw"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_rrKs"><div class=docsWrapper_NtUm><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_gzdI" type=button></button><div class=docRoot_PGsa><aside class="theme-doc-sidebar-container docSidebarContainer_aiRL"><div class=sidebarViewport_MLO7><div class="sidebar_G9Wb sidebarWithHideableNavbar_cKbE"><a tabindex=-1 class=sidebarLogo_mVm8 href=/notes/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--light_KUAm"/><img src=/notes/img/logo.svg alt="Today I Learned" class="themedComponent_Qz9N themedComponent--dark_sg19"/><b>TIL</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_CqPf"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/notes/intro><span title=Notes class=linkLabel_k54U>Notes</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/ai/><span title=AI class=categoryLinkLabel_QKTQ>AI</span></a><button aria-label="Expand sidebar category 'AI'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--active" href=/notes/cs/><span title=CS class=categoryLinkLabel_QKTQ>CS</span></a><button aria-label="Collapse sidebar category 'CS'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/algorithms/><span title=Algorithms class=categoryLinkLabel_QKTQ>Algorithms</span></a><button aria-label="Expand sidebar category 'Algorithms'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/architecture/><span title=Architecture class=linkLabel_k54U>Architecture</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/compilers/><span title=Compiler class=categoryLinkLabel_QKTQ>Compiler</span></a><button aria-label="Expand sidebar category 'Compiler'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/database/><span title=Database class=categoryLinkLabel_QKTQ>Database</span></a><button aria-label="Expand sidebar category 'Database'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/graph/><span title="Graph Processing" class=linkLabel_k54U>Graph Processing</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/latex/><span title=LaTeX class=linkLabel_k54U>LaTeX</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/notes/cs/math/economics><span title=Math class=categoryLinkLabel_QKTQ>Math</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/math/economics><span title=Economics class=linkLabel_k54U>Economics</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/notes/cs/math/mahjong><span title=Mahjong class=linkLabel_k54U>Mahjong</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" tabindex=0 href=/notes/cs/os/><span title="Operating System" class=categoryLinkLabel_QKTQ>Operating System</span></a><button aria-label="Expand sidebar category 'Operating System'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/notes/cs/virtualization/><span title=Virtualization class=linkLabel_k54U>Virtualization</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/web/><span title=Web class=categoryLinkLabel_QKTQ>Web</span></a><button aria-label="Expand sidebar category 'Web'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/language/><span title=Language class=categoryLinkLabel_QKTQ>Language</span></a><button aria-label="Expand sidebar category 'Language'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_UNzj menu__link menu__link--sublist" href=/notes/programming/><span title=Programming class=categoryLinkLabel_QKTQ>Programming</span></a><button aria-label="Expand sidebar category 'Programming'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_fXvC"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_wrAS><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_Yxco><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_yicr"><div class=docItemContainer_qgPh><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_ZDU1" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/notes/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_bQmg><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/notes/cs/><span>CS</span></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Math</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Mahjong</span></ul></nav><div class="tocCollapsible_H0gK theme-doc-toc-mobile tocMobile_t31C"><button type=button class="clean-btn tocCollapsibleButton_mPmr">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Mahjong</h1></header>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=牌效>牌效<a href=#牌效 class=hash-link aria-label="Direct link to 牌效" title="Direct link to 牌效" translate=no>​</a></h2>
+<p>基于 <strong>向听数</strong> 与 <strong>进张数</strong>, 适当考虑 <strong>打点</strong>:</p>
+<ul>
+<li class="">摸入后可以减少向听数的牌称为<strong>进张</strong>.</li>
+<li class="">摸入后可以增加进张数的牌称为<strong>改良</strong>.</li>
+<li class=""><strong>进张</strong>与<strong>改良</strong>合称为<strong>有效牌</strong>.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=单张牌效>单张牌效<a href=#单张牌效 class=hash-link aria-label="Direct link to 单张牌效" title="Direct link to 单张牌效" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=单张切牌顺序>单张切牌顺序<a href=#单张切牌顺序 class=hash-link aria-label="Direct link to 单张切牌顺序" title="Direct link to 单张切牌顺序" translate=no>​</a></h4>
+<ul>
+<li class="">客风牌:<!-- -->
+<ul>
+<li class="">一般情况, 按<code>东南西北</code>顺序切客风牌.</li>
+<li class="">考虑场况, 优先切<code>直接竞争家</code>客风牌.</li>
+</ul>
+</li>
+<li class=""><code>14</code>/<code>69</code> 中的 <code>1</code> 与 <code>9</code>:<!-- -->
+<ul>
+<li class="">客风牌 -> <code>1</code>/<code>9</code>: 不暴露 <code>4</code>/<code>6</code>.</li>
+<li class=""><code>1</code>/<code>9</code> -> 客风牌: 保留客风安全牌.</li>
+<li class="">无固定雀头时, <code>14</code>/<code>69</code> 强于客风牌.</li>
+<li class="">有固定雀头时, <code>14</code>/<code>69</code> 弱于客风牌.</li>
+</ul>
+</li>
+<li class=""><code>1</code> <code>9</code>.</li>
+<li class="">役牌: 场风牌 -> 三元牌 -> 自风牌 -> 双风牌.</li>
+<li class=""><code>2</code> <code>8</code>.</li>
+<li class=""><code>3</code> <code>4</code> <code>5</code> <code>6</code> <code>7</code>.</li>
+</ul>
+<p><img decoding=async loading=lazy alt=单张切牌顺序 src=/notes/assets/images/one-5fae083f221aca5d156b889b0827ea0e.jpg title=单张切牌顺序 width=898 height=151 class=img_ckm9 /></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=单张切牌技巧>单张切牌技巧<a href=#单张切牌技巧 class=hash-link aria-label="Direct link to 单张切牌技巧" title="Direct link to 单张切牌技巧" translate=no>​</a></h4>
+<ul>
+<li class="">相同进张: 搭子直接摸切, 面子<strong>空切</strong>:<!-- -->
+<ul>
+<li class="">Slide: 使对手误以为面子靠张危险. 同时存在<strong>改良打点</strong>可能 (宝牌靠张/断幺九/三色同顺).</li>
+<li class="">Reset: 重置对手安全牌判断.</li>
+</ul>
+</li>
+<li class="">尽早切掉连筋孤张:<!-- -->
+<ul>
+<li class="">有效牌重复效应.</li>
+<li class="">中晚巡易放铳.</li>
+</ul>
+</li>
+<li class="">靠近顺子的浮牌价值上升, 靠近搭子的浮牌价值下降.</li>
+<li class="">搭子<strong>足够</strong> + 打点<strong>足够</strong> (不需要宝牌/三色靠张) 时,
+优先切<strong>高危险度</strong>孤张 (宝牌/中张靠张/生张字牌):<!-- -->
+<ul>
+<li class="">优先切<strong>场风/三元牌</strong>， 保留<strong>客风牌</strong>, 防止他人鸣役牌, 保留安全牌与平和可能.</li>
+<li class="">优先切中张靠张, 保留高威胁对手现物, 增强手牌防守力.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=对子牌效>对子牌效<a href=#对子牌效 class=hash-link aria-label="Direct link to 对子牌效" title="Direct link to 对子牌效" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=对子基本牌效>对子基本牌效<a href=#对子基本牌效 class=hash-link aria-label="Direct link to 对子基本牌效" title="Direct link to 对子基本牌效" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>早巡</strong>不应固定雀头, 应该把雀头拆开和其他牌组成搭子, <strong>中晚巡</strong>自然进张形成雀头或切牌固定雀头.</li>
+<li class="">愚形复合形包含<strong>唯一雀头</strong>时, 可以考虑固定雀头 (e.g. <code>112</code>).</li>
+<li class="">役牌为<strong>唯一雀头</strong>时, 若牌形较好(一向听), 且立直门清打点显著高于役牌打点, 则不急于鸣役牌.</li>
+<li class="">客风对子:<!-- -->
+<ul>
+<li class="">攻可作雀头听平和, 守可作安牌防一发.</li>
+<li class="">若对子或搭子超载, 可以优先切掉客风对子作断幺九手役.</li>
+</ul>
+</li>
+<li class="">非现物中张对子进张十分困难, 高概率<strong>牌山 0 枚残</strong> (对手手牌有一组对子).</li>
+<li class="">绝张对子: 没有双碰进张只能作雀头, 搭子超载时可以优先切掉绝张对子.</li>
+<li class="">对子超载二择:<!-- -->
+<ul>
+<li class="">偏向门清的手牌, 保留中张对子, 最大化改良可能.</li>
+<li class="">偏向副露的手牌, 保留幺九对子, 最大化副露可能.</li>
+<li class="">e.g. 门清断幺九手牌 <code>44</code> 优于 <code>22</code>, <code>44</code> 存在 <code>34</code> / <code>45</code> 两种改良.</li>
+<li class="">e.g. 副露断幺九手牌 <code>22</code> 优于 <code>44</code>, <code>22</code> 更容易鸣牌.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=两对子牌效>两对子牌效<a href=#两对子牌效 class=hash-link aria-label="Direct link to 两对子牌效" title="Direct link to 两对子牌效" translate=no>​</a></h4>
+<ul>
+<li class="">两对子存在双碰进张, 是快速听牌的诀窍.</li>
+<li class="">存在愚形与两对子时, 优先保留两对子改良好形可能.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=三对子牌效>三对子牌效<a href=#三对子牌效 class=hash-link aria-label="Direct link to 三对子牌效" title="Direct link to 三对子牌效" translate=no>​</a></h4>
+<ul>
+<li class="">三对子相比于两对子, 仅增加 2 张刻子进张.</li>
+<li class="">有役时 (役牌, 断幺九, 对对和):<!-- -->
+<ul>
+<li class="">考虑保留三组对子, 可将<strong>碰</strong>作为进张手段, 三对子可作为<strong>快速听牌</strong>手段.</li>
+</ul>
+</li>
+<li class="">两向听时:<!-- -->
+<ul>
+<li class=""><strong>一向听顶峰理论</strong>: 最大化<strong>一向听进张</strong>数, 在两向听时可考虑保留三组对子, 切掉较弱三牌复合形.</li>
+</ul>
+</li>
+<li class="">门清时 (立直或平和):<!-- -->
+<ul>
+<li class="">考虑切掉一组对子 (同时保证不退向): 切两面对 -> 切坎张对 -> 切边张对.</li>
+<li class="">考虑<strong>向内靠拢</strong>, 切幺九对.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=四对子牌效>四对子牌效<a href=#四对子牌效 class=hash-link aria-label="Direct link to 四对子牌效" title="Direct link to 四对子牌效" translate=no>​</a></h4>
+<p>四对子: 进张较差时, 可考虑七对子手役.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=搭子牌效>搭子牌效<a href=#搭子牌效 class=hash-link aria-label="Direct link to 搭子牌效" title="Direct link to 搭子牌效" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=搭子基本牌效>搭子基本牌效<a href=#搭子基本牌效 class=hash-link aria-label="Direct link to 搭子基本牌效" title="Direct link to 搭子基本牌效" translate=no>​</a></h4>
+<ul>
+<li class="">搭子强度: 两面 > 两坎 > 坎张 > 边张.</li>
+<li class="">副露手牌, 双碰进张优于两坎进张, <strong>碰</strong>的几率远大于<strong>吃</strong>.</li>
+<li class=""><strong>高向听</strong>时, 禁止切掉唯一一组雀头 (切掉后会导致退向).</li>
+<li class=""><strong>奇数</strong>枚有利: 3/5/7 张同色牌比偶数枚更优.</li>
+<li class="">四连形, 中膨形, 亚两面形混合时, <strong>切掉亚两面形</strong>, 高概率是正解.</li>
+<li class="">多种复合形混合成复杂形状时, <strong>保留复杂形状, 切牌固定两面搭子或完整面子</strong>, 高概率是正解.</li>
+<li class="">早巡重视改良数与速度, 中巡重视进张数与安全度.</li>
+<li class="">中巡好形搭子足够时, 可考虑<strong>保留安全牌</strong>进行防守, 亦可用安全牌进行追立:
+完全一向听时, 上张熟张字牌, 可以考虑切掉两面对中的对子补强牌 (仅损失 2 枚非平和进张),
+保留熟张字牌 (<strong>安全牌</strong>), 切掉<strong>危险两面对</strong> (牌河较少同色牌) 中的对子补强牌,
+攻可切字牌安全立直, 守可作安牌防止一发.</li>
+</ul>
+<p><strong>有效牌重复</strong>效应:</p>
+<ul>
+<li class="">筋牌: <code>147</code>, <code>258</code>, <code>369</code> 同一筋上存在有效牌重复效应.</li>
+<li class="">边张: <code>14</code> / <code>69</code> 存在时, <code>1</code> <code>9</code> 价值甚至低于客风牌.</li>
+<li class="">存在二度进张的边张搭子, 切掉边张搭子保留浮牌比较有利.</li>
+<li class=""><code>14</code> 进 <code>2</code>/<code>3</code>, 形成 <code>124</code>/<code>134</code>, 仍然切 <code>1</code>, 所以可以在 <code>14</code> 时就切 <code>1</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=五搭子理论>五搭子理论<a href=#五搭子理论 class=hash-link aria-label="Direct link to 五搭子理论" title="Direct link to 五搭子理论" translate=no>​</a></h4>
+<p><strong>五搭子理论</strong> - 五搭子饱和, 六搭子不利:</p>
+<ul>
+<li class="">五搭子形基本上只要切掉价值最低的浮牌.</li>
+<li class="">打点足够时重视好形搭子, 保留浮牌寻求<strong>好形改良</strong>, 最大化进张数.</li>
+<li class="">打点不足时重视手役搭子, 保留浮牌寻求<strong>打点改良</strong>, 提升手牌打点.</li>
+<li class="">六搭子 (6 Block):
+保留用于形状改良 (存在愚形搭子) 与打点改良 (断平三色可能)
+的孤张浮牌或超载搭子,
+防止手牌形成低打点愚形听牌.</li>
+<li class=""><strong>低效率二度进张</strong>:
+考虑有效牌重复效应, 可以切掉同色超载搭子 (进张数损失最小).
+如 <code>1245</code> 二度进张 <code>3</code>, <code>3467</code> 二度进张 <code>5</code>.</li>
+</ul>
+<p>搭子超载时, 优先切掉弱搭子:</p>
+<ul>
+<li class=""><strong>搭子评价标准</strong>:<!-- -->
+<ul>
+<li class="">进张枚数.</li>
+<li class="">形状改良枚数.</li>
+<li class="">打点改良枚数.</li>
+<li class="">和牌难易度.</li>
+<li class="">和牌残枚数.</li>
+</ul>
+</li>
+<li class="">强搭子:
+<strong>复合形</strong>,
+两面搭,
+两坎搭,
+<strong>宝牌搭</strong>,
+役牌搭,
+<strong>三色搭</strong>,
+染手搭.</li>
+<li class="">弱搭子:
+坎张搭 (中张坎 > 尖张坎 > 边张坎, e.g. <code>35</code> > <code>13</code> > <code>24</code>),
+边张搭,
+损失手役牌 (幺九牌),
+<strong>绝张搭</strong> (e.g. 损失四枚 <code>2</code> 的 <code>34</code> 两面搭, 损失两枚的双碰进张).</li>
+<li class="">全好形时, 优先<strong>切掉中张浮张</strong> (降低手牌危险度), 然后切掉超载搭子.</li>
+<li class="">存在愚形时, 优先切掉最弱搭子, <strong>保留中张浮张</strong>, 后续形成好形搭子后, 继续切掉最弱搭子, 直至剩下至多五组搭子.</li>
+<li class="">存在愚形与<strong>两对子</strong>时, 可以切掉愚形搭子, 保留中张对子形成好形搭子后, 另一组对子可作雀头.</li>
+<li class="">存在复合形时, 可以先切边张: 价值低.</li>
+<li class="">不存在复合形时, 可以先切中张: 危险度高.</li>
+</ul>
+<p><strong>超载对子</strong>二择:</p>
+<ul>
+<li class="">两对子二择: 切中张对子退回浮牌, 保留中张浮牌周边改良.</li>
+<li class="">三对子二择: 切幺九对子退回浮牌, 保留中张对子周边改良, 保留幺九安全牌.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=三牌复合形>三牌复合形<a href=#三牌复合形 class=hash-link aria-label="Direct link to 三牌复合形" title="Direct link to 三牌复合形" translate=no>​</a></h3>
+<ul>
+<li class="">两面对: <code>233</code>.</li>
+<li class="">坎张对: <code>244</code>.</li>
+<li class="">边张对: <code>122</code>.</li>
+<li class="">两坎形: <code>246</code>.<!-- -->
+<ul>
+<li class="">两面两坎形: <code>2</code> + <code>456</code> + <code>67</code> -> <code>246</code> + <code>567</code>.</li>
+<li class="">长两坎形: <code>134568</code>, 进 <code>2</code> 或 <code>7</code> 都可形成两面子.</li>
+<li class="">弱于两面搭子: 需要 3 张牌, 听牌形为坎张听.</li>
+</ul>
+</li>
+<li class="">坎张对利于副露鸣牌, 两坎形利于门清平和.</li>
+</ul>
+<p>搭子进张成为搭子 + 对子复合形, 称该进张为<strong>补强牌</strong>:</p>
+<ul>
+<li class="">两对子双碰:
+当出现两组复合形二择时,
+切掉<strong>搭子部位较弱</strong>的复合形的<strong>搭子</strong>,
+固定两对子双碰牌形.</li>
+<li class="">三对子不利:
+当出现三对子 (特别是<strong>门清一向听</strong>) 时,
+切掉<strong>搭子部位较强</strong>的复合形的<strong>对子</strong> (e.g. 两面对),
+<strong>让补强牌辅助较弱的搭子</strong>,
+固定强搭子牌形 (两面对 - 对子补强牌 = 两面搭),
+即<strong>固定好形</strong>.
+其中, 四连形与亚两面形都可以看作雀头候补形.</li>
+<li class="">副露作牌时, 可以适当保留三对子, 碰听加速胡牌:<!-- -->
+<ul>
+<li class="">愚形较多.</li>
+<li class="">双东对子.</li>
+<li class="">宝牌对子.</li>
+</ul>
+</li>
+</ul>
+<p><code>13345667m</code> + <code>123788s</code>:</p>
+<p>先根据五块理论与中膨复合形, 将手牌分为 <code>133m</code> + <code>456m</code> + <code>67m</code> + <code>123s</code> + <code>788s</code>.
+可以此时已经形成了有效的五块搭子, 需要切掉两个三牌复合形中的一个, 保持张数的正收益.
+对于<code>对子</code> + <code>搭子</code>的复合形, 可以采取固定好形的策略, 切掉 <code>8s</code>, 固定 <code>78s</code> 两面形.
+显然切掉 <code>3m</code> 去固定 <code>13m</code> 坎张是低效率的切法.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=四牌复合形>四牌复合形<a href=#四牌复合形 class=hash-link aria-label="Direct link to 四牌复合形" title="Direct link to 四牌复合形" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=四连形>四连形<a href=#四连形 class=hash-link aria-label="Direct link to 四连形" title="Direct link to 四连形" translate=no>​</a></h4>
+<p>又称延伸单骑, 具有良好<strong>延展性</strong>:</p>
+<ul>
+<li class="">好形: <code>3456</code> -> <code>34</code> + <code>56</code>, 常常将其视为<strong>两面 + 两面</strong>, 而不是单骑进张.</li>
+<li class="">次好形: <code>1234</code> -> <code>123</code> + <code>4</code>, 常常将其视为单骑进张, 而不是<strong>边张 + 两面</strong>.</li>
+<li class=""><code>3456</code> 与 <code>4567</code> 8 种 28 枚进张, 进张数最多的四牌复合形.</li>
+<li class="">缺少搭子或<strong>存在愚形</strong>时, 四连形具有良好<strong>延展性</strong>, 容易形成新的<strong>两面搭</strong>, <code>4567</code> -> <code>34567</code> / <code>45667</code>.</li>
+<li class="">缺少对子时, 四连形具有良好<strong>延展性</strong>, 容易形成新的<strong>雀头</strong>, <code>4567</code> -> <code>44 567</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=中膨形>中膨形<a href=#中膨形 class=hash-link aria-label="Direct link to 中膨形" title="Direct link to 中膨形" translate=no>​</a></h4>
+<ul>
+<li class="">进张: 五种进张, <code>3445</code> 存在 <code>23456</code> 进张.</li>
+<li class="">好形: <code>3445</code> -> <code>34</code> + <code>45</code>, 两面 + 一杯口, <strong>好形进张 + 一杯口进张</strong>.</li>
+<li class="">缺少搭子或<strong>存在愚形</strong>时, 中膨具有良好<strong>延展性</strong>, 容易形成新的<strong>两面搭</strong>, <code>4556</code> -> <code>34556</code> / <code>45566</code>.</li>
+<li class=""><strong>恶形</strong>: <code>1223</code> -> <code>123</code> + <code>2</code>, 价值较低, 接近于单张 <code>2</code>, 不存在连续形时, 可优先切掉 <code>2</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=亚两面形>亚两面形<a href=#亚两面形 class=hash-link aria-label="Direct link to 亚两面形" title="Direct link to 亚两面形" translate=no>​</a></h4>
+<ul>
+<li class=""><code>3345</code> -> <code>34</code> + <code>35</code> / <code>33</code> + <code>45</code> / <code>3</code> + <code>345</code>.</li>
+<li class="">缺少对子时, <code>3345</code> 有一定价值, 稍稍高于单张 <code>3</code>.</li>
+<li class="">不缺对子时, <code>3345</code> 价值较低, 接近于单张 <code>3</code>, 可优先切掉 <code>3</code>, 保留其他复合形.</li>
+<li class=""><strong>恶形</strong>: <code>1123</code> 价值接近于单张 <code>1</code>, <code>7899</code> 价值接近于单张 <code>9</code>.</li>
+<li class="">总体来说, 亚两面形作两面能力<strong>与孤张无太大区别</strong>.</li>
+<li class=""><code>3345</code> -> <code>34</code> + <code>35</code>, 可以通过鸣牌改良成 <code>34</code> 两面.</li>
+<li class="">亚两面形可以直接用于听牌, 存在转二杯口可能性, 可以形成 <code>33345</code> 暗刻复合形.</li>
+</ul>
+<table><thead><tr><th>复合形<th>靠张<th>两面<th>坎张<th>双碰 (雀头)<tbody><tr><td>四连形 <code>3456</code><td>1~8<td>2457<td>18<td>36<tr><td>中膨形 <code>3445</code><td>2~6<td>2356<td><td>4<tr><td>亚两面形 <code>3345</code><td>1~6<td>24<td>15<td>36</table>
+<table><thead><tr><th>复合形<th>进张数<th>好形率<th>雀头固定形<th>雀头流动形<tbody><tr><td>四连形<td>S<td>A<td>A<td>S<tr><td>中膨形<td>B<td>S<td>S<td>B<tr><td>亚两面形<td>A<td>B<td>B<td>A</table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=跳一形>跳一形<a href=#跳一形 class=hash-link aria-label="Direct link to 跳一形" title="Direct link to 跳一形" translate=no>​</a></h4>
+<ul>
+<li class=""><code>3567</code> -> <code>35</code> + <code>67</code>.</li>
+<li class=""><code>1235</code>/<code>5789</code> 接近于孤张 <code>5</code>.</li>
+<li class=""><code>1345</code>/<code>5679</code> 中的 <code>1</code>/<code>9</code> 比孤张 <code>1</code>/<code>2</code>/<code>8</code>/<code>9</code> <strong>强</strong>.</li>
+<li class=""><code>5679</code>: <code>9</code> <strong>不再</strong>受制于重复牌效应, 进 <code>8</code> 可以形成五连形好形, 形成 <code>56</code> 两面搭.</li>
+<li class=""><code>3457</code> 可以形成好形 <code>34567</code>, 利用<strong>吃</strong>可以形成两面子.</li>
+<li class="">靠张一向听时, <strong>暗刻跳一形</strong>牌效差 (e.g. <code>1113s</code> 切 <code>3s</code>, 保留其他两张浮牌).</li>
+<li class="">各种形状的跳一形 (三连跳一形, 两面对跳一形, 四连跳一形, 中膨跳一形, 亚两面跳一形, 暗刻跳一形, 五连跳一形)
+在搭子不足时可以形成新的好形搭子, 当搭子足够时牌效较差, 切掉跳一<strong>浮张</strong>进张损失较小.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=暗刻复合形>暗刻复合形<a href=#暗刻复合形 class=hash-link aria-label="Direct link to 暗刻复合形" title="Direct link to 暗刻复合形" translate=no>​</a></h4>
+<ul>
+<li class=""><code>3334</code> -> <code>33</code> + <code>34</code>, 容易形成<code>面子</code> + <code>雀头</code>:<!-- -->
+<ul>
+<li class="">无其他雀头时靠张价值较高, 可作雀头, 存在<strong>三面进张</strong>.</li>
+<li class="">有其他雀头时靠张价值较低, 可固定暗刻, 天然损失三枚.</li>
+<li class="">可以形成平和形, 提升手牌打点.</li>
+</ul>
+</li>
+<li class=""><strong>一向听</strong>同时存在<strong>两种四牌复合形</strong>时, <strong>复合形切牌顺序</strong>:<!-- -->
+<ul>
+<li class="">跳一形: 牌效最差.</li>
+<li class="">亚两面形.</li>
+<li class="">中膨形.</li>
+<li class="">四连形: 保留三面听牌可能.</li>
+<li class="">暗刻复合形: 保留平和可能, 保留三面听牌可能.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=二度进张复合形>二度进张复合形<a href=#二度进张复合形 class=hash-link aria-label="Direct link to 二度进张复合形" title="Direct link to 二度进张复合形" translate=no>​</a></h4>
+<ul>
+<li class=""><code>3556</code> -> <code>35</code> + <code>56</code>: 存在二度进张 <code>4</code>, 当搭子超载时, 优先切掉 <code>3</code>.</li>
+<li class=""><code>3467</code>: 坎张二度进张.</li>
+<li class=""><code>3344</code>: 完全二度进张, 只有存在其他复合形 (一杯口) 或双碰听时有价值.</li>
+<li class=""><strong>恶形</strong><code>6889</code>: 边张二度进张, <code>69</code> 连筋恶形, 当搭子超载时, 优先切掉 <code>9</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=四牌复合形强度>四牌复合形强度<a href=#四牌复合形强度 class=hash-link aria-label="Direct link to 四牌复合形强度" title="Direct link to 四牌复合形强度" translate=no>​</a></h4>
+<ul>
+<li class="">四牌复合形<strong>强度</strong>: 四连形 > 中膨形 >> 亚两面形 > 跳一形 > 二度进张恶形.</li>
+</ul>
+<p><code>1234p</code> 与 <code>1123s</code>:</p>
+<p>当手牌缺少对子时, 四连形中的 <code>1p</code> 可以解放 <code>4p</code>, 进张下一个 <code>4p</code> 时, 可以形成面子 + 雀头,
+即 <code>1p</code> + <code>234p</code> -> <code>123p</code> + <code>4p</code>, 使得 <code>1p</code> 价值约等于 <code>4p</code>.</p>
+<p>亚两面形中的 <code>1s</code> + <code>123s</code> 无法解放 <code>3s</code>, 使得 <code>1s</code> 价值约等于 <code>1s</code>.
+比较 <code>4p</code> 与 <code>1s</code> 价值, 可以得出此时应该切 <code>1s</code>, 保留 <code>1p</code>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=多牌复合形>多牌复合形<a href=#多牌复合形 class=hash-link aria-label="Direct link to 多牌复合形" title="Direct link to 多牌复合形" translate=no>​</a></h3>
+<ul>
+<li class="">五连形: 进张超好形, 且容易形成雀头.</li>
+<li class="">五连复合形: <code>234556</code>, 进张 <code>1457</code>.</li>
+<li class="">暗刻复合形:<!-- -->
+<ul>
+<li class="">暗刻可作面子, 可作对子, 扩大进张面.</li>
+<li class=""><code>333</code> + <code>45</code> -> <code>33</code> + <code>345</code>, 容易形成<code>面子</code> + <code>雀头</code>, 缺少对子时, 价值上升.</li>
+<li class=""><code>344457</code>: 两坎暗刻形, 进张 <code>46</code>.</li>
+<li class=""><code>355567</code>: 坎张对暗刻形, 进张 <code>458</code>.</li>
+<li class=""><code>344456</code>/<code>345556</code>: 两面对暗刻形, 进张 <code>2457</code>.</li>
+<li class=""><code>334445</code>/<code>344455</code>: 中膨暗刻形, 进张 <code>2345</code>/<code>3456</code>.</li>
+<li class=""><code>334555</code>/<code>333455</code>: 中凹暗刻形, 进张 <code>2345</code>/<code>3456</code>.</li>
+<li class=""><code>344555</code>/<code>333445</code>:
+阶梯暗刻形, 进张 <code>23456</code>,
+同时横向与纵向延展, 兼顾平和/一杯口/对对和, 通常优于四连形.</li>
+<li class=""><code>2345666</code>: 进张 <code>25</code>/<code>147</code>.</li>
+</ul>
+</li>
+<li class="">暗刻跳一形: <code>333</code> + <code>5</code>, <strong>暗刻</strong>旁边的<strong>浮牌不适合靠张一向听</strong>.</li>
+<li class="">两顺子形:<!-- -->
+<ul>
+<li class=""><code>344556</code> -> <code>345</code> + <code>456</code>.</li>
+<li class=""><code>2344556</code> 切 <code>2</code> 形成 <code>344556</code>, 存在一杯口改良可能.</li>
+<li class="">门清时, 向一杯口方向 (内卷) 前进.</li>
+<li class="">副露时, 向五连形方向 (外扩) 前进.</li>
+</ul>
+</li>
+<li class="">连续两面对形: <code>566788</code>
+<ul>
+<li class=""><code>5</code> + <code>66788</code>: 切 <code>5</code> 固定一杯口.</li>
+<li class=""><code>56</code> + <code>6788</code>: 切 <code>8</code> 固定两面.</li>
+<li class=""><code>5667</code> + <code>88</code>: 切 <code>6</code> 固定雀头.</li>
+</ul>
+</li>
+<li class="">两面一杯口形: <code>34455</code> -> <code>345</code> + <code>45</code>.</li>
+<li class="">坎张一杯口形: <code>33455</code> -> <code>345</code> + <code>35</code>
+<ul>
+<li class="">存在靠张时: <code>133455</code> 进张 <code>2</code> -> <code>123</code> + <code>345</code> + <code>5</code> / <code>123</code> + <code>34</code> + <code>55</code>.</li>
+<li class="">存在靠张时, 形成隐藏的两坎形后, 可转化成<strong>两面两坎形</strong>.</li>
+</ul>
+</li>
+<li class="">两面中坎形: <code>23578</code> 切 <code>5</code> (有效牌重复).</li>
+<li class="">两坎预备形:<!-- -->
+<ul>
+<li class=""><code>24579</code>: 进张 <code>3</code> -> <code>234579</code>, <code>68</code> 两坎进张.</li>
+<li class=""><code>24679</code>: 进张 <code>5</code> -> <code>245679</code>, <code>38</code> 两坎进张.</li>
+<li class=""><code>24679</code>: 进张 <code>8</code> -> <code>246789</code>, <code>35</code> 两坎进张.</li>
+</ul>
+</li>
+<li class="">相离两坎形: <code>245679</code> 进张 <code>3</code> / <code>8</code>.</li>
+<li class=""><strong>两面两坎</strong>预备形:<!-- -->
+<ul>
+<li class=""><code>2356778</code> 切 <code>2</code>.</li>
+<li class=""><code>3356778</code> 切 <code>3</code>.</li>
+<li class=""><code>3556778</code> 切 <code>5</code>.</li>
+</ul>
+</li>
+<li class=""><strong>两面两坎形</strong>: <code>455679</code> -> <code>456</code> + <code>579</code>, 进张 <code>368</code>.<!-- -->
+<ul>
+<li class="">当追求进张数时, 保留 <code>455679</code> 形成 <code>456</code> + <code>579</code>.</li>
+<li class="">当<strong>缺少雀头</strong>或追求<strong>好形率</strong>时, <code>455679</code> 切 <code>9</code> 形成 <code>45</code> + <code>567</code>, 损失进张 <code>8</code>.</li>
+</ul>
+</li>
+<li class="">宝牌连续形: <code>11234</code> (<code>4</code> 为宝牌), 用筋牌 <code>1</code> 作雀头, 摸入 <code>4</code> 时可切 <code>1</code> 极具迷惑性.</li>
+<li class="">跳对子形: <code>335577</code>, <strong>跳对子形切中间对子</strong>, 一般选择切 <code>5</code>, 固定中间<strong>两坎好形</strong>, 保留<strong>边张雀头</strong>可能,
+<code>33577</code> 进张能力很强, 是一组强力复合形.</li>
+<li class="">双雀头天平形:<!-- -->
+<ul>
+<li class=""><code>23345667</code>: <code>33</code>/<code>66</code> 作雀头, 进张 <code>14</code>/<code>58</code>, 两面 + 两面.</li>
+<li class=""><code>13345667</code>: <code>33</code>/<code>66</code> 作雀头, 进张 <code>2</code>/<code>58</code>, 坎张 + 两面.</li>
+<li class=""><code>12234556</code>: <code>22</code>/<code>55</code> 作雀头, 进张 <code>3</code>/<code>47</code>, 边张 + 两面.</li>
+<li class=""><code>22334556</code>: <code>22</code>/<code>33</code>/<code>55</code> 作雀头, 进张 <code>14</code>/<code>2</code>/<code>3</code>/<code>47</code>, 两面 + 双碰 + 两面.</li>
+<li class=""><code>22334557</code>:<code>22</code>/<code>55</code> 作雀头, 进张 <code>14</code>/<code>6</code>, 两面 + 坎张.</li>
+</ul>
+</li>
+<li class="">八枚两翼对称形 (两组中膨形):
+<code>34456778</code> -> 顺子 + 两坎形 + 对子 (浮动雀头 <code>44</code> 与 <code>77</code>),
+可以保留此复合形, 也可以切 <code>8</code> 固定雀头与断幺.</li>
+<li class="">九枚两翼对称形 (两组中膨形 + 中张):
+<code>233456778</code> -> 两组顺子 + 两坎形, 进张 <code>1469</code>, 保留此复合形.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=向听>向听<a href=#向听 class=hash-link aria-label="Direct link to 向听" title="Direct link to 向听" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=两向听>两向听<a href=#两向听 class=hash-link aria-label="Direct link to 两向听" title="Direct link to 两向听" translate=no>​</a></h3>
+<ul>
+<li class=""><code>面子</code> + <code>雀头</code> + 3 <code>搭子</code> + 孤张 (<strong>五搭子</strong>):<!-- -->
+<ul>
+<li class="">全好形时, 优先切掉最弱孤张.</li>
+<li class="">存在愚形时, 可以切掉最弱搭子, 保留孤张改良可能.</li>
+</ul>
+</li>
+<li class=""><code>面子</code> + 3 <code>对子</code>搭 + 孤张 (<strong>四搭子</strong>):<!-- -->
+<ul>
+<li class="">愚形较少时, 可以切掉两面对补强牌, 固定两面好形, 保留孤张改良可能.</li>
+<li class="">愚形过多时, 重视七对子/对对和进张.</li>
+</ul>
+</li>
+<li class=""><code>面子</code> + <code>雀头</code> + 4 <code>搭子</code> (<strong>六搭子</strong>):<!-- -->
+<ul>
+<li class="">全好形时, 可以切掉两面对补强牌, 固定两面好形, 保留六搭子形.</li>
+<li class="">存在愚形时, 优先切掉最弱搭子.</li>
+</ul>
+</li>
+<li class="">2 <code>面子</code> + <strong>无雀头</strong>两向听:<!-- -->
+<ul>
+<li class="">全好形时, 重视雀头进张, 重视易形成雀头的复合形 (如四连形与亚两面形).</li>
+<li class="">存在愚形时, 重视改良进张, 保留孤张改良可能,</li>
+</ul>
+</li>
+<li class="">一向听顶峰理论:
+全好形低向听时, 可考虑切掉多余四牌复合形 (固定面子),
+保留三牌复合形, 最大化一向听到听牌的进张数.</li>
+<li class="">存在愚形搭子时 (容易形成愚形听牌), 可以考虑暂时保留四牌复合形 (不急于固定面子), 寻求<strong>好形搭子改良</strong>.</li>
+<li class="">多牌复合形的价值在缺少搭子的情况下价值较高 (进张面广, 进张数多), 在不缺搭子的情况下只能用于改良牌形与打点.</li>
+<li class="">两向听时可以保留三对子形, 进入一向听后再进入两对子形 (三对子不利理论).</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=一向听>一向听<a href=#一向听 class=hash-link aria-label="Direct link to 一向听" title="Direct link to 一向听" translate=no>​</a></h3>
+<ul>
+<li class="">一向听类别: 愚形一向听, 完全一向听, 靠张一向听, 无头一向听.</li>
+<li class="">全牌效策略.</li>
+<li class="">听牌形重视策略 (愚形轻视策略).</li>
+<li class="">和牌率重视策略 (愚形轻视策略).</li>
+<li class="">速度重视策略:<!-- -->
+<ul>
+<li class="">役牌双碰副露: 可以保留 3 组对子 (役牌 + 幺九 + 中张对子).</li>
+<li class="">断幺副露.</li>
+</ul>
+</li>
+<li class="">符数重视策略: 重视幺九刻子.</li>
+<li class="">打点重视策略.</li>
+<li class="">宝牌进张重视策略:<!-- -->
+<ul>
+<li class="">重视宝牌靠张延展性.</li>
+<li class="">重视宝牌复合形延展性</li>
+<li class="">重视宝牌搭子转换宝牌对子可能性 (<strong>不固定非宝牌雀头</strong>).</li>
+</ul>
+</li>
+<li class="">赤宝牌进张重视策略:<!-- -->
+<ul>
+<li class="">重视内侧 Slide.</li>
+<li class="">重视 <code>34</code> 与 <code>67</code> 搭子.</li>
+<li class="">赤宝牌进张优先于不确定三色进张.</li>
+</ul>
+</li>
+<li class="">平和重视策略 (好形重视策略).<!-- -->
+<ul>
+<li class="">四牌复合形延展性.</li>
+<li class="">面子 + 搭子 (对子/两面/坎张/跳一) 五牌复合形延展性.</li>
+</ul>
+</li>
+<li class="">断幺重视策略:<!-- -->
+<ul>
+<li class="">重视内侧 Slide.</li>
+</ul>
+</li>
+<li class="">三色重视策略.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=早巡一向听>早巡一向听<a href=#早巡一向听 class=hash-link aria-label="Direct link to 早巡一向听" title="Direct link to 早巡一向听" translate=no>​</a></h4>
+<p>早巡时可以考虑<strong>高打点</strong>进行退向:</p>
+<ul>
+<li class="">宝牌靠张.</li>
+<li class="">断幺九/平和: 切<strong>边张</strong>搭子/对子, 追求断幺九或平和好形.</li>
+<li class="">染手: 切同色搭子 (甚至面子).</li>
+<li class="">三色同顺.</li>
+<li class="">多愚形高向听手牌, 早巡退向寻求形状与打点改良, 保留立直 Nomi 变成立断平三色的可能.</li>
+<li class="">早巡低打点愚形一向听应退回两向听寻求形状与打点改良:<!-- -->
+<ul>
+<li class="">早巡愚形 Nomi 确定的一向听 (特别是子家), 应退向寻求形状与打点改良,
+e.g. 4巡目西家 <code>266m123789p11355s</code> 切 <code>6m</code> 退向.</li>
+<li class="">保留四连形与中膨形, 切掉愚形搭子, 退回两向听, 寻求形状改良.</li>
+<li class="">保留手役靠张, 切掉愚形搭子, 退回两向听, 寻求打点改良.</li>
+</ul>
+</li>
+<li class="">存在复合形的低向听手牌, 早巡退向可以带来至少 2 番打点改良时, 应选择退向甚至拒听:
+e.g. 立直 Nomi 边坎听牌 -> 立断平好形听牌.</li>
+<li class="">中晚巡进行改良时 (无法改变打点) <strong>禁止退向</strong>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=两面一向听>两面一向听<a href=#两面一向听 class=hash-link aria-label="Direct link to 两面一向听" title="Direct link to 两面一向听" translate=no>​</a></h4>
+<ul>
+<li class="">2 <code>面子</code> + <code>两面对</code> + 2 <code>两面</code>.</li>
+<li class="">一组两面搭子进张补强牌形成两面对后, 可以将一组两面对固定为雀头, 转为完全一向听.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=完全一向听>完全一向听<a href=#完全一向听 class=hash-link aria-label="Direct link to 完全一向听" title="Direct link to 完全一向听" translate=no>​</a></h4>
+<ul>
+<li class="">2 <code>面子</code> + <code>雀头</code> + <code>两面对</code> + <code>两面</code>.</li>
+<li class="">6 种 20 枚进张 (4 种 16 枚两面进张 + 2 种 4 枚双碰进张).</li>
+<li class="">不要双碰进张, <strong>保留安全牌或改良牌</strong>, 切掉两面对补强牌:<!-- -->
+<ul>
+<li class="">双碰进张枚数数不理想 (只有 1~2 枚).</li>
+<li class="">双碰进张严重影响手牌打点: e.g. 双碰进张是宝牌靠张时, 平和 + 宝牌 -> Nomi.</li>
+<li class="">场况危险, 对手速度较快, 需要安全牌防止一发.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=愚形一向听>愚形一向听<a href=#愚形一向听 class=hash-link aria-label="Direct link to 愚形一向听" title="Direct link to 愚形一向听" translate=no>​</a></h4>
+<ul>
+<li class="">包含愚形搭子的一向听, 需要积极寻求改良<!-- -->
+<ul>
+<li class="">固定好形搭子, 保留中张数牌进行靠张.</li>
+<li class="">早巡拆愚形搭子退回两向听, 寻求打点和形状.</li>
+</ul>
+</li>
+<li class=""><a href=https://www.bilibili.com/video/BV1X14y1R7bS target=_blank rel="noopener noreferrer" class="">当两面搭子与雀头候补形成复合形时</a>,
+基本上要切孤张数牌, 保留复合形:
+e.g. <code>1378m123p6p334789s</code>, 切 <code>6p</code>,
+进 <code>1m</code>/<code>3m</code> 形成完全一向听, 进 <code>2s</code>/<code>5s</code> 形成无头一向听.</li>
+<li class="">巡目尚早或追求改良时, 可以考虑 (需慎重) 拆愚形搭子进行退向, 留下高价值浮牌 (e.g. 中张宝牌).</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=无头一向听>无头一向听<a href=#无头一向听 class=hash-link aria-label="Direct link to 无头一向听" title="Direct link to 无头一向听" translate=no>​</a></h4>
+<p>无头暗刻一向听:</p>
+<ul>
+<li class="">非单骑听牌确定, 其中一组搭子进张听牌时可以切掉暗刻作雀头.</li>
+<li class=""><strong>不固定雀头</strong>进张数更多 (拆开雀头形成面子与搭子).</li>
+<li class="">当一组搭子为愚形搭子, 暗刻为复合形时:
+拆掉愚形搭子, 追求高打点和好形听牌,
+e.g. <code>6667m34p33455s789s</code> 切 <code>3s</code>.</li>
+</ul>
+<p>无头非暗刻一向听:</p>
+<ul>
+<li class="">当两组搭子形成复合形时:
+进张数多于完全一向听, 好形率接近, 应选择无头一向听 (固定三面子),
+e.g. <code>789m123p2356778s</code>, 进张 <code>14s</code> 时, 形成多面好形听牌, 而不是普通的单骑愚形听牌.</li>
+<li class="">当两组搭子均为两面搭子时:<!-- -->
+<ul>
+<li class="">进张数多于完全一向听 (28 > 20), 但好形率低, 应选择完全一向听 (固定雀头).</li>
+<li class="">中晚巡或两面损失 (枚数少/二度受) 时应重视进张枚数, 应选择无头一向听 (固定三面子).</li>
+</ul>
+</li>
+<li class="">当一组搭子为愚形搭子时,
+进张数多于完全一向听 (24 > 20), 好形率接近, 应选择无头一向听 (固定三面子).</li>
+<li class="">当重视其中一个搭子进张时, 可以切掉另一组搭子:
+e.g. <code>34s</code> + <code>24m</code> (<code>2s</code> 为宝牌) 无头一向听,
+<code>34s</code> <strong>好形</strong>搭子进张均为<strong>宝牌</strong>,
+可以切 <code>2m</code> 固定 <code>34s</code> 搭子.</li>
+<li class=""><strong>单骑听牌</strong>时, 损失平和打点且和牌率低, 可以考虑默听改良或直接拒听.</li>
+</ul>
+<p>无头愚形一向听:</p>
+<ul>
+<li class="">考虑形状和打点改良可以切掉愚形搭子.</li>
+<li class="">考虑听牌速度可以保留无头愚形一向听.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=靠张一向听>靠张一向听<a href=#靠张一向听 class=hash-link aria-label="Direct link to 靠张一向听" title="Direct link to 靠张一向听" translate=no>​</a></h4>
+<ul>
+<li class="">3 <code>面子</code> + <code>雀头</code> + 2 <code>单张</code>: e.g. <code>1223455568p7s555m</code> 切 <code>2p</code> 成为撞头一向听 (<code>8p</code> <code>7s</code> 靠张).</li>
+<li class="">靠张一向听进张数一般为 30+~40+ 枚:<!-- -->
+<ul>
+<li class="">优先考虑听牌形状和手牌打点, 选择<strong>好形听牌</strong>/<strong>高打点</strong>浮牌靠张,
+总枚数不是第一考虑因素 (靠张一向听进张很广).</li>
+<li class="">两张浮牌与面子/雀头形成复合形后, 进张数进一步增加.</li>
+</ul>
+</li>
+<li class="">进张数大于完全一向听, 可能形成<strong>愚形听牌</strong>, 优先考虑<strong>听牌好形率</strong>进行切牌.</li>
+<li class="">中张四连形 (进张/雀头) > 中张中膨形 (好形) > 中张亚两面形 (雀头) >
+<code>37</code> > <code>46</code> > <code>5</code> >
+边张四连形 > 边张中膨形 > 边张亚两面形 >
+<code>28</code> > <code>19</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=改良一向听>改良一向听<a href=#改良一向听 class=hash-link aria-label="Direct link to 改良一向听" title="Direct link to 改良一向听" translate=no>​</a></h4>
+<ul>
+<li class="">进张数差别不大时, 优先考虑形状与打点改良:<!-- -->
+<ul>
+<li class="">最终听牌<strong>面数</strong>.</li>
+<li class="">最终听牌<strong>打点</strong>.</li>
+<li class="">切掉愚形可以最大化<strong>平和</strong>可能.</li>
+<li class="">e.g. <code>56m123p67p2345666s</code> 切 <code>6m</code>/<code>2s</code> 进张数均为 28 枚, 应切 <code>6m</code> 最大化平和可能.</li>
+</ul>
+</li>
+<li class="">早巡/不含复合形/需要打点时, 固定雀头形成两面两面一向听, 提升手牌打点.</li>
+<li class="">中晚巡/包含复合形时, 固定面子形成无雀头一向听, 最大化进张数.</li>
+<li class="">早巡寻求改良时, <code>坎张对+两面+中张雀头</code>略优于<code>两坎+两面+中张雀头</code> (<strong>两雀头有利</strong>),
+雀头部分进张形成两面对时, 可以改良成完全一向听, 同时保留双碰进张与副露可能.</li>
+</ul>
+<p>下一巡听牌概率 = <code>听牌枚数 * 5/6</code>:</p>
+<ul>
+<li class="">完全一向听下一巡听牌概率为 10 %.</li>
+<li class="">无头/靠张一向听下一巡听牌概率为 20 %.</li>
+<li class="">存在四/五牌复合形时下一巡听牌概率可提升至 30~50 %.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=听牌>听牌<a href=#听牌 class=hash-link aria-label="Direct link to 听牌" title="Direct link to 听牌" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=基本听牌形式>基本听牌形式<a href=#基本听牌形式 class=hash-link aria-label="Direct link to 基本听牌形式" title="Direct link to 基本听牌形式" translate=no>​</a></h4>
+<ul>
+<li class="">两面听.</li>
+<li class="">双碰听: 听牌枚数小于 2 (e.g. 一组对子 0 枚残) 时, 双碰听和牌率较低.</li>
+<li class="">坎张听: 中张坎张听和率较低.</li>
+<li class="">边张听.</li>
+<li class="">单骑听:<!-- -->
+<ul>
+<li class="">存在换听两面可能, 不急于立直.</li>
+<li class="">早巡听多枚数单骑, 晚巡可以考虑听 1 枚地狱单骑.</li>
+<li class="">存在暗刻时, 单骑向复合形靠近, 保留换听两面可能:
+e.g. 单骑听中膨形中间牌, 进张后暗刻改雀头换听两面.</li>
+<li class="">不存在暗刻时, 可以直接选择听字牌, 也可以默听保留亚两面听牌或两面单骑听牌可能.</li>
+</ul>
+</li>
+<li class="">听牌数: 两面听 > 双碰听 > 坎张听 > 边张听 > 单骑听.<!-- -->
+<ul>
+<li class="">两面听优势明显, 听牌数为 8.</li>
+<li class="">单骑听变化多, 难以防守, 特别是听熟张字牌容易荣和.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=复合听牌形式>复合听牌形式<a href=#复合听牌形式 class=hash-link aria-label="Direct link to 复合听牌形式" title="Direct link to 复合听牌形式" translate=no>​</a></h4>
+<ul>
+<li class="">四连形与亚两面形听牌数都为 6.</li>
+<li class="">暗刻复合形:<!-- -->
+<ul>
+<li class=""><code>1222</code>: 边张单骑, <code>1</code> + <code>222</code> / <code>12</code> + <code>22</code>, 听牌数为 7.</li>
+<li class=""><code>3555</code>: 坎张单骑, <code>3</code> + <code>555</code> / <code>35</code> + <code>55</code>, 听牌数为 7.</li>
+<li class=""><code>3444</code>: 两面单骑, <code>3</code> + <code>444</code> / <code>34</code> + <code>44</code>, 听牌数为 11.</li>
+</ul>
+</li>
+<li class="">三面听:<!-- -->
+<ul>
+<li class="">听三种牌.</li>
+<li class="">基本三面听: <code>34567</code> -> <code>34</code> + <code>567</code> / <code>345</code> + <code>67</code>, 听牌数为 11.</li>
+<li class="">单骑三面听: <code>1234567</code>, <code>2234567</code>, <code>4566789</code>, 听牌数为 9.</li>
+<li class="">混合三面听: <code>23445566</code>, 可以形成一杯口.</li>
+<li class="">多面听时, 三暗刻也可看作<code>雀头</code>+<code>单张</code>.</li>
+</ul>
+</li>
+<li class="">不规则多面听:<!-- -->
+<ul>
+<li class="">基本策略:<!-- -->
+<ul>
+<li class="">顺子延伸性: 两面/三面单骑听牌, 五连三面听牌.</li>
+<li class="">暗刻复合性: 暗刻形既可作<code>面子</code>, 又可作<code>对子+单张</code>, 形成多面听牌.</li>
+</ul>
+</li>
+<li class="">一杯口单骑形: <code>2233344</code> 听 <code>234</code>, 双碰 + 单骑.</li>
+<li class="">一杯口双碰形: <code>33445566m99p</code> 听 <code>369</code>, 双碰.</li>
+<li class="">暗刻双碰形: <code>44456m99p</code> 听 <code>479</code>, 两面 + 双碰.</li>
+<li class="">暗刻亚两面形: <code>1112234</code> 听 <code>235</code>, 两面 + 边张.</li>
+<li class="">暗刻中膨形: <code>5667888</code> 听 <code>467</code>, 两面 + 单骑.</li>
+<li class="">暗刻四连形: <code>2224567</code> 听 <code>347</code>, 坎张 + 单骑.</li>
+<li class="">暗刻跳一形: <code>4445679</code> 听 <code>89</code>, 坎张 + 单骑.</li>
+<li class="">暗刻单骑形: <code>3335777</code> 听 <code>456</code>, 坎张 + 单骑.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=听牌技巧>听牌技巧<a href=#听牌技巧 class=hash-link aria-label="Direct link to 听牌技巧" title="Direct link to 听牌技巧" translate=no>​</a></h4>
+<ul>
+<li class="">满贯以下听高点, 满贯以上听张数.</li>
+<li class="">和牌率: 熟张字牌 > 幺九牌 > (外) 壁引挂 > (边) 筋引挂.</li>
+<li class="">骗筋: 听牌河 (现物/立直宣言牌) 筋牌.</li>
+<li class="">偷现: 听<code>立直家</code>/<code>副露家</code>/<code>亲家</code>现物.</li>
+<li class="">当听牌枚数过少 (e.g. 2 枚) 或听牌场况过差 (e.g. 愚形听牌且牌河同色牌过少) 时, 可以选择<strong>拒听</strong>寻求改良:<!-- -->
+<ul>
+<li class="">无头一向听 (3 面子 + 2 搭子) 进张形成中张雀头 (<code>344</code>), 听牌形为边张听时 (<code>12</code>),
+可以选择切掉雀头 (<code>4</code>) 拒听, 寻求改良 <code>12</code> 边张搭子.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=鸣牌>鸣牌<a href=#鸣牌 class=hash-link aria-label="Direct link to 鸣牌" title="Direct link to 鸣牌" translate=no>​</a></h2>
+<ul>
+<li class="">鸣牌是赤牌麻将中非常重要的技术.</li>
+<li class="">鸣牌要点: 鸣牌形状 (役牌/愚形), 手牌形状, 手牌打点.</li>
+<li class="">鸣牌优点: <strong>速度上升</strong>.</li>
+<li class="">鸣牌的缺点: <strong>打点下降</strong>, <strong>防御力下降</strong>.</li>
+<li class="">可副露时三牌/四牌复合形价值上升: 鸣牌加速和牌, 食延消解愚形.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=选择>选择<a href=#选择 class=hash-link aria-label="Direct link to 选择" title="Direct link to 选择" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>两张以上宝牌</strong>时候要重视速度与和牌的容易度,
+把鸣牌作为做牌的前提.</li>
+<li class="">远而大副露: 高打点形状极差手牌, 积极寻找手役, 副露鸣牌加速和牌.</li>
+<li class="">小牌速攻副露: 阻止对手高打点和牌, 亲家保持连庄, 子家快速过庄.</li>
+<li class="">对子较多 (3~4 对) 且形状不佳时, 门清作牌难度较大,
+可以考虑断幺九/染手副露加速和牌.</li>
+<li class="">可以考虑鸣牌:<!-- -->
+<ul>
+<li class="">满贯手牌: e.g. 多宝牌/染手.</li>
+<li class="">消除愚形 (坎张吃, 边张吃, 绝张吃/碰): 愚形过多, <strong>门清立直速度过慢</strong>.<!-- -->
+<ul>
+<li class="">e.g. <code>46</code> 吃 <code>5</code>, 消除愚形搭子.</li>
+<li class="">e.g. <code>7789</code> 吃 <code>8</code>, 留下 <code>78</code> 两面好形搭子, 切掉另一组愚形搭子.</li>
+<li class="">e.g. <code>4678</code> 吃 <code>5</code>, 留下 <code>78</code> 两面好形搭子, 切掉另一组愚形搭子.</li>
+</ul>
+</li>
+<li class="">断幺九副露基准: <strong>3900</strong> 点, 序盘从<strong>愚形</strong>开始鸣牌.</li>
+<li class="">两副露基准: <strong>5200</strong> 点, 好形一向/两向听 (防止过度鸣牌).</li>
+<li class="">三副露基准: <strong>7700</strong> 点, 好形听牌/一向听 (防止过度鸣牌).</li>
+<li class="">晚巡低向听 (急于听牌).</li>
+<li class="">破除一发.</li>
+<li class="">速攻阻止对手和牌.</li>
+</ul>
+</li>
+<li class="">不建议鸣牌:<!-- -->
+<ul>
+<li class="">远而小副露: 牌形差, 打点低, 鸣牌加速收益较低, 不鸣牌可保持高打点和防御力.</li>
+<li class="">损打点副露:<!-- -->
+<ul>
+<li class=""><strong>早巡</strong>牌形好, 打点低: 全好形手牌可以作门清手役, 提升打点.</li>
+<li class="">鸣牌降低一半以上打点.</li>
+</ul>
+</li>
+<li class="">无意义副露: 向听数不变, 没有形状或打点改良.</li>
+<li class="">鸣牌<strong>过早</strong>或副露<strong>过多</strong>都会导致他家提高警惕性, 使得<strong>和牌率降低</strong>:<!-- -->
+<ul>
+<li class="">e.g. 若 <code>68s</code> 先于 <code>双东对子</code> 鸣牌, 则 <code>双东对子</code> 鸣牌难度大幅度提升.</li>
+<li class="">e.g. 若 <code>13s</code> 先于 <code>宝牌中对子</code> 鸣牌, 则 <code>宝牌中对子</code> 鸣牌难度大幅度提升.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">鸣牌迷彩:<!-- -->
+<ul>
+<li class="">能愚形吃的情况下, 优先选择愚形吃: 好形吃会提升别家的警惕性.</li>
+<li class="">能保留安全牌的情况下, 优先选择保留安全牌:
+e.g. <code>23345m</code> 用 <code>35m</code> 吃 <code>4m</code> 保留 <code>2m</code> 安全牌.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=吃>吃<a href=#吃 class=hash-link aria-label="Direct link to 吃" title="Direct link to 吃" translate=no>​</a></h3>
+<ul>
+<li class="">吃牌时尽量选择坎张/边张吃, 进张数最大化.</li>
+<li class="">食延:<!-- -->
+<ul>
+<li class=""><code>12333</code>: <code>13</code> 吃 <code>2</code> 切 <code>3</code> 听 <code>14</code>.</li>
+<li class=""><code>13345</code> <code>35</code> 吃 <code>4</code> 切 <code>1</code> 听 <code>25</code>.</li>
+<li class=""><code>57789</code>: <code>79</code> 吃 <code>8</code> 切 <code>5</code> 听 <code>69</code>.</li>
+<li class=""><code>234456</code>: <code>46</code> 吃 <code>0</code> 切 <code>2</code>.</li>
+</ul>
+</li>
+<li class="">在食替限制下, 作出能够<strong>自由吃宝牌/赤宝牌</strong>的听牌形.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=碰>碰<a href=#碰 class=hash-link aria-label="Direct link to 碰" title="Direct link to 碰" translate=no>​</a></h3>
+<p>役牌为<strong>唯一雀头</strong>时, 若牌形较好(一向听), 且立直门清打点显著高于役牌打点, 则不急于鸣役牌:</p>
+<ul>
+<li class="">唯一雀头鸣牌不能降低向听数.</li>
+<li class="">胡一番役牌意义不大, 副露降低防守能力.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=杠>杠<a href=#杠 class=hash-link aria-label="Direct link to 杠" title="Direct link to 杠" translate=no>​</a></h3>
+<ul>
+<li class="">幺九牌暗杠 32 符, 相当于 1 番.</li>
+<li class=""><strong>加杠</strong>/<strong>暗杠</strong>增加一次摸牌机会.</li>
+<li class="">建议杠牌:<!-- -->
+<ul>
+<li class="">低打点一向听/听牌.</li>
+<li class="">危险牌暗杠.</li>
+<li class="">提升符数, 提高打点.</li>
+</ul>
+</li>
+<li class="">不建议杠牌:<!-- -->
+<ul>
+<li class="">牌形差, 多愚形, 高向听.</li>
+<li class="">进张减少 (甚至退向): e.g. 中张暗刻不开杠, 保留作搭子 (暗刻复合形).</li>
+<li class="">他人立直, 自己和牌率较低.</li>
+<li class="">手牌打点足够, 无需杠宝牌.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=手役>手役<a href=#手役 class=hash-link aria-label="Direct link to 手役" title="Direct link to 手役" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=常见手役>常见手役<a href=#常见手役 class=hash-link aria-label="Direct link to 常见手役" title="Direct link to 常见手役" translate=no>​</a></h3>
+<table><thead><tr><th>Rank<th>Type<th>Ratio (%)<tbody><tr><td>A<td>立直<td>42.6<tr><td>A<td>役牌<td>38.7<tr><td>A<td>平和<td>22.5<tr><td>A<td>断幺九<td>21.2<tr><td>B<td>混一色<td>6.1<tr><td>B<td>一杯口<td>5.0<tr><td>B<td>三色同顺<td>4.3<tr><td>B<td>七对子<td>3.0<tr><td>B<td>对对和<td>2.9<tr><td>C<td>一气贯通<td>1.7<tr><td>C<td>全带幺<td>1.2<tr><td>C<td>三暗刻<td>0.8<tr><td>C<td>清一色<td>0.8<tr><td>F<td>其他<td>&lt; 0.5</table>
+<ul>
+<li class="">打点 (番数) 相同时, 确定的手役比不确定的手役更有利:<!-- -->
+<ul>
+<li class="">断幺九接近成形, 可以选择切掉役牌对子 (未成形), 保留其他中张的对子或搭子, 选择断幺九手役.</li>
+<li class="">断幺九并未成形, 可以选择保留役牌对子, 切掉其他超载的对子或搭子, 选择役牌手役.</li>
+</ul>
+</li>
+<li class="">不损失或较小损失牌效时, 应在<strong>充分考虑高打点手役</strong>的前提下进行切牌:<!-- -->
+<ul>
+<li class="">宝牌: <strong>早巡</strong>保留宝牌及其靠张.</li>
+<li class="">平和手役: 一向听顶峰理论.</li>
+<li class="">断幺九手役: 切幺九牌向内靠拢.</li>
+<li class="">三色同顺手役: 切牌考虑三色可能.</li>
+<li class="">一气贯通手役: 保留多牌复合形.</li>
+<li class="">染手手役: 切牌考虑染手可能, 同色牌较多时积极鸣牌.</li>
+</ul>
+</li>
+<li class="">当配牌同色牌多/幺九搭子多/对子多/愚形多/牌形极散时:
+<strong>不应按牌效直线作牌</strong>, 应采取<strong>防守反击</strong>策略,
+可以考虑混一色/七对子/全带/国士无双等幺九手役,
+手牌多为幺九边张, 弃和时拥有足够安全牌.</li>
+<li class="">领先时, 速攻 (役牌副露/断幺九副露/默听) 局消化是保持一位的有效手段.</li>
+<li class="">低打点时, 不应盲目和亲家对攻 (放铳代价极大).</li>
+<li class="">手役<strong>和牌素点</strong>: 立直一发 > 副露对对和 > 副露混一色 > 立直非一发 > 副露断幺九 > 副露役牌.</li>
+<li class="">手役会限制牌形 (防守 ↓), <strong>作手役追求打点</strong>切牌高概率不是进张数最大化的切牌 (速度 ↓), 是其不可忽视的两大缺点.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=立直手役>立直手役<a href=#立直手役 class=hash-link aria-label="Direct link to 立直手役" title="Direct link to 立直手役" translate=no>​</a></h3>
+<ul>
+<li class="">立直可视为 1.5 番.</li>
+<li class="">立直有威吓力, 迫使对手防守, 破坏对手和牌, 增加自摸可能性.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=默听选择>默听选择<a href=#默听选择 class=hash-link aria-label="Direct link to 默听选择" title="Direct link to 默听选择" translate=no>​</a></h4>
+<ul>
+<li class="">默听基本准则:<!-- -->
+<ul>
+<li class="">打点足够, 无需立直打点, 更重视和率:
+e.g. 3 番 50 符, 听现物满贯, 跳满.</li>
+<li class="">形状太差, 立直和率过低:
+e.g. 2 枚残听牌, 456 愚形 Nomi 听牌.</li>
+<li class="">存在好形高打点改良 (大于 2 种):
+可以在早中巡默听改良,
+在其他家手牌进展时 (副露/切宝牌/切搭子/连续切中张) 及时先制立直进行压制.</li>
+</ul>
+</li>
+<li class="">好形立直与默听基本准则:<!-- -->
+<ul>
+<li class="">打点: <strong>7700</strong> 以上默听.</li>
+<li class="">巡目: <strong>12</strong> 巡后默听.</li>
+</ul>
+</li>
+<li class="">愚形立直与默听基本准则:<!-- -->
+<ul>
+<li class="">打点: <strong>1300</strong> 以下拒听, <strong>5200</strong> 以上默听.</li>
+<li class="">巡目: <strong>8</strong> 巡后默听.</li>
+</ul>
+</li>
+<li class="">AL + TOP + 有役, 选择默听<strong>局消化</strong>.</li>
+<li class=""><strong>愚形</strong>听牌时, 默听有<strong>改良</strong>与<strong>弃和</strong>机会:<!-- -->
+<ul>
+<li class="">亲家<strong>早巡愚形</strong>听牌, 可以先制立直.</li>
+<li class="">子家<strong>早巡愚形</strong>听牌, 当改良枚数是和牌枚数两倍以上时, 可以默听寻求改良.</li>
+</ul>
+</li>
+<li class=""><strong>早巡</strong> <code>1</code> ~ <code>2</code> 番牌:<!-- -->
+<ul>
+<li class="">可以考虑拒听, 切愚形搭子提升打点:<!-- -->
+<ul>
+<li class="">e.g. <strong>早巡</strong>手牌含复合形 + 平和可能, 切愚形搭子拒听, 退回好形一向听, 作平和手役.</li>
+<li class="">e.g. <strong>早巡</strong>手牌含复合形 + 断幺可能, 切幺九搭子拒听, 退回好形一向听, 作断幺手役.</li>
+</ul>
+</li>
+<li class="">平和/断幺 NOMI:<!-- -->
+<ul>
+<li class="">一般情况下可以先制立直.</li>
+<li class="">TOP/对手打点过高时选择默听, 摸到危险张时弃和, 同时提高和率进行局消化.</li>
+</ul>
+</li>
+<li class="">低打点手牌存在<strong>两番以上</strong>打点改良时, 可以选择默听等待改良.</li>
+</ul>
+</li>
+<li class=""><strong>愚形默听</strong>和牌率 ~= <strong>好形立直</strong>和牌率.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=立直选择>立直选择<a href=#立直选择 class=hash-link aria-label="Direct link to 立直选择" title="Direct link to 立直选择" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>两面</strong>立直, <strong>字牌双碰</strong>立直, <strong>NC 壁外数牌双碰</strong>立直, 均为<strong>好形听牌</strong>.</li>
+<li class="">两面立直 > 振听三面立直 > 愚形立直 = 振听两面立直.</li>
+<li class=""><strong>早中巡好形</strong>听牌应先制立直.</li>
+<li class=""><strong>无役多宝牌愚形</strong>听牌应先制立直.</li>
+<li class=""><strong>平场</strong>或<strong>亲家</strong>时, 低打点好形听牌立直 > 高打点愚形听牌立直 > 默听.</li>
+<li class=""><strong>非平场</strong>或<strong>子家</strong>时, 立直 <code>Nomi</code> 时需要考虑立直风险, 不可激进对攻.</li>
+<li class=""><strong>早中巡</strong>两面立直与字牌双碰立直和率相近, 选择高打点立直.</li>
+<li class="">平和里宝率约为 <code>30%</code>, 七对子里宝率约为 <code>20%</code>.</li>
+<li class="">四暗刻:<!-- -->
+<ul>
+<li class="">多面听立直率大于 50%:<!-- -->
+<ul>
+<li class="">立直可以提升打点, 立直逼迫对手防守, 延长巡目提升自摸率 (<code>15%</code> -> <code>20%</code>).</li>
+<li class="">中张双碰听牌可以默听, 边张幺九双碰听牌应该立直.</li>
+</ul>
+</li>
+<li class="">一面听立直率小于 1%: 役满确定, 无需提升打点, 存在换听可能.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=门清选择>门清选择<a href=#门清选择 class=hash-link aria-label="Direct link to 门清选择" title="Direct link to 门清选择" translate=no>​</a></h4>
+<ul>
+<li class="">亲家愚形搭子过多, 且有确定手役 (役牌/断幺九) 时,
+应<strong>积极鸣牌</strong>, <strong>放弃门清</strong>, 加速和牌.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=平和手役>平和手役<a href=#平和手役 class=hash-link aria-label="Direct link to 平和手役" title="Direct link to 平和手役" translate=no>​</a></h3>
+<ul>
+<li class="">作两面是作平和手役要点.</li>
+<li class=""><strong>早巡</strong>手牌打点较低, 牌形较好可作平和时,
+可以切掉役牌对子, 保留断幺平和可能.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=一发手役>一发手役<a href=#一发手役 class=hash-link aria-label="Direct link to 一发手役" title="Direct link to 一发手役" translate=no>​</a></h3>
+<ul>
+<li class="">鸣牌破一发:<!-- -->
+<ul>
+<li class="">手牌安全牌充足.</li>
+<li class="">立直家是直接竞争对手.</li>
+</ul>
+</li>
+<li class="">防止破一发: 容易被鸣牌不立直, 下一巡摸切立直.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=断幺九手役>断幺九手役<a href=#断幺九手役 class=hash-link aria-label="Direct link to 断幺九手役" title="Direct link to 断幺九手役" translate=no>​</a></h3>
+<ul>
+<li class="">断幺九<strong>可鸣牌 + 赤宝牌</strong>可以做到速攻多番.</li>
+<li class="">早中巡<strong>二向听</strong>手牌, 通常是<strong>鸣牌断幺九</strong> (鸣牌后切幺九牌) 的好开始点:<!-- -->
+<ul>
+<li class=""><strong>一向听</strong>手牌可以追求门清.</li>
+<li class=""><strong>高向听无宝牌</strong>恶形手牌不急于鸣牌: 鸣牌对于高向听帮助不大, 反而降低打点与防御力.</li>
+</ul>
+</li>
+<li class=""><strong>多张宝牌</strong>: 和牌速度至关重要, <strong>鸣牌断幺九</strong>可以加速和牌.</li>
+<li class=""><strong>亲家</strong>愚形搭子过多时, <strong>愚形搭吃牌</strong> + <strong>断幺九</strong>可以加速和牌.</li>
+<li class="">断幺九容易作成, 容易与其他役复合, 摸切过程中需要<strong>时刻考虑断幺九</strong>可能性.</li>
+<li class="">断幺九副露基准: <strong>3900</strong> 点, 序盘从<strong>愚形</strong>开始鸣牌.</li>
+<li class="">切边张两面对固定边张两面搭子时 (<code>788</code> 切 <code>8</code>), 容易形成偏听断幺九 (进张 <code>9</code> 失去断幺九手役),
+可以考虑暂时保留边张两面对 (或者固定雀头) 保留完全断幺九可能.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=役牌手役>役牌手役<a href=#役牌手役 class=hash-link aria-label="Direct link to 役牌手役" title="Direct link to 役牌手役" translate=no>​</a></h3>
+<ul>
+<li class="">三枚役牌进张数约等于两坎形.</li>
+<li class="">好形搭子超载时, 优先切掉单张役牌.</li>
+<li class="">愚形搭子超载时, 可以保留单张役牌, 等待役牌对子, 寻求快速和牌.</li>
+<li class="">宝牌多 + 牌形极散, 保留单张役牌, 等待役牌对子, 寻求快速和牌.</li>
+<li class="">切役牌对子: 牺牲速度, 提升打点. e.g. 役牌 Nomi -> 立断平一杯口</li>
+<li class="">当打点提升不大时, 保留役牌对子, 寻求快速和牌.</li>
+<li class="">手牌有役牌对子或刻子 (特别是两番役牌对子) 时,
+可以保留其他孤张字牌, 保留混一色或对对和满贯可能.</li>
+<li class="">后付役牌:<!-- -->
+<ul>
+<li class="">可以优先消除愚形鸣牌, 后付役牌鸣牌难度不大, 且可以作安全牌.</li>
+<li class="">对子数量越多, 后付越安定: e.g. 只有役牌对子 (唯一雀头) 时, 比较难以进行后付.</li>
+</ul>
+</li>
+<li class="">役牌价值低:<!-- -->
+<ul>
+<li class="">全好形<code>平和</code>/<code>断幺</code>手牌: 门前清提升打点.</li>
+<li class="">多愚形役牌 Nomi 手牌: 门前清保持防御力.</li>
+</ul>
+</li>
+<li class=""><code>3077s66z</code>: 切 <code>3s</code> 保留役牌双碰进张, <strong>速度</strong>优于切 <code>7s</code> 固定赤宝牌 (役牌与赤宝牌<strong>均为一番</strong>).</li>
+<li class=""><strong>绞杀</strong>策略: 弃和或配弃时, 扣住<strong>对手字牌</strong>, 扣住<strong>下家关键牌</strong>, 阻碍对手作牌, 阻止后付和牌.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=宝牌>宝牌<a href=#宝牌 class=hash-link aria-label="Direct link to 宝牌" title="Direct link to 宝牌" translate=no>​</a></h3>
+<ul>
+<li class="">宝牌: <strong>早巡</strong>保留宝牌及其靠张.</li>
+<li class=""><strong>多张</strong>宝牌:<!-- -->
+<ul>
+<li class="">重视速度: 好形足够时可考虑门清立直, 一般情况下积极鸣牌速攻.</li>
+<li class="">多宝牌门清手牌最大化进张, 多宝牌副露手牌寻找手役加速和牌.</li>
+</ul>
+</li>
+<li class="">宝牌靠张 (特别是愚形靠张) 会降低和牌速度, 降低手牌防御力, 存在提升打点可能性.</li>
+<li class="">孤张宝牌 (宝牌靠张) 切出时机:<!-- -->
+<ul>
+<li class="">一般情况下, 手牌基本成形时, 切出孤张宝牌 (靠张).</li>
+<li class="">其余牌均对手牌速度/形状/打点有更大作用时, 切出孤张宝牌 (靠张).</li>
+<li class="">场况危险, 保留安全牌有更大作用时, 切出孤张宝牌 (靠张).</li>
+<li class="">一位/打点足够时更早切出孤张宝牌 (靠张).</li>
+<li class="">四位/打点不足时更晚切出孤张宝牌 (靠张).</li>
+</ul>
+</li>
+<li class="">处理浮牌与复合形时, 时刻考虑<strong>宝牌进张</strong>的影响.<!-- -->
+<ul>
+<li class="">宝牌搭子: <strong>不固定非宝牌雀头</strong>, 保留宝牌搭子形成宝牌对子可能性 (1 番 -> 2 番).</li>
+<li class="">宝牌对子:
+重视宝牌双碰进张, 保留至少 2 组对子 (包括两面补强牌),
+保留宝牌对子形成宝牌刻子可能性 (2 番 -> 3 番).</li>
+<li class="">宝牌四连形: <code>3456</code> (<code>3</code> 为宝牌), 进 <code>3</code> 时可形成 <code>33</code> + <code>456</code>, 尽量保留四连形.</li>
+<li class="">宝牌连续形: <code>11234</code> (<code>4</code> 为宝牌), 用筋牌 <code>1</code> 作雀头, 进 <code>4</code> 时可切 <code>1</code> 极具迷惑性.</li>
+<li class="">宝牌复合形: <code>345566</code> (<code>3</code> 为宝牌), 保留 <code>6</code>, 进 <code>3</code> 时可形成 <code>45566</code> 一杯口复合形, 宝牌对子作<strong>雀头</strong>.</li>
+<li class="">重视宝牌复合形<strong>延展性</strong>:<!-- -->
+<ul>
+<li class="">最大化宝牌进张期望, 充分利用<strong>后续宝牌进张</strong>: 优先固定<strong>非宝牌复合形</strong>, 保证宝牌复合形延展性.</li>
+<li class="">宝牌<strong>靠边</strong>时延展性最好.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=三色同顺手役>三色同顺手役<a href=#三色同顺手役 class=hash-link aria-label="Direct link to 三色同顺手役" title="Direct link to 三色同顺手役" translate=no>​</a></h3>
+<ul>
+<li class="">可以考虑三色同顺手役: 1 组面子 + 至少 6 牌.</li>
+<li class="">同等牌效切牌时, <strong>时刻注意三色同顺</strong>手役的自然形成.</li>
+<li class="">打点不足时重视三色靠张, 打点足够时重视好形与速度.</li>
+<li class="">愚形较多时, 三色副露可以加快速度, 三色确定愚形搭子价值高于两面搭子.</li>
+<li class="">三色同顺作牌天平:<!-- -->
+<ul>
+<li class="">Slide 天平: 空切 Slide 成形面子, 最大化三色可能.</li>
+<li class="">两天平: <code>34m2345p34s</code> 保留四连形, 保留 <code>234</code>/<code>345</code> 三色可能.</li>
+<li class="">浮牌天平: <code>245m234p234s</code> 保留浮牌 <code>2m</code>, 保留三色可能.</li>
+</ul>
+</li>
+<li class="">三色同顺处于当中位置的牌作为浮牌稍差: <code>234</code> 中 <code>3</code> 稍差.<!-- -->
+<ul>
+<li class=""><code>1234w3p122334s</code> 切 <code>4w</code>, 进张 <code>124p</code> 均有役, 存在 <strong>3 种</strong>改良.</li>
+<li class=""><code>1234w3p122334s</code> 切 <code>1w</code>, 进张 <code>1p</code> 无役, 存在 <strong>2 种</strong>改良.</li>
+<li class="">不同位置的三色浮牌, 对于<strong>拒听 / 即立</strong>二择有重大影响 (<strong>改良数差异</strong>).</li>
+</ul>
+</li>
+<li class="">不考虑三色同顺手役:<!-- -->
+<ul>
+<li class="">三色部分含有唯一雀头, 三色同顺手役作成难度较高.</li>
+<li class="">三色部分以外已有<strong>两组</strong>成形<strong>面子</strong>, 三色同顺手役作成难度较高.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=一气贯通手役>一气贯通手役<a href=#一气贯通手役 class=hash-link aria-label="Direct link to 一气贯通手役" title="Direct link to 一气贯通手役" translate=no>​</a></h3>
+<ul>
+<li class="">可以考虑一气贯通手役: 1 组面子 + 至少 6 牌.</li>
+<li class="">打点不足时重视一气靠张, 打点足够时重视好形与速度.</li>
+<li class="">愚形较多时, 一气副露可以加快速度, 一气确定愚形搭子价值高于两面搭子.</li>
+<li class="">1~2 枚宝牌时, 平和 > 一气贯通.</li>
+<li class="">多组断幺搭子时, 断幺九 > 一气贯通.</li>
+<li class="">对手吃 <code>9s</code> 形成 <code>789s</code> 副露, 对于防守一气贯通手役, <code>14s</code> 比 <code>23s</code> 安全.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=染手手役>染手手役<a href=#染手手役 class=hash-link aria-label="Direct link to 染手手役" title="Direct link to 染手手役" translate=no>​</a></h3>
+<ul>
+<li class="">具有<code>立直</code>(<strong>多好形</strong>)/<code>断幺</code>/<code>三色</code>/<code>一气</code>等其他可能手役时, 不要强行染手.</li>
+<li class="">中巡后染手手役未成形, 转牌效切牌, 不要强行染手.</li>
+<li class="">可以考虑染手手役:<!-- -->
+<ul>
+<li class="">混一色: 4 组搭子 + 至少 3 番.</li>
+<li class="">清一色: 至少 10 牌.</li>
+<li class="">3 组同色搭子 + 正常面子手最终形为愚形立直 Nomi: 强行染手追求满贯.</li>
+</ul>
+</li>
+<li class="">牌形较差的混一色手役要<strong>重视防守</strong>:<!-- -->
+<ul>
+<li class="">高向听时不要轻易鸣牌.</li>
+<li class="">优先切中张给对手读牌压力, 保留<strong>字牌</strong>作为后续安全牌 (他人立直或听牌).
+(染手手役中的字牌在弃和后可用于防守).</li>
+</ul>
+</li>
+<li class="">牌形较好的混一色手役切牌时适当隐藏染手倾向 (e.g. 优先切边张), 降低字牌鸣牌难度.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=全带幺手役>全带幺手役<a href=#全带幺手役 class=hash-link aria-label="Direct link to 全带幺手役" title="Direct link to 全带幺手役" translate=no>​</a></h3>
+<ul>
+<li class="">五组以上幺九搭子 + 对子时可以考虑全带幺手役, 优先切中张牌.</li>
+<li class="">赤五规则中全带幺手役价值较低, 除特殊情况基本不考虑副露全带幺手役.</li>
+<li class="">全带系手役自身价值不高 (作牌难度大 + 听牌多愚形 + 副露降番),
+全带三色/全带役牌/全带宝牌等满贯复合手役 (门清/副露) 才有作牌价值:<!-- -->
+<ul>
+<li class="">手牌较差有至少 4 组幺九愚形搭子, 门清和率较低时, 中巡可以考虑全带副露加速和牌.</li>
+<li class="">混老头/清老头 = 对对和 + 全带幺.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=七对子手役>七对子手役<a href=#七对子手役 class=hash-link aria-label="Direct link to 七对子手役" title="Direct link to 七对子手役" translate=no>​</a></h3>
+<ul>
+<li class="">四对子: <strong>牌形与进张较差</strong>时, 可考虑七对子手役.</li>
+<li class="">五对子: 早巡七对子一向听, 可考虑转对对和手役.</li>
+<li class="">六对子: 中晚巡七对子听牌, 禁止转对对和手役.</li>
+<li class="">亲家作七对子优先考虑和牌率 (保留<strong>幺九对子</strong>), 子家作七对子可考虑打点 (<strong>断幺七对子/门混七对子</strong>).</li>
+<li class="">早巡 3 对子 + 0/1 面子 + 多愚形, 可以考虑七对子手役:<!-- -->
+<ul>
+<li class="">在此种情况下, 普通面子手役<strong>速度过慢, 打点过低</strong>.</li>
+<li class="">七对子手役手牌灵活, 可以保留现物/幺九牌, 保证弃和时<strong>拥有足够安全牌</strong>.</li>
+</ul>
+</li>
+<li class="">七对子<strong>平衡</strong>:<!-- -->
+<ul>
+<li class="">好形多向面子手前进, 愚形多向对子手前进.</li>
+<li class="">优先保留对子复合形, 保留面子手可能.</li>
+<li class="">4 对子 1 暗刻保留对对和/三暗刻/四暗刻面子手可能.</li>
+<li class="">山确枚数.</li>
+<li class="">对子筋容易成对.</li>
+</ul>
+</li>
+<li class="">七对子和率: 七对子进张数少, 听牌数少, 需要注重牌河作成 (引挂), 提升和率.<!-- -->
+<ul>
+<li class="">壁筋引挂: <code>58</code> / <code>69</code> 前三巡早切 <code>5</code> / <code>6</code>, 提升 <code>8</code> / <code>9</code> 和率.</li>
+<li class="">单骑引挂: 听熟张/绝张字牌, 提升和率.</li>
+<li class="">早外引挂: <code>79</code> / <code>89</code> 前三巡早切 <code>7</code> / <code>8</code>, 提升 <code>9</code> 和率.</li>
+<li class="">幺九字牌立直与默听和率相近.</li>
+<li class="">早巡生张字牌, 中巡一枚现字牌, 晚巡两枚现字牌和率相近.</li>
+<li class="">8 巡目七对子一向听和率仅为 <code>11%</code>.</li>
+<li class="">在手牌条件允许下, 早巡按照字牌-幺九-中张顺序切若干张牌, 隐藏七对子手役, 提升和率.</li>
+</ul>
+</li>
+<li class="">七对子<strong>对攻能力较弱</strong>:<!-- -->
+<ul>
+<li class="">追立需谨慎, 可考虑<strong>兜牌或弃和</strong>.</li>
+<li class="">避四规则平场场况, 七对子<strong>一向听</strong>一般选择<strong>完全弃和</strong>.</li>
+<li class="">避四规则南场四位, 七对子可以作成跳满进行对攻 (立直七对宝牌里宝牌).</li>
+</ul>
+</li>
+<li class="">七对子<strong>宝牌二立直</strong>有 55% 跳满机会.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=对对和手役>对对和手役<a href=#对对和手役 class=hash-link aria-label="Direct link to 对对和手役" title="Direct link to 对对和手役" translate=no>​</a></h3>
+<ul>
+<li class="">提高和率 (对对和只能双碰听牌):<!-- -->
+<ul>
+<li class="">牌河迷彩: 断幺/染手/全带.</li>
+<li class="">牌河手顺: 对子足够时, 尽早切掉对子周边牌, 防止被读牌.</li>
+<li class="">幺九牌容易鸣牌, 中张数牌不容易鸣牌.</li>
+</ul>
+</li>
+<li class="">多副露对对和 Nomi 收益低,
+需复合其他手役 (宝牌/役牌/混一色/全带幺/三暗刻/混老头) 作满贯.</li>
+<li class="">可以考虑对对和手役 (七对子转对对和):<!-- -->
+<ul>
+<li class="">早巡多对幺九对子 + <strong>3900 / 5200</strong> 点.</li>
+<li class=""><strong>8000</strong> 点: 积极鸣牌.</li>
+<li class="">1 组 <code>刻子</code> + 4 组 <code>对子</code> (尽可能保留<strong>幺九对子</strong>).</li>
+</ul>
+</li>
+<li class="">基本不考虑对对和手役:<!-- -->
+<ul>
+<li class="">两组 3-7 中张对子 + 低于 <strong>5200</strong> 点.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=三暗刻手役>三暗刻手役<a href=#三暗刻手役 class=hash-link aria-label="Direct link to 三暗刻手役" title="Direct link to 三暗刻手役" translate=no>​</a></h3>
+<ul>
+<li class="">手牌打点低且有两组暗刻时, 可以损失一定牌效, 保留三暗刻可能.</li>
+<li class="">手牌处于两暗刻一向听时, 可以保留两面补强牌与至少两组对子, 保留三暗刻可能.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=国士无双手役>国士无双手役<a href=#国士无双手役 class=hash-link aria-label="Direct link to 国士无双手役" title="Direct link to 国士无双手役" translate=no>​</a></h3>
+<ul>
+<li class="">十种九牌可考虑国士无双手役.</li>
+<li class="">九种九牌一般选择推牌流局.</li>
+<li class="">字牌多的九种九牌可尝试国士无双手役.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=役满手役>役满手役<a href=#役满手役 class=hash-link aria-label="Direct link to 役满手役" title="Direct link to 役满手役" translate=no>​</a></h3>
+<p>除天和/地和/国士无双外所有役满都是通常役的上位手役:</p>
+<ul>
+<li class="">对对和 -> 四暗刻/四杠子.</li>
+<li class="">小三元 -> 大三元.</li>
+<li class="">混一色 -> 绿一色.</li>
+<li class="">混一色 -> 清一色 -> 九莲宝灯.</li>
+<li class="">混一色/对对和 -> 字一色/小四喜/大四喜.</li>
+<li class="">全带幺/对对和 -> 混老头 -> 清老头.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=振听>振听<a href=#振听 class=hash-link aria-label="Direct link to 振听" title="Direct link to 振听" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=振听防守>振听防守<a href=#振听防守 class=hash-link aria-label="Direct link to 振听防守" title="Direct link to 振听防守" translate=no>​</a></h3>
+<p>处在振听状态下, 无法荣和, 只能自摸.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=捨牌振听>捨牌振听<a href=#捨牌振听 class=hash-link aria-label="Direct link to 捨牌振听" title="Direct link to 捨牌振听" translate=no>​</a></h4>
+<ul>
+<li class="">曾打出过当前听牌 (胡牌形, 不考虑手役), 进入捨牌振听, 所有听牌都无法荣和, 只能自摸.</li>
+<li class="">解除方法: 换听其他没有振听的牌.</li>
+<li class="">意味着可以<strong>安全打出</strong>其他三家<strong>河牌与副露</strong>,
+通过看牌避免放铳, 强调立直麻将的防守性.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=同巡振听>同巡振听<a href=#同巡振听 class=hash-link aria-label="Direct link to 同巡振听" title="Direct link to 同巡振听" translate=no>​</a></h4>
+<ul>
+<li class="">听牌时, 没有荣和他人的牌, 进入同巡振听.</li>
+<li class="">解除方法: 下一次自己打出任何牌.</li>
+<li class="">意味着在一巡中可以<strong>安全打出</strong>上家打出过的牌,
+通过看牌避免放铳, 强调立直麻将的防守性.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=立直振听>立直振听<a href=#立直振听 class=hash-link aria-label="Direct link to 立直振听" title="Direct link to 立直振听" translate=no>​</a></h4>
+<ul>
+<li class="">立直听牌时, 若出现可以胡的牌, 但没有进行胡牌, 进入立直后振听.</li>
+<li class="">一直持续到此局结束, 意味着此局只能自摸.</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_TrbN alert alert--success"><div class=admonitionHeading_zXwB><span class=admonitionIcon_AhFl><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>竞技麻将</div><div class=admonitionContent_nCa6><p>振听规则是奠定立直麻将防守战术的基石.</div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=振听进攻>振听进攻<a href=#振听进攻 class=hash-link aria-label="Direct link to 振听进攻" title="Direct link to 振听进攻" translate=no>​</a></h3>
+<ul>
+<li class="">振听先制立直, 可以压制对手, 是一个有效战术, 无需过度害怕振听立直.</li>
+<li class="">和率优秀, 拒和损失点数少, 立直打点提升幅度大时,
+和牌的回报足以弥补振立的风险, 完全可以选择拒和振立.
+但一般情况下, 还是选择自摸和了比较好.</li>
+<li class="">切过的牌容易鸣回失张, 无需过度担心振听搭子 (尤其是好形搭子).</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=防守>防守<a href=#防守 class=hash-link aria-label="Direct link to 防守" title="Direct link to 防守" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=安全牌>安全牌<a href=#安全牌 class=hash-link aria-label="Direct link to 安全牌" title="Direct link to 安全牌" translate=no>​</a></h3>
+<ul>
+<li class="">三家现物.</li>
+<li class="">熟张字牌.</li>
+<li class="">完全 NO CHANCE 牌.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=留安>留安<a href=#留安 class=hash-link aria-label="Direct link to 留安" title="Direct link to 留安" translate=no>​</a></h4>
+<p>在<strong>搭子足够</strong>前提下, 损失一定牌效 (一般为 2 张左右),
+保留<code>熟张字牌</code>/<code>NC 边张</code>/高威胁对手<code>现物</code>作为安全牌:</p>
+<ul>
+<li class="">切安全牌进行立直, 稳健进攻.</li>
+<li class="">切安全牌进行兜牌, 不损牌效.</li>
+<li class="">防止一发.</li>
+<li class="">保留安全牌的同时, 可以优先切掉高威胁对手的<code>可能听牌</code> (<strong>危险牌</strong>), 保证自己<strong>听牌时不放铳</strong>.</li>
+<li class="">当对手手牌速度较快时 (牌河宝牌/牌河异色中张/积极副露), 优先保留安全牌, 放弃改良浮牌, 保持手牌安定度.</li>
+<li class="">一般情况下, 手牌 N 向听保留 N 张安全牌.</li>
+<li class="">副露后手牌价值低 (形状/打点), 注重保留安全牌, 严格遵循 N 向听保留<strong>至少</strong> N 张安全牌准则.</li>
+<li class="">积极观察牌河, 用<strong>高效安全牌</strong>代替字牌安全牌, 降低留安带来的<strong>牌效损失</strong>.
+<strong>高效安全牌</strong> (牌效损失小): <code>现物数牌</code>/<code>壁外数牌</code>/<code>暗刻字牌</code>.</li>
+<li class="">手牌价值较高或点棒较少 (满贯或四位) 时, 可以不保留安全牌, 全速进攻.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=筋牌>筋牌<a href=#筋牌 class=hash-link aria-label="Direct link to 筋牌" title="Direct link to 筋牌" translate=no>​</a></h3>
+<p>表筋 <code>147</code>, <code>258</code>, <code>369</code>:</p>
+<ul>
+<li class="">无筋 19 <code>* 1.16</code> &lt; 无筋 28 <code>* 1.10</code> &lt; 无筋 37 <code>* 1.45</code> &lt; 无筋 456.</li>
+<li class="">筋19 &lt; 两筋 456 &lt; 筋 28 &lt; 筋 37.</li>
+<li class="">宣言筋 2378 铳率提升 5%, 宣言两筋 456 铳率提升 1~2%, 宣言筋 19 铳率约等于普通筋 19.</li>
+<li class="">有相关牌 (+2/-2) 的情况下, 后筋普遍比前筋更安全, 排除愚形能降低筋牌铳率;
+对于纯粹的筋, 前筋铳率低于后筋的有筋 28、筋 37、两筋 46、半筋,
+前筋铳率高于后筋的有筋 19、两筋 5.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=壁牌>壁牌<a href=#壁牌 class=hash-link aria-label="Direct link to 壁牌" title="Direct link to 壁牌" translate=no>​</a></h3>
+<ul>
+<li class="">壁牌: 四枚可见, 对应 NO CHANCE 牌.</li>
+<li class="">薄壁牌: 三枚可见, 对应 ONE CHANCE 牌.</li>
+<li class="">无壁牌: 零枚可见, 对应 ALL CHANCE 牌.</li>
+<li class="">壁牌/薄壁牌外侧牌相对安全.</li>
+<li class="">紧壁 NC (4+0) 外侧愚形少, 隔壁 NC (0+4) 外侧愚形多, e.g. 隔壁 NC (0+4) 外侧宣言筋 2378 铳率与无筋 2378 同一级别.</li>
+<li class="">薄壁 OC 总体通常只能降低 2%~3% 铳率.
+紧薄壁 OC (3+0) 铳率大约为 AC (0+0) 的 50%,
+隔薄壁 OC (0+3) 铳率大约为 AC (0+0) 的 70%.</li>
+<li class="">手牌 OC 铳率低于牌河 OC, 后者最后一张牌出现在立直家手牌概率更高.</li>
+<li class="">OC 铳率随巡目增长速率约等于无筋牌.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=早巡外侧牌>早巡外侧牌<a href=#早巡外侧牌 class=hash-link aria-label="Direct link to 早巡外侧牌" title="Direct link to 早巡外侧牌" translate=no>​</a></h3>
+<ul>
+<li class="">早巡手切边张, 外侧牌安全: 早巡切牌可能为浮牌.</li>
+<li class="">手切次数越多, 早外牌越安全.</li>
+<li class="">紧邻早外牌铳率低于隔一早外牌.</li>
+<li class="">早巡捨牌外侧牌铳率下降, 早巡捨牌筋外侧牌铳率上升:
+e.g. 早巡打 3 <code>-></code> 7/8 铳率上升, 早巡打 5 <code>-></code> 1/9 铳率上升.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=弃和>弃和<a href=#弃和 class=hash-link aria-label="Direct link to 弃和" title="Direct link to 弃和" translate=no>​</a></h3>
+<p>安全度:</p>
+<ul>
+<li class="">安全牌: 现物 > 熟字.</li>
+<li class="">壁牌: NO CHANCE > Double ONE CHANCE > ONE CHANCE .</li>
+<li class="">筋牌: 筋 <code>19</code> >> 筋 <code>28</code> = 两筋 <code>456</code> > 筋 <code>37</code></li>
+<li class="">早外牌: 早巡 <code>2378</code> 外侧牌放铳率降低 30%.</li>
+<li class="">ONE CHANCE 危险度: (筋牌, 无筋牌).
+中晚巡, OC 危险度急剧上升.
+晚巡 OC 不可信, 立直家持有最后一张概率极大.</li>
+<li class="">中晚巡<strong>生张/一枚现</strong>役牌比<code>筋 28</code>危险.</li>
+<li class="">边张 > 生张 > 宝牌生张.</li>
+<li class="">宝牌筋 > 宝牌边 > 宝牌.</li>
+<li class="">立直宣言牌的所在筋牌存在<strong>骗筋听牌</strong>可能, 危险度接近无筋牌.</li>
+<li class="">立直宣言牌的另外两条筋牌存在<strong>好形听牌</strong>可能, 危险度上升.</li>
+<li class="">引挂安全度: 后引挂 > 前引挂 > 立直宣言牌引挂.</li>
+<li class=""><strong>变则手筋牌不可信</strong>:<!-- -->
+<ul>
+<li class="">染手手役 (混一色/清一色) 没有筋牌防守理论, 同色牌都是<strong>危险牌</strong>.</li>
+<li class="">对子手役 (对对和/七对子) 没有筋牌防守理论, <code>NO CHANCE</code>/<code>役牌</code>/<code>生张</code>都是<strong>超危险牌</strong>.</li>
+</ul>
+</li>
+</ul>
+<table><thead><tr><th>安全度<th>种类<th>注解<tbody><tr><td>SSS<td>现物<td>绝对安全<tr><td>SS<td>单骑字牌<td><tr><td>S<td>Side NO CHANCE<td><tr><td>A+<td>边筋 <code>19</code><td>双碰听, 单骑听<tr><td>A<td>客风牌<td>双碰听, 单骑听 (高概率)<tr><td>A-<td>NO CHANCE<td><tr><td>B+<td>Double ONE CHANCE<td><tr><td>B<td>边筋 <code>28</code><td><tr><td><td>满筋 <code>456</code><td>双碰听, 坎张听, 单骑听<tr><td>B-<td>筋牌 <code>37</code><td>双碰听, 坎张听, 边张听, 单骑听<tr><td>C+<td>早外牌<td><tr><td>C<td>役牌<td><tr><td>C-<td>ONE CHANCE<td><tr><td>D<td>无筋 <code>19</code><td><tr><td><td>半筋 <code>456</code><td><tr><td>E<td>无筋 <code>2378</code><td><tr><td>F<td>无筋 <code>456</code><td></table>
+<div class="theme-admonition theme-admonition-tip admonition_TrbN alert alert--success"><div class=admonitionHeading_zXwB><span class=admonitionIcon_AhFl><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>宝牌安全度</div><div class=admonitionContent_nCa6><p>幺九宝牌下调 3 级, 非幺九宝牌下调 2 级, 宝牌跨筋下调 1 级.</div></div>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=时机>时机<a href=#时机 class=hash-link aria-label="Direct link to 时机" title="Direct link to 时机" translate=no>​</a></h4>
+<ul>
+<li class="">某一家牌河有高打点迹象, 另外两家仍直线进攻, 自家手牌高向听, 应切掉危险牌留好安全牌, 随时作弃和准备.</li>
+<li class="">他人立直或多副露听高打点牌, 且自己和牌困难 (e.g. <code>23456</code> 向听/愚形搭子多且进张少) 时,
+除非情况特殊, 应完全弃和.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=手顺>手顺<a href=#手顺 class=hash-link aria-label="Direct link to 手顺" title="Direct link to 手顺" translate=no>​</a></h4>
+<ul>
+<li class="">未有人听牌 (早巡) 时, 优先打危险牌; 有人听牌后, 顺序打安全牌.</li>
+<li class="">尽量保留<strong>多家共同安全牌</strong>, 优先切立直家特有现物, 警惕他家突然进攻.</li>
+<li class="">不要过度依赖筋牌, 要结合壁牌/熟张/场况进行判断.</li>
+<li class="">跟打策略 (同巡振听): 优先<strong>跟着上家</strong>出牌, 在对手直接摸切时才可跟着对家或下家出牌.</li>
+<li class="">两家立直防守策略:<!-- -->
+<ul>
+<li class="">优先防守亲家.</li>
+<li class="">优先防守追立家.</li>
+<li class="">优先防守竞争对手 (e.g. 1 位防 2 位, 3 位防 4 位).</li>
+</ul>
+</li>
+<li class="">配牌极差, 和牌困难, <strong>不应按牌效直线作牌</strong>, 应该注重防守:<!-- -->
+<ul>
+<li class="">可以损失一定牌效保留危险对手 (e.g. 亲家) 现物, 同时尝试向听牌前进.</li>
+<li class=""><strong>防守反击</strong>策略:
+可以考虑混一色/七对子/全带/国士无双等幺九手役,
+手牌多为幺九边张, 弃和时拥有足够安全牌.</li>
+<li class=""><strong>配牌弃和</strong>策略:
+可以<strong>优先切中张</strong>, <strong>保留幺九牌</strong>,
+既可切掉危险牌保留安全牌, 又可制造染手/国士无双等高打点假象.</li>
+</ul>
+</li>
+<li class="">子家对亲家立直全弃与亲家对子家立直全弃的局收支均为 <strong>-1700</strong>:
+<strong>东场自亲与高点差顺位自亲</strong>面对子家先制立直, 不应盲目对攻连庄,
+应采取<strong>子家面对亲家先制立直</strong>相近攻守选择.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=兜牌>兜牌<a href=#兜牌 class=hash-link aria-label="Direct link to 兜牌" title="Direct link to 兜牌" translate=no>​</a></h3>
+<p>扣住危险牌的同时, 向听牌前进:</p>
+<ul>
+<li class="">以减少无筋孤张的前提进行切牌.</li>
+<li class="">拆对子/复合形是兜牌的有效手段.</li>
+<li class="">拆暗刻.</li>
+<li class="">拆搭子.</li>
+<li class="">拆面子会产生 2 张无筋孤张, 最终只能弃和.</li>
+<li class="">七对子: 最强防守牌形.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=进攻信号>进攻信号<a href=#进攻信号 class=hash-link aria-label="Direct link to 进攻信号" title="Direct link to 进攻信号" translate=no>​</a></h3>
+<ul>
+<li class="">逆序切牌.</li>
+<li class="">切宝牌及其靠张.</li>
+<li class="">变则手切生张字牌.</li>
+<li class="">先切安全牌后切危险牌.</li>
+<li class="">摸切安全牌.</li>
+<li class="">连续进张后手切安全牌: 听牌可能.</li>
+<li class="">亲家鸣牌同巡 (听牌可能), 子家切危险中张: 子家选择与亲家对攻.</li>
+<li class="">切立直/副露家危险牌.</li>
+<li class="">晚巡切生张.</li>
+</ul>
+<p><strong>手牌速度快</strong>信号:</p>
+<ul>
+<li class="">早巡连续切生张役牌.</li>
+<li class="">早巡手切尖张牌 <code>37</code>.</li>
+<li class="">早巡手切宝牌及其靠张.</li>
+<li class="">早巡手切对子/搭子.</li>
+<li class="">早巡手切三枚不同色中张数牌: MPS 法则.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=防守信号>防守信号<a href=#防守信号 class=hash-link aria-label="Direct link to 防守信号" title="Direct link to 防守信号" translate=no>​</a></h3>
+<ul>
+<li class="">跟打现物.</li>
+<li class="">切面子.</li>
+<li class="">先切危险牌后切安全牌.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=防守实例>防守实例<a href=#防守实例 class=hash-link aria-label="Direct link to 防守实例" title="Direct link to 防守实例" translate=no>​</a></h3>
+<p><code>9p1z5z4p</code> 长考立直: 高概率 <code>68p</code> 听 <code>7p</code>.</p>
+<p>先 <code>9p</code> 后字牌, 说明 <code>p</code> 上段存在靠张.
+<code>4p</code> 长考立直, 说明愚形听牌.
+<code>69p</code> 切 <code>9p</code>, <code>468p</code> 切 <code>4p</code> 骗筋听 <code>7p</code>.</p>
+<p><code>1pXXXX1pXXXX3p</code> 先制立直:
+可能存在 <code>355p</code> 切 <code>3p</code> 立直,
+若此时一向听进张后坎张听 <code>5p</code>, 则和牌率很低 (中张 <code>5p</code> 仅两枚残),
+不可盲目追立, 可以拒听改良/兜牌默听/直接弃和.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=读牌>读牌<a href=#读牌 class=hash-link aria-label="Direct link to 读牌" title="Direct link to 读牌" translate=no>​</a></h2>
+<ul>
+<li class="">读速度: e.g. 断平系手切多种中张数牌, 染手系手切染手数牌, 全带系手切幺九字牌.</li>
+<li class="">读打点: e.g. 损失牌效保持手牌安定度打点低, 全牌效推进有一定打点, 固定宝牌对子高打点, 复合多种手役满贯可能.</li>
+<li class="">读形状.</li>
+<li class="">读手役.</li>
+<li class="">读关联牌: e.g. 晚于安全牌切出的立直宣言牌有可能为关联牌.</li>
+<li class="">读牌山: e.g. 早巡数牌周边山存量高, OC/NC 外侧山存量高.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=牌山读牌>牌山读牌<a href=#牌山读牌 class=hash-link aria-label="Direct link to 牌山读牌" title="Direct link to 牌山读牌" translate=no>​</a></h3>
+<ul>
+<li class="">对手<strong>染手</strong>花色<strong>场况差</strong>, 牌山残余枚数少.</li>
+<li class=""><strong>早巡对手捨牌</strong>的<strong>靠张</strong>进张更容易, <strong>场况好</strong>:<!-- -->
+<ul>
+<li class="">进张可能: 靠张高概率<strong>牌山确</strong>.</li>
+<li class="">鸣牌可能: 对手后续摸到早巡捨牌的靠张 (孤张废张), 高概率会<strong>直接摸切</strong>.</li>
+<li class="">听牌可能: 对手放铳率增加.</li>
+<li class="">早巡愚形听对手捨牌及其靠张, 可以考虑立即立直 (不寻求改良).</li>
+</ul>
+</li>
+<li class=""><strong>中晚巡对手捨牌</strong>的<strong>靠张</strong>进张更困难, <strong>场况差</strong>.</li>
+<li class="">生张字牌山确概率最高.</li>
+<li class="">壁外数牌山确概率较高:
+e.g. 可见 4 枚 <code>5m</code>, <code>5m</code> 靠张 (<code>3467m</code>) 山确概率较高.</li>
+<li class="">边张数牌山确概率大于中张数牌.</li>
+<li class="">中巡 1 枚现字牌山确概率大于生张字牌.</li>
+<li class="">多家弃和时, 立直家现物山确概率大于非现物.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=副露读牌>副露读牌<a href=#副露读牌 class=hash-link aria-label="Direct link to 副露读牌" title="Direct link to 副露读牌" translate=no>​</a></h3>
+<ul>
+<li class="">宝牌副露: 不应盲目对攻.</li>
+<li class="">小牌副露: 不应直接弃和.
+e.g. 提前固定两面好形并保留安牌 (损失一定牌效以保持手牌安定度),
+小牌速攻概率上升.</li>
+<li class="">早巡好形副露: 存在高打点可能.</li>
+<li class="">幺九副露存在役牌/染手/三色/一气/全带/对对可能.</li>
+<li class="">早巡固定愚形存在作三色/一气/全带可能.</li>
+<li class="">碰幺九宝牌存在役牌后付/对对和可能.</li>
+<li class="">三副露 + 拆搭子: 单骑听牌可能.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=副露线索牌>副露线索牌<a href=#副露线索牌 class=hash-link aria-label="Direct link to 副露线索牌" title="Direct link to 副露线索牌" translate=no>​</a></h4>
+<ul>
+<li class="">副露捨牌.</li>
+<li class="">手切安全牌.</li>
+<li class="">手切宝牌.</li>
+<li class="">手切搭子.</li>
+<li class="">副露上家捨牌 (副露家未鸣牌).</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=副露安全牌>副露安全牌<a href=#副露安全牌 class=hash-link aria-label="Direct link to 副露安全牌" title="Direct link to 副露安全牌" translate=no>​</a></h4>
+<ul>
+<li class="">非最后副露捨牌跨筋.</li>
+<li class="">手切安全牌 (重要牌) 前捨牌跨筋: 即使放铳, 铳点可能较小, 小牌更倾向于反牌效留安.</li>
+<li class="">两坎副露同色牌.</li>
+<li class="">碰牌后捨牌跨筋可能通过的情况:<!-- -->
+<ul>
+<li class="">根据 <code>两对子复合形 + 其他两面</code>, <code>两对子复合形 + 其他对子</code> (三对子形) 两种情况推理手牌.</li>
+<li class="">完全一向听碰牌后捨牌跨筋较为安全:
+e.g. <code>678m334s34p788p</code>, 先切 <code>7p</code> 进入完全一向听, <code>88p</code> 碰牌后切 <code>4s</code>, 周边可能存在雀头.</li>
+<li class="">愚形副露后, 固定对子碰牌后捨牌跨筋较为安全:
+e.g. <code>24678m34488p688s</code>, <code>24m</code> 吃牌后应切 <code>4p</code>, 而不是 <code>6s</code>,
+故 <code>24m</code> 吃牌后切 <code>6s</code>, <code>88s</code> 碰牌后切 <code>4p</code>, 周边可能存在雀头,
+牌形可能为 <code>24678m33478p688s</code>.</li>
+</ul>
+</li>
+<li class="">吃牌后捨牌跨筋可能通过的情况:
+吃牌前其他家切出该牌, 副露家没有碰听, 说明不存在捨牌周边复合形 (即 XXY 形),
+因此吃牌后捨牌跨筋可能安全, 也可能捨牌周边存在愚形听牌
+(+3 牌可能点坎张, +2 牌可能点双碰, +1 牌可能点单骑).</li>
+<li class="">拆两面好形搭子, 弱于该形状的搭子跨筋比较安全:
+e.g. 二度受搭子弱于两面好形搭子, 二度受比较安全.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=副露危险牌>副露危险牌<a href=#副露危险牌 class=hash-link aria-label="Direct link to 副露危险牌" title="Direct link to 副露危险牌" translate=no>​</a></h4>
+<ul>
+<li class="">手切安全牌 (重要牌) 后, 吃牌时捨牌跨筋:<!-- -->
+<ul>
+<li class="">该捨牌比安全牌 (重要牌) 更晚切出, 大概率为关联牌.</li>
+<li class="">两面吃牌时, 该捨牌跨筋以外的筋组较为安全, 不会放铳好形 (可能放铳愚形).</li>
+<li class="">例外情况 (捨牌不是关联牌):<!-- -->
+<ul>
+<li class="">愚形吃牌时, 该捨牌也有可能为改良牌, 而非关联牌.</li>
+<li class="">暗刻作雀头.</li>
+<li class="">食延换听.</li>
+<li class="">复合形.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">最后副露捨牌跨筋:<!-- -->
+<ul>
+<li class="">两面听牌.</li>
+<li class="">吃牌跨筋危险度高于碰牌跨筋: 碰牌后捨牌周边可能存在雀头.</li>
+</ul>
+</li>
+<li class="">最后副露捨牌里筋: 食延换听.</li>
+<li class="">副露捨牌未覆盖区域.</li>
+<li class="">生牌.</li>
+</ul>
+<p><img decoding=async loading=lazy alt=食延换听 src=/notes/assets/images/chi-e9e0fc5abae6138ea6267484d7bba294.png title=食延换听 width=723 height=631 class=img_ckm9 /></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=副露听牌率>副露听牌率<a href=#副露听牌率 class=hash-link aria-label="Direct link to 副露听牌率" title="Direct link to 副露听牌率" translate=no>​</a></h4>
+<p>听牌可能:</p>
+<ul>
+<li class="">三副露.</li>
+<li class="">二副露 + 若干巡手切.</li>
+<li class="">一副露 + 切好形 + 多巡摸切.</li>
+<li class="">晚巡一副露.</li>
+<li class="">染手副露 + 切同色牌.</li>
+<li class="">断幺九副露 + 切中张宝牌.</li>
+<li class="">对对和副露 + 切中张好形.</li>
+<li class="">小三元副露.</li>
+</ul>
+<p>6-10 巡听牌率:</p>
+<ul>
+<li class="">一副露: 15%.</li>
+<li class="">二副露: 34%.</li>
+<li class="">三副露: 71%.</li>
+</ul>
+<p>13 巡后听牌率:</p>
+<ul>
+<li class="">一副露: 53%.</li>
+<li class="">二副露: 70%.</li>
+<li class="">三副露: 87%.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=宝牌读牌>宝牌读牌<a href=#宝牌读牌 class=hash-link aria-label="Direct link to 宝牌读牌" title="Direct link to 宝牌读牌" translate=no>​</a></h3>
+<ul>
+<li class="">手切宝牌存在两种可能：<!-- -->
+<ul>
+<li class="">满贯以上高打点 (放弃宝牌).</li>
+<li class="">好形一向听/听牌 (孤张宝牌).</li>
+</ul>
+</li>
+<li class="">早巡手切宝牌, 手牌速度较快.</li>
+<li class="">早巡手切客风宝牌, 一般没有役牌对子, 存在断幺/平和可能.</li>
+<li class="">早巡手切役牌, 一般没有客风宝牌, 存在断幺/平和可能.</li>
+<li class="">手切宝牌靠张 (e.g. <code>3p</code> 为宝牌时手切 <code>12p</code>): 固定宝牌对子/刻子.</li>
+<li class="">通过<strong>牌河宝牌</strong>个数推测对手手牌打点.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=手摸切读牌>手摸切读牌<a href=#手摸切读牌 class=hash-link aria-label="Direct link to 手摸切读牌" title="Direct link to 手摸切读牌" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>摸切</strong>: 存在靠张可能性下降.</li>
+<li class=""><strong>手切</strong>: 存在靠张可能性上升.<!-- -->
+<ul>
+<li class="">跨筋: <code>-2/+1</code> 与 <code>-1/+2</code> 两面听.</li>
+<li class="">里筋: <code>23457</code> 进张或副露 <code>14</code> 后, 手切 <code>7</code> 形成 <code>36</code> 两面听.</li>
+</ul>
+</li>
+<li class="">空切可能 (Slide):<!-- -->
+<ul>
+<li class="">面子手切捨牌: e.g. 手切 <code>35s</code>, 多巡后手切 <code>4s</code>.</li>
+<li class="">重复手切捨牌: e.g. 手切 <code>8s</code>, 多巡后手切 <code>8s</code>.</li>
+<li class="">早巡手切 <code>3m</code>, 中巡手切 <code>1m</code>:
+若为 Slide 空切, 则万子下段存在完整面子, 较为安全,
+同时排除 <code>47m</code> 两面 (<code>23456m</code> 存在振听).</li>
+</ul>
+</li>
+<li class="">早巡多次摸切: 超好形或进张极差.</li>
+<li class="">早巡切牌多为<strong>断幺牌</strong>, 后切<strong>生张字牌</strong>:
+高概率非常规手役 (染手/对子/全带/国士无双), 壁筋理论失效, 手牌速度不确定 (一般慢于正常顺子手役).</li>
+<li class="">早巡手切 (两番) 自风牌, 手牌无孤张字牌, 手牌速度较快.</li>
+<li class="">逆序手切: 后切的边张周围存在搭子/面子/手役的可能性上升.<!-- -->
+<ul>
+<li class="">e.g. 切 <code>中9s</code>: <code>9s</code> 周围以及 <code>s</code> 上段存在搭子/面子/手役的可能性上升.</li>
+<li class="">e.g. 切 <code>3p8p</code>: <code>8p</code> 周围以及 <code>p</code> 上段存在搭子/面子/手役的可能性上升.</li>
+<li class="">e.g. 切 <code>8m1p</code>: <code>1p</code> 周围以及 <code>p</code> 下段存在搭子/面子/手役的可能性上升.</li>
+<li class="">e.g. 切 <code>4p -> XX -> 2p 立直</code>: <code>1p</code> 危险度上升 (<code>1124</code> -> <code>112</code> -> <code>11</code>).</li>
+<li class="">e.g. 切 <code>8m1p7p2s</code>: 下段存在三色同顺手役的可能性上升.</li>
+<li class="">e.g. 切 <code>8s -> 2p -> 字牌</code>: 存在字牌对子, 较高副露可能.</li>
+<li class="">e.g. 切 <code>5s -> 3s -> 字牌</code>: 染手手役可能性上升 (字牌价值 > 非同色数牌), 手牌<strong>速度较快</strong>.</li>
+<li class="">e.g. 早巡切 <code>役牌 -> 客风牌</code>: 轻视役牌, 手牌<strong>速度较快</strong>, <strong>打点较高</strong> (存在立断平可能).</li>
+<li class="">e.g. 前五巡切 <code>3p2w</code> / <code>7s2p</code>: 早出尖张牌 <code>37</code>, 手牌<strong>速度较快</strong>.</li>
+</ul>
+</li>
+<li class=""><code>高价值浮牌早切</code>/<code>低价值浮牌晚切</code>: 留有特定形状的可能性变高, 特定牌的危险度上升.<!-- -->
+<ul>
+<li class="">e.g. 早切 <code>5</code>, 里筋 <code>14</code>/<code>69</code> 危险度上升:
+早切 <code>5</code>, 跨筋 <code>36</code>/<code>47</code> 危险度下降, 同时否定 <code>25</code>/<code>58</code> 两面,
+剩下 <code>14</code>/<code>69</code> 两组筋危险度上升, e.g. <code>235</code> / <code>578</code>.</li>
+<li class="">e.g. 晚切 <code>5</code>, 里筋/跨筋危险度基本不变, 存在多种情况: <code>235</code>, <code>556</code>, 靠张一向听.</li>
+<li class="">e.g. 早切 <code>8</code>, 里筋/跨筋危险度基本不变, 存在多种情况:孤张 <code>8</code>, <code>568</code>, <code>788</code>, <code>899</code>.</li>
+<li class="">e.g. 晚切 <code>8</code>, 跨筋 <code>69</code> 危险度上升: <code>788</code>, <code>899</code>.</li>
+<li class="">e.g. 早切 <code>3</code> 与 <code>8</code> (间四间):
+跨筋 <code>14</code> / <code>25</code> / <code>69</code> 危险度下降, 同时否定 <code>36</code> / <code>58</code> 两面,
+剩下 <code>47</code> 一组筋危险度上升.
+但这仅仅意味着间四间 <code>47</code> 比普通无筋 <code>47</code> 更危险,
+也无法真正地否定 <code>14</code> / <code>25</code> / <code>69</code> 两面.</li>
+</ul>
+</li>
+<li class="">手切<strong>好形搭子</strong> (e.g. <code>56</code> 两面搭):<!-- -->
+<ul>
+<li class="">好形搭子超载, 手牌<strong>速度较快</strong>.</li>
+<li class="">好形听牌可能, 可用<strong>筋壁理论</strong>防守.</li>
+<li class="">消除二度受进张可能: <code>3344m</code>/<code>3467m</code> 手切 <code>34m</code>, 二度受进张 <code>258m</code> 危险度上升.</li>
+<li class="">受<code>宝牌</code>/<code>手役</code>(三色/一气/全带/七对)/<code>枚数</code>影响, 存在<strong>更弱好形搭子</strong>/<strong>愚形搭子</strong>听牌可能.</li>
+<li class="">手切两面搭子, 且牌河存在变则手可能: 字牌铳率倍增.</li>
+</ul>
+</li>
+<li class="">手切<strong>愚形搭子</strong> (e.g. <code>75</code> 坎张搭): 愚形搭子超载, 手牌<strong>速度较快</strong>.</li>
+<li class="">顺切愚形搭子并立直: 宣言牌跨筋铳率上升 (关联牌).</li>
+<li class="">逆切好形搭子并立直: 宣言牌跨筋铳率上升 (二度受).</li>
+<li class="">手切对子:<!-- -->
+<ul>
+<li class="">对子跨筋铳率下降.</li>
+<li class="">手牌至少一组对子, 无头一向听可能性较小, 完全一向听可能性较大.</li>
+</ul>
+</li>
+<li class="">手切<strong>幺九对子</strong>: 作断幺九手役, 手牌<strong>速度较快</strong>.</li>
+<li class="">手切<strong>字牌对子</strong>: 断幺手役/两面听牌可能.</li>
+<li class="">手切<strong>役牌对子</strong>: 平和/断幺/清一色手役可能, 手牌<strong>速度较快</strong>, <strong>打点较高</strong>.</li>
+<li class="">手切<strong>两番役牌对子</strong>: 超高打点手牌可能.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=立直读牌>立直读牌<a href=#立直读牌 class=hash-link aria-label="Direct link to 立直读牌" title="Direct link to 立直读牌" translate=no>​</a></h3>
+<ul>
+<li class="">立直宣言牌一般为以下三种:<!-- -->
+<ul>
+<li class="">安全牌.</li>
+<li class="">改良浮牌.</li>
+<li class="">改良靠张: e.g. 两面对补强牌.</li>
+</ul>
+</li>
+<li class="">好形放铳率: 1 / (18 - N), <code>123789</code> + 1, <code>456</code> + 2.</li>
+<li class="">愚形放铳率:<!-- -->
+<ul>
+<li class="">立直前手切 2 枚以上中张数牌, 数牌周边存在愚形可能大幅度降低:<!-- -->
+<ul>
+<li class="">e.g. <code>2mX7mX4m</code> 万字数牌可能全好形.</li>
+<li class="">e.g. <code>9mXXXX4m</code> 听边 <code>7m</code> 概率大幅下降.</li>
+<li class="">e.g. <code>9m8mXX4m</code> 听坎 <code>7m</code> 概率大幅下降.</li>
+</ul>
+</li>
+<li class="">立直前手切 1 枚中张数牌, 未切一张远端边张牌, 存在前筋引挂可能:<!-- -->
+<ul>
+<li class="">e.g. <code>1mxx4mxx</code>, 未切过 <code>89m</code>, 存在听边 <code>7m</code> 可能.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">讨论宣言牌对铳率的影响时, 实际是在讨论宣言牌是<strong>关联牌</strong>的可能性:<!-- -->
+<ul>
+<li class="">关联牌: 听牌为宣言牌周边.</li>
+<li class="">入目: 手牌与宣言牌有关, 宣言牌周边进张后切出宣言牌立直, 听牌与宣言牌无关.</li>
+<li class="">靠张: 手牌为靠张一向听, 另外一个数牌靠张后切出宣言牌立直, 听牌与宣言牌无关.</li>
+</ul>
+</li>
+<li class="">边张宣言牌 (牌效低) 为关联牌概率高, 同色牌铳率上升.</li>
+<li class="">立直宣言牌周边的前筋铳率上升: e.g. 切 4 立直, 筋 2 铳率上升.</li>
+<li class="">手切生张役牌立直: <strong>双碰/单骑字牌</strong>听牌可能.</li>
+<li class="">手切熟张字牌 (安全牌) 立直: <strong>好形</strong>听牌可能.</li>
+<li class="">手切壁外数牌立直: <strong>壁外愚形</strong>听牌可能.</li>
+<li class="">早中巡手切 <code>19</code> 立直: 高概率双碰/单骑听牌 (<code>122</code>/<code>133</code> -> <code>22</code>/<code>33</code>), 存在七对子立直可能.</li>
+<li class="">早中巡手切 <code>5XXX2</code> / <code>5XXX8</code> 立直:<!-- -->
+<ul>
+<li class="">高概率双碰/边张听牌: <code>112</code> / <code>122</code> -> <code>11</code> / <code>12</code>.</li>
+<li class="">存在两面听牌可能: <code>2235</code> -> <code>223</code> -> <code>23</code> / <code>5788</code> -> <code>788</code> -> <code>78</code>.</li>
+</ul>
+</li>
+<li class="">早中巡手切 <code>37</code> 立直: 高概率两面听牌.</li>
+<li class="">早中巡手切 <code>46</code> 立直且切过远段牌 (<code>789</code> / <code>123</code>): 高概率两面听牌.</li>
+<li class="">早中巡手切 <code>5</code> 立直:<!-- -->
+<ul>
+<li class="">一般情况下, 切 <code>5</code> 立直两面听 <code>36</code> 或 <code>47</code>, 即立直宣言牌周围可能存在靠张.</li>
+<li class="">存在坎张听牌骗筋可能 (<code>135</code>/<code>579</code> 切 <code>5</code>), 立直宣言牌的筋牌 <code>2</code> 与 <code>8</code> 危险度上升.</li>
+<li class=""><code>0</code> 立直: <code>230</code> / <code>078</code> 切 <code>0</code>, <code>1469</code> 危险度大大上升.</li>
+</ul>
+</li>
+<li class="">立直前晚切 <code>1</code> / <code>9</code>: <code>1</code> / <code>9</code> 里筋危险度上升.
+e.g. <code>13</code> 进张 <code>4</code> 手切 <code>1</code>.</li>
+<li class="">摸切立直:<!-- -->
+<ul>
+<li class="">改良数变少.</li>
+<li class="">改良巡目过晚.</li>
+<li class="">他家手牌进度加快.</li>
+<li class="">待牌场况变好 (可能为愚形听牌): e.g. 壁筋引挂.</li>
+</ul>
+</li>
+<li class="">逆切立直 (<code>5</code> -> <code>2</code>), 听立直宣言牌周边概率约为 50 %, 远远高于普通场景听立直宣言牌周边概率.</li>
+<li class="">非靠张一向听 (读入目与里目):<!-- -->
+<ul>
+<li class="">逆切数牌, 立直前切宝牌, 手切字牌立直: 靠张一向听优先保留靠张能力强的浮牌.</li>
+<li class="">立直前切两面搭: 靠张一向听缺少搭子, 不太可能拆好形搭子.</li>
+<li class="">立直前切 MPS 多枚中张牌: 没有靠张空间 (大部分靠张可能产生振听).</li>
+</ul>
+</li>
+<li class="">立直若干巡后, 其他家未切的<strong>立直家现物</strong>高概率<strong>牌山确</strong>.</li>
+<li class="">立直若干巡后, <strong>未通过筋牌</strong>的危险度: 牌河中枚数越少的筋牌 (e.g. 0 或 1 枚), 危险度越高.</li>
+<li class="">立直若干巡后, <strong>未通过暗刻</strong>的危险度: 手牌中枚数越多的筋牌 (e.g. 暗刻 <code>22555p</code>), 危险度越高.</li>
+<li class="">亲家早巡立直, 存在愚形听牌与低打点的可能:<!-- -->
+<ul>
+<li class="">亲家牌河: 立直前手切对子/搭子/宝牌靠张, 亲家手牌速度快, 打点高, 优先考虑弃和.</li>
+<li class="">手牌价值: 立直 <code>Nomi</code> / 愚形听牌, 优先考虑弃和.</li>
+<li class="">当前场况: 其他子家仍在进攻, 可以考虑弃和, 期待点棒横移.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=手役读牌>手役读牌<a href=#手役读牌 class=hash-link aria-label="Direct link to 手役读牌" title="Direct link to 手役读牌" translate=no>​</a></h3>
+<ul>
+<li class="">役牌:<!-- -->
+<ul>
+<li class="">前三巡未切字牌, 三-六巡开始手切字牌: 手牌高概率役牌对子 + 其他字牌.</li>
+<li class="">逆序手切 <code>中张数牌</code> -> <code>字牌</code>: 手牌高概率役牌对子 + 其他字牌.</li>
+<li class="">逆序手切 <code>中张数牌</code> -> <code>幺九数牌</code>: 手牌存在役牌对子可能.</li>
+<li class="">役牌早打: 无役牌或役牌暗刻的可能性高.</li>
+<li class="">役牌晚打: 役牌后付的可能性高 (期待单役牌变成双役牌, 防止后付振听).</li>
+</ul>
+</li>
+<li class="">断幺九:<!-- -->
+<ul>
+<li class="">手切幺九对子.</li>
+<li class="">牌河均为幺九牌及其靠张.</li>
+<li class="">早巡切边张搭子.</li>
+<li class="">副露时, 手切安全牌 (重要牌) 后, 再手切幺九牌, 则可能不是断幺九.</li>
+<li class="">副露时, 保留断幺不确搭子 (e.g. <code>78m</code>), 拆掉断幺确搭子 (e.g. <code>22s</code>), 则可能不是断幺九.</li>
+</ul>
+</li>
+<li class="">平和:<!-- -->
+<ul>
+<li class="">早巡手切 <code>字牌 -> 19 -> 28 -> 34567</code>.</li>
+<li class="">幺九数牌及其靠张切牌顺序晚于断幺九手役.</li>
+<li class="">中巡手切边张搭子.</li>
+</ul>
+</li>
+<li class="">三色同顺:<!-- -->
+<ul>
+<li class="">早巡手切三色 <code>456</code>, 切掉赤宝牌靠张, 存在下/上段三色同顺手役可能.</li>
+<li class="">逆序手切周边存在三色同顺手役可能.</li>
+<li class="">(赤) 宝牌周边存在三色同顺手役可能.</li>
+</ul>
+</li>
+<li class="">一气贯通:<!-- -->
+<ul>
+<li class="">牌河接近混一色, 字牌切牌顺序早于染手手役.</li>
+</ul>
+</li>
+<li class="">染手:<!-- -->
+<ul>
+<li class="">早巡只切两色数牌, 包括切对子/搭子.</li>
+<li class="">连续手切熟张字牌, 高概率一向听, 鸣牌后听牌可能.</li>
+<li class="">手切生张字牌, 高概率好形一向听, 鸣牌后听牌可能.</li>
+<li class="">连续手切染手牌 (染手溢出), 高概率听牌.</li>
+</ul>
+</li>
+<li class="">全带:<!-- -->
+<ul>
+<li class="">早巡手切 <code>46 -> 2378</code>.</li>
+<li class="">逆序手切 <code>52</code> / <code>58</code>.</li>
+<li class="">前三巡不切字牌.</li>
+</ul>
+</li>
+<li class="">七对子:<!-- -->
+<ul>
+<li class="">起手一般不会选择七对子手役, 后续进张多组不靠张对子才会转为七对子手役.</li>
+<li class="">早巡手切中张牌.</li>
+<li class="">可能手切两面搭子.</li>
+<li class="">中巡手切熟张幺九牌/边张牌 (一向听).</li>
+<li class="">重视幺九对子 (包括役牌对子).</li>
+</ul>
+</li>
+<li class="">对对和:<!-- -->
+<ul>
+<li class="">明刻副露.</li>
+<li class="">可能手切两面搭子.</li>
+<li class="">手牌选择不如七对子灵活, 边张切牌顺序早于七对子.</li>
+<li class="">中巡手切熟张役牌.</li>
+<li class="">重视役牌对子 (包括幺九对子).</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=场况>场况<a href=#场况 class=hash-link aria-label="Direct link to 场况" title="Direct link to 场况" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=一位>一位<a href=#一位 class=hash-link aria-label="Direct link to 一位" title="Direct link to 一位" translate=no>​</a></h3>
+<p>保守策略:</p>
+<ul>
+<li class="">不盲目对攻, 不盲目立直, 尽量默听.</li>
+<li class="">手牌价值低时, 不盲目与三四位对攻.</li>
+<li class="">可与二位对攻, 阻止二位和牌.</li>
+<li class="">避免开杠.</li>
+<li class="">保留安全牌.</li>
+<li class="">南风局和牌局消化, 追求和率, 不追求打点.<!-- -->
+<ul>
+<li class="">速攻结束牌局.</li>
+<li class="">速攻抢庄.</li>
+</ul>
+</li>
+<li class="">电报完场: 处于大 TOP ALL LAST 状态, 必要时可以帮助副露家和牌, 结束牌局.</li>
+<li class="">电报过庄: 亲家 (特别是二位亲家) 立直, 必要时可以点报子家小牌, 过庄推动牌局.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=四位>四位<a href=#四位 class=hash-link aria-label="Direct link to 四位" title="Direct link to 四位" translate=no>​</a></h3>
+<p>激进策略:</p>
+<ul>
+<li class="">积极进攻, 不保留安全牌.</li>
+<li class="">手牌价值低时, 不盲目与一二位对攻.</li>
+<li class="">积极与三位对攻, 阻止三位和牌.</li>
+<li class="">南风局亲家连庄延长对战局数, 保留避四机会.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=东场>东场<a href=#东场 class=hash-link aria-label="Direct link to 东场" title="Direct link to 东场" translate=no>​</a></h3>
+<ul>
+<li class="">重视打点, 争取领先进入南场.</li>
+<li class="">东一局不执着于高打点:<!-- -->
+<ul>
+<li class="">东一局子家和 2000 点, TOP 率上升 (<code>29.6%</code>).</li>
+<li class="">东一局子家铳 8000 点, LAST 率上升 (<code>46.0%</code>).</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=南场>南场<a href=#南场 class=hash-link aria-label="Direct link to 南场" title="Direct link to 南场" translate=no>​</a></h3>
+<ul>
+<li class="">一位重视和率, 四位重视打点.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=亲家>亲家<a href=#亲家 class=hash-link aria-label="Direct link to 亲家" title="Direct link to 亲家" translate=no>​</a></h3>
+<ul>
+<li class="">积极对攻: 给予子家压力, 延长自摸巡目, 防止被自摸炸庄, 争取自家唯一形听.</li>
+<li class="">亲家进攻威慑力大 (立直 > 默听).</li>
+<li class="">目标不是<strong>强行</strong>连庄, 优先当前局收支最大化 (高打点).</li>
+<li class="">首亲重视打点, 尾亲重视和率.</li>
+<li class="">TOP 时无需<strong>强行</strong>连庄, 优先保证安全下庄.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=子家>子家<a href=#子家 class=hash-link aria-label="Direct link to 子家" title="Direct link to 子家" translate=no>​</a></h3>
+<ul>
+<li class="">立直追求满贯.</li>
+<li class="">副露追求宝牌/染手/对对和.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=早巡>早巡<a href=#早巡 class=hash-link aria-label="Direct link to 早巡" title="Direct link to 早巡" translate=no>​</a></h3>
+<ul>
+<li class="">当牌形较好时, 可以损失一定牌效去追求打点 (平和/断幺/三色/染手).</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=攻防判断>攻防判断<a href=#攻防判断 class=hash-link aria-label="Direct link to 攻防判断" title="Direct link to 攻防判断" translate=no>​</a></h2>
+<ul>
+<li class="">确认所持点数.</li>
+<li class="">确认宝牌.</li>
+<li class="">确认序盘战略.</li>
+<li class="">确认有效牌损失枚数.</li>
+<li class="">确认字牌损失枚数.</li>
+<li class="">确认 NC/OC 牌.</li>
+<li class="">读手摸切.</li>
+<li class="">读他家手牌速度.</li>
+<li class="">读他家手牌打点.</li>
+<li class="">读他家手牌形状.</li>
+<li class="">数筋牌.</li>
+<li class="">确认安全牌.</li>
+<li class="">手牌速度.</li>
+<li class="">手牌打点.</li>
+<li class="">手牌形状.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=攻守原则>攻守原则<a href=#攻守原则 class=hash-link aria-label="Direct link to 攻守原则" title="Direct link to 攻守原则" translate=no>​</a></h3>
+<ul>
+<li class="">点棒状况: 落后激进, 领先保守.</li>
+<li class="">手牌价值 (打点): 打点越高, 越激进.<!-- -->
+<ul>
+<li class="">打点越高, 留安必要性下降, 优先最大化进张数.</li>
+<li class="">打点越低, 留安必要性上升, 优先保留安全牌 (e.g. 切掉两面对补强牌, 不要双碰进张).</li>
+</ul>
+</li>
+<li class="">手牌形状 (和率):<!-- -->
+<ul>
+<li class="">向听数越低, 越激进.</li>
+<li class="">最终形状越好, 越激进.</li>
+</ul>
+</li>
+<li class="">放铳危险度:<!-- -->
+<ul>
+<li class="">捨牌危险度: 现物, 熟张字牌, 筋 <code>19</code>, NC/OC 牌, 筋 <code>2378</code>, 无筋 <code>2378</code>, 无筋 <code>456</code>.</li>
+<li class="">对手打点: 亲家/子家, 副露打点, 牌河<strong>宝牌</strong>出现枚数.<!-- -->
+<ul>
+<li class="">立直.</li>
+<li class="">染手.</li>
+<li class="">对对和.</li>
+<li class="">满贯副露 (e.g. 2~3 枚宝牌).</li>
+</ul>
+</li>
+<li class="">巡目越晚, <strong>半筋/无筋牌</strong>放铳概率越高.</li>
+<li class="">局数越晚, <strong>放铳吃四</strong>概率越高.</li>
+<li class="">两家对攻, 放铳概率高: e.g. 子家立直, 亲家对攻时, 手牌打点低或形状差时应完全弃和.</li>
+</ul>
+</li>
+<li class="">弃和成功率.</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_TrbN alert alert--success"><div class=admonitionHeading_zXwB><span class=admonitionIcon_AhFl><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>对攻原则</div><div class=admonitionContent_nCa6><p><strong>打点</strong>是对攻的准入资格, <strong>形状</strong>是对攻的胜率保障, <strong>放铳危险度</strong>是对攻与否的参考依据.</div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=序盘>序盘<a href=#序盘 class=hash-link aria-label="Direct link to 序盘" title="Direct link to 序盘" translate=no>​</a></h3>
+<ul>
+<li class=""><code>配牌向听数</code> = <code>8</code> - <code>2 * 面子数</code> - <code>1.5 * 役牌对子数</code> - <code>1 * 搭子/对子数</code> - <code>0.5 * 宝牌数</code>:<!-- -->
+<ul>
+<li class="">配牌向听数 <code>&lt;=</code> <strong>3.5</strong> 向听, 积极作牌.</li>
+<li class="">配牌向听数 <code>></code> <strong>3.5</strong> 向听, 消极作牌.</li>
+</ul>
+</li>
+<li class="">低打点, 速度快: 牺牲速度, 提升打点.<!-- -->
+<ul>
+<li class="">e.g. 早巡立直 Nomi 听牌: 可以默听或拒听, 考虑宝牌/平和/断幺九/三色同顺打点改良可能.</li>
+</ul>
+</li>
+<li class="">高打点, 速度慢: 寻找手役, 提升速度.<!-- -->
+<ul>
+<li class="">e.g. 早巡宝牌刻子: 考虑役牌/断幺等可<strong>鸣牌</strong>手役, 提升速度.</li>
+</ul>
+</li>
+<li class="">低打点, 速度慢: 考虑非常规手役 (染手/对子/全带/国士无双), 以满贯为目标作牌, 同时保持手牌防御力.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=对攻>对攻<a href=#对攻 class=hash-link aria-label="Direct link to 对攻" title="Direct link to 对攻" translate=no>​</a></h3>
+<ul>
+<li class="">追立时, 应优先考虑和率 (对攻成功率).</li>
+<li class="">追立两家时, 保证好形 3 番/愚形 4 番打点.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=好形听牌对攻>好形听牌对攻<a href=#好形听牌对攻 class=hash-link aria-label="Direct link to 好形听牌对攻" title="Direct link to 好形听牌对攻" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>两面听牌追立</strong>局收支基本为正数, 可以<strong>合理对攻</strong>:<!-- -->
+<ul>
+<li class="">一发巡切安全牌 + <strong>1300</strong> 以上打点.</li>
+<li class="">非一发巡切 <code>10%</code> 牌 + <strong>2600</strong> 以上打点.</li>
+<li class="">对攻亲家满贯 + <strong>5200</strong> 以上打点.</li>
+<li class="">一般情况下, 追立优于默听.</li>
+<li class="">听立直家现物 + 高打点手牌, 可以考虑默听追求和率.</li>
+</ul>
+</li>
+<li class=""><strong>两面副露听牌</strong>局收支基本高于完全弃和 (-1100), 可以<strong>合理对攻</strong>:<!-- -->
+<ul>
+<li class=""><strong>2600</strong> 以上打点.</li>
+<li class="">切安全牌.</li>
+<li class="">切 <code>10%</code> 牌.</li>
+</ul>
+</li>
+<li class="">子家:<!-- -->
+<ul>
+<li class="">8 巡: 打点 > <code>对手 * 1/3</code>.</li>
+<li class="">12 巡: 打点 > <code>对手 * 1/2</code>.</li>
+</ul>
+</li>
+<li class="">亲家<!-- -->
+<ul>
+<li class="">8 巡: 全攻.</li>
+<li class="">14 巡后: 两番.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=愚形听牌对攻>愚形听牌对攻<a href=#愚形听牌对攻 class=hash-link aria-label="Direct link to 愚形听牌对攻" title="Direct link to 愚形听牌对攻" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>愚形听牌</strong>和率与放铳率相近, 需要<strong>高打点对攻</strong>:<!-- -->
+<ul>
+<li class=""><strong>3900</strong> 以上打点.</li>
+<li class="">切安全牌.</li>
+<li class="">切 <code>10%</code> 牌.</li>
+</ul>
+</li>
+<li class="">子家:<!-- -->
+<ul>
+<li class="">6 巡: 打点 > <code>对手 * 2/3</code>.</li>
+<li class="">12 巡: 打点 ~= 对手.</li>
+</ul>
+</li>
+<li class="">亲家:<!-- -->
+<ul>
+<li class="">6 巡: 全攻.</li>
+<li class="">8-15 巡: 两番.</li>
+<li class="">15 巡后: 三番.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=点数计算>点数计算<a href=#点数计算 class=hash-link aria-label="Direct link to 点数计算" title="Direct link to 点数计算" translate=no>​</a></h2>
+<ul>
+<li class="">基本符数: 20 符.</li>
+<li class="">刻子符数:
+2 (明刻) -> 4 (暗刻) -> 8 (明杠) -> 16 (暗杠),
+幺九刻子<strong>翻倍</strong>.</li>
+<li class="">雀头符数: 役牌 2 符, Double 役牌 4 符.</li>
+<li class="">听牌符数: 边张/坎张/单骑听 2 符, 自摸 2 符, 门清荣和 10 符.</li>
+<li class="">特殊情况: 七对子 25 符, 平和自摸 20 符, 平和荣和 30 符.</li>
+</ul>
+<table><thead><tr><th>番数<th>称呼<th>基本点<tbody><tr><td>&lt; 2000<td><td><code>2 ^ (番数 + 2) * 符数</code><tr><td>5 番<td>满贯<td>2000<tr><td>6 - 7 番<td>跳满<td>3000<tr><td>8 - 10 番<td>倍满<td>4000<tr><td>11 - 12 番<td>三倍满<td>6000<tr><td>13 番<td>役满<td>8000</table>
+<table><thead><tr><th><th>荣和<th>自摸<tbody><tr><td>子家<td><code>基本点 * 4</code><td>亲家赔<code>基本点 * 2</code>, 子家各赔<code>基本点 * 1</code><tr><td>亲家<td><code>基本点 * 6</code><td>子家各赔<code>基本点 * 2</code></table>
+<p>All Last 自摸逆转条件:</p>
+<ul>
+<li class="">亲家: <code>点差 / 4</code> All.</li>
+<li class="">子家对子家: (<code>点差 / 5</code>, <code>点差 / 5 * 2</code>).</li>
+<li class="">子家对亲家: (<code>点差 / 6</code>, <code>点差 / 3</code>).</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_fqbt" id=references>References<a href=#references class=hash-link aria-label="Direct link to References" title="Direct link to References" translate=no>​</a></h2>
+<ul>
+<li class=""><code>Beginner's Luck</code> <a href=http://beginners.biz/kihon target=_blank rel="noopener noreferrer" class="">guide</a>.</li>
+<li class=""><code>魔女</code> <a href=https://puyokururu.medium.com target=_blank rel="noopener noreferrer" class="">ブログ (Blog)</a>.</li>
+<li class=""><a href=https://book.douban.com/subject/20390543 target=_blank rel="noopener noreferrer" class=""><code>科学する麻雀</code></a>.</li>
+<li class=""><a href=https://book.douban.com/subject/35627198 target=_blank rel="noopener noreferrer" class=""><code>统计学麻雀战术</code></a>.</li>
+<li class=""><code>LuckyJ</code> <a href=https://x.com/LuckyJ1443836 target=_blank rel="noopener noreferrer" class="">AI</a>.</li>
+<li class=""><code>Mortal</code> <a href=https://github.com/Equim-chan/mjai-reviewer target=_blank rel="noopener noreferrer" class="">AI</a>.</li>
+<li class=""><code>Naga</code> <a href=https://naga.dmv.nico/naga_report/top target=_blank rel="noopener noreferrer" class="">AI</a>.</li>
+<li class=""><code>Suphx</code> <a href=https://arxiv.org/pdf/2003.13590.pdf target=_blank rel="noopener noreferrer" class="">AI</a>.</li>
+<li class="">天鳳牌理好形表示 <a href=https://greasyfork.org/zh-CN/scripts/435111-%E5%A4%A9%E9%B3%B3%E7%89%8C%E7%90%86%E5%A5%BD%E5%BD%A2%E8%A1%A8%E7%A4%BA target=_blank rel="noopener noreferrer" class="">插件</a>.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class=col><b>Tags:</b><ul class="tags_cGDs padding--none margin-left--sm"><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/cs>CS</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/math>Math</a><li class=tag_V4YT><a rel=tag class="tag_DVgd tagRegular_xECn" href=/notes/tags/mahjong>Mahjong</a></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_AxGk"><a href=https://github.com/sabertazimi/notes/edit/main/content/cs/math/mahjong.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_dNJ2 aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_h9KE"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-01-27T12:48:04.000Z itemprop=dateModified>Jan 27, 2026</time></b> by <b>Sabertaz</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/notes/cs/math/economics><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Economics</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/notes/cs/os/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Operating System</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_n7kj thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#牌效 class="table-of-contents__link toc-highlight">牌效</a><ul><li><a href=#单张牌效 class="table-of-contents__link toc-highlight">单张牌效</a><li><a href=#对子牌效 class="table-of-contents__link toc-highlight">对子牌效</a><li><a href=#搭子牌效 class="table-of-contents__link toc-highlight">搭子牌效</a><li><a href=#三牌复合形 class="table-of-contents__link toc-highlight">三牌复合形</a><li><a href=#四牌复合形 class="table-of-contents__link toc-highlight">四牌复合形</a><li><a href=#多牌复合形 class="table-of-contents__link toc-highlight">多牌复合形</a></ul><li><a href=#向听 class="table-of-contents__link toc-highlight">向听</a><ul><li><a href=#两向听 class="table-of-contents__link toc-highlight">两向听</a><li><a href=#一向听 class="table-of-contents__link toc-highlight">一向听</a><li><a href=#听牌 class="table-of-contents__link toc-highlight">听牌</a></ul><li><a href=#鸣牌 class="table-of-contents__link toc-highlight">鸣牌</a><ul><li><a href=#选择 class="table-of-contents__link toc-highlight">选择</a><li><a href=#吃 class="table-of-contents__link toc-highlight">吃</a><li><a href=#碰 class="table-of-contents__link toc-highlight">碰</a><li><a href=#杠 class="table-of-contents__link toc-highlight">杠</a></ul><li><a href=#手役 class="table-of-contents__link toc-highlight">手役</a><ul><li><a href=#常见手役 class="table-of-contents__link toc-highlight">常见手役</a><li><a href=#立直手役 class="table-of-contents__link toc-highlight">立直手役</a><li><a href=#平和手役 class="table-of-contents__link toc-highlight">平和手役</a><li><a href=#一发手役 class="table-of-contents__link toc-highlight">一发手役</a><li><a href=#断幺九手役 class="table-of-contents__link toc-highlight">断幺九手役</a><li><a href=#役牌手役 class="table-of-contents__link toc-highlight">役牌手役</a><li><a href=#宝牌 class="table-of-contents__link toc-highlight">宝牌</a><li><a href=#三色同顺手役 class="table-of-contents__link toc-highlight">三色同顺手役</a><li><a href=#一气贯通手役 class="table-of-contents__link toc-highlight">一气贯通手役</a><li><a href=#染手手役 class="table-of-contents__link toc-highlight">染手手役</a><li><a href=#全带幺手役 class="table-of-contents__link toc-highlight">全带幺手役</a><li><a href=#七对子手役 class="table-of-contents__link toc-highlight">七对子手役</a><li><a href=#对对和手役 class="table-of-contents__link toc-highlight">对对和手役</a><li><a href=#三暗刻手役 class="table-of-contents__link toc-highlight">三暗刻手役</a><li><a href=#国士无双手役 class="table-of-contents__link toc-highlight">国士无双手役</a><li><a href=#役满手役 class="table-of-contents__link toc-highlight">役满手役</a></ul><li><a href=#振听 class="table-of-contents__link toc-highlight">振听</a><ul><li><a href=#振听防守 class="table-of-contents__link toc-highlight">振听防守</a><li><a href=#振听进攻 class="table-of-contents__link toc-highlight">振听进攻</a></ul><li><a href=#防守 class="table-of-contents__link toc-highlight">防守</a><ul><li><a href=#安全牌 class="table-of-contents__link toc-highlight">安全牌</a><li><a href=#筋牌 class="table-of-contents__link toc-highlight">筋牌</a><li><a href=#壁牌 class="table-of-contents__link toc-highlight">壁牌</a><li><a href=#早巡外侧牌 class="table-of-contents__link toc-highlight">早巡外侧牌</a><li><a href=#弃和 class="table-of-contents__link toc-highlight">弃和</a><li><a href=#兜牌 class="table-of-contents__link toc-highlight">兜牌</a><li><a href=#进攻信号 class="table-of-contents__link toc-highlight">进攻信号</a><li><a href=#防守信号 class="table-of-contents__link toc-highlight">防守信号</a><li><a href=#防守实例 class="table-of-contents__link toc-highlight">防守实例</a></ul><li><a href=#读牌 class="table-of-contents__link toc-highlight">读牌</a><ul><li><a href=#牌山读牌 class="table-of-contents__link toc-highlight">牌山读牌</a><li><a href=#副露读牌 class="table-of-contents__link toc-highlight">副露读牌</a><li><a href=#宝牌读牌 class="table-of-contents__link toc-highlight">宝牌读牌</a><li><a href=#手摸切读牌 class="table-of-contents__link toc-highlight">手摸切读牌</a><li><a href=#立直读牌 class="table-of-contents__link toc-highlight">立直读牌</a><li><a href=#手役读牌 class="table-of-contents__link toc-highlight">手役读牌</a></ul><li><a href=#场况 class="table-of-contents__link toc-highlight">场况</a><ul><li><a href=#一位 class="table-of-contents__link toc-highlight">一位</a><li><a href=#四位 class="table-of-contents__link toc-highlight">四位</a><li><a href=#东场 class="table-of-contents__link toc-highlight">东场</a><li><a href=#南场 class="table-of-contents__link toc-highlight">南场</a><li><a href=#亲家 class="table-of-contents__link toc-highlight">亲家</a><li><a href=#子家 class="table-of-contents__link toc-highlight">子家</a><li><a href=#早巡 class="table-of-contents__link toc-highlight">早巡</a></ul><li><a href=#攻防判断 class="table-of-contents__link toc-highlight">攻防判断</a><ul><li><a href=#攻守原则 class="table-of-contents__link toc-highlight">攻守原则</a><li><a href=#序盘 class="table-of-contents__link toc-highlight">序盘</a><li><a href=#对攻 class="table-of-contents__link toc-highlight">对攻</a></ul><li><a href=#点数计算 class="table-of-contents__link toc-highlight">点数计算</a><li><a href=#references class="table-of-contents__link toc-highlight">References</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Notes</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/notes/ai>AI</a><li class=footer__item><a class=footer__link-item href=/notes/cs>CS</a><li class=footer__item><a class=footer__link-item href=/notes/web>Web</a><li class=footer__item><a class=footer__link-item href=/notes/language>Language</a><li class=footer__item><a class=footer__link-item href=/notes/programming>Programming</a><li class=footer__item><a class=footer__link-item href=/notes/web/library>Library Gallery</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Social Media</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://x.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>X<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://facebook.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://weibo.com/sabertazimi target=_blank rel="noopener noreferrer" class=footer__link-item>Weibo<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=mailto:sabertazimi@gmail.com target=_blank rel="noopener noreferrer" class=footer__link-item>Email<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Find More</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/sabertazimi/blog target=_blank rel="noopener noreferrer" class=footer__link-item>Next.js Blog<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/lab target=_blank rel="noopener noreferrer" class=footer__link-item>Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/bod target=_blank rel="noopener noreferrer" class=footer__link-item>Bod CLI<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/doftiles target=_blank rel="noopener noreferrer" class=footer__link-item>Dotfiles<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/LaTeX-snippets target=_blank rel="noopener noreferrer" class=footer__link-item>LaTeX Snippets<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/sabertazimi/hust-lab target=_blank rel="noopener noreferrer" class=footer__link-item>HUST Lab<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_XHYa><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Sabertaz</div></div></div></footer></div></body>

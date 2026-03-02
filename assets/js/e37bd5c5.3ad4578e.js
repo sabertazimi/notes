@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["98174"],{80938(e){e.exports=JSON.parse('{"tag":{"label":"Claude","permalink":"/notes/tags/claude","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/gen/claude-code","title":"Claude Code","description":"Setup","permalink":"/notes/ai/gen/claude-code"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["94070"],{57300(e){e.exports=JSON.parse('{"tag":{"label":"Embeddings","permalink":"/notes/tags/embeddings","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/gen/llm","title":"Large Language Model","description":"Generative Model","permalink":"/notes/ai/gen/llm"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["32422"],{60042(t){t.exports=JSON.parse('{"tag":{"label":"Ubuntu","permalink":"/notes/tags/ubuntu","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/ubuntu","title":"Ubuntu","description":"APT Key","permalink":"/notes/programming/linux/ubuntu"}],"unlisted":false}}')}}]);

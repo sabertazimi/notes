@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["98822"],{61947(e){e.exports=JSON.parse('{"tag":{"label":"Covariant","permalink":"/notes/tags/covariant","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/internals","title":"Internals","description":"Type System","permalink":"/notes/web/typescript/internals"}],"unlisted":false}}')}}]);

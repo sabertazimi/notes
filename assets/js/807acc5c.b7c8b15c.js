@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["4610"],{39543(e){e.exports=JSON.parse('{"tag":{"label":"Style","permalink":"/notes/tags/style","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/style","title":"Styled Components","description":"Shared","permalink":"/notes/web/react/style"}],"unlisted":false}}')}}]);

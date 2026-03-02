@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["19852"],{90851(s){s.exports=JSON.parse('{"tag":{"label":"Zsh","permalink":"/notes/tags/zsh","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/shell","title":"Shell Scripts","description":"Warnings","permalink":"/notes/programming/linux/shell"}],"unlisted":false}}')}}]);

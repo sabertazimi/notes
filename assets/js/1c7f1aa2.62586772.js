@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["19244"],{21979(t){t.exports=JSON.parse('{"tag":{"label":"Branch","permalink":"/notes/tags/branch","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/git/branch","title":"Branch","description":"Git Flow Extension:","permalink":"/notes/programming/git/branch"}],"unlisted":false}}')}}]);

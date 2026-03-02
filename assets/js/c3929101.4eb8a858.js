@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["81348"],{91360(e){e.exports=JSON.parse('{"tag":{"label":"Moving","permalink":"/notes/tags/moving","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/moving","title":"Moving","description":"Typeof","permalink":"/notes/web/typescript/moving"}],"unlisted":false}}')}}]);

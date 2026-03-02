@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["87741"],{35914(e){e.exports=JSON.parse('{"tag":{"label":"Physical","permalink":"/notes/tags/physical","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/physical","title":"Physical Layer","description":"Twisted Pair","permalink":"/notes/web/network/physical"}],"unlisted":false}}')}}]);

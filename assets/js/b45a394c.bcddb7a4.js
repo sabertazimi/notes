@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["63337"],{92324(e){e.exports=JSON.parse('{"tag":{"label":"Commands","permalink":"/notes/tags/commands","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/core","title":"Core","description":"Command Priority","permalink":"/notes/programming/linux/core"}],"unlisted":false}}')}}]);

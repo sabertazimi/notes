@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["16577"],{7365(e){e.exports=JSON.parse('{"tag":{"label":"KDE","permalink":"/notes/tags/kde","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/desktop","title":"Desktop","description":"Dotfiles","permalink":"/notes/programming/linux/desktop"}],"unlisted":false}}')}}]);

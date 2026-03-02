@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["30624"],{52192(e){e.exports=JSON.parse('{"tag":{"label":"Policy","permalink":"/notes/tags/policy","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/web","title":"Web","description":"Security Headers","permalink":"/notes/web/security/web"}],"unlisted":false}}')}}]);

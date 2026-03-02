@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["53028"],{25762(t){t.exports=JSON.parse('{"tag":{"label":"Combination","permalink":"/notes/tags/combination","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/combination","title":"Combination","description":"Union","permalink":"/notes/web/typescript/combination"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["15467"],{29740(e){e.exports=JSON.parse('{"tag":{"label":"Comments","permalink":"/notes/tags/comments","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/java/comments","title":"Comments","description":"Javadoc","permalink":"/notes/language/java/comments"}],"unlisted":false}}')}}]);

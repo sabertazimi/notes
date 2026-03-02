@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["22932"],{50030(e){e.exports=JSON.parse('{"tag":{"label":"DevTools","permalink":"/notes/tags/dev-tools","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/testing/devtools","title":"DevTools","description":"Detection","permalink":"/notes/web/testing/devtools"}],"unlisted":false}}')}}]);

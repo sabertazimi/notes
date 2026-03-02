@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["27988"],{15763(e){e.exports=JSON.parse('{"tag":{"label":"Express.js","permalink":"/notes/tags/express-js","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/node/express","title":"Express.js","description":"Middleware Function","permalink":"/notes/web/node/express"}],"unlisted":false}}')}}]);

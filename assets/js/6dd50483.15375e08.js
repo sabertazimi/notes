@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["46104"],{61882(e){e.exports=JSON.parse('{"tag":{"label":"Resource","permalink":"/notes/tags/resource","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/hooks/resource","title":"Resource","description":"Script Loading","permalink":"/notes/web/react/hooks/resource"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["79226"],{18276(e){e.exports=JSON.parse('{"tag":{"label":"Backpropagation","permalink":"/notes/tags/backpropagation","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/dl/mlp","title":"Multilayer Perceptron","description":"Multilayer Perceptron","permalink":"/notes/ai/dl/mlp"}],"unlisted":false}}')}}]);

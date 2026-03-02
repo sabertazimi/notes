@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["43819"],{52337(e){e.exports=JSON.parse('{"tag":{"label":"Yum","permalink":"/notes/tags/yum","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/toolchain","title":"Toolchain","description":"Change Mirror Source","permalink":"/notes/programming/linux/toolchain"}],"unlisted":false}}')}}]);

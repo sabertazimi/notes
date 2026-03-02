@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["1338"],{91551(e){e.exports=JSON.parse('{"tag":{"label":"TCP","permalink":"/notes/tags/tcp","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/network/tcp","title":"TCP","description":"Protocol","permalink":"/notes/web/network/tcp"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["34350"],{36012(e){e.exports=JSON.parse('{"tag":{"label":"Fiber","permalink":"/notes/tags/fiber","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/fiber","title":"Fiber","description":"React Fiber","permalink":"/notes/web/react/fiber"}],"unlisted":false}}')}}]);

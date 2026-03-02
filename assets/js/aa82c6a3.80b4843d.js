@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["54317"],{51323(e){e.exports=JSON.parse('{"tag":{"label":"AMD","permalink":"/notes/tags/amd","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/module","title":"Module","description":"Principles","permalink":"/notes/web/javascript/module"}],"unlisted":false}}')}}]);

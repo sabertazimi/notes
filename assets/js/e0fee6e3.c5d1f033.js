@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["83227"],{31108(s){s.exports=JSON.parse('{"tag":{"label":"WSL","permalink":"/notes/tags/wsl","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/wsl","title":"WSL","description":"Installation","permalink":"/notes/programming/linux/wsl"}],"unlisted":false}}')}}]);

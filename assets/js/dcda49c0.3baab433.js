@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["82698"],{19929(e){e.exports=JSON.parse('{"tag":{"label":"Memo","permalink":"/notes/tags/memo","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/hooks/memo","title":"Memo","description":"- Returns a memoized value.","permalink":"/notes/web/react/hooks/memo"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["23982"],{3129(e){e.exports=JSON.parse('{"tag":{"label":"Debounce","permalink":"/notes/tags/debounce","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/hooks/event","title":"Event","description":"Interval","permalink":"/notes/web/react/hooks/event"}],"unlisted":false}}')}}]);

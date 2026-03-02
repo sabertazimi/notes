@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["53847"],{27505(e){e.exports=JSON.parse('{"tag":{"label":"Transformer","permalink":"/notes/tags/transformer","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/dl/transformer","title":"Transformer","description":"Illustrated Transformer","permalink":"/notes/ai/dl/transformer"}],"unlisted":false}}')}}]);

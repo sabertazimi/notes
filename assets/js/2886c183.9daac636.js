@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["77733"],{4715(s){s.exports=JSON.parse('{"tag":{"label":"Grub","permalink":"/notes/tags/grub","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/system","title":"System","description":"Information","permalink":"/notes/programming/linux/system"}],"unlisted":false}}')}}]);
