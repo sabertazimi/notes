@@ -30,7 +30,7 @@ man hier
 
 - `-lh`: long human.
 - `-ld`: long directory.
-- `-i inode --color==auto`
+- `-i inode --color=auto`
 
 权限 (user/group/other) 引用计数 user group 文件大小 文件修改时间 文件名.
 
@@ -45,8 +45,8 @@ print working directory
 
 ## `rm`
 
-- `–r` delete directory
-- `–f` delete by force
+- `-r` delete directory
+- `-f` delete by force
 - `-i` 显示确认信息
 
 ## `cp`
@@ -79,7 +79,7 @@ ln -s [源文件] [New Soft Link File]
 ## History
 
 - `-c` 清除历史命令
-- -`w` (`~/.bash_history`) 保存历史命令
+- `-w` (`~/.bash_history`) 保存历史命令
 - `/etc/profile` 中修改 `HISTSIZE`
 - `!n`/`!!`/`!字符串` 重复执行第 n 条/上一条/指定开头的历史命令
 
