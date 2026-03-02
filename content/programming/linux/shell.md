@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 tags: [Programming, OS, Linux, Shell, Bash, Zsh]
 ---
 
