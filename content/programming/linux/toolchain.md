@@ -30,6 +30,7 @@ _fzf_compgen_dir() {
 }
 EOF
 
+echo 'alias open="xdg-open"' >> ~/.zshrc
 echo 'alias cc="claude"' >> ~/.zshrc
 echo 'alias ccc="claude -c"' >> ~/.zshrc
 echo 'alias ccr="claude -r"' >> ~/.zshrc
