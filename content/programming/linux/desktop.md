@@ -103,8 +103,12 @@ echo 'spawn-at-startup "fcitx5" "-d"' >> ~/.config/niri/config.kdl
 echo 'spawn-at-startup "rclone" "mount" "onedrive:/" "/home/sabertaz/onedrive" "--vfs-cache-mode" "full" "--daemon"' >> ~/.config/niri/config.kdl
 
 sed -i '/Ctrl+Shift+R/,/^[[:space:]]*}[[:space:]]*$/d' ~/.config/niri/dms/binds.kdl
-sed -i 's/Mod+Comma /Mod+Shift+Comma /g' ~/.config/niri/dms/binds.kdl
-sed -i 's/Mod+M /Mod+Shift+M /g' ~/.config/niri/dms/binds.kdl
+sed -i '/Mod+D /d' ~/.config/niri/dms/binds.kdl
+sed -i 's/Mod+Space /Mod+D /g' ~/.config/niri/dms/binds.kdl # Application launcher
+sed -i 's/Mod+Comma /Mod+Shift+S /g' ~/.config/niri/dms/binds.kdl # Settings
+sed -i 's/Mod+V /Mod+Shift+C /g' ~/.config/niri/dms/binds.kdl # Clipboard manager
+sed -i 's/Mod+Shift+T /Mod+V /g' ~/.config/niri/dms/binds.kdl # Toogle floating
+sed -i 's/Mod+M /Mod+Shift+T /g' ~/.config/niri/dms/binds.kdl # Task manager
 sed -i \
   '/binds {/a \
     Mod+Comma { "consume-window-into-column"; }\
@@ -112,7 +116,7 @@ sed -i \
     Mod+B { spawn "firefox"; }\
     Mod+E { spawn "nautilus"; }\
     Mod+M { spawn "/opt/SPlayer/SPlayer" ; }\
-    Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
+    Mod+S { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
 ```
 
 ### Hotkeys
