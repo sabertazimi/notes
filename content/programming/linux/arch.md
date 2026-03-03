@@ -146,7 +146,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   mpv ffmpeg yt-dlp cava \
   7zip trash-cli yazi khal \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
-  archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
+  papirus-icon-theme archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   firefox firefox-i18n-zh-cn flatpak steam
 ```
 

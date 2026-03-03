@@ -336,12 +336,8 @@ xdg-mime query filetype ~/workspace/notes/src/components/notes-marquee.tsx
 
 ## Icons
 
-Nightly build for Numix Circle icon:
-
 ```bash
-sudo add-apt-repository ppa:numix/ppa
-sudo apt update
-sudo apt install numix-icon-theme-circle
+pkgstats show breeze-icons $(pacman -Ss icon-theme | awk 'NR%2==1' | awk -F '[/ ]' '$0 !~ /-git$/ {print $2}' | head -19)
 ```
 
 ## Music Player
