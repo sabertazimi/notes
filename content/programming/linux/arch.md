@@ -129,7 +129,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
-  jq fx tldr bottom gping procs curlie lazygit \
+  jq fx tldr bottom procs gping curlie doggo lazygit \
   nvm uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
   shellcheck chezmoi starship github-cli \
   fastfetch cmatrix lolcat s-tui nvtop \
