@@ -7,7 +7,7 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 
 ```bash
 sudo pacman -S mise zoxide bat eza git-delta dust duf \
-  fd ripgrep fzf television jq fx tldr bottom gping procs curlie
+  fd ripgrep fzf television jq fx tldr bottom procs gping curlie doggo
 ```
 
 ```bash
@@ -49,9 +49,10 @@ echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 echo 'alias grep="rg"' >> ~/.zshrc
 echo 'alias man="tldr"' >> ~/.zshrc
 echo 'alias top="btm"' >> ~/.zshrc
-echo 'alias ping="gping"' >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
+echo 'alias ping="gping"' >> ~/.zshrc
 echo 'alias curl="curlie"' >> ~/.zshrc
+echo 'alias dig="doggo"' >> ~/.zshrc
 
 echo 'export EDITOR="nvim"' >> ~/.zshrc
 echo 'export VISUAL="nvim"' >> ~/.zshrc
@@ -502,21 +503,6 @@ winget install Clement.bottom
 echo 'alias top="btm"' >> ~/.zshrc
 ```
 
-## `gping`
-
-[`gping`](https://github.com/orf/gping):
-
-```bash
-sudo pacman -S gping
-brew install gping
-scoop install gping
-winget install orf.gping
-```
-
-```bash
-echo 'alias ping="gping"' >> ~/.zshrc
-```
-
 ## `procs`
 
 [`procs`](https://github.com/dalance/procs):
@@ -533,6 +519,21 @@ echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
 echo 'alias ps="procs"' >> ~/.zshrc
 ```
 
+## `gping`
+
+[`gping`](https://github.com/orf/gping):
+
+```bash
+sudo pacman -S gping
+brew install gping
+scoop install gping
+winget install orf.gping
+```
+
+```bash
+echo 'alias ping="gping"' >> ~/.zshrc
+```
+
 ## `curlie`
 
 [`curlie`](https://github.com/rs/curlie):
@@ -545,6 +546,27 @@ scoop install curlie
 
 ```bash
 echo 'alias curl="curlie"' >> ~/.zshrc
+```
+
+## `doggo`
+
+[`doggo`](https://github.com/mr-karan/doggo):
+
+```bash
+sudo pacman -S doggo
+brew install doggo
+scoop install doggo
+winget install doggo
+```
+
+```bash
+echo 'alias dig="doggo"' >> ~/.zshrc
+```
+
+```bash
+doggo example.com
+doggo MX github.com @9.9.9.9
+doggo example.com --json | jq '.responses[0].answers[].address'
 ```
 
 ## Developer
