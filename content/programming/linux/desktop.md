@@ -109,7 +109,7 @@ sed -i \
   '/binds {/a \
     Mod+Comma { "consume-window-into-column"; }\
     Mod+Alt+A { screenshot; }\
-    Mod+A { spawn "firefox"; }\
+    Mod+B { spawn "firefox"; }\
     Mod+E { spawn "nautilus"; }\
     Mod+M { spawn "/opt/SPlayer/SPlayer" ; }\
     Mod+Z { spawn "code"; }\n' ~/.config/niri/dms/binds.kdl
