@@ -71,7 +71,7 @@ sudo pacman -Sy archlinuxcn-keyring
 ```bash
 sudo pacman -S --needed base-devel btrfs-progs os-prober \
   linux-headers linux-lts linux-lts-headers \
-  pacman-contrib unzip wget git zsh less vim neovim paru \
+  unzip wget git zsh less vim neovim paru \
   clash-verge-rev
 ```
 
@@ -121,6 +121,7 @@ dms doctor
 
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
+  pacman-contrib pkgstats \
   qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
