@@ -193,6 +193,11 @@ pacman -Qo /usr/lib/bluetooth/bluetoothd # -> bluez
 sudo pacman -Rns <package-name>
 # Clean orphans packages
 sudo pacman -Rns $(pacman -Qdtq)
+# Clean cache
+sudo pacman -Sc  # 清理未安装包的缓存
+sudo pacman -Scc # 清理全部缓存
+paccache -ruk0   # 清理未安装包的缓存
+paccache -rk0    # 清理全部缓存
 ```
 
 ## AUR
