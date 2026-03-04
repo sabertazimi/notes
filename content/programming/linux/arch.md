@@ -131,7 +131,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   zoxide bat eza git-delta dust duf fd ripgrep fzf television \
   jq fx tldr bottom procs gping curlie doggo lazygit \
   nvm uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
-  shellcheck chezmoi starship github-cli \
+  shellcheck chezmoi starship github-cli openai-codex opencode \
   fastfetch cmatrix lolcat s-tui nvtop \
   net-tools rsync rclone speedtest-cli \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
@@ -205,7 +205,9 @@ paccache -rk0    # 清理全部缓存
 
 ```bash
 paru -S --needed chsrc-bin downgrade \
-  visual-studio-code-bin uudeck linuxqq wechat \
+  claude-code antigravity visual-studio-code-bin \
+  antigravity-tools-bin cli-proxy-api-bin \
+  uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage splayer
 ```
