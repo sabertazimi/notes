@@ -622,6 +622,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   All kinds of color manipulations.
 - [Color](https://github.com/Qix-/color):
   Color conversion and manipulation.
+- [Thief](https://github.com/lokesh/color-thief):
+  Grab color palette from image.
 
 ### Gradient
 
