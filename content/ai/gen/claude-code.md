@@ -37,21 +37,15 @@ EOF
 ```
 
 ```bash
-/plugin marketplace add anthropics/skills
-/plugin marketplace add obra/superpowers-marketplace
-/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
-/plugin marketplace add sabertazimi/claude-code
-```
-
-```bash
 /plugin install ralph-loop
-/plugin install superpowers@superpowers-marketplace
-/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
-/plugin install sabertaz
 ```
 
 ```bash
-pnpm dlx skills add vercel-labs/agent-skills -g --agent claude-code
+pnpm dlx skills add obra/superpowers -s '*' -a claude-code codex opencode -g -y
+pnpm dlx skills add vercel-labs/agent-skills -s '*' -a claude-code codex opencode -g -y
+pnpm dlx skills add vercel-labs/skills -s '*' -a claude-code codex opencode -g -y
+pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code codex opencode -g -y
+pnpm dlx skills add sabertazimi/claude-code -s '*' -a claude-code codex opencode -g -y
 ```
 
 :::tip
