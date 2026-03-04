@@ -302,7 +302,8 @@ Desktop shortcut located in `/usr/share/applications`.
 
 ## Mime
 
-`~/.config/mimeapps.list`:
+Set [default mime apps](https://specifications.freedesktop.org/mime-apps/latest/default.html)
+in `~/.config/mimeapps.list`:
 
 ```bash
 xdg-mime default nvim.desktop text/plain
