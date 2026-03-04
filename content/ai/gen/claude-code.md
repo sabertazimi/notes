@@ -298,6 +298,47 @@ it will extend Claude Code through the plugin system with:
 
 - [Code review agent](./recipes/code/review.md).
 
+## Proxy
+
+```bash
+paru -S cli-proxy-api-bin
+mkdir -p ~/.cli-proxy-api
+cp /usr/share/doc/cli-proxy-api-bin/config.example.yaml ~/.cli-proxy-api/config.yaml
+systemctl --user enable --now cli-proxy-api
+```
+
+[Web UI](https://help.router-for.me/cn/hands-on/tutorial-6.html):
+
+```yaml
+api-keys:
+  - sk-dummy
+
+remote-management:
+  allow-remote: false
+  disable-control-panel: false
+  # 登录 Web UI
+  secret-key: MGT-123456
+```
+
+[Codex](https://help.router-for.me/cn/agent-client/codex.html):
+
+```toml
+model_provider = "cliproxyapi"
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+[model_providers.cliproxyapi]
+name = "cliproxyapi"
+base_url = "http://127.0.0.1:8317/v1"
+wire_api = "responses"
+```
+
+```json
+{
+  "OPENAI_API_KEY": "sk-dummy"
+}
+```
+
 ## Best Practices
 
 Claude code [best practices](https://www.anthropic.com/engineering/claude-code-best-practices):
