@@ -1009,6 +1009,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Small touch gesture library compatible with PC and mobile.
 - [Zoom](https://github.com/retyui/react-quick-pinch-zoom):
   Multi-touch gestures for zooming and dragging for React.
+- [Haptics](https://github.com/lochie/web-haptics):
+  Haptic feedback for mobile web.
 
 ### Cursor
 
