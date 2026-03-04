@@ -6,11 +6,17 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 # Toolchain
 
 ```bash
-sudo pacman -S mise zoxide bat eza git-delta dust duf \
-  fd ripgrep fzf television jq fx tldr bottom procs gping curlie doggo
+sudo pacman -S mise zoxide bat eza fd ripgrep fzf television jq fx tldr \
+  dust duf bottom procs gping curlie doggo git-delta \
 ```
 
 ```bash
+echo 'export EDITOR="nvim"' >> ~/.zshrc
+echo 'export VISUAL="nvim"' >> ~/.zshrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
+echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
+
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 echo 'eval "$(tv init zsh)"' >> ~/.zshrc
@@ -30,38 +36,32 @@ _fzf_compgen_dir() {
 }
 EOF
 
+echo 'alias dot="chezmoi"' >> ~/.zshrc
 echo 'alias open="xdg-open"' >> ~/.zshrc
+echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
+echo 'alias cat="bat"' >> ~/.zshrc
+echo 'alias ls="eza"' >> ~/.zshrc
+echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
+echo 'alias grep="rg"' >> ~/.zshrc
+echo 'alias man="tldr"' >> ~/.zshrc
+echo 'alias du="dust"' >> ~/.zshrc
+echo 'alias df="duf"' >> ~/.zshrc
+echo 'alias top="btm"' >> ~/.zshrc
+echo 'alias ps="procs"' >> ~/.zshrc
+echo 'alias ping="gping"' >> ~/.zshrc
+echo 'alias curl="curlie"' >> ~/.zshrc
+echo 'alias dig="doggo"' >> ~/.zshrc
+echo 'alias diff="delta"' >> ~/.zshrc
+echo 'alias vi="nvim"' >> ~/.zshrc
+echo 'alias vim="nvim"' >> ~/.zshrc
+
 echo 'alias cc="claude"' >> ~/.zshrc
 echo 'alias ccc="claude -c"' >> ~/.zshrc
 echo 'alias ccr="claude -r"' >> ~/.zshrc
 echo 'alias ccm="claude -p commit"' >> ~/.zshrc
 echo 'alias cx="codex"' >> ~/.zshrc
 echo 'alias oc="opencode"' >> ~/.zshrc
-echo 'alias vi="nvim"' >> ~/.zshrc
-echo 'alias vim="nvim"' >> ~/.zshrc
-echo 'alias dot="chezmoi"' >> ~/.zshrc
 
-echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
-echo 'alias cat="bat"' >> ~/.zshrc
-echo 'alias ls="eza"' >> ~/.zshrc
-echo 'alias diff="delta"' >> ~/.zshrc
-echo 'alias du="dust"' >> ~/.zshrc
-echo 'alias df="duf"' >> ~/.zshrc
-echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
-echo 'alias grep="rg"' >> ~/.zshrc
-echo 'alias man="tldr"' >> ~/.zshrc
-echo 'alias top="btm"' >> ~/.zshrc
-echo 'alias ps="procs"' >> ~/.zshrc
-echo 'alias ping="gping"' >> ~/.zshrc
-echo 'alias curl="curlie"' >> ~/.zshrc
-echo 'alias dig="doggo"' >> ~/.zshrc
-
-echo 'export EDITOR="nvim"' >> ~/.zshrc
-echo 'export VISUAL="nvim"' >> ~/.zshrc
-# Respecting `.gitignore`
-echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
-echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
 cat << EOF >> ~/.ripgreprc
 # Add 'web' type
@@ -235,70 +235,6 @@ winget install eza-community.eza
 
 ```bash
 echo 'alias ls="eza"' >> ~/.zshrc
-```
-
-## Delta
-
-[delta](https://github.com/dandavison/delta):
-
-```bash
-sudo pacman -S git-delta
-brew install git-delta
-scoop install delta
-winget install dandavison.delta
-```
-
-```bash
-echo 'alias diff="delta"' >> ~/.zshrc
-```
-
-```bash
-git config --global core.pager delta
-git config --global interactive.diffFilter 'delta --color-only'
-git config --global delta.navigate true
-git config --global delta.dark true
-git config --global delta.line-numbers true
-git config --global delta.side-by-side true
-git config --global merge.conflictStyle zdiff3
-```
-
-```bash
-git diff
-git show
-git add -p
-git log -p
-git stash show -p
-git reflog -p
-```
-
-## Dust
-
-[dust](https://github.com/bootandy/dust):
-
-```bash
-sudo pacman -S dust
-brew install dust
-scoop install dust
-winget install bootandy.dust
-```
-
-```bash
-echo 'alias du="dust"' >> ~/.zshrc
-```
-
-## `duf`
-
-[`duf`](https://github.com/muesli/duf):
-
-```bash
-sudo pacman -S duf
-brew install duf
-scoop install duf
-winget install muesli.duf
-```
-
-```bash
-echo 'alias df="duf"' >> ~/.zshrc
 ```
 
 ## `fd`
@@ -490,6 +426,36 @@ winget install tldr-pages.tlrc
 echo 'alias man="tldr"' >> ~/.zshrc
 ```
 
+## Dust
+
+[dust](https://github.com/bootandy/dust):
+
+```bash
+sudo pacman -S dust
+brew install dust
+scoop install dust
+winget install bootandy.dust
+```
+
+```bash
+echo 'alias du="dust"' >> ~/.zshrc
+```
+
+## `duf`
+
+[`duf`](https://github.com/muesli/duf):
+
+```bash
+sudo pacman -S duf
+brew install duf
+scoop install duf
+winget install muesli.duf
+```
+
+```bash
+echo 'alias df="duf"' >> ~/.zshrc
+```
+
 ## Bottom
 
 [bottom](https://github.com/ClementTsang/bottom):
@@ -569,6 +535,40 @@ echo 'alias dig="doggo"' >> ~/.zshrc
 doggo example.com
 doggo MX github.com @9.9.9.9
 doggo example.com --json | jq '.responses[0].answers[].address'
+```
+
+## Delta
+
+[delta](https://github.com/dandavison/delta):
+
+```bash
+sudo pacman -S git-delta
+brew install git-delta
+scoop install delta
+winget install dandavison.delta
+```
+
+```bash
+echo 'alias diff="delta"' >> ~/.zshrc
+```
+
+```bash
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global delta.dark true
+git config --global delta.line-numbers true
+git config --global delta.side-by-side true
+git config --global merge.conflictStyle zdiff3
+```
+
+```bash
+git diff
+git show
+git add -p
+git log -p
+git stash show -p
+git reflog -p
 ```
 
 ## Developer
