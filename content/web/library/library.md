@@ -1375,16 +1375,18 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Responsive email framework.
 - [Mailer](https://github.com/nodemailer/nodemailer):
   Send emails with Node.js.
-- [MailParser](https://github.com/nodemailer/mailparser):
+- [Parser](https://github.com/nodemailer/mailparser):
   Decode MIME formatted emails.
-- [MailGen](https://github.com/eladnava/mailgen):
+- [Generator](https://github.com/eladnava/mailgen):
   Generates clean, responsive HTML emails with Node.js
 - [Exists](https://github.com/reacherhq/check-if-email-exists):
   Check if email address exists without sending any email, written in Rust.
 - [Upyo](https://github.com/dahlia/upyo):
   Cross-runtime library for sending email messages using various email providers.
-- [MailSpring](https://github.com/Foundry376/Mailspring):
+- [Spring](https://github.com/Foundry376/Mailspring):
   Beautiful, fast and fully mail client for macOS, Windows and Linux.
+- [Duck](https://github.com/moonwesif/DuckMail):
+  Temporary email service.
 
 ### Robot
 
