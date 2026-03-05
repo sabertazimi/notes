@@ -60,8 +60,9 @@ echo 'alias ccc="claude -c"' >> ~/.zshrc
 echo 'alias ccr="claude -r"' >> ~/.zshrc
 echo 'alias ccm="claude -p commit"' >> ~/.zshrc
 echo 'alias cx="codex"' >> ~/.zshrc
+echo 'alias cxr="codex resume"' >> ~/.zshrc
 echo 'alias oc="opencode"' >> ~/.zshrc
-
+echo 'alias occ="opencode -c"' >> ~/.zshrc
 
 cat << EOF >> ~/.ripgreprc
 # Add 'web' type
