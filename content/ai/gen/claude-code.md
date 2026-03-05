@@ -304,14 +304,18 @@ systemctl --user enable --now cli-proxy-api
 [Web UI](https://help.router-for.me/cn/hands-on/tutorial-6.html):
 
 ```yaml
-api-keys:
-  - sk-dummy
+port: 8317
 
 remote-management:
   allow-remote: false
   disable-control-panel: false
   # 登录 Web UI
   secret-key: MGT-123456
+
+api-keys:
+  - sk-dummy
+
+usage-statistics-enabled: true
 ```
 
 [Codex](https://help.router-for.me/cn/agent-client/codex.html):
