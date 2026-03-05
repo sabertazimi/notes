@@ -7,34 +7,19 @@ tags: [Web, Node.js, Package Manager, PNPM]
 
 ## Installation
 
-Using Corepack or npm (recommended installation):
-
 ```bash
-# Using Corepack.
-corepack enable pnpm
-
-# Using npm.
-npm install -g pnpm
+sudo pacman -S pnpm
 ```
 
 ```bash
-alias np=pnpm
-source ~/.zshrc
-which pnpm
 pnpm --version
 pnpm store path
 ```
 
-Using a standalone script (without Node.js installed):
+Using a standalone script (without `Node.js` installed):
 
 ```bash
-# By script.
-wget -qO- https://get.pnpm.io/install.sh | sh -
-
-# By manual download.
-mv ./pnpm-linux-x64 ./pnpm
-chmod +x ./pnpm
-./pnpm setup --force
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
 ## Configuration
