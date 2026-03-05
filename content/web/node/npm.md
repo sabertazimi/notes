@@ -36,6 +36,7 @@ npm config set swc_binary_site https://npmmirror.com/mirrors/node-swc/
 [NVM](https://github.com/coreybutler/nvm-windows):
 
 ```bash
+sudo pacman -S nvm
 scoop install nvm
 ```
 
@@ -47,9 +48,6 @@ source ~/.zshrc
 ```bash
 nvm install --lts
 npm config -g set registry https://registry.npmmirror.com/
-pnpm config -g set registry https://registry.npmmirror.com/
-npm install -g pnpm
-
 ```
 
 ### FNM
