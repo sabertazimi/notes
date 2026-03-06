@@ -13,34 +13,59 @@ dmesg -T | tail
 
 ## Journal
 
-Options:
+### Unit
 
 ```bash
-# Reverse
-journalctl -r
-# Unit
 journalctl -u <service-name>
-# Level
+```
+
+### Level
+
+```bash
 journalctl -p 3
-# entries
+```
+
+### Reverse
+
+```bash
+journalctl -r
+```
+
+### Entries
+
+```bash
 journalctl -n 50
-# User
-journalctl -xe --user -u <service-name>
-# Boot
+```
+
+### Boot
+
+```bash
+last -x shutdown reboot
+
 journalctl -b
 journalctl -b -1
 journalctl --list-boots
-
-```
-
-Recipes:
-
-```bash
-# Error
-journalctl -p 3 -xb
-journalctl -p 3 -x -b -1
 # Last 50 logs from last boot
 journalctl -n 50 -b -1
+```
+
+### Error
+
+```bash
+journalctl -p 3 -xb
+journalctl -p 3 -x -b -1
+```
+
+### User
+
+```bash
+journalctl -xe --user -u <service-name>
+```
+
+### Kernel
+
+```bash
+journalctl -k -b -0 --no-pager | rg -i "mce|hardware error|reset reason"
 ```
 
 ## Core Dump
@@ -48,12 +73,6 @@ journalctl -n 50 -b -1
 ```bash
 coredumpctl list
 coredumpctl info <PID>
-```
-
-## Boot
-
-```bash
-last -x shutdown reboot
 ```
 
 ## `perf`
