@@ -337,6 +337,30 @@ wire_api = "responses"
 }
 ```
 
+[`OpenCode`](https://opencode.ai/docs/zh-cn/providers):
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "openai": {
+      "options": {
+        "baseURL": "http://127.0.0.1:8317/v1"
+      }
+    }
+  }
+}
+```
+
+```json
+{
+  "openai": {
+    "type": "api",
+    "key": "sk-dummy"
+  }
+}
+```
+
 ## Best Practices
 
 Claude code [best practices](https://www.anthropic.com/engineering/claude-code-best-practices):
