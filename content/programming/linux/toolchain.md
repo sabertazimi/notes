@@ -154,7 +154,7 @@ winget install Git.Git GitHub.cli Oven-sh.Bun CoreyButler.NVMforWindows astral-s
 ```
 
 ```bash
-winget install Anthropic.ClaudeCode Google.Antigravity Microsoft.VisualStudioCode Neovim.Neovim ZedIndustries.Zed
+winget install Anthropic.ClaudeCode Microsoft.VisualStudioCode Neovim.Neovim ZedIndustries.Zed
 ```
 
 ```bash
