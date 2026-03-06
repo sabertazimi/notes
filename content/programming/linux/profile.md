@@ -66,6 +66,7 @@ journalctl -xe --user -u <service-name>
 
 ```bash
 journalctl -k -b -0 --no-pager | rg -i "mce|hardware error|reset reason"
+journalctl _TRANSPORT=kernel --since "2026-02-25" --no-pager | rg -i "mce|hardware error|reset reason"
 ```
 
 ## Core Dump
