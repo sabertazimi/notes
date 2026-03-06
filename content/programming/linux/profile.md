@@ -13,16 +13,10 @@ dmesg -T | tail
 
 ## Journal
 
-### Unit
+### Entries
 
 ```bash
-journalctl -u <service-name>
-```
-
-### Level
-
-```bash
-journalctl -p 3
+journalctl -n 50
 ```
 
 ### Reverse
@@ -31,10 +25,10 @@ journalctl -p 3
 journalctl -r
 ```
 
-### Entries
+### Watch
 
 ```bash
-journalctl -n 50
+journalctl -n 10 --follow
 ```
 
 ### Boot
@@ -49,11 +43,10 @@ journalctl --list-boots
 journalctl -n 50 -b -1
 ```
 
-### Error
+### Unit
 
 ```bash
-journalctl -p 3 -xb
-journalctl -p 3 -x -b -1
+journalctl -u <service-name>
 ```
 
 ### User
@@ -67,6 +60,19 @@ journalctl -xe --user -u <service-name>
 ```bash
 journalctl -k -b -0 --no-pager | rg -i "mce|hardware error|reset reason"
 journalctl _TRANSPORT=kernel --since "2026-02-25" --no-pager | rg -i "mce|hardware error|reset reason"
+```
+
+### Level
+
+```bash
+journalctl -p 3
+```
+
+### Error
+
+```bash
+journalctl -p 3 -xb
+journalctl -p 3 -x -b -1
 ```
 
 ## Core Dump
