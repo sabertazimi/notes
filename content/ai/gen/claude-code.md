@@ -45,7 +45,7 @@ pnpm dlx skills add obra/superpowers -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/agent-skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code codex opencode -g -y
-pnpm dlx skills add sabertazimi/claude-code -s '*' -a claude-code codex opencode -g -y
+pnpm dlx skills add sabertazimi/skills -s '*' -a claude-code codex opencode -g -y
 ```
 
 :::tip
