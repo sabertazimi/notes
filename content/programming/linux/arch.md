@@ -241,6 +241,12 @@ paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns
 paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi
 ```
 
+Show diagnostics and statistics:
+
+```bash
+paru -Ps
+```
+
 ### Repository
 
 - `PKGBUILD` 在 [AUR 仓库](https://aur.archlinux.org) 单独维护
