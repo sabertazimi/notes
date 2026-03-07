@@ -1573,6 +1573,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   World #1 JavaScript library for rich text editing.
 - [ProseMirror](https://github.com/ProseMirror/prosemirror-view):
   Collaborative and semantic rich text editing.
+- [Block](https://github.com/TypeCellOS/BlockNote):
+  Block-based (Notion style) and extensible rich text editor based on TipTap and ProseMirror.
 
 ### Markdown Editor
 
