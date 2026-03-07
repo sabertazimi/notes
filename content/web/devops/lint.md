@@ -7,7 +7,18 @@ tags: [Web, DevOps, Linter, ESLint, Commit]
 
 ## ESLint
 
+### Legacy
+
 Flat config compatibility [solution](https://github.com/vercel/next.js/discussions/49337).
+
+### Flat
+
+Use config [inspector](https://github.com/eslint/config-inspector)
+to view ESLint flat config:
+
+```bash
+npx @eslint/config-inspector@latest
+```
 
 ## Commit
 
