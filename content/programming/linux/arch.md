@@ -206,13 +206,14 @@ paccache -rk0    # 清理全部缓存
 ```bash
 paru -S --needed chsrc-bin downgrade \
   claude-code visual-studio-code-bin cli-proxy-api-bin \
-  uudeck linuxqq wechat \
+  google-chrome uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage splayer
+  animeko-appimage splayer \
+  ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans
 ```
 
 ```bash
-# paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
+# paru -S zen-browser-bin zen-browser-i18n-zh-cn
 # paru -S com.qq.weixin.work.deepin
 # paru -S nipaplay-reload-bin go-musicfox
 ```
@@ -341,13 +342,6 @@ sudo localectl set-locale LANG=zh_CN.UTF-8
 ```bash
 LC_ALL=C.UTF-8 xdg-user-dirs-update --force
 cat ~/.config/user-dirs.dirs
-```
-
-Install Windows fonts with `linux-lts` kernel:
-
-```bash
-sudo modprobe udf
-paru -S ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans
 ```
 
 ## Zsh
