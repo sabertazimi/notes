@@ -57,6 +57,8 @@ git config --global alias.pr "pull --rebase"
 git config --global alias.d '!sh -c "git diff --cached | cat"'
 
 git config --global help.autocorrect 10
+git config --global http.postBuffer 524288000
+git config --global https.postBuffer 1048576000
 ```
 
 ## GPG
@@ -121,10 +123,6 @@ git config --global url."https://ghfast.top/https://github.com/".insteadOf "http
 # Socks5 proxy.
 git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
-
-# Post buffer configuration.
-git config --global http.postbuffer 524288000
-git config --global https.postbuffer 1048576000
 ```
 
 :::caution[DNS Pollution]
