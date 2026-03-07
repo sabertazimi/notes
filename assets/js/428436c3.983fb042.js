@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["92077"],{73253(s){s.exports=JSON.parse('{"tag":{"label":"Macro","permalink":"/notes/tags/macro","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/rust/macros","title":"Macros","description":"Unsafe Code","permalink":"/notes/language/rust/macros"}],"unlisted":false}}')}}]);

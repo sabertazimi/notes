@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["23513"],{27949(s){s.exports=JSON.parse('{"tag":{"label":"Font","permalink":"/notes/tags/font","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/font","title":"Font","description":"Family","permalink":"/notes/web/css/font"}],"unlisted":false}}')}}]);

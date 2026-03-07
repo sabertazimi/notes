@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["22001"],{14301(s){s.exports=JSON.parse('{"tag":{"label":"Color","permalink":"/notes/tags/color","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/colors","title":"Colors","description":"Current","permalink":"/notes/web/css/colors"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["62514"],{11471(e){e.exports=JSON.parse('{"tag":{"label":"Rpm","permalink":"/notes/tags/rpm","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/toolchain","title":"Toolchain","description":"Change Mirror Source","permalink":"/notes/programming/linux/toolchain"}],"unlisted":false}}')}}]);

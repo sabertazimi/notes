@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["25753"],{69384(e){e.exports=JSON.parse('{"tag":{"label":"Vuex","permalink":"/notes/tags/vuex","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/vue/vuex","title":"Vuex","description":"Types","permalink":"/notes/web/vue/vuex"}],"unlisted":false}}')}}]);

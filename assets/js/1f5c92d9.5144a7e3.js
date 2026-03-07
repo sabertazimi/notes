@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["2191"],{55336(e){e.exports=JSON.parse('{"tag":{"label":"Sandbox","permalink":"/notes/tags/sandbox","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/sandbox","title":"Sandbox","description":"Sandbox:","permalink":"/notes/web/security/sandbox"}],"unlisted":false}}')}}]);

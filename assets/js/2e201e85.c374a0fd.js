@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["57762"],{21825(e){e.exports=JSON.parse('{"tag":{"label":"Value","permalink":"/notes/tags/value","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/values","title":"Values","description":"Data Types","permalink":"/notes/web/css/values"}],"unlisted":false}}')}}]);
