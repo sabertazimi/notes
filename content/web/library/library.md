@@ -1371,14 +1371,6 @@ import LibraryGallery from '@site/src/components/library-gallery'
 
 - [Email](https://github.com/resend/react-email):
   High-quality, unstyled components for creating emails.
-- [MJ-ML](https://github.com/mjmlio/mjml):
-  Responsive email framework.
-- [Mailer](https://github.com/nodemailer/nodemailer):
-  Send emails with Node.js.
-- [Parser](https://github.com/nodemailer/mailparser):
-  Decode MIME formatted emails.
-- [Generator](https://github.com/eladnava/mailgen):
-  Generates clean, responsive HTML emails with Node.js
 - [Exists](https://github.com/reacherhq/check-if-email-exists):
   Check if email address exists without sending any email, written in Rust.
 - [Upyo](https://github.com/dahlia/upyo):
