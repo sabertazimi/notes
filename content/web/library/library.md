@@ -924,34 +924,34 @@ import LibraryGallery from '@site/src/components/library-gallery'
 - [MathJax](https://github.com/mathjax/MathJax):
   Beautiful and accessible math in all browsers.
 
-### Carousel
-
-- [Swiper](https://github.com/nolimits4web/swiper):
-  Modern mobile touch slider with hardware accelerated transitions.
-- [Nuka](https://github.com/FormidableLabs/nuka-carousel):
-  Pure React carousel component.
-- [Embla](https://github.com/davidjerleke/embla-carousel):
-  Lightweight carousel library with fluid motion and great swipe precision.
-- [Slick](https://github.com/akiran/react-slick):
-  React carousel component.
-- [Flicking](https://github.com/naver/egjs-flicking):
-  Reliable, flexible and extendable carousel.
-
 ### Scrollbar
 
 - [OverlayScrollbar](https://github.com/KingSora/OverlayScrollbars):
   Custom style-able overlay scrollbar.
 
+### Carousel
+
+- [Embla](https://github.com/davidjerleke/embla-carousel):
+  Lightweight carousel library with fluid motion and great swipe precision.
+- [Nuka](https://github.com/FormidableLabs/nuka-carousel):
+  Pure React carousel component.
+- [Flicking](https://github.com/naver/egjs-flicking):
+  Reliable, flexible and extendable carousel.
+- [Slick](https://github.com/akiran/react-slick):
+  React carousel component.
+
 ### Slides and Presentation
 
-- [Spectacle](https://github.com/FormidableLabs/spectacle):
-  React based presentation slides.
 - [Reveal](https://github.com/hakimel/reveal.js):
   HTML presentation framework.
 - [SliDev](https://github.com/slidevjs/slidev):
   Vue based presentation slides.
+- [Swiper](https://github.com/nolimits4web/swiper):
+  Modern mobile touch slider with hardware accelerated transitions.
 - [Impress](https://github.com/impress/impress.js):
   Prezi-like presentation slides.
+- [Spectacle](https://github.com/FormidableLabs/spectacle):
+  React based presentation slides.
 - [PPTX](https://github.com/gitbrent/PptxGenJS):
   TypeScript powerpoint presentations.
 
