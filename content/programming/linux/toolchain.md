@@ -63,6 +63,8 @@ echo 'alias cx="codex"' >> ~/.zshrc
 echo 'alias cxr="codex resume"' >> ~/.zshrc
 echo 'alias oc="opencode"' >> ~/.zshrc
 echo 'alias occ="opencode -c"' >> ~/.zshrc
+echo "source ~/.zshrc.local" >> ~/.zshrc
+touch ~/.zshrc.local
 
 cat << EOF >> ~/.ripgreprc
 # Add 'web' type
