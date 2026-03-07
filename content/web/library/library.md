@@ -1379,6 +1379,8 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Beautiful, fast and fully mail client for macOS, Windows and Linux.
 - [Duck](https://github.com/moonwesif/DuckMail):
   Temporary email service.
+- [Maily](https://github.com/arikchakma/maily.to):
+  Powerful email editor based on TipTap and shadcn/ui.
 
 ### Robot
 
@@ -1549,24 +1551,22 @@ import LibraryGallery from '@site/src/components/library-gallery'
   Headless rich text editor framework.
 - [Novel](https://github.com/steven-tey/novel):
   Notion-style WYSIWYG editor with AI-powered autocompletion based on TipTap and shadcn/ui.
-- [Maily.to](https://github.com/arikchakma/maily.to):
-  Powerful email editor based on TipTap and shadcn/ui.
 - [Slate](https://github.com/ianstormtaylor/slate):
   Customizable rich text editor framework.
 - [Plate](https://github.com/udecode/plate):
   Rich-text editor with AI, slate and shadcn/ui.
 - [Quill](https://github.com/quilljs/quill):
   Modern WYSIWYG editor built for compatibility and extensibility.
-- [Editor.js](https://github.com/codex-team/editor.js):
+- [Editor](https://github.com/codex-team/editor.js):
   Block-styled rich text editor.
 - [Lexical](https://github.com/facebook/lexical):
   Extensible text editor framework that provides reliability, accessibility and performance.
 - [TinyMCE](https://github.com/tinymce/tinymce):
   World #1 JavaScript library for rich text editing.
-- [ProseMirror](https://github.com/ProseMirror/prosemirror-view):
-  Collaborative and semantic rich text editing.
 - [Block](https://github.com/TypeCellOS/BlockNote):
   Block-based (Notion style) and extensible rich text editor based on TipTap and ProseMirror.
+- [ProseMirror](https://github.com/ProseMirror/prosemirror-view):
+  Collaborative and semantic rich text editing.
 
 ### Markdown Editor
 
