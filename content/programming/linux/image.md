@@ -1,5 +1,5 @@
 ---
-sidebar_position: 31
+sidebar_position: 23
 tags: [Programming, Linux, Media, Image, ImageMagick]
 ---
 
