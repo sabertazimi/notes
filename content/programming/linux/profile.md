@@ -1,5 +1,5 @@
 ---
-sidebar_position: 24
+sidebar_position: 12
 tags: [Programming, OS, Linux, Debug, Log, Performance, Profile]
 ---
 
