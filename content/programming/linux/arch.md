@@ -130,7 +130,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx tldr \
   dust duf bottom procs gping curlie doggo git-delta lazygit \
-  nodejs npm pnpm bun uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
+  nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
   shellcheck chezmoi starship github-cli openai-codex opencode \
   fastfetch cmatrix lolcat s-tui nvtop \
   net-tools rsync rclone speedtest-cli \
@@ -369,7 +369,6 @@ source ~/.zshrc
 
 ```bash
 chsrc set node
-uv python install --default
 rustup default stable
 ```
 
