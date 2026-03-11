@@ -206,14 +206,14 @@ sudo paccache -rk0  # 清理全部缓存
 ```bash
 paru -S --needed chsrc-bin downgrade \
   claude-code visual-studio-code-bin cli-proxy-api-bin \
-  google-chrome uudeck linuxqq wechat \
+  uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage splayer \
   ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans
 ```
 
 ```bash
-# paru -S zen-browser-bin zen-browser-i18n-zh-cn
+# paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
 # paru -S com.qq.weixin.work.deepin
 # paru -S nipaplay-reload-bin go-musicfox
 ```
@@ -245,6 +245,7 @@ paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi
 Show diagnostics and statistics:
 
 ```bash
+paru -Qm
 paru -Ps
 ```
 
