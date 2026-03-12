@@ -424,6 +424,8 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
   Create videos programmatically in React.
 - [Expo](https://github.com/expo/skills):
   Expo projects and application services.
+- [Node.js](https://github.com/mcollina/skills):
+  Modern `Node.js` development.
 
 ### DevOps
 
