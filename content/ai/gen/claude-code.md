@@ -21,17 +21,19 @@ cat << EOF > ~/.claude/settings.json
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
     "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "ANTHROPIC_MODEL": "glm-4.7",
-    "ANTHROPIC_SMALL_FAST_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
+    "ANTHROPIC_MODEL": "glm-5",
+    "ANTHROPIC_SMALL_FAST_MODEL": "glm-5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5",
     "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_EFFORT_LEVEL": "max",
     "DISABLE_TELEMETRY": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_BUG_COMMAND": "1"
   },
-  "autoUpdatesChannel": "stable"
+  "autoUpdatesChannel": "stable",
+  "effortLevel": "high"
 }
 EOF
 ```
