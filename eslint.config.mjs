@@ -2,6 +2,7 @@ import { defineConfig } from '@dg-scripts/eslint-config'
 
 export default defineConfig(
   {
+    e18e: false,
     typescript: true,
   },
   {
