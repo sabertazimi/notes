@@ -84,6 +84,9 @@ setw -g aggressive-resize on
 # Set vi-mode
 setw -g mode-keys vi
 
+# Set extended keys
+set -s extended-keys on
+
 # Set pane keys
 bind h select-pane -L
 bind j select-pane -D
