@@ -100,7 +100,7 @@ bind -T copy-mode-vi v send -X begin-selection
 bind -T copy-mode-vi C-v send -X rectangle-toggle
 bind -T copy-mode-vi y send -X copy-selection-and-cancel
 unbind p
-bind p pasteb
+bind p paste-buffer -p
 
 # Reload configuration
 bind r source-file ~/.config/tmux/tmux.conf \; display-message "Config reloaded"
