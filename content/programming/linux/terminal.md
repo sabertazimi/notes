@@ -114,18 +114,21 @@ bind '"' split-window -v -c "#{pane_current_path}"
 
 # Configure catppuccin plugin
 set -g @catppuccin_flavor "mocha"
+set -g @catppuccin_status_background "none"
 set -g @catppuccin_window_status_style "custom"
-set -g @catppuccin_window_left_separator "#[fg=#{@_ctp_status_bg},reverse]█#[none]"
+set -g @catppuccin_window_left_separator "#[bg=default,fg=#{@catppuccin_window_number_color}]█#[bg=#{@catppuccin_window_number_color},fg=#{@catppuccin_window_text_color}]"
+set -g @catppuccin_window_current_left_separator "#[bg=default,fg=#{@catppuccin_window_current_number_color}]█#[bg=#{@catppuccin_window_current_number_color},fg=#{@catppuccin_window_current_text_color}]"
 set -g @catppuccin_window_middle_separator " "
-set -g @catppuccin_window_right_separator "#[fg=#{@_ctp_status_bg},reverse]#[none]"
+set -g @catppuccin_window_right_separator "#[bg=default,fg=#{@catppuccin_window_text_color}]#[none]"
+set -g @catppuccin_window_current_right_separator "#[bg=default,fg=#{@catppuccin_window_current_text_color}]#[none]"
 set -g @catppuccin_window_text " #W"
 set -g @catppuccin_window_current_text " #W"
 
 run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
 
-set -g status-right-length 100
 set -g status-left-length 100
 set -g status-left ""
+set -g status-right-length 100
 set -g status-right "#{E:@catppuccin_status_host}"
 set -ag status-right "#{E:@catppuccin_status_session}"
 set -ag status-right "#{E:@catppuccin_status_uptime}"
