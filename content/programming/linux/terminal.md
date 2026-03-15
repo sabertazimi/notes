@@ -22,6 +22,24 @@ tags: [Programming, OS, Linux, Terminal, Tmux]
 
 `Ctrl`+`Alt`+`F1` ~ `F6`: 在 `TTY1` ~ `TTY6` 间切换.
 
+## Ghostty
+
+- `Ctrl`+`Shift`+`p`: command palette.
+- `Ctrl`+`Shift`+`,`: reload config.
+
+```bash
+git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config
+sed -i 's/^keybind = ctrl+t=/# keybind = ctrl+t=/' ~/.config/ghostty/config
+echo 'font-family = "Maple Mono NF CN"' >> ~/.config/ghostty/config
+echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
+echo "keybind = alt+h=goto_split:left" >> ~/.config/ghostty/config
+echo "keybind = alt+j=goto_split:down" >> ~/.config/ghostty/config
+echo "keybind = alt+k=goto_split:up" >> ~/.config/ghostty/config
+echo "keybind = alt+l=goto_split:right" >> ~/.config/ghostty/config
+echo "command = tmux attach || tmux" >> ~/.config/ghostty/config
+```
+
 ## Tmux
 
 ```bash
@@ -139,23 +157,6 @@ set -ag status-right "#{E:@catppuccin_status_uptime}"
 - `C-a`+`[` to into scroll mode, `q` to quit scroll mode
 - Copy mode can scroll too
 - `set -g mouse on` for enabling mouse scrolling
-
-## Ghostty
-
-- `Ctrl`+`Shift`+`p`: command palette.
-- `Ctrl`+`Shift`+`,`: reload config.
-
-```bash
-git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config
-sed -i 's/^keybind = ctrl+t=/# keybind = ctrl+t=/' ~/.config/ghostty/config
-echo 'font-family = "Maple Mono NF CN"' >> ~/.config/ghostty/config
-echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
-echo "keybind = alt+h=goto_split:left" >> ~/.config/ghostty/config
-echo "keybind = alt+j=goto_split:down" >> ~/.config/ghostty/config
-echo "keybind = alt+k=goto_split:up" >> ~/.config/ghostty/config
-echo "keybind = alt+l=goto_split:right" >> ~/.config/ghostty/config
-```
 
 ## Windows
 
