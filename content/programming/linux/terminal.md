@@ -66,7 +66,7 @@ EOF
 
 cat << EOF > ~/.config/matugen/templates/tmux.conf
 set -gq @thm_mauve "{{colors.primary_fixed_dim.default.hex}}"
-set -gq @thm_sapphire "{{colors.tertiary.default.hex}}"
+set -gq @thm_sapphire "{{dank16.color3.default.hex}}"
 set -gq @catppuccin_host_color "#{@thm_mauve}"
 set -gq @catppuccin_uptime_color "#{@thm_sapphire}"
 EOF
