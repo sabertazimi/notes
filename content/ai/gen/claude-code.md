@@ -27,13 +27,11 @@ cat << EOF > ~/.claude/settings.json
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5",
     "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_EFFORT_LEVEL": "max",
     "DISABLE_TELEMETRY": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_BUG_COMMAND": "1"
   },
-  "autoUpdatesChannel": "stable",
-  "effortLevel": "high"
+  "autoUpdatesChannel": "stable"
 }
 EOF
 ```
