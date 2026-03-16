@@ -81,6 +81,7 @@ set -g default-terminal "tmux-256color"
 unbind C-b
 set -g prefix C-Space
 bind C-Space send-prefix
+bind Space last-window
 
 # Start numbering at 1
 set -g base-index 1
@@ -90,6 +91,15 @@ set -g renumber-windows on
 
 # Allows for faster key repetition
 set -s escape-time 0
+
+# Increase scrollback buffer size
+set -g history-limit 50000
+
+# Increase messages display duration
+set -g display-time 2000
+
+# Enable focus events
+set -g focus-events on
 
 # Enable scroll mouse
 set -g mouse on
