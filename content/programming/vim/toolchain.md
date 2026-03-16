@@ -73,25 +73,25 @@ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 
 ### Extras Plugins
 
-`LazyVim` extras plugins (`~/.config/nvim/lua/config/lazy.lua`):
+`LazyVim` extras plugins (`~/.config/nvim/lazyvim.json`):
 
-```lua
-require("lazy").setup({
-  spec = {
-    -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import Lazy extras plugins
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.lang.go" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    -- import/override with your plugins
-    { import = "plugins" },
-  },
-})
+```json
+{
+  "extras": [
+    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.python",
+    "lazyvim.plugins.extras.lang.rust",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint"
+  ],
+  "install_version": 8,
+  "version": 8
+}
 ```
 
 `LazyVim` extras plugins 位于 `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
