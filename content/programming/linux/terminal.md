@@ -117,10 +117,10 @@ set -s extended-keys on
 vim_pattern='(\S+/)?g?\.?(view|l?n?vim?x?|fzf)(diff)?(-wrapped)?'
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +${vim_pattern}$'"
-bind -n 'C-h' if-shell "$is_vim" 'send C-h'  'select-pane -L'
-bind -n 'C-j' if-shell "$is_vim" 'send C-j'  'select-pane -D'
-bind -n 'C-k' if-shell "$is_vim" 'send C-k'  'select-pane -U'
-bind -n 'C-l' if-shell "$is_vim" 'send C-l'  'select-pane -R'
+bind -n 'C-h' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-h" "select-pane -L"' 'send C-h'
+bind -n 'C-j' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-j" "select-pane -D"' 'send C-j'
+bind -n 'C-k' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-k" "select-pane -U"' 'send C-k'
+bind -n 'C-l' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-l" "select-pane -R"' 'send C-l'
 bind -r h resize-pane -L 5
 bind -r j resize-pane -D 5
 bind -r k resize-pane -U 5
