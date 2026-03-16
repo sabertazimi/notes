@@ -57,6 +57,22 @@ git clone --depth=1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 ```
 
 ```bash
+cat << EOF >> ~/.config/matugen/config.toml
+[templates.tmux]
+input_path = '~/.config/matugen/templates/tmux.conf'
+output_path = '~/.config/tmux/theme.conf'
+post_hook = 'tmux source-file ~/.config/tmux/theme.conf'
+EOF
+
+cat << EOF > ~/.config/matugen/templates/tmux.conf
+set -gq @thm_mauve "{{colors.primary_fixed_dim.default.hex}}"
+set -gq @thm_sapphire "{{colors.tertiary.default.hex}}"
+set -gq @catppuccin_host_color "#{@thm_mauve}"
+set -gq @catppuccin_uptime_color "#{@thm_sapphire}"
+EOF
+```
+
+```bash
 # Set true color
 set -sa terminal-overrides ",xterm*:Tc"
 set -g default-terminal "tmux-256color"
@@ -113,6 +129,7 @@ bind % split-window -h -c "#{pane_current_path}"
 bind '"' split-window -v -c "#{pane_current_path}"
 
 # Configure catppuccin plugin
+source-file -q ~/.config/tmux/theme.conf
 set -g @catppuccin_flavor "mocha"
 set -g @catppuccin_status_background "none"
 set -g @catppuccin_window_status_style "custom"
