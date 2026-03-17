@@ -142,7 +142,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   nautilus-python sushi tumbler gvfs-smb file-roller \
   poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   grim slurp satty wl-clipboard \
-  imv imagemagick kimageformats resvg poppler loupe \
+  chafa imv loupe imagemagick kimageformats resvg poppler \
   mpv ffmpeg yt-dlp cava \
   7zip trash-cli yazi khal \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
