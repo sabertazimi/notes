@@ -761,6 +761,8 @@ printf -- ' DONE!\n';
 
 ## Zsh
 
+### Oh My Zsh
+
 ```bash
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -775,6 +777,63 @@ sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $
 sed -i '/^plugins=/ s/^plugins=.*/plugins=(git vi-mode last-working-dir fzf-tab zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
 echo 'bindkey "^O" autosuggest-accept' >> ~/.zshrc
 ```
+
+### `Zinit`
+
+```bash
+# Enable the subsequent settings only in interactive sessions
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
+# Zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone --depth=1 https://github.com/zdharma-continuum/zinit "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Plugins
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::vi-mode
+zinit snippet OMZP::last-working-dir
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+
+# Load completions
+autoload -Uz compinit
+compinit
+
+zinit cdreplay -q
+
+# Key bindings
+bindkey "^O" autosuggest-accept
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+```
+
+### Starship
 
 [Starship](https://github.com/starship/starship) theme:
 
@@ -808,7 +867,9 @@ sed -i \
 source ~/.zshrc
 ```
 
-[Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme:
+### `Powerlevel10k`
+
+[`Powerlevel10k`](https://github.com/romkatv/powerlevel10k) theme:
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
