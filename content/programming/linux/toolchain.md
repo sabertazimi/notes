@@ -40,7 +40,7 @@ echo 'alias dot="chezmoi"' >> ~/.zshrc
 echo 'alias open="xdg-open"' >> ~/.zshrc
 echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
 echo 'alias cat="bat"' >> ~/.zshrc
-echo 'alias ls="eza"' >> ~/.zshrc
+echo 'alias ls="eza --icons --grid --group-directories-first"' >> ~/.zshrc
 echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
 echo 'alias grep="rg"' >> ~/.zshrc
 echo 'alias man="tldr"' >> ~/.zshrc
@@ -237,7 +237,7 @@ winget install eza-community.eza
 ```
 
 ```bash
-echo 'alias ls="eza"' >> ~/.zshrc
+echo 'alias ls="eza --icons --grid --group-directories-first"' >> ~/.zshrc
 ```
 
 ## `fd`
