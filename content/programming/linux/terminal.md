@@ -53,7 +53,7 @@ tmux show -g >> current.tmux.conf # export configuration
 
 ```bash
 mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone --depth=1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+git clone --depth=1 https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin/tmux
 ```
 
 ```bash
