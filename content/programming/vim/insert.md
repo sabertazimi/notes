@@ -3,7 +3,7 @@ sidebar_position: 2
 tags: [Programming, Vim]
 ---
 
-# Insert Mode
+# Insert
 
 ## 模式转换
 

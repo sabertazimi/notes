@@ -3,7 +3,7 @@ sidebar_position: 4
 tags: [Programming, Vim]
 ---
 
-# Command Mode
+# Command
 
 底行模式:
 
@@ -64,7 +64,7 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 ## Range
 
 - `{start}, {end}`.
-- number 表示行号, `.`表示当前行, `$`表示最后一行, `%`表示所有行.
+- `number` 表示行号, `.`表示当前行, `$`表示最后一行, `%`表示所有行.
 - `/start_pattern/,/end_pattern/`
 
 | 符号 | 地址                         |
@@ -81,7 +81,7 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 - `1`: 第 1 行.
 - `%`: 所有行.
 - `2,$`: 第 2 行 - 最后一行.
-- `/<html>/,/<\/html>/`: 标签 html 所有行.
+- `/<html>/,/<\/html>/`: 标签 HTML 所有行.
 
 ## Undo and Redo
 
@@ -100,25 +100,25 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
 ## Replace
 
-- Abolish.vim: 超级 substitute 命令.
+- `Abolish.vim`: 超级 substitute 命令.
 - `:[range]s[substitute]/{pattern}/{string}/[flags]`
 
 ### 原字符
 
-| 原字符      | 作用                               |
-| :---------- | :--------------------------------- |
-| `\c`        | 忽略大小写                         |
-| `\C`        | 大小写敏感                         |
-| `\v`        | 开启 very magic 模式(可省略转义符) |
-| `<` 与 `>`  | `\v` 模式下的单词定界符            |
-| `%(` 与 `)` | 分组符                             |
-| `\V`        | 开启原义模式(可省略转义符)         |
-| `\w`        | 匹配单词类字符(alpha,number,`_`)   |
-| `\W`        | 匹配非单词字符                     |
-| `\x`        | 匹配十六进制数 `[0-9a-fA-F]`       |
-| `\s`        | 匹配空白符/换行符                  |
-| `\zs`       | 界定一个匹配的开始                 |
-| `\ze`       | 界定一个匹配的结束                 |
+| 原字符      | 作用                                  |
+| :---------- | :------------------------------------ |
+| `\c`        | 忽略大小写                            |
+| `\C`        | 大小写敏感                            |
+| `\v`        | 开启 very magic 模式(可省略转义符)    |
+| `<` 与 `>`  | `\v` 模式下的单词定界符               |
+| `%(` 与 `)` | 分组符                                |
+| `\V`        | 开启原义模式(可省略转义符)            |
+| `\w`        | 匹配单词类字符(alphabet, number, `_`) |
+| `\W`        | 匹配非单词字符                        |
+| `\x`        | 匹配十六进制数 `[0-9a-fA-F]`          |
+| `\s`        | 匹配空白符/换行符                     |
+| `\zs`       | 界定一个匹配的开始                    |
+| `\ze`       | 界定一个匹配的结束                    |
 
 ### Flags
 
@@ -162,10 +162,14 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 - `:[range] global[!] /{pattern}/[ExCommands]`.
 - `:g/{start}/ .,{finish} [cmd]`.
 
-> ':g/re/d' 删除所有的匹配行
-> ':v/re/d' 只保留匹配行
-> 追加存储 TODO 项至 a 寄存器
-> `:g/TODO/yank A` > `:reg a`
+:::tip
+
+- ':g/re/d' 删除所有的匹配行
+- ':v/re/d' 只保留匹配行
+- 追加存储 `TODO` 项至 a 寄存器
+- `:g/TODO/yank A` > `:reg a`
+
+:::
 
 ## Documentation
 
@@ -173,5 +177,5 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
 - `:help ^n`: `<C-n>` docs in normal mode.
 - `:help i_^n`: `<C-n>` docs in insert mode.
-- `:help c_^n`: `<C-n>` docs in commandLine mode.
+- `:help c_^n`: `<C-n>` docs in command line mode.
 - `:helpgrep command`: search docs includes `command`.
