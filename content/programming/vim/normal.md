@@ -3,7 +3,7 @@ sidebar_position: 1
 tags: [Programming, Vim]
 ---
 
-# Normal Mode
+# Normal
 
 ## Redo
 
@@ -13,7 +13,7 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 
 `;`
 
-重复 t/T/f/F
+重复 `t`/`T`/`f`/`F`
 
 `@`
 
@@ -43,13 +43,13 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 
 | 复合命令 | 等效的长命令 |
 | :------- | :----------- |
-| C        | `c$`         |
-| s        | `cl`         |
-| S        | `^c`         |
-| I        | `^i`         |
-| A        | `$a`         |
-| o        | `A<CR>`      |
-| O        | `ko`         |
+| `C`      | `c$`         |
+| `s`      | `cl`         |
+| `S`      | `^c`         |
+| `I`      | `^i`         |
+| `A`      | `$a`         |
+| `o`      | `A<CR>`      |
+| `O`      | `ko`         |
 
 ## Edit
 
@@ -98,8 +98,8 @@ e.g. `$`/`2l`/`aw`/`ap` 或 `/patterns`.
 | `i'`           | 单引号 `'single quotes'` 内部   |
 | `a"`           | 一对双引号 `"double quotes"`    |
 | `i"`           | 双引号 `"double quotes"` 内部   |
-| a\`            | 一对反引号 \`backTicks\`        |
-| i\`            | 反引号 \`backTicks\` 内部       |
+| `` a` ``       | 一对反引号 \`backticks\`        |
+| `` i` ``       | 反引号 \`backticks\` 内部       |
 | `at`           | 一对 XML 标签 `<xml>tags</xml>` |
 | `it`           | XML 标签内部                    |
 
@@ -163,9 +163,7 @@ e.g. `$`/`2l`/`aw`/`ap` 或 `/patterns`.
 
 ### 替换
 
-> :h gU
-
-- `gU{motion}`: 小写转大写 e.gUaw.
+- `gU{motion}`: 小写转大写 e.g. `gUaw`.
 - `r{char}`: 替换光标所在字符.
 - `gr{char}`.
 - `R/gR` 进入替换模式.
@@ -198,7 +196,7 @@ e.g. >G: 缩进全文
 
 ### 历史记录
 
-- u: 回退命令.
+- `u`: 回退命令.
 - `<C-r>`: 前进命令.
 
 ## Jump
@@ -222,24 +220,24 @@ e.g. >G: 缩进全文
 | `g$`          | 移动到屏幕行的行尾                |
 | `^`           | 移动到实际行的第一个非空白字符    |
 | `g^`          | 移动到屏幕行的第一个非空白字符    |
-| `_`           | first char of line                |
-| `g_`          | last char of line                 |
-| `H`           | jump to top of screen             |
-| `M`           | jump to middle of screen          |
-| `L`           | jump to bottom of screen          |
-| `zt`          | current line to top of screen     |
-| `zz`          | current line to middle of screen  |
-| `zb`          | current line to bottom of screen  |
+| `_`           | First char of line                |
+| `g_`          | Last char of line                 |
+| `H`           | Jump to top of screen             |
+| `M`           | Jump to middle of screen          |
+| `L`           | Jump to bottom of screen          |
+| `zt`          | Current line to top of screen     |
+| `zz`          | Current line to middle of screen  |
+| `zb`          | Current line to bottom of screen  |
 | `<C-u>/<C-d>` | 翻半页                            |
 | `<C-b>/<C-f>` | 翻半页                            |
 | `<C-o>`       | 跳转到较老位置                    |
 | `<C-i>`       | 跳转到较新位置                    |
 | `g;`          | 跳转到较早修改位置                |
 | `g,`          | 跳转到较新修改位置                |
-| `gd`          | jump to definition                |
-| `gi`          | jump to last insert position      |
-| `#`           | jump to previous same word        |
-| `*`           | jump to next same word            |
+| `gd`          | Jump to definition                |
+| `gi`          | Jump to last insert position      |
+| `#`           | Jump to previous same word        |
+| `*`           | Jump to next same word            |
 
 查看 `path` 值 `:set path?`:
 
@@ -311,8 +309,8 @@ e.g. >G: 缩进全文
 | `b`  | 反向移动到当前单词/上一单词的开头 |
 | `e`  | 正向移动到当前单词/下一单词的结尾 |
 | `ge` | 反向移动到上一单词的结尾          |
-| `;`  | 重复/f/F/t/T                      |
-| `,`  | 撤销/f/F/t/T                      |
+| `;`  | 重复`f`/`F`/`t`/`T`               |
+| `,`  | 撤销`f`/`F`/`t`/`T`               |
 
 `<C-a>/<C-x>`: 查找数字,递增/减数字
 
@@ -327,20 +325,20 @@ N
 
 #### 原字符
 
-| 原字符      | 作用                               | 范例              |
-| :---------- | :--------------------------------- | :---------------- |
-| `\c`        | 忽略大小写                         |                   |
-| `\C`        | 大小写敏感                         |                   |
-| `\v`        | 开启 very magic 模式(可省略转义符) |                   |
-| `<` 与 `>`  | \v 模式下的单词定界符              |                   |
-| `%(` 与 `)` | 分组符                             | `/\v%(And\|D)rew` |
-| `\V`        | 开启原义模式(可省略转义符):        |                   |
-| `\w`        | 匹配单词类字符(alpha,number,`_`)   |                   |
-| `\W`        | 匹配非单词字符                     |                   |
-| `\x`        | 匹配十六进制数`[0-9a-fA-F]`        |                   |
-| `\s`        | 匹配空白符`/`换行符                |                   |
-| `\zs`       | 界定一个匹配的开始                 |                   |
-| `\ze`       | 界定一个匹配的结束                 |                   |
+| 原字符      | 作用                                  | 范例              |
+| :---------- | :------------------------------------ | :---------------- |
+| `\c`        | 忽略大小写                            |                   |
+| `\C`        | 大小写敏感                            |                   |
+| `\v`        | 开启 very magic 模式(可省略转义符)    |                   |
+| `<` 与 `>`  | \v 模式下的单词定界符                 |                   |
+| `%(` 与 `)` | 分组符                                | `/\v%(And\|D)rew` |
+| `\V`        | 开启原义模式(可省略转义符):           |                   |
+| `\w`        | 匹配单词类字符(alphabet, number, `_`) |                   |
+| `\W`        | 匹配非单词字符                        |                   |
+| `\x`        | 匹配十六进制数`[0-9a-fA-F]`           |                   |
+| `\s`        | 匹配空白符`/`换行符                   |                   |
+| `\zs`       | 界定一个匹配的开始                    |                   |
+| `\ze`       | 界定一个匹配的结束                    |                   |
 
 #### Flags
 
