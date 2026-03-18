@@ -462,23 +462,10 @@ sudo usermod -aG libvirt $USER
 sudo systemctl enable --now libvirtd.service
 ```
 
-## Library
-
-- [Dank](https://github.com/AvengeMedia/DankMaterialShell):
-  Desktop shell for Wayland compositors.
-- [`Caelestia`](https://github.com/caelestia-dots/shell):
-  Desktop shell for Hyprland.
-- [Illogical Impulse](https://github.com/end-4/dots-hyprland):
-  Usability-first dotfiles for Hyprland.
-- [`HyDE`](https://github.com/HyDE-Project/HyDE):
-  Hyprland desktop environment.
-- [`Shorin`](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
-  One-click Arch Linux desktop environment configuration.
-
 ## References
 
 - Linux from scratch [guide](https://www.linuxfromscratch.org/lfs/read.html).
-- Wayland [protocol](https://wayland.app/protocols).
-- XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
 - Arch Linux [简明指南](https://github.com/nakanomikuorg/arch-guide).
 - `Shorin` Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
+- [`Shorin`](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
+  One-click Arch Linux desktop environment configuration.

@@ -363,6 +363,21 @@ sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.confi
 sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
 ```
 
+## Library
+
+- [Dank](https://github.com/AvengeMedia/DankMaterialShell):
+  Desktop shell for Wayland compositors.
+- [`Noctalia`](https://github.com/noctalia-dev/noctalia-shell):
+  Sleek and minimal desktop shell for Wayland.
+- [`Caelestia`](https://github.com/caelestia-dots/shell):
+  Desktop shell for Hyprland.
+- [Illogical Impulse](https://github.com/end-4/dots-hyprland):
+  Usability-first dotfiles for Hyprland.
+- [`HyDE`](https://github.com/HyDE-Project/HyDE):
+  Hyprland desktop environment.
+
 ## References
 
 - Linux desktop [ecosystem](https://blog.grtsinry43.com/moments/2025/01/13/2025-linux-usage).
+- Wayland [protocol](https://wayland.app/protocols).
+- XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
