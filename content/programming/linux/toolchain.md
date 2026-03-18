@@ -54,6 +54,7 @@ echo 'alias dig="doggo"' >> ~/.zshrc
 echo 'alias diff="delta"' >> ~/.zshrc
 echo 'alias vi="nvim"' >> ~/.zshrc
 echo 'alias vim="nvim"' >> ~/.zshrc
+echo 'alias svim="sudoedit"' >> ~/.zshrc
 
 echo 'alias cc="claude"' >> ~/.zshrc
 echo 'alias ccc="claude -c"' >> ~/.zshrc
