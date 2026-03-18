@@ -205,7 +205,7 @@ sudo paccache -rk0  # 清理全部缓存
 
 ```bash
 paru -S --needed chsrc-bin downgrade \
-  claude-code visual-studio-code-bin cli-proxy-api-bin \
+  claude-code visual-studio-code-bin cc-switch-bin cli-proxy-api-bin \
   llmfit-bin models-bin \
   uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
