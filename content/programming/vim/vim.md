@@ -4,10 +4,6 @@ tags: [Programming, Vim]
 
 # Vim
 
-## Getting Started
-
-- [Toolchain](./toolchain.md) - Vim/Neovim installation, plugins, and configuration
-
 ## Core Modes
 
 - [Normal Mode](./normal.md) - Navigation, editing, operators, and text objects
@@ -19,7 +15,9 @@ tags: [Programming, Vim]
 
 - [Buffer](./buffer.md) - File search, buffers, windows, tabs, and file manager
 - [Macro](./macro.md) - Macro recording and execution
-
-## Reference
-
+- [Toolchain](./toolchain.md) - Vim configurations and plugins
 - [Error](./error.md) - Common errors and troubleshooting
+
+## Neovim
+
+- [Neovim](./neovim.md) - Neovim distributions, configurations, and plugins
