@@ -378,6 +378,7 @@ sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-
 
 ## References
 
+- Linux distribution [chooser](https://distrochooser.de).
 - Linux desktop [ecosystem](https://blog.grtsinry43.com/moments/2025/01/13/2025-linux-usage).
 - Wayland [protocol](https://wayland.app/protocols).
 - XDG: cross-desktop [group](https://www.freedesktop.org/wiki).
