@@ -761,25 +761,6 @@ printf -- ' DONE!\n';
 
 ## Zsh
 
-### Oh My Zsh
-
-```bash
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-```bash
-git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
-sed -i '/^plugins=/ s/^plugins=.*/plugins=(git vi-mode last-working-dir fzf-tab zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
-sed -i '/^source \$ZSH\/oh-my-zsh\.sh/i fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions/src\nautoload -U compinit && compinit' ~/.zshrc
-echo 'bindkey "^O" autosuggest-accept' >> ~/.zshrc
-```
-
 ### `Zinit`
 
 ```bash
@@ -796,43 +777,64 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Plugins
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::git.zsh
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::theme-and-appearance.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::vi-mode
 zinit snippet OMZP::last-working-dir
 zinit light Aloxaf/fzf-tab
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-syntax-highlighting
+zinit wait lucid light-mode for \
+  blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
+  atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
+  atinit"zicompinit; zicdreplay; _tool_init" zsh-users/zsh-syntax-highlighting
 
-# Load completions
-autoload -Uz compinit
-compinit
-
-zinit cdreplay -q
+# Completion styling
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons --group-directories-first $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always --icons --group-directories-first $realpath'
+zstyle ':fzf-tab:complete:nvim:*' fzf-preview \
+  '[[ -d $realpath ]] && eza -1 --color=always --icons --group-directories-first "$realpath" | head -200 || \
+  (bat --color=always --style=numbers "$realpath" || cat "$realpath") 2>/dev/null'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' prefix ''
+zstyle ':fzf-tab:*' switch-group '<' '>'
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# zstyle ':fzf-tab:*' popup-min-size 80 10
 
 # Key bindings
 bindkey "^O" autosuggest-accept
 
-# History
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+omz() {
+  echo "==> Updating Zinit and plugins..."
+  zinit self-update && zinit update --all
+  echo "  ✓ All Zinit plugins updated!"
+}
+```
 
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+### Oh My Zsh
+
+```bash
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+```bash
+git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
+sed -i '/^plugins=/ s/^plugins=.*/plugins=(git vi-mode last-working-dir fzf-tab zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
+sed -i '/^source \$ZSH\/oh-my-zsh\.sh/i fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions/src\nautoload -U compinit && compinit' ~/.zshrc
+echo 'bindkey "^O" autosuggest-accept' >> ~/.zshrc
 ```
 
 ### Starship
