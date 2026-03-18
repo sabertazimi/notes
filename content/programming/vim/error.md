@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 13
 tags: [Programming, Vim]
 ---
 
@@ -10,7 +10,7 @@ tags: [Programming, Vim]
 Can't open swap or backup file:
 
 - Create `:set directory?` directory.
-- Chown of directory to `${whoami}`.
+- Change owner (`chown`) of directory to `${whoami}`.
 
 ## Error Encoding
 

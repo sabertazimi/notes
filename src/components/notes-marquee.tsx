@@ -49,7 +49,7 @@ const DefaultNotes: Note[][] = [
     { title: 'Patterns', category: 'Design', href: '/programming/design/patterns' },
     { title: 'Arch Linux', category: 'Linux', href: '/programming/linux/arch' },
     { title: 'Internals', category: 'Git', href: '/programming/git/internals' },
-    { title: 'Neovim', category: 'Vim', href: '/programming/vim/toolchain' },
+    { title: 'Neovim', category: 'Vim', href: '/programming/vim/neovim' },
     { title: 'Kubernetes', category: 'DevOps', href: '/programming/devops/k8s' },
   ],
 ]

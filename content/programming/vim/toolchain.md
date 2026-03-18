@@ -1,27 +1,16 @@
 ---
-sidebar_position: 1
+sidebar_position: 12
 tags: [Programming, Vim, Toolchain]
 ---
 
 # Toolchain
 
-## Vim
-
-### Installation
-
-```bash
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt update
-sudo apt install vim
-vim --version
-```
-
-### Configuration
+## Configuration
 
 Install [awesome `vimrc`](https://github.com/amix/vimrc):
 
 ```bash
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+git clone --depth=1 https://github.com/amix/vimrc ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
@@ -39,149 +28,13 @@ let g:copilot_filetypes = {
     \ }
 ```
 
-## Neovim
-
-```bash
-brew install neovim
-winget install Neovim.Neovim
-sudo apt install neovim
-```
-
-### `LazyVim`
-
-[`LazyVim`](https://github.com/LazyVim/LazyVim) setup:
-
-```bash
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-```
-
-### `AstroNvim`
-
-[`AstroNvim`](https://github.com/AstroNvim/AstroNvim) setup:
-
-```bash
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
-```
-
-### Extras Plugins
-
-`LazyVim` extras plugins (`~/.config/nvim/lazyvim.json`):
-
-```json
-{
-  "extras": [
-    "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.json",
-    "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.python",
-    "lazyvim.plugins.extras.lang.rust",
-    "lazyvim.plugins.extras.lang.tailwind",
-    "lazyvim.plugins.extras.lang.toml",
-    "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.linting.eslint"
-  ],
-  "install_version": 8,
-  "version": 8
-}
-```
-
-`LazyVim` extras plugins 位于 `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
-
-### Community Plugins
-
-`AstroNvim` community plugins (`~/.config/nvim/lua/community.lua`):
-
-```lua
-return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- import/override with your plugins folder
-}
-```
-
-See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunity).
-
-## Language Server
-
-[LSP Config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md):
-
-```vim
-:LspInstall typescript
-```
-
-:::tip[Logs]
-
-`:Inspect` 显示 highlight group, `:messages` 显示日志信息.
-
-:::
-
-## ESLint
-
-Configuration (`~/.config/nvim/lua/plugins/lsp.lua`):
-
-```lua
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        eslint = {
-          filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-            "vue",
-            "html",
-            "markdown",
-            "json",
-            "jsonc",
-            "yaml",
-            "toml",
-            "xml",
-            "graphql",
-            "astro",
-            "svelte",
-            "css",
-            "less",
-            "scss",
-          },
-        },
-      },
-    },
-  },
-}
-```
-
-## Git
-
-Vim fugitive commands:
-
-| Command   | Description                          |
-| :-------- | :----------------------------------- |
-| `Gblame`  | View git blame (press `o` on commit) |
-| `Glog`    | View git log (`[q`/`]q`/`[Q`/`]Q`)   |
-| `Gdiff`   | View git diff                        |
-| `Gcommit` | Git commit                           |
-| `Gstatus` | Git status                           |
-| `Gpull`   | Git pull                             |
-| `Gpush`   | Git push                             |
-
-## Color Schemes
+## Color Scheme
 
 Vim color scheme configuration:
+
+- `:colorscheme {theme}` - 切换颜色主题
+- `:AirlineTheme {theme}` - 切换 Airline 主题
+- `:find` - 内置模糊文件搜索
 
 ```vim
 set nocompatible
@@ -243,101 +96,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = 'find %s -type f'
 ```
 
-Commands:
-
-- `:colorscheme {theme}` - 切换颜色主题
-- `:AirlineTheme {theme}` - 切换 Airline 主题
-- `:find` - 内置模糊文件搜索
-
-## Spell
-
-`zg` 添加到字典 (`~/.config/nvim/spell/en.utf-8.add` 或 `~/.vim/spell/en.utf-8.add`).
-
-Key binding to rebuild dictionary (`~/.config/nvim/lua/config/keymaps.lua`):
-
-```lua
-local wk = require("which-key")
-
-local spell_lang = "en"
-local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
-
-wk.add({
-  {
-    "<leader>um",
-    function()
-      vim.cmd("mkspell! " .. spell_file)
-      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
-    end,
-    desc = "Rebuild Spell Dictionary",
-    icon = "󰓫 ",
-  },
-})
-```
-
-Spell options (`~/.config/nvim/lua/config/options.lua`):
-
-```lua
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-```
-
-:::tip[Grammar]
-
-`:LspInstall harper_ls` Grammarly LSP with `<Leader>ca` LSP code action.
-
-:::
-
-## Markdown
-
-关闭 render 和 conceal.
-
-`~/.config/nvim/lua/plugins/markdown.lua`:
-
-```lua
-return {
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      enabled = false,
-    },
-  },
-}
-```
-
-`~/.config/nvim/lua/config/autocmds.lua`:
-
-```lua
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown" },
-  callback = function()
-    vim.opt_local.conceallevel = 0
-  end,
-})
-```
-
-## Clipboard
-
-```bash
-sudo pacman -S wl-clipboard
-# :checkhealth vim.provider
-```
-
-## Quick Navigation
-
-### `flash.nvim`
-
-[`flash.nvim`](https://github.com/folke/flash.nvim) key bindings:
-
-| Key | Command                  |
-| :-- | :----------------------- |
-| `s` | Search character         |
-| `f` | Find character forwards  |
-| `F` | Find character backwards |
-| `t` | Til character forwards   |
-| `T` | Til character backwards  |
-
-### Easy Motion
+## Easy Motion
 
 | Motion Command                      | Description                           |
 | ----------------------------------- | ------------------------------------- |
@@ -361,7 +120,7 @@ sudo pacman -S wl-clipboard
 | `<leader><leader><leader> bdjk`     | Start of line                         |
 | `<leader><leader><leader> j`        | Jump to anywhere motion               |
 
-### Quick Fix
+## Quick Fix
 
 | 命令      | 作用                         |
 | :-------- | :--------------------------- |
@@ -375,7 +134,7 @@ sudo pacman -S wl-clipboard
 | `:copen`  | 打开 Quick Fix 窗口          |
 | `:cclose` | 关闭 Quick Fix 窗口          |
 
-### `ctags`
+## `ctags`
 
 Generate tags:
 
@@ -427,3 +186,17 @@ Navigation commands:
 | `<C-h>` (与 `<BS>`) | 从当前匹配项中删除一个字符            |
 | `<C-l>`             | 从当前匹配项中增加一个字符            |
 | `{char}`            | 中止自动补全并插入字符 `{char}`       |
+
+## Git
+
+Vim fugitive commands:
+
+| Command   | Description                          |
+| :-------- | :----------------------------------- |
+| `Gblame`  | View git blame (press `o` on commit) |
+| `Glog`    | View git log (`[q`/`]q`/`[Q`/`]Q`)   |
+| `Gdiff`   | View git diff                        |
+| `Gcommit` | Git commit                           |
+| `Gstatus` | Git status                           |
+| `Gpull`   | Git pull                             |
+| `Gpush`   | Git push                             |
