@@ -121,7 +121,7 @@ dms doctor
 
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
-  pacman-contrib pkgstats man-db man-pages \
+  pacman-contrib pkgstats man-db man-pages man-pages-zh_cn \
   qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
