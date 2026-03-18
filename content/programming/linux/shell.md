@@ -813,8 +813,8 @@ bindkey "^O" autosuggest-accept
 
 omz() {
   echo "==> Updating Zinit and plugins..."
-  zinit self-update && zinit update --all
-  echo "  ✓ All Zinit plugins updated!"
+  zinit self-update && zinit update --all --parallel
+  echo "\n✓ All Zinit plugins updated!"
 }
 ```
 
