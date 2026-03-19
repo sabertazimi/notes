@@ -74,9 +74,9 @@ claude -r
 claude -r [session_id]
 ```
 
-## Non-interactive Mode
+## Noninteractive Mode
 
-Use Claude Code as a [unix-style utility](https://code.claude.com/docs/en/common-workflows#use-claude-as-a-unix-style-utility):
+Use Claude Code as a [Unix-style utility](https://code.claude.com/docs/en/common-workflows#use-claude-as-a-unix-style-utility):
 
 ```bash
 claude -p "$REVIEW_PROMPT" > review-result.md 2>&1 || true

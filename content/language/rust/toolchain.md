@@ -5,33 +5,16 @@ tags: [Language, Rust, Toolchain]
 
 # Toolchain
 
-## Mirrors
-
-```bash
-mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
-
-cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
-[source.crates-io]
-replace-with = 'ustc'
-
-[source.ustc]
-registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
-
-[registries.ustc]
-index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
-EOF
-```
-
 ## Installation
 
+Set up mirrors [`~/.cargo/config.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_cargo/config.toml):
+
 ```bash
-# RustUp script.
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-# Setup environment variables.
-echo '. $HOME/.cargo/env' >> ~/.zshrc
-# Install GCC linker and OpenSSL.
-sudo apt install build-essential libssl-dev pkg-config
-# Done.
+# curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+# sudo apt install build-essential libssl-dev pkg-config
+sudo pacman -S rustup
+echo 'source $HOME/.cargo/env' >> ~/.zshrc
+
 cargo -V
 rustc -V
 ```

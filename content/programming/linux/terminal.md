@@ -24,21 +24,14 @@ tags: [Programming, OS, Linux, Terminal, Tmux]
 
 ## Ghostty
 
-- `Ctrl`+`Shift`+`p`: command palette.
-- `Ctrl`+`Shift`+`,`: reload config.
+Config [`~/.config/ghostty/config`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/ghostty/config):
 
 ```bash
 git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-sed -i 's/background-opacity = .*/background-opacity = 0.85/' ~/.config/ghostty/config
-sed -i 's/^keybind = ctrl+t=/# keybind = ctrl+t=/' ~/.config/ghostty/config
-echo 'font-family = "Maple Mono NF CN"' >> ~/.config/ghostty/config
-echo "custom-shader = shaders/cursor_warp.glsl" >> ~/.config/ghostty/config
-echo "keybind = alt+h=goto_split:left" >> ~/.config/ghostty/config
-echo "keybind = alt+j=goto_split:down" >> ~/.config/ghostty/config
-echo "keybind = alt+k=goto_split:up" >> ~/.config/ghostty/config
-echo "keybind = alt+l=goto_split:right" >> ~/.config/ghostty/config
-echo "command = tmux attach || tmux" >> ~/.config/ghostty/config
 ```
+
+- `Ctrl`+`Shift`+`p`: command palette.
+- `Ctrl`+`Shift`+`,`: reload config.
 
 ## Tmux
 
@@ -51,123 +44,15 @@ tmux show -g >> current.tmux.conf # export configuration
 
 ### Configuration
 
+Config [`~/.config/tmux/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/tmux/tmux.conf):
+
 ```bash
 mkdir -p ~/.config/tmux/plugins/catppuccin
 git clone --depth=1 https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin/tmux
 ```
 
-```bash
-cat << EOF >> ~/.config/matugen/config.toml
-[templates.tmux]
-input_path = '~/.config/matugen/templates/tmux.conf'
-output_path = '~/.config/tmux/theme.conf'
-post_hook = 'tmux source-file ~/.config/tmux/theme.conf'
-EOF
-
-cat << EOF > ~/.config/matugen/templates/tmux.conf
-set -gq @thm_mauve "{{colors.primary_fixed_dim.default.hex}}"
-set -gq @thm_sapphire "{{dank16.color3.default.hex}}"
-set -gq @catppuccin_host_color "#{@thm_mauve}"
-set -gq @catppuccin_uptime_color "#{@thm_sapphire}"
-EOF
-```
-
-```bash
-# Set true color
-set -sa terminal-overrides ",xterm*:Tc"
-set -g default-terminal "tmux-256color"
-
-# Set prefix
-unbind C-b
-set -g prefix C-Space
-bind C-Space send-prefix
-bind Space last-window
-
-# Start numbering at 1
-set -g base-index 1
-set -g pane-base-index 1
-setw -g pane-base-index 1
-set -g renumber-windows on
-
-# Allows for faster key repetition
-set -s escape-time 0
-
-# Increase scrollback buffer size
-set -g history-limit 50000
-
-# Increase messages display duration
-set -g display-time 2000
-
-# Enable focus events
-set -g focus-events on
-
-# Enable scroll mouse
-set -g mouse on
-
-# Constrain window size to maximum size.
-setw -g aggressive-resize on
-
-# Set vi-mode
-setw -g mode-keys vi
-
-# Set extended keys
-set -s extended-keys on
-
-# Set pane keys
-vim_pattern='(\S+/)?g?\.?(view|l?n?vim?x?|fzf)(diff)?(-wrapped)?'
-is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
-    | grep -iqE '^[^TXZ ]+ +${vim_pattern}$'"
-bind -n 'C-h' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-h" "select-pane -L"' 'send C-h'
-bind -n 'C-j' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-j" "select-pane -D"' 'send C-j'
-bind -n 'C-k' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-k" "select-pane -U"' 'send C-k'
-bind -n 'C-l' if-shell "[ #{window_panes} -gt 1 ]" 'if-shell "$is_vim" "send C-l" "select-pane -R"' 'send C-l'
-bind -r h resize-pane -L 5
-bind -r j resize-pane -D 5
-bind -r k resize-pane -U 5
-bind -r l resize-pane -R 5
-bind -T copy-mode-vi 'C-h' select-pane -L
-bind -T copy-mode-vi 'C-j' select-pane -D
-bind -T copy-mode-vi 'C-k' select-pane -U
-bind -T copy-mode-vi 'C-l' select-pane -R
-bind C-l send C-l
-
-# Escape to enter copy mode, v to selection, y to yank, p to paste
-bind Escape copy-mode
-bind -T copy-mode-vi v send -X begin-selection
-bind -T copy-mode-vi C-v send -X rectangle-toggle
-bind -T copy-mode-vi y send -X copy-selection-and-cancel
-unbind p
-bind p paste-buffer -p
-
-# Reload configuration
-bind r source-file ~/.config/tmux/tmux.conf \; display-message "Config reloaded"
-
-# Open pane in current directory
-bind % split-window -h -c "#{pane_current_path}"
-bind '"' split-window -v -c "#{pane_current_path}"
-
-# Configure catppuccin plugin
-source-file -q ~/.config/tmux/theme.conf
-set -g @catppuccin_flavor "mocha"
-set -g @catppuccin_status_background "none"
-set -g @catppuccin_window_status_style "custom"
-set -g @catppuccin_window_left_separator "#[bg=default,fg=#{@catppuccin_window_number_color}]█#[bg=#{@catppuccin_window_number_color},fg=#{@catppuccin_window_text_color}]"
-set -g @catppuccin_window_current_left_separator "#[bg=default,fg=#{@catppuccin_window_current_number_color}]█#[bg=#{@catppuccin_window_current_number_color},fg=#{@catppuccin_window_current_text_color}]"
-set -g @catppuccin_window_middle_separator " "
-set -g @catppuccin_window_right_separator "#[bg=default,fg=#{@catppuccin_window_text_color}]#[none]"
-set -g @catppuccin_window_current_right_separator "#[bg=default,fg=#{@catppuccin_window_current_text_color}]#[none]"
-set -g @catppuccin_window_text " #W"
-set -g @catppuccin_window_current_text " #W"
-
-run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
-
-set -g status-left-length 100
-set -g status-left ""
-set -g status-right-length 100
-set -g status-right "#{E:@catppuccin_status_host}"
-set -ag status-right "#{E:@catppuccin_status_session}"
-set -ag status-right "#{E:@catppuccin_status_uptime}"
-```
+Set up `Matugen` config [`~/.config/matugen/config.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/config.toml)
+and template [`~/.config/matugen/templates/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/templates/tmux.conf).
 
 ### Session
 
@@ -176,16 +61,7 @@ set -ag status-right "#{E:@catppuccin_status_uptime}"
 - `s`: list sessions
 - `$`: rename the current session
 - `d`: detach from the current session
-
-```bash
-#!/usr/bin/env bash
-
-if pgrep -x "ghostty" >/dev/null; then
-  ghostty -e sh -c "tmux new-session \; set-option destroy-unattached on" &
-else
-  ghostty -e sh -c "tmux attach || tmux" &
-fi
-```
+- Auto attach tmux session for terminal [`~/.local/bin/ghostty-tmux.sh`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/bin/executable_ghostty-tmux.sh).
 
 ### Window
 
@@ -223,8 +99,8 @@ fi
 
 ## Windows
 
+Fix git bash flicker:
+
 ```bash
-# ~/.bashrc
-# Fix git bash flicker
 bind 'set bell-style none'
 ```

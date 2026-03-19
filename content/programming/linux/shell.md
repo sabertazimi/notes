@@ -53,7 +53,7 @@ EOF
 - 调用变量值：`$变量名`.
 - `set`/`unset`: 设置/取消变量.
 
-### Built-in
+### Builtin
 
 - `$*`/`$@`: `argv[1], ..., argv[n]`
 - `$0/$1/../$n`: `argv[0], ..., argv[n]`
@@ -763,60 +763,11 @@ printf -- ' DONE!\n';
 
 ### `Zinit`
 
-```bash
-# Enable the subsequent settings only in interactive sessions
-case $- in
-  *i*) ;;
-    *) return;;
-esac
+Blazing fast `Zinit` configuration [`~/.zshrc`](https://github.com/sabertazimi/dotfiles/blob/main/dot_zshrc):
 
-# Zinit
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone --depth=1 https://github.com/zdharma-continuum/zinit "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
-
-# Plugins
-zinit snippet OMZL::clipboard.zsh
-zinit snippet OMZL::completion.zsh
-zinit snippet OMZL::git.zsh
-zinit snippet OMZL::history.zsh
-zinit snippet OMZL::key-bindings.zsh
-zinit snippet OMZL::theme-and-appearance.zsh
-zinit snippet OMZP::git
-zinit snippet OMZP::vi-mode
-zinit snippet OMZP::last-working-dir
-zinit light Aloxaf/fzf-tab
-zinit wait lucid light-mode for \
-  blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
-  atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
-  atinit"zicompinit; zicdreplay; _tool_init" zsh-users/zsh-syntax-highlighting
-
-# Completion styling
-zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons --group-directories-first $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always --icons --group-directories-first $realpath'
-zstyle ':fzf-tab:complete:nvim:*' fzf-preview \
-  '[[ -d $realpath ]] && eza -1 --color=always --icons --group-directories-first "$realpath" | head -200 || \
-  (bat --color=always --style=numbers "$realpath" || cat "$realpath") 2>/dev/null'
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
-zstyle ':fzf-tab:*' prefix ''
-zstyle ':fzf-tab:*' switch-group '<' '>'
-# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-# zstyle ':fzf-tab:*' popup-min-size 80 10
-
-# Key bindings
-bindkey "^O" autosuggest-accept
-
-omz() {
-  echo "==> Updating Zinit and plugins..."
-  zinit self-update && zinit update --all --parallel
-  echo "\n✓ All Zinit plugins updated!"
-}
-```
+- Turbo mode support.
+- Lazy load modern CLI [tools](./toolchain.md).
+- Lightweight [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) integration with [`zinit snippet`](https://github.com/zdharma-continuum/zinit).
 
 ### Oh My Zsh
 
@@ -830,44 +781,35 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
 
-sed -i '1i # Enable the subsequent settings only in interactive sessions\ncase $- in\n  *i*) ;;\n    *) return;;\nesac\n' ~/.zshrc
-sed -i '/^plugins=/ s/^plugins=.*/plugins=(git vi-mode last-working-dir fzf-tab zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
-sed -i '/^source \$ZSH\/oh-my-zsh\.sh/i fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions/src\nautoload -U compinit && compinit' ~/.zshrc
-echo 'bindkey "^O" autosuggest-accept' >> ~/.zshrc
+```bash
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="dragon"
+plugins=(git vi-mode last-working-dir fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
+
+fpath+=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions/src
+autoload -U compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
+
+bindkey "^O" autosuggest-accept
 ```
 
 ### Starship
 
-[Starship](https://github.com/starship/starship) theme:
+Set up [Starship](https://github.com/starship/starship)
+`Matugen` config [`~/.config/matugen/config.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/config.toml)
+and template [`~/.config/matugen/templates/starship.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/templates/starship.toml):
 
 ```bash
-sed -i 's/^ZSH_THEME=.*/ZSH_THEME=""/' ~/.zshrc
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset gruvbox-rainbow -o ~/.config/starship.toml
-
-mkdir -p ~/.config/matugen
-mkdir -p ~/.config/matugen/templates
-cat << EOF > ~/.config/matugen/config.toml
-[config]
-
-[templates.starship]
-input_path = '~/.config/matugen/templates/starship.toml'
-output_path = '~/.config/starship.toml'
-EOF
-cp -fr ~/.config/starship.toml ~/.config/matugen/templates/starship.toml
-sed -i \
-  -e 's/^color_fg0.*/color_fg0 = '"'"'{{colors.on_primary.default.hex}}'"'"'/' \
-  -e '/^color_fg0.*/a\color_fg1 = '"'"'{{colors.on_surface.default.hex}}'"'"'' \
-  -e 's/^color_bg1.*/color_bg1 = '"'"'{{colors.secondary_container.default.hex}}'"'"'/' \
-  -e 's/^color_bg3.*/color_bg3 = '"'"'{{colors.secondary.default.hex}}'"'"'/' \
-  -e 's/^color_blue.*/color_blue = '"'"'{{colors.inverse_primary.default.hex}}'"'"'/' \
-  -e 's/^color_aqua.*/color_aqua = '"'"'{{colors.on_secondary_container.default.hex}}'"'"'/' \
-  -e 's/^color_orange.*/color_orange = '"'"'{{colors.primary_fixed_dim.default.hex}}'"'"'/' \
-  -e 's/^color_yellow.*/color_yellow = '"'"'{{colors.tertiary.default.hex}}'"'"'/' \
-  -e 's/fg:color_fg0 bg:color_blue/fg:color_fg1 bg:color_blue/g' \
-  -e 's/fg:color_fg0 bg:color_bg1/fg:color_fg1 bg:color_bg1/g' ~/.config/matugen/templates/starship.toml
-
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -880,25 +822,28 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k "${ZSH_CUSTOM:-$HOM
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 ```
 
-Install zsh on [Windows](https://gist.github.com/fworks/af4c896c9de47d827d4caa6fd7154b6b):
+:::tip[Windows]
+
+Install Zsh on [Windows](https://gist.github.com/fworks/af4c896c9de47d827d4caa6fd7154b6b):
 
 ```bash
-# Download zsh and extract into "C:\Program Files\Git":
+# 1. Download Zsh and extract into "C:\Program Files\Git":
 curl -O https://mirror.msys2.org/msys/x86_64/zsh-5.9-3-x86_64.pkg.tar.zst
 
-# Open git bash and configure zsh:
+# 2. Open Git Bash and configure Zsh:
 zsh
 
-# Install oh-my-zsh:
+# 3. Install `oh-my-zsh`:
 git clone https://github.com/ohmyzsh/ohmyzsh
 bash ohmyzsh/tools/install.sh
 
-# Edit ~/.bashrc:
-# Launch Zsh
+# 4. Edit `~/.bashrc` launch Zsh:
 if [ -t 1 ]; then
 exec zsh
 fi
 ```
+
+:::
 
 ## Best Practices
 
@@ -916,10 +861,10 @@ fi
 # 设置命令回显
 set -x
 
-# 遇到未声明的变量则报错停止
-set -u
-# 遇到执行错误则停止
+# `errexit`
 set -e
-# 管道命令其中一步失败则中止
+# `nounset`
+set -u
+# `pipefail`
 set -o pipefail
 ```

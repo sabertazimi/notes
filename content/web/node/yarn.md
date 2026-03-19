@@ -10,13 +10,12 @@ tags: [Web, Node.js, Package Manager, Yarn]
 Yarn [berry](https://yarnpkg.com/getting-started/migration):
 
 ```bash
-# Modify `/etc/hosts`
 npm i -g yarn
 cd project/
 yarn set version berry
 ```
 
-Setup basic configuration `.yarnrc.yml`:
+Set up basic configuration `.yarnrc.yml`:
 
 ```yml
 yarnPath: .yarn/releases/yarn-berry.cjs

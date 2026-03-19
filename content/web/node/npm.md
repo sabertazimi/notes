@@ -55,13 +55,14 @@ npm config -g set registry https://registry.npmmirror.com/
 [FNM](https://github.com/Schniz/fnm):
 
 ```bash
+sudo pacman -S fnm
 brew install fnm
 scoop install fnm
 winget install Schniz.fnm
 ```
 
 ```bash
-echo 'eval "$(fnm env --use-on-cd --shell bash)"' >> ~/.bashrc
+echo 'eval "$(fnm env --use-on-cd --shell zsh)"' >> ~/.zshrc
 fnm i --lts
 node -v
 ```
@@ -69,7 +70,7 @@ node -v
 ## Tab Completion
 
 ```bash
-npm completion >> ~/.bashrc (or ~/.zshrc)
+npm completion >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -77,7 +78,7 @@ source ~/.zshrc
 
 ```bash
 npm adduser
-mkdir proj/
+mkdir proj
 # 修改 package.json 可再次运行此命令
 # scope for everyone
 npm init --scope=<username>
