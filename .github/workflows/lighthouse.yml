@@ -22,7 +22,7 @@ jobs:
           submodules: true
           fetch-depth: 1
       - name: Comment pull request
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           number: ${{ github.event.pull_request.number }}
           header: lighthouse
@@ -37,7 +37,7 @@ jobs:
           max_timeout: 600
           check_interval: 15
       - name: Comment preview result
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           number: ${{ github.event.pull_request.number }}
           header: lighthouse
@@ -84,7 +84,7 @@ jobs:
 
             core.setOutput("comment", comment);
       - name: Comment audit result
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           number: ${{ github.event.pull_request.number }}
           header: lighthouse
