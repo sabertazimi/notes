@@ -21,7 +21,6 @@ git config --global core.editor nvim
 git config --global credential.helper store
 git config --global color.ui true
 git config --global commit.template ~/.gitmsg.md
-echo "fix():" >> ~/.gitmsg.md
 
 git config --global init.defaultBranch main
 git config --global merge.conflictstyle diff3

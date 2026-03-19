@@ -5,95 +5,18 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 
 # Toolchain
 
-```bash
-sudo pacman -S mise zoxide bat eza fd ripgrep fzf television jq fx tldr \
-  dust duf bottom procs gping curlie doggo git-delta \
-```
-
-```bash
-echo 'export EDITOR="nvim"' >> ~/.zshrc
-echo 'export VISUAL="nvim"' >> ~/.zshrc
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
-echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
-
-echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
-echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
-echo 'eval "$(tv init zsh)"' >> ~/.zshrc
-echo "source <(fzf --zsh)" >> ~/.zshrc
-echo "source <(fx --comp zsh)" >> ~/.zshrc
-echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
-
-cat << EOF >> ~/.zshrc
-# Use fd for listing path candidates
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "\$1"
-}
-
-# Use fd for list directory candidates
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "\$1"
-}
-EOF
-
-echo 'alias dot="chezmoi"' >> ~/.zshrc
-echo 'alias open="xdg-open"' >> ~/.zshrc
-echo 'alias ff="fastfetch --config examples/7.jsonc"' >> ~/.zshrc
-echo 'alias cat="bat"' >> ~/.zshrc
-echo 'alias ls="eza --icons --grid --group-directories-first"' >> ~/.zshrc
-echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
-echo 'alias grep="rg"' >> ~/.zshrc
-echo 'alias man="tldr"' >> ~/.zshrc
-echo 'alias du="dust"' >> ~/.zshrc
-echo 'alias df="duf"' >> ~/.zshrc
-echo 'alias top="btm"' >> ~/.zshrc
-echo 'alias ps="procs"' >> ~/.zshrc
-echo 'alias ping="gping"' >> ~/.zshrc
-echo 'alias curl="curlie"' >> ~/.zshrc
-echo 'alias dig="doggo"' >> ~/.zshrc
-echo 'alias diff="delta"' >> ~/.zshrc
-echo 'alias vi="nvim"' >> ~/.zshrc
-echo 'alias vim="nvim"' >> ~/.zshrc
-echo 'alias svim="sudoedit"' >> ~/.zshrc
-
-echo 'alias cc="claude"' >> ~/.zshrc
-echo 'alias ccc="claude -c"' >> ~/.zshrc
-echo 'alias ccr="claude -r"' >> ~/.zshrc
-echo 'alias ccm="claude -p commit"' >> ~/.zshrc
-echo 'alias cx="codex"' >> ~/.zshrc
-echo 'alias cxr="codex resume"' >> ~/.zshrc
-echo 'alias oc="opencode"' >> ~/.zshrc
-echo 'alias occ="opencode -c"' >> ~/.zshrc
-echo "source ~/.zshrc.local" >> ~/.zshrc
-touch ~/.zshrc.local
-
-cat << EOF >> ~/.ripgreprc
-# Add 'web' type
---type-add
-web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
-
-# Search hidden files / directories (e.g. dotfiles) by default
---hidden
-
-# Using glob patterns to include/exclude files or folders
---glob
-!**/.git/*
-
-# Ignore case unless all caps
---smart-case
-EOF
-```
-
-## Change Mirror Source
+## Mirrors
 
 ```bash
 sudo paru -S chsrc-bin
+brew install chsrc
 scoop install chsrc
 winget install RubyMetric.chsrc
 ```
 
+Auto:
+
 ```bash
-# Auto
 chsrc set node
 chsrc set python
 chsrc set rust
@@ -103,8 +26,11 @@ chsrc set flatpak
 chsrc set winget
 sudo chsrc set arch
 sudo chsrc set archlinuxcn
+```
 
-# Manual
+Manual:
+
+```bash
 chsrc ls ruby
 chsrc set ruby rubychina
 ```
@@ -114,7 +40,6 @@ chsrc set ruby rubychina
 [`scoop`](https://github.com/ScoopInstaller/Scoop):
 
 ```powershell
-# Command-line installer for Windows
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
@@ -149,7 +74,7 @@ while WinGet is app installer.
 Recommended software for Windows:
 
 ```bash
-winget install BellSoft.LibericaJDK.11 Rustlang.Rustup Tencent.WeixinDevTools zig.zig
+winget install Rustlang.Rustup zig.zig BellSoft.LibericaJDK.11 Tencent.WeixinDevTools
 ```
 
 ```bash
@@ -157,7 +82,7 @@ winget install Git.Git GitHub.cli Oven-sh.Bun CoreyButler.NVMforWindows astral-s
 ```
 
 ```bash
-winget install Anthropic.ClaudeCode Microsoft.VisualStudioCode Neovim.Neovim ZedIndustries.Zed
+winget install Anthropic.ClaudeCode Neovim.Neovim Microsoft.VisualStudioCode ZedIndustries.Zed
 ```
 
 ```bash
@@ -169,7 +94,7 @@ winget install ClashVergeRev.ClashVergeRev Google.Chrome Microsoft.OneDrive
 ```
 
 ```bash
-winget install ByteDance.Feishu NetEase.CloudMusic Tencent.QQ.NT Tencent.WeChat Tencent.WeType Valve.Steam
+winget install NetEase.CloudMusic ByteDance.Feishu Tencent.QQ.NT Tencent.WeChat Tencent.WeType Valve.Steam
 ```
 
 ## `mise`
@@ -184,7 +109,6 @@ winget install jdx.mise
 ```
 
 ```bash
-echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 mise u -g node@lts
 node -v
 ```
@@ -200,30 +124,11 @@ scoop install zoxide
 winget install ajeetdsouza.zoxide
 ```
 
-```bash
-echo 'eval "$(zoxide init --cmd cd zsh)"' >> ~/.zshrc
-```
-
 Interactive `fzf` menu:
 
 ```bash
 cdi
 cd ambiguous-path <Tab>
-```
-
-## Bat
-
-[bat](https://github.com/sharkdp/bat):
-
-```bash
-sudo pacman -S bat
-brew install bat
-scoop install bat
-winget install sharkdp.bat
-```
-
-```bash
-echo 'alias cat="bat"' >> ~/.zshrc
 ```
 
 ## `eza`
@@ -238,7 +143,7 @@ winget install eza-community.eza
 ```
 
 ```bash
-echo 'alias ls="eza --icons --grid --group-directories-first"' >> ~/.zshrc
+eza --icons --grid --group-directories-first
 ```
 
 ## `fd`
@@ -253,7 +158,7 @@ winget install sharkdp.fd
 ```
 
 ```bash
-echo 'alias find="fd --hidden --follow --exclude .git"' >> ~/.zshrc
+fd --hidden --follow --exclude .git
 ```
 
 ## `ripgrep`
@@ -267,34 +172,10 @@ winget install BurntSushi.ripgrep.MSVC
 scoop install ripgrep
 ```
 
-```bash
-echo 'alias grep="rg"' >> ~/.zshrc
-echo 'export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"' >> ~/.zshrc
-```
-
-`$HOME/.ripgreprc`:
+Config with [`export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"`](https://github.com/sabertazimi/dotfiles/blob/main/dot_ripgreprc):
 
 ```bash
-cat << EOF >> ~/.ripgreprc
-# Add 'web' type
---type-add
-web:*.{html,css,js,jsx,ts,tsx,vue,svelte,astro}*
-
-# Search hidden files / directories (e.g. dotfiles) by default
---hidden
-
-# Using glob patterns to include/exclude files or folders
---glob
-!**/.git/*
-
-# Ignore case unless all caps
---smart-case
-EOF
-```
-
-```bash
-# Show file list with `-l`
-rg -l text
+vim $(rg text -l)
 ```
 
 ## `fzf`
@@ -308,27 +189,7 @@ winget install fzf
 scoop install fzf
 ```
 
-```bash
-echo 'eval "$(fzf --bash)"' >> ~/.bashrc
-echo "source <(fzf --zsh)" >> ~/.zshrc
-
-cat << EOF >> ~/.zshrc
-# Use fd for listing path candidates
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "\$1"
-}
-
-# Use fd for list directory candidates
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "\$1"
-}
-EOF
-
-# Respecting `.gitignore`
-echo 'export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"' >> ~/.zshrc
-```
-
-Command line fuzzy finder:
+Config with [`FZF_DEFAULT_COMMAND`](https://github.com/sabertazimi/dotfiles/blob/main/dot_zshrc):
 
 - `ctrl-r`: find commands.
 - `ctrl-t`: find files and directories.
@@ -353,10 +214,6 @@ winget install alexpasmantier.television
 ```
 
 ```bash
-echo 'eval "$(tv init zsh)"' >> ~/.zshrc
-```
-
-```bash
 tv
 tv files
 tv text
@@ -371,6 +228,8 @@ like `cargo-crates`, `gh-issues`, `pacman-packages`:
 ```bash
 tv update-channels
 ```
+
+Custom `AUR` channel [`~/.config/television/cable/aur.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/television/cable/aur.toml).
 
 ## `jq`
 
@@ -397,11 +256,6 @@ brew install fx
 scoop install fx
 ```
 
-```bash
-echo "source <(fx --comp bash)" >> ~/.bashrc
-echo "source <(fx --comp zsh)" >> ~/.zshrc
-```
-
 Terminal JSON [viewer and processor](https://fx.wtf/getting-started):
 
 ```bash
@@ -413,111 +267,6 @@ fx package.json 'x.version = x.version.replace(/\d+$/, n => +n + 1), x'
 
 # Interactive JSON viewer
 curl -i https://fx.wtf/example.json | fx
-```
-
-## `tldr`
-
-[`tldr`](https://github.com/tldr-pages/tldr):
-
-```bash
-sudo pacman -S tldr
-brew install tlrc
-scoop install tlrc
-winget install tldr-pages.tlrc
-```
-
-```bash
-echo 'alias man="tldr"' >> ~/.zshrc
-```
-
-## Dust
-
-[dust](https://github.com/bootandy/dust):
-
-```bash
-sudo pacman -S dust
-brew install dust
-scoop install dust
-winget install bootandy.dust
-```
-
-```bash
-echo 'alias du="dust"' >> ~/.zshrc
-```
-
-## `duf`
-
-[`duf`](https://github.com/muesli/duf):
-
-```bash
-sudo pacman -S duf
-brew install duf
-scoop install duf
-winget install muesli.duf
-```
-
-```bash
-echo 'alias df="duf"' >> ~/.zshrc
-```
-
-## Bottom
-
-[bottom](https://github.com/ClementTsang/bottom):
-
-```bash
-sudo pacman -S bottom
-brew install bottom
-scoop install bottom
-winget install Clement.bottom
-```
-
-```bash
-echo 'alias top="btm"' >> ~/.zshrc
-```
-
-## `procs`
-
-[`procs`](https://github.com/dalance/procs):
-
-```bash
-sudo pacman -S procs
-brew install procs
-scoop install procs
-winget install dalance.procs
-```
-
-```bash
-echo "source <(procs --gen-completion-out zsh)" >> ~/.zshrc
-echo 'alias ps="procs"' >> ~/.zshrc
-```
-
-## `gping`
-
-[`gping`](https://github.com/orf/gping):
-
-```bash
-sudo pacman -S gping
-brew install gping
-scoop install gping
-winget install orf.gping
-```
-
-```bash
-echo 'alias ping="gping"' >> ~/.zshrc
-```
-
-## `curlie`
-
-[`curlie`](https://github.com/rs/curlie):
-
-```bash
-sudo pacman -S curlie
-brew install curlie
-scoop install curlie
-```
-
-```bash
-echo 'alias curl="curlie"' >> ~/.zshrc
 ```
 
 ## `doggo`
@@ -532,53 +281,13 @@ winget install doggo
 ```
 
 ```bash
-echo 'alias dig="doggo"' >> ~/.zshrc
-```
-
-```bash
 doggo example.com
 doggo MX github.com @9.9.9.9
 doggo example.com --json | jq '.responses[0].answers[].address'
 ```
 
-## Delta
-
-[delta](https://github.com/dandavison/delta):
-
-```bash
-sudo pacman -S git-delta
-brew install git-delta
-scoop install delta
-winget install dandavison.delta
-```
-
-```bash
-echo 'alias diff="delta"' >> ~/.zshrc
-```
-
-```bash
-git config --global core.pager delta
-git config --global interactive.diffFilter 'delta --color-only'
-git config --global delta.navigate true
-git config --global delta.dark true
-git config --global delta.line-numbers true
-git config --global delta.side-by-side true
-git config --global merge.conflictStyle zdiff3
-```
-
-```bash
-git diff
-git show
-git add -p
-git log -p
-git stash show -p
-git reflog -p
-```
-
 ## Developer
 
-- [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts):
-  Microsoft `KMS` activation scripts.
 - [行书指南](https://github.com/xszn/xszn.github.io):
   高质量免费与开源软件列表.
 - [IT](https://github.com/CorentinTh/it-tools):
@@ -600,5 +309,5 @@ git reflog -p
 - Cross-platform Rust rewrite of the [GNU core utils](https://github.com/uutils/coreutils).
 - Modern alternatives to [common Linux commands](https://github.com/ibraheemdev/modern-unix).
 - Terminal [tool of the week](https://terminaltrove.com/tool-of-the-week).
-- Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).
 - `fzf` [practical guide](https://thevaluable.dev/practical-guide-fzf-example).
+- Animating ASCII art [app](https://github.com/CameronFoxly/Ascii-Motion).

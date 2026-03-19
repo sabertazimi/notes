@@ -370,16 +370,11 @@ git clone --depth=1 https://github.com/catppuccin/tmux ~/.config/tmux/plugins/ca
 
 ## Development
 
-```bash
-chsrc set node
-rustup default stable
-```
-
-## Toolchain
-
 Modern Linux [toolchain](./toolchain.md):
 
 ```bash
+chsrc set node
+rustup default stable
 tv update-channels
 ```
 

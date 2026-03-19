@@ -6,9 +6,9 @@ tags: [Programming, Vim, Neovim]
 # Neovim
 
 ```bash
+sudo pacman -S neovim
 brew install neovim
 winget install Neovim.Neovim
-sudo apt install neovim
 ```
 
 ## `LazyVim`
@@ -37,29 +37,8 @@ git clone --depth=1 https://github.com/AstroNvim/template ~/.config/nvim
 
 ## Extras Plugins
 
-`LazyVim` extras plugins (`~/.config/nvim/lazyvim.json`):
-
-```json
-{
-  "extras": [
-    "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.json",
-    "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.python",
-    "lazyvim.plugins.extras.lang.rust",
-    "lazyvim.plugins.extras.lang.tailwind",
-    "lazyvim.plugins.extras.lang.toml",
-    "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.linting.eslint"
-  ],
-  "install_version": 8,
-  "version": 8
-}
-```
-
-`LazyVim` extras plugins 位于 `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
+Config `LazyVim` extras plugins [`~/.config/nvim/lazyvim.json`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lazyvim.json),
+installed in `~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras`.
 
 ## Community Plugins
 
@@ -93,74 +72,10 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 
 ## ESLint
 
-Configuration (`~/.config/nvim/lua/plugins/lsp.lua`):
-
-```lua
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        eslint = {
-          filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-            "vue",
-            "html",
-            "markdown",
-            "json",
-            "jsonc",
-            "yaml",
-            "toml",
-            "xml",
-            "graphql",
-            "astro",
-            "svelte",
-            "css",
-            "less",
-            "scss",
-          },
-        },
-      },
-    },
-  },
-}
-```
+Config ESLint LSP server
+[`~/.config/nvim/lua/plugins/lsp.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/lsp.lua).
 
 ## Spell
-
-`zg` 添加到字典 (`~/.config/nvim/spell/en.utf-8.add` 或 `~/.vim/spell/en.utf-8.add`).
-
-Key binding to rebuild dictionary (`~/.config/nvim/lua/config/keymaps.lua`):
-
-```lua
-local wk = require("which-key")
-
-local spell_lang = "en"
-local spell_file = vim.fn.stdpath("config") .. "/spell/" .. spell_lang .. ".utf-8.add"
-
-wk.add({
-  {
-    "<leader>um",
-    function()
-      vim.cmd("mkspell! " .. spell_file)
-      vim.notify("Spell dictionary rebuilt: " .. spell_file, vim.log.levels.INFO)
-    end,
-    desc = "Rebuild Spell Dictionary",
-    icon = "󰓫 ",
-  },
-})
-```
-
-Spell options (`~/.config/nvim/lua/config/options.lua`):
-
-```lua
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-```
 
 :::tip[Grammar]
 
@@ -168,39 +83,36 @@ vim.opt.spelloptions = "camel"
 
 :::
 
+### Option
+
+Enable spell options
+[`~/.config/nvim/lua/config/options.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/config/options.lua):
+
+```lua
+vim.opt.spelllang = { "en", "cjk" }
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"
+```
+
+### Dictionary
+
+- `zg` 添加到字典 (`~/.config/nvim/spell/en.utf-8.add` 或 `~/.vim/spell/en.utf-8.add`).
+- Rebuild dictionary with `mkspell!`
+  [`~/.config/nvim/lua/config/keymaps.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua).
+
 ## Markdown
 
-关闭 render 和 conceal.
-
-`~/.config/nvim/lua/plugins/markdown.lua`:
-
-```lua
-return {
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-      enabled = false,
-    },
-  },
-}
-```
-
-`~/.config/nvim/lua/config/autocmds.lua`:
-
-```lua
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown" },
-  callback = function()
-    vim.opt_local.conceallevel = 0
-  end,
-})
-```
+关闭 render [`~/.config/nvim/lua/plugins/markdown.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/markdown.lua)
+和 conceal [`~/.config/nvim/lua/config/autocmds.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/config/autocmds.lua).
 
 ## Clipboard
 
 ```bash
 sudo pacman -S wl-clipboard
-# :checkhealth vim.provider
+```
+
+```vim
+:checkhealth vim.provider
 ```
 
 ## `flash.nvim`

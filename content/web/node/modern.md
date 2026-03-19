@@ -7,18 +7,18 @@ tags: [Web, Node.js, Deno]
 
 ## Structure
 
-- Main ./index.js, ./server.js, or ./yourEntryFile.js in the root
-- Supporting files in ./lib/
-- Static HTTP files in ./public/
-- Views or templates in ./views/
-- Command-line executables in ./bin/
-- Tests in ./test/ (or ./spec/ if you’re a Jasmine cool-aid drinker)
-- npm scripts in ./scripts/
-- Config in ./config/
-- Documentation in ./doc/
-- Examples in ./examples/
-- Performance analysis in ./benchmarks/
-- Native C/C++ source in ./source/
+- Main `./index.js`, `./server.js`, or `./yourEntryFile.js` in the root
+- Supporting files in `./lib/`
+- Static HTTP files in `./public/`
+- Views or templates in `./views/`
+- Command-line executables in `./bin/`
+- Tests in `./test/` (or `./spec/` if you’re a Jasmine cool-aid drinker)
+- npm scripts in `./scripts/`
+- Config in `./config/`
+- Documentation in `./doc/`
+- Examples in `./examples/`
+- Performance analysis in `./benchmarks/`
+- Native C/C++ source in `./source/`
 
 ## Features
 
