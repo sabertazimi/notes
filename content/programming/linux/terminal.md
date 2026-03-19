@@ -24,14 +24,19 @@ tags: [Programming, OS, Linux, Terminal, Tmux]
 
 ## Ghostty
 
-Config [`~/.config/ghostty/config`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/ghostty/config):
+### Configuration
 
-```bash
-git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-```
+Config fonts and shaders [`~/.config/ghostty/config`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/ghostty/config).
+
+### Hotkeys
 
 - `Ctrl`+`Shift`+`p`: command palette.
 - `Ctrl`+`Shift`+`,`: reload config.
+
+### Shell Integration
+
+Source Ghostty shell integration [manually](https://github.com/sabertazimi/dotfiles/blob/main/dot_zshrc)
+for tmux.
 
 ## Tmux
 
@@ -42,17 +47,11 @@ tmux a -t sessionID
 tmux show -g >> current.tmux.conf # export configuration
 ```
 
-### Configuration
+### Setup
 
-Config [`~/.config/tmux/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/tmux/tmux.conf):
-
-```bash
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone --depth=1 https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin/tmux
-```
-
-Set up `Matugen` config [`~/.config/matugen/config.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/config.toml)
-and template [`~/.config/matugen/templates/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/templates/tmux.conf).
+- Set up tmux [`~/.config/tmux/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/tmux/tmux.conf).
+- Set up `Matugen` config [`~/.config/matugen/config.toml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/config.toml)
+  and template [`~/.config/matugen/templates/tmux.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/matugen/templates/tmux.conf).
 
 ### Session
 
