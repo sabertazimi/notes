@@ -47,14 +47,6 @@ git config --global delta.line-numbers true
 git config --global delta.side-by-side true
 git config --global merge.conflictStyle zdiff3
 
-git config --global alias.s "status"
-git config --global alias.c "commit --verbose"
-git config --global alias.a "add"
-git config --global alias.rs "restore --staged"
-git config --global alias.st "stash"
-git config --global alias.pr "pull --rebase"
-git config --global alias.d '!sh -c "git diff --cached | cat"'
-
 git config --global help.autocorrect 10
 git config --global http.postBuffer 524288000
 git config --global https.postBuffer 1048576000
