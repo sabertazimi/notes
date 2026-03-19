@@ -355,19 +355,6 @@ chezmoi apply -v
 source ~/.zshrc
 ```
 
-## Ghostty
-
-```bash
-git clone --depth=1 https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-```
-
-## Tmux
-
-```bash
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone --depth=1 https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin/tmux
-```
-
 ## Development
 
 Modern Linux [toolchain](./toolchain.md):
@@ -394,10 +381,6 @@ tv update-channels
 
 ```bash
 rclone config
-```
-
-```bash
-mkdir -p ~/onedrive
 ```
 
 ```bash
