@@ -235,20 +235,14 @@ Clean up packages:
 paru -c
 ```
 
-Install, remove, and browse packages with `fzf`:
-
-```bash
-paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S
-paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns
-paru -Qq | fzf --preview 'paru -Qil {1}' | xargs -ro paru -Qi
-```
-
 Show diagnostics and statistics:
 
 ```bash
 paru -Qm
 paru -Ps
 ```
+
+Install, remove, and browse packages with [`fzf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_zshrc).
 
 ### Repository
 
