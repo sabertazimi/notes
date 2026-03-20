@@ -69,6 +69,8 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 Config ESLint LSP server
 [`~/.config/nvim/lua/plugins/lsp.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/lsp.lua):
 
+- `<Sapce>xq`: show quick fix list.
+- `]q`: jump to next quick fix.
 - `<Space>xx`: show diagnostics list.
 - `]d`: jump to next diagnostic.
 - `<C-w>d`: show diagnostics under the cursor.
@@ -131,7 +133,7 @@ sudo pacman -S wl-clipboard
 
 - `?`: help menu.
 - `<M-w>`: cycle window.
-- `<C-Q>`: send to [`QuickFix`](./toolchain.md#quick-fix) list.
+- `<C-Q>`: send to [quick fix](./toolchain.md#quick-fix) list.
 
 ## Debugging
 
