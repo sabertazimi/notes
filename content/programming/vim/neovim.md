@@ -135,6 +135,13 @@ sudo pacman -S wl-clipboard
 - `<M-w>`: cycle window.
 - `<C-Q>`: send to [quick fix](./toolchain.md#quick-fix) list.
 
+:::tip[Quick Traverse]
+
+Use `<C-Q>` to send to quick fix list,
+then use `]q` to quick traverse.
+
+:::
+
 ## Debugging
 
 - `:help` 显示文档: e.g. `:help vim.opt`.
