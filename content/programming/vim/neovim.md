@@ -64,12 +64,6 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 :LspInstall typescript
 ```
 
-:::tip[Logs]
-
-`:Inspect` 显示 highlight group, `:messages` 显示日志信息.
-
-:::
-
 ## ESLint
 
 Config ESLint LSP server
@@ -126,3 +120,9 @@ sudo pacman -S wl-clipboard
 | `F` | Find character backwards |
 | `t` | Til character forwards   |
 | `T` | Til character backwards  |
+
+## Debugging
+
+- `:help` 显示文档: e.g. `:help vim.opt`.
+- `:Inspect` (`<Space>ui`) 显示 highlight group.
+- `:messages` 显示日志信息.
