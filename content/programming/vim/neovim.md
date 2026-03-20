@@ -67,7 +67,11 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 ## ESLint
 
 Config ESLint LSP server
-[`~/.config/nvim/lua/plugins/lsp.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/lsp.lua).
+[`~/.config/nvim/lua/plugins/lsp.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/lsp.lua):
+
+- `<Space>xx`: show diagnostics list.
+- `]d`: jump to next diagnostic.
+- `<C-w>d`: show diagnostics under the cursor.
 
 ## Spell
 
