@@ -181,6 +181,8 @@ pacman -Qi <package-name>
 pacman -Ql <package-name> | grep '/usr/bin/'
 # List installed packages
 pacman -Qq | wc -l
+# List upgradable packages (`checkupdates`)
+pacman -Qu
 # List orphans packages
 pacman -Qdtq
 # Check owns package
