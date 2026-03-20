@@ -125,6 +125,14 @@ sudo pacman -S wl-clipboard
 | `t` | Til character forwards   |
 | `T` | Til character backwards  |
 
+## Telescope
+
+`<Esc>`/`<C-[` enter normal mode:
+
+- `?`: help menu.
+- `<M-w>`: cycle window.
+- `<C-Q>`: send to [`QuickFix`](./toolchain.md#quick-fix) list.
+
 ## Debugging
 
 - `:help` 显示文档: e.g. `:help vim.opt`.
