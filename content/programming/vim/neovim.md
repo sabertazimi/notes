@@ -64,7 +64,9 @@ See plugins list on [Astro Community](https://github.com/AstroNvim/astrocommunit
 :LspInstall typescript
 ```
 
-## ESLint
+- `K`: `vim.lsp.buf.hover()` show types.
+
+## Linter
 
 Config ESLint LSP server
 [`~/.config/nvim/lua/plugins/lsp.lua`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/nvim/lua/plugins/lsp.lua):
