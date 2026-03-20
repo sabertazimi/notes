@@ -157,11 +157,11 @@ sudo pacman -Rns polkit-gnome alacritty fuzzel mako waybar swaybg swayidle swayl
 ### Sync
 
 ```bash
-# Search packages
+# Search
 pacman -Ss <keyword>
-# Show information
+# Information
 pacman -Si <package-name>
-# Skip installed packages
+# Needed only
 sudo pacman -S --needed <package-list>
 ```
 
@@ -175,26 +175,25 @@ DO NOT use `pacman -Sy <package-name>`.
 ### Query
 
 ```bash
-# Show information
+# Information
 pacman -Qi <package-name>
-# List package contents
+# Contents
 pacman -Ql <package-name> | grep '/usr/bin/'
-# List installed packages
+# Installed
 pacman -Qq | wc -l
-# List upgradable packages (`checkupdates`)
+# Upgradable (`checkupdates`)
 pacman -Qu
-# List orphans packages
+# Orphans
 pacman -Qdtq
-# Check owns package
+# Owns
 pacman -Qo /usr/lib/bluetooth/bluetoothd # -> bluez
 ```
 
 ### Remove
 
 ```bash
-# Remove package
 sudo pacman -Rns <package-name>
-# Clean orphans packages
+# Clean orphans
 sudo pacman -Rns $(pacman -Qdtq)
 # Clean cache
 sudo pacman -Sc     # 清理未安装包的缓存
@@ -253,15 +252,15 @@ Install, remove, and browse packages with [`fzf`](https://github.com/sabertazimi
 - `-git` 包的**更新频率**由维护者控制, 确保代码可用后才推送 `pkgver` 更新
 
 ```bash
-# 只构建
+# Target
 paru -Syu quickshell-git
-# 不构建
+# Ignore
 paru -Syu --ignore quickshell-git
-# 拉取最新 commit 构建
+# Latest commit
 paru -Syu --devel
-# 强制重新构建
+# Force rebuild
 paru -S quickshell-git --rebuild
-# 手动构建
+# Manual
 git clone https://aur.archlinux.org/quickshell-git.git
 cd quickshell-git && makepkg -si
 ```
