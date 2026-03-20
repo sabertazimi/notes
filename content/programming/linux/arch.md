@@ -443,3 +443,4 @@ sudo systemctl enable --now libvirtd.service
 - `Shorin` Arch Linux [guide](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide).
 - [`Shorin`](https://github.com/SHORiN-KiWATA/shorin-arch-setup):
   One-click Arch Linux desktop environment configuration.
+- AUR package [action](https://manateelazycat.github.io/2026/01/12/publish-aur).
