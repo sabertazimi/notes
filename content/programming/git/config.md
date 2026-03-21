@@ -50,6 +50,9 @@ git config --global merge.conflictStyle zdiff3
 git config --global help.autocorrect 10
 git config --global http.postBuffer 524288000
 git config --global https.postBuffer 1048576000
+
+git config --global commit.gpgsign true
+git config --global gpg.program gpg
 ```
 
 ## GPG
@@ -58,21 +61,28 @@ git config --global https.postBuffer 1048576000
 
 ```bash
 gpg --full-generate-key
-gpg --list-secret-keys --keyid-format=long
+```
 
+```bash
 gh auth refresh -s write:gpg_key
+```
+
+```bash
 gpg --armor --export <pub-keyID> | gh gpg-key add --title "Arch Linux" -
+```
 
-git config --global commit.gpgsign true
-git config --global gpg.program gpg
+```bash
 git config --global user.signingkey <pub-keyID>
+```
 
+```bash
 curl https://github.com/web-flow.gpg | gpg --import
 gpg --sign-key B5690EEEBB952194
 ```
 
 ```bash
 # Export GPG private key as an ASCII armored version
+# gpg --list-secret-keys --keyid-format=long
 # gpg --armor --export-secret-key sabertazimi@gmail.com -w0
 
 # Log git signature
