@@ -151,7 +151,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
 ```
 
 ```bash
-sudo pacman -Rns polkit-gnome alacritty fuzzel mako waybar swaybg swayidle swaylock
+sudo pacman -Rns polkit-gnome lightdm lightdm-gtk-greeter alacritty fuzzel mako waybar swaybg swayidle swaylock
 ```
 
 ### Sync
@@ -348,6 +348,12 @@ chezmoi init sabertazimi
 chezmoi diff
 chezmoi apply -v
 source ~/.zshrc
+```
+
+## Zsh
+
+```bash
+chsh -s $(which zsh)
 ```
 
 ## Development
