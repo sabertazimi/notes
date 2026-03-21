@@ -209,13 +209,11 @@ paru -S --needed chsrc-bin downgrade \
   llmfit-bin models-bin \
   uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage splayer \
-  ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans
+  animeko-appimage splayer
 ```
 
 ```bash
 # paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
-# paru -S com.qq.weixin.work.deepin
 # paru -S nipaplay-reload-bin go-musicfox
 ```
 
@@ -398,6 +396,15 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 rm ~/Desktop/steam.desktop
 ```
 
+## WeChat
+
+Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -o %o %u")`
+to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable#comment-1057371):
+
+```bash
+paru -S com.qq.weixin.work.deepin --fm nvim
+```
+
 ## WPS
 
 修复[中文输入法](https://wiki.archlinuxcn.org/wiki/WPS_Office#Fcitx5_无法输入中文):
@@ -424,21 +431,23 @@ exit
 
 :::
 
-## WeChat
-
-Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -o %o %u")`
-to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable):
-
-```bash
-paru -S com.qq.weixin.work.deepin --fm nvim
-```
-
 ## Virtualization
 
 ```bash
 sudo pacman -S qemu-full virt-manager dnsmasq swtpm
 sudo usermod -aG libvirt $USER
 sudo systemctl enable --now libvirtd.service
+```
+
+## Microsoft Fonts
+
+Delete `_loopDev` related lines (`10` + `4` lines),
+add `7z e -aoa "${_isoFile}" path-with-prefix`,
+and update `7z e -aoa "path-without-prefix" \`
+to all [`PKGBUILD`](https://aur.archlinux.org/packages/ttf-ms-win11-auto#comment-1060433):
+
+```bash
+paru -S ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans --fm nvim
 ```
 
 ## References
