@@ -287,7 +287,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
 echo 'GRUB_TOP_LEVEL="/boot/vmlinuz-linux"' | sudo tee -a /etc/default/grub
 git clone --depth=1 https://github.com/vinceliuice/grub2-themes \
-  && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k && cd ..
+  && cd grub2-themes && sudo ./install.sh -b -t tela -s 2k && cd .. && rm -rf grub2-themes
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
