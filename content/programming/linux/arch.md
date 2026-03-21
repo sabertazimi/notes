@@ -421,15 +421,11 @@ bash wallpapers/third-party.sh
 exit
 ```
 
-## Themes
+## Settings
 
-:::caution[Application Theme]
-
-由于 `Theme.applyGtkColors`/`Theme.applyQtColors` 没有 `dms ipc` 接口,
-需要手动点击 `主题与配色` 底部的 `应用 GTK 配色` 与 `应用 Qt 配色`,
-**统一应用 `DMS` 图标与配色**.
-
-:::
+- 头像.
+- 配色: `应用 Qt 配色` 与 `应用 GTK 配色`.
+- 天气.
 
 ## Virtualization
 
