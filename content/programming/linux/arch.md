@@ -398,15 +398,6 @@ sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/au
 rm ~/Desktop/steam.desktop
 ```
 
-## WeChat
-
-Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -o %o %u")`
-to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable):
-
-```bash
-paru -S com.qq.weixin.work.deepin --fm nvim
-```
-
 ## WPS
 
 修复[中文输入法](https://wiki.archlinuxcn.org/wiki/WPS_Office#Fcitx5_无法输入中文):
@@ -432,6 +423,15 @@ exit
 **统一应用 `DMS` 图标与配色**.
 
 :::
+
+## WeChat
+
+Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -o %o %u")`
+to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable):
+
+```bash
+paru -S com.qq.weixin.work.deepin --fm nvim
+```
 
 ## Virtualization
 
