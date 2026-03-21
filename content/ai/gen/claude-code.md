@@ -7,15 +7,9 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 ## Setup
 
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
+1. Set up [`cli-proxy-api`](#proxy).
 
-```bash
-sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
-```
-
-Sync configuration with `cc-switch`:
+2. Sync configuration with `cc-switch`:
 
 ```bash
 cat << EOF > ~/.claude/settings.json
@@ -37,6 +31,14 @@ cat << EOF > ~/.claude/settings.json
 }
 EOF
 ```
+
+3. Set up `.claude.json`:
+
+```bash
+sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
+```
+
+4. Set up harness:
 
 ```bash
 /plugin install ralph-loop
@@ -296,22 +298,17 @@ it will extend Claude Code through the plugin system with:
 
 ## Proxy
 
+1. Set up `cli-proxy-api`:
+
 ```bash
-paru -S cli-proxy-api-bin
 mkdir -p ~/.cli-proxy-api
 cp /usr/share/doc/cli-proxy-api-bin/config.example.yaml ~/.cli-proxy-api/config.yaml
-systemctl --user enable --now cli-proxy-api
 ```
-
-[Web UI](https://help.router-for.me/cn/hands-on/tutorial-6.html):
 
 ```yaml
 port: 8317
 
 remote-management:
-  allow-remote: false
-  disable-control-panel: false
-  # 登录 Web UI
   secret-key: MGT-123456
 
 api-keys:
@@ -320,47 +317,12 @@ api-keys:
 usage-statistics-enabled: true
 ```
 
-[Codex](https://help.router-for.me/cn/agent-client/codex.html):
+2. Set up providers with [Web UI](https://help.router-for.me/cn/hands-on/tutorial-6.html).
 
-```toml
-model_provider = "cliproxyapi"
-model = "gpt-5.3-codex"
-model_reasoning_effort = "high"
+3. Set up service:
 
-[model_providers.cliproxyapi]
-name = "cliproxyapi"
-base_url = "http://127.0.0.1:8317/v1"
-wire_api = "responses"
-```
-
-```json
-{
-  "OPENAI_API_KEY": "sk-dummy"
-}
-```
-
-[`OpenCode`](https://opencode.ai/docs/zh-cn/providers):
-
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "openai": {
-      "options": {
-        "baseURL": "http://127.0.0.1:8317/v1"
-      }
-    }
-  }
-}
-```
-
-```json
-{
-  "openai": {
-    "type": "api",
-    "key": "sk-dummy"
-  }
-}
+```bash
+systemctl --user enable --now cli-proxy-api
 ```
 
 ## Best Practices
