@@ -122,7 +122,6 @@ dms doctor
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   pacman-contrib pkgstats man-db man-pages man-pages-zh_cn \
-  qemu-full virt-manager dnsmasq swtpm \
   noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
@@ -437,6 +436,7 @@ exit
 ## Virtualization
 
 ```bash
+sudo pacman -S qemu-full virt-manager dnsmasq swtpm
 sudo usermod -aG libvirt $USER
 sudo systemctl enable --now libvirtd.service
 ```
