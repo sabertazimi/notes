@@ -56,26 +56,26 @@ useradd [options] LOGIN
 
 Options:
 
-- -b, --base-dir BASE_DIR 设置基本路径作为用户的登录目录
-- -c, --comment COMMENT 对用户的注释
-- -d, --home-dir HOME_DIR 设置用户的登录目录
-- -D, --defaults 改变设置
-- -e, --expiredate EXPIRE_DATE 设置用户的有效期
-- -f, --inactive INACTIVE 用户过期后，让密码无效
-- -g, --gid GROUP 使用户只属于某个组
-- -G, --groups GROUPS 使用户加入某个组(附设组)
-- -h, --help 帮助
-- -k, --skel SKEL_DIR 指定其他的 skel 目录
-- -K, --key KEY=VALUE 覆盖 /etc/login.defs 配置文件
-- -m, --create-home 自动创建登录目录
-- -l, 不把用户加入到 lastlog 文件中
-- -M, 不自动创建登录目录
-- -r, 建立系统账号
-- -o, --non-unique 允许用户拥有相同的 UID
-- -p, --password PASSWORD 为新用户使用加密密码
-- -s, --shell SHELL 登录时候的 shell
-- -u, --uid UID 为新用户指定一个 UID
-- -Z, --selinux-user SEUSER use a specific SEUSER for the SELinux user mapping
+- `-b`, `--base-dir BASE_DIR` 设置基本路径作为用户的登录目录
+- `-c`, `--comment COMMENT` 对用户的注释
+- `-d`, `--home-dir HOME_DIR` 设置用户的登录目录
+- `-D`, `--defaults` 改变设置
+- `-e`, `--expiredate` EXPIRE_DATE 设置用户的有效期
+- `-f`, `--inactive` INACTIVE 用户过期后，让密码无效
+- `-g`, `--gid GROUP` 使用户只属于某个组
+- `-G`, `--groups GROUPS` 使用户加入某个组(附设组)
+- `-h`, `--help` 帮助
+- `-k`, `--skel SKEL_DIR` 指定其他的 `skel` 目录
+- `-K`, `--key KEY=VALUE` 覆盖 `/etc/login.defs` 配置文件
+- `-m`, `--create-home` 自动创建登录目录
+- `-l`, 不把用户加入到 `lastlog` 文件中
+- `-M`, 不自动创建登录目录
+- `-r`, 建立系统账号
+- `-o`, `--non-unique` 允许用户拥有相同的 `UID`
+- `-p`, `--password PASSWORD` 为新用户使用加密密码
+- `-s`, `--shell SHELL` 登录时候的 shell
+- `-u`, `--uid UID` 为新用户指定一个 `UID`
+- `-Z`, `--selinux-user SEUSER` use a specific `SEUSER` for the `SELinux` user mapping
 
 ```bash
 useradd -s bash -m testUser
@@ -84,19 +84,18 @@ passwd testUser # modify `/etc/passwd`, then add to `/etc/sudoers`
 useradd -s /sbin/nologin username
 ```
 
-`adduser` is a perl script which uses `useradd` binary in back-end,
-`adduser` is more user friendly and interactive.
-
 ### 修改用户
 
-usermod -d /home/test -G test2 test
+```bash
+usermod -d /home/username -G groupname username
+usermod -l <新用户名> <旧用户名>
+usermod -g <新用户组> <目标用户>
+```
 
-- -l 新用户名 旧用户名 修改用户名
-- -g 新用户组 目标用户 改变用户所属组
-
-gpasswd -a test test2 将用户 test 加入到 test2 组(附设组)
-
-gpasswd -d test test2 将用户 test 从 test2 组中移出
+```bash
+gpasswd -a username groupname
+gpasswd -d username groupname
+```
 
 ```bash
 usermod -aG sudo <username>
@@ -104,21 +103,22 @@ usermod -aG sudo <username>
 
 ### 删除用户
 
-userdel test -r 同时删除用户登录目录(/home/xxx)
+```bash
+# 同时删除用户登录目录(/home/xxx)
+userdel username -r
+```
 
 ### 查看用户
 
-w/who 查看当前登录的所有用户
-
-whoami 查看当前登录用户名
-
-finger apacheUser 查看单个用户信息
+- `w/who` 查看当前登录的所有用户
+- `whoami` 查看当前登录用户名
+- `finger apacheUser` 查看单个用户信息
 
 ### 限制用户
 
-- passwd -l 用户名 锁定用户
-- passwd -u 用户名 解锁用户
-- passwd -d 用户名 清除用户密码
+- `passwd -l` 用户名 锁定用户
+- `passwd -u` 用户名 解锁用户
+- `passwd -d` 用户名 清除用户密码
 
 ### 登录失败锁定
 
