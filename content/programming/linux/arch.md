@@ -131,7 +131,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   zoxide bat eza fd ripgrep fzf television jq fx tldr \
   dust duf bottom procs gping curlie doggo git-delta lazygit \
   nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
-  shellcheck chezmoi starship github-cli openai-codex opencode \
+  shellcheck chezmoi starship github-cli openai-codex gemini-cli opencode \
   fastfetch cmatrix lolcat s-tui nvtop tmux \
   net-tools rsync rclone speedtest-cli \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
