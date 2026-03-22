@@ -352,6 +352,7 @@ source ~/.zshrc
 
 ```bash
 chsh -s $(which zsh)
+exec zsh -l
 ```
 
 ## Development
