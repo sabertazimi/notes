@@ -52,6 +52,20 @@ pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code c
 pnpm dlx skills add sabertazimi/skills -s '*' -a claude-code codex opencode -g -y
 ```
 
+5. Set up HUD:
+
+```bash
+/plugin marketplace add jarrodwatts/claude-hud
+```
+
+```bash
+/plugin install claude-hud
+```
+
+```bash
+/claude-hud:setup
+```
+
 :::tip
 
 Remove `~/.claude/projects/` for bug releases.
