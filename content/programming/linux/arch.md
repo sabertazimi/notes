@@ -22,14 +22,15 @@ archinstall
 ```
 
 1. Mirrors: China + multilib.
-2. Disk: `1GB` `fat32` `/boot`, `16GB` `linux-swap`, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`.
-3. Bootloader: GRUB.
-4. Kernel: `linux`.
-5. Authentication: Root and user.
-6. Profile: Niri.
-7. Applications: Bluetooth, audio, print, power.
-8. Network: Network Manager.
-9. Timezone: Asia/Shanghai.
+2. Disk: `1GB` `fat32` `/boot`, `16GB` `linux-swap`, `compress=zstd` `btrfs` with `@` sub-volume mount `/` and `@home` sub-volume mount `/home`, enable `snapper`.
+3. Swap: disable `zram`.
+4. Bootloader: GRUB.
+5. Hostname: `station`.
+6. Authentication: Root and user.
+7. Profile: Niri.
+8. Applications: Bluetooth, audio, print, power.
+9. Network: Network Manager (`iwd`).
+10. Timezone: Asia/Shanghai.
 
 :::tip[TTY Guide]
 
