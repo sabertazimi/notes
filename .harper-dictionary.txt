@@ -3,6 +3,7 @@ astro
 aur
 bootloader
 claude
+docusaurus
 flatpak
 ghostty
 harper
@@ -14,8 +15,10 @@ nvim
 omni
 onedrive
 pacman
+pnpm
 polkit
 quickshell
+shadcn
 tty
 wps
 xdg
