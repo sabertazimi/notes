@@ -9,28 +9,7 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 1. Set up [`cli-proxy-api`](#proxy).
 
-2. Sync configuration with `cc-switch`:
-
-```bash
-cat << EOF > ~/.claude/settings.json
-{
-  "autoUpdatesChannel": "stable",
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "<YOUR_API_KEY>",
-    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5",
-    "ANTHROPIC_MODEL": "glm-5",
-    "ANTHROPIC_REASONING_MODEL": "glm-5",
-    "API_TIMEOUT_MS": "3000000",
-    "DISABLE_TELEMETRY": "1",
-    "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_BUG_COMMAND": "1"
-  }
-}
-EOF
-```
+2. Sync configuration with `cc-switch`.
 
 3. Set up `.claude.json`:
 
@@ -45,25 +24,15 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 ```
 
 ```bash
+/plugin install claude-hud
+```
+
+```bash
 pnpm dlx skills add obra/superpowers -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/agent-skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add sabertazimi/skills -s '*' -a claude-code codex opencode -g -y
-```
-
-5. Set up HUD:
-
-```bash
-/plugin marketplace add jarrodwatts/claude-hud
-```
-
-```bash
-/plugin install claude-hud
-```
-
-```bash
-/claude-hud:setup
 ```
 
 :::tip
