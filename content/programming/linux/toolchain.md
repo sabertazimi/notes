@@ -243,6 +243,9 @@ winget install jqlang.jq
 ```
 
 ```bash
+curl -s https://fx.wtf/example.json | jq '.users[] | {name, email}'
+
+# Set up package version for GitHub action workflow
 echo "version=$(jq -r '.devDependencies["@playwright/test"]' package.json | sed 's/^[^0-9]*//')"
 ```
 
@@ -266,7 +269,7 @@ echo '{"name": "world"}' | fx 'x => x.name' 'x => `Hello, ${x}!`'
 fx package.json 'x.version = x.version.replace(/\d+$/, n => +n + 1), x'
 
 # Interactive JSON viewer
-curl -i https://fx.wtf/example.json | fx
+curl -s https://fx.wtf/example.json | fx
 ```
 
 ## `doggo`
