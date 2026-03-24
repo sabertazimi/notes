@@ -849,14 +849,14 @@ fi
 
 - `<C-A>`: begin of line.
 - `<C-E>`: end of line.
-- `<C-W>`: kill backward word.
+- `<C-W>`: kill word.
 - `<C-U>`: kill line.
 - `<C-P>`: up history.
 - `<C-N>`: down history.
 - `<C-R>`: search history.
 - `<C-T>`: search file.
 - `<C-O>`: autosuggestion accept.
-- `<C-XE>`: edit command line.
+- `<C-XE>`/`vv`: edit command line.
 
 ```bash
 bindkey | bat
