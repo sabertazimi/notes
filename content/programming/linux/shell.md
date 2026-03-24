@@ -845,6 +845,23 @@ fi
 
 :::
 
+### Key Bindings
+
+- `<C-A>`: begin of line.
+- `<C-E>`: end of line.
+- `<C-W>`: kill backward word.
+- `<C-U>`: kill line.
+- `<C-P>`: up history.
+- `<C-N>`: down history.
+- `<C-R>`: search history.
+- `<C-T>`: search file.
+- `<C-O>`: autosuggestion accept.
+- `<C-XE>`: edit command line.
+
+```bash
+bindkey | bat
+```
+
 ## Best Practices
 
 - [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
