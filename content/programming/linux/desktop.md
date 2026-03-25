@@ -219,6 +219,12 @@ sudo pacman -S packagekit-qt6 packagekit appstream-qt appstream # Discover 依�
 sudo pacman -S gwenview # 图片查看器
 ```
 
+## Flatpak
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org
+```
+
 ## Applications
 
 Desktop shortcut located in `/usr/share/applications`.
@@ -251,21 +257,9 @@ pkgstats show breeze-icons $(pacman -Ss icon-theme | awk 'NR%2==1' | awk -F '[/ 
 
 ## Music Player
 
-`SPlayer`:
-
-```bash
-echo 'alias ncm="/opt/SPlayer/SPlayer"' >> ~/.zshrc
-```
-
-`MusicFox`:
-
-```bash
-sed -i '/\[startup\]/,/loadingSeconds = 2/s/loadingSeconds = 2/loadingSeconds = 1/' ~/.config/go-musicfox/config.toml
-sed -i '/\[main.notification\]/,/enable = true/s/enable = true/enable = false/' ~/.config/go-musicfox/config.toml
-sed -i '/\[player\]/,/songLevel = "higher"/s/songLevel = "higher"/songLevel = "jymaster"/' ~/.config/go-musicfox/config.toml
-sed -i '/\[autoplay\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
-sed -i '/\[unm\]/,/enable = false/s/enable = false/enable = true/' ~/.config/go-musicfox/config.toml
-```
+- [`SPlayer`](https://github.com/imsyy/SPlayer)
+- [`MoeKoe`](https://github.com/MoeKoeMusic/MoeKoeMusic)
+- [`Musicfox`](https://github.com/go-musicfox/go-musicfox)
 
 ## Library
 

@@ -192,10 +192,11 @@ pacman -Qo /usr/lib/bluetooth/bluetoothd # -> bluez
 ### Remove
 
 ```bash
+# Package
 sudo pacman -Rns <package-name>
-# Clean orphans
+# Orphans
 sudo pacman -Rns $(pacman -Qdtq)
-# Clean cache
+# Cache
 sudo pacman -Sc     # 清理未安装包的缓存
 sudo pacman -Scc    # 清理全部缓存
 sudo paccache -ruk0 # 清理未安装包的缓存
@@ -211,11 +212,6 @@ paru -S --needed chsrc-bin downgrade \
   uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   animeko-appimage splayer
-```
-
-```bash
-# paru -S google-chrome zen-browser-bin zen-browser-i18n-zh-cn
-# paru -S nipaplay-reload-bin go-musicfox
 ```
 
 ### Helpers
@@ -270,16 +266,6 @@ paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
 
 :::
 
-## Flatpak
-
-```bash
-flatpak remote-add --if-not-exists flathub https://flathub.org
-```
-
-```bash
-# flatpak install flathub com.jianguoyun.Nutstore
-```
-
 ## GRUB
 
 ```bash
@@ -312,11 +298,6 @@ sudo snapper -c home create -d "Initial home snapshot"
 ```bash
 sudo systemctl enable --now snapper-cleanup.timer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-```bash
-# sudo snapper -c <config-name> list
-# sudo snapper -c <config-name> delete <number-id>
 ```
 
 ## Keyring
@@ -367,26 +348,20 @@ tv update-channels
 
 ## Git
 
-**Copy complete commands** from git config [guide](../git/config.md#setup).
+**Complete setup** in git config [guide](../git/config.md#setup).
 
 ## GitHub
 
-**Copy complete commands** from GPG config [guide](../git/config.md#gpg).
+**Complete setup** in GPG config [guide](../git/config.md#gpg).
 
 ## Claude Code
 
-**Copy complete commands** from Claude Code [guide](../../ai/gen/claude-code.md#setup).
+**Complete setup** in Claude Code [guide](../../ai/gen/claude-code.md#setup).
 
 ## OneDrive
 
 ```bash
 rclone config
-```
-
-```bash
-# rclone mount onedrive:/ /home/sabertaz/onedrive --vfs-cache-mode full --daemon
-# rclone ls onedrive:/
-# rclone rcd --rc-web-gui
 ```
 
 ## Steam
