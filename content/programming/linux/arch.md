@@ -211,7 +211,7 @@ paru -S --needed chsrc-bin downgrade \
   llmfit-bin models-bin \
   uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage splayer
+  animeko-appimage splayer go-musicfox-bin
 ```
 
 ### Helpers
