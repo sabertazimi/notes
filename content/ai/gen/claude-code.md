@@ -41,6 +41,13 @@ Remove `~/.claude/projects/` for bug releases.
 
 :::
 
+## Keyboard Shortcuts
+
+[Cheat sheet](https://cc.storyfox.cz):
+
+- `<C-R>`: search history.
+- `<C-G>`: open prompt in editor.
+
 ## Memory
 
 Captures everything Claude does during your coding sessions, compresses it with Claude `agent-sdk`,
