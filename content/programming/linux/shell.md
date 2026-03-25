@@ -856,7 +856,7 @@ fi
 - `<C-R>`: search history.
 - `<C-T>`: search file.
 - `<C-O>`: autosuggestion accept.
-- `<C-XE>`/`vv`: edit command line.
+- `<C-G>`/`<C-XE>`/`vv`: edit command line.
 
 ```bash
 bindkey | bat
