@@ -1832,8 +1832,6 @@ import LibraryGallery from '@site/src/components/library-gallery'
   CLI frontend to `curl` written in golang with `HTTPie` interface.
 - [Postman](https://github.com/postmanlabs/newman):
   Platform for building and using APIs.
-- [APIFox](https://github.com/apifox/apifox):
-  API design, development, and testing collaboration platform.
 - [Whistle](https://github.com/avwo/whistle):
   HTTP, HTTP2, HTTPS, Websocket debugging proxy.
 
