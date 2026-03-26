@@ -72,8 +72,7 @@ sudo pacman -Sy archlinuxcn-keyring
 ```bash
 sudo pacman -S --needed base-devel btrfs-progs os-prober \
   linux-headers linux-lts linux-lts-headers \
-  unzip wget git zsh less vim neovim paru \
-  clash-verge-rev
+  git neovim paru clash-verge-rev
 ```
 
 ```bash
@@ -123,7 +122,7 @@ dms doctor
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   pacman-contrib pkgstats \
-  man-db man-pages man-pages-zh_cn tldr \
+  man-db man-pages man-pages-zh_cn tldr less \
   noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
@@ -131,8 +130,8 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
   dust duf bottom procs fastfetch s-tui nvtop \
-  gping curlie doggo net-tools speedtest-cli rsync rclone \
-  git-delta lazygit tmux starship chezmoi cmatrix lolcat \
+  gping curlie wget doggo net-tools speedtest-cli rsync rclone \
+  git-delta lazygit tmux zsh starship chezmoi cmatrix lolcat \
   nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise \
   tree-sitter-cli shellcheck github-cli openai-codex gemini-cli opencode \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
@@ -145,7 +144,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   poppler poppler-glib python-pylatexenc \
   chafa imv loupe imagemagick kimageformats resvg \
   mpv ffmpeg yt-dlp cava \
-  7zip khal \
+  7zip unzip khal \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
   papirus-icon-theme archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   firefox firefox-i18n-zh-cn flatpak steam
