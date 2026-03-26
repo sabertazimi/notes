@@ -142,7 +142,6 @@ Use [MCPorter](https://github.com/steipete/mcporter) to wrap MCP servers into CL
 ### API
 
 - [Context7](https://github.com/upstash/context7).
-- [APIFox](https://github.com/apifox/apifox-mcp-server).
 
 ### Browser
 
