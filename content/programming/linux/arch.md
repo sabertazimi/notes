@@ -122,29 +122,30 @@ dms doctor
 
 ```bash
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
-  pacman-contrib pkgstats man-db man-pages man-pages-zh_cn \
+  pacman-contrib pkgstats \
+  man-db man-pages man-pages-zh_cn tldr \
   noto-fonts noto-fonts-cjk noto-fonts-emoji \
   ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
-  zoxide bat eza fd ripgrep fzf television jq fx tldr \
-  dust duf bottom procs gping curlie doggo git-delta lazygit \
-  nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise tree-sitter-cli \
-  shellcheck chezmoi starship github-cli openai-codex gemini-cli opencode \
-  fastfetch cmatrix lolcat s-tui nvtop tmux \
-  net-tools rsync rclone speedtest-cli \
+  zoxide bat eza fd ripgrep fzf television jq fx \
+  dust duf bottom procs fastfetch s-tui nvtop \
+  gping curlie doggo net-tools speedtest-cli rsync rclone \
+  git-delta lazygit tmux starship chezmoi cmatrix lolcat \
+  nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise \
+  tree-sitter-cli shellcheck github-cli openai-codex gemini-cli opencode \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
   fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
-  xdg-desktop-portal xdg-desktop-portal-gnome \
+  xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
   mission-center gnome-disk-utility baobab gdu \
-  gnome-keyring libsecret \
-  nautilus-python sushi tumbler gvfs-smb file-roller \
-  poppler-glib ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
+  nautilus-python sushi tumbler gvfs-smb file-roller trash-cli yazi \
+  ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   grim slurp satty wl-clipboard \
-  chafa imv loupe imagemagick kimageformats resvg poppler \
+  poppler poppler-glib python-pylatexenc \
+  chafa imv loupe imagemagick kimageformats resvg \
   mpv ffmpeg yt-dlp cava \
-  7zip trash-cli yazi khal \
+  7zip khal \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
   papirus-icon-theme archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   firefox firefox-i18n-zh-cn flatpak steam
