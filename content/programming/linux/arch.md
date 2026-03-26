@@ -130,7 +130,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
   dust duf bottom procs fastfetch s-tui nvtop \
-  gping curlie wget doggo net-tools speedtest-cli rsync rclone \
+  gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi cmatrix lolcat \
   nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise \
   tree-sitter-cli shellcheck github-cli openai-codex gemini-cli opencode \
