@@ -106,13 +106,12 @@ dms greeter enable
 dms greeter sync
 ```
 
-:::tip[Quickshell]
+:::tip[Qt]
 
-Advanced `DMS` features (e.g. built-in Polkit GUI) need `quickshell-git`:
+After Qt updates, rebuild AUR packages:
 
 ```bash
-paru -S quickshell-git
-dms doctor
+paru -S --rebuild qt6ct-kde
 ```
 
 :::
@@ -254,7 +253,7 @@ paru -Syu --ignore quickshell-git
 # Latest commit
 paru -Syu --devel
 # Force rebuild
-paru -S quickshell-git --rebuild
+paru -S --rebuild quickshell-git
 # Manual
 git clone https://aur.archlinux.org/quickshell-git.git
 cd quickshell-git && makepkg -si
@@ -380,7 +379,7 @@ Add `DLAGENTS=("https::/usr/bin/curl -A 'apt' -fLC - --retry 3 --retry-delay 3 -
 to [`deepin-wine8-stable.PKGBUILD`](https://aur.archlinux.org/packages/deepin-wine8-stable#comment-1057371):
 
 ```bash
-paru -S com.qq.weixin.work.deepin --fm nvim
+paru -S --fm nvim com.qq.weixin.work.deepin
 ```
 
 ## WPS
@@ -421,7 +420,7 @@ and update `7z e -aoa "path-without-prefix" \`
 to all [`PKGBUILD`](https://aur.archlinux.org/packages/ttf-ms-win11-auto#comment-1060433):
 
 ```bash
-paru -S ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans --fm nvim
+paru -S --fm nvim ttf-ms-win11-auto ttf-ms-win11-auto-zh_cn ttf-ms-win11-fod-auto-hans
 ```
 
 ## References
