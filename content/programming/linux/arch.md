@@ -132,7 +132,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi cmatrix lolcat \
   nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise \
-  tree-sitter-cli shellcheck github-cli openai-codex gemini-cli opencode \
+  tree-sitter-cli github-cli openai-codex gemini-cli opencode \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
   fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
