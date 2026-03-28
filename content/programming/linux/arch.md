@@ -98,7 +98,7 @@ curl -fsSL https://install.danklinux.com | sh
 ```
 
 ```bash
-paru -S greetd-dms-greeter-git dsearch-bin qt6ct-kde
+paru -S greetd-dms-greeter-git qt6ct-kde
 ```
 
 ```bash
@@ -143,7 +143,7 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   poppler poppler-glib python-pylatexenc \
   chafa imv loupe imagemagick kimageformats resvg \
   mpv ffmpeg yt-dlp cava \
-  7zip unzip khal \
+  7zip unzip \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
   papirus-icon-theme archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
   firefox firefox-i18n-zh-cn flatpak steam
