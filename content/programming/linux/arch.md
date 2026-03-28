@@ -122,31 +122,27 @@ paru -S --rebuild qt6ct-kde
 sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
   pacman-contrib pkgstats \
   man-db man-pages man-pages-zh_cn tldr less \
-  noto-fonts noto-fonts-cjk noto-fonts-emoji \
-  ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd ttf-firacode-nerd \
+  noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
-  dust duf bottom procs fastfetch s-tui nvtop \
+  dust duf gdu bottom procs fastfetch s-tui nvtop \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi cmatrix lolcat \
-  nodejs npm pnpm bun python uv rustup go jdk8-openjdk luarocks mise \
+  nodejs npm pnpm bun python uv rustup go luarocks mise \
   tree-sitter-cli github-cli openai-codex gemini-cli opencode \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
   fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
-  mission-center gnome-disk-utility baobab gdu \
-  nautilus-python sushi tumbler gvfs-smb file-roller trash-cli yazi \
+  nautilus-python gvfs-smb file-roller trash-cli yazi 7zip unzip \
   ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
   grim slurp satty wl-clipboard \
   poppler poppler-glib python-pylatexenc \
   chafa imv loupe imagemagick kimageformats resvg \
   mpv ffmpeg yt-dlp cava \
-  7zip unzip \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
-  papirus-icon-theme archlinux-wallpaper gnome-backgrounds plasma-workspace-wallpapers \
-  firefox firefox-i18n-zh-cn flatpak steam
+  papirus-icon-theme firefox firefox-i18n-zh-cn flatpak steam
 ```
 
 ```bash
