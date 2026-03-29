@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["56561"],{42592(e){e.exports=JSON.parse('{"tag":{"label":"Shell","permalink":"/notes/tags/shell","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/shell","title":"Shell Scripts","description":"Warnings","permalink":"/notes/programming/linux/shell"}],"unlisted":false}}')}}]);

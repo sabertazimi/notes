@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["76113"],{84143(e){e.exports=JSON.parse('{"tag":{"label":"Float","permalink":"/notes/tags/float","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/float","title":"Float","description":"Element","permalink":"/notes/web/css/float"}],"unlisted":false}}')}}]);

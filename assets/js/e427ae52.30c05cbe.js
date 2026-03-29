@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["44591"],{23888(e){e.exports=JSON.parse('{"tag":{"label":"Linter","permalink":"/notes/tags/linter","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/lint","title":"Linters","description":"ESLint","permalink":"/notes/web/devops/lint"}],"unlisted":false}}')}}]);

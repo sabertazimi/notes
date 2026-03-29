@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["49358"],{30065(e){e.exports=JSON.parse('{"tag":{"label":"Mapped","permalink":"/notes/tags/mapped","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/mapped","title":"Mapped","description":"Union","permalink":"/notes/web/typescript/mapped"}],"unlisted":false}}')}}]);

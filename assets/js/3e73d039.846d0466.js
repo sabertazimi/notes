@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["250"],{21418(e){e.exports=JSON.parse('{"tag":{"label":"Profile","permalink":"/notes/tags/profile","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/profile","title":"Profile","description":"dmesg","permalink":"/notes/programming/linux/profile"}],"unlisted":false}}')}}]);

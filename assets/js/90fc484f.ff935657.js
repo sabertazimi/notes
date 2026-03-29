@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["41704"],{13243(s){s.exports=JSON.parse('{"tag":{"label":"Compositor","permalink":"/notes/tags/compositor","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/desktop","title":"Desktop","description":"Dotfiles","permalink":"/notes/programming/linux/desktop"}],"unlisted":false}}')}}]);

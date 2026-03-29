@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["19812"],{64316(e){e.exports=JSON.parse('{"tag":{"label":"Cache","permalink":"/notes/tags/cache","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/performance/cache","title":"Cache","description":"Browser caches","permalink":"/notes/web/performance/cache"}],"unlisted":false}}')}}]);

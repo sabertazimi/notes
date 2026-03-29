@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["23578"],{18443(e){e.exports=JSON.parse('{"tag":{"label":"LaTex","permalink":"/notes/tags/la-tex","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/latex/latex","title":"LaTeX","description":"Installation","permalink":"/notes/cs/latex/"}],"unlisted":false}}')}}]);
