@@ -119,9 +119,8 @@ paru -S --rebuild qt6ct-kde
 ## Pacman
 
 ```bash
-sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tools \
-  pacman-contrib pkgstats \
-  man-db man-pages man-pages-zh_cn tldr less \
+sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
+  pacman-contrib man-db man-pages man-pages-zh_cn tldr less \
   noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
@@ -129,20 +128,20 @@ sudo pacman -S --needed snapper snap-pac btrfs-assistant grub-btrfs inotify-tool
   zoxide bat eza fd ripgrep fzf television jq fx \
   dust duf gdu bottom procs fastfetch s-tui nvtop \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
-  git-delta lazygit tmux zsh starship chezmoi cmatrix lolcat \
+  git-delta lazygit tmux zsh starship chezmoi \
   nodejs npm pnpm bun python uv rustup go luarocks mise \
   tree-sitter-cli github-cli openai-codex gemini-cli opencode \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
   fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
-  nautilus-python gvfs-smb file-roller trash-cli yazi 7zip unzip \
-  ffmpegthumbnailer gst-libav gst-plugins-base gst-plugins-good \
+  nautilus-python file-roller gvfs-smb ffmpegthumbnailer \
+  yazi 7zip unzip trash-cli \
   grim slurp satty wl-clipboard \
   poppler poppler-glib python-pylatexenc \
-  chafa imv loupe imagemagick kimageformats resvg \
-  mpv ffmpeg yt-dlp cava \
+  imagemagick imv chafa kimageformats resvg \
+  ffmpeg mpv cava yt-dlp \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
-  papirus-icon-theme firefox firefox-i18n-zh-cn flatpak steam
+  papirus-icon-theme firefox firefox-i18n-zh-cn steam
 ```
 
 ```bash
@@ -201,12 +200,12 @@ sudo paccache -rk0  # 清理全部缓存
 ## AUR
 
 ```bash
-paru -S --needed chsrc-bin downgrade \
-  visual-studio-code-bin claude-code cc-switch-bin cli-proxy-api-bin \
-  llmfit-bin models-bin \
-  linuxqq wechat uudeck \
+paru -S --needed chsrc-bin \
+  visual-studio-code-bin claude-code \
+  cc-switch-bin cli-proxy-api-bin models-bin \
+  linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  animeko-appimage splayer go-musicfox-bin \
+  go-musicfox-bin uudeck \
   libtexprintf
 ```
 

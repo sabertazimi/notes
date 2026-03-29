@@ -236,7 +236,7 @@ Set [default MIME apps](https://specifications.freedesktop.org/mime-apps/latest/
 
 ```bash
 xdg-mime default nvim.desktop application/javascript
-xdg-mime default org.gnome.Loupe.desktop image/png
+xdg-mime default imv.desktop image/png
 xdg-mime default mpv.desktop video/mp4
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 xdg-mime default wine.desktop application/vnd.microsoft.portable-executable
