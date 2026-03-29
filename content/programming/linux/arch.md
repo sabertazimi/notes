@@ -265,6 +265,7 @@ paru 在 `/etc/paru.conf` 默认开启 `--devel` 选项:
 ## GRUB
 
 ```bash
+sudo sed -i "/GRUB_CMDLINE_LINUX=/s/\"$/ panic=10\"/" /etc/default/grub
 sudo sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
 echo 'GRUB_TOP_LEVEL="/boot/vmlinuz-linux"' | sudo tee -a /etc/default/grub
 git clone --depth=1 https://github.com/vinceliuice/grub2-themes \
