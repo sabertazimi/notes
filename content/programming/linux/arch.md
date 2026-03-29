@@ -126,7 +126,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
-  dust duf gdu bottom procs fastfetch s-tui nvtop \
+  duf dust gdu bottom procs fastfetch s-tui nvtop \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi \
   nodejs npm pnpm bun python uv rustup go luarocks mise \
