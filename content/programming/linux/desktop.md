@@ -257,9 +257,14 @@ pkgstats show breeze-icons $(pacman -Ss icon-theme | awk 'NR%2==1' | awk -F '[/ 
 
 ## Music Player
 
+- [`Musicfox`](https://github.com/go-musicfox/go-musicfox)
 - [`SPlayer`](https://github.com/imsyy/SPlayer)
 - [`MoeKoe`](https://github.com/MoeKoeMusic/MoeKoeMusic)
-- [`Musicfox`](https://github.com/go-musicfox/go-musicfox)
+
+## Video Player
+
+- [`Kazumi`](https://github.com/Predidit/Kazumi)
+- [`Animeko`](https://github.com/open-ani/animeko)
 
 ## Library
 
