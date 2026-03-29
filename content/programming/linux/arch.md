@@ -322,7 +322,6 @@ cat ~/.config/user-dirs.dirs
 chezmoi init sabertazimi
 chezmoi diff
 chezmoi apply -v
-source ~/.zshrc
 ```
 
 ## Zsh
