@@ -5,7 +5,7 @@ tags: [AI, Generative AI, LLM, Agent, Workflow, Vibe Coding, Agentic Coding]
 
 # Workflow
 
-## AGENTS.md
+## `AGENTS.md`
 
 项目配置文件应回答[三个问题](https://mp.weixin.qq.com/s/a5UDlkD6Db2kKCAj7LN6gQ):
 
@@ -152,6 +152,13 @@ Cursor [debug mode](https://cursor.com/blog/agent-best-practices#bug-debug-mode)
 - 从代码审查中提取模式.
 - 建立可复用的工作流程: slash commands, hooks, guardrails, and skills.
 - Linter rules, regression tests, `AGENTS.md` improvements, checklist updates.
+
+## Long Running
+
+[Three-agent architecture](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+harness design (`Planner` + `Generator` + `Evaluator`)
+produce rich full-stack applications
+over multi-hour autonomous coding sessions.
 
 ## Actions
 
