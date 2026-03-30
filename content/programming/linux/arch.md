@@ -200,7 +200,7 @@ sudo paccache -rk0  # 清理全部缓存
 ## AUR
 
 ```bash
-paru -S --needed chsrc-bin \
+paru -S --needed chsrc-bin shellcheck-bin \
   visual-studio-code-bin claude-code \
   cc-switch-bin cli-proxy-api-bin models-bin \
   linuxqq wechat \
