@@ -126,7 +126,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
-  duf dust gdu bottom procs fastfetch s-tui nvtop \
+  procs duf dust gdu bottom nvtop s-tui fastfetch \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi \
   nodejs npm pnpm bun python uv rustup go luarocks mise \
@@ -200,13 +200,11 @@ sudo paccache -rk0  # 清理全部缓存
 ## AUR
 
 ```bash
-paru -S --needed chsrc-bin shellcheck-bin \
+paru -S --needed chsrc-bin shellcheck-bin libtexprintf \
   visual-studio-code-bin claude-code \
   cc-switch-bin cli-proxy-api-bin models-bin \
-  linuxqq wechat \
-  wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  go-musicfox-bin uudeck \
-  libtexprintf
+  go-musicfox-bin uudeck linuxqq wechat \
+  wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts
 ```
 
 ### Helpers
