@@ -35,12 +35,6 @@ pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code c
 pnpm dlx skills add sabertazimi/skills -s '*' -a claude-code codex opencode -g -y
 ```
 
-:::tip
-
-Remove `~/.claude/projects/` for bug releases.
-
-:::
-
 ## Keyboard Shortcuts
 
 [Cheat sheet](https://cc.storyfox.cz):
@@ -327,6 +321,22 @@ Claude code [best practices](https://www.anthropic.com/engineering/claude-code-b
 - Avoid `/compact`: dump plan and progress + `/clear` the state + restart from dump file.
 - Use GitHub [actions](https://github.com/anthropics/claude-code-action):
   code review, issue triage, documentation sync, etc.
+
+## Troubleshooting
+
+### Bug Release
+
+Remove `~/.claude/projects/` for bug release.
+
+### Official Marketplace
+
+`src/hooks/useOfficialMarketplaceNotification.tsx` output
+`Failed to install Anthropic marketplace · Will retry on next startup`,
+`src/utils/plugins/officialMarketplaceStartupCheck.ts` checks:
+
+- `officialMarketplaceAutoInstallFailReason`
+- `officialMarketplaceAutoInstallRetryCount`
+- `officialMarketplaceAutoInstallNextRetryTime`
 
 ## Library
 
