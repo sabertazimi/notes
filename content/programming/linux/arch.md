@@ -359,10 +359,9 @@ rclone config
 
 ## Steam
 
-Appearance (设置 -> 界面) `中文`+`24小时制`+`开机自启`:
+Appearance (设置 -> 界面) `中文` + `24小时制`:
 
 ```bash
-sed -i 's|^Exec=/usr/bin/steam %U$|Exec=/usr/bin/steam -silent %U|' ~/.config/autostart/steam.desktop
 rm ~/Desktop/steam.desktop
 ```
 
