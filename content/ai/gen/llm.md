@@ -209,9 +209,14 @@ Agentic RAG (autonomous retrieval agents)
 actively refine their search based on iterative reasoning:
 
 - Context-aware query expansion.
-- Multi-step reasoning.
+- Multistep reasoning.
 - Adaptive source selection.
 - Validation and correction.
+
+### Efficiency
+
+- Prompt compression: 去除冗余文本
+- RAG cache: 复用计算结果
 
 ## Scaling Law
 
