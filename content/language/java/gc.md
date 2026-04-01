@@ -1,5 +1,5 @@
 ---
-sidebar_position: 23
+sidebar_position: 24
 tags: [Language, Java, GC, Performance, Optimization]
 ---
 

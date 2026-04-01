@@ -1,5 +1,5 @@
 ---
-sidebar_position: 40
+sidebar_position: 32
 tags: [Language, Java, MyBatis, Internals]
 ---
 

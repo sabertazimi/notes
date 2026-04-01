@@ -1,5 +1,5 @@
 ---
-sidebar_position: 31
+sidebar_position: 7
 tags: [Language, Java, Style Guide, Comments]
 ---
 

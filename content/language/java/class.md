@@ -3,7 +3,7 @@ sidebar_position: 10
 tags: [Language, Java, OOP, Object, Class]
 ---
 
-# 对象与类
+# Object and Class
 
 ## 特征
 
