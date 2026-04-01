@@ -52,6 +52,7 @@
     "lint:code:fix": "npm-run-all --parallel lint:code:eslint:fix lint:code:stylelint:fix",
     "lint:code:eslint:fix": "eslint ./src --fix",
     "lint:code:stylelint:fix": "stylelint ./src/**/*.css --fix",
+    "format": "prettier --write",
     "changeset": "commit-and-tag-version --dry-run -s",
     "release": "commit-and-tag-version -s",
     "serve": "docusaurus serve",
