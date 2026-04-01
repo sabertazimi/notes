@@ -198,6 +198,14 @@ AtomicReference
 - 写数组列表和写数组集的拷贝 - `CopyOnWriteArrayList` 类、`CopyOnWriteArraySet` 类
 - 同步包装器(synchronization wrapper) - 任何集合类通过同步包装器变成线程安全集合类
 
+| interface | non-thread-safe            | thread-safe                                 |
+| :-------- | :------------------------- | :------------------------------------------ |
+| `List`    | `ArrayList`                | `CopyOnWriteArrayList`                      |
+| `Map`     | `HashMap`                  | `ConcurrentHashMap`                         |
+| `Set`     | `HashSet` /`TreeSet`       | `CopyOnWriteArraySet`                       |
+| `Queue`   | `ArrayDeque` /`LinkedList` | `ArrayBlockingQueue` /`LinkedBlockingQueue` |
+| `Deque`   | `ArrayDeque` /`LinkedList` | `LinkedBlockingDeque`                       |
+
 ## 异步计算
 
 ### 执行器
