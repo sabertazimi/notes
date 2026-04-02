@@ -153,6 +153,14 @@ RIGHT JOIN table_name ON condition
 OUTER JOIN table_name ON condition
 ```
 
+![Inner Join](./figures/inner-join.webp 'Inner Join')
+
+![Left Join](./figures/left-outer-join.webp 'Left Join')
+
+![Right Join](./figures/right-outer-join.webp 'Right Join')
+
+![Full Join](./figures/full-outer-join.webp 'Full Join')
+
 ## Index
 
 索引:
@@ -306,6 +314,6 @@ mysql -h 127.0.0.1 -P 3306 -uroot -proot
 
 ### Infrastructure
 
-![MySQL Server Layer](./figures/mysql-server-layer.png 'MySQL Server Layer')
+![MySQL Server Layer](./figures/mysql-server-layer.webp 'MySQL Server Layer')
 
-![MySQL Infrastructure](./figures/mysql-infrastructure.jpg 'MySQL Infrastructure')
+![MySQL Infrastructure](./figures/mysql-infrastructure.webp 'MySQL Infrastructure')
