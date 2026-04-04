@@ -342,10 +342,10 @@ Remove `~/.claude/projects/` for bug release.
 
 ### Boilerplate
 
-- [Templates](https://github.com/davila7/claude-code-templates):
-  Configuring and monitoring tool.
 - [Everything](https://github.com/affaan-m/everything-claude-code):
   Complete configuration collection.
+- [Templates](https://github.com/davila7/claude-code-templates):
+  Configuring and monitoring tool.
 - [Showcase](https://github.com/ChrisWiles/claude-code-showcase):
   Comprehensive project configuration.
 - [Bootstrap](https://github.com/alinaqi/claude-bootstrap):
@@ -359,18 +359,16 @@ Remove `~/.claude/projects/` for bug release.
   AI specialists ready to transform workflow.
 - [Agents](https://github.com/wshobson/agents):
   Comprehensive production-ready system combining agents, multi-agent workflow orchestrators, skills, and slash commands.
-- [Manus](https://github.com/OthmanAdi/planning-with-files):
-  Manus-style persistent markdown planning.
+- [Spec](https://github.com/github/spec-kit):
+  Spec-driven development toolkit from GitHub.
 - [Sisyphus](https://github.com/Yeachan-Heo/oh-my-claudecode):
   Multi-agent orchestration.
 - [Ralph](https://github.com/frankbria/ralph-claude-code):
   Autonomous development loop.
 - [Compound](https://github.com/EveryInc/compound-engineering-plugin):
   Compound engineering plugin.
-- [Continuous](https://github.com/parcadei/Continuous-Claude-v3):
-  Session continuity, token-efficient MCP execution, and agentic workflows.
-- [TaskMaster](https://github.com/eyaltoledano/claude-task-master):
-  Task-management system.
+- [Manus](https://github.com/OthmanAdi/planning-with-files):
+  Manus-style persistent Markdown planning.
 
 ### Frontend
 
