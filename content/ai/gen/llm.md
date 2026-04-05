@@ -191,6 +191,8 @@ Thinking tokens are model's only persistent memory during reasoning.
 
 ![Retrieval-Augmented Generation](./figures/retrieval-augmented-generation.png 'Retrieval-Augmented Generation')
 
+![RAG Chat](./figures/rag-chat.webp 'RAG Chat')
+
 ### Context
 
 Context is everything when it comes to getting the most out of an AI tool.
