@@ -5,41 +5,13 @@ tags: [AI, Generative AI, LLM, Agent, Library, Toolchain]
 
 # Toolchain
 
-## LangChain
+## `LangChain`
 
-[LangChain](https://upstash.com/blog/langchain-explained)
-aims to make programming with LLMs easier.
+`LangChain` code [snippets](../recipes/code/langchain.md).
 
-[![LangChain Modules](./figures/lang-chain.png)](https://github.com/langchain-ai/langchainjs)
+## `LangGraph`
 
-Model I/O module
-normalize LLM inputs (e.g. prompts), APIs, and outputs (e.g. completions):
-
-![LangChain Model I/O Module](./figures/lang-chain-model-io.png 'LangChain Model I/O Module')
-
-Retrieval module
-help to process data alongside the user inputs,
-making it easier to retrieve relevant information:
-
-![LangChain Retrieval Module](./figures/lang-chain-retrieval.png 'LangChain Retrieval Module')
-
-Chains module
-link tasks together:
-
-![LangChain Chains Module](./figures/lang-chain-chains.png 'LangChain Chains Module')
-
-Agents module
-is chains with a list of functions (called tools) it can execute,
-while chains are hardcoded,
-agents choose their actions with the help of an LLM:
-
-![LangChain Agents Module](./figures/lang-chain-agents.png 'LangChain Agents Module')
-
-See more code [snippets](../recipes/code/langchain.md).
-
-## LangGraph
-
-Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph).
+Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph).
 
 ## Library
 
