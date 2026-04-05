@@ -221,6 +221,13 @@ actively refine their search based on iterative reasoning:
 并减去与已经选入结果集的文档的相似度,
 这样更不相似的 `k` 个文档会有更高的得分.
 
+### Constraint
+
+实现约束化检索:
+
+- Metadata: 利用文档的元数据 (如时间戳、来源、类别等) 进行结构化约束.
+- Self-Query: 根据用户输入的问题, 模型自身生成适合检索系统使用的查询 (query), 而不是提前人工设计关键词或标签.
+
 ### Efficiency
 
 - Prompt compression: 去除冗余文本
