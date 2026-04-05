@@ -184,14 +184,29 @@ Thinking tokens are model's only persistent memory during reasoning.
 检索增强生成, 通常称为 RAG (Retrieval-Augmented Generation),
 是一种强大的聊天机器人的设计模式.
 其中, 检索系统实时获取与查询相关的经过验证的源 / 文档,
-并将其输入生成模型 (例如 GPT-4) 以生成响应:
+并将其输入生成模型 (例如 GPT-4) 以生成响应.
+
+1. 数据处理阶段:
+   - 对原始数据进行清洗和处理
+   - 将处理后的数据转化为检索模型可以使用的格式
+   - 将处理后的数据存储在对应的数据库中
+2. 检索阶段:
+   将用户的问题输入到检索系统中, 从数据库中检索相关信息
+3. 增强阶段:
+   对检索到的信息进行处理和增强, 以便生成模型可以更好地理解和使用
+4. 生成阶段:
+   将增强后的信息输入到生成模型中, 生成模型根据这些信息生成答案
+
+![Retrieval-Augmented Generation](./figures/retrieval-augmented-generation.webp 'Retrieval-Augmented Generation')
+
+![RAG Chat](./figures/rag-chat.webp 'RAG Chat')
+
+:::tip
 
 - Effect: reduce hallucination.
 - Cost: avoid retraining.
 
-![Retrieval-Augmented Generation](./figures/retrieval-augmented-generation.png 'Retrieval-Augmented Generation')
-
-![RAG Chat](./figures/rag-chat.webp 'RAG Chat')
+:::
 
 ### Context
 
@@ -204,16 +219,6 @@ you need to [improve the relevance and quality of the input](https://github.blog
 [Quality in, quality out.](https://github.blog/2024-04-04-what-is-retrieval-augmented-generation-and-what-does-it-do-for-generative-ai)
 
 :::
-
-### Agentic
-
-Agentic RAG (autonomous retrieval agents)
-actively refine their search based on iterative reasoning:
-
-- Context-aware query expansion.
-- Multistep reasoning.
-- Adaptive source selection.
-- Validation and correction.
 
 ### Diversity
 
@@ -234,6 +239,16 @@ actively refine their search based on iterative reasoning:
 
 - Prompt compression: 去除冗余文本
 - RAG cache: 复用计算结果
+
+### Agentic
+
+Agentic RAG (autonomous retrieval agents)
+actively refine their search based on iterative reasoning:
+
+- Context-aware query expansion.
+- Multistep reasoning.
+- Adaptive source selection.
+- Validation and correction.
 
 ## Scaling Law
 
