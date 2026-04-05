@@ -1,6 +1,6 @@
 ---
 sidebar_position: 21
-tags: [AI, Generative AI, LLM, Agent, Security, Guardrail]
+tags: [AI, Generative AI, LLM, Agent, Security, Guardrail, Injection, Vulnerability]
 ---
 
 # Security
@@ -120,3 +120,20 @@ async def main():
 当超出失败阈值或高风险操作时, 触发人工干预计划
 
 :::
+
+## Prompt Injection
+
+Use delimiters to prevent prompt injection:
+
+```python
+delimiter = "####"
+system_message = f"用户输入信息将用{delimiter}字符分隔"
+messages = [
+    {"role": "system", "content": system_message},
+    {"role": "user", "content": f"{delimiter}{user_message}{delimiter}"},
+]
+```
+
+## References
+
+- Prompt injection [series](https://simonwillison.net/series/prompt-injection).

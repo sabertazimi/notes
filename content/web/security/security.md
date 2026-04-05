@@ -46,10 +46,6 @@ including defense strategies and best practices for building secure applications
 
 - [Supply Chain](./supply-chain.md) - Supply chain attacks, malicious packages, and protection strategies
 
-## LLM Security
-
-- [Prompt Injection](./prompt.md) - Prompt injection attacks in AI/LLM applications
-
 ## Best Practices
 
 - [Best Practices](./best-practices.md) - Security principles, defensive programming, checklist, and references
