@@ -213,6 +213,14 @@ actively refine their search based on iterative reasoning:
 - Adaptive source selection.
 - Validation and correction.
 
+### Diversity
+
+最大边际相关模型 (`MMR`, Maximal Marginal Relevance) 是实现多样性检索的常用算法:
+
+它计算 `fetch_k` 个候选文档与查询的相关度,
+并减去与已经选入结果集的文档的相似度,
+这样更不相似的 `k` 个文档会有更高的得分.
+
 ### Efficiency
 
 - Prompt compression: 去除冗余文本
