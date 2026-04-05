@@ -7,7 +7,8 @@ tags: [AI, Generative AI, LLM, Agent, Library, Toolchain]
 
 ## `LangChain`
 
-`LangChain` code [snippets](../recipes/code/langchain.md).
+- Code [snippets](../recipes/code/langchain.md).
+- API reference [documentation](https://reference.langchain.com).
 
 ## `LangGraph`
 
