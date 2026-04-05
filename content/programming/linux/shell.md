@@ -849,6 +849,7 @@ fi
 
 - `<C-A>`: begin of line.
 - `<C-E>`: end of line.
+- `<C-D>`: kill window and pane.
 - `<C-W>`: kill word.
 - `<C-U>`: kill line.
 - `<C-P>`: up history.
