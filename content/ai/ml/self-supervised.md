@@ -12,6 +12,8 @@ Pre-trained models + fine-tuning (downstream tasks):
 - Pre-training with artificial data.
 - Long context window.
 
+![Self-supervised Learning](./figures/self-supervised-learning.webp 'Self-supervised Learning')
+
 ## Pre-trained Models
 
 Pre-trained data:
