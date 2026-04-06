@@ -26,6 +26,8 @@ General agent [components](https://www.kaggle.com/whitepaper-agents):
 
 ![Agent Architecture](./figures/agent-architecture.png 'Agent Architecture')
 
+![Agent Loop](./figures/agent-loop.webp 'Agent Loop')
+
 ## First-Principles
 
 从李世石与 AlphaGo 的围棋对战中的第 37 手,
