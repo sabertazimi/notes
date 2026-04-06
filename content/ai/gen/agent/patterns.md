@@ -14,6 +14,8 @@ Agent design [patterns](https://rlancemartin.github.io/2026/01/09/agent_design):
 - Isolate context
 - Evolve context
 
+![Agent Paradigm](./figures/agent-paradigm.webp 'Agent Paradigm')
+
 ## Architecture
 
 General agent [components](https://www.kaggle.com/whitepaper-agents):
