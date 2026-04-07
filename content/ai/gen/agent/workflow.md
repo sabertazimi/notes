@@ -25,7 +25,40 @@ tags: [AI, Generative AI, LLM, Agent, Workflow, Vibe Coding, Agentic Coding]
 6. 以一致的格式（如代码块、列表或标题）呈现分析结果和解决方案，便于用户快速阅读。
 ```
 
-## Plan
+## `ReAct`
+
+[`ReAct`](https://arxiv.org/abs/2210.03629):
+
+- Thought: 进行推理和决策.
+- Action: 执行操作 (如查询数据库、调用 API、编写代码).
+- Observation: 观察操作结果, 反馈给 Thought.
+
+$$
+(th_t, a_t) = \pi(q, (a_1, o_1), \dots, (a_{t-1}, o_{t-1}))
+$$
+
+$$
+o_t = T(a_t)
+$$
+
+![ReAct](./figures/react.webp 'ReAct')
+
+## Plan-and-Solve
+
+[Plan-and-Solve](https://arxiv.org/abs/2305.04091)
+适用于结构性强、需要复杂推理和多步骤决策的任务:
+
+$$
+P = \pi_{\text{plan}}(q) = (p_1, p_2, \dots, p_n)
+$$
+
+$$
+s_i = \pi_{\text{solve}}(q, P, (s_1, \dots, s_{i-1}))
+$$
+
+![Plan-and-Solve](./figures/plan-and-solve.webp 'Plan-and-Solve')
+
+### Plan
 
 Claude code `EnterPlanMode` system prompt:
 
@@ -68,7 +101,7 @@ Plan files:
 - 文件采用 Markdown 格式，包含任务完成状态（如 `[ ]` 未完成，`[x]` 已完成）等。
 ```
 
-## Act
+### Act
 
 ```md
 You have two modes of operation:
@@ -85,6 +118,21 @@ You have two modes of operation:
   you will remind them that you are in plan mode and that they need to approve the plan first.
 - When in plan mode always output the full updated plan in every response.
 ```
+
+## Reflection
+
+[Reflection](https://arxiv.org/abs/2303.11366)
+执行 (Execution) -> 反思 (Reflection)-> 优化 (Refinement) 的自我校正循环:
+
+$$
+F_i = \pi_{\text{reflect}}(Task, O_i)
+$$
+
+$$
+O_{i+1} = \pi_{\text{refine}}(Task, O_i, F_i)
+$$
+
+![Reflection](./figures/reflection.webp 'Reflection')
 
 ## RIPER-5
 
