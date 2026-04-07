@@ -268,6 +268,15 @@ actively refine their search based on iterative reasoning:
 - Instruction following.
 - Step-by-step reasoning.
 
+## Hallucination
+
+Reduce factual, faithfulness, and intrinsic hallucinations:
+
+1. Data: high quality and factual data.
+2. RAG.
+3. Validation: multistep reasoning, fact-checking, consistency checking, etc.
+4. External tools: search engine, calculator, interpreter, etc.
+
 ## Recursive Language Models
 
 [RLM](https://www.primeintellect.ai/blog/rlm)
