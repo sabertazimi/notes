@@ -24,6 +24,7 @@ AI Agent system that uses LLMs as core reasoning engine, augmented with tools, m
 - [Eval](./eval.md) - Evaluation methods, trace analysis, and benchmarks
 - [Security](./security.md) - Safety guardrails for agent execution
 
-## Resources
+## Solutions
 
 - [Toolchain](./toolchain.md) - SDKs, frameworks, and agent tools
+- [LangGraph](./langgraph.md) - Resilient language agents as graphs

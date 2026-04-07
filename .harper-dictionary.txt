@@ -1,4 +1,6 @@
 I/O
+LangChain
+LangGraph
 astro
 aur
 bootloader

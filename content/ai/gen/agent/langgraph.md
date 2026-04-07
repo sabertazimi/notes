@@ -1,4 +1,46 @@
-# `LangChain`
+---
+sidebar_position: 51
+tags: [AI, Generative AI, LLM, Agent, Toolchain, LangChain, LangGraph]
+---
+
+# LangGraph
+
+## Prompt Template
+
+```python
+from langchain_core.prompts import ChatPromptTemplate
+
+
+review_template = ChatPromptTemplate.from_template("""\
+Returns sentiment analysis of the text.
+The sentiment analysis should be either "positive", "negative", or "neutral".
+
+Text: {text}
+""")
+review_text = "I really enjoyed the movie!"
+messages = review_template.format_messages(text=review_text)
+```
+
+## Structured Output
+
+```python
+from langchain_anthropic import ChatAnthropic
+
+
+response = ChatAnthropic().with_structured_output(
+    {
+        "name": "str",
+        "age": "int",
+        "hobbies": ["str"],
+    }
+).invoke(
+    [
+        ("system", "你是一个有用的助手。"),
+        ("human", "请告诉我你的名字、年龄和爱好。"),
+    ]
+)
+print(response.model_dump_json(indent=2))
+```
 
 ## Retrieval-Augmented Generation
 
@@ -142,3 +184,39 @@ def get_qa_history_chain():
     )
     return qa_history_chain
 ```
+
+## Hugging Face
+
+```python
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+
+def demo_qwen() -> None:
+    model_id = "Qwen/Qwen3-0.6B"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(model_id).to(device)
+
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "你好，请介绍你自己。"},
+    ]
+    text = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
+    model_inputs = tokenizer(text, return_tensors="pt").to(device)
+
+    generated_ids = model.generate(model_inputs.input_ids, max_length=512)
+    generated_ids = [
+        output_ids[len(input_ids) :]
+        for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids, strict=True)
+    ]
+    generated_text = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    print(generated_text)
+```
+
+## References
+
+- API reference [documentation](https://reference.langchain.com)
+- Building agent with [LangGraph](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph)

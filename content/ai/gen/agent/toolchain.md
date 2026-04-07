@@ -1,22 +1,11 @@
 ---
 sidebar_position: 50
-tags: [AI, Generative AI, LLM, Agent, Library, Toolchain]
+tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 ---
 
 # Toolchain
 
-## `LangChain`
-
-- Code [snippets](../recipes/code/langchain.md).
-- API reference [documentation](https://reference.langchain.com).
-
-## `LangGraph`
-
-Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph).
-
-## Library
-
-### Instruction
+## Instruction
 
 - [AGENTS.md](https://github.com/agentsmd/agents.md):
   Open format for guiding coding agents.
@@ -25,7 +14,7 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [System](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools):
   System prompts for agents.
 
-### SDK
+## SDK
 
 - [LangChain](https://github.com/langchain-ai/langchain):
   Platform for reliable agents.
@@ -40,12 +29,12 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [TypeChat](https://github.com/microsoft/TypeChat):
   Makes it easy to build natural language interfaces.
 
-### RAG
+## RAG
 
 - [RAGFlow](https://github.com/infiniflow/ragflow):
   Superior context layer for agents.
 
-### Agents
+## Agents
 
 - [Code](https://github.com/sourcegraph/awesome-code-ai):
   Coding agents.
@@ -60,14 +49,14 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [Poke](https://github.com/pokeagent/pokeagent.github.io):
   NeurIPS 2025 Pokémon agent challenge.
 
-### Multi-Agent
+## Multi-Agent
 
 - [MetaGPT](https://github.com/geekan/MetaGPT):
   Multi-agent framework.
 - [ChatDev](https://github.com/OpenBMB/ChatDev):
   Multi-Agent collaboration.
 
-### Memory
+## Memory
 
 - [Mem0](https://github.com/mem0ai/mem0):
   Universal memory layer.
@@ -76,7 +65,7 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [Beads](https://github.com/steveyegge/beads):
   Git-backed graph issue tracker and persistent memory.
 
-### Workflow
+## Workflow
 
 - [n8n](https://github.com/Zie619/n8n-workflows):
   n8n workflows.
@@ -85,12 +74,12 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [GitHub](https://github.com/github/gh-aw):
   GitHub agentic workflows.
 
-### Project
+## Project
 
 - [VibeKanban](http://github.com/BloopAI/vibe-kanban):
   Run coding agents in parallel without conflicts, and perform code review.
 
-### Frontend
+## Frontend
 
 - [Vercel](https://github.com/vercel/ai):
   Build AI-powered web applications.
@@ -107,7 +96,7 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [Agentation](https://github.com/benjitaylor/agentation):
   Elements visual feedback for agents.
 
-### Browser
+## Browser
 
 - [BrowserUse](https://github.com/browser-use/browser-use):
   Web agent.
@@ -122,7 +111,7 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [X-Crawl](https://github.com/coder-hxl/x-crawl):
   Flexible Node.js AI-assisted crawler library.
 
-### Client
+## Client
 
 - [LobeChat](https://github.com/lobehub/lobe-chat):
   Chat framework.
@@ -133,7 +122,7 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [ChatHub](https://github.com/chathub-dev/chathub):
   All-in-one chatbot client.
 
-### Copilot
+## Copilot
 
 - [Everywhere](https://github.com/DearVa/Everywhere):
   Context-aware assistant for desktop.
@@ -144,12 +133,12 @@ Building agent with [`LangGraph`](https://www.kaggle.com/code/markishere/day-3-b
 - [GrammarLy](https://github.com/grammarly):
   Writing and grammar checker.
 
-### Slide
+## Slide
 
 - [Banana](https://github.com/Anionex/banana-slides):
   AI-native PPT generator based on nano banana pro.
 
-### Documentation
+## Documentation
 
 - [DeepWiki](https://github.com/AsyncFuncAI/deepwiki-open).
 - [ZRead](https://zread.ai):
