@@ -245,10 +245,15 @@ you need to [improve the relevance and quality of the input](https://github.blog
 Agentic RAG (autonomous retrieval agents)
 actively refine their search based on iterative reasoning:
 
-- Context-aware query expansion.
-- Multistep reasoning.
-- Adaptive source selection.
-- Validation and correction.
+- Multi-query expansion (`MQE`):
+  利用 LLM 生成语义等价的多样化查询
+- Context-aware query expansion:
+  利用 LLM 生成与当前上下文相关的查询
+- Hypothetical document embeddings (`HyDE`):
+  利用 LLM 生成假设性的答案段落, 用假设段落去检索真实文档
+- Multistep reasoning
+- Adaptive source selection
+- Validation and correction
 
 ## Scaling Law
 
