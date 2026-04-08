@@ -59,7 +59,6 @@ cat << EOF | sudo tee -a /etc/pacman.conf
 [archlinuxcn]
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
-Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/\$arch
 Server = https://mirrors.aliyun.com/archlinuxcn/\$arch
 EOF
 ```
