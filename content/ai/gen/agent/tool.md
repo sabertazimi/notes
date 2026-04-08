@@ -72,6 +72,13 @@ Concise output:
 - Use external data storage for long-term memory.
 - Provide descriptive error messages.
 
+## Security
+
+- Allow list: 只允许安全的命令
+- Sandboxing: 在受控环境中执行工具, e.g. 只能访问指定的工作目录
+- Timeout: 超时控制, 防止无限循环或资源耗尽
+- Output: 限制输出的大小, 防止内存溢出
+
 ## References
 
 - Agent tools and interoperability [whitepaper](https://www.kaggle.com/whitepaper-agent-tools-and-interoperability-with-mcp).

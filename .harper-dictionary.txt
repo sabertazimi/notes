@@ -5,6 +5,7 @@ astro
 aur
 bootloader
 claude
+codegen
 docusaurus
 flatpak
 ghostty
@@ -22,7 +23,9 @@ polkit
 quickshell
 shadcn
 subagent
+subagents
 tty
+whitepaper
 wps
 xdg
 zsh
