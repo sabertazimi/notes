@@ -21,6 +21,7 @@ pnpm
 polkit
 quickshell
 shadcn
+subagent
 tty
 wps
 xdg

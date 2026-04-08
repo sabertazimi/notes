@@ -20,21 +20,27 @@ LLM 并未统一利用其上下文,
 因此, 仅仅在模型的上下文中拥有相关信息是不够的:
 信息的呈现方式对性能有显著影响.
 这凸显了 `上下文工程` 的必要性,
-优化相关信息的数量并最小化不相关上下文以实现可靠的性能:
-
-- System instructions.
-- Tool definitions.
-- Few-shot examples.
-- User prompt.
-- Conversation history.
-- Short-term memory.
-- Long-term memory.
-- External knowledge.
-- Tool outputs.
-- Subagent outputs.
-- Artifacts.
+优化相关信息的数量并最小化不相关上下文以实现可靠的性能.
 
 [![Context Engineering](./figures/context-engineering.jpg)](https://addyo.substack.com/p/how-good-is-ai-at-coding-react-really)
+
+### Pipeline
+
+1. Gather:
+   - System instructions
+   - Tool definitions
+   - Few-shot examples
+   - User prompt
+   - Conversation history
+   - Short-term memory
+   - Long-term memory
+   - External knowledge
+   - Tool outputs
+   - Subagent outputs
+   - Artifacts
+2. Select: 根据相关性和时效性对候选信息进行评分和选择, 是整个流水线的核心, 直接决定了最终上下文的质量
+3. Structure: 将选中的信息组织成结构化的上下文模板
+4. Compress: 对超限上下文进行压缩处理
 
 ### Plan
 
