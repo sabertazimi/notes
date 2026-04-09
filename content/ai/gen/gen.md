@@ -7,7 +7,7 @@ tags: [AI, Generative AI, LLM, Agent, Prompt]
 
 ## Fundamentals
 
-- [Large Language Model](./llm.md) - Large language model fundamentals and concepts
+- [Large Language Model](./llm/llm.md) - Large language model fundamentals and concepts
 - [Model Context Protocol](./mcp.md) - Model Context Protocol
 
 ## Prompt Engineering
