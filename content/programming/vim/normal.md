@@ -53,14 +53,20 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 
 ## Edit
 
-### Operator and Motion
+操作符命令 + 动作命令 (范围), `Operator + {Motion}`.
 
-操作符命令 + 动作命令 (范围), `Operator + {Motion}`:
+:::tip
 
-> :h operator.
-> :h :map-operator.
+```vim
+:h operator
+:h :map-operator
+```
 
-- _操作符命令_: 基本编辑命令
+:::
+
+### Operator
+
+**操作符命令**, 基本编辑命令:
 
 | 命令 | 作用                                   |
 | :--- | :------------------------------------- |
@@ -77,12 +83,15 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 
 - **动作命令**: `a`(all)/`i`(in)/`t`(til).
 
-e.g. `$`/`2l`/`aw`/`ap` 或 `/patterns`.
+### Motion
 
-- 模式串: `/patterns`.
-- `0`/`$`: 行首/尾.
-- 文本对象: `i`/`a`.
-- 分隔符文本对象 (separator text objects).
+**动作命令**:
+
+- `a`(all)/`i`(in)/`t`(til): e.g. `$`/`2l`/`aw`/`ap` 或 `/patterns`
+- 模式串: `/patterns`
+- `0`/`$`: 行首/尾
+- 文本对象: `i`/`a`
+- 分隔符文本对象 (separator text objects):
 
 | 分隔符文本对象 | 选择区域                        |
 | :------------- | :------------------------------ |
@@ -103,7 +112,7 @@ e.g. `$`/`2l`/`aw`/`ap` 或 `/patterns`.
 | `at`           | 一对 XML 标签 `<xml>tags</xml>` |
 | `it`           | XML 标签内部                    |
 
-- 范围文本对象 (range text objects).
+- 范围文本对象 (range text objects):
 
 | 范围文本对象 | 选择范围           |
 | :----------- | :----------------- |
