@@ -193,14 +193,16 @@ $$
 
 从而移除 critic 模型.
 
-## Inference Acceleration
+### Agentic RL
 
-- Quantization: 改变模型权重和激活值的精度.
-- Distillation: data, knowledge, on policy.
-- Flash attention: minimize data move between slow `HBM` to faster memory tier (`SRAM`/`VMEM`).
-- Prefix caching: avoid recalculating attention scores for input on each auto-regressive decode step.
-- Speculative decoding: generate multiple candidates with drafter model (much smaller).
-- Batching and parallelization: sequence, pipeline, tensor.
+- Reasoning: 通过试错学习有效的推理策略, 发现训练数据中没有的推理路径
+- Tool Use: 学会何时使用工具、选择哪个工具、如何组合多个工具
+- Memory: 学会记忆管理策略, 决定哪些信息值得记住、何时更新/删除
+- Planning: 学会动态规划, 权衡短期和长期收益, 发现有效的行动序列
+- Self-Improvement: 学会自我反思, 识别错误、分析失败原因、调整策略
+- Perception: 提升多模态理解能力, 学会视觉推理、使用视觉工具和视觉规划
+
+![Agentic RL](./figures/agentic-rl.webp 'Agentic RL')
 
 ## Reasoning
 
@@ -218,6 +220,15 @@ dramatically improved performance on [hard problems](https://cameronrwolfe.subst
 Thinking tokens are model's only persistent memory during reasoning.
 
 :::
+
+## Inference Acceleration
+
+- Quantization: 改变模型权重和激活值的精度.
+- Distillation: data, knowledge, on policy.
+- Flash attention: minimize data move between slow `HBM` to faster memory tier (`SRAM`/`VMEM`).
+- Prefix caching: avoid recalculating attention scores for input on each auto-regressive decode step.
+- Speculative decoding: generate multiple candidates with drafter model (much smaller).
+- Batching and parallelization: sequence, pipeline, tensor.
 
 ## Embeddings
 
