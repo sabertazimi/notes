@@ -51,6 +51,22 @@ Fine-tuned GPT model on conversational data:
   以 reward model 的评价分数为 reward, 通过强化学习优化模型.
   一般聚焦于三个方面: 有用性 (Helpfulness), 诚实性 (Honesty), 无害性 (Harmlessness).
 
+$$
+\mathcal{L}_{\text{pretrain}} = - \sum_{t=1}^{T} \log P(x_t | x_1, x_2, \dots, x_{t-1}; \theta)
+$$
+
+$$
+\mathcal{L}_{\text{SFT}} = - \sum_{i=1}^{N} \log P(y_i | x_i; \theta)
+$$
+
+$$
+\mathcal{L}_{\text{RM}} = - \mathbb{E}_{(x, y_w, y_l)} [\log \sigma(r_\phi(x, y_w) - r_\phi(x, y_l))]
+$$
+
+$$
+J_{\text{PPO}} = \mathbb{E}_{x, y \sim \pi_\theta} [r_\phi(x, y)] - \beta \cdot D_{\text{KL}}(\pi_\theta \| \pi_{\text{ref}})
+$$
+
 :::tip[Alignment]
 
 对齐的[最佳方法](https://cameronrwolfe.substack.com/p/understanding-and-using-supervised):
