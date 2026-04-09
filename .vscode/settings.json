@@ -1,0 +1,10 @@
+{
+  "cSpell.customDictionaries": {
+    "harper-dict": {
+      "name": "Harper Dictionary",
+      "path": "${workspaceFolder}/.harper-dictionary.txt",
+      "description": "Link to Harper custom dictionary",
+      "addWords": true
+    }
+  }
+}
