@@ -28,7 +28,7 @@ git add -p <filename>
 git rm filename
 ```
 
---cached: 保留磁盘文件(仅从 git 库移除文件)
+`--cached`: 保留磁盘文件(仅从 git 库移除文件)
 
 ```bash
 git rm --cached filename
@@ -158,6 +158,35 @@ git rev-list --objects --all
 git filter-branch -f --prune-empty --index-filter
 \ 'git rm -rf --cached --ignore-unmatch your-file-name'
 \ --tag-name-filter cat -- --all
+```
+
+## Filter Repo
+
+[git-filter-repo](https://github.com/newren/git-filter-repo) 是 `git filter-branch` 的现代替代品,
+速度更快且更安全:
+
+```bash
+sudo pacman -S git-filter-repo
+```
+
+删除指定文件/目录的全部历史:
+
+```bash
+# 删除单个文件
+git filter-repo --path path/to/large-file --invert-paths
+
+# 删除多个文件/目录
+git filter-repo \
+  --path Java/JavaBasic.docx \
+  --path .yarn/releases/ \
+  --path yarn.lock \
+  --invert-paths
+
+# 按大小阈值删除 (>10MB)
+git filter-repo --strip-blobs-bigger-than 10M
+
+# 使用 glob 模式
+git filter-repo --path-glob 'OS/.fuse_hidden*' --invert-paths
 ```
 
 ## Cherry Pick
