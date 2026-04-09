@@ -34,3 +34,4 @@ tags: [Programming, Git]
 ## Internals
 
 - [Internals](./internals.md) - Git objects, packfiles, and internal mechanisms
+- [Repo Slimming](./slim.md) - Repository size analysis and history cleanup
