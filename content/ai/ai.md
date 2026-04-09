@@ -12,7 +12,7 @@ tags: [AI]
 
 ## Machine Learning
 
-- [Machine Learning](./ml/ml.md) - ML paradigms: supervised, unsupervised, self-supervised, reinforcement learning
+- [Machine Learning](./ml/ml.md) - ML paradigms: supervised, unsupervised, reinforcement learning
 
 ## Deep Learning
 

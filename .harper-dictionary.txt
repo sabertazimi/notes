@@ -20,6 +20,8 @@ onedrive
 pacman
 pnpm
 polkit
+pre-trained
+pre-training
 quickshell
 shadcn
 subagent
