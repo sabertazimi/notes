@@ -191,7 +191,11 @@ $$
 \hat{A}_{i,t} = \frac{r_i - \text{mean}(\mathbf{r})}{\text{std}(\mathbf{r})}
 $$
 
-从而移除 critic 模型.
+从而移除 critic 模型:
+
+$$
+J_{\text{GRPO}}(\theta) = \mathbb{E}_{s,a \sim \pi_\theta} \left[ \frac{\pi_\theta(a|s)}{\pi_{\text{ref}}(a|s)} \cdot (r(s,a) - \bar{r}_{\text{group}}) \right] - \beta \cdot D_{\text{KL}}(\pi_\theta || \pi_{\text{ref}})
+$$
 
 ### Agentic RL
 
