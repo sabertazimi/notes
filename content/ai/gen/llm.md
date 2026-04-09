@@ -197,6 +197,18 @@ $$
 J_{\text{GRPO}}(\theta) = \mathbb{E}_{s,a \sim \pi_\theta} \left[ \frac{\pi_\theta(a|s)}{\pi_{\text{ref}}(a|s)} \cdot (r(s,a) - \bar{r}_{\text{group}}) \right] - \beta \cdot D_{\text{KL}}(\pi_\theta || \pi_{\text{ref}})
 $$
 
+:::tip[KL 散度惩罚]
+
+KL 散度惩罚, 可以防止策略偏离参考模型太远:
+`kl_coef` (KL 散度惩罚系数) 太小 (0.01) 可能导致策略偏离太远 (输出混乱或质量下降),
+太大 (0.5) 可能限制学习 (学习缓慢):
+
+$$
+D_{\text{KL}}(\pi_\theta || \pi_{\text{ref}}) = \mathbb{E}_{s,a \sim \pi_\theta} \left[ \log \frac{\pi_\theta(a|s)}{\pi_{\text{ref}}(a|s)} \right]
+$$
+
+:::
+
 ### Agentic RL
 
 - Reasoning: 通过试错学习有效的推理策略, 发现训练数据中没有的推理路径
