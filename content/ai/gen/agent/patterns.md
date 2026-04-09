@@ -30,9 +30,16 @@ General agent [components](https://www.kaggle.com/whitepaper-agents):
 
 ![Agent Loop](./figures/agent-loop.webp 'Agent Loop')
 
+## Long Running
+
+[Three-agent architecture](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+harness design (`Planner` + `Generator` + `Evaluator`)
+produce rich full-stack applications
+over multi-hour autonomous coding sessions.
+
 ## First-Principles
 
-从李世石与 AlphaGo 的围棋对战中的第 37 手,
+从李世石与 `AlphaGo` 的围棋对战中的第 37 手,
 我们可以总结出[第一性原理](https://www.chasewhughes.com/writing/beyond-the-replica-the-case-for-first-principles-agents)
 智能体的基本原则:
 
@@ -119,7 +126,18 @@ use runtime experience and external signals to optimize future behavior:
 
 [![Flywheel](./figures/flywheel.png)](https://www.kaggle.com/whitepaper-agent-quality)
 
-## AgentOps
+## Compound
+
+[Compound engineering](https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents)
+(复利工程), 每个 PR 都在教育系统, 每个 bug 都成为永久的教训, 每次代码审查都在更新 agent 的默认行为:
+
+- 将经验沉淀到项目文档.
+- 让 bug 修复产生长期价值.
+- 从代码审查中提取模式.
+- 建立可复用的工作流程: slash commands, hooks, guardrails, and skills.
+- Linter rules, regression tests, `AGENTS.md` improvements, checklist updates.
+
+## `AgentOps`
 
 [![AgentOps](./figures/agent-ops.png)](https://www.kaggle.com/whitepaper-prototype-to-production)
 
