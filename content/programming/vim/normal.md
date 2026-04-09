@@ -81,7 +81,18 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 | `=`  | 自动缩进                               |
 | `!`  | 使用外部程序过滤 `{motion}` 所跨越的行 |
 
-- **动作命令**: `a`(all)/`i`(in)/`t`(til).
+- `!!{filter-command}`: 过滤当前行
+- `v!{filter-command}`: 过滤选区
+- `!{motion}{filter-command}`: 过滤 `{motion}` 所跨越的行
+
+```vim
+" Insert date
+!!date
+" Sort block
+v!sort
+" Format JSON
+!}jq
+```
 
 ### Motion
 
