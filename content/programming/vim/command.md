@@ -59,7 +59,8 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
 ### 历史记录
 
-`q/` 或 `q`: 弹出历史记录窗口.
+- `q:`: command history window
+- `q/`: search history window
 
 ## Range
 
