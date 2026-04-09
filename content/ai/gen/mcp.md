@@ -168,10 +168,8 @@ Use [MCPorter](https://github.com/steipete/mcporter) to wrap MCP servers into CL
 
 - [Registry](https://github.com/modelcontextprotocol/registry):
   Official registry.
-- [Pulse](https://www.pulsemcp.com):
+- [Smithery](https://smithery.ai):
   Directory.
-- [MCP](https://mcpservers.org):
-  Collection.
 - [Awesome](https://github.com/punkpeye/awesome-mcp-servers):
   List.
 
