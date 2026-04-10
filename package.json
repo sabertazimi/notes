@@ -1,6 +1,6 @@
 {
   "name": "notes",
-  "version": "5.2.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.32.1",
   "description": "Personal Learning Notes (TIL)",
   "author": "sabertazimi",
