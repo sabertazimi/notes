@@ -114,6 +114,13 @@ agent = create_agent(
 通过多智能体架构 (Multi-Agent), 将上下文拆分到不同的子智能体中.
 主智能体编写任务指令, 子智能体的整个上下文仅由该指令组成, 主智能体只需要最终结果.
 
+### Failure
+
+- Poisoning: 错误信息 -> 上下文验证和隔离
+- Distraction: 累计信息 -> 上下文摘要
+- Confusion: 无关信息 -> 上下文动态载入
+- Clash: 冲突信息 -> 上下文修剪和外卸
+
 ## Session
 
 Immediate dialogue history and working memory for single and continuous conversation.
