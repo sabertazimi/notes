@@ -1,13 +1,13 @@
 ---
 sidebar_position: 21
-tags: [AI, Generative AI, LLM, Agent, Eval]
+tags: [AI, Generative AI, LLM, Agent, Evaluation]
 ---
 
-# Eval
+# Evaluation
 
 ## Principles
 
-Agents [eval](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents):
+Agents [evaluation](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents):
 
 1. Start early.
 2. Source realistic tasks from failures.
@@ -17,7 +17,7 @@ Agents [eval](https://www.anthropic.com/engineering/demystifying-evals-for-ai-ag
 6. Iterate on evaluations to improve signal-to-noise ratio.
 7. Read transcripts (记录).
 8. Pick framework:
-   - [Promptfoo](https://github.com/promptfoo/promptfoo)
+   - [`PromptFoo`](https://github.com/promptfoo/promptfoo)
    - [Harbor](https://github.com/laude-institute/harbor)
    - [Terminal](https://github.com/laude-institute/terminal-bench)
 
@@ -53,13 +53,13 @@ Agents [eval](https://www.anthropic.com/engineering/demystifying-evals-for-ai-ag
 
 ### Regression
 
-- String-based similarity: ROUGE, BLEU.
-- Embedding-based similarity: BERTScore, cosine similarity.
+- String-based similarity: ROUGE, `BLEU`.
+- Embedding-based similarity: `BERTScore`, cosine similarity.
 - Task-specific benchmarks.
 
 ### Performance
 
-- Latency: P50, P90, P99.
+- Latency: `P50`, `P90`, `P99`.
 - Error rate.
 
 ### Cost
@@ -110,7 +110,7 @@ Critic agent:
 
 ## Human
 
-Human-in-the-Loop (HITL):
+Human-in-the-Loop (`HITL`):
 
 - Domain expertise: 领域专业知识.
 - Interpreting nuance: 解释细微差别.
@@ -121,7 +121,7 @@ Human-in-the-Loop (HITL):
 When building agents, [trace](https://x.com/hwchase17/status/2010044779225329688) is the source of truth:
 
 - Debugging becomes trace analysis
-- Testing becomes eval-driven
+- Testing becomes evaluation-driven
 - Can't set breakpoints in reasoning
 - Performance optimization changes: task success rate, reasoning quality, tool usage efficiency
 
@@ -132,7 +132,7 @@ When building agents, [trace](https://x.com/hwchase17/status/2010044779225329688
 **Trajectory** is equally important as **final response**:
 
 - Exact match: produce trajectory that perfectly mirrors ideal solution.
-- In-order match: complete expected trajectory, while accommodating extra, un-penalized actions.
+- In-order match: complete expected trajectory, while accommodating extra, `un-penalized` actions.
 - Any-order match: include all necessary actions.
 - Precision: relevant tool calls.
 - Recall: essential tool calls.
@@ -151,7 +151,7 @@ When building agents, [trace](https://x.com/hwchase17/status/2010044779225329688
 [Benchmarks](https://blog.sshh.io/p/understanding-ai-benchmarks):
 
 - Aggregate: Don’t obsess over a 1-2% lead on one benchmark, focus on specific and comprehensive domain.
-- Relative: Compare within the same model family or lab, how did the score change from v1 to v2?
+- Relative: Compare within the same model family or lab, how did the score change from `v1` to `v2`?
 - Verify: The only benchmark that matters at the end of the day is your workload.
 
 ## References

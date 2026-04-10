@@ -1,9 +1,9 @@
 ---
 sidebar_position: 21
-tags: [AI, Generative AI, LLM, Eval]
+tags: [AI, Generative AI, LLM, Evaluation]
 ---
 
-# Eval
+# Evaluation
 
 ## Metrics
 

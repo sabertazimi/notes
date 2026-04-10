@@ -19,7 +19,7 @@ tags: [AI, Generative AI, LLM]
 ## Inference
 
 - [Reasoning](./reasoning.md) - Chain-of-thought and inference acceleration
-- [Eval](./eval.md) - Accuracy, efficiency, and quality metrics
+- [Evaluation](./evaluation.md) - Accuracy, efficiency, and quality metrics
 
 ## Applications
 

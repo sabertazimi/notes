@@ -836,7 +836,7 @@ function greet(options, ...rest) {
 
 :::
 
-## Eval
+## `eval`
 
 - 不要使用`eval()`函数
 - 不要使用字符串作参数 new Function();(会调用`eval`函数)

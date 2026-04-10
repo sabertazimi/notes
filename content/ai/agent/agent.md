@@ -20,7 +20,7 @@ tags: [AI, Generative AI, LLM, Agent]
 ## Orchestration
 
 - [Multi-Agent](./multi-agent.md) - Multi-agent orchestration patterns
-- [Eval](./eval.md) - Evaluation methods, trace analysis, and benchmarks
+- [Evaluation](./evaluation.md) - Evaluation methods, trace analysis, and benchmarks
 - [Security](./security.md) - Safety guardrails for agent execution
 
 ## Solutions
