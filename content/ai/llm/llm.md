@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 tags: [AI, Generative AI, LLM]
 ---
 
@@ -19,11 +19,11 @@ tags: [AI, Generative AI, LLM]
 ## Inference
 
 - [Reasoning](./reasoning.md) - Chain-of-thought and inference acceleration
-- [Evaluation](./eval.md) - Accuracy, efficiency, and quality metrics
+- [Eval](./eval.md) - Accuracy, efficiency, and quality metrics
 
 ## Applications
 
-- [RAG](./rag.md) - Retrieval-augmented generation patterns
+- [Retrieval-Augmented Generation](./rag.md) - Retrieval-augmented generation patterns
 
 ## Resources
 

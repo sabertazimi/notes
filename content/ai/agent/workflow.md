@@ -137,7 +137,7 @@ $$
 ## RIPER-5
 
 [RIPER-5](https://github.com/johnpeterman72/cursor_memory_riper_framework)
-给 AI 规定了 [5 种行为模式](../recipes/prompts/riper-5.md)：
+给 AI 规定了 [5 种行为模式](../prompt/recipes/riper-5.md)：
 
 ```md
 - "ENTER RESEARCH MODE" // 进入研究模式
@@ -155,7 +155,7 @@ $$
 2. `Stop` hook 阻止提前退出: 未达标时强制继续.
 3. `max-iterations` 安全阀: 防止无限循环.
 
-智能体会维护以下[关键文件](../recipes/code/ralph.md):
+智能体会维护以下[关键文件](../prompt/recipes/ralph.md):
 
 1. `prd.json`: 结构化的任务清单. 智能体每完成一个子项, 就会在该文件中标记 `passes: true`.
 2. `progress.txt`: 追加形式的日志文件, 记录了每一轮迭代的尝试、遇到的坑以及已经确认的模式.

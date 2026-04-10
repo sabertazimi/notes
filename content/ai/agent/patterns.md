@@ -26,6 +26,9 @@ General agent [components](https://www.kaggle.com/whitepaper-agents):
 - External knowledge
 - Tools
 
+AI Agent system use LLMs as core reasoning engine,
+augmented with tools, memory, and instructions.
+
 ![Agent Architecture](./figures/agent-architecture.png 'Agent Architecture')
 
 ![Agent Loop](./figures/agent-loop.webp 'Agent Loop')

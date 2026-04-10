@@ -1,17 +1,16 @@
 ---
-sidebar_position: 10
+sidebar_position: 12
 tags: [AI, Generative AI, LLM, Agent]
 ---
 
 # Agent
-
-AI Agent system that uses LLMs as core reasoning engine, augmented with tools, memory, and instructions.
 
 ## Fundamentals
 
 - [Patterns](./patterns.md) - Agent-native design and context management patterns
 - [Instructions](./instructions.md) - Writing effective agent system prompts
 - [Tool](./tool.md) - Tool calling, bash scripts, and codegen
+- [Model Context Protocol](./mcp.md) - Model context protocol patterns
 
 ## Operations
 
@@ -27,4 +26,5 @@ AI Agent system that uses LLMs as core reasoning engine, augmented with tools, m
 ## Solutions
 
 - [Toolchain](./toolchain.md) - SDKs, frameworks, and agent tools
+- [Claude Code](./claude-code.md) - Claude Code coding agent
 - [LangGraph](./langgraph.md) - Resilient language agents as graphs

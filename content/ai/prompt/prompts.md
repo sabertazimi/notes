@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 tags: [AI, Generative AI, LLM, Prompt Engineering, Prompt, Agent, Workflow, Vibe Coding, Agentic Coding]
 ---
 
@@ -193,7 +193,7 @@ Keep track of your current status in browser-use-ts/agent/TODO.md
 
 ### UI
 
-UI [design](./recipes/prompts/ui.md):
+UI [design](./recipes/ui.md):
 
 - 设计原则.
 - 颜色规范.
@@ -266,7 +266,7 @@ Example usage:
 
 ### Page
 
-Prototype [implementation](./recipes/prompts/prototype.md):
+Prototype [implementation](./recipes/prototype.md):
 
 - 设计稿处理.
 - 样式实现规范.
@@ -722,7 +722,7 @@ I'll run the code and feed you the logs results.
 
 ### Reading
 
-[内容分析师](./recipes/prompts/analysis.md).
+[内容分析师](./recipes/analysis.md).
 
 ### Learning
 
