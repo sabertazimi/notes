@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-tags: [AI, ML, Reinforcement, RL, ActorCritic]
+tags: [AI, ML, Reinforcement, RL, Actor]
 ---
 
 # Reinforcement Learning

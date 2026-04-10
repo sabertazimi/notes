@@ -14,10 +14,10 @@ interface Note {
 const DefaultNotes: Note[][] = [
   // Row 1: AI & Machine Learning
   [
-    { title: 'Large Language Models', category: 'AI', href: '/ai/gen/llm' },
-    { title: 'Multi-Agent System', category: 'Agent', href: '/ai/gen/agent/multi-agent' },
-    { title: 'Prompt Engineering', category: 'LLM', href: '/ai/gen/prompt-engineering' },
-    { title: 'Claude Code', category: 'Agent', href: '/ai/gen/claude-code' },
+    { title: 'Reinforcement Learning', category: 'LLM', href: '/ai/llm/rl' },
+    { title: 'Multi-Agent System', category: 'Agent', href: '/ai/agent/multi-agent' },
+    { title: 'Prompt Engineering', category: 'LLM', href: '/ai/prompt/prompt-engineering' },
+    { title: 'Claude Code', category: 'Agent', href: '/ai/agent/claude-code' },
     { title: 'Transformer', category: 'AI', href: '/ai/dl/transformer' },
   ],
   // Row 2: Systems & Algorithms

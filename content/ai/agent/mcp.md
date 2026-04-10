@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 tags: [AI, Generative AI, LLM, Agent, MCP, Best Practice]
 ---
 

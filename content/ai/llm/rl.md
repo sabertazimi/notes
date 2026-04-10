@@ -1,6 +1,6 @@
 ---
 sidebar_position: 12
-tags: [AI, Generative AI, LLM, RL]
+tags: [AI, Generative AI, LLM, Reinforcement, RL]
 ---
 
 # Reinforcement Learning

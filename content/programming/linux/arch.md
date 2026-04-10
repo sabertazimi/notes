@@ -348,7 +348,7 @@ tv update-channels
 
 ## Claude Code
 
-**Complete setup** in Claude Code [guide](../../ai/gen/claude-code.md#setup).
+**Complete setup** in Claude Code [guide](../../ai/agent/claude-code.md#setup).
 
 ## OneDrive
 

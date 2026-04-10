@@ -75,7 +75,7 @@ Spec → Onboard → Direct → Verify → Integrate
 ## System
 
 OpenAI [Codex](https://openai.com/index/introducing-codex)
-system [prompts](../recipes/prompts/codex.md):
+system [prompts](../prompt/recipes/codex.md):
 
 - Instructions.
 - Git instructions.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 51
 tags: [AI, Generative AI, LLM, Agent, Claude]
 ---
 
@@ -97,7 +97,7 @@ Create a new POST $ARGUMENTS endpoint with:
 /api-new /api/users
 ```
 
-URL to markdown [command](./recipes/prompts/url2md.md).
+URL to Markdown [command](../prompt/recipes/url2md.md).
 
 ## Skills
 
@@ -201,7 +201,7 @@ Common skills [patterns](https://claude.com/blog/complete-guide-to-building-skil
 
 - Sequential workflow orchestration.
 - Multi-MCP coordination.
-- Iterative refinement: [ralph loop](./recipes/code/ralph.md), etc.
+- Iterative refinement: [ralph loop](../prompt/recipes/ralph.md), etc.
 - Context-aware tool selection.
 - Domain-specific intelligence: finance, marketing, math, etc.
 
@@ -278,7 +278,7 @@ it will extend Claude Code through the plugin system with:
 
 ## SDK
 
-- [Code review agent](./recipes/code/review.md).
+- [Code review agent](../prompt/recipes/review.md).
 
 ## Proxy
 

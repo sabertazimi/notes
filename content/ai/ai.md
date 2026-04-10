@@ -20,4 +20,6 @@ tags: [AI]
 
 ## Generative AI
 
-- [Generative AI](./gen/gen.md) - Large language models, prompt engineering, agent, and agentic coding
+- [Large Language Model](./llm/llm.md) - LLM fundamentals, training, fine-tuning, RAG, and reasoning
+- [Prompt Engineering](./prompt/prompt.md) - Prompt engineering, prompts collection, and recipes
+- [Agent](./agent/agent.md) - AI agent architecture, patterns, tooling, and MCP
