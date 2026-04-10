@@ -151,6 +151,13 @@ Working memory and scratchpad stores and updates dynamic details during conversa
 
 ## Memory
 
+- Working memory: 即时信息
+- Short-term memory: 会话信息
+- Long-term memory: 用户偏好, 历史交互, 一般知识
+- Persona memory: 角色信息
+- Episodic memory: 工作流与情景信息
+- Entity memory: 实体与事件信息
+
 ### System
 
 [Memory system](https://cookbook.openai.com/examples/agents_sdk/context_personalization#memory-guardrails):
