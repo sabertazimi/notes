@@ -61,6 +61,38 @@ def trim_messages(state: AgentState, runtime: Runtime) -> dict[str, Any] | None:
     pass
 ```
 
+### Model Call
+
+```python
+from langchain.agents import create_agent
+from langchain.agents.middleware import wrap_model_call, ModelRequest, ModelResponse
+from langchain_openai import ChatOpenAI
+
+
+basic_model = ChatOpenAI(model="gpt-4o")
+advanced_model = ChatOpenAI(model="gpt-5")
+
+
+@wrap_model_call
+def dynamic_model_selection(request: ModelRequest, handler) -> ModelResponse:
+    """Choose model based on conversation complexity."""
+    message_count = len(request.state["messages"])
+
+    if message_count > 5:
+        model = basic_model
+    else:
+        model = advanced_model
+
+    print(f"message_count: {message_count}")
+    print(f"model_name: {model.model_name}")
+    return handler(request.override(model=model))
+
+agent = create_agent(
+    model=advanced_model,
+    middleware=[dynamic_model_selection]
+)
+```
+
 ## Retrieval-Augmented Generation
 
 ```python
