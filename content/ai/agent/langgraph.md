@@ -42,6 +42,25 @@ response = ChatAnthropic().with_structured_output(
 print(response.model_dump_json(indent=2))
 ```
 
+## Middleware
+
+### Before Hook
+
+```python
+from langchain.agents.middleware import before_agent, before_model, AgentState
+from langgraph.runtime import Runtime
+
+
+@before_agent(can_jump_to=["end"])
+def content_filter(state: AgentState, runtime: Runtime) -> dict[str, Any] | None:
+    pass
+
+
+@before_model
+def trim_messages(state: AgentState, runtime: Runtime) -> dict[str, Any] | None:
+    pass
+```
+
 ## Retrieval-Augmented Generation
 
 ```python
