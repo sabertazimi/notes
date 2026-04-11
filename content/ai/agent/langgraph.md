@@ -266,7 +266,26 @@ for message in result['messages']:
     message.pretty_print()
 ```
 
-## Retrieval-Augmented Generation
+### Compression
+
+```python
+from langchain.agents import create_agent
+from langchain.agents.middleware import SummarizationMiddleware
+
+
+agent = create_agent(
+    model=llm,
+    middleware=[
+        SummarizationMiddleware(
+            model=llm,
+            trigger=('tokens', 3000), # Trigger summarization at 3000 tokens
+            keep=('messages', 20),    # Keep last 20 messages after summary
+        ),
+    ],
+)
+```
+
+### Retrieval-Augmented Generation
 
 ```python
 from google.colab import userdata
