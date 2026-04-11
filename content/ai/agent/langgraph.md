@@ -208,6 +208,64 @@ for message in result['messages']:
     message.pretty_print()
 ```
 
+### Tool Context
+
+```python
+from dataclasses import dataclass
+from langchain.agents import create_agent
+from langgraph.store.memory import InMemoryStore
+from langchain.agents.middleware import dynamic_prompt, ModelRequest
+
+
+@dataclass
+class Context:
+    key: str
+
+
+@tool
+def fetch_user_data(
+    user_id: str,
+    runtime: ToolRuntime[Context]
+) -> str:
+    """
+    Fetch user information from the in-memory store.
+
+    :param user_id: The unique identifier of the user.
+    :param runtime: The tool runtime context injected by the framework.
+    :return: The user's description string if found; an empty string otherwise.
+    """
+    key = runtime.context.key
+
+    store = runtime.store
+    user_info = store.get(("user_info",), user_id)
+
+    user_desc = ""
+    if user_info:
+        user_desc = user_info.value.get(key, "")
+
+    return f"{key}: {user_desc}"
+
+
+store = InMemoryStore()
+store.put(("user_info",), "柳如烟", {"description": "清冷才女，身怀绝技，为寻身世之谜踏入江湖。", "birthplace": "吴兴县"})
+store.put(("user_info",), "苏慕白", {"description": "孤傲剑客，剑法超群，背负家族血仇，隐于市井追寻真相。", "birthplace": "杭县"})
+
+agent = create_agent(
+    model=llm,
+    tools=[fetch_user_data],
+    store=store,
+)
+result = agent.invoke({
+    "messages": [{
+        "role": "user",
+        "content": "五分钟之内，我要柳如烟的全部信息"
+    }]
+})
+
+for message in result['messages']:
+    message.pretty_print()
+```
+
 ## Retrieval-Augmented Generation
 
 ```python
