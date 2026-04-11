@@ -285,7 +285,46 @@ agent = create_agent(
 )
 ```
 
-### Retrieval-Augmented Generation
+## Multi-Agent System
+
+```python
+from langchain.agents import create_agent
+from langgraph_supervisor import create_supervisor
+
+
+subagent1 = create_agent(
+    model=llm,
+    tools=[add],
+    name="subagent-1",
+)
+subagent2 = create_agent(
+    model=llm,
+    tools=[multiply],
+    name="subagent-2",
+)
+subagent3 = create_agent(
+    model=llm,
+    tools=[divide],
+    name="subagent-3",
+)
+
+supervisor_graph = create_supervisor(
+    [subagent1, subagent2, subagent3],
+    model=llm,
+    prompt="提示: 如遇两数相减仍可用两数相加工具实现, 只需将一个数加上另一个数的负数"
+)
+supervisor_app = supervisor_graph.compile()
+result = supervisor_app.invoke({
+    "messages": [{"role": "user", "content": "计算 38462 + 378 / 49 * 83723 - 123 的结果"}]}
+)
+
+for message in result["messages"]:
+    message.pretty_print()
+```
+
+## Retrieval-Augmented Generation
+
+### Embedding
 
 ```python
 from google.colab import userdata
