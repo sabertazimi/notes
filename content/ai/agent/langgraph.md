@@ -93,6 +93,55 @@ agent = create_agent(
 )
 ```
 
+### Human in the Loop
+
+```python
+import uuid
+from langchain.agents import create_agent
+from langchain.agents.middleware import HumanInTheLoopMiddleware
+from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.types import Command
+
+# Create agent
+tool_agent = create_agent(
+    model=llm,
+    tools=[get_weather, add_numbers, calculate_bmi],
+    middleware=[
+        HumanInTheLoopMiddleware(
+            interrupt_on={
+                # 无需触发人工审批
+                "get_weather": False,
+                # 需要审批，允许 approve, edit, reject 三种审批类型
+                "add_numbers": True,
+                # 需要审批，允许 approve, reject 两种审批类型
+                "calculate_bmi": {"allowed_decisions": ["approve", "reject"]},
+            },
+            description_prefix="Tool execution pending approval",
+        ),
+    ],
+    checkpointer=InMemorySaver(),
+    system_prompt="You are a helpful assistant",
+)
+config = {"configurable": {"thread_id": str(uuid.uuid4())}}
+
+# Wait for human decision
+result = tool_agent.invoke(
+    {"messages": [{
+        "role": "user",
+        "content": "我身高180cm，体重180斤，我的BMI是多少"
+    }]},
+    config=config,
+)
+
+# Resume with approval decision
+result = tool_agent.invoke(
+    Command(
+        resume={"decisions": [{"type": "approve"}]}  # or "edit", "reject"
+    ),
+    config=config
+)
+```
+
 ## Retrieval-Augmented Generation
 
 ```python
