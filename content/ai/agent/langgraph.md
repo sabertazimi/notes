@@ -142,6 +142,72 @@ result = tool_agent.invoke(
 )
 ```
 
+## Context
+
+[Context engineering](https://github.com/luochang212/dive-into-langgraph/blob/main/6.context.ipynb):
+
+- State
+- Store
+- Runtime
+
+### Dynamic System Prompt
+
+```python
+from dataclasses import dataclass
+from langchain.agents import create_agent
+from langgraph.store.memory import InMemoryStore
+from langchain.agents.middleware import dynamic_prompt, ModelRequest
+
+
+@dataclass
+class Context:
+    user_id: str
+
+
+@dynamic_prompt
+def state_aware_prompt(request: ModelRequest) -> str:
+    base = "You are a helpful assistant."
+
+    # 1. State: request.messages -> request.state["messages"]
+    message_count = len(request.messages)
+
+    if message_count > 6:
+        base += "\nThis is a long conversation - be extra concise."
+
+    # 2. Store and runtime context
+    store = request.runtime.store
+    user_id = request.runtime.context.user_id
+    user_prefs = store.get(("preferences",), user_id)
+
+    if user_prefs:
+        style = user_prefs.value.get("communication_style", "balanced")
+        base += f"\nUser prefers {style} responses."
+
+    return base
+
+
+store = InMemoryStore()
+store.put(("preferences",), "user_1", {"communication_style": "Chinese"})
+store.put(("preferences",), "user_2", {"communication_style": "Korean"})
+
+agent = create_agent(
+    model=llm,
+    middleware=[store_aware_prompt],
+    context_schema=Context,
+    store=store,
+)
+result = agent.invoke(
+    {"messages": [
+        {"role": "system", "content": "You are a helpful assistant. Please be extra concise."},
+        {"role": "user", "content": 'What is a "hold short line"?'}
+    ]},
+    context=Context(user_id="user_1"),
+)
+
+for message in result['messages']:
+    message.pretty_print()
+```
+
 ## Retrieval-Augmented Generation
 
 ```python
