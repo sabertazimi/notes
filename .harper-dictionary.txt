@@ -11,6 +11,7 @@ flatpak
 ghostty
 harper
 hyprland
+mixup
 multilib
 nginx
 niri
@@ -27,6 +28,8 @@ shadcn
 subagent
 subagents
 tty
+underfitting
+variational
 whitepaper
 wps
 xdg

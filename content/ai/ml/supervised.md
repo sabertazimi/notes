@@ -43,7 +43,7 @@ on testing data or new data.
 | $x^4$ |           14.9 |          28.2 |
 | $x^5$ |           12.8 |         232.1 |
 
-A extreme example,
+An extreme example,
 such function obtains $0$ training loss, but large testing loss:
 
 $$
@@ -86,12 +86,12 @@ $$
   $y=\text{softmax}(Wx+b)$,
   $L=-\sum\limits_{i=1}^n{y_i\log(\hat{y}_i)}$,
   e.g. document classification.
-- Non-linear model:
+- Nonlinear model:
   - Deep learning: $y=\text{softmax}(\text{ReLU}(Wx+b))$,
     e.g. image recognition, game playing.
-  - Support vector machine (SVM): $y=\text{sign}(Wx+b)$.
+  - Support vector machine (`SVM`): $y=\text{sign}(Wx+b)$.
   - Decision tree: $y=\text{vote}(\text{leaves}(x))$.
-  - K-nearest neighbors (KNN): $y=\text{vote}(\text{neighbors}(x))$.
+  - K-nearest neighbors (`KNN`): $y=\text{vote}(\text{neighbors}(x))$.
 
 ## Structured Learning
 
