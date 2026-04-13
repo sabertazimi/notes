@@ -104,9 +104,17 @@ $$
 
 ### Decision Tree
 
-最小化条件熵, $\sum_{v=1}^{V}\frac{|{D^v}|}{|{D}|}\text{Ent}(D^v)$:
+最大化信息增益 (Information Gain):
 
-$$y=\text{vote}(\text{leaves}(x))$$
+$$
+\begin{aligned}
+  a_* &= \underset{a \in A}{\arg \max} \text{Gain}(D, a) \\
+  &= \underset{a \in A}{\arg \max} \text{Ent}(D) - \sum_{v=1}^{V}\frac{|{D^v}|}{|{D}|}\text{Ent}(D^v)
+\end{aligned}
+$$
+
+其中, 信息熵为 $\text{Ent}(D)=-\sum_{k=1}^{|\mathcal{Y}|}p_k\log_2 p_k$,
+熵值越大, 数据越混乱, 不确定性越大.
 
 ### Support Vector Machine
 
