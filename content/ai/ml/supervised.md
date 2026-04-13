@@ -78,20 +78,70 @@ $$
 
 ## Classification
 
-- Binary classification:
-  $y=\delta(Wx+b)$,
-  $L=\sum\limits_{i=1}^n\delta(y_i\ne\hat{y}_i)$,
-  e.g. spam filtering.
-- Multi-class classification:
-  $y=\text{softmax}(Wx+b)$,
-  $L=-\sum\limits_{i=1}^n{y_i\log(\hat{y}_i)}$,
-  e.g. document classification.
-- Nonlinear model:
-  - Deep learning: $y=\text{softmax}(\text{ReLU}(Wx+b))$,
-    e.g. image recognition, game playing.
-  - Support vector machine (`SVM`): $y=\text{sign}(Wx+b)$.
-  - Decision tree: $y=\text{vote}(\text{leaves}(x))$.
-  - K-nearest neighbors (`KNN`): $y=\text{vote}(\text{neighbors}(x))$.
+### Binary Class
+
+Spam filtering:
+
+$$
+y=\delta(Wx+b)
+$$
+
+$$
+L=\sum\limits_{i=1}^n\delta(y_i\ne\hat{y}_i)
+$$
+
+### Multiple Class
+
+Document classification:
+
+$$
+y=\text{softmax}(Wx+b)
+$$
+
+$$
+L=-\sum\limits_{i=1}^n{y_i\log(\hat{y}_i)}
+$$
+
+### Decision Tree
+
+最小化条件熵, $\sum_{v=1}^{V}\frac{|{D^v}|}{|{D}|}\text{Ent}(D^v)$:
+
+$$y=\text{vote}(\text{leaves}(x))$$
+
+### Support Vector Machine
+
+`SVM`, 寻找距离正负样本都最远的超平面:
+
+$$
+y=\text{sign}(Wx+b)
+$$
+
+### Bayesian Classifier
+
+最小化分类错误率:
+
+$$
+\begin{aligned}
+  h^*(\boldsymbol{x}) &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} R(c_i | \boldsymbol{x}) \\
+  &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} \sum_{j=1}^N\lambda_{ij}P(c_j | \boldsymbol{x})
+\end{aligned}
+$$
+
+### K-Nearest Neighbors
+
+`KNN`:
+
+$$
+y=\text{vote}(\text{neighbors}(x))
+$$
+
+### Neural Network
+
+Image recognition, game playing:
+
+$$
+y=\text{softmax}(\text{ReLU}(Wx+b))
+$$
 
 ## Structured Learning
 

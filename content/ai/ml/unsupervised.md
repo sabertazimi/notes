@@ -82,8 +82,8 @@ $$
 
 $$
 \begin{split}
-G^*&=\arg\min_G\max_DV(G,D)\\
-D^*&=\arg\max_DV(D,G)
+  G^*&=\arg\min_G\max_DV(G,D)\\
+  D^*&=\arg\max_DV(D,G)
 \end{split}
 $$
 
