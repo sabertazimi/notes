@@ -118,14 +118,22 @@ $$
 
 ### Bayesian Classifier
 
-最小化分类错误率:
+贝叶斯分类器, 最小化分类错误率:
 
 $$
 \begin{aligned}
-  h^*(\boldsymbol{x}) &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} R(c_i | \boldsymbol{x}) \\
+  h^*(\boldsymbol{x}) &= \underset{c \in \mathcal{Y}}{\arg \min} R(c | \boldsymbol{x}) \\
   &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} \sum_{j=1}^N\lambda_{ij}P(c_j | \boldsymbol{x})
 \end{aligned}
 $$
+
+朴素贝叶斯分类器, 最大化后验概率:
+
+$$
+h_\text{nb}(\boldsymbol{x}) = \underset{c \in \mathcal{Y}}{\arg \max} P(c) \prod_{i=1}^{d}P(x_i | c)
+$$
+
+其中, $P(c) = \frac{|D_c|}{|D|}$, 利用样本数之比 (频率) 估计先验概率.
 
 ### K-Nearest Neighbors
 
