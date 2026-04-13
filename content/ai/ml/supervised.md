@@ -151,6 +151,14 @@ $$
 y=\text{softmax}(\text{ReLU}(Wx+b))
 $$
 
+## Ensemble Learning
+
+结合多个`个体学习器` (e.g. 决策树, 支持向量机, 神经网络)
+完成学习任务的机器学习范式:
+
+- 基础模型需要满足 `好而不同`, 具有准确性与差异性.
+- $\epsilon = 0.5$ 的个体学习器对收敛没有作用: 误差率高 (取反) 或低都有作用.
+
 ## Structured Learning
 
 ### Training
