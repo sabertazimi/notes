@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: [AI, ML, Supervised, Regression, Classification]
+tags: [AI, ML, Supervised, Regression, Classification, Ensemble]
 ---
 
 # Supervised Learning

@@ -34,6 +34,9 @@ tags: [AI, Generative AI, LLM, RAG]
 
 ## Embeddings
 
+词嵌入是自然语言处理 (NLP) 中的一种技术,
+将词汇映射到实数向量空间, 使得词汇之间的语义关系可以通过向量空间中的距离来表示.
+
 [Various types](https://kaggle.com/whitepaper-embeddings-and-vector-stores):
 
 - Continuous bag of words (`CBOW`):

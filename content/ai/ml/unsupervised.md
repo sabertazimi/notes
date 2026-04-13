@@ -1,9 +1,33 @@
 ---
 sidebar_position: 2
-tags: [AI, ML, Unsupervised, PCA, GAN, VAE]
+tags: [AI, ML, Unsupervised, Clustering, PCA, GAN, VAE]
 ---
 
 # Unsupervised Learning
+
+## Clustering
+
+### Distance
+
+1. 非负性:
+   $\text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_j) \geqslant 0$
+2. 同一性:
+   $\text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_j) = 0$ 当且仅当 $\boldsymbol{x}_i = \boldsymbol{x}_j$
+3. 对称性:
+   $\text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_j) = \text{dist}(\boldsymbol{x}_j, \boldsymbol{x}_i)$
+4. 直递性:
+   $\text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_j) \leqslant \text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_k) + \text{dist}(\boldsymbol{x}_k, \boldsymbol{x}_j)$
+
+$$
+\text{dist}_{\text{mk}} (\boldsymbol{x}_i, \boldsymbol{x}_j) = \left( \sum_{u=1}^{n} |x_{iu} - x_{ju}|^p \right)^{\frac{1}{p}}
+$$
+
+$$
+\text{VDM}_p(a, b) = \sum_{i=1}^{k} \left| \frac{m_{u, a, i}}{m_{u, a}} - \frac{m_{u, b, i}}{m_{u, b}} \right|^p
+$$
+
+其中, 明可夫斯基距离常用于离散有序/连续距离度量,
+数值差异度量 (Value Difference Metric) 常用于离散无序距离度量.
 
 ## Principal Component Analysis
 
@@ -41,11 +65,6 @@ x'_i=\frac{x_i-\mu}{\sigma}
 $$
 
 :::
-
-## Word Embedding
-
-词嵌入是自然语言处理 (NLP) 中的一种技术,
-将词汇映射到实数向量空间, 使得词汇之间的语义关系可以通过向量空间中的距离来表示.
 
 ## Variational Auto-Encoders
 
