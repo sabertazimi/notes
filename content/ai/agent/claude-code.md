@@ -20,11 +20,8 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 4. Set up harness:
 
 ```bash
-/plugin install ralph-loop
-```
-
-```bash
-/plugin install claude-hud
+claude plugin install ralph-loop
+claude plugin install claude-hud
 ```
 
 ```bash
