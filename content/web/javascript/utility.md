@@ -1,6 +1,6 @@
 ---
 sidebar_position: 27
-tags: [Web, JavaScript, ECMAScript]
+tags: [Web, JavaScript, ECMAScript, Timer, Math, Atomic, Signal, Stream, i18n]
 ---
 
 # Utility
@@ -19,16 +19,16 @@ tags: [Web, JavaScript, ECMAScript]
 - Forbidden set `eval`/`arguments` to variable identifiers (`Syntax Error`).
 - Forbidden `with` statement (`Syntax Error`).
 - Forbidden octal numbers (`Syntax Error`).
-- ES6 classes are automatically in strict mode.
-- ES6 modules are automatically in strict mode.
+- `ES6` classes are automatically in strict mode.
+- `ES6` modules are automatically in strict mode.
 
 ## Timer
 
-- setTimeout.
-- setImmediate.
-- setInterval: 完全无法保证两个 timer 执行时间间隔 (可能连续执行, 也可能间隔过长).
-- requestAnimationFrame.
-- requestIdleCallback.
+- `setTimeout`
+- `setImmediate`
+- `setInterval`: 完全无法保证两个 timer 执行时间间隔 (可能连续执行, 也可能间隔过长)
+- `requestAnimationFrame`
+- `requestIdleCallback`
 
 Combine `setInterval`/`setTimeout` function with closure function,
 implement **time slicing scheduler**.
@@ -91,7 +91,7 @@ function runAnimation(frameFunc) {
 - `Math.log(x)`: 返回 x 的自然对数.
 - `Math.log1p(x)`: 等于 `1 + Math.log(x)`.
 - `Math.pow(x, power)`: 返回 x 的 power 次幂.
-- `Math.hypot(...nums)`: 返回 nums 中每个数平方和的平方根.
+- `Math.hypot(...nums)`: 返回 `nums` 中每个数平方和的平方根.
 - `Math.clz32(x)`: 返回 32 位整数 x 的前置零的数量.
 - `Math.sign(x)`: 返回表示 x 符号的 `1`/`0`/`-0`/`-1`.
 - `Math.trunc(x)`: 返回 x 的整数部分, 删除所有小数.
@@ -309,7 +309,7 @@ console.log(decodeURIComponent(uri))
 - `pathname`.
 - `port`.
 - `protocol`.
-- `search`: [USVString](https://developer.mozilla.org/docs/Web/API/USVString).
+- `search`: [Unicode Scalar Value String](https://developer.mozilla.org/docs/Web/API/USVString).
 - `searchParams`: URL search map.
 - `username`.
 - `password`.
@@ -350,7 +350,7 @@ function saveTextAsFile(textToWrite, fileNameToSaveAs, fileType) {
 }
 ```
 
-[URLSearchParams](https://developer.mozilla.org/docs/Web/API/URLSearchParams):
+[`URLSearchParams`](https://developer.mozilla.org/docs/Web/API/URLSearchParams):
 
 ```ts
 // window.location.search
@@ -374,7 +374,7 @@ alert(searchParams.toString()) // " num=10&page=3"
 
 ## Encoding and Decoding
 
-[TextEncoder API](https://developer.mozilla.org/docs/Web/API/TextEncoder):
+[`TextEncoder`](https://developer.mozilla.org/docs/Web/API/TextEncoder):
 
 ```ts
 const textEncoder = new TextEncoder()
@@ -426,7 +426,7 @@ while (true) {
 // Uint8Array[111]
 ```
 
-[TextDecoder API](https://developer.mozilla.org/docs/Web/API/TextDecoder):
+[`TextDecoder`](https://developer.mozilla.org/docs/Web/API/TextDecoder):
 
 ```ts
 const textDecoder = new TextDecoder()
@@ -511,3 +511,7 @@ const dtfEnglish = new Intl.DateTimeFormat('en', {
 dtfEnglish.format(new Date()) // => 'May 7, 2019'
 dtfEnglish.formatRange(start, end) // => 'May 7 - 9, 2019'
 ```
+
+## References
+
+- `Intl` [cookbook](https://polypane.app/blog/the-intl-api-the-best-browser-api-youre-not-using)
