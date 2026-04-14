@@ -66,13 +66,23 @@ To prevent overfitting, we can:
   - Dropout.
   - Regularization.
 
+### Regularization
+
+- `L1` (Lasso): $L(w)=\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2+\lambda\sum\limits_{i=1}^n|w_i|$,
+  产生稀疏解, 可用于特征选择
+- `L2` (Ridge): $L(w)=\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2+\lambda\sum\limits_{i=1}^n{w_i^2}$,
+  权重衰减 (Weight Decay), 防止权重过大
+- Elastic Net: $L(w)=\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2+\lambda_1\sum\limits_{i=1}^n|w_i|+\lambda_2\sum\limits_{i=1}^n{w_i^2}$,
+  结合 `L1` 与 `L2`
+
 $$
 \begin{split}
-  L(w)&=\sum\limits_{i=1}^n(y_i-\hat{y}_i)^2+\lambda\sum\limits_{i=1}^n{w_i^2}\\
-  w_{t+1}&=w_t-\eta\nabla{L(w)}\\
-  &=w_t-\eta(\frac{\partial{L}}{\partial{w}}+\lambda{w_t})\\
+  w_{t+1}&=w_t-\eta\nabla{L(w)} \\
+  &=w_t-\eta(\frac{\partial{L}}{\partial{w}}+\lambda\,\text{sign}(w_t))
+  \quad (\text{L1: Sparse Solution}) \\
+  w_{t+1}&=w_t-\eta\nabla{L(w)} \\
   &=(1-\eta\lambda)w_t-\eta\frac{\partial{L}}{\partial{w}}
-  \quad (\text{Regularization: Weight Decay})
+  \quad (\text{L2: Weight Decay})
 \end{split}
 $$
 
