@@ -183,7 +183,7 @@ def gradient_descent(initial_x, learning_rate, num_iterations):
 - Adaptive learning rate:
   - [AdaGrad](https://jmlr.org/papers/v12/duchi11a.html):
     adaptive sub-gradient method,
-    $w_{t+1}=w_t-\frac{\frac{\eta}{\sqrt{t+1}}}{\sqrt{\frac{1}{t+1}\sum_{i=0}^t{g_i^2}}}g_t=w_t-\frac{\eta}{\sqrt{\sum_{i=0}^t{g_i^2}}}g_t$.
+    $w_{t+1}=w_t-\frac{\frac{\eta}{\sqrt{t+1}}}{\sqrt{\frac{1}{t+1}\sum\limits_{i=0}^t{g_i^2}}}g_t=w_t-\frac{\eta}{\sqrt{\sum\limits_{i=0}^t{g_i^2}}}g_t$.
   - [RMSprop](https://pytorch.org/docs/stable/generated/torch.optim.RMSprop.html):
     root mean square propagation,
     $w_{t+1}=w_t-\frac{\eta}{\sigma_t}g_t=w_t-\frac{\eta}{\sqrt{\alpha\sigma_{t-1}^2}+(1-\alpha)g_t^2}g_t$,

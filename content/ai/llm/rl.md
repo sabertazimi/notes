@@ -47,9 +47,9 @@ KL 散度又称为相对熵，可由信息熵与交叉熵组成:
 
 $$
 \begin{aligned}
-  D_{\text{KL}}(p\|q) &= \sum_{x} p(x) \log_b\left(\frac{p(x)}{q(x)}\right) \\
-  &= \sum_{x} p(x) \left(\log_b p(x) - \log_b q(x)\right) \\
-  &= \sum_{x} p(x) \log_b p(x) - \sum_{x} p(x) \log_b q(x)
+  D_{\text{KL}}(p\|q) &= \sum\limits_{x} p(x) \log_b\left(\frac{p(x)}{q(x)}\right) \\
+  &= \sum\limits_{x} p(x) \left(\log_b p(x) - \log_b q(x)\right) \\
+  &= \sum\limits_{x} p(x) \log_b p(x) - \sum\limits_{x} p(x) \log_b q(x)
 \end{aligned}
 $$
 

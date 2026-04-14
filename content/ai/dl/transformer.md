@@ -133,7 +133,7 @@ $$
 
 $$
 \begin{equation}
-  \sigma(z_i)=\frac{e^{z_i/T}}{\sum_{j=1}^K{e^{z_j/T}}}
+  \sigma(z_i)=\frac{e^{z_i/T}}{\sum\limits_{j=1}^K{e^{z_j/T}}}
 \end{equation}
 $$
 

@@ -6,7 +6,7 @@ tags: [AI, Generative AI, LLM, Pre-Training]
 # Pre-Training
 
 $$
-\mathcal{L}_{\text{pretrain}} = - \sum_{t=1}^{T} \log P(x_t | x_1, x_2, \dots, x_{t-1}; \theta)
+\mathcal{L}_{\text{pretrain}} = - \sum\limits_{t=1}^{T} \log P(x_t | x_1, x_2, \dots, x_{t-1}; \theta)
 $$
 
 ## BERT

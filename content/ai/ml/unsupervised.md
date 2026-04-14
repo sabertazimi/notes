@@ -19,11 +19,11 @@ tags: [AI, ML, Unsupervised, Clustering, PCA, GAN, VAE]
    $\text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_j) \leqslant \text{dist}(\boldsymbol{x}_i, \boldsymbol{x}_k) + \text{dist}(\boldsymbol{x}_k, \boldsymbol{x}_j)$
 
 $$
-\text{dist}_{\text{mk}} (\boldsymbol{x}_i, \boldsymbol{x}_j) = \left( \sum_{u=1}^{n} |x_{iu} - x_{ju}|^p \right)^{\frac{1}{p}}
+\text{dist}_{\text{mk}} (\boldsymbol{x}_i, \boldsymbol{x}_j) = \left( \sum\limits_{u=1}^{n} |x_{iu} - x_{ju}|^p \right)^{\frac{1}{p}}
 $$
 
 $$
-\text{VDM}_p(a, b) = \sum_{i=1}^{k} \left| \frac{m_{u, a, i}}{m_{u, a}} - \frac{m_{u, b, i}}{m_{u, b}} \right|^p
+\text{VDM}_p(a, b) = \sum\limits_{i=1}^{k} \left| \frac{m_{u, a, i}}{m_{u, a}} - \frac{m_{u, b, i}}{m_{u, b}} \right|^p
 $$
 
 其中, 明可夫斯基距离常用于离散有序/连续距离度量,
@@ -65,10 +65,10 @@ $$
 $$
 \begin{equation}
   C=\frac{1}{m}XX^T=\frac{1}{m}\begin{bmatrix}
-    \sum_{i=1}^m(x_i^1)^2&\sum_{i=1}^m{x_i^1x_i^2}&\dots&\sum_{i=1}^m{x_i^1x_i^n}\\
-    \sum_{i=1}^m{x_i^2x_i^1}&\sum_{i=1}^m(x_i^2)^2&\dots&\sum_{i=1}^m{x_i^2x_i^n}\\
+    \sum\limits_{i=1}^m(x_i^1)^2&\sum\limits_{i=1}^m{x_i^1x_i^2}&\dots&\sum\limits_{i=1}^m{x_i^1x_i^n}\\
+    \sum\limits_{i=1}^m{x_i^2x_i^1}&\sum\limits_{i=1}^m(x_i^2)^2&\dots&\sum\limits_{i=1}^m{x_i^2x_i^n}\\
     \vdots&\vdots&\ddots&\vdots\\
-    \sum_{i=1}^m{x_i^nx_i^1}&\sum_{i=1}^m{x_i^nx_i^2}&\dots&\sum_{i=1}^m(x_i^n)^2
+    \sum\limits_{i=1}^m{x_i^nx_i^1}&\sum\limits_{i=1}^m{x_i^nx_i^2}&\dots&\sum\limits_{i=1}^m(x_i^n)^2
   \end{bmatrix}
 \end{equation}
 $$

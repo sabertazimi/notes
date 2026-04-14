@@ -6,7 +6,7 @@ tags: [AI, Generative AI, LLM, Fine-Tuning]
 # Fine-Tuning
 
 $$
-\mathcal{L}_{\text{SFT}} = - \sum_{i=1}^{N} \log P(y_i | x_i; \theta)
+\mathcal{L}_{\text{SFT}} = - \sum\limits_{i=1}^{N} \log P(y_i | x_i; \theta)
 $$
 
 ## BERT Adapters

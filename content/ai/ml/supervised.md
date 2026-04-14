@@ -109,11 +109,11 @@ $$
 $$
 \begin{aligned}
   a_* &= \underset{a \in A}{\arg \max} \text{Gain}(D, a) \\
-  &= \underset{a \in A}{\arg \max} \text{Ent}(D) - \sum_{v=1}^{V}\frac{|{D^v}|}{|{D}|}\text{Ent}(D^v)
+  &= \underset{a \in A}{\arg \max} \text{Ent}(D) - \sum\limits_{v=1}^{V}\frac{|{D^v}|}{|{D}|}\text{Ent}(D^v)
 \end{aligned}
 $$
 
-其中, 信息熵为 $\text{Ent}(D)=-\sum_{k=1}^{|\mathcal{Y}|}p_k\log_2 p_k$,
+其中, 信息熵为 $\text{Ent}(D)=-\sum\limits_{k=1}^{|\mathcal{Y}|}p_k\log_2 p_k$,
 熵值越大, 数据越混乱, 不确定性越大.
 
 ### Support Vector Machine
@@ -137,7 +137,7 @@ $$
 $$
 \begin{aligned}
   h^*(\boldsymbol{x}) &= \underset{c \in \mathcal{Y}}{\arg \min} R(c | \boldsymbol{x}) \\
-  &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} \sum_{j=1}^N\lambda_{ij}P(c_j | \boldsymbol{x})
+  &= \underset{i \in \{1, 2, \dots, N\}}{\arg \min} \sum\limits_{j=1}^N\lambda_{ij}P(c_j | \boldsymbol{x})
 \end{aligned}
 $$
 

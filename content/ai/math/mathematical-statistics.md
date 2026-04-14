@@ -40,7 +40,7 @@ ${Var(X_1+\dots+X_n)}={Var(X_1)+\dots+Var(X_n)}={n}\sigma^2$,
 对于任意 $x$, 其分布函数为
 
 $$
-F_n(x)=P\left\{\frac{\sum_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}\leq{x}\right\}
+F_n(x)=P\left\{\frac{\sum\limits_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}\leq{x}\right\}
 $$
 
 满足
@@ -48,7 +48,7 @@ $$
 $$
 \begin{equation}
   \lim_{n\to\infty}F_n(x)
-  =\lim_{n\to\infty}P\left\{\frac{\sum_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}\leq{x}\right\}
+  =\lim_{n\to\infty}P\left\{\frac{\sum\limits_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}\leq{x}\right\}
   =\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x{e^{-\frac{t^2}{2}}dt}
   =\varnothing(x)
 \end{equation}
@@ -57,7 +57,7 @@ $$
 独立同分布的中心极限定理说明, 当 $n$ 足够大时,
 随机变量 $X_n=\sum\limits_{i=1}^n{X_i}$
 近似服从正态分布 $N(n\mu,n\sigma^2)$;
-标准化后的随机变量 $Y_n=\frac{\sum_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}$
+标准化后的随机变量 $Y_n=\frac{\sum\limits_{i=1}^n{X_i}-n\mu}{\sqrt{n}\sigma}$
 近似服从标准正态分布 $N(0,1)$.
 
 [![Central Limit Theorem](./figures/central-limit-theorem.png)](https://www.3blue1brown.com/lessons/clt)
