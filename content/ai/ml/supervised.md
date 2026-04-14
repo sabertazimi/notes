@@ -151,11 +151,15 @@ $$
 
 ### K-Nearest Neighbors
 
-`KNN`:
+`kNN` (近朱者赤) 基于与待测样本最近的 $k$ 个样本的信息进行预测:
 
 $$
 y=\text{vote}(\text{neighbors}(x))
 $$
+
+利用降维增大样本的稠密性,
+消解维度灾难 (样本稀疏而特征维数极高),
+使得 `kNN` 起作用.
 
 ### Neural Network
 
