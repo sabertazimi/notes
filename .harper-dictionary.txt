@@ -18,6 +18,7 @@ niri
 nvim
 omni
 onedrive
+optimality
 pacman
 pnpm
 polkit

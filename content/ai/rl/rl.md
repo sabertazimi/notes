@@ -1,31 +1,22 @@
 ---
 sidebar_position: 12
-tags: [AI, ML, Reinforcement, RL, Actor]
+tags: [AI, ML, RL]
 ---
 
 # Reinforcement Learning
 
-强化学习是一种机器学习方法, 通过智能体与环境交互,
-智能体根据环境的反馈调整策略, 利用梯度上升算法 (Gradient Ascent),
-最大化长期奖励 (learn from rewards and mistakes).
+## Foundations
 
-![Reinforcement Learning](./figures/reinforcement-learning.gif 'Reinforcement Learning')
+- [Markov Decision Process](./mdp.md) - 状态、动作、策略、奖励、回报、马尔可夫决策过程
+- [Bellman Equation](./bellman-equation.md) - 贝尔曼公式
+- [Bellman Optimality Equation](./bellman-optimality.md) - 贝尔曼最优公式
+- [Iteration](./iteration.md) - 值迭代、策略迭代、截断策略迭代
 
-$$
-\begin{equation}
-\begin{split}
-  \theta^*&=\arg\max\limits_\theta\bar{R}_\theta=\arg\max\limits_\theta\sum\limits_{\tau}R(\tau)P(\tau|\theta)\\
-  \theta_{t+1}&=\theta_t+\eta\nabla\bar{R}_\theta\\
-  \nabla\bar{R}_\theta&=\begin{bmatrix}\frac{\partial\bar{R}_\theta}{\partial{w_1}}\\\frac{\partial\bar{R}_\theta}{\partial{w_2}}\\\vdots\\\frac{\partial\bar{R}_\theta}{\partial{b_1}}\\\vdots\end{bmatrix}\\
-  R_t&=\sum\limits_{n=t}^N\gamma^{n-t}r_n
-\end{split}
-\end{equation}
-$$
+## Algorithms
 
-## Actor-Critic Model
-
-![Actor-Critic Model](./figures/actor-critic-model.png 'Actor-Critic Model')
-
-## Inverse Reinforcement Learning
-
-![Inverse Reinforcement Learning](./figures/inverse-reinforcement-learning.png 'Inverse Reinforcement Learning')
+- [Monte Carlo](./monte-carlo.md) - 蒙特卡洛学习
+- [Stochastic Approximation](./stochastic-approximation.md) - 随机梯度下降
+- [Temporal-Difference](./temporal-difference.md) - TD 学习与 Q-learning
+- [Value Function Approximation](./value-function.md) - 值函数逼近
+- [Policy Gradient](./policy-gradient.md) - 策略梯度算法
+- [Actor-Critic](./actor-critic.md) - Actor-Critic 算法

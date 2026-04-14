@@ -14,7 +14,7 @@ tags: [AI, Generative AI, LLM]
 
 - [Pre-Training](./pre-training.md) - Pre-trained models
 - [Fine-Tuning](./fine-tuning.md) - `SFT`, instruction-tuning, LoRA
-- [Reinforcement Learning](./rl.md) - `PPO`, `GRPO`, agentic RL
+- [Post-Training](./post-training.md) - `PPO`, `GRPO`, agentic RL
 
 ## Inference
 

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 12
-tags: [AI, Generative AI, LLM, Reinforcement, RL]
+tags: [AI, Generative AI, LLM, Post-Training, RL]
 ---
 
-# Reinforcement Learning
+# Post-Training
 
 ## Proximal Policy Optimization
 

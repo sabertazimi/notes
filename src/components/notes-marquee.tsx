@@ -14,7 +14,7 @@ interface Note {
 const DefaultNotes: Note[][] = [
   // Row 1: AI & Machine Learning
   [
-    { title: 'Reinforcement Learning', category: 'LLM', href: '/ai/llm/rl' },
+    { title: 'Bellman Equation', category: 'RL', href: '/ai/rl/bellman-equation' },
     { title: 'Multi-Agent System', category: 'Agent', href: '/ai/agent/multi-agent' },
     { title: 'Prompt Engineering', category: 'LLM', href: '/ai/prompt/prompt-engineering' },
     { title: 'Claude Code', category: 'Agent', href: '/ai/agent/claude-code' },
