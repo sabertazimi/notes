@@ -29,6 +29,31 @@ $$
 其中, 明可夫斯基距离常用于离散有序/连续距离度量,
 数值差异度量 (Value Difference Metric) 常用于离散无序距离度量.
 
+### K-Means
+
+最小化数据点到其所属簇中心的距离平方和 (即组内误差平方和 `WCSS`):
+
+1. 初始化: 随机选择 $k$ 个质心 (初始聚类中心)
+2. 分配 (Assignment): 分配数据点给距离最近的质心所在的簇 $d_{ji} = ||\boldsymbol{x}_j - \mu_i||_2$
+3. 更新 (Update): 计算各簇的数据点的均值, 设为新的质心
+4. 重复: 交替执行第 2 步和第 3 步, 直到收敛
+
+### `DBSCAN`
+
+密度聚类 (Density-Based Clustering) 基于样本分布紧密程度来确定聚类结构.
+通过考察样本之间的可连接性, 将具有足够高密度的区域划分为簇:
+
+1. $\epsilon$-邻域 ($\epsilon$-Neighborhood):
+   距离不超过 $\epsilon$ 的样本集合
+2. 核心对象 (Core Object):
+   $\epsilon$-邻域内至少包含 $\text{MinPts}$ 个样本
+3. 密度直达 (Directly Density-Reachable):
+   位于核心对象 $x_i$ 的 $\epsilon$-邻域内, $x_i$ -> $x_j$
+4. 密度可达 (Density-Reachable):
+   $x_i$ -> $p_1$ -> $p_2$ -> $\dots$ -> $p_n$ -> $x_j$
+5. 密度相连 (Density-Connected):
+   如上序列任意两点密度相连
+
 ## Principal Component Analysis
 
 主成分分析 (`PCA`) 是一种常用的数据降维方法, 将 $m$ 个 $n$ 维向量降为 $k$ 维,
