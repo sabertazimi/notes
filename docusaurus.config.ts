@@ -20,7 +20,7 @@ const config: Config = {
   projectName: 'notes',
   future: {
     v4: true,
-    experimental_faster: true,
+    faster: true,
   },
   markdown: {
     mermaid: true,
