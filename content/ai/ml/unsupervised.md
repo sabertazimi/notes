@@ -48,9 +48,9 @@ $$
 2. 核心对象 (Core Object):
    $\epsilon$-邻域内至少包含 $\text{MinPts}$ 个样本
 3. 密度直达 (Directly Density-Reachable):
-   位于核心对象 $x_i$ 的 $\epsilon$-邻域内, $x_i$ -> $x_j$
+   位于核心对象 $x_i$ 的 $\epsilon$-邻域内, $x_i \to x_j$
 4. 密度可达 (Density-Reachable):
-   $x_i$ -> $p_1$ -> $p_2$ -> $\dots$ -> $p_n$ -> $x_j$
+   $x_i \to p_1 \to p_2 \to \dots \to p_n \to x_j$
 5. 密度相连 (Density-Connected):
    如上序列任意两点密度相连
 
