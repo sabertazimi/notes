@@ -14,7 +14,9 @@ tags: [AI, ML, RL, TD, Q-Learning]
 
 - TD(0) 更新规则
 
-$$V(s_t) \leftarrow V(s_t) + \alpha [r_{t+1} + \gamma V(s_{t+1}) - V(s_t)]$$
+$$
+V(s_t) \leftarrow V(s_t) + \alpha [r_{t+1} + \gamma V(s_{t+1}) - V(s_t)]
+$$
 
 - TD 误差 (TD error): $\delta_t = r_{t+1} + \gamma V(s_{t+1}) - V(s_t)$
 - TD 与 RM 算法的关系
@@ -29,7 +31,9 @@ $$V(s_t) \leftarrow V(s_t) + \alpha [r_{t+1} + \gamma V(s_{t+1}) - V(s_t)]$$
 
 - Sarsa 更新规则
 
-$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)]$$
+$$
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)]
+$$
 
 - Sarsa: State-Action-Reward-State-Action
 - 在线策略控制: 行为策略 = 目标策略
@@ -37,7 +41,9 @@ $$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma Q(s_{t+1}, a_{t+
 
 ## Expected Sarsa
 
-$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \sum_{a'} \pi(a'|s_{t+1}) Q(s_{t+1}, a') - Q(s_t, a_t)]$$
+$$
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \sum_{a'} \pi(a'|s_{t+1}) Q(s_{t+1}, a') - Q(s_t, a_t)]
+$$
 
 - 降低 Sarsa 的方差
 - 可以使用任意策略进行探索
@@ -46,7 +52,9 @@ $$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \sum_{a'} \pi(a'
 
 - $n$-步回报 (n-step return)
 
-$$G_{t:t+n} = r_{t+1} + \gamma r_{t+2} + \cdots + \gamma^{n-1} r_{t+n} + \gamma^n V(s_{t+n})$$
+$$
+G_{t:t+n} = r_{t+1} + \gamma r_{t+2} + \cdots + \gamma^{n-1} r_{t+n} + \gamma^n V(s_{t+n})
+$$
 
 - $n$-步 TD 更新
 - $n$-步 Sarsa
@@ -55,7 +63,9 @@ $$G_{t:t+n} = r_{t+1} + \gamma r_{t+2} + \cdots + \gamma^{n-1} r_{t+n} + \gamma^
 
 - Q-learning 更新规则
 
-$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \max_{a'} Q(s_{t+1}, a') - Q(s_t, a_t)]$$
+$$
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_{t+1} + \gamma \max_{a'} Q(s_{t+1}, a') - Q(s_t, a_t)]
+$$
 
 - 离线策略控制: 行为策略 $\neq$ 目标策略
 - Q-learning 的收敛性保证

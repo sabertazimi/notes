@@ -15,7 +15,9 @@ tags: [AI, ML, RL, Policy Gradient]
 
 - 平均状态值 (Average state value)
 
-$$\bar{v}_\pi = \sum_s d_\pi(s) v_\pi(s)$$
+$$
+\bar{v}_\pi = \sum_s d_\pi(s) v_\pi(s)
+$$
 
 - 策略 $\pi$ 下的平稳分布 (Stationary distribution) $d_\pi(s)$
 
@@ -23,20 +25,28 @@ $$\bar{v}_\pi = \sum_s d_\pi(s) v_\pi(s)$$
 
 - 平均奖励 (Average reward)
 
-$$\bar{r}_\pi = \sum_s d_\pi(s) \sum_a \pi(a|s) r(s, a)$$
+$$
+\bar{r}_\pi = \sum_s d_\pi(s) \sum_a \pi(a|s) r(s, a)
+$$
 
 - 两个指标的关系: $\bar{v}_\pi = \bar{r}_\pi / (1 - \gamma)$
 - 离散时间平均奖励
 
-$$\bar{r}_\pi = \lim_{T \to \infty} \frac{1}{T} \mathbb{E}\left[\sum_{t=1}^{T} r_t\right]$$
+$$
+\bar{r}_\pi = \lim_{T \to \infty} \frac{1}{T} \mathbb{E}\left[\sum_{t=1}^{T} r_t\right]
+$$
 
 ## Gradients of the Metrics
 
 - 策略梯度定理 (Policy Gradient Theorem)
 
-$$\nabla_\theta \bar{v}_\pi = \sum_s d_\pi(s) \sum_a \nabla_\theta \pi_\theta(a|s) q_\pi(s, a)$$
+$$
+\nabla_\theta \bar{v}_\pi = \sum_s d_\pi(s) \sum_a \nabla_\theta \pi_\theta(a|s) q_\pi(s, a)
+$$
 
-$$\nabla_\theta \bar{r}_\pi = \sum_s d_\pi(s) \sum_a \nabla_\theta \pi_\theta(a|s) q_\pi(s, a)$$
+$$
+\nabla_\theta \bar{r}_\pi = \sum_s d_\pi(s) \sum_a \nabla_\theta \pi_\theta(a|s) q_\pi(s, a)
+$$
 
 - 策略梯度的推导过程
 - Score function (对数概率梯度): $\nabla_\theta \ln \pi_\theta(a|s)$
@@ -62,11 +72,15 @@ $$
 
 - REINFORCE 算法
 
-$$\theta \leftarrow \theta + \alpha G_t \nabla_\theta \ln \pi_\theta(a_t|s_t)$$
+$$
+\theta \leftarrow \theta + \alpha G_t \nabla_\theta \ln \pi_\theta(a_t|s_t)
+$$
 
 - REINFORCE with baseline: 减少方差
 
-$$\theta \leftarrow \theta + \alpha (G_t - b(s_t)) \nabla_\theta \ln \pi_\theta(a_t|s_t)$$
+$$
+\theta \leftarrow \theta + \alpha (G_t - b(s_t)) \nabla_\theta \ln \pi_\theta(a_t|s_t)
+$$
 
 - 基线 (Baseline) 的选取: 状态值函数 $b(s) = v_\pi(s)$
 - 方差减少技术的重要性

@@ -14,7 +14,9 @@ tags: [AI, ML, RL, SGD]
 
 - RM 算法的基本形式
 
-$$x_{k+1} = x_k - \alpha_k [g(x_k) + w_k]$$
+$$
+x_{k+1} = x_k - \alpha_k [g(x_k) + w_k]
+$$
 
 - 其中 $w_k$ 为零均值随机噪声
 - 步长 (Step size) 序列 $\alpha_k$ 的条件:
@@ -32,7 +34,9 @@ $$x_{k+1} = x_k - \alpha_k [g(x_k) + w_k]$$
 
 - SGD 算法的基本形式
 
-$$\theta_{k+1} = \theta_k - \alpha_k \nabla f_{i_k}(\theta_k)$$
+$$
+\theta_{k+1} = \theta_k - \alpha_k \nabla f_{i_k}(\theta_k)
+$$
 
 - SGD 与 RM 算法的关系
 - 随机梯度的无偏性: $\mathbb{E}[\nabla f_i(\theta)] = \nabla J(\theta)$

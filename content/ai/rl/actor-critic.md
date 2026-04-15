@@ -15,11 +15,15 @@ tags: [AI, ML, RL, Actor-Critic]
 - 用 TD 误差替代 Monte Carlo 回报
 - 优势函数 (Advantage function) 的引入
 
-$$A(s, a) = q_\pi(s, a) - v_\pi(s)$$
+$$
+A(s, a) = q_\pi(s, a) - v_\pi(s)
+$$
 
 - 策略更新
 
-$$\theta \leftarrow \theta + \alpha \delta_t \nabla_\theta \ln \pi_\theta(a_t|s_t)$$
+$$
+\theta \leftarrow \theta + \alpha \delta_t \nabla_\theta \ln \pi_\theta(a_t|s_t)
+$$
 
 - Critic 更新: TD 学习更新 $v_\phi$
 
@@ -28,7 +32,9 @@ $$\theta \leftarrow \theta + \alpha \delta_t \nabla_\theta \ln \pi_\theta(a_t|s_
 - 优势 Actor-Critic 的完整算法
 - 多步 TD 误差作为优势估计
 
-$$\hat{A}_t = \sum_{k=0}^{n-1} \gamma^k r_{t+k+1} + \gamma^n v_\phi(s_{t+n}) - v_\phi(s_t)$$
+$$
+\hat{A}_t = \sum_{k=0}^{n-1} \gamma^k r_{t+k+1} + \gamma^n v_\phi(s_{t+n}) - v_\phi(s_t)
+$$
 
 - 并行优势 Actor-Critic (A3C)
 
@@ -37,7 +43,9 @@ $$\hat{A}_t = \sum_{k=0}^{n-1} \gamma^k r_{t+k+1} + \gamma^n v_\phi(s_{t+n}) - v
 - 重要性采样 (Importance Sampling) 的基本原理
 - 重要性采样比率 (Importance Sampling Ratio)
 
-$$\rho_t = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{\text{old}}}(a_t|s_t)}$$
+$$
+\rho_t = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{\text{old}}}(a_t|s_t)}
+$$
 
 - 离线策略 Actor-Critic 的设计
 - 重要性采样的方差问题

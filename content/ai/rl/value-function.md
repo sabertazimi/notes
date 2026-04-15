@@ -15,11 +15,15 @@ tags: [AI, ML, RL, DQN]
 
 - 均方贝尔曼误差 (Mean Squared Bellman Error, MSBE)
 
-$$J(\boldsymbol{w}) = \mathbb{E}\left[(r + \gamma \hat{v}(s', \boldsymbol{w}) - \hat{v}(s, \boldsymbol{w}))^2\right]$$
+$$
+J(\boldsymbol{w}) = \mathbb{E}\left[(r + \gamma \hat{v}(s', \boldsymbol{w}) - \hat{v}(s, \boldsymbol{w}))^2\right]
+$$
 
 - 均方价值误差 (Mean Squared Value Error, MSVE)
 
-$$J(\boldsymbol{w}) = \mathbb{E}\left[(v_\pi(s) - \hat{v}(s, \boldsymbol{w}))^2\right]$$
+$$
+J(\boldsymbol{w}) = \mathbb{E}\left[(v_\pi(s) - \hat{v}(s, \boldsymbol{w}))^2\right]
+$$
 
 - MSBE vs. MSVE 的区别与联系
 - 随机梯度下降目标
@@ -28,7 +32,9 @@ $$J(\boldsymbol{w}) = \mathbb{E}\left[(v_\pi(s) - \hat{v}(s, \boldsymbol{w}))^2\
 
 - 梯度下降更新
 
-$$\boldsymbol{w} \leftarrow \boldsymbol{w} + \alpha \delta_t \nabla_{\boldsymbol{w}} \hat{v}(s_t, \boldsymbol{w})$$
+$$
+\boldsymbol{w} \leftarrow \boldsymbol{w} + \alpha \delta_t \nabla_{\boldsymbol{w}} \hat{v}(s_t, \boldsymbol{w})
+$$
 
 - 特征向量 / 基函数 (Basis functions) 的选择
 - 线性函数逼近 vs. 非线性函数逼近 (神经网络)

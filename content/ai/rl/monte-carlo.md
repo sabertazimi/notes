@@ -16,7 +16,9 @@ tags: [AI, ML, RL, MC]
 - 第二类蒙特卡洛方法 (Every-visit MC)
 - 基于经验均值的估计
 
-$$v(s) \approx \frac{1}{N(s)} \sum_{i=1}^{N(s)} G_i(s)$$
+$$
+v(s) \approx \frac{1}{N(s)} \sum_{i=1}^{N(s)} G_i(s)
+$$
 
 ## Monte Carlo Basic: Examples
 
@@ -33,7 +35,9 @@ $$v(s) \approx \frac{1}{N(s)} \sum_{i=1}^{N(s)} G_i(s)$$
 
 - $\epsilon$-贪心策略 (Epsilon-Greedy Policy)
 
-$$\pi(a|s) = \begin{cases} 1 - \epsilon + \epsilon/|\mathcal{A}|, & a = \arg\max_a Q(s, a) \\ \epsilon/|\mathcal{A}|, & \text{otherwise} \end{cases}$$
+$$
+\pi(a|s) = \begin{cases} 1 - \epsilon + \epsilon/|\mathcal{A}|, & a = \arg\max_a Q(s, a) \\ \epsilon/|\mathcal{A}|, & \text{otherwise} \end{cases}
+$$
 
 - 在线策略 (On-policy) 方法
 - 探索与利用的平衡 (Exploration vs. Exploitation)

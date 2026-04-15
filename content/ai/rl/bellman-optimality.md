@@ -13,26 +13,36 @@ tags: [AI, ML, RL, Bellman, Optimal]
 
 ## Optimal State Value Function
 
-$$v^*(s) = \max_\pi v_\pi(s)$$
+$$
+v^*(s) = \max_\pi v_\pi(s)
+$$
 
 ## Optimal Action Value Function
 
-$$q^*(s, a) = \max_\pi q_\pi(s, a)$$
+$$
+q^*(s, a) = \max_\pi q_\pi(s, a)
+$$
 
 - 最优状态值与最优动作值的关系
 
-$$v^*(s) = \max_a q^*(s, a)$$
+$$
+v^*(s) = \max_a q^*(s, a)
+$$
 
 ## Bellman Optimality Equation (BOE) for State Values
 
-$$v^*(s) = \max_a \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma v^*(s')]$$
+$$
+v^*(s) = \max_a \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma v^*(s')]
+$$
 
 - 与贝尔曼期望公式的区别: $\max$ 替代 $\sum \pi(a|s)$
 - BOE 是非线性公式, 没有闭式解
 
 ## Bellman Optimality Equation for Action Values
 
-$$q^*(s, a) = \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma \max_{a'} q^*(s', a')]$$
+$$
+q^*(s, a) = \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma \max_{a'} q^*(s', a')]
+$$
 
 ## Interesting Properties
 

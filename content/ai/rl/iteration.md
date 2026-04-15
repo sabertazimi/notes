@@ -9,7 +9,9 @@ tags: [AI, ML, RL, DP, Iteration]
 
 - 核心思想: 直接应用贝尔曼最优算子
 
-$$v_{k+1}(s) = \max_a \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma v_k(s')]$$
+$$
+v_{k+1}(s) = \max_a \sum_{s'} p(s'|s, a) [r(s, a, s') + \gamma v_k(s')]
+$$
 
 - 值迭代的收敛性: $\lim_{k \to \infty} v_k = v^*$
 - 收敛速度分析: 误差界 $||v_k - v^*|| \leq \frac{\gamma^k}{1-\gamma} ||v_1 - v_0||$
