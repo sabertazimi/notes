@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/sabertazimi/notes/compare/v1.0.0...v1.1.0) (2026-04-15)
+
+
+### :sparkles: Features
+
+* **agent-context:** agent memory type classification ([709d4e1](https://github.com/sabertazimi/notes/commit/709d4e13c691e17959fe6264897983c062f6a51a))
+* **agent-context:** context engineering with `langGraph` state, store, and runtime ([00a12bf](https://github.com/sabertazimi/notes/commit/00a12bff749f550d61bf9b1abda1910f662b4140))
+* **agent-context:** context failure patterns and mitigation ([a83274a](https://github.com/sabertazimi/notes/commit/a83274a427d7fc77c520369b4ed4e930a7872b32))
+* **agent-context:** tool context in LangGraph ([515828b](https://github.com/sabertazimi/notes/commit/515828b898787d2573e4d39a1269df92453f0fc0))
+* **agent-langgraph:** dive into LangGraph ([6d18d82](https://github.com/sabertazimi/notes/commit/6d18d8209b9e77b328c3b8160234f3aa99cd642c))
+* **agent-langgraph:** Human in the Loop middleware ([4d68678](https://github.com/sabertazimi/notes/commit/4d68678e416738aeae72dc960ba16e729b739e21))
+* **agent-langgraph:** LangGraph recipes ([ce13f46](https://github.com/sabertazimi/notes/commit/ce13f46c15a890552f16361d64a695a541921d3a))
+* **agent-langgraph:** multi-agent supervisor ([90e6371](https://github.com/sabertazimi/notes/commit/90e63713127c37fbf325f8d0f94ff8d292f78776))
+* **agent-langgraph:** SummarizationMiddleware conversation compression ([b670357](https://github.com/sabertazimi/notes/commit/b67035771ce05d35b07bf644b053e2bfb4b31b9a))
+* **agent-middleware:** LangGraph `[@before](https://github.com/before)_agent`/`[@before](https://github.com/before)_model` middleware ([8960dd3](https://github.com/sabertazimi/notes/commit/8960dd3825d491c3dc29f73ce781bc071ecb2d58))
+* **agent-middleware:** LangGraph `wrap_model_call` middleware ([e3299a0](https://github.com/sabertazimi/notes/commit/e3299a06cc62f1b307f66c26850cf851cd6f51d6))
+* **ai-ml:** `K-Means` and `DBSCAN` clustering algorithms ([68aac05](https://github.com/sabertazimi/notes/commit/68aac05586e3a8ea9d2d60c949410ee304e2936b))
+* **ai-ml:** `L1`, `L2` and Elastic Net regularization ([befc4e8](https://github.com/sabertazimi/notes/commit/befc4e8bde98f403a8c41bb04d908b36801264e9))
+* **ai-ml:** `PCA` variance maximization ([d07a328](https://github.com/sabertazimi/notes/commit/d07a328ff2409e42bfa25e88cfaed951af1c514c))
+* **ai-ml:** Bayesian classifier ([45a9e94](https://github.com/sabertazimi/notes/commit/45a9e9470057bcde3b99d7c01b883e23e69e3db6))
+* **ai-ml:** clustering distance metrics ([75e2ee0](https://github.com/sabertazimi/notes/commit/75e2ee072353f8542e5635a04eec554c23c88ec7))
+* **ai-ml:** decision tree information gain ([cb72897](https://github.com/sabertazimi/notes/commit/cb728972c3e65830600b86c3dcf672c576a8d084))
+* **ai-ml:** ensemble learning fundamentals ([5dff56c](https://github.com/sabertazimi/notes/commit/5dff56c5e0db3c20154aa08922cf5aeab5fe19de))
+* **ai-ml:** ensemble learning strategies ([96d5d02](https://github.com/sabertazimi/notes/commit/96d5d02adca69baa4290703c5321a0135cbdf3e8))
+* **ai-ml:** kNN dimensionality curse explanation ([c304917](https://github.com/sabertazimi/notes/commit/c3049174e495a18a92e7375b76cff0fb44b33057))
+* **ai-ml:** naive Bayes classifier ([9ef09ea](https://github.com/sabertazimi/notes/commit/9ef09ea5bd59c89cf661acf1a39500cdd189a078))
+* **ai-ml:** support vector properties ([726da49](https://github.com/sabertazimi/notes/commit/726da4937f470107735064d4924f1dbf43f72cd0))
+* **ai-rl:** reinforcement learning standalone category ([ad8964f](https://github.com/sabertazimi/notes/commit/ad8964fb75b5b65a50e6de99779bdea76ef83bf5))
+* **ai-rl:** set up mathematical foundation of reinforcement learning ([94457cd](https://github.com/sabertazimi/notes/commit/94457cd0ec811b433f984ada896f8b9523901266))
+* **linux-arch:** add `MPV` `thumbfast` and `ModernZ` plugins ([fcd16ad](https://github.com/sabertazimi/notes/commit/fcd16ad54411484e989947131145577fac54edc2))
+* **llm-rl:** KL divergence entropy cross-entropy decomposition ([f2fd645](https://github.com/sabertazimi/notes/commit/f2fd645bd8d7d4ed7648981eca85f27a813727aa))
+
+
+### :sparkles: Today I Learned
+
+* **agent-claude:** update plugin install commands to CLI syntax ([bdabc2c](https://github.com/sabertazimi/notes/commit/bdabc2c95c1e66bb799aeee9406d6a69063c5b72))
+* **ai-llm:** eval to evaluation rename ([8b3cbfc](https://github.com/sabertazimi/notes/commit/8b3cbfceec9194d2117cc11ecc85445121a812cc))
+* **ai:** `\sum` to `\sum\limits` `KaTeX` rendering ([329d490](https://github.com/sabertazimi/notes/commit/329d490c00757a4972bbd73fb3a681e88183e4d8))
+* **web-javascript:** `Intl` API cookbook ([36e917c](https://github.com/sabertazimi/notes/commit/36e917ceec760b8ce083d1a0e4693c419bb64d51))
+
 ## 1.0.0 (2026-04-10)
 
 
