@@ -20,13 +20,13 @@ $$
 基于全期望公式, 即时奖励 + 折扣后的未来状态值:
 
 $$
-v_{\pi}(s) = \sum\limits_{a \in \mathcal{A}} \pi(a|s) \left[ \sum\limits_{r \in \mathcal{R}} p(r|s,a)r(s, a, s') + \gamma \sum\limits_{s' \in \mathcal{S}} p(s'|s,a)v_{\pi}(s') \right]
+v_\pi(s) = \sum\limits_{a \in \mathcal{A}} \pi(a | s) \left[ \sum\limits_{r \in \mathcal{R}} p(r | s, a)r(s, a, s') + \gamma \sum\limits_{s' \in \mathcal{S}} p(s' | s, a)v_\pi(s') \right]
 $$
 
 特殊地, 奖励取决于状态转移时:
 
 $$
-v_\pi(s) = \sum\limits_{a \in \mathcal{A}} \pi(a|s) \sum\limits_{s' \in \mathcal{S}} p(s'|s, a) [r(s, a, s') + \gamma v_\pi(s')]
+v_\pi(s) = \sum\limits_{a \in \mathcal{A}} \pi(a | s) \sum\limits_{s' \in \mathcal{S}} p(s' | s, a) [r(s, a, s') + \gamma v_\pi(s')]
 $$
 
 ## Action Value
@@ -37,20 +37,20 @@ $$
 
 $$
 \begin{aligned}
-  \mathbb{E}[G_t | S_t = s] &= \sum\limits_{a \in \mathcal{A}} \pi(a|s) \mathbb{E}[G_t | S_t = s, A_t = a] \\
+  \mathbb{E}[G_t | S_t = s] &= \sum\limits_{a \in \mathcal{A}} \pi(a | s) \mathbb{E}[G_t | S_t = s, A_t = a] \\
 \end{aligned}
 $$
 
 得到
 
 $$
-v_\pi(s) = \sum\limits_{a \in \mathcal{A}} \pi(a|s) q_\pi(s, a)
+v_\pi(s) = \sum\limits_{a \in \mathcal{A}} \pi(a | s) q_\pi(s, a)
 $$
 
 即
 
 $$
-q_\pi(s, a) = \sum\limits_{r \in \mathcal{R}} p(r|s,a)r(s, a, s') + \gamma \sum\limits_{s' \in \mathcal{S}} p(s'|s,a)v_{\pi}(s')
+q_\pi(s, a) = \sum\limits_{r \in \mathcal{R}} p(r | s, a)r(s, a, s') + \gamma \sum\limits_{s' \in \mathcal{S}} p(s' | s, a)v_\pi(s')
 $$
 
 ## Matrix-Vector Form

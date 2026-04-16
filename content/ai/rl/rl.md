@@ -8,8 +8,8 @@ tags: [AI, ML, RL]
 ## Foundations
 
 - [Markov Decision Process](./mdp.md) - 状态、动作、策略、奖励、回报、马尔可夫决策过程
-- [Bellman Equation](./bellman-equation.md) - 贝尔曼公式
-- [Bellman Optimality Equation](./bellman-optimality.md) - 贝尔曼最优公式
+- [Bellman Equation](./bellman.md) - 贝尔曼公式
+- [Bellman Optimality Equation](./optimal.md) - 贝尔曼最优公式
 - [Iteration](./iteration.md) - 值迭代、策略迭代、截断策略迭代
 
 ## Algorithms

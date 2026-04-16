@@ -9,7 +9,7 @@ tags: [AI, ML, RL, MDP]
 
 - 状态 (State) $s \in \mathcal{S}$
 - 动作 (Action) $a \in \mathcal{A}$
-- 策略 (Policy) $\pi(a|s)$
+- 策略 (Policy) $\pi(a | s)$
 
 ## State
 
@@ -26,7 +26,7 @@ $$
 状态转移概率:
 
 $$
-P(s'|s, a)
+P(s' | s, a)
 $$
 
 ## Action
@@ -42,7 +42,7 @@ $$
 $\pi: \mathcal{S} \to \Delta(\mathcal{A})$:
 
 - 确定性策略: $\pi(s) = a$
-- 随机策略: $\pi(a|s) = P(a_t = a | s_t = s)$
+- 随机策略: $\pi(a | s) = P(a_t = a | s_t = s)$
 
 ## Reward
 
@@ -59,7 +59,7 @@ $$
 奖励概率:
 
 $$
-P(r|s, a)
+P(r | s, a)
 $$
 
 ## Trajectory
@@ -97,11 +97,11 @@ $\gamma \in [0, 1)$:
 马尔可夫性质:
 
 $$
-p(s_{t+1}|s_t, a_t, s_{t-1}, a_{t-1}, \dots, s_0, a_0) = p(s_{t+1}|s_t, a_t)
+p(s_{t+1} | s_t, a_t, s_{t-1}, a_{t-1}, \dots, s_0, a_0) = p(s_{t+1} | s_t, a_t)
 $$
 
 $$
-p(r_{t+1}|s_t, a_t, s_{t-1}, a_{t-1}, \dots, s_0, a_0) = p(r_{t+1}|s_t, a_t)
+p(r_{t+1} | s_t, a_t, s_{t-1}, a_{t-1}, \dots, s_0, a_0) = p(r_{t+1} | s_t, a_t)
 $$
 
 ### Distribution
@@ -109,5 +109,5 @@ $$
 轨迹的概率分布:
 
 $$
-P(\tau|\pi) = p(s_1) \prod_{t=1}^{T} \pi(a_t|s_t) p(s_{t+1}|s_t, a_t)
+P(\tau | \pi) = p(s_1) \prod_{t=1}^{T} \pi(a_t | s_t) p(s_{t+1} | s_t, a_t)
 $$
