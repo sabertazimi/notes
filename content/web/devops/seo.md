@@ -41,6 +41,49 @@ export default function App() {
 }
 ```
 
+## `AEO`
+
+[Agent engine optimization](https://addyosmani.com/blog/agentic-engine-optimization):
+
+Discovery
+
+- [ ] `llms.txt` exists at root with structured index of all documentation
+- [ ] `robots.txt` does not inadvertently block known AI agent user-agents
+- [ ] `agent-permissions.json` defines access rules for automated clients
+- [ ] `AGENTS.md` exists in code repositories linking to relevant docs
+
+Content structure
+
+- [ ] Documentation pages available as clean Markdown (not just rendered HTML)
+- [ ] Each page leads with a clear outcome statement in the first 200 words
+- [ ] Headings are consistent and hierarchically correct
+- [ ] Code examples immediately follow their prose description
+- [ ] Parameter references use tables, not nested prose
+
+Token economics
+
+- [ ] Token counts are tracked per documentation page
+- [ ] No single page exceeds 30,000 tokens without chunking strategy
+- [ ] Token counts exposed in `llms.txt` for key pages
+- [ ] Token counts available as page metadata (meta tag or HTTP header)
+
+Capability signaling
+
+- [ ] `Skill.md` files describe what each service/API does, not just how to call it
+- [ ] Each skill includes: capabilities, required inputs, constraints, key doc links
+- [ ] MCP server available for direct agent integration (if applicable)
+
+Analytics
+
+- [ ] AI referral sources segmented in web analytics
+- [ ] Server logs monitored for known AI agent HTTP fingerprints
+- [ ] Baseline established for AI vs. human traffic ratio
+
+UX bridge
+
+- [ ] `Copy for AI` button available on documentation pages
+- [ ] Markdown source accessible via URL convention (e.g. `appending.md`)
+
 ## Best Practices
 
 - [Server side rendering](https://css-tricks.com/server-side-react-rendering)
