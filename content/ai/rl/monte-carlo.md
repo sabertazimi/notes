@@ -5,44 +5,37 @@ tags: [AI, ML, RL, MC]
 
 # Monte Carlo
 
-## Motivating Examples
+## Estimation
 
-- 蒙特卡洛估计的基本思想
-- 大数定律 (Law of Large Numbers) 的保证
-
-## Monte Carlo Basic: Introduction
-
-- 第一类蒙特卡洛方法 (First-visit MC)
-- 第二类蒙特卡洛方法 (Every-visit MC)
-- 基于经验均值的估计
+蒙特卡罗模拟, 基于经验均值的估计 (Law of Large Numbers, 大数定理):
 
 $$
 v(s) \approx \frac{1}{N(s)} \sum_{i=1}^{N(s)} G_i(s)
 $$
 
-## Monte Carlo Basic: Examples
+## Model-Free Policy Iteration
 
-- 网格世界中的蒙特卡洛估计
-- 估计的方差和收敛速度
+1. Policy evaluation: $q_{\pi_k}(s, a) = \mathbb{E}[G_t | S_t = s_t, A_t = a] \approx \frac{1}{N} \sum_{i=1}^{N} g^{(i)}(s, a)$
+2. Policy improvement: $\pi_{k + 1}(s) = \arg\underset{\pi}{\max} \sum\limits_a \pi(a | s)q_{\pi_k}(s, a) \to \pi_{k + 1}(a | s) = 1 \text{ if } a = a_k^*$
 
-## Monte Carlo Exploring Starts
+## Exploring Starts
 
-- 探索性起点 (Exploring Starts): 每个状态-动作对都有机会作为起点
-- MC with Exploring Starts 的完整算法
-- 收敛性分析
+反向 update estimate, 更高效地使用数据, 避免重复计算,
+并且保证每个状态-动作对 $(s, a)$ 都有机会作为 episode 起点:
 
-## Monte Carlo $\epsilon$-Greedy: Introduction
+1. Episode generation
+2. Policy evaluation and policy improvement: start from $T - 1$ step of episode
 
-- $\epsilon$-贪心策略 (Epsilon-Greedy Policy)
+## Epsilon-Greedy
+
+$\epsilon$-greedy policy, 平衡 exploitation 和 exploration:
 
 $$
-\pi(a|s) = \begin{cases} 1 - \epsilon + \epsilon/|\mathcal{A}|, & a = \arg\max_a Q(s, a) \\ \epsilon/|\mathcal{A}|, & \text{otherwise} \end{cases}
+\pi(a | s) = \begin{cases}
+  1 - \frac{\epsilon}{|\mathcal{A}(s)|}(|\mathcal{A}(s)| - 1), & a = \arg\underset{a}{\max} Q(s, a) \\
+  \frac{\epsilon}{|\mathcal{A}(s)|}, & \text{otherwise}
+\end{cases}
 $$
 
-- 在线策略 (On-policy) 方法
-- 探索与利用的平衡 (Exploration vs. Exploitation)
-
-## Monte Carlo $\epsilon$-Greedy: Examples
-
-- 网格世界中 $\epsilon$-贪心 MC 的实际表现
-- 不同 $\epsilon$ 值的影响
+1. $\epsilon = 0$: greedy policy $\to$ exploitation
+2. $\epsilon = 1$: uniform distribution $\to$ exploration
