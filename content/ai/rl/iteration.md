@@ -22,7 +22,7 @@ $k*1$ 次迭代:
 
 $k*\infty$ 次迭代:
 
-1. Policy evaluation ($\infty$): $v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k} v_{\pi_k}^{(j)}, j = 0, 1, 2, \dots$
+1. Policy evaluation ($\infty$): $v_{\pi_k}^{(j+1)} = r_{\pi_k} + \gamma P_{\pi_k} v_{\pi_k}^{(j)}, \quad j = 0, 1, 2, \dots$
 2. Policy improvement: $\pi_{k + 1} = \arg\underset{\pi}{\max}(r_\pi + \gamma P_\pi v_{\pi_k})$
 
 ## Truncated Policy

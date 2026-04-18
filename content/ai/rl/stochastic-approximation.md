@@ -5,55 +5,46 @@ tags: [AI, ML, RL, SGD]
 
 # Stochastic Approximation
 
-## Motivating Example
-
-- 确定性问题 vs. 随机性问题的求解
-- 为什么需要随机逼近方法
-
-## Robbins-Monro (RM) Algorithm: Introduction
-
-- RM 算法的基本形式
+## Mean Estimation
 
 $$
-x_{k+1} = x_k - \alpha_k [g(x_k) + w_k]
+\begin{aligned}
+  w_{k+1} &= \frac{1}{k} \sum\limits_{i=1}^{k} x_{i} \\
+  &= \frac{1}{k} \left( \sum\limits_{i=1}^{k-1} x_{i} + x_{k} \right) \\
+  &= \frac{1}{k} ((k-1)w_{k} + x_{k}) \\
+  &= w_{k} - \frac{1}{k}(w_{k} - x_{k})
+\end{aligned}
 $$
 
-- 其中 $w_k$ 为零均值随机噪声
-- 步长 (Step size) 序列 $\alpha_k$ 的条件:
-  1. $\alpha_k \geq 0, \forall k$
-  2. $\sum_{k=0}^{\infty} \alpha_k = \infty$ (保证能到达任意点)
-  3. $\sum_{k=0}^{\infty} \alpha_k^2 < \infty$ (保证噪声累积有限)
+## Robbins-Monro
 
-## Robbins-Monro Algorithm: Convergence
-
-- RM 算法的收敛性证明
-- 基于鞅收敛定理 (Martingale Convergence Theorem)
-- 均方收敛分析
-
-## Stochastic Gradient Descent (SGD): Introduction
-
-- SGD 算法的基本形式
+Model-free solution to $g(w) = 0$:
 
 $$
-\theta_{k+1} = \theta_k - \alpha_k \nabla f_{i_k}(\theta_k)
+\begin{aligned}
+  w_{k+1} &= w_k - \alpha_k \tilde{g}(w_k, \eta_k), \quad k = 1, 2, 3, \dots \\
+  &= w_k - \alpha_k(g(w_k) + \eta_k)
+\end{aligned}
 $$
 
-- SGD 与 RM 算法的关系
-- 随机梯度的无偏性: $\mathbb{E}[\nabla f_i(\theta)] = \nabla J(\theta)$
+收敛条件:
 
-## SGD Algorithm: Examples
+1. $0 < c_1 \leq \nabla_w g(w) \leq c_2, \quad \forall w$
+2. $\sum\limits_{k=1}^{\infty} \alpha_k = \infty$ and $\sum\limits_{k=1}^{\infty} \alpha_k^2 < \infty$
+3. $\mathbb{E}[\eta_k | \mathcal{H}_k] = 0$ and $\mathbb{E}[\eta_k^2 | \mathcal{H}_k] < \infty, \quad \mathcal{H}_k = \{w_k, w_{k-1}, \dots\}$
 
-- 线性回归中的 SGD
-- SGD 的实际应用
+## Stochastic Gradient Descent
 
-## SGD Algorithm: Properties
+$$
+\begin{aligned}
+  w_{k+1} &= w_k - \alpha_k \nabla_w J(w_k) \\
+  &= w_k - \alpha_k\mathbb{E}[\nabla_w f(w_k, X)] \\
+  &= w_k - \alpha_k \nabla_w f(w_k, x_k)
+\end{aligned}
+$$
 
-- SGD 的收敛速度分析
-- 与批量梯度下降 (Batch GD) 的对比
-- SGD 的方差问题
+收敛条件:
 
-## SGD Algorithm: Comparison
-
-- 不同步长策略的对比
-- 常数步长 vs. 衰减步长
-- SGD 在深度学习中的应用
+1. $0 < c_1 \leq \nabla_w^2 f(w, X) \leq c_2$
+2. $\sum\limits_{k=1}^{\infty} \alpha_k = \infty$ and $\sum\limits_{k=1}^{\infty} \alpha_k^2 < \infty$
+3. $\{x_k\}_{k = 1}^{\infty} \text{ is i.i.d.}$
