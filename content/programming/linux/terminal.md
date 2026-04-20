@@ -96,6 +96,15 @@ tmux show -g >> current.tmux.conf # export configuration
 - Copy mode can scroll too
 - `set -g mouse on` for enabling mouse scrolling
 
+:::tip[Mouse]
+
+使用 Shift 键:
+
+现代终端支持在按下 Shift 键的同时进行鼠标操作,
+以绕过 tmux (TUI 程序) 的鼠标拦截.
+
+:::
+
 ## Windows
 
 Fix git bash flicker:
