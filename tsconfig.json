@@ -1,9 +1,12 @@
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@site/*": ["./*"]
+      "@site/*": [
+        "./*"
+      ]
     },
     "types": [
       "node",
@@ -14,6 +17,13 @@
     "strictNullChecks": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "content/**/*"],
-  "exclude": ["node_modules", "build", "dist"]
+  "include": [
+    "src/**/*",
+    "content/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
 }
