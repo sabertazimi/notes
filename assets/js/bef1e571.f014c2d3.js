@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35350"],{42079(e){e.exports=JSON.parse('{"tag":{"label":"Babel","permalink":"/notes/tags/babel","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/babel","title":"Babel","description":"Core","permalink":"/notes/web/devops/babel"}],"unlisted":false}}')}}]);

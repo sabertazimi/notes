@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["11432"],{30047(e){e.exports=JSON.parse('{"tag":{"label":"Preference","permalink":"/notes/tags/preference","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/android/storage","title":"Storage","description":"Files","permalink":"/notes/programming/android/storage"}],"unlisted":false}}')}}]);

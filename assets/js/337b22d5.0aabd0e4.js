@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["32096"],{79792(e){e.exports=JSON.parse('{"tag":{"label":"Store","permalink":"/notes/tags/store","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/hooks/store","title":"Store","description":"Pub-Sub","permalink":"/notes/web/react/hooks/store"}],"unlisted":false}}')}}]);

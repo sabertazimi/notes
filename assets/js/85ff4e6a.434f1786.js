@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["63777"],{7069(s){s.exports=JSON.parse('{"tag":{"label":"Transform","permalink":"/notes/tags/transform","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/transform","title":"Transform","description":"transform:","permalink":"/notes/web/css/transform"}],"unlisted":false}}')}}]);

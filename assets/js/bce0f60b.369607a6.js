@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["76740"],{50998(s){s.exports=JSON.parse('{"tag":{"label":"Mask","permalink":"/notes/tags/mask","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/mask","title":"Mask","description":"mask:","permalink":"/notes/web/css/mask"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["7145"],{79751(e){e.exports=JSON.parse('{"tag":{"label":"Xilinx","permalink":"/notes/tags/xilinx","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/verilog/xilinx","title":"Xilinx U280","description":"Host Application","permalink":"/notes/language/verilog/xilinx"}],"unlisted":false}}')}}]);

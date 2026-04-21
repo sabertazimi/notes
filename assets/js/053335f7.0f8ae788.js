@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["45158"],{85101(e){e.exports=JSON.parse('{"tag":{"label":"Interpreter","permalink":"/notes/tags/interpreter","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/compilers/examples","title":"Examples","description":"Parser","permalink":"/notes/cs/compilers/examples"}],"unlisted":false}}')}}]);

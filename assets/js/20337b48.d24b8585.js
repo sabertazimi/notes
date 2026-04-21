@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["54681"],{34639(s){s.exports=JSON.parse('{"tag":{"label":"Cascading","permalink":"/notes/tags/cascading","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/cascading","title":"Cascading","description":"CSS Working Group","permalink":"/notes/web/css/cascading"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35546"],{29260(e){e.exports=JSON.parse('{"tag":{"label":"Temporal","permalink":"/notes/tags/temporal","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/temporal","title":"Temporal","description":"Legacy","permalink":"/notes/web/javascript/temporal"}],"unlisted":false}}')}}]);

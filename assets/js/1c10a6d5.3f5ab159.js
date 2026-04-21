@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["46153"],{90842(e){e.exports=JSON.parse('{"tag":{"label":"ESM","permalink":"/notes/tags/esm","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/module","title":"Module","description":"Principles","permalink":"/notes/web/javascript/module"}],"unlisted":false}}')}}]);

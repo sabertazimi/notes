@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["20277"],{57792(e){e.exports=JSON.parse('{"tag":{"label":"Scroll","permalink":"/notes/tags/scroll","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/interaction","title":"Interaction","description":"Cursor","permalink":"/notes/web/css/interaction"}],"unlisted":false}}')}}]);

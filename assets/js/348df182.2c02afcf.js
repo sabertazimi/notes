@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["60784"],{62082(s){s.exports=JSON.parse('{"tag":{"label":"Tailwind","permalink":"/notes/tags/tailwind","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/toolchain","title":"Toolchain","description":"PostCSS","permalink":"/notes/web/css/toolchain"}],"unlisted":false}}')}}]);

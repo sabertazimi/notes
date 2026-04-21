@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["35212"],{93222(e){e.exports=JSON.parse('{"tag":{"label":"Literal","permalink":"/notes/tags/literal","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/literal","title":"Literal","description":"Template Literal","permalink":"/notes/web/typescript/literal"}],"unlisted":false}}')}}]);

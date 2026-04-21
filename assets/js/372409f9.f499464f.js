@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["59530"],{43655(e){e.exports=JSON.parse('{"tag":{"label":"Centering","permalink":"/notes/tags/centering","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/alignment","title":"Alignment","description":"Centering","permalink":"/notes/web/css/alignment"}],"unlisted":false}}')}}]);

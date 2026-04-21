@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["52155"],{30327(s){s.exports=JSON.parse('{"tag":{"label":"Sass","permalink":"/notes/tags/sass","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/sass","title":"Sass","description":"Variable","permalink":"/notes/web/css/sass"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["2275"],{57(e){e.exports=JSON.parse('{"tag":{"label":"Redis","permalink":"/notes/tags/redis","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/redis/redis","title":"Redis","description":"Redis Commands","permalink":"/notes/web/redis/"}],"unlisted":false}}')}}]);

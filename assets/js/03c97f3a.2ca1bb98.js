@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["25360"],{93064(s){s.exports=JSON.parse('{"tag":{"label":"Pseudo-class","permalink":"/notes/tags/pseudo-class","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/selectors","title":"Selectors","description":"CSS Selectors","permalink":"/notes/web/css/selectors"}],"unlisted":false}}')}}]);

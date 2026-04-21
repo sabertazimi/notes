@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["34428"],{20302(s){s.exports=JSON.parse('{"tag":{"label":"Concepts","permalink":"/notes/tags/concepts","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/os/concepts","title":"Concepts","description":"Definition","permalink":"/notes/cs/os/concepts"}],"unlisted":false}}')}}]);

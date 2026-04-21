@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["25029"],{34333(s){s.exports=JSON.parse('{"tag":{"label":"BFS","permalink":"/notes/tags/bfs","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/algorithms/bfs","title":"Breadth-First Search","description":"Color","permalink":"/notes/cs/algorithms/bfs"}],"unlisted":false}}')}}]);

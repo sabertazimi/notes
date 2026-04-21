@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["5619"],{15568(t){t.exports=JSON.parse('{"tag":{"label":"Attribute","permalink":"/notes/tags/attribute","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/html/attributes","title":"Attributes","description":"Dataset","permalink":"/notes/web/html/attributes"}],"unlisted":false}}')}}]);

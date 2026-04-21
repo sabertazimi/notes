@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["7384"],{77390(e){e.exports=JSON.parse('{"tag":{"label":"NumPy","permalink":"/notes/tags/num-py","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/numpy","title":"NumPy","description":"Array","permalink":"/notes/ai/python/numpy"}],"unlisted":false}}')}}]);

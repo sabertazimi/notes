@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["53531"],{63125(e){e.exports=JSON.parse('{"tag":{"label":"jQuery","permalink":"/notes/tags/j-query","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/jquery/jquery","title":"jQuery","description":"Callbacks Queue","permalink":"/notes/web/jquery/"}],"unlisted":false}}')}}]);

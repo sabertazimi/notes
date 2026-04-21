@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["24621"],{73401(e){e.exports=JSON.parse('{"tag":{"label":"Jest","permalink":"/notes/tags/jest","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/testing/jest","title":"Jest","description":"Installation","permalink":"/notes/web/testing/jest"}],"unlisted":false}}')}}]);

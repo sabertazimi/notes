@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["27671"],{38604(e){e.exports=JSON.parse('{"tag":{"label":"UMD","permalink":"/notes/tags/umd","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/module","title":"Module","description":"Principles","permalink":"/notes/web/javascript/module"}],"unlisted":false}}')}}]);

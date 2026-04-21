@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["27253"],{46052(a){a.exports=JSON.parse('{"tag":{"label":"ImageMagick","permalink":"/notes/tags/image-magick","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/image","title":"ImageMagick","description":"Metadata","permalink":"/notes/programming/linux/image"}],"unlisted":false}}')}}]);

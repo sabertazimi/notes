@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["64484"],{37018(e){e.exports=JSON.parse('{"tag":{"label":"Engine","permalink":"/notes/tags/engine","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/engine","title":"Engine","description":"Variables Lifecycle","permalink":"/notes/web/javascript/engine"}],"unlisted":false}}')}}]);

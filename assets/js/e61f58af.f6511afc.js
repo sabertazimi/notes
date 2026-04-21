@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["43710"],{98082(e){e.exports=JSON.parse('{"tag":{"label":"Signature","permalink":"/notes/tags/signature","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/signature","title":"Signature","description":"Call Signature","permalink":"/notes/web/typescript/signature"}],"unlisted":false}}')}}]);

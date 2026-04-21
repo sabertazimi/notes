@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["64868"],{13972(e){e.exports=JSON.parse('{"tag":{"label":"Reference","permalink":"/notes/tags/reference","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/cpp/reference","title":"Reference","description":"\u6027\u8D28","permalink":"/notes/language/cpp/reference"}],"unlisted":false}}')}}]);

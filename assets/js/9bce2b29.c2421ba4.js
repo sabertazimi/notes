@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["28382"],{84623(s){s.exports=JSON.parse('{"tag":{"label":"SSH","permalink":"/notes/tags/ssh","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/system","title":"System","description":"Information","permalink":"/notes/programming/linux/system"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["40930"],{53872(e){e.exports=JSON.parse('{"tag":{"label":"Rollup","permalink":"/notes/tags/rollup","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/bundler","title":"Bundlers","description":"Rollup","permalink":"/notes/web/devops/bundler"}],"unlisted":false}}')}}]);

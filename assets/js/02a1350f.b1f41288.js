@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["7646"],{71109(e){e.exports=JSON.parse('{"tag":{"label":"Kubernetes","permalink":"/notes/tags/kubernetes","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/devops/k8s","title":"Kubernetes","description":"Installation","permalink":"/notes/programming/devops/k8s"}],"unlisted":false}}')}}]);

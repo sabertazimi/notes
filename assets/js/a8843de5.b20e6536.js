@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["84288"],{85357(e){e.exports=JSON.parse('{"tag":{"label":"Neovim","permalink":"/notes/tags/neovim","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/vim/neovim","title":"Neovim","description":"LazyVim","permalink":"/notes/programming/vim/neovim"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["11545"],{5899(e){e.exports=JSON.parse('{"tag":{"label":"Power","permalink":"/notes/tags/power","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/linux/system","title":"System","description":"Information","permalink":"/notes/programming/linux/system"}],"unlisted":false}}')}}]);

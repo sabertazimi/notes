@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["8341"],{460(s){s.exports=JSON.parse('{"tag":{"label":"Absolute","permalink":"/notes/tags/absolute","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/position","title":"Position","description":"Static","permalink":"/notes/web/css/position"}],"unlisted":false}}')}}]);

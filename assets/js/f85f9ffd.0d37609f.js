@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["77976"],{51866(s){s.exports=JSON.parse('{"tag":{"label":"XSS","permalink":"/notes/tags/xss","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/xss","title":"XSS","description":"Attack","permalink":"/notes/web/security/xss"}],"unlisted":false}}')}}]);

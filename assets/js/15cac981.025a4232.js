@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["74905"],{17123(s){s.exports=JSON.parse('{"tag":{"label":"Supports","permalink":"/notes/tags/supports","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/supports","title":"Supports","description":"Feature Query","permalink":"/notes/web/css/supports"}],"unlisted":false}}')}}]);

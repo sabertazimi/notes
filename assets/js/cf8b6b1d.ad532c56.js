@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["9542"],{41626(t){t.exports=JSON.parse('{"tag":{"label":"Actor-Critic","permalink":"/notes/tags/actor-critic","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/rl/actor-critic","title":"Actor-Critic","description":"Actor-Critic Model","permalink":"/notes/ai/rl/actor-critic"}],"unlisted":false}}')}}]);

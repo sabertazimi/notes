@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["97351"],{98576(e){e.exports=JSON.parse('{"tag":{"label":"Readonly","permalink":"/notes/tags/readonly","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/modifier","title":"Modifiers","description":"Member Access","permalink":"/notes/web/typescript/modifier"}],"unlisted":false}}')}}]);

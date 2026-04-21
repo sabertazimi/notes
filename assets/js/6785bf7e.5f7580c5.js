@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["86552"],{1838(t){t.exports=JSON.parse('{"tag":{"label":"Button","permalink":"/notes/tags/button","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/components/button","title":"Button","description":"Link","permalink":"/notes/web/css/components/button"}],"unlisted":false}}')}}]);

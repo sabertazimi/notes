@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["24902"],{97244(e){e.exports=JSON.parse('{"tag":{"label":"Socket","permalink":"/notes/tags/socket","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/node/network","title":"Network","description":"Fetch","permalink":"/notes/web/node/network"}],"unlisted":false}}')}}]);

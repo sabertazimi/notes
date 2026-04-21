@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["13231"],{12049(a){a.exports=JSON.parse('{"tag":{"label":"LangGraph","permalink":"/notes/tags/lang-graph","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/agent/langgraph","title":"LangGraph","description":"Prompt Template","permalink":"/notes/ai/agent/langgraph"}],"unlisted":false}}')}}]);

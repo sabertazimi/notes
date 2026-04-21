@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["88644"],{4821(e){e.exports=JSON.parse('{"tag":{"label":"Electron","permalink":"/notes/tags/electron","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/electron/electron","title":"Electron","description":"Getting Started","permalink":"/notes/web/electron/"}],"unlisted":false}}')}}]);

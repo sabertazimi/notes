@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["89906"],{18439(t){t.exports=JSON.parse('{"tag":{"label":"Timer","permalink":"/notes/tags/timer","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/utility","title":"Utility","description":"Strict Mode","permalink":"/notes/web/javascript/utility"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["27673"],{22111(t){t.exports=JSON.parse('{"tag":{"label":"Atomic","permalink":"/notes/tags/atomic","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/utility","title":"Utility","description":"Strict Mode","permalink":"/notes/web/javascript/utility"}],"unlisted":false}}')}}]);

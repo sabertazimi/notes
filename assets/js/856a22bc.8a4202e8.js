@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["13961"],{32188(e){e.exports=JSON.parse('{"tag":{"label":"TD","permalink":"/notes/tags/td","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/rl/temporal-difference","title":"Temporal-Difference","description":"State Value","permalink":"/notes/ai/rl/temporal-difference"}],"unlisted":false}}')}}]);

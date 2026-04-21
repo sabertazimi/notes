@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["48018"],{2079(e){e.exports=JSON.parse('{"tag":{"label":"Portal","permalink":"/notes/tags/portal","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/react/features","title":"Features","description":"Error Boundary","permalink":"/notes/web/react/features"}],"unlisted":false}}')}}]);

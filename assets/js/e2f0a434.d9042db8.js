@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["79003"],{86299(e){e.exports=JSON.parse('{"tag":{"label":"Interface","permalink":"/notes/tags/interface","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/typescript/interface","title":"Interface","description":"Function","permalink":"/notes/web/typescript/interface"}],"unlisted":false}}')}}]);

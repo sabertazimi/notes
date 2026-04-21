@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["24520"],{32643(e){e.exports=JSON.parse('{"tag":{"label":"DDoS","permalink":"/notes/tags/d-do-s","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/denial-of-service","title":"Denial of Service","description":"DoS","permalink":"/notes/web/security/denial-of-service"}],"unlisted":false}}')}}]);

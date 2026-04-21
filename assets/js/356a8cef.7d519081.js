@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["39871"],{20294(e){e.exports=JSON.parse('{"tag":{"label":"Directive","permalink":"/notes/tags/directive","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/vue/directives","title":"Directives","description":"Control Flow","permalink":"/notes/web/vue/directives"}],"unlisted":false}}')}}]);

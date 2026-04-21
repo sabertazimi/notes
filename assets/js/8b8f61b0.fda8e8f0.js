@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["30911"],{5351(e){e.exports=JSON.parse('{"tag":{"label":"Nginx","permalink":"/notes/tags/nginx","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/nginx/nginx","title":"Nginx","description":"Sites config located in /etc/nginx/sites-available:","permalink":"/notes/web/nginx/"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["36438"],{74625(e){e.exports=JSON.parse('{"tag":{"label":"CLI","permalink":"/notes/tags/cli","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/cli","title":"Command Line","description":"Input","permalink":"/notes/ai/python/cli"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["93587"],{54753(s){s.exports=JSON.parse('{"tag":{"label":"Slide","permalink":"/notes/tags/slide","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/components/display","title":"Display","description":"Table","permalink":"/notes/web/css/components/display"}],"unlisted":false}}')}}]);

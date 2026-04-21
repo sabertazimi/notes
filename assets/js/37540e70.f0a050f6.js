@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["46515"],{41098(e){e.exports=JSON.parse('{"tag":{"label":"Head","permalink":"/notes/tags/head","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/html/head","title":"Head","description":"Favicon","permalink":"/notes/web/html/head"}],"unlisted":false}}')}}]);

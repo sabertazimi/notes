@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["62898"],{46369(e){e.exports=JSON.parse('{"tag":{"label":"Closure","permalink":"/notes/tags/closure","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/rust/closure","title":"Closure","description":"Function Parameter Closure","permalink":"/notes/language/rust/closure"}],"unlisted":false}}')}}]);
