@@ -120,9 +120,9 @@ paru -S --rebuild qt6ct-kde
 ```bash
 sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   pacman-contrib man-db man-pages man-pages-zh_cn tldr less \
-  noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-firacode-nerd \
-  ttf-maplemono-nf-cn-unhinted ttf-lxgw-wenkai ttf-lxgw-wenkai-mono \
-  adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
+  noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-liberation \
+  ttf-maplemono-nf-cn-unhinted ttf-jetbrains-mono-nerd ttf-firacode-nerd \
+  ttf-lxgw-wenkai ttf-lxgw-wenkai-mono adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
   fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
   zoxide bat eza fd ripgrep fzf television jq fx \
   procs duf dust gdu bottom nvtop s-tui fastfetch \
