@@ -289,6 +289,19 @@ doggo MX github.com @9.9.9.9
 doggo example.com --json | jq '.responses[0].answers[].address'
 ```
 
+## `ydotool`
+
+[`ydotool`](https://github.com/ReimuNotMoe/ydotool):
+
+```bash
+sudo pacman -S ydotool
+```
+
+```bash
+sudo usermod -aG input $USER
+systemctl --user enable --now ydotool
+```
+
 ## Developer
 
 - [行书指南](https://github.com/xszn/xszn.github.io):
