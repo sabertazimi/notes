@@ -199,7 +199,7 @@ sudo paccache -rk0  # 清理全部缓存
 ## AUR
 
 ```bash
-paru -S --needed chsrc-bin shellcheck-bin libtexprintf \
+paru -S --needed downgrade chsrc-bin shellcheck-bin libtexprintf \
   visual-studio-code-bin claude-code \
   cc-switch-bin cli-proxy-api-bin llmfit-bin models-bin \
   go-musicfox-bin uudeck linuxqq wechat \
