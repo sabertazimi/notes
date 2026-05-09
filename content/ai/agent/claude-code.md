@@ -11,6 +11,10 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 2. Sync configuration with `cc-switch`.
 
+```bash
+sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM session_log_sync;"
+```
+
 3. Set up `.claude.json`:
 
 ```bash
