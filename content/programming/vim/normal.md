@@ -7,25 +7,16 @@ tags: [Programming, Vim]
 
 ## Redo
 
-`.`
-
-_微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
-
-`;`
-
-重复 `t`/`T`/`f`/`F`
-
-`@`
+- `.` **微型宏**, 重复上一次(插入命令 至 `<Esc>`)录制动作
+- `;`: 重复 `t`/`T`/`f`/`F`
+- `:&`: 重复 `:substitute`
+- `@`:
 
 | 命令          | 作用                 |
 | :------------ | :------------------- |
 | `@{register}` | 重复寄存器中的宏命令 |
 | `@:`          | 重复任意 Ex 命令     |
 | `@@`          | 重复@命令            |
-
-`:&`
-
-重复:substitute
 
 ## Undo
 
@@ -51,7 +42,7 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 | `o`      | `A<CR>`      |
 | `O`      | `ko`         |
 
-## Edit
+## Operator
 
 操作符命令 + 动作命令 (范围), `Operator + {Motion}`.
 
@@ -63,8 +54,6 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 ```
 
 :::
-
-### Operator
 
 **操作符命令**, 基本编辑命令:
 
@@ -81,6 +70,8 @@ _微型宏_: 重复上一次(插入命令 至 `<Esc>`)录制动作
 | `=`  | 自动缩进                               |
 | `!`  | 使用外部程序过滤 `{motion}` 所跨越的行 |
 
+### Filter
+
 - `!!{filter-command}`: 过滤当前行
 - `v!{filter-command}`: 过滤选区
 - `!{motion}{filter-command}`: 过滤 `{motion}` 所跨越的行
@@ -94,7 +85,7 @@ v!sort
 !}jq
 ```
 
-### Motion
+## Motion
 
 **动作命令**:
 
@@ -136,7 +127,7 @@ v!sort
 | `ip`         | 当前段落           |
 | `ap`         | 当前段落及一个空行 |
 
-### Insert
+## Insert
 
 | 复合命令 | 等效的长命令 |
 | :------- | :----------- |
@@ -148,7 +139,7 @@ v!sort
 | `o`      | `A<CR>`      |
 | `O`      | `ko`         |
 
-### Register
+## Register
 
 `{register}{operator}{motion}` / `<C-r>{register}`:
 
@@ -169,26 +160,26 @@ v!sort
 
 `:reg {register}` 显示寄存器内容
 
-### 删除
+## Delete
 
 `{number}{register}d/s/x{motion}`.
 
-### 复制
+## Copy
 
 `{number}{register}y{motion}`.
 
-### 粘贴
+## Paste
 
 `{number}{register}p{motion}`.
 
-### 替换
+## Replace
 
 - `gU{motion}`: 小写转大写 e.g. `gUaw`.
 - `r{char}`: 替换光标所在字符.
 - `gr{char}`.
 - `R/gR` 进入替换模式.
 
-### 缩进
+## Indent
 
 `>{motion}`
 
@@ -205,7 +196,7 @@ e.g. >G: 缩进全文
 
 :::
 
-### 注释
+## Comments
 
 `\\{motion}`
 
@@ -213,11 +204,6 @@ e.g. >G: 缩进全文
 
 - `\\\` 注释行.
 - `\\ap` 注释段落.
-
-### 历史记录
-
-- `u`: 回退命令.
-- `<C-r>`: 前进命令.
 
 ## Jump
 
