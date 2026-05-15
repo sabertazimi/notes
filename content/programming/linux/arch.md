@@ -240,16 +240,16 @@ Install, remove, and browse packages with [`fzf`](https://github.com/sabertazimi
 
 ```bash
 # Target
-paru -Syu quickshell-git
+paru -Syu qt6ct-kde
 # Ignore
-paru -Syu --ignore quickshell-git
+paru -Syu --ignore qt6ct-kde
 # Latest commit
 paru -Syu --devel
 # Force rebuild
-paru -S --rebuild quickshell-git
+paru -S --rebuild qt6ct-kde
 # Manual
-git clone https://aur.archlinux.org/quickshell-git.git
-cd quickshell-git && makepkg -si
+git clone https://aur.archlinux.org/qt6ct-kde.git
+cd qt6ct-kde && makepkg -si
 ```
 
 :::caution[`Devel`]
