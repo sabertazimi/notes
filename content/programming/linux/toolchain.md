@@ -74,7 +74,7 @@ while WinGet is app installer.
 Recommended software for Windows:
 
 ```bash
-winget install Rustlang.Rustup zig.zig BellSoft.LibericaJDK.11 Tencent.WeixinDevTools
+winget install Rustlang.Rustup BellSoft.LibericaJDK.11 Tencent.WeixinDevTools
 ```
 
 ```bash
