@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sabertazimi/notes/compare/v1.1.0...v1.2.0) (2026-05-15)
+
+
+### :sparkles: Features
+
+* **agent-claude:** cc-switch session log sync ([2f2aefa](https://github.com/sabertazimi/notes/commit/2f2aefa0b0fb46a4f66d5eebffa9c8a0aefea54a))
+* **ai-ml:** markov decision process ([9382b09](https://github.com/sabertazimi/notes/commit/9382b09af23b4bedeb0f459641472e765e780690))
+* **ai-rl:** actor-critic ([2c92f67](https://github.com/sabertazimi/notes/commit/2c92f67f473892fd6e9499135011fd39c9ecd976))
+* **ai-rl:** Bellman equation total expectation and reward decomposition ([06ff40a](https://github.com/sabertazimi/notes/commit/06ff40a865f7b371636f034264954ef8ef665a38))
+* **ai-rl:** Bellman optimality equation ([1f3e291](https://github.com/sabertazimi/notes/commit/1f3e291c794f9b81e3c3974b286ee811dc73848c))
+* **ai-rl:** Monte Carlo estimation and policy iteration ([1729007](https://github.com/sabertazimi/notes/commit/172900756c8df49ac03cef10394aebfc67774bf3))
+* **ai-rl:** policy gradient ([172d9eb](https://github.com/sabertazimi/notes/commit/172d9eb6a83be70844496dfea7523fc1107b0ee2))
+* **ai-rl:** Robbins-Monro and SGD ([4c83e45](https://github.com/sabertazimi/notes/commit/4c83e4535eaac87d54324188465238dca364a98d))
+* **ai-rl:** temporal-difference algorithm ([858d983](https://github.com/sabertazimi/notes/commit/858d9832750da7489fd03d891370d19752088852))
+* **ai-rl:** value function ([66293e6](https://github.com/sabertazimi/notes/commit/66293e61f6a443d0bc0363ca3cf19d83bfcd1666))
+* **ai-rl:** value, policy and truncated policy iteration ([b086c70](https://github.com/sabertazimi/notes/commit/b086c70f87f0413df237ef17da646f6e5fafd914))
+* **devops-seo:** agent engine optimization ([22320ff](https://github.com/sabertazimi/notes/commit/22320ffa420c42410a9c1b06a0117aee8149faa7))
+* **linux-arch:** `playerctl` media control ([ef2d392](https://github.com/sabertazimi/notes/commit/ef2d39270873efa04627bad3bf1ca8cc58ef7b11))
+* **linux-arch:** downgrade package rollback tool ([bf47091](https://github.com/sabertazimi/notes/commit/bf4709144b7170181aba8020da5ea1fefe323882))
+* **linux-toolchain:** ydotool input simulation ([897f34a](https://github.com/sabertazimi/notes/commit/897f34a5b3c914ef147d98f18922383d4392995a))
+
+
+### :sparkles: Today I Learned
+
+* **deps:** update dependencies (non-major) ([#739](https://github.com/sabertazimi/notes/issues/739)) ([3ac701d](https://github.com/sabertazimi/notes/commit/3ac701d68edf58e8adaaf48594acc8457961c3bb))
+* **deps:** update dependency lucide-react to v1 ([#743](https://github.com/sabertazimi/notes/issues/743)) ([4223bf2](https://github.com/sabertazimi/notes/commit/4223bf202e85c601391a68464b811beb59472f22))
+* **linux-arch:** add liberation fonts ([db08616](https://github.com/sabertazimi/notes/commit/db08616ad34d5950cd408433f0de01c936b95410))
+* **linux-terminal:** tmux mouse scroll bypass ([c933eba](https://github.com/sabertazimi/notes/commit/c933eba1a40019e867b68650bf3a505eaf24e680))
+
 ## [1.1.0](https://github.com/sabertazimi/notes/compare/v1.0.0...v1.1.0) (2026-04-15)
 
 
