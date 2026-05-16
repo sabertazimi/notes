@@ -286,6 +286,7 @@ it will extend Claude Code through the plugin system with:
 1. Set up `cli-proxy-api`:
 
 ```bash
+yay -S cli-proxy-api-bin
 mkdir -p ~/.cli-proxy-api
 cp /usr/share/doc/cli-proxy-api-bin/config.example.yaml ~/.cli-proxy-api/config.yaml
 ```
