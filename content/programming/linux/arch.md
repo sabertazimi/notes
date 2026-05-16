@@ -76,7 +76,8 @@ sudo pacman -S --needed base-devel btrfs-progs os-prober \
 
 ```bash
 echo "EDITOR=nvim" | sudo tee -a /etc/environment
-sudo sed -i 's/^Devel$/# Devel/' /etc/paru.conf
+sudo sed -i 's/^Devel$/#Devel/' /etc/paru.conf
+sudo sed -i 's/^#NewsOnUpgrade$/NewsOnUpgrade/' /etc/paru.conf
 ```
 
 :::tip[Polkit]
