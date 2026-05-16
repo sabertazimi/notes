@@ -71,7 +71,9 @@ journalctl -p 3
 ### Error
 
 ```bash
+# Current boot errors with explanatory texts
 journalctl -p 3 -xb
+# Last boot errors with explanatory texts
 journalctl -p 3 -x -b -1
 ```
 
