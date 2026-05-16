@@ -8,7 +8,7 @@ tags: [Programming, OS, Linux, Toolchain, Package, Yum, Rpm]
 ## Mirrors
 
 ```bash
-sudo paru -S chsrc-bin
+yay -S chsrc-bin
 brew install chsrc
 scoop install chsrc
 winget install RubyMetric.chsrc
