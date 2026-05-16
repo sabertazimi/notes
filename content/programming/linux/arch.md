@@ -200,8 +200,7 @@ sudo paccache -rk0  # 清理全部缓存
 
 ```bash
 paru -S --needed downgrade chsrc-bin shellcheck-bin libtexprintf \
-  visual-studio-code-bin claude-code \
-  cc-switch-bin cli-proxy-api-bin llmfit-bin models-bin \
+  claude-code cc-switch-bin cli-proxy-api-bin llmfit-bin models-bin \
   go-musicfox-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
   mpv-thumbfast-git mpv-modernz-git
