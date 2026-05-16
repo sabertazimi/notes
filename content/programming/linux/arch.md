@@ -283,14 +283,29 @@ reboot
 
 ```bash
 sudo snapper -c root create-config /
-sudo snapper -c home create-config /home
 sudo snapper -c root create -d "Initial root snapshot"
+sudo snapper -c root set-config \
+  NUMBER_LIMIT=10 \
+  NUMBER_LIMIT_IMPORTANT=5 \
+  TIMELINE_LIMIT_HOURLY=5 \
+  TIMELINE_LIMIT_DAILY=7 \
+  TIMELINE_LIMIT_WEEKLY=0 \
+  TIMELINE_LIMIT_MONTHLY=3 \
+  TIMELINE_LIMIT_YEARLY=3
+
+sudo snapper -c home create-config /home
 sudo snapper -c home create -d "Initial home snapshot"
+sudo snapper -c home set-config TIMELINE_CREATE=no
 ```
 
 ```bash
 sudo systemctl enable --now snapper-cleanup.timer
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+```bash
+sudo btrfs subvolume list /
+sudo btrfs filesystem du -s /.snapshots /home/.snapshots
 ```
 
 ## Keyring
