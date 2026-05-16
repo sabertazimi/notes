@@ -102,7 +102,7 @@ winget install NetEase.CloudMusic ByteDance.Feishu Tencent.QQ.NT Tencent.WeChat 
 [`mise`](https://github.com/jdx/mise):
 
 ```bash
-sudo pacman -S mise
+sudo pacman -S mise usage
 brew install mise
 scoop install mise
 winget install jdx.mise
