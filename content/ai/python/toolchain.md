@@ -116,7 +116,7 @@ Run standalone scripts:
 
 ```bash
 uv init --script example.py --python 3.14
-uv add --index "https://mirrors.aliyun.com/pypi/simple" --script example.py 'requests<3' 'rich'
+uv add --index "https://pypi.tuna.tsinghua.edu.cn/simple" --script example.py 'requests<3' 'rich'
 uv run example.py
 uv run --python 3.14 example.py
 ```
@@ -163,7 +163,7 @@ explicit = true
 
 [[tool.uv.index]]
 name = "pytorch-cu124"
-url = "https://mirror.sjtu.edu.cn/pytorch-wheels/cu124"
+url = "https://mirrors.aliyun.com/pytorch-wheels/cu124"
 explicit = true
 ```
 

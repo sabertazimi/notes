@@ -37,7 +37,7 @@ Initialization in `react-scripts/scripts/init.js`:
 const registries = {
   npm: 'https://registry.npmjs.org',
   yarn: 'https://registry.yarnpkg.com',
-  aliyun: 'https://registry.npm.taobao.org',
+  aliyun: 'https://registry.npmmirror.com',
 }
 
 module.exports = registries

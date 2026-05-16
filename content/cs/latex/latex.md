@@ -6,20 +6,20 @@ tags: [CS, LaTex]
 
 ## Installation
 
-- [Windows Installation Tutorial](https://liam0205.me/texlive)
-- [Linux Installation Tutorial](https://stone-zeng.github.io/fduthesis/2018-05-13-install-texlive-ubuntu/)
+[Windows](https://liam0205.me/texlive)
+and [Linux](https://stone-zeng.github.io/fduthesis/2018-05-13-install-texlive-ubuntu):
 
 ```bash
 sudo apt-get install libdigest-perl-md5-perl perl-tk
-wget http://mirrors.ustc.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso
-sudo mount -o loop texlive2018.iso /mnt/iso
+wget https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2026.iso
+sudo mount -o loop texlive2026.iso /mnt/iso
 cd /mnt/iso
 sudo ./install-tl -gui perltk
 sudo umount /mnt/iso
 
-export MANPATH=${MANPATH}:/usr/local/texlive/2018/texmf-dist/doc/man
-export INFOPATH=${INFOPATH}:/usr/local/texlive/2018/texmf-dist/doc/info
-export PATH=${PATH}:/usr/local/texlive/2018/bin/x86_64-linux
+export MANPATH=${MANPATH}:/usr/local/texlive/2026/texmf-dist/doc/man
+export INFOPATH=${INFOPATH}:/usr/local/texlive/2026/texmf-dist/doc/info
+export PATH=${PATH}:/usr/local/texlive/2026/bin/x86_64-linux
 ```
 
 ```bash
@@ -29,7 +29,7 @@ cd install-tl-201*
 sudo apt-get install perl-tk perl-doc
 sudo ./install-tl -gui -repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/
 
-sudo cp /usr/local/texlive/2018/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+sudo cp /usr/local/texlive/2026/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
 sudo fc-cache -fv
 
 sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/

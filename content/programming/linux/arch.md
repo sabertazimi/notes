@@ -57,8 +57,8 @@ sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
 
 cat << EOF | sudo tee -a /etc/pacman.conf
 [archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
 Server = https://mirrors.aliyun.com/archlinuxcn/\$arch
 EOF
 ```
