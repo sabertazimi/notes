@@ -56,6 +56,11 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 - [ChatDev](https://github.com/OpenBMB/ChatDev):
   Multi-Agent collaboration.
 
+## Harness
+
+- [Flue](https://github.com/withastro/flue):
+  Sandbox agent harness framework.
+
 ## Memory
 
 - [Mem0](https://github.com/mem0ai/mem0):
