@@ -29,6 +29,7 @@ claude plugin install claude-hud
 ```
 
 ```bash
+pnpm dlx skills add multica-ai/andrej-karpathy-skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add obra/superpowers -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/agent-skills -s '*' -a claude-code codex opencode -g -y
 pnpm dlx skills add vercel-labs/skills -s '*' -a claude-code codex opencode -g -y
