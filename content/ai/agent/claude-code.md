@@ -37,6 +37,10 @@ pnpm dlx skills add nextlevelbuilder/ui-ux-pro-max-skill -s '*' -a claude-code c
 pnpm dlx skills add sabertazimi/skills -s '*' -a claude-code codex opencode -g -y
 ```
 
+```bash
+pnpm dlx skills update
+```
+
 ## Keyboard Shortcuts
 
 [Cheat sheet](https://cc.storyfox.cz):
