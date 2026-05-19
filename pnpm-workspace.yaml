@@ -2,6 +2,7 @@ minimumReleaseAgeExclude:
   - '@dg-scripts/eslint-config'
   - '@dg-scripts/stylelint-config'
   - postcss@8.5.15
+  - '@types/react@19.2.15'
 
 shellEmulator: true
 

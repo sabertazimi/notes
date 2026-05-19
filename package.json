@@ -90,7 +90,7 @@
     "@mdx-js/react": "^3.1.1",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "^24.12.4",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.2.15",
     "@vitest/coverage-v8": "^4.1.6",
     "c8": "^11.0.0",
     "ci-info": "^4.4.0",
