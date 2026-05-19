@@ -158,9 +158,9 @@ If `containing block` `height` is `auto`, it calculated to `0`.
 }
 
 .profile-menu {
-  position-anchor: --profile-button;
   position: absolute;
   position-area: block-end span-inline-end;
+  position-anchor: --profile-button;
   position-try: block-end span-inline-start;
 }
 ```
@@ -173,10 +173,10 @@ If `containing block` `height` is `auto`, it calculated to `0`.
 }
 
 .profile-menu {
-  position-anchor: --profile-button;
   position: absolute;
   inset-block-start: anchor(end); /* top: anchor(--profile-button bottom) */
   inset-inline-start: anchor(start); /* left: anchor(--profile-button left) */
+  position-anchor: --profile-button;
 }
 ```
 

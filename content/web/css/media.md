@@ -454,13 +454,13 @@ function main() {
   *,
   ::before,
   ::after {
+    scroll-behavior: auto !important;
     background-attachment: initial !important;
     transition-delay: 0s !important;
     transition-duration: 0s !important;
     animation-duration: 1ms !important;
     animation-delay: -1ms !important;
     animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
   }
 }
 ```

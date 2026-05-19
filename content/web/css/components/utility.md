@@ -102,7 +102,6 @@ h1::after {
   text-transform: uppercase;
   letter-spacing: 1.3px;
   text-decoration: none;
-  font-display: swap;
 }
 ```
 
