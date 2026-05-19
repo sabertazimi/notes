@@ -16,7 +16,7 @@ jobs:
           submodules: true
           fetch-depth: 1
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
       - name: Setup Node environment
         uses: actions/setup-node@v6
         with:
@@ -47,7 +47,7 @@ jobs:
           submodules: true
           fetch-depth: 0
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
       - name: Setup Node environment
         uses: actions/setup-node@v6
         with:
@@ -83,7 +83,7 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
       - name: Setup Node environment
         uses: actions/setup-node@v6
         with:
