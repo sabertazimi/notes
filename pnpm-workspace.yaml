@@ -1,6 +1,7 @@
 minimumReleaseAgeExclude:
   - '@dg-scripts/eslint-config'
   - '@dg-scripts/stylelint-config'
+  - postcss@8.5.15
 
 shellEmulator: true
 
