@@ -46,9 +46,9 @@ function useScript(src: string): Status {
           )
         }
 
-        // eslint-disable-next-line react-web-api/no-leaked-event-listener -- Remove event listener on cleanup.
+        // eslint-disable-next-line react/web-api-no-leaked-event-listener -- Remove event listener on cleanup.
         script.addEventListener('load', setAttributeFromEvent)
-        // eslint-disable-next-line react-web-api/no-leaked-event-listener -- Remove event listener on cleanup.
+        // eslint-disable-next-line react/web-api-no-leaked-event-listener -- Remove event listener on cleanup.
         script.addEventListener('error', setAttributeFromEvent)
       } else {
         // Grab existing script status from attribute and set to state.

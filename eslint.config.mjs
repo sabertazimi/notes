@@ -35,6 +35,7 @@ export default defineConfig(
       'react/refs': 'off',
       'react/set-state-in-effect': 'off',
       'react/set-state-in-render': 'off',
+      'react/static-components': 'off',
       'react/use-state': 'off',
       'react-refresh/only-export-components': 'off',
       'ts/no-this-alias': 'off',
@@ -56,6 +57,7 @@ export default defineConfig(
     rules: {
       'react/no-array-index-key': 'off',
       'react/set-state-in-effect': 'off',
+      'react/static-components': 'off',
       'react-refresh/only-export-components': 'off',
     },
   },

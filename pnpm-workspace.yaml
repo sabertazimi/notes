@@ -1,0 +1,15 @@
+minimumReleaseAgeExclude:
+  - '@dg-scripts/eslint-config'
+  - '@dg-scripts/stylelint-config'
+
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+trustPolicyExclude:
+  - detect-port@1.6.1
+  - semver
+
+allowBuilds:
+  '@swc/core': false
+  core-js: false
