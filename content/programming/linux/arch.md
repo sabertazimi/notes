@@ -129,7 +129,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   procs duf dust gdu bottom nvtop s-tui fastfetch \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
   git-delta lazygit tmux zsh starship chezmoi \
-  nodejs npm pnpm bun python uv rustup go luarocks \
+  nodejs npm pnpm bun python uv rustup go luarocks just \
   tree-sitter-cli github-cli \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
   fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
