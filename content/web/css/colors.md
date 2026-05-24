@@ -104,7 +104,7 @@ Change `lightness` to get gradient color:
 - Better communication with design teams.
 
 ```bash
-pnpm dlx convert-to-oklch ./src/**/*.css
+pnpx convert-to-oklch ./src/**/*.css
 ```
 
 ```css

@@ -23,7 +23,7 @@ tsc --generateTrace <output_dir>
 
 ```bash
 node --max-old-space-size=8192 ./node_modules/.bin/tsc -b --extendedDiagnostics --generateTrace ./ts-trace
-pnpm dlx analyze-trace ./ts-trace
+pnpx analyze-trace ./ts-trace
 ```
 
 ## Compiler
