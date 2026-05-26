@@ -1635,8 +1635,10 @@ import LibraryGallery from '@site/src/components/library-gallery'
 - [Puck](https://github.com/measuredco/puck):
   Visual editor for React.
 
-### Notes Service
+### Note Service
 
+- [AppFlowy](https://github.com/appflowy-io/appflowy):
+  Open source Notion alternative.
 - [AFFiNE](https://github.com/toeverything/AFFiNE):
   Next-gen knowledge base that brings planning, sorting and creating all together.
 - [Memos](http://github.com/usememos/memos):
