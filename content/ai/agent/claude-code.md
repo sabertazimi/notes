@@ -404,6 +404,8 @@ Remove `~/.claude/projects/` for bug release.
   Create videos programmatically in React.
 - [`HyperFrames`](https://github.com/heygen-com/hyperframes):
   HTML-based video compositions.
+- [`Kami`](https://github.com/tw93/Kami):
+  Paper-style slides.
 
 ### DevOps
 
