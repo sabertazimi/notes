@@ -385,20 +385,23 @@ Remove `~/.claude/projects/` for bug release.
   Vue, Vite, Vitest, slidev, etc.
 - [Modern](https://github.com/GoogleChrome/modern-web-guidance):
   Modern web guidance from Google Chrome.
+- [Dev](http://github.com/SawyerHood/dev-browser):
+  Browser automation.
+- [Node.js](https://github.com/mcollina/skills):
+  Modern `Node.js` development.
+- [Expo](https://github.com/expo/skills):
+  Expo projects and application services.
+
+### Design
+
 - [UI/UX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill):
   Design intelligence for professional UI/UX.
 - [Figma](https://github.com/figma/mcp-server-guide):
   Figma integration.
 - [Stitch](https://github.com/google-labs-code/stitch-skills):
   UI design toolkit.
-- [Dev](http://github.com/SawyerHood/dev-browser):
-  Browser automation.
 - [`Remotion`](https://github.com/remotion-dev/skills):
   Create videos programmatically in React.
-- [Expo](https://github.com/expo/skills):
-  Expo projects and application services.
-- [Node.js](https://github.com/mcollina/skills):
-  Modern `Node.js` development.
 
 ### DevOps
 
