@@ -402,6 +402,8 @@ Remove `~/.claude/projects/` for bug release.
   UI design toolkit.
 - [`Remotion`](https://github.com/remotion-dev/skills):
   Create videos programmatically in React.
+- [`HyperFrames`](https://github.com/heygen-com/hyperframes):
+  HTML-based video compositions.
 
 ### DevOps
 
