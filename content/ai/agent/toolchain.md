@@ -94,10 +94,6 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   AI → JSON → UI.
 - [Puck](https://github.com/puckeditor/puck):
   Agentic visual editor for React.
-- [Figma](https://github.com/dannote/figma-use):
-  Control Figma from command line.
-- [Stitch](https://stitch.withgoogle.com):
-  UI design toolkit.
 - [Agentation](https://github.com/benjitaylor/agentation):
   Elements visual feedback for agents.
 
@@ -115,6 +111,17 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Turn entire websites into LLM-ready markdown or structured data.
 - [X-Crawl](https://github.com/coder-hxl/x-crawl):
   Flexible Node.js AI-assisted crawler library.
+
+## Design
+
+- [Figma](https://github.com/dannote/figma-use):
+  Control Figma from command line.
+- [Stitch](https://stitch.withgoogle.com):
+  UI design toolkit.
+- [Design](https://github.com/nexu-io/open-design):
+  Local-first, open-source Claude Design alternative.
+- [Banana](https://github.com/Anionex/banana-slides):
+  AI-native PPT generator based on nano banana pro.
 
 ## Client
 
@@ -137,11 +144,6 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Translation.
 - [GrammarLy](https://github.com/grammarly):
   Writing and grammar checker.
-
-## Slide
-
-- [Banana](https://github.com/Anionex/banana-slides):
-  AI-native PPT generator based on nano banana pro.
 
 ## Documentation
 
