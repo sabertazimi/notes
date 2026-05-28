@@ -2081,10 +2081,10 @@ import LibraryGallery from '@site/src/components/library-gallery'
 
 ### Inspect
 
-- [Reactotron](https://github.com/infinitered/reactotron):
-  Desktop app for inspecting React and React Native apps.
 - [Doctor](https://github.com/millionco/react-doctor):
   React diagnose for coding agents.
+- [Reactotron](https://github.com/infinitered/reactotron):
+  Desktop app for inspecting React and React Native apps.
 - [Tracker](https://github.com/lahmatiy/react-render-tracker):
   Discover performance issues related to unintentional re-renders and unmounts.
 - [OpenReplay](https://github.com/openreplay/openreplay):
