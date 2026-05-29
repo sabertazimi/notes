@@ -6,7 +6,7 @@ trustPolicy: no-downgrade
 
 trustPolicyExclude:
   - detect-port@1.6.1
-  - semver
+  - semver@5.7.2 || 6.3.1
 
 allowBuilds:
   '@swc/core': false
