@@ -136,7 +136,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
   nautilus-python file-roller gvfs-smb ffmpegthumbnailer \
   yazi 7zip unzip trash-cli \
-  grim slurp satty wl-clipboard \
+  grim slurp satty wl-clipboard xclip \
   poppler poppler-glib python-pylatexenc \
   imagemagick imv chafa kimageformats resvg \
   ffmpeg mpv qt6-multimedia cava yt-dlp \
