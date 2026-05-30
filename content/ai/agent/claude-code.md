@@ -421,6 +421,8 @@ Remove `~/.claude/projects/` for bug release.
 
 ### Math
 
+- [Academic](https://github.com/Imbad0202/academic-research-skills):
+  Academic research.
 - [Scientific](https://github.com/K-Dense-AI/claude-scientific-skills):
   Comprehensive scientific collection.
 
