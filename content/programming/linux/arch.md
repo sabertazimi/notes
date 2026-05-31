@@ -124,7 +124,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-liberation \
   ttf-maplemono-nf-cn-unhinted ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-lxgw-wenkai ttf-lxgw-wenkai-mono adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
-  fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git \
+  fcitx5-im fcitx5-chinese-addons fcitx5-rime rime-ice-pinyin-git rime-wanxiang-gram-zh-hans \
   zoxide bat eza fd ripgrep fzf television jq fx \
   procs duf dust gdu bottom nvtop s-tui fastfetch \
   gping curlie wget ddgr doggo net-tools speedtest-cli rsync rclone \
