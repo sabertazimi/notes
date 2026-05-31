@@ -56,9 +56,11 @@ exit
 
 ## Locale
 
-- Config `fcitx5` key [`~/.config/fcitx5/config`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/private_fcitx5/private_config)
+- Config `fcitx5` key [`~/.config/fcitx5/config`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/private_fcitx5/private_config),
+  profile [`~/.config/fcitx5/profile`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/private_fcitx5/private_profile),
   and UI [`~/.config/fcitx5/conf/classicui.conf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_config/private_fcitx5/private_conf/private_classicui.conf).
-- Config rime [`~/.local/share/fcitx5/rime/default.custom.yaml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/share/private_fcitx5/rime/default.custom.yaml).
+- Config rime recipe [`~/.local/share/fcitx5/rime/default.custom.yaml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/share/private_fcitx5/rime/default.custom.yaml)
+  and grammar [`~/.local/share/fcitx5/rime/rime_ice.custom.yaml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/share/private_fcitx5/rime/rime_ice.custom.yaml).
 
 ## Fonts
 
