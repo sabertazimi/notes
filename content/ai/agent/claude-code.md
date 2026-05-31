@@ -24,15 +24,15 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 4. Set up harness:
 
 ```bash
-claude plugin install ralph-loop
 claude plugin install claude-hud
+claude plugin install ralph-loop
+claude plugin install superpowers
 ```
 
 ```bash
 pnpx skills add multica-ai/andrej-karpathy-skills -s "*" -a claude-code codex opencode -g -y
-pnpx skills add obra/superpowers -s "*" -a claude-code codex opencode -g -y
-pnpx skills add vercel-labs/agent-skills -s "*" -a claude-code codex opencode -g -y
 pnpx skills add vercel-labs/skills -s "*" -a claude-code codex opencode -g -y
+pnpx skills add vercel-labs/agent-skills -s "*" -a claude-code codex opencode -g -y
 pnpx skills add nextlevelbuilder/ui-ux-pro-max-skill -s "*" -a claude-code codex opencode -g -y
 pnpx skills add upstash/context7 -s find-docs -a claude-code codex opencode -g -y
 pnpx skills add sabertazimi/skills -s "*" -a claude-code codex opencode -g -y
