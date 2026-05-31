@@ -34,6 +34,7 @@ pnpx skills add obra/superpowers -s "*" -a claude-code codex opencode -g -y
 pnpx skills add vercel-labs/agent-skills -s "*" -a claude-code codex opencode -g -y
 pnpx skills add vercel-labs/skills -s "*" -a claude-code codex opencode -g -y
 pnpx skills add nextlevelbuilder/ui-ux-pro-max-skill -s "*" -a claude-code codex opencode -g -y
+pnpx skills add upstash/context7 -s find-docs -a claude-code codex opencode -g -y
 pnpx skills add sabertazimi/skills -s "*" -a claude-code codex opencode -g -y
 ```
 
