@@ -62,6 +62,17 @@ exit
 - Config rime recipe [`~/.local/share/fcitx5/rime/default.custom.yaml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/share/private_fcitx5/rime/default.custom.yaml)
   and grammar [`~/.local/share/fcitx5/rime/rime_ice.custom.yaml`](https://github.com/sabertazimi/dotfiles/blob/main/dot_local/share/private_fcitx5/rime/rime_ice.custom.yaml).
 
+:::tip[Lunar]
+
+[iDvel/rime-ice#1532](https://github.com/iDvel/rime-ice/issues/1532):
+
+```bash
+mkdir -p ~/.local/share/fcitx5/rime/lua
+ln -s /usr/share/rime-data/lua/lunar.db ~/.local/share/fcitx5/rime/lua/lunar.db
+```
+
+:::
+
 ## Fonts
 
 [`fontconfig`](https://wiki.archlinuxcn.org/wiki/%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE/%E4%B8%AD%E6%96%87):
