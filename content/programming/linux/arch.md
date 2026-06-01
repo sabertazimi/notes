@@ -204,7 +204,7 @@ paru -S --needed downgrade chsrc-bin shellcheck-bin libtexprintf \
   claude-code cc-switch-bin llmfit-bin models-bin \
   go-musicfox-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
-  fcitx5-skin-ori-git mpv-thumbfast-git mpv-modernz-git
+  mpv-thumbfast-git mpv-modernz-git
 ```
 
 ### Helpers
