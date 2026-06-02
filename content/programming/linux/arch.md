@@ -120,7 +120,7 @@ paru -S --rebuild qt6ct-kde
 
 ```bash
 sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
-  pacman-contrib man-db man-pages man-pages-zh_cn tldr less \
+  pacman-contrib downgrade man-db man-pages man-pages-zh_cn tldr less \
   noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-liberation \
   ttf-maplemono-nf-cn-unhinted ttf-jetbrains-mono-nerd ttf-firacode-nerd \
   ttf-lxgw-wenkai ttf-lxgw-wenkai-mono adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts wqy-zenhei \
@@ -200,7 +200,7 @@ sudo paccache -rk0  # 清理全部缓存
 ## AUR
 
 ```bash
-paru -S --needed downgrade chsrc-bin shellcheck-bin libtexprintf \
+paru -S --needed chsrc-bin shellcheck-bin libtexprintf \
   claude-code cc-switch-bin llmfit-bin models-bin \
   go-musicfox-bin uudeck linuxqq wechat \
   wps-office-cn wps-office-mui-zh-cn wps-office-fonts ttf-wps-fonts \
