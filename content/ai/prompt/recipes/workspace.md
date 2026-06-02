@@ -6,7 +6,6 @@
 
 ```json
 {
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "defaultMode": "acceptEdits",
     "allow": ["Bash", "Edit", "Skill"]
