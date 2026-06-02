@@ -110,17 +110,22 @@ done
 
 ### Environment
 
-- `/etc/profile.d/*.sh`.
-- `~/.bash_profile`.
-- `~/.bashrc`.
-- `/etc/profile`.
-- `/etc/bash.bashrc`.
-- `/etc/issue`: shell 登录信息.
-- `PS1` 环境变量: shell 头行打印信息.
-- `PATH` 环境变量.
+- `/etc/profile.d/*.sh`
+- `/etc/profile`
+- `/etc/bash.bashrc`
+- `/etc/issue`: shell 登录信息
+- `~/.bash_profile`
+- `~/.bashrc`
+- `~/.config/environment.d/`: 管理用户环境变量
+- `PS1` 环境变量: shell 头行打印信息
+- `PATH` 环境变量
 
 ```bash
-export PATH=$PATH:/usr/local/bin
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+```bash
+systemctl --user show-environment
 env
 printenv
 ```
