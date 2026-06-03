@@ -27,10 +27,10 @@ sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 claude plugin marketplace add anthropics/claude-plugins-official
 claude plugin marketplace add jarrodwatts/claude-hud
 claude plugin marketplace add sabertazimi/skills
-claude plugin install ralph-loop
-claude plugin install superpowers
-claude plugin install claude-hud
-claude plugin install sabertaz
+claude plugin install ralph-loop@claude-plugins-official
+claude plugin install superpowers@claude-plugins-official
+claude plugin install claude-hud@claude-hud
+claude plugin install sabertaz@sabertaz
 ```
 
 ```bash
