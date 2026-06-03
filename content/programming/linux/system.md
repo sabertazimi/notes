@@ -87,33 +87,7 @@ fwupdmgr update
 
 ## `systemctl`
 
-```bash
-systemctl enable local
-```
-
-in `/etc/init.d/local`
-
-```bash
-#!/bin/bash
-### BEGIN INIT INFO
-# Provides:          local
-# Required-Start:    $all
-# Required-Stop:
-# Default-Start:     3 4 5
-# Default-Stop:
-# Short-Description: Personal start script
-
-sslocal -c shadowsocks.json -d start
-```
-
-内存控制
-
-```bash
-sysctl vm [-options] CONFIG
-swapoff
-```
-
-### Custom Service
+### Service
 
 ```bash
 sudo vim /etc/systemd/system/ruoyi-server.service
@@ -139,24 +113,47 @@ RestartSec=5s
 WantedBy=multi-user.target
 ```
 
-### Systemd Analyze
+### Query
+
+```bash
+# 列出已加载单元
+systemctl list-units
+
+# 列出配置文件及状态
+systemctl list-unit-files
+
+# 查看完整配置
+systemctl cat <service>.service
+
+# 列出计时器
+systemctl list-timers
+
+# 验证 OnCalendar 时间表达式
+systemd-analyze calendar --iterations=5 "Fri 13:00:00"
+```
+
+### Analyze
 
 系统启动性能分析工具, 用于诊断启动时间和服务依赖:
 
 ```bash
 # 查看总体启动时间
 systemd-analyze time
+
 # 按服务启动耗时排序, 找出启动最慢的服务
 systemd-analyze blame
+
 # 显示启动关键路径, 找出影响启动时间的瓶颈
 systemd-analyze critical-chain
+
 # 生成 SVG 启动依赖图
 systemd-analyze plot > boot.svg
+
 # 生成点格式依赖图 (需 graphviz 渲染)
 systemd-analyze dot | dot -Tsvg > boot-deps.svg
 ```
 
-### Verify Unit Files
+### Verify
 
 检查服务配置文件语法:
 
