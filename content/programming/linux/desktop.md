@@ -278,6 +278,8 @@ pkgstats show breeze-icons $(pacman -Ss icon-theme | awk 'NR%2==1' | awk -F '[/ 
 
 - [`Kazumi`](https://github.com/Predidit/Kazumi)
 - [`Animeko`](https://github.com/open-ani/animeko)
+- [`Kiko`](https://github.com/KikoPlayProject/KikoPlay)
+- [`Celluloid`](https://github.com/celluloid-player/celluloid)
 
 ## Library
 
