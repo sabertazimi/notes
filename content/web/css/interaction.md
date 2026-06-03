@@ -526,6 +526,36 @@ html {
 </style>
 ```
 
+### Scroll Timeline
+
+Scroll-driven [parallax effect](https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect):
+
+```css
+.parallax {
+  view-timeline-name: --parallax-tl;
+  view-timeline-axis: block;
+  overflow: hidden;
+
+  & > * {
+    scale: calc(1 + var(--parallax-offset, 20) * 2 / 100);
+    animation: parallax auto linear both;
+    animation-timeline: --parallax-tl;
+    animation-range: cover;
+    will-change: translate;
+  }
+}
+
+@keyframes parallax {
+  from {
+    translate: 0 calc(var(--parallax-offset, 20) * -1%);
+  }
+
+  to {
+    translate: 0 calc(var(--parallax-offset, 20) * 1%);
+  }
+}
+```
+
 ## Progress Indicator
 
 ```css
