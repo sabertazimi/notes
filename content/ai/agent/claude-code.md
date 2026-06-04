@@ -13,6 +13,8 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 ```bash
 sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM session_log_sync;"
+sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM skill_repos;"
+sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM skills;"
 ```
 
 3. Set up `.claude.json`:
