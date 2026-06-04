@@ -265,7 +265,7 @@ Action
 
 Setup in [Docker](https://github.com/dromara/RuoYi-Vue-Plus/blob/5.X/script/docker/docker-compose.yml):
 
-```yml
+```yaml
 services:
   mysql:
     image: mysql:8.0.33

@@ -332,7 +332,17 @@ setup `source` of pages and `Enforce HTTPS`.
 
 ## Actions
 
-```yml
+### Permissions
+
+```yaml
+permissions:
+  id-token: write # OIDC
+  contents: write # Release
+```
+
+### Schedule
+
+```yaml
 name: Dependencies
 
 on:
@@ -376,21 +386,9 @@ jobs:
           reviewers: sabertazimi
 ```
 
-```yml
-name: Deploy to Vercel
-uses: amondnet/vercel-action@v20
-with:
-  vercel-token: ${{ secrets.VERCEL_TOKEN }}
-  vercel-args: ${{ fromJSON('["--prod", ""]')[github.ref != 'refs/heads/main'] }}
-  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-  scope: ${{ secrets.VERCEL_ORG_ID }}
-  working-directory: ./
-```
-
 ## Dependabot
 
-```yml
+```yaml
 version: 2
 updates:
   - package-ecosystem: npm # See documentation for possible values

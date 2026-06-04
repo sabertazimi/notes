@@ -135,7 +135,7 @@ tag-message = "{{tag_name}}"
 
 - Use [tool](https://github.com/mozilla/sccache) to speed up compilation.
 
-```yml
+```yaml
 name: CI
 
 on:

@@ -17,7 +17,7 @@ yarn set version berry
 
 Set up basic configuration `.yarnrc.yml`:
 
-```yml
+```yaml
 yarnPath: .yarn/releases/yarn-berry.cjs
 nodeLinker: node-modules
 npmPublishAccess: public
