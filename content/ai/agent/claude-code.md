@@ -389,6 +389,16 @@ Remove `~/.claude/projects/` for bug release.
 - [Manus](https://github.com/OthmanAdi/planning-with-files):
   Manus-style persistent Markdown planning.
 
+### Analysis
+
+- [Graphify](https://github.com/safishamsi/graphify):
+  Turn code into queryable knowledge graph.
+- [CdoeGraph](https://github.com/colbymchenry/codegraph):
+  Pre-indexed code knowledge graph.
+- [DeepWiki](https://github.com/AsyncFuncAI/deepwiki-open).
+- [ZRead](https://zread.ai):
+  AI-powered github repository reader.
+
 ### Frontend
 
 - [React](https://github.com/vercel-labs/agent-skills):

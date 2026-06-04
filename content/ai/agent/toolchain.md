@@ -144,9 +144,3 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Translation.
 - [GrammarLy](https://github.com/grammarly):
   Writing and grammar checker.
-
-## Documentation
-
-- [DeepWiki](https://github.com/AsyncFuncAI/deepwiki-open).
-- [ZRead](https://zread.ai):
-  AI-powered github repository reader.
