@@ -36,9 +36,10 @@ claude plugin install sabertaz@sabertaz
 ```
 
 ```bash
-pnpx skills add multica-ai/andrej-karpathy-skills -s "*" -a claude-code codex opencode -g -y
-pnpx skills add vercel-labs/skills -s "*" -a claude-code codex opencode -g -y
+pnpx skills add anthropics/skills -s skill-creator -a claude-code codex opencode -g -y
+pnpx skills add vercel-labs/skills -s find-skills -a claude-code codex opencode -g -y
 pnpx skills add vercel-labs/agent-skills -s "*" -a claude-code codex opencode -g -y
+pnpx skills add multica-ai/andrej-karpathy-skills -s "*" -a claude-code codex opencode -g -y
 pnpx skills add nextlevelbuilder/ui-ux-pro-max-skill -s "*" -a claude-code codex opencode -g -y
 pnpx skills add upstash/context7 -s find-docs -a claude-code codex opencode -g -y
 ```
