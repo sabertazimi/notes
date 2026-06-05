@@ -92,9 +92,9 @@ fwupdmgr update
 ```bash
 sudo vim /etc/systemd/system/ruoyi-server.service
 sudo systemctl daemon-reload
-sudo systemctl enable --now ruoyi-server
-sudo systemctl status ruoyi-server
-sudo journalctl -u ruoyi-server -e -f
+sudo systemctl enable --now ruoyi-server.service
+sudo systemctl status ruoyi-server.service
+sudo journalctl -u ruoyi-server.service -e -f
 ```
 
 ```bash
@@ -123,7 +123,7 @@ systemctl list-units
 systemctl list-unit-files
 
 # 查看完整配置
-systemctl cat <service>.service
+systemctl cat <unit>
 
 # 列出计时器
 systemctl list-timers
@@ -299,7 +299,7 @@ cpupower frequency-set -g performance  # performance / powersave / conservative
 Thermal daemon for Intel CPUs:
 
 ```bash
-systemctl status thermald
+systemctl status thermald.service
 ```
 
 ## Kernel Module

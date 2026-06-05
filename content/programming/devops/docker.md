@@ -27,7 +27,7 @@ sudo DRY_RUN=1 sh get-docker.sh
 ```
 
 ```bash
-sudo systemctl status docker
+sudo systemctl status docker.service
 sudo usermod -aG docker $USER
 ```
 

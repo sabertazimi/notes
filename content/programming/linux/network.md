@@ -23,7 +23,7 @@ for SSL certificates.
 wget -r -p -np -k -P ~/tmp/ http://java-er.com
 ```
 
-## SSH
+## `SSH`
 
 ### Key
 
@@ -32,13 +32,12 @@ ssh-keygen -t rsa
 ssh-add ~/.ssh/id_rsa
 ```
 
-### SSHD
+### `SSHD`
 
 - config file in `/etc/ssh/sshd_config`
 
 ```bash
-sudo systemctl reload sshd
-sudo service restart sshd
+sudo systemctl reload sshd.service
 ```
 
 ```bash

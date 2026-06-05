@@ -327,7 +327,7 @@ usage-statistics-enabled: true
 3. Set up service:
 
 ```bash
-systemctl --user enable --now cli-proxy-api
+systemctl --user enable --now cli-proxy-api.service
 ```
 
 ## Best Practices

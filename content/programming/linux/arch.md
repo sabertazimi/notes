@@ -64,7 +64,7 @@ EOF
 ```
 
 ```bash
-sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now NetworkManager.service
 sudo pacman -Sy archlinuxcn-keyring
 ```
 
@@ -273,12 +273,12 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ## Snapshot
 
 ```bash
-sudo systemctl status grub-btrfsd
+sudo systemctl status grub-btrfsd.service
 sudo snapper list-configs
 ```
 
 ```bash
-sudo systemctl enable --now grub-btrfsd
+sudo systemctl enable --now grub-btrfsd.service
 reboot
 ```
 

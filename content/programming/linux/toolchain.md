@@ -299,7 +299,7 @@ sudo pacman -S ydotool
 
 ```bash
 sudo usermod -aG input $USER
-systemctl --user enable --now ydotool
+systemctl --user enable --now ydotool.service
 ```
 
 ## Developer

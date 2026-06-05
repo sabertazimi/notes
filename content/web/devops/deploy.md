@@ -63,7 +63,7 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/blog
 sudo vim /etc/nginx/sites-available/blog
 sudo ln -s /etc/nginx/sites-available/blog /etc/nginx/sites-enabled/
 sudo nginx -t
-sudo systemctl restart nginx
+sudo systemctl restart nginx.service
 ```
 
 ## A/B Testing

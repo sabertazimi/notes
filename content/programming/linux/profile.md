@@ -46,13 +46,13 @@ journalctl -n 50 -b -1
 ### Unit
 
 ```bash
-journalctl -u <service-name>
+journalctl -u <unit>
 ```
 
 ### User
 
 ```bash
-journalctl -xe --user -u <service-name>
+journalctl -xe --user -u <unit>
 ```
 
 ### Kernel

@@ -402,11 +402,11 @@ synclient TouchpadOff=0
 
 ## Audio Server
 
-[Pipewire](https://gitlab.freedesktop.org/pipewire/pipewire):
+[`Pipewire`](https://gitlab.freedesktop.org/pipewire/pipewire):
 
 ```bash
 pactl info | grep "Server Name"
-systemctl --user status pipewire
+systemctl --user status pipewire.service
 
 wpctl status
 wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ # 音量增加  5%
@@ -423,7 +423,7 @@ pw-record <filename>
 
 ```bash
 sudo pacman -S bluez bluez-utils
-sudo systemctl enable --now bluetooth
+sudo systemctl enable --now bluetooth.service
 ```
 
 ```bash

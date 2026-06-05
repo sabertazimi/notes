@@ -9,12 +9,12 @@ tags: [Programming, OS, Linux, Virtualization, QEMU, KVM]
 
 ```bash
 sudo pacman -S qemu-full virt-manager swtpm
-sudo systemctl enable --now libvirtd
+sudo systemctl enable --now libvirtd.service
 sudo virsh net-start default
 sudo virsh net-autostart default
 
 sudo usermod -aG libvirt $(whoami)
 sudo sed -i "s/^#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
 sudo sed -i "s/^#group = \"libvirt-qemu\"/group = \"$(id -gn)\"/" /etc/libvirt/qemu.conf
-sudo systemctl restart libvirtd
+sudo systemctl restart libvirtd.service
 ```
