@@ -132,7 +132,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   nodejs npm pnpm bun python uv rustup go luarocks just \
   tree-sitter-cli github-cli \
   bluez bluez-utils pipewire-pulse pipewire-alsa pipewire-jack \
-  fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher \
+  fprintd fwupd i2c-tools power-profiles-daemon speech-dispatcher espeak-ng \
   xdg-desktop-portal xdg-desktop-portal-gnome gnome-keyring libsecret \
   nautilus-python file-roller gvfs-smb ffmpegthumbnailer \
   yazi 7zip unzip trash-cli \
