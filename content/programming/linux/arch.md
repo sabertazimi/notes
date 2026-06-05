@@ -141,7 +141,7 @@ sudo pacman -S --needed snapper snap-pac grub-btrfs inotify-tools \
   imagemagick imv chafa kimageformats resvg \
   ffmpeg mpv qt6-multimedia cava yt-dlp \
   lib32-nvidia-utils lib32-mesa lib32-vulkan-radeon vulkan-headers mesa-utils \
-  papirus-icon-theme firefox firefox-i18n-zh-cn steam
+  papirus-icon-theme firefox firefox-i18n-zh-cn chromium steam
 ```
 
 ```bash
