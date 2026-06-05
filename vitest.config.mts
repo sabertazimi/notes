@@ -5,7 +5,7 @@ export default defineConfig({
     globals: true,
     setupFiles: 'tests/setup.ts',
     coverage: {
-      exclude: ['tests', '**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}', 'eslint.config.mjs', 'vitest.config.mts'],
+      exclude: ['tests', '**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}', 'eslint.config.ts', 'vitest.config.mts'],
       reporter: ['text', 'text-summary', 'lcov'],
     },
   },
