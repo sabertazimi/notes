@@ -852,21 +852,38 @@ fi
 
 ### Key Bindings
 
-- `<C-A>`: begin of line.
-- `<C-E>`: end of line.
-- `<C-D>`: kill window and pane.
-- `<C-W>`: kill word.
-- `<C-U>`: kill line.
-- `<C-P>`: up history.
-- `<C-N>`: down history.
-- `<C-R>`: search history.
-- `<C-T>`: search file.
-- `<C-O>`: autosuggestion accept.
-- `<C-G>`/`<C-XE>`/`vv`: edit command line.
-
 ```bash
 bindkey | bat
 ```
+
+#### Move
+
+- `Ctrl + A`: begin line.
+- `Ctrl + E`: end line.
+- `Ctrl + B`: backward char.
+- `Ctrl + F`: forward char.
+- `Alt + B`: backward word.
+- `Alt + F`: forward word.
+
+#### Edit
+
+- `Ctrl + H`: backspace char.
+- `Ctrl + W`: backspace word.
+- `Ctrl + D`: delete char, kill pane.
+- `Alt + D`: kill word.
+- `Ctrl + K`: kill line.
+- `Ctrl + U`: kill whole line.
+- `Ctrl + Y`: yank.
+- `Ctrl + _`: undo.
+
+#### Search
+
+- `Ctrl + P`: previous command.
+- `Ctrl + N`: next command.
+- `Ctrl + R`: search history.
+- `<C-T>`: search file.
+- `<C-O>`: autosuggestion accept.
+- `<C-G>`/`<C-XE>`: edit command line.
 
 ## Best Practices
 
