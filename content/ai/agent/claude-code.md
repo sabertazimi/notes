@@ -429,6 +429,8 @@ Remove `~/.claude/projects/` for bug release.
   HTML-based video compositions.
 - [`Kami`](https://github.com/tw93/Kami):
   Paper-style slides.
+- [`Xiaohei`](https://github.com/helloianneo/ian-xiaohei-illustrations):
+  Hand-drawn style illustrations.
 
 ### DevOps
 
