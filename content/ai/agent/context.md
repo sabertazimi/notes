@@ -44,7 +44,8 @@ LLM 并未统一利用其上下文,
 
 ### Plan
 
-Planning with files in [Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus):
+[Planning with files](https://github.com/OthmanAdi/planning-with-files)
+in [`Manus`](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus):
 
 1. Design around **KV-cache**:
    - 稳定内容放前面: system prompt, tool definitions.

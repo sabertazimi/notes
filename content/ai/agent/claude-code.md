@@ -377,10 +377,10 @@ Remove `~/.claude/projects/` for bug release.
 
 - [Superpowers](https://github.com/obra/superpowers):
   Complete software development workflow.
+- [Engineering](https://github.com/mattpocock/skills):
+  Shared language engineering fundamentals.
 - [Agency](https://github.com/msitarzewski/agency-agents):
   AI specialists ready to transform workflow.
-- [Agents](https://github.com/wshobson/agents):
-  Comprehensive production-ready system combining agents, multi-agent workflow orchestrators, skills, and slash commands.
 - [Spec](https://github.com/github/spec-kit):
   Spec-driven development toolkit from GitHub.
 - [Sisyphus](https://github.com/Yeachan-Heo/oh-my-claudecode):
@@ -389,8 +389,6 @@ Remove `~/.claude/projects/` for bug release.
   Autonomous development loop.
 - [Compound](https://github.com/EveryInc/compound-engineering-plugin):
   Compound engineering plugin.
-- [Manus](https://github.com/OthmanAdi/planning-with-files):
-  Manus-style persistent Markdown planning.
 
 ### Analysis
 
