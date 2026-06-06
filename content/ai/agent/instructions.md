@@ -101,6 +101,30 @@ good [`AGENTS.md`](https://github.com/agentsmd/agents.md):
 - `AGENTS.md` is the highest leverage point of the harness, so avoid auto-generating it.
   You should carefully craft its contents for best results.
 
+## Shared Language
+
+[Ubiquitous language](https://github.com/mattpocock/skills)
+from Domain-Driven Design, adapted for coding agents:
+
+- Create a `CONTEXT.md` that maps project jargon to concise domain terms.
+- Agents decode jargon from the shared language instead of guessing,
+  producing shorter, more accurate output and spending fewer tokens.
+- Variables, functions, and files are named consistently using the shared vocabulary,
+  making the codebase easier to navigate for both humans and agents.
+
+```text
+BEFORE: "There's a problem when a lesson inside a section
+         of a course is made 'real' (i.e. given a spot in the file system)"
+AFTER:  "There's a problem with the materialization cascade"
+```
+
+:::tip
+
+Grilling sessions (`/grill-me`, `/grill-with-docs`) close the communication gap before coding starts:
+the agent relentlessly interviews you until every branch of the decision tree is resolved.
+
+:::
+
 ## Pull Request
 
 GitHub [copilot](https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster)
