@@ -150,6 +150,16 @@ Working memory and scratchpad stores and updates dynamic details during conversa
 - Recursive summarization.
 - Trigger: count, time, event.
 
+Pi [`compaction`](https://github.com/earendil-works/pi/blob/main/packages/agent/src/harness/compaction/compaction.ts):
+
+1. 管线: `shouldCompact()` → `prepareCompaction()` → `compact()` → `generateSummary()`
+2. 触发: `contextTokens > contextWindow - reserveTokens` (`reserveTokens` 默认 16K)
+3. Token 估算: `chars / 4` 启发式.
+4. 切割点: 从尾部向前累积 token, 在 `keepRecentTokens` (默认 20K) 处找合法边界切割, 禁止在 `toolResult` 链中间切割
+5. 增量摘要: 有前次压缩摘要时用 `UPDATE_SUMMARIZATION_PROMPT` 增量合并, 而非重新摘要
+6. Turn 拆分: 单轮过大时拆为前缀 (摘要) + 后缀 (保留), 前缀独立生成摘要
+7. 文件追踪: 跨压缩周期追踪 `readFiles` / `modifiedFiles`, 从前次压缩条目继承
+
 ## Memory
 
 - Working memory: 即时信息
