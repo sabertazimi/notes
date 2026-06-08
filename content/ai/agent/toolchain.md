@@ -36,14 +36,12 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 
 ## Agents
 
-- [Code](https://github.com/sourcegraph/awesome-code-ai):
-  Coding agents.
+- [Pi](https://github.com/earendil-works/pi):
+  AI agent toolkit.
 - [Claw](https://github.com/openclaw/openclaw):
   Personal AI assistant.
 - [Hermes](https://github.com/NousResearch/hermes-agent):
   Growing agent.
-- [Pi](https://github.com/earendil-works/pi):
-  AI agent toolkit.
 - [CUA](https://github.com/trycua/cua)
   Infrastructure for computer-use agents.
 - [SWE](https://github.com/princeton-nlp/SWE-agent):
