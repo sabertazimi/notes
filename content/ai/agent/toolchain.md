@@ -8,16 +8,16 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 ## Instruction
 
 - [AGENTS.md](https://github.com/agentsmd/agents.md):
-  Open format for guiding coding agents.
+  Open format guiding.
 - [llms.txt](https://github.com/AnswerDotAI/llms-txt):
   Helping language models use website.
 - [System](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools):
-  System prompts for agents.
+  System prompts.
 
 ## SDK
 
 - [LangChain](https://github.com/langchain-ai/langchain):
-  Platform for reliable agents.
+  Platform.
 - [LangGraph](https://github.com/langchain-ai/langgraph):
   Build resilient language agents as graphs.
 - [LlamaIndex](https://github.com/run-llama/llama_index):
@@ -32,7 +32,7 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 ## RAG
 
 - [RAGFlow](https://github.com/infiniflow/ragflow):
-  Superior context layer for agents.
+  Superior context layer.
 
 ## Agents
 
@@ -43,7 +43,7 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 - [Hermes](https://github.com/NousResearch/hermes-agent):
   Growing agent.
 - [CUA](https://github.com/trycua/cua)
-  Infrastructure for computer-use agents.
+  Computer-use infrastructure.
 - [SWE](https://github.com/princeton-nlp/SWE-agent):
   Issue auto-fixer.
 - [PR](https://github.com/qodo-ai/pr-agent):
@@ -97,9 +97,9 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 - [JSON](https://github.com/vercel-labs/json-render):
   AI → JSON → UI.
 - [Puck](https://github.com/puckeditor/puck):
-  Agentic visual editor for React.
+  Agentic React visual editor.
 - [Agentation](https://github.com/benjitaylor/agentation):
-  Elements visual feedback for agents.
+  Elements visual feedback.
 
 ## Browser
 
@@ -110,7 +110,7 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 - [Stagehand](https://github.com/browserbase/stagehand):
   Browser Automation Framework.
 - [LightPanda](https://github.com/lightpanda-io/browser):
-  Headless browser designed for automation.
+  Headless browser automation.
 - [FireCrawl](https://github.com/firecrawl/firecrawl):
   Turn entire websites into LLM-ready markdown or structured data.
 - [X-Crawl](https://github.com/coder-hxl/x-crawl):
@@ -141,7 +141,7 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 ## Copilot
 
 - [Everywhere](https://github.com/DearVa/Everywhere):
-  Context-aware assistant for desktop.
+  Context-aware assistant.
 - [Immersive](https://github.com/immersive-translate/immersive-translate):
   Translate web pages instantly.
 - [DeepL](https://github.com/DeepLcom):

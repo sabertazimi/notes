@@ -418,7 +418,7 @@ Remove `~/.claude/projects/` for bug release.
 ### Design
 
 - [UI/UX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill):
-  Design intelligence for professional UI/UX.
+  Professional UI/UX design intelligence.
 - [Figma](https://github.com/figma/mcp-server-guide):
   Figma integration.
 - [Stitch](https://github.com/google-labs-code/stitch-skills):
