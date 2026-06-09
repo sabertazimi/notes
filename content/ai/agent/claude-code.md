@@ -401,6 +401,13 @@ Remove `~/.claude/projects/` for bug release.
 - [ZRead](https://zread.ai):
   AI-powered github repository reader.
 
+### Search
+
+- [Brave](https://github.com/brave/brave-search-skills):
+  Web search, images, news, videos, AI-grounded answers, LLM context extraction.
+- [Tavily](https://github.com/tavily-ai/skills):
+  Web search, content extraction, site crawling, URL discovery, deep research.
+
 ### Frontend
 
 - [React](https://github.com/vercel-labs/agent-skills):
