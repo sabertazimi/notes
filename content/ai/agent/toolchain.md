@@ -62,6 +62,8 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 
 - [Flue](https://github.com/withastro/flue):
   Sandbox agent harness framework.
+- [`fff`](https://github.com/dmtrKovalenko/fff):
+  Fastest file search toolkit.
 
 ## Memory
 
