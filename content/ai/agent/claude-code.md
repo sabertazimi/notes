@@ -7,9 +7,7 @@ tags: [AI, Generative AI, LLM, Agent, Claude]
 
 ## Setup
 
-1. Set up [`cli-proxy-api`](#proxy).
-
-2. Sync configuration with `cc-switch`.
+1. Sync config with `cc-switch`.
 
 ```bash
 sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM session_log_sync;"
@@ -17,13 +15,13 @@ sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM skill_repos;"
 sqlite3 ~/.cc-switch/cc-switch.db "DELETE FROM skills;"
 ```
 
-3. Set up `.claude.json`:
+2. Set up `.claude.json`:
 
 ```bash
 sed -i '0,/{/s/{/{\n  "hasCompletedOnboarding": true,/' ~/.claude.json
 ```
 
-4. Set up harness:
+3. Set up harness:
 
 ```bash
 claude plugin marketplace add anthropics/claude-plugins-official
@@ -54,6 +52,12 @@ claude plugin update claude-hud@claude-hud
 claude plugin update sabertaz@sabertaz
 pnpx skills update
 ```
+
+:::
+
+:::tip[Proxy]
+
+Optionally set up [`cli-proxy-api`](#proxy) for API proxying.
 
 :::
 
