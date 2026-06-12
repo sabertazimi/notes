@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["28737"],{54094(e){e.exports=JSON.parse('{"tag":{"label":"CJS","permalink":"/notes/tags/cjs","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/module","title":"Module","description":"Principles","permalink":"/notes/web/javascript/module"}],"unlisted":false}}')}}]);

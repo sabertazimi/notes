@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["74393"],{52226(e){e.exports=JSON.parse('{"tag":{"label":"MC","permalink":"/notes/tags/mc","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/rl/monte-carlo","title":"Monte Carlo","description":"Estimation","permalink":"/notes/ai/rl/monte-carlo"}],"unlisted":false}}')}}]);

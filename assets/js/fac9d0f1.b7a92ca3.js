@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["49788"],{70136(e){e.exports=JSON.parse('{"tag":{"label":"Options","permalink":"/notes/tags/options","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/vue/options","title":"Options","description":"Parent component options:","permalink":"/notes/web/vue/options"}],"unlisted":false}}')}}]);

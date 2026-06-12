@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["18936"],{720(e){e.exports=JSON.parse('{"tag":{"label":"Service","permalink":"/notes/tags/service","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/android/service","title":"Service","description":"Handler","permalink":"/notes/programming/android/service"}],"unlisted":false}}')}}]);

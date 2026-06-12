@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["94171"],{88617(e){e.exports=JSON.parse('{"tag":{"label":"Loading","permalink":"/notes/tags/loading","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/performance/loading","title":"Loading","description":"Critical Path","permalink":"/notes/web/performance/loading"}],"unlisted":false}}')}}]);

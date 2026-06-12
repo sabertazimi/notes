@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["77060"],{8973(e){e.exports=JSON.parse('{"tag":{"label":"Docker","permalink":"/notes/tags/docker","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/devops/docker","title":"Docker","description":"Installation","permalink":"/notes/programming/devops/docker"}],"unlisted":false}}')}}]);

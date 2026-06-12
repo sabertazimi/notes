@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["27146"],{81990(s){s.exports=JSON.parse('{"tag":{"label":"SVG","permalink":"/notes/tags/svg","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/svg","title":"SVG","description":"Size","permalink":"/notes/web/css/svg"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["90289"],{80400(e){e.exports=JSON.parse('{"tag":{"label":"Slot","permalink":"/notes/tags/slot","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/vue/components","title":"Components","description":"Computed Properties","permalink":"/notes/web/vue/components"}],"unlisted":false}}')}}]);

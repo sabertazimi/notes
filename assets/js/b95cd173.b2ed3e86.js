@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["52520"],{74633(e){e.exports=JSON.parse('{"tag":{"label":"Deno","permalink":"/notes/tags/deno","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/node/modern","title":"Modern Node.js","description":"Structure","permalink":"/notes/web/node/modern"}],"unlisted":false}}')}}]);

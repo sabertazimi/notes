@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["73979"],{90202(e){e.exports=JSON.parse('{"tag":{"label":"Webpack","permalink":"/notes/tags/webpack","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/webpack","title":"Webpack","description":"Workflow","permalink":"/notes/web/devops/webpack"}],"unlisted":false}}')}}]);

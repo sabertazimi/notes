@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["657"],{66373(e){e.exports=JSON.parse('{"tag":{"label":"GraphQL","permalink":"/notes/tags/graph-ql","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/graphql/graphql","title":"GraphQL","description":"Better REST","permalink":"/notes/web/graphql/"}],"unlisted":false}}')}}]);

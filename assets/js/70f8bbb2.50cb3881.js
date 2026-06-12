@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["47997"],{96467(e){e.exports=JSON.parse('{"tag":{"label":"JamStack","permalink":"/notes/tags/jam-stack","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/devops/seo","title":"SEO","description":"Metadata","permalink":"/notes/web/devops/seo"}],"unlisted":false}}')}}]);

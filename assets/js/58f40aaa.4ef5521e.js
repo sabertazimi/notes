@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["61694"],{29549(e){e.exports=JSON.parse('{"tag":{"label":"Tree","permalink":"/notes/tags/tree","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/algorithms/tree","title":"Tree","description":"BST","permalink":"/notes/cs/algorithms/tree"}],"unlisted":false}}')}}]);

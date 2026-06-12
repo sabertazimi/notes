@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["49680"],{64361(t){t.exports=JSON.parse('{"tag":{"label":"BigInt","permalink":"/notes/tags/big-int","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/bigint","title":"BigInt","description":"- Decimal: 123n.","permalink":"/notes/web/javascript/bigint"}],"unlisted":false}}')}}]);

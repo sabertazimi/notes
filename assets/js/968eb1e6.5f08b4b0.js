@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["52782"],{29268(t){t.exports=JSON.parse('{"tag":{"label":"Optimal","permalink":"/notes/tags/optimal","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/rl/optimal","title":"Bellman Optimality Equation","description":"Policy","permalink":"/notes/ai/rl/optimal"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["66395"],{9597(t){t.exports=JSON.parse('{"tag":{"label":"Tuple","permalink":"/notes/tags/tuple","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/python/data-structure","title":"Data Structure","description":"String","permalink":"/notes/ai/python/data-structure"}],"unlisted":false}}')}}]);

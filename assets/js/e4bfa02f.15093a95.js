@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["42896"],{2203(s){s.exports=JSON.parse('{"tag":{"label":"Assembly","permalink":"/notes/tags/assembly","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/assembly/assembly","title":"Assembly","description":"Execution Model","permalink":"/notes/language/assembly/"}],"unlisted":false}}')}}]);

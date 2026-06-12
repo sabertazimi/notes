@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["82745"],{58510(e){e.exports=JSON.parse('{"tag":{"label":"Variable","permalink":"/notes/tags/variable","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/variables","title":"Variables","description":"Inherited","permalink":"/notes/web/css/variables"}],"unlisted":false}}')}}]);

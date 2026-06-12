@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["65168"],{35680(s){s.exports=JSON.parse('{"tag":{"label":"DFS","permalink":"/notes/tags/dfs","allTagsPath":"/notes/tags","count":1,"items":[{"id":"cs/algorithms/dfs","title":"Depth-First Search","description":"Using recursion/stack.","permalink":"/notes/cs/algorithms/dfs"}],"unlisted":false}}')}}]);
