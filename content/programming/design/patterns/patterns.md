@@ -56,6 +56,8 @@ Software design is the art of managing dependencies and abstractions.
 
 ## References
 
-- JavaScript [patterns](https://www.patterns.dev).
-- JavaScript design [patterns](http://www.dofactory.com/javascript/design-patterns).
-- Refactoring design [patterns](https://refactoring.guru/design-patterns).
+- JavaScript [patterns](https://www.patterns.dev)
+- JavaScript design [patterns](http://www.dofactory.com/javascript/design-patterns)
+- Refactoring design [patterns](https://refactoring.guru/design-patterns)
+- Battle-tested [patterns](https://github.com/Totoro-jam/battle-tested-patterns):
+  Code-level programming patterns extracted from production codebases
