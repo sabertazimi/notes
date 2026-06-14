@@ -209,7 +209,7 @@ const config: Config = {
             },
             {
               label: 'Dotfiles',
-              href: 'https://github.com/sabertazimi/doftiles',
+              href: 'https://github.com/sabertazimi/dotfiles',
             },
             {
               label: 'LaTeX Snippets',
