@@ -232,6 +232,20 @@ paru -Ps
 
 Install, remove, and browse packages with [`fzf`](https://github.com/sabertazimi/dotfiles/blob/main/dot_zshrc).
 
+:::danger[Supply Chain Attack]
+
+AUR 唯一[安全](https://discuss.cachyos.org/t/aur-compromised-1500-packages-affected-20260611/31040)
+的使用方式是**审查每一个 `PKGBUILD`**,
+绝大多数更新只会改变 `pkgver` 和 `md5sums`:
+
+```bash
+pacman -Qm
+comm -12 <(pacman -Qq | sort) \
+  <(curl -s https://cscs.pastes.sh/raw/aurvulnlist20260611.txt | sort)
+```
+
+:::
+
 ### Repository
 
 - `PKGBUILD` 在 [AUR 仓库](https://aur.archlinux.org) 单独维护
