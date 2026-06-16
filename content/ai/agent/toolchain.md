@@ -173,6 +173,8 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Figma integration.
 - [Stitch](https://github.com/google-labs-code/stitch-skills):
   UI design toolkit.
+- [`DESIGN.md`](https://github.com/VoltAgent/awesome-design-md):
+  Ready-to-use design systems from popular brands.
 - [`HyperFrames`](https://github.com/heygen-com/hyperframes):
   HTML-based video compositions.
 - [`Remotion`](https://github.com/remotion-dev/skills):

@@ -101,6 +101,17 @@ good [`AGENTS.md`](https://github.com/agentsmd/agents.md):
 - `AGENTS.md` is the highest leverage point of the harness, so avoid auto-generating it.
   You should carefully craft its contents for best results.
 
+## Design
+
+[`DESIGN.md`](https://github.com/VoltAgent/awesome-design-md)
+is a plain-text design system that design agents read to generate consistent UI:
+Markdown needs no parsing, so no Figma exports or JSON schemas.
+
+| File        | Who reads it  | What it defines                      |
+| ----------- | ------------- | ------------------------------------ |
+| `AGENTS.md` | Coding agents | How to build the project             |
+| `DESIGN.md` | Design agents | How the project should look and feel |
+
 ## Shared Language
 
 [Ubiquitous language](https://github.com/mattpocock/skills)
