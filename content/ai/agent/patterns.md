@@ -40,6 +40,55 @@ harness design (`Planner` + `Generator` + `Evaluator`)
 produce rich full-stack applications
 over multi-hour autonomous coding sessions.
 
+自主编码正[从`更好的提示`转向`更好的控制系统`](https://nlp.elvissaravia.com/p/autonomous-long-running-coding-agents):
+围绕 agent 设计**目标、评估器、循环、产物**,
+使其在人停止输入后仍能规划、执行、自检、纠错、持续推进,
+agent 仍是执行者, 但人不再逐轮交互.
+
+### Goal as Contract
+
+`/goal` 规定期望终态、成功证据、约束、轮次与预算, 而非更长的提示:
+
+- 弱目标让模型提前停止或重定义成功
+- 强目标编码领域知识 (基准、截图、约束) 供反复自测
+
+### Verifier
+
+自主性只在拥有可靠验证器时成立:
+
+- 外部检查优于 agent 对`已完成`的自我解释
+- 确定性检查 (类型、测试、lint) 作下限, LLM 评审作高层复核
+- 详见 [evaluation](./evaluation.md)
+
+### Loop
+
+目标给方向, 循环让工作存活, 模型常在真正完成前停止:
+
+- 外层控制系统: 唤醒 -> 检查 -> 验证 -> 对照目标 -> 带回下一步
+- 最简形式即 [Ralph loop](../prompt/recipes/ralph.md) + 确定性条件
+
+### Model Choice as Architecture
+
+`模型`是架构决策而非单一选择:
+
+- 规划模型定目标/约束, 执行模型跑实现, 廉价模型做评估/视觉评审
+- 编排器让你交换角色, 而非等待单一厂商
+
+### Artifacts
+
+多 agent 并行时终端记录不可扩展, 分离存储与呈现:
+
+- Markdown 存持久证据, 供 agent 搜索
+- HTML 产物渲染可视化仪表盘 (loss 曲线、基准、截图), 供人监控
+- 产物是控制面, 非事后报告
+
+### Session Mining
+
+过往会话是工作流数据富矿:
+
+- 重复失败、漏跑检查、重试坏命令不该埋在日志里
+- 扫描近期记录, 把重复失败模式转为项目指令/规则, 让本地环境更聪明而非从零训练模型
+
 ## First-Principles
 
 从李世石与 `AlphaGo` 的围棋对战中的第 37 手,
