@@ -95,6 +95,8 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 
 - [Superpowers](https://github.com/obra/superpowers):
   Complete software development workflow.
+- [Lifecycle](https://github.com/addyosmani/agent-skills):
+  Production-grade engineering skills across the development lifecycle.
 - [Engineering](https://github.com/mattpocock/skills):
   Shared language engineering fundamentals.
 - [Agency](https://github.com/msitarzewski/agency-agents):
