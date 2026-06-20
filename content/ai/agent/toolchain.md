@@ -5,6 +5,21 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 
 # Toolchain
 
+## Collections
+
+- [Skills](https://github.com/anthropics/skills):
+  Anthropic skills.
+- [Plugins](https://github.com/anthropics/claude-plugins-official):
+  Anthropic plugins.
+- [Awesome](https://github.com/ComposioHQ/awesome-claude-skills):
+  List.
+- [Marketplace](https://skillsmp.com):
+  Marketplace.
+- [Registry](https://github.com/Kamalnrf/claude-plugins):
+  Lightweight registry to skills and plugins.
+- [Build](https://github.com/davepoon/buildwithclaude):
+  Single hub to skills and plugins.
+
 ## Setup
 
 - [Everything](https://github.com/affaan-m/everything-claude-code):
@@ -42,12 +57,19 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Build resilient language agents as graphs.
 - [`LlamaIndex`](https://github.com/run-llama/llama_index):
   Build RAG applications on top of LLMs.
+- [`TypeChat`](https://github.com/microsoft/TypeChat):
+  Makes it easy to build natural language interfaces.
+
+## Multi-Agent
+
 - [Crew](https://github.com/crewaiinc/crewai):
   Orchestrate role-playing, autonomous agents
 - [`AgentOS`](https://github.com/agno-agi/agno):
   Build, run, manage multi-agent systems.
-- [`TypeChat`](https://github.com/microsoft/TypeChat):
-  Makes it easy to build natural language interfaces.
+- [`MetaGPT`](https://github.com/geekan/MetaGPT):
+  Multi-agent framework.
+- [`ChatDev`](https://github.com/OpenBMB/ChatDev):
+  Multi-Agent collaboration.
 
 ## Agents
 
@@ -66,19 +88,10 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
 - [Poke](https://github.com/pokeagent/pokeagent.github.io):
   `NeurIPS` 2025 Pokémon agent challenge.
 
-## Multi-Agent
-
-- [`MetaGPT`](https://github.com/geekan/MetaGPT):
-  Multi-agent framework.
-- [`ChatDev`](https://github.com/OpenBMB/ChatDev):
-  Multi-Agent collaboration.
-
 ## Harness
 
 - [Flue](https://github.com/withastro/flue):
   Sandbox agent harness framework.
-- [`fff`](https://github.com/dmtrKovalenko/fff):
-  Fastest file search toolkit.
 - [`SafetyNet`](https://github.com/kenryu42/claude-code-safety-net):
   Catching destructive git and filesystem commands before they execute.
 
@@ -133,8 +146,6 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   `Vue`, `Vite`, `Vitest`, `slidev`, etc.
 - [Modern](https://github.com/GoogleChrome/modern-web-guidance):
   Modern web guidance from Google Chrome.
-- [Dev](http://github.com/SawyerHood/dev-browser):
-  Browser automation.
 - [`Node.js`](https://github.com/mcollina/skills):
   Modern `Node.js` development.
 - [Expo](https://github.com/expo/skills):
@@ -194,6 +205,8 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Web search, images, news, videos, AI-grounded answers, LLM context extraction.
 - [`Tavily`](https://github.com/tavily-ai/skills):
   Web search, content extraction, site crawling, URL discovery, deep research.
+- [`fff`](https://github.com/dmtrKovalenko/fff):
+  Fastest file search toolkit.
 - [`RAGFlow`](https://github.com/infiniflow/ragflow):
   Superior context layer.
 
@@ -245,18 +258,3 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Personal coach that remembers, notices patterns, and holds accountable.
 - [Health](https://github.com/huifer/Claude-Ally-Health):
   Intelligent healthcare assistant.
-
-## Collections
-
-- [Skills](https://github.com/anthropics/skills):
-  Anthropic skills.
-- [Plugins](https://github.com/anthropics/claude-plugins-official):
-  Anthropic plugins.
-- [Awesome](https://github.com/ComposioHQ/awesome-claude-skills):
-  List.
-- [Marketplace](https://skillsmp.com):
-  Marketplace.
-- [Registry](https://github.com/Kamalnrf/claude-plugins):
-  Lightweight registry to skills and plugins.
-- [Build](https://github.com/davepoon/buildwithclaude):
-  Single hub to skills and plugins.
