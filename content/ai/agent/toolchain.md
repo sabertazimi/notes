@@ -122,6 +122,8 @@ tags: [AI, Generative AI, LLM, Agent, Toolchain, Library]
   Autonomous development loop.
 - [Compound](https://github.com/EveryInc/compound-engineering-plugin):
   Compound engineering plugin.
+- [Ponytail](https://github.com/DietrichGebert/ponytail):
+  Write minimal code via minimalism ladder.
 - [`n8n`](https://github.com/Zie619/n8n-workflows):
   `n8n` workflows.
 - [`Dify`](https://github.com/langgenius/dify):

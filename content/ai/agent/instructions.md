@@ -86,6 +86,8 @@ system [prompts](../prompt/recipes/codex.md):
 
 ## Coding
 
+### `AGENTS.md`
+
 [Writing](https://github.com/agentsmd/agents.md)
 good [`AGENTS.md`](https://github.com/agentsmd/agents.md):
 
@@ -98,8 +100,29 @@ good [`AGENTS.md`](https://github.com/agentsmd/agents.md):
 - Agent is not a linter.
   Use linters and code formatters,
   and use other features like [Hooks](https://code.claude.com/docs/en/hooks) and [Slash Commands](https://code.claude.com/docs/en/slash-commands).
-- `AGENTS.md` is the highest leverage point of the harness, so avoid auto-generating it.
+- `AGENTS.md` is the highest leverage point of the harness, so avoid autogenerating it.
   You should carefully craft its contents for best results.
+
+### Minimalism
+
+[Ponytail](https://github.com/DietrichGebert/ponytail)
+makes agent think like the laziest senior dev:
+write only what the task needs.
+Before writing code,
+descend the **minimalism ladder** and stop at the first rung that holds:
+
+1. 这段代码需要存在吗? → 否: 跳过 (`YAGNI`)
+2. 代码库里已经有了? → 复用, 不要重写
+3. 标准库能做? → 用标准库
+4. 平台原生功能? → 用原生 (`<input type="date">` 胜过装一个 `flatpickr` 组件)
+5. 已安装的依赖能做? → 用它
+6. 一行能搞定? → 一行
+7. 都不行: 才写`能工作的最小实现`
+
+对**解决方案**偷懒, 对**读代码**从不偷懒:
+先读懂改动涉及的代码和真实流程, 再选择阶梯档位.
+验证、错误处理、安全和可访问性**永远不在砍掉的范围**.
+"少写代码"绝不削减信任边界校验和数据丢失处理.
 
 ## Design
 
