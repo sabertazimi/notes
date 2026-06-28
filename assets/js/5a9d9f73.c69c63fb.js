@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["6602"],{31174(e){e.exports=JSON.parse('{"tag":{"label":"STL","permalink":"/notes/tags/stl","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/cpp/stl","title":"STL","description":"Copy in, copy out.","permalink":"/notes/language/cpp/stl"}],"unlisted":false}}')}}]);

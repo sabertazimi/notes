@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["81687"],{2805(e){e.exports=JSON.parse('{"tag":{"label":"Monad","permalink":"/notes/tags/monad","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/haskell/monad","title":"Monad","description":"Writer","permalink":"/notes/language/haskell/monad"}],"unlisted":false}}')}}]);

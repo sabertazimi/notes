@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["31370"],{22600(t){t.exports=JSON.parse('{"tag":{"label":"Trait","permalink":"/notes/tags/trait","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/rust/structs","title":"Structs","description":"Struct","permalink":"/notes/language/rust/structs"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["10599"],{1774(e){e.exports=JSON.parse('{"tag":{"label":"Fingerprint","permalink":"/notes/tags/fingerprint","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/web","title":"Web","description":"Security Headers","permalink":"/notes/web/security/web"}],"unlisted":false}}')}}]);

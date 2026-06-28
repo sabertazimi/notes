@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["55989"],{2803(e){e.exports=JSON.parse('{"tag":{"label":"CSP","permalink":"/notes/tags/csp","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/web","title":"Web","description":"Security Headers","permalink":"/notes/web/security/web"}],"unlisted":false}}')}}]);

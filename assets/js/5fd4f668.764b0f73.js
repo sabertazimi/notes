@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["59049"],{77658(e){e.exports=JSON.parse('{"tag":{"label":"Text","permalink":"/notes/tags/text","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/text","title":"Text","description":"Alignment","permalink":"/notes/web/css/text"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["51498"],{60469(e){e.exports=JSON.parse('{"tag":{"label":"Directory","permalink":"/notes/tags/directory","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/security/directory","title":"Directory Traversal","description":"Attack","permalink":"/notes/web/security/directory"}],"unlisted":false}}')}}]);

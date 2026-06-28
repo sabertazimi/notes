@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["75120"],{91820(t){t.exports=JSON.parse('{"tag":{"label":"Multi-agent","permalink":"/notes/tags/multi-agent","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/agent/multi-agent","title":"Multi-Agent","description":"- Sequential.","permalink":"/notes/ai/agent/multi-agent"}],"unlisted":false}}')}}]);

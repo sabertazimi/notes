@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["25043"],{21792(e){e.exports=JSON.parse('{"tag":{"label":"Path","permalink":"/notes/tags/path","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/node/filesystem","title":"Filesystem","description":"File","permalink":"/notes/web/node/filesystem"}],"unlisted":false}}')}}]);

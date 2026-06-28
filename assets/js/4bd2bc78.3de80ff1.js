@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["51492"],{2745(e){e.exports=JSON.parse('{"tag":{"label":"Make","permalink":"/notes/tags/make","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/make/make","title":"Makefile","description":"Macro","permalink":"/notes/programming/make/"}],"unlisted":false}}')}}]);

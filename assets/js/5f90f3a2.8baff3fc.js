@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["92934"],{45957(e){e.exports=JSON.parse('{"tag":{"label":"Payment","permalink":"/notes/tags/payment","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/payment","title":"Payment","description":"Payment API:","permalink":"/notes/web/javascript/payment"}],"unlisted":false}}')}}]);

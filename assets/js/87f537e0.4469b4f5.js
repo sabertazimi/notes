@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["11059"],{83442(a){a.exports=JSON.parse('{"tag":{"label":"Gradle","permalink":"/notes/tags/gradle","allTagsPath":"/notes/tags","count":1,"items":[{"id":"language/java/toolchain","title":"Toolchain","description":"\u7F16\u8BD1","permalink":"/notes/language/java/toolchain"}],"unlisted":false}}')}}]);

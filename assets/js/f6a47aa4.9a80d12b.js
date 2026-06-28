@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["76648"],{25574(t){t.exports=JSON.parse('{"tag":{"label":"GitHub","permalink":"/notes/tags/git-hub","allTagsPath":"/notes/tags","count":1,"items":[{"id":"programming/git/github","title":"GitHub","description":"LICENSE","permalink":"/notes/programming/git/github"}],"unlisted":false}}')}}]);

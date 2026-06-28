@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["5332"],{34755(e){e.exports=JSON.parse('{"tag":{"label":"Set","permalink":"/notes/tags/set","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/javascript/collection","title":"Collection","description":"Map","permalink":"/notes/web/javascript/collection"}],"unlisted":false}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["82923"],{24505(s){s.exports=JSON.parse('{"tag":{"label":"Classification","permalink":"/notes/tags/classification","allTagsPath":"/notes/tags","count":1,"items":[{"id":"ai/ml/supervised","title":"Supervised Learning","description":"Regression","permalink":"/notes/ai/ml/supervised"}],"unlisted":false}}')}}]);

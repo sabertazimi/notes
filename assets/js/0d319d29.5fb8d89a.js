@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([["68220"],{91560(e){e.exports=JSON.parse('{"tag":{"label":"Blend","permalink":"/notes/tags/blend","allTagsPath":"/notes/tags","count":1,"items":[{"id":"web/css/filter","title":"Filter","description":"filter:","permalink":"/notes/web/css/filter"}],"unlisted":false}}')}}]);
