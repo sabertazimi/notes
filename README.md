@@ -7,7 +7,7 @@
 
 Personal [notes](https://notes.tazimi.dev): today I learned.
 
-![Notes](./.github/hero.webp 'Notes')
+[![Notes](./.github/hero.webp 'Notes')](https://notes.tazimi.dev)
 
 ## License
 
